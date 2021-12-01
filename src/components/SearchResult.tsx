@@ -29,7 +29,7 @@ const SearchResult: React.FC<ISearchResult> = (props) => (
         dangerouslySetInnerHTML={{
           __html: sanitize(props.title, sanitizeOpts),
         }}
-        to={props.url.replace('https://dev.maxmind.com/', '/')}
+        to={props.url.replace('https://blog.maxmind.com/', '/')}
       />
     </h2>
     <small

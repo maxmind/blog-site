@@ -7,12 +7,12 @@ const { parseStringPromise } = require('xml2js');
 
 const OUTPUT_FILE = path.resolve('.tmp/redirects.json');
 
-const FIREBASE_URL = 'https://mm-static-site-staging.web.app';
+const FIREBASE_URL = 'https://mm-blog-site-staging.web.app';
 
 const SOURCE_SITEMAPS = [
-  'https://dev.maxmind.com/wp-sitemap-posts-page-1.xml',
-  'https://dev.maxmind.com/wp-sitemap-posts-release_note-1.xml',
-  'https://dev.maxmind.com/wp-sitemap-taxonomies-product-1.xml',
+  'https://blog.maxmind.com/wp-sitemap-posts-post-1.xml',
+  'https://blog.maxmind.com/wp-sitemap-taxonomies-category-1.xml',
+  'https://blog.maxmind.com/wp-sitemap-taxonomies-post_tag-1.xml',
 ];
 
 const findUnhandledRedirects = (sitemap) =>
@@ -24,7 +24,7 @@ const findUnhandledRedirects = (sitemap) =>
       item.loc[0],
     ]), []))
     .then((urls) => urls.map((url) => url.replace(
-      'https://dev.maxmind.com',
+      'https://blog.maxmind.com',
       FIREBASE_URL,
     )))
     .then((urls) => Promise.all(urls.map(url => fetch(url))))

@@ -10,7 +10,7 @@ const logs = JSON.parse(logsBuffer);
 
 const recent404s = logs
   .map(log => log.httpRequest.requestUrl.replace(
-    'https://dev.maxmind.com',
+    'https://blog.maxmind.com',
     'http://localhost:5000'
   ))
   .filter((log, index, logs) => logs.indexOf(log) === index);

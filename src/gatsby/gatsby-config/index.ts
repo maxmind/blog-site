@@ -183,7 +183,7 @@ export default {
           },
         },
         host: GATSBY_URL,
-        resolveEnv: () => GATSBY_URL === 'https://dev.maxmind.com'
+        resolveEnv: () => GATSBY_URL === 'https://blog.maxmind.com'
           ? 'production'
           : 'nonProduction',
         sitemap: `${GATSBY_URL}/sitemap.xml`,
@@ -204,6 +204,6 @@ export default {
     // eslint-disable-next-line max-len
     description: 'Develop applications using industry-leading IP intelligence and risk scoring.',
     siteUrl: GATSBY_URL,
-    title: 'MaxMind Developer Portal',
+    title: 'MaxMind Blog',
   },
 } as GatsbyConfig;
