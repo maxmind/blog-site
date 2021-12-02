@@ -59,16 +59,10 @@ const Header: React.FC<IHeader> = (props) => {
               className={styles['logo__svg']}
             />
             <span
-              aria-label="Developers"
+              aria-label="Blog"
               className={styles['logo__siteName']}
             >
-              Dev
-              <span
-                className={styles.eloper}
-              >
-                eloper
-              </span>
-              s
+              Blog
             </span>
           </Link>
           <SearchBar

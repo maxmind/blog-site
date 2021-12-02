@@ -3,12 +3,10 @@ import { CreatePagesArgs } from 'gatsby';
 
 import { IBaseQuery } from '../../../baseQuery';
 import homeQuery from '../../../templates/Home/query';
-import overviewQuery from '../../../templates/Overview/query';
 import pageQuery from '../../../templates/Page/query';
 
 const queries = [
   homeQuery,
-  overviewQuery,
   pageQuery,
 ];
 

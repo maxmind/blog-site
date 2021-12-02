@@ -52,15 +52,15 @@ export const createResolvers: GatsbyNode['createResolvers'] = async(
             node: mdxNode,
           });
 
-          if (mdxNode.fields.slug.startsWith('/minfraud')) {
-            return generateTableOfContents(mdast, minFraudImportPathMap);
-          }
+          // if (mdxNode.fields.slug.startsWith('/minfraud')) {
+          //   return generateTableOfContents(mdast, minFraudImportPathMap);
+          // }
 
-          if (mdxNode.fields.slug.startsWith('/geoip')) {
-            return generateTableOfContents(mdast, geoipImportPathMap);
-          }
+          // if (mdxNode.fields.slug.startsWith('/geoip')) {
+          //   return generateTableOfContents(mdast, geoipImportPathMap);
+          // }
 
-          return;
+          return generateTableOfContents(mdast);
         },
         type: 'JSON',
       },
