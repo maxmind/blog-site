@@ -1,8 +1,13 @@
 import { GatsbyConfig } from 'gatsby';
-import remarkExternalLinks from 'remark-external-links';
 
+<<<<<<< HEAD
 // import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
 // import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
+=======
+// import remarkExternalLinks from 'remark-external-links';
+import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
+import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
+>>>>>>> 08a7f7a ([WIP] Upgrade dependencies)
 import sectionize from './remark/sectionize';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
@@ -57,8 +62,8 @@ export default {
           '.md',
         ],
         remarkPlugins: [
-          sectionize,
-          remarkExternalLinks,
+          // sectionize,
+          // remarkExternalLinks,
         ],
       },
       resolve: 'gatsby-plugin-mdx',
