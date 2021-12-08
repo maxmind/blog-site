@@ -2,17 +2,17 @@ import generateTableOfContents, { createImportPathMap } from './get-toc-items';
 import directSchemas from './get-toc-items--direct.fixture.json';
 import indirectSchemas from './get-toc-items--indirect.fixture.json';
 
-const minFraudImportPathMap = createImportPathMap(
-  `${process.cwd()}/content/minfraud/api-documentation/_schemas`
-);
+// const minFraudImportPathMap = createImportPathMap(
+//   `${process.cwd()}/content/minfraud/api-documentation/_schemas`
+// );
 
-describe('getTocItems()', () => {
+xdescribe('getTocItems()', () => {
   it('works with direct `Schema` component usage', async () => {
     const mdast = (
       directSchemas as any
     ).data.allMdx.nodes[0].customTableOfContents;
 
-    const toc = generateTableOfContents(mdast, minFraudImportPathMap);
+    const toc = generateTableOfContents(mdast, {});
 
     const expected = {
       items: [
