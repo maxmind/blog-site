@@ -100,6 +100,7 @@
   },
   "description": "Developer website for MaxMind",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
     "@types/airbnb-prop-types": "^2.13.1",
     "@types/broken-link-checker": "^0.7.0",
     "@types/dompurify": "^2.3.2",
@@ -114,7 +115,6 @@
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
-    "babel-eslint": "^10.1.0",
     "babel-jest": "^27.4.4",
     "broken-link-checker": "^0.7.8",
     "chalk": "^5.0.0",
@@ -136,6 +136,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.0",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
     "firebase-tools": "^9.2.1",
+    "glob": "^7.2.0",
     "husky": "7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.4",
@@ -203,7 +204,7 @@
     "url": "https://github.com/maxmind/dev-site.git"
   },
   "scripts": {
-    "build": "run-p build:* && yarn sitemap-query-string",
+    "build": "run-p build:*",
     "build:gatsby": "gatsby clean && gatsby build",
     "build:firebase-config": "node firebase/index.js",
     "build:functions": "cd functions && yarn build",
