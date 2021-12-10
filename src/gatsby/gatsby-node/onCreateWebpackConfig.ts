@@ -1,10 +1,4 @@
-import { exec } from 'child_process';
 import { CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
-import reporter from 'gatsby-cli/lib/reporter';
-
-/* eslint-disable @typescript-eslint/no-var-requires */
-const ESLintPlugin = require('eslint-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig']= (
   props: CreateWebpackConfigArgs,
@@ -82,55 +76,4 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig']= (
       rules: configRules,
     },
   });
-
-  /**
-   * In the development environment, we want eslint to parse files on change and
-   * output any issues to console.
-   */
-  if (IS_DEVELOP) {
-    props.actions.setWebpackConfig({
-      plugins: [
-        new ESLintPlugin({
-          exclude: [
-            'node_modules',
-            '.cache',
-            'public',
-          ],
-          extensions: [
-            'js',
-            'json',
-            'md',
-            'mdx',
-            'ts',
-            'tsx',
-          ],
-        }),
-        new StylelintPlugin({
-          configFile: './.stylelintrc.js',
-          files: 'src/**/*.s(a|c)ss',
-        }),
-        {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          apply: (compiler: any) => {
-            compiler.hooks.afterEmit.tapAsync(
-              'RemarkLint',
-              (_: unknown, next: () => void) => exec(
-                'remark . --ext mdx --quiet',
-                (_: unknown, stdout: string, stderr: string) => {
-                  if (stdout) {
-                    reporter.info(stdout);
-                  }
-
-                  if (stderr) {
-                    reporter.warn(`RemarkLint error:\n${stderr}`);
-                  }
-
-                  next();
-                }
-              ));
-          },
-        },
-      ],
-    });
-  }
 };
