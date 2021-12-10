@@ -92,7 +92,7 @@ const Layout: React.FC<ILayout> = (props) => {
           }
         )}
       >
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <main
           className={styles.content}

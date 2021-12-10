@@ -1,0 +1,27 @@
+@use '../../styles/variables';
+
+.container {
+  max-width: 600px;
+}
+
+.content {
+  padding: 0;
+}
+
+.published {
+  font-size: 14px;
+}
+
+.continuereading {
+  padding-bottom: calc(var(--mm-spacing) / 2);
+
+  &::after {
+    content: '\203A';
+    margin-left: 5px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}

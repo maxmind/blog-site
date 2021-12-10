@@ -2,12 +2,14 @@ import { useLocation } from '@reach/router';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Logo from '../../assets/svgs/maxmind-logo.svg';
 import FaArrowLeft from '../../assets/svgs/react-icons/FaArrowLeft.svg';
 import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
 import Layout from '../../components/Layout/Layout';
 import Link from '../../components/Link';
 import { h1 as H1, p as P } from '../../components/Mdx';
 import { getNextPage, getPreviousPage } from '../../utils/pagination';
+import Tag from './../Home/Tag';
 import { IPageContext } from './query';
 import TableOfContents from './TableOfContents';
 
@@ -62,7 +64,7 @@ const Page: React.FC<IPage> = (props) => {
           </H1>
         </header>
 
-        <aside
+        {/* <aside
           className={styles.aside}
         >
           {tableOfContents && tableOfContents.items?.length > 0 && (
@@ -70,13 +72,42 @@ const Page: React.FC<IPage> = (props) => {
               className={styles.tableOfContents}
               items={tableOfContents.items}
             />
-          )}
-        </aside>
+          }
+        </aside> */}
 
         <section
           className={styles.content}
         >
+          <P>January 1, 2021 by Author Name</P>
+
+          <div
+            className={styles.placeholder}
+          >
+            <Logo />
+            <Logo />
+            <Logo />
+            <Logo />
+            <Logo />
+          </div>
+
           {props.children}
+
+          <div
+            className={styles.tags}
+          >
+            <Tag
+              content="IP Intelligence"
+            />
+            <Tag
+              content="minFraud"
+            />
+            <Tag
+              content="IP Geolocation"
+            />
+            <Tag
+              content="Online Fraud Prevention"
+            />
+          </div>
 
           {modifiedTime && (
             <P
@@ -90,7 +121,7 @@ const Page: React.FC<IPage> = (props) => {
           )}
         </section>
 
-        {(previousPage || nextPage) && (
+        {/* {(previousPage || nextPage) && (
           <footer
             className={styles.footer}
           >
@@ -136,7 +167,7 @@ const Page: React.FC<IPage> = (props) => {
               </Link>
             )}
           </footer>
-        )}
+        )} */}
       </article>
     </Layout>
   );
