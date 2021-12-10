@@ -1,12 +1,9 @@
 import { useLocation } from '@reach/router';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  FaArrowLeft,
-  FaArrowRight,
-} from 'react-icons/fa';
 
+import FaArrowLeft from '../../assets/svgs/react-icons/FaArrowLeft.svg';
+import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
 import Layout from '../../components/Layout/Layout';
 import Link from '../../components/Link';
 import { h1 as H1, p as P } from '../../components/Mdx';

@@ -1,9 +1,10 @@
 import classNames from 'classnames';
 import debounce from 'lodash.debounce';
 import PropTypes from 'prop-types';
-import React from 'react';
-import { FaCheck, FaCopy } from 'react-icons/fa';
+import * as React from 'react';
 
+import FaCheck from '../../../assets/svgs/react-icons/FaCheck.svg';
+import FaCopy from '../../../assets/svgs/react-icons/FaCopy.svg';
 import useIsClient from '../../../hooks/useIsClient';
 import { ILanguage,languages } from '../../../languages';
 import Button from './Button';
@@ -29,6 +30,7 @@ const Pre: React.FC<React.HTMLProps<HTMLDivElement> & IPre> = (props) => {
     children,
     className,
     hasWrapper,
+    hidden,
     highlightLines,
     select,
     showLineNumbers,
@@ -139,7 +141,7 @@ const Pre: React.FC<React.HTMLProps<HTMLDivElement> & IPre> = (props) => {
 
   const codeExample = (
     <div
-      className={classNames(styles.container, props.hidden && styles.hidden)}
+      className={classNames(styles.container, hidden && styles.hidden)}
     >
       <div
         className={styles.toolbar}
@@ -219,8 +221,11 @@ Pre.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   hasWrapper: PropTypes.bool,
+  // eslint-disable-next-line react/boolean-prop-naming
+  hidden: PropTypes.bool,
   highlightLines: PropTypes.string,
   select: PropTypes.any,
+  // eslint-disable-next-line react/boolean-prop-naming
   showLineNumbers: PropTypes.bool,
   tabs: PropTypes.any,
 };

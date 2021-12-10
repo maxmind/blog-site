@@ -141,9 +141,7 @@ export default {
     },
     {
       options: {
-        trackingIds: [
-          'UA-171943-3',
-        ],
+        trackingIds: [],
       },
       resolve: 'gatsby-plugin-google-gtag',
     },

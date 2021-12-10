@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { IconType } from 'react-icons';
-import { FaArrowRight } from 'react-icons/fa';
 
+import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
 import Link from '../Link';
 
 import * as styles from './LinkGroupCard.module.scss';
@@ -12,7 +11,7 @@ export interface ILinkGroupCard {
   className?: string;
   description?: string;
   heading: string;
-  icon: IconType,
+  icon: SvgElement,
   isCompact?: boolean,
   to: string;
 }

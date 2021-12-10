@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
 import Logo from '../../assets/svgs/maxmind-footer-logo.svg';
+import FaLinkedin from '../../assets/svgs/react-icons/FaLinkedin.svg';
+import FaTwitterSquare from '../../assets/svgs/react-icons/FaTwitterSquare.svg';
 import useSystemStatus from '../../hooks/useSystemStatus';
 
 import * as styles from './Footer.module.scss';

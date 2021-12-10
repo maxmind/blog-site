@@ -1,16 +1,12 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import { Icons } from '../assets';
 
 import * as styles from './ProductIcon.module.scss';
 
-type SvgElement = React.FC<React.SVGProps<SVGSVGElement>>
-
-type Icon = SvgElement | string | IconType;
-
+type Icon = SvgElement | string;
 interface IProductIcon {
   className?: string;
   family?: 'geoip' | 'geolite' | 'minfraud',

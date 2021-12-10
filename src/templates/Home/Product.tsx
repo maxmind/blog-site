@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { FaInfoCircle as InfoIcon } from 'react-icons/fa';
 
+import InfoIcon from '../../assets/svgs/react-icons/FaInfoCircle.svg';
 import { p as P } from '../../components/Mdx';
 import ProductIcon from '../../components/ProductIcon';
 

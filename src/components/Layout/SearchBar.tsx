@@ -2,7 +2,8 @@ import classNames from 'classnames';
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
+
+import FaSearch from '../../assets/svgs/react-icons/FaSearch.svg';
 
 import * as styles from './SearchBar.module.scss';
 

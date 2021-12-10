@@ -3,8 +3,8 @@
 import GithubSlugger from 'github-slugger';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { FaLink as LinkIcon } from 'react-icons/fa';
 
+import LinkIcon from '../../assets/svgs/react-icons/FaLink.svg';
 import { inferType } from '../../utils/json';
 import { formatSchemaName } from '../../utils/openapi';
 import Example from '../Example';

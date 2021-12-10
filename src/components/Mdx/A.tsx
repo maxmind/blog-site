@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
+// eslint-disable-next-line max-len
+import FaExternalLinkAlt from '../../assets/svgs/react-icons/FaExternalLinkAlt.svg';
 import Link from '../Link';
 
 import * as styles from './A.module.scss';

@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import * as React from 'react';
 
 import Logo from '../../assets/svgs/maxmind-logo.svg';
+import FaBars from '../../assets/svgs/react-icons/FaBars.svg';
+import FaTimes from '../../assets/svgs/react-icons/FaTimes.svg';
 import useSystemStatus from '../../hooks/useSystemStatus';
 import Link from '../Link';
 import AccessibilityNav from './AccessibilityNav';
