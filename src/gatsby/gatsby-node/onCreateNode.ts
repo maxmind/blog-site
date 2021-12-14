@@ -14,11 +14,13 @@ const addLayoutField = (args: CreateNodeArgs): void => {
 
     const parentNode = getNode(parentId);
 
-    createNodeField({
-      name: 'layout',
-      node,
-      value: parentNode.sourceInstanceName,
-    });
+    if (parentNode) {
+      createNodeField({
+        name: 'layout',
+        node,
+        value: parentNode.sourceInstanceName,
+      });
+    }
   }
 };
 

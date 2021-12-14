@@ -49,7 +49,7 @@ export const createImportPathMap = (
 
 export default (
   sourceTree: any,
-  importPathMap: Record<string, string>,
+  importPathMap?: Record<string, string>,
 ): any => {
   const newTree = map(
     sourceTree,

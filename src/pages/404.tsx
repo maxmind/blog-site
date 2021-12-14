@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { FaRegSurprise as O } from 'react-icons/fa';
 
+import O from '../assets/svgs/react-icons/FaRegSurprise.svg';
 import Layout from '../components/Layout/Layout';
 import { p as P } from '../components/Mdx';
 

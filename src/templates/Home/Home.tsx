@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import {
-  FaBookOpen as ViewDocsIcon,
-  FaCode as ContributeIcon,
-  FaRocket as QuickstartIcon,
-} from 'react-icons/fa';
+import * as React from 'react';
 
+import ViewDocsIcon from '../../assets/svgs/react-icons/FaBookOpen.svg';
+import ContributeIcon from '../../assets/svgs/react-icons/FaCode.svg';
+import QuickstartIcon from '../../assets/svgs/react-icons/FaRocket.svg';
 import Layout from '../../components/Layout/Layout';
 import LinkButton from '../../components/LinkButton';
 import { a as A } from '../../components/Mdx';

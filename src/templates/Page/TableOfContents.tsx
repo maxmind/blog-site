@@ -93,9 +93,9 @@ const TableOfContents: React.FC<
 > = (props) => {
   const { heading, items, ...rest } = props;
 
-  const pathname = useLocation().pathname;
-  const itemIds = getIds(items);
-  const currentItem = useActiveHeading(itemIds);
+  // const pathname = useLocation().pathname;
+  // const itemIds = getIds(items);
+  // const currentItem = useActiveHeading(itemIds);
 
   return (
     <nav
@@ -106,7 +106,7 @@ const TableOfContents: React.FC<
       >
         {heading || 'On this Page'}
       </span>
-      {renderItems(items, pathname, currentItem)}
+      {/* {renderItems(items, pathname, currentItem)} */}
     </nav>
   );
 };

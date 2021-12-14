@@ -6,7 +6,9 @@ import classNames from 'classnames';
 import Prism from 'prismjs';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FaAngleDoubleDown } from 'react-icons/fa';
+
+// eslint-disable-next-line max-len
+import FaAngleDoubleDown from '../../../assets/svgs/react-icons/FaAngleDoubleDown.svg';
 
 import { ILanguage } from '../../../languages';
 import * as styles from './Code.module.scss';

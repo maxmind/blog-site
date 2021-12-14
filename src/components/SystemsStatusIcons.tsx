@@ -1,9 +1,9 @@
 import React from 'react';
-import {
-  FaCheckCircle,
-  FaExclamationTriangle,
-  FaShieldAlt,
-} from 'react-icons/fa';
+
+import FaCheckCircle from '../assets/svgs/react-icons/FaCheckCircle.svg';
+// eslint-disable-next-line max-len
+import FaExclamationTriangle from '../assets/svgs/react-icons/FaExclamationTriangle.svg';
+import FaShieldAlt from '../assets/svgs/react-icons/FaShieldAlt.svg';
 
 import * as styles from './SystemsStatusIcons.module.scss';
 

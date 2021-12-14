@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FaLink } from 'react-icons/fa';
+
+import FaLink from '../../assets/svgs/react-icons/FaLink.svg';
 
 import * as styles from './H2.module.scss';
 

@@ -1,18 +1,14 @@
 import { useLocation } from '@reach/router';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  FaArrowLeft,
-  FaArrowRight,
-} from 'react-icons/fa';
 
+import FaArrowLeft from '../../assets/svgs/react-icons/FaArrowLeft.svg';
+import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
 import Layout from '../../components/Layout/Layout';
 import Link from '../../components/Link';
 import { h1 as H1, p as P } from '../../components/Mdx';
 import { getNextPage, getPreviousPage } from '../../utils/pagination';
 import { IPageContext } from './query';
-import ReleaseNotesArchiveList from './ReleaseNotesArchiveList';
 import TableOfContents from './TableOfContents';
 
 import * as styles from './Page.module.scss';
@@ -26,7 +22,7 @@ const Page: React.FC<IPage> = (props) => {
   const {
     frontmatter,
     parent,
-    customTableOfContents: tableOfContents,
+    tableOfContents,
   } = props.pageContext;
   const location = useLocation();
   const { description, keywords, title } = frontmatter;
@@ -42,12 +38,6 @@ const Page: React.FC<IPage> = (props) => {
     type = 'geoip';
   }
 
-  let isReleaseNotesPage = false;
-
-  if (location.pathname.split('/')[2] === 'release-notes' && type) {
-    isReleaseNotesPage = true;
-  }
-
   const nextPage = getNextPage(location.pathname);
   const previousPage = getPreviousPage(location.pathname);
 
@@ -59,9 +49,7 @@ const Page: React.FC<IPage> = (props) => {
       type={type as 'minfraud' | 'geoip'}
     >
       <article
-        className={classNames(styles.article, {
-          [styles.releaseNotes]: isReleaseNotesPage,
-        })}
+        className={styles.article}
         data-plugin-header="line-numbers"
       >
         <header
@@ -77,21 +65,12 @@ const Page: React.FC<IPage> = (props) => {
         <aside
           className={styles.aside}
         >
-          { !isReleaseNotesPage &&
-            tableOfContents &&
-            tableOfContents.items?.length > 0 &&
-            (
-              <TableOfContents
-                className={styles.tableOfContents}
-                items={tableOfContents.items}
-              />
-            )}
-          { isReleaseNotesPage &&
-            <ReleaseNotesArchiveList
+          {tableOfContents && tableOfContents.items?.length > 0 && (
+            <TableOfContents
               className={styles.tableOfContents}
-              type={type as 'minfraud' | 'geoip'}
+              items={tableOfContents.items}
             />
-          }
+          )}
         </aside>
 
         <section

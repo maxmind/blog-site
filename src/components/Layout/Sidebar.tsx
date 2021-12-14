@@ -1,9 +1,10 @@
 import { useLocation } from '@reach/router';
 import classNames from 'classnames';
 import React from 'react';
-import { FaExternalLinkAlt as ExternalLinkIcon } from 'react-icons/fa';
 
 import navigation from '../../../content/navigation';
+// eslint-disable-next-line max-len
+import ExternalLinkIcon from '../../assets/svgs/react-icons/FaExternalLinkAlt.svg';
 import {
   IItem,
   isInternalItem,

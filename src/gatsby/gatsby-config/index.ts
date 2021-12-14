@@ -1,8 +1,8 @@
 import { GatsbyConfig } from 'gatsby';
 import remarkExternalLinks from 'remark-external-links';
 
-import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
-import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
+// import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
+// import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
 import sectionize from './remark/sectionize';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
@@ -24,19 +24,6 @@ const GLOBALLY_IGNORED_SOURCE_FILES = [
 
 export default {
   plugins: [
-    {
-      options: {
-        typeName: 'Json',
-      },
-      resolve: 'gatsby-transformer-json',
-    },
-    {
-      options: {
-        name: 'maxmindServerIps',
-        path: `${GATSBY_ROOT}/static/maxmind-server-ip-addresses.json`,
-      },
-      resolve: 'gatsby-source-filesystem',
-    },
     {
       options: {
         ignore: [
@@ -61,20 +48,8 @@ export default {
     },
     {
       options: {
-        ignore: [
-          ...GLOBALLY_IGNORED_SOURCE_FILES,
-          '**/!(index).mdx',
-        ],
-        name: 'overviews',
-        path: `${GATSBY_ROOT}/content/`,
-      },
-      resolve: 'gatsby-source-filesystem',
-    },
-    {
-      options: {
         defaultLayouts: {
           home: require.resolve(`${GATSBY_ROOT}src/templates/Home`),
-          overviews: require.resolve(`${GATSBY_ROOT}src/templates/Overview`),
           pages: require.resolve(`${GATSBY_ROOT}src/templates/Page`),
         },
         extensions: [
@@ -98,7 +73,7 @@ export default {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-ts-checker',
-    'gatsby-plugin-image',
+    // 'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -121,41 +96,27 @@ export default {
       resolve: 'gatsby-plugin-react-svg',
     },
     'gatsby-plugin-remove-trailing-slashes',
+    // {
+    //   options: {
+    //     feeds: [],
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //   },
+    //   resolve: 'gatsby-plugin-feed',
+    // },
     {
       options: {
-        feeds: [
-          createReleaseNotesFeed({
-            description: 'Release notes for MaxMind\'s GeoIP2 product line',
-            title: 'GeoIP2 Release Notes',
-            url: '/geoip/release-notes',
-          }),
-          createReleaseNotesFeed({
-            description: 'Release notes for MaxMind\'s minFraud product line',
-            title: 'minFraud Release Notes',
-            url: '/minfraud/release-notes',
-          }),
-          createServerIpAddressesFeed(),
-        ],
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-      },
-      resolve: 'gatsby-plugin-feed',
-    },
-    {
-      options: {
-        trackingIds: [
-          'UA-171943-3',
-        ],
+        trackingIds: [],
       },
       resolve: 'gatsby-plugin-google-gtag',
     },
@@ -190,13 +151,13 @@ export default {
       },
       resolve: 'gatsby-plugin-robots-txt',
     },
-    // {
-    //   options: {
-    //     analyzerPort: 3000,
-    //     production: true,
-    //   },
-    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-    // },
+    {
+      options: {
+        analyzerPort: 3000,
+        production: true,
+      },
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    },
     ...THESE_PLUGINS_MUST_COME_LAST,
   ],
   siteMetadata: {

@@ -1,13 +1,11 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { IconType } from 'react-icons';
-import {
-  FaCheck,
-  FaExclamation,
-  FaInfo,
-  FaTimes,
-} from 'react-icons/fa';
+
+import FaCheck from '../assets/svgs/react-icons/FaCheck.svg';
+import FaExclamation from '../assets/svgs/react-icons/FaExclamation.svg';
+import FaInfo from '../assets/svgs/react-icons/FaInfo.svg';
+import FaTimes from '../assets/svgs/react-icons/FaTimes.svg';
 
 // eslint-disable-next-line css-modules/no-unused-class
 import * as styles from './Alert.module.scss';
@@ -19,7 +17,7 @@ interface IAlert {
 
 const Alert: React.FC<IAlert> = (props) => {
   const { children, type } = props;
-  let Icon: IconType;
+  let Icon: SvgElement;
 
   switch(type) {
   case 'error':
