@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import {
-  FaArrowLeft,
-  FaArrowRight,
-} from 'react-icons/fa';
+
+import FaArrowLeft from '../assets/svgs/react-icons/FaArrowLeft.svg';
+import FaArrowRight from '../assets/svgs/react-icons/FaArrowRight.svg';
 
 import * as styles from './BlogFooter.module.scss';
 

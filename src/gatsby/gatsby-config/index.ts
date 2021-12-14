@@ -1,13 +1,10 @@
 import { GatsbyConfig } from 'gatsby';
 
-<<<<<<< HEAD
 // import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
 // import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
-=======
 // import remarkExternalLinks from 'remark-external-links';
 import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
 import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
->>>>>>> 08a7f7a ([WIP] Upgrade dependencies)
 import sectionize from './remark/sectionize';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
@@ -156,13 +153,13 @@ export default {
       },
       resolve: 'gatsby-plugin-robots-txt',
     },
-    {
-      options: {
-        analyzerPort: 3000,
-        production: true,
-      },
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-    },
+    // {
+    //   options: {
+    //     analyzerPort: 3000,
+    //     production: true,
+    //   },
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    // },
     ...THESE_PLUGINS_MUST_COME_LAST,
   ],
   siteMetadata: {
