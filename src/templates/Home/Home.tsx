@@ -5,6 +5,7 @@ import Logo from '../../assets/svgs/maxmind-logo.svg';
 import ViewDocsIcon from '../../assets/svgs/react-icons/FaBookOpen.svg';
 import ContributeIcon from '../../assets/svgs/react-icons/FaCode.svg';
 import QuickstartIcon from '../../assets/svgs/react-icons/FaRocket.svg';
+import BlogFooter from '../../components/BlogFooter';
 import Layout from '../../components/Layout/Layout';
 import { a as A } from '../../components/Mdx';
 import Tag from '../Home/Tag';
@@ -33,7 +34,7 @@ const Home: React.FC<IHome> = (props) => {
         className={styles.posts}
       >
         <Post
-          continuereading="Continue reading"
+          continuereading="Continue reading ›"
           paragraph="We have updated our data in a number of ways in
           preparation for the rollout of iCloud Private Relay. We have
           worked with Apple’s to ensure that our data accurately reflects
@@ -52,7 +53,7 @@ const Home: React.FC<IHome> = (props) => {
           <Logo />
         </div>
         <Post
-          continuereading="Continue reading"
+          continuereading="Continue reading ›"
           paragraph="Demyst’s Platform has helped Tier 1 financial
           services firms modernize and leverage external data workflows
           for over 10 years. Account takeover and synthetic fraud can be
@@ -63,7 +64,7 @@ const Home: React.FC<IHome> = (props) => {
           firms prevent fraud"
         />
         <Post
-          continuereading="Continue reading"
+          continuereading="Continue reading ›"
           paragraph="We’re excited to share a couple of new features that we
           recently added to our minFraud service client APIs...."
           published="September 3, 2021 by Christopher Luna"
@@ -71,7 +72,7 @@ const Home: React.FC<IHome> = (props) => {
           label in minFraud response, “test” disposition for custom rules"
         />
         <Post
-          continuereading="Continue reading"
+          continuereading="Continue reading ›"
           paragraph="Simplex has been changing the status quo of crypto
           purchases since 2014. As the market leader, they pioneered the
           first riskless global fiat onramp using a credit and debit card,
@@ -84,6 +85,8 @@ const Home: React.FC<IHome> = (props) => {
           "
         />
       </div>
+
+      <BlogFooter />
 
     </Layout>
   );

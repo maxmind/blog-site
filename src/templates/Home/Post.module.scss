@@ -14,11 +14,6 @@
 
 .continuereading {
   padding-bottom: calc(var(--mm-spacing) / 2);
-
-  &::after {
-    content: '\203A';
-    margin-left: 5px;
-  }
 }
 
 .tags {

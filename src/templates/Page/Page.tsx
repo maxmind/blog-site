@@ -5,6 +5,7 @@ import React from 'react';
 import Logo from '../../assets/svgs/maxmind-logo.svg';
 import FaArrowLeft from '../../assets/svgs/react-icons/FaArrowLeft.svg';
 import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
+import BlogFooter from '../../components/BlogFooter';
 import Layout from '../../components/Layout/Layout';
 import Link from '../../components/Link';
 import { h1 as H1, p as P } from '../../components/Mdx';
@@ -121,53 +122,7 @@ const Page: React.FC<IPage> = (props) => {
           )}
         </section>
 
-        {/* {(previousPage || nextPage) && (
-          <footer
-            className={styles.footer}
-          >
-            {previousPage && (
-              <Link
-                className={styles['footerPrevious']}
-                to={previousPage.to}
-              >
-                <FaArrowLeft
-                  className={styles['footerArrow']}
-                />
-                <span
-                  className={styles['footerDirection']}
-                >
-                  Previous
-                </span>
-                <span
-                  className={styles['footerTitle']}
-                >
-                  {previousPage.title}
-                </span>
-              </Link>
-            )}
-
-            {nextPage && (
-              <Link
-                className={styles['footerNext']}
-                to={nextPage.to}
-              >
-                <FaArrowRight
-                  className={styles['footerArrow']}
-                />
-                <span
-                  className={styles['footerDirection']}
-                >
-                  Next
-                </span>
-                <span
-                  className={styles['footerTitle']}
-                >
-                  {nextPage.title}
-                </span>
-              </Link>
-            )}
-          </footer>
-        )} */}
+        <BlogFooter />
       </article>
     </Layout>
   );
