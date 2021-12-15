@@ -71,6 +71,32 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig']= (
   }
   }
 
+  const config = props.getConfig();
+  const miniCssExtractPluginIndex = config.plugins.findIndex(
+    (plugin: any) => plugin.constructor.name === 'MiniCssExtractPlugin'
+  );
+
+  if (miniCssExtractPluginIndex > -1) {
+    // remove miniCssExtractPlugin from plugins list
+    config.plugins.splice(miniCssExtractPluginIndex, 1);
+
+    // re-add mini-css-extract-plugin
+    if (props.stage === 'build-javascript') {
+      config.plugins.push(props.plugins.extractText({
+        chunkFilename: '[name].[contenthash].css',
+        filename: '[name].[contenthash].css',
+        ignoreOrder: true,
+      }));
+    } else {
+      config.plugins.push(props.plugins.extractText({
+        chunkFilename: '[id].css',
+        filename: '[name].css',
+        ignoreOrder: true,
+      }));
+    }
+  }
+  props.actions.replaceWebpackConfig(config);
+
   props.actions.setWebpackConfig({
     module: {
       rules: configRules,

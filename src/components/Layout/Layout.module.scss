@@ -58,18 +58,19 @@ $transition: all 0.15s ease-out;
 }
 
 @include variables.breakpoint('lg') {
-  .main__hasSidebar {
-    /* autoprefixer: ignore next */
-    grid-template-areas: 'sidebar article';
-    grid-template-columns: var(--mm-layout-sidebar-width) calc(100vw - var(--mm-layout-sidebar-width));
-  }
+  // .main__hasSidebar {
+  //   /* autoprefixer: ignore next */
+  //   // grid-template-areas: 'sidebar article';
+  //   // grid-template-columns: var(--mm-layout-sidebar-width) calc(100vw - var(--mm-layout-sidebar-width));
+  // }
 
   .main [class^='Sidebar-module'] {
     display: none;
   }
 
   .main__hasSidebar [class^='Sidebar-module'] {
-    display: block;
+    display: none;
+    visibility: hidden;
   }
 
   .content {

@@ -1,6 +1,6 @@
 import GithubSlugger from 'github-slugger';
-import toHtml from 'hast-util-to-html';
-import toHast from 'mdast-util-to-hast';
+import { toHtml } from 'hast-util-to-html';
+import { toHast } from 'mdast-util-to-hast';
 // eslint-disable-next-line import/no-unresolved
 import type { Parent } from 'unist';
 
@@ -82,7 +82,7 @@ export default (feed: IFeed): any => ({
           custom_elements: [
             {
               'content:encoded': (releaseNote.children as any[]).map(
-                (child: any) => toHtml(toHast(child))
+                (child: any) => toHtml(toHast(child) as any)
               ).join(''),
             },
           ],

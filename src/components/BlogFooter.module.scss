@@ -1,0 +1,68 @@
+@use '../styles/_variables.scss';
+
+.footer {
+  border-top: 1px solid var(--mm-color-border);
+  display: grid;
+  gap: var(--mm-spacing);
+  grid-template-areas: 'newer older';
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: var(--mm-spacing) 0;
+  max-width: 880px;
+  width: 100%;
+  @include variables.max-width;
+}
+
+.footerNewer,
+.footerOlder {
+  background: 0.1s ease-in-out;
+  border-radius: var(--mm-border-radius);
+  color: var(--mm-color-display-text);
+  column-gap: calc(var(--mm-spacing) / 2);
+  display: grid;
+  font-size: 18px;
+  font-weight: 500;
+  grid-template-columns: auto;
+  padding: calc(var(--mm-spacing) / 4) calc(var(--mm-spacing) / 2);
+  text-decoration: none;
+  transition: padding 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--mm-color-sidebar);
+    cursor: pointer;
+  }
+}
+
+.footerNewer {
+  grid-area: newer;
+  grid-template-areas: 'arrow direction';
+  grid-template-columns: min-content 1fr;
+  padding-left: var(--mm-spacing);
+  text-align: left;
+
+  &:hover {
+    padding-left: calc(var(--mm-spacing) / 2);
+  }
+}
+
+.footerOlder {
+  grid-area: older;
+  grid-template-areas: 'direction arrow';
+  grid-template-columns: 1fr min-content;
+  padding-right: var(--mm-spacing);
+  text-align: right;
+
+  &:hover {
+    padding-right: calc(var(--mm-spacing) / 2);
+  }
+}
+
+.footerArrow {
+  align-self: center;
+  grid-area: arrow;
+  justify-self: center;
+}
+
+.footerDirection {
+  grid-area: direction;
+}

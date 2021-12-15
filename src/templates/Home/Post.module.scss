@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.container {
+  max-width: 600px;
+}
+
+.content {
+  padding: 0;
+}
+
+.published {
+  font-size: 14px;
+}
+
+.continuereading {
+  padding-bottom: calc(var(--mm-spacing) / 2);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}

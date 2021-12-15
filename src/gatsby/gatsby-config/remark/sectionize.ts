@@ -1,8 +1,8 @@
 import GithubSlugger from 'github-slugger';
-import toString from 'mdast-util-to-string';
+import { toString } from 'mdast-util-to-string';
 // eslint-disable-next-line import/no-unresolved
 import { Parent } from 'unist';
-import visitParents, { Visitor } from 'unist-util-visit-parents';
+import { Visitor, visitParents } from 'unist-util-visit-parents';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const findAfter = require('unist-util-find-after');
@@ -21,7 +21,7 @@ const transform: TransformFn = (tree: any) => {
       tree,
       (node: any) => node.type === 'heading' && node.depth === depth,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      visitor as Visitor<any>,
+      visitor as any,
     );
   }
 };
