@@ -41,11 +41,11 @@ For example, let’s imagine that you run a loyalty rewards program offering Ama
 In order to purchase the highly desirable Amazon gift cards, a fraudster acquires loyalty points on your site by making fraudulent purchases or makes a purchase in your loyalty store without applying any loyalty rewards at all. Simply put:
 
 - Good customers buy Amazon gift cards from loyalty store with full discount ($100 gift card for $90 by applying $10 in loyalty rewards to the purchase)
-- Fraudsters buy Amazon gift cards from loyalty store with less than full discount ($100 gift card for $98 or even full price for the gift cards. _Fraudsters don’t care what they pay for the gift cards because they are using stolen credit cards.)_
+- Fraudsters buy Amazon gift cards from loyalty store with less than full discount ($100 gift card for $98 or even full price for the gift cards. _Fraudsters don’t care what they pay for the gift cards because they are using stolen credit cards.)_
 
 Creating a parameter “loyalty store price” using the “number” data type, you can create a Custom Rule to manually review a purchase if the purchase price of the gift card in your loyalty store is greater than the loyalty program’s maximum discounted price. Your Custom Rule would look like this: `If price (input) < loyalty store price (Custom Input), THEN manual review`. By doing that, your fraud analyst can take a better look at the transaction, reviewing it with additional intelligence returned by the minFraud Network, to determine if the customer is actually a fraudster in disguise.
 
-That’s not all. Keep in mind, you create your own Custom Inputs. So, you could also pull from the intelligence within the minFraud service to create a Custom Rule that reduces your manual review times by automatically resolving known high risk transactions. Borrowing from the loyalty program example above, your Custom Rule would be: `If price (input) < loyalty store price (Custom Input) AND riskScore > 20, THEN reject`.
+That’s not all. Keep in mind, you create your own Custom Inputs. So, you could also pull from the intelligence within the minFraud service to create a Custom Rule that reduces your manual review times by automatically resolving known high risk transactions. Borrowing from the loyalty program example above, your Custom Rule would be: `If price (input) < loyalty store price (Custom Input) AND riskScore > 20, THEN reject`.
 
 Those are just a few examples of how you can use Custom Inputs as part of your fraud prevention strategy. You can create up to 24 Custom Inputs for use with Custom Rules. With Custom Inputs fueling the creation of Custom Rules combined with results from the minFraud Network, your risk analysis can stay ahead of fraudsters.
 

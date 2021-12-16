@@ -1,9 +1,9 @@
 ---
 title: "Building Your Own MMDB Database for Fun and Profit"
 date: "2015-09-29"
-categories: 
+categories:
   - "category-ip-geolocation"
-tags: 
+tags:
   - "code-sample"
   - "geoip"
   - "geolocation"
@@ -16,7 +16,7 @@ tags:
 
 If you use a GeoIP database, you're probably familiar with MaxMind's [MMDB format](https://github.com/maxmind/MaxMind-DB/blob/master/MaxMind-DB-spec.md).
 
-At MaxMind, we created the MMDB format because we needed a format that was very fast and highly portable. MMDB comes with supported readers in many languages. In this blog post, we’ll create an MMDB file which contains an access list of IP addresses. This kind of database could be used when allowing access to a VPN or a hosted application.
+At MaxMind, we created the MMDB format because we needed a format that was very fast and highly portable. MMDB comes with supported readers in many languages. In this blog post, we’ll create an MMDB file which contains an access list of IP addresses. This kind of database could be used when allowing access to a VPN or a hosted application.
 
 ## [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#tools-youll-need)Tools You'll Need
 
@@ -28,7 +28,7 @@ Use [our GitHub repository](https://github.com/maxmind/getting-started-with-mmdb
 
 ## [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#getting-started)Getting Started
 
-In our example, we want to create an access list of some IP addresses to allow them access to a VPN or a hosted application. For each IP address or IP range, we need to track a few things about the person who is connecting from this IP.
+In our example, we want to create an access list of some IP addresses to allow them access to a VPN or a hosted application. For each IP address or IP range, we need to track a few things about the person who is connecting from this IP.
 
 - name
 - development environments to which they need access
@@ -113,7 +113,7 @@ Create a new [MaxMind::DB::Writer::Tree](https://metacpan.org/pod/MaxMind::DB::W
 MaxMind::DB::Writer::Tree->new(...)
 ```
 
-The options we've used are all commented in the script, but there are additional options. They're all [fully documented](https://metacpan.org/pod/MaxMind::DB::Writer::Tree) as well. To keep things simple (and easily readable), we used IPv4 to store addresses in this example, but you could also use IPv6.
+The options we've used are all commented in the script, but there are additional options. They're all [fully documented](https://metacpan.org/pod/MaxMind::DB::Writer::Tree) as well. To keep things simple (and easily readable), we used IPv4 to store addresses in this example, but you could also use IPv6.
 
 We haven't used all available types in this script. For example, we also could have used a `map` to store some of these values. You're encouraged to review [the full list of available types](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES) which can be used in `map_key_type_callback`.
 
@@ -211,7 +211,7 @@ Check the metadata. This is optional, but here print the description we added to
 say 'Description: ' . $reader->metadata->{description}->{en};
 ```
 
-Much more metadata is available in addition to the `description`. `$reader->metadata` returns a [MaxMind::DB::Metadata](https://metacpan.org/pod/MaxMind::DB::Metadata) object which provides much more information about the file you created.
+Much more metadata is available in addition to the `description`. `$reader->metadata` returns a [MaxMind::DB::Metadata](https://metacpan.org/pod/MaxMind::DB::Metadata) object which provides much more information about the file you created.
 
 ### [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#step-4)Step 4
 
@@ -348,7 +348,7 @@ The output shows the first IP in each range (note that Jane's IP is just a "rang
 
 To extend our example, let’s take the data from an existing GeoIP2 database and combine it with our custom MMDB file.
 
-If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in `/usr/share/GeoIP`. If not, you may need to [download this file](https://dev.maxmind.com/geoip/geoip2/geolite2/) or use [geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more details on how to set this up, you can look at the `provision` section of the `Vagrantfile` in the GitHub repository.
+If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in `/usr/share/GeoIP`. If not, you may need to [download this file](https://dev.maxmind.com/geoip/geoip2/geolite2/) or use [geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more details on how to set this up, you can look at the `provision` section of the `Vagrantfile` in the GitHub repository.
 
 You can take any number of fields from existing MaxMind databases to create your own custom database. In this case, let's extend our existing database by adding `city`, `country` and `time_zone` fields for each IP range. We can use this information to (possibly) customize the user's environment. We can use the time zone when displaying dates or times. We can limit access to certain features based on the country in which the user is currently located.
 
@@ -532,7 +532,7 @@ Now, we take our existing data so that we can augment it with GeoIP2 data.
 
 As in our first example, we're create a new `Net::Works::Network` object. However, in this case we are going to insert each individual IP in the range. The reason for this is that we don't know if our IP ranges match the ranges in the GeoLite2 database. If we just rely on using the reader data for some arbitrary IP in the range, we can't be 100% sure that this is representative of all other IPs in the range. If we insert each IP in the range, we don't need to rely on the assumption that the data for a random IP will be consistent across our ranges.
 
-In order for this to work, we set `merge_record_collisions => 1` when we created the `MaxMind::DB::Writer::Tree` object. This allows the writer to be smart about merging ranges rather than letting a new range clobber any overlapping addresses.
+In order for this to work, we set `merge_record_collisions => 1` when we created the `MaxMind::DB::Writer::Tree` object. This allows the writer to be smart about merging ranges rather than letting a new range clobber any overlapping addresses.
 
 Note that this approach is fine for a small database, but it likely will not scale well in terms of speed when writing a database with a large number of records. If you're looking to create a very large database and writing speed is an issue, you are encouraged to look into using the MaxMind CSVs to seed your database.
 
@@ -629,13 +629,13 @@ To include the contents of an entire GeoIP2 database rather than selected data p
 
 #### [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#maxminddbreader)MaxMind::DB::Reader
 
-A very simple way to get started is to iterate over the search tree using `MaxMind::DB::Reader` as we did in `examples/03-iterate-search-tree.pl`. However, note that iterating over the entire tree using the Perl reader can be quite slow.
+A very simple way to get started is to iterate over the search tree using `MaxMind::DB::Reader` as we did in `examples/03-iterate-search-tree.pl`. However, note that iterating over the entire tree using the Perl reader can be quite slow.
 
 #### [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#parsing-a-csv)Parsing a CSV
 
 This requires slightly more logic, but reading a CSV file line by line will give you a significant speed boost over search tree iteration.
 
-Free downloads of CSV files for GeoLite2 City and GeoLite2 Country [are available from MaxMind.com](https://dev.maxmind.com/geoip/geoip2/geolite2/). If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and `GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory. `examples/06-read-csv.pl` will give you a head start on parsing these CSVs.
+Free downloads of CSV files for GeoLite2 City and GeoLite2 Country [are available from MaxMind.com](https://dev.maxmind.com/geoip/geoip2/geolite2/). If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and `GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory. `examples/06-read-csv.pl` will give you a head start on parsing these CSVs.
 
 ### [](https://github.com/maxmind/getting-started-with-mmdb/blob/master/blog-post.md#insert-order-merging-and-overwriting)Insert Order, Merging and Overwriting
 
@@ -645,4 +645,4 @@ It's important to understand `MaxMind::DB::Writer`'s configurable behaviour for 
 
 Today we've shown how you can create your own MMDB database and augment it with data from a GeoLite2-City database. We've only included a few data points, but MaxMind databases contain much more data you can use to build a solution to meet your business requirements.
 
-**About our contributor:**  _Olaf Alders is a Senior Software Engineer at MaxMind. After taking his first course in Fortran, Olaf earned an M.A. in Classical Philology from McMaster University and an M.A. in Medieval Studies from the University of Toronto. His open source projects include [MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various [Perl modules](https://metacpan.org/author/OALDERS).  Follow him on Twitter [@olafalders](https://twitter.com/olafalders)._
+**About our contributor:**  _Olaf Alders is a Senior Software Engineer at MaxMind. After taking his first course in Fortran, Olaf earned an M.A. in Classical Philology from McMaster University and an M.A. in Medieval Studies from the University of Toronto. His open source projects include [MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various [Perl modules](https://metacpan.org/author/OALDERS).  Follow him on Twitter [@olafalders](https://twitter.com/olafalders)._

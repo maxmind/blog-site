@@ -1,9 +1,9 @@
 ---
 title: "IP Geolocation in the IPv6 World"
 date: "2020-01-22"
-categories: 
+categories:
   - "category-ip-geolocation"
-tags: 
+tags:
   - "accuracy"
   - "ip-address"
   - "ip-geolocation"
@@ -19,17 +19,17 @@ IPv6 is the latest standard developed by the [Internet Engineering Task Force](h
 
 ## **Accuracy**
 
-Since the pool of IPv6 addresses is many orders of magnitude higher than the pool of IPv4 addresses, many of our customers wonder whether accuracy suffers. The short answer is no. 
+Since the pool of IPv6 addresses is many orders of magnitude higher than the pool of IPv4 addresses, many of our customers wonder whether accuracy suffers. The short answer is no.
 
 ## **IP Block Allocation**
 
-For both IPv6 and IPv4 standards, there are conventions for the flow down of IP block allocations from the [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers) to [regional internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry) (RIRs), [local internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_Internet_registry) (LIRs), internet service providers (ISPs), and end users. The IP blocks at the end user level tend to have natural groupings for location assignment. 
+For both IPv6 and IPv4 standards, there are conventions for the flow down of IP block allocations from the [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers) to [regional internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry) (RIRs), [local internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_Internet_registry) (LIRs), internet service providers (ISPs), and end users. The IP blocks at the end user level tend to have natural groupings for location assignment.
 
 In IPv4 for instance, an individual or household end user is typically allocated a /32 IP block, which is one individual IP. In IPv6, the size of the typical individual or household end user block is significantly larger–a /64 IP block which is 2^64 IP addresses. Despite the large number of IP addresses contained in a /64 block, we usually find them to have uniform location and network characteristics.
 
 ## **ISP Practices**
 
-In practice, ISPs have a lot of flexibility in how they manage and allocate their IP blocks. ISPs slice their IP blocks, and assign and re-assign them at their discretion. This is why IP geolocation vendors (like us) exist and why we all don’t simply use internet registry data to determine IP locations. At MaxMind, we use a dynamic algorithm that adapts to any sized network that has a distinct geographical area (or other distinct characteristics). So even with the larger block sizes in IPv6, we can retain accuracy. It is important to note, however, that there is significant variation in accuracy between ISPs for both IPv4 and IPv6 based on the ISPs’ practices. 
+In practice, ISPs have a lot of flexibility in how they manage and allocate their IP blocks. ISPs slice their IP blocks, and assign and re-assign them at their discretion. This is why IP geolocation vendors (like us) exist and why we all don’t simply use internet registry data to determine IP locations. At MaxMind, we use a dynamic algorithm that adapts to any sized network that has a distinct geographical area (or other distinct characteristics). So even with the larger block sizes in IPv6, we can retain accuracy. It is important to note, however, that there is significant variation in accuracy between ISPs for both IPv4 and IPv6 based on the ISPs’ practices.
 
 ## **Accuracy Is Not One Number**
 

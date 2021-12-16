@@ -1,9 +1,9 @@
 ---
 title: "Behind the Scenes: High Risk Shipping Addresses"
 date: "2016-04-04"
-categories: 
+categories:
   - "online-fraud-prevention"
-tags: 
+tags:
   - "chargeback-prevention"
   - "ecommerce-fraud-detection"
   - "fraud-screening"
@@ -17,7 +17,7 @@ This blog post investigates some high risk shipping addresses known to MaxMind, 
 
 **Where are the most high risk shipping addresses?**
 
-Let’s take a look at the current top ten zip codes with the most high risk shipping addresses, as identified by minFraud’s _shipForward_ \* data point, and see what insight they provide.
+Let’s take a look at the current top ten zip codes with the most high risk shipping addresses, as identified by minFraud’s _shipForward_ \* data point, and see what insight they provide.
 
 As indicated on this map, all top ten zip codes are on the coast and near a shipping port:
 
@@ -25,15 +25,15 @@ As indicated on this map, all top ten zip codes are on the coast and near a ship
 
 Six of the ten zip codes are in Miami, FL. In fact, 75% of the high risk shipping addresses associated with these ten zip codes were in Miami, FL.
 
-The location of these zip codes suggests that many of these high risk shipping addresses are associated with freight forwarders. Freight forwarders are in a position to receive multiple shipments, consolidate them, and ship them to other countries. Of course, much freight forwarding represents legitimate traffic, goods moving from manufacturer to market. But in many cases, freight forwarders provide a convenient service for fraudsters moving stolen goods out of the country.
+The location of these zip codes suggests that many of these high risk shipping addresses are associated with freight forwarders. Freight forwarders are in a position to receive multiple shipments, consolidate them, and ship them to other countries. Of course, much freight forwarding represents legitimate traffic, goods moving from manufacturer to market. But in many cases, freight forwarders provide a convenient service for fraudsters moving stolen goods out of the country.
 
-Zooming in on a map, we can see that there are indeed a large number of freight forwarders in the neighborhood of the risky Miami zip codes:
+Zooming in on a map, we can see that there are indeed a large number of freight forwarders in the neighborhood of the risky Miami zip codes:
 
 [![Freight forwarders Miami](images/Freight-forwarders-Miami-e1459427863748.png)](https://blog.maxmind.com/wp-content/uploads/2016/03/Freight-forwarders-Miami-e1459427863748.png)
 
 **Tips for identifying high risk shipping addresses**
 
-Shipping addresses associated with a freight forwarder often include an apartment number or suite number consisting of five or more digits. This provides the freight forwarder with necessary account information while presenting to the merchant as something that appears to be a normal residential address. As a result, we recommend you include apartment and suite numbers in the data you submit with your minFraud Insights queries, as it adds to the data for consideration in shipping address risk assessment.
+Shipping addresses associated with a freight forwarder often include an apartment number or suite number consisting of five or more digits. This provides the freight forwarder with necessary account information while presenting to the merchant as something that appears to be a normal residential address. As a result, we recommend you include apartment and suite numbers in the data you submit with your minFraud Insights queries, as it adds to the data for consideration in shipping address risk assessment.
 
 Since a shipping address associated with a freight forwarder in and of itself is not indicative of high risk, consider other factors:
 

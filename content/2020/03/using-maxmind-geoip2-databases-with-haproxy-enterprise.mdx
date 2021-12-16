@@ -1,9 +1,9 @@
 ---
 title: "Using MaxMind GeoIP2 Databases with HAProxy Enterprise"
 date: "2020-03-02"
-categories: 
+categories:
   - "category-ip-geolocation"
-tags: 
+tags:
   - "geoip"
   - "geoip2"
   - "geolocation"
@@ -22,29 +22,29 @@ Within your HAProxy configuration, you choose which GeoIP2 databases to query. F
 
 ```
 global
-module-path /opt/hapee-1.9/modules 
-module-load hapee-lb-maxmind.so 
-maxmind-load mlock_max 512000000 CITY /etc/hapee-1.9/GeoIP2-City.mmdb ISP /etc/hapee-1.9/GeoIP2-ISP.mmdb 
+module-path /opt/hapee-1.9/modules
+module-load hapee-lb-maxmind.so
+maxmind-load mlock_max 512000000 CITY /etc/hapee-1.9/GeoIP2-City.mmdb ISP /etc/hapee-1.9/GeoIP2-ISP.mmdb
 ```
 
-HAProxy Enterprise makes it easy to keep these databases up to date. Use the `maxmind-update` directive within the same section in order to fetch a given update URL at a defined interval and replace the contents of the databases. Here's an example:   
+HAProxy Enterprise makes it easy to keep these databases up to date. Use the `maxmind-update` directive within the same section in order to fetch a given update URL at a defined interval and replace the contents of the databases. Here's an example:
 
 ```
-maxmind-update url CITY http://localhost:8000/geoip/GeoIP2-City.mmdb url ISP http://localhost:8000/geoip/GeoIP2-ISP.mmdb 
+maxmind-update url CITY http://localhost:8000/geoip/GeoIP2-City.mmdb url ISP http://localhost:8000/geoip/GeoIP2-ISP.mmdb
 ```
 
-Then, you can inspect incoming IP addresses and look up their associated cities and countries. Use the `http-request add-header` directive to add a custom HTTP request header before the message is forwarded to your backend servers. Here's an example: 
+Then, you can inspect incoming IP addresses and look up their associated cities and countries. Use the `http-request add-header` directive to add a custom HTTP request header before the message is forwarded to your backend servers. Here's an example:
 
 ```
-listen www_proxy 
-bind :80 
-mode http 
+listen www_proxy
+bind :80
+mode http
 http-request add-header X-Country %[src,maxmind-lookup("CITY","country","iso_code")]
-server s1 127.0.0.1:8080  
+server s1 127.0.0.1:8080
 ```
 
-The resulting request header will look like this: _X-Country: US_. 
+The resulting request header will look like this: _X-Country: US_.
 
-## Conclusion 
+## Conclusion
 
 In the guide, you learned about the integration between MaxMind's GeoIP2 databases and HAProxy Enterprise. You can use this to gain better insights about your clients so that you can customize your site's content depending on their location. Tailoring content based on geolocation data is a great way to optimize advertisements, marketing copy, local events, and more. Being able to offload this task to HAProxy makes it easy.
