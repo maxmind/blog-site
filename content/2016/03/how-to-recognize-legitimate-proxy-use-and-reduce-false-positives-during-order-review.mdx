@@ -1,10 +1,10 @@
 ---
 title: "How to recognize legitimate proxy use <BR> and reduce false positives during order review"
 date: "2016-03-04"
-categories: 
+categories:
   - "category-ip-geolocation"
   - "online-fraud-prevention"
-tags: 
+tags:
   - "bestpractices"
   - "fraud-screening"
   - "ip-address"
@@ -13,6 +13,8 @@ tags:
   - "online-fraud-detection"
   - "proxy-detection"
   - "proxy-score"
+authors:
+  - "Miguel Atienza"
 ---
 
 As a merchant, you’ll frequently see cases where multiple orders with different billing addresses and payment methods are placed from the same IP address, and it’s not clear whether or not this indicates fraud. Such activity could be a sign of fraud, with a fraudster testing multiple compromised credit cards. It could also be a sign that a fraudster is using a proxy to obscure his identity. There are times though when such activity is expected and flagging such transactions as fraudulent would mean denying good orders and frustrating customers.
@@ -35,6 +37,6 @@ Of course, knowing that a transaction came through a corporate or other seemingl
 
 When assessing the risk of a transaction, it’s important to consider the IP address. Review the proxyScore\* as well as the source of traffic to the IP address. This will enable you not only to stop fraudulent transactions, but reduce the false positives that impact your business as well.
 
- 
+
 
 \* _minFraud Insights provides an IP risk score in place of the proxyScore._
