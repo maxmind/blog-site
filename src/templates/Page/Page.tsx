@@ -1,20 +1,20 @@
-import { useLocation } from '@reach/router';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Logo from '../../assets/svgs/maxmind-logo.svg';
-import FaArrowLeft from '../../assets/svgs/react-icons/FaArrowLeft.svg';
-import FaArrowRight from '../../assets/svgs/react-icons/FaArrowRight.svg';
-import BlogFooter from '../../components/BlogFooter';
 import Layout from '../../components/Layout/Layout';
-import Link from '../../components/Link';
-import { h1 as H1, p as P } from '../../components/Mdx';
-import { getNextPage, getPreviousPage } from '../../utils/pagination';
+import { h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
+import Pagination from '../../components/Pagination';
 import Tag from './../Home/Tag';
 import { IPageContext } from './query';
-import TableOfContents from './TableOfContents';
 
 import * as styles from './Page.module.scss';
+
+const caseInsensitiveIncludes = (
+  haystack: string[] = [],
+  needle: string
+) => haystack.find(
+  (x) => x.toLowerCase().trim() === needle.toLowerCase().trim()
+);
 
 interface IPage {
   children: React.ReactNode;
@@ -22,27 +22,51 @@ interface IPage {
 }
 
 const Page: React.FC<IPage> = (props) => {
+  const { frontmatter, nextPost, prevPost } = props.pageContext;
   const {
-    frontmatter,
-    parent,
-    tableOfContents,
-  } = props.pageContext;
-  const location = useLocation();
-  const { description, keywords, title } = frontmatter;
-  const { modifiedTime } = parent || {};
+    author,
+    date: publishDate,
+    description,
+    keywords,
+    tags,
+    title,
+  } = frontmatter;
+
+  const date = new Date(publishDate);
 
   let type;
 
-  if (location.pathname.startsWith('/minfraud')) {
-    type = 'minfraud';
+  if(tags) {
+    if (
+      caseInsensitiveIncludes(tags, 'minfraud')
+      && !(
+        caseInsensitiveIncludes(tags, 'geoip')
+        || caseInsensitiveIncludes(tags, 'geoip2')
+      )
+    ) {
+      type = 'minfraud';
+    }
+
+    if (
+      (
+        caseInsensitiveIncludes(tags, 'geoip')
+        || caseInsensitiveIncludes(tags, 'geoip2')
+      )
+      && !caseInsensitiveIncludes(tags, 'minfraud')
+    ) {
+      type = 'geoip';
+    }
   }
 
-  if (location.pathname.startsWith('/geoip')) {
-    type = 'geoip';
-  }
+  const leftLink = nextPost ? {
+    text: nextPost.frontmatter.title,
+    to: nextPost.fields.slug,
+  } : undefined;
 
-  const nextPage = getNextPage(location.pathname);
-  const previousPage = getPreviousPage(location.pathname);
+  const rightLink = prevPost ? {
+    text: prevPost.frontmatter.title,
+    to: prevPost.fields.slug,
+  } : undefined;
 
   return (
     <Layout
@@ -58,6 +82,15 @@ const Page: React.FC<IPage> = (props) => {
         <header
           className={styles.header}
         >
+          <span
+            className={styles.date}
+          >
+            {date.toLocaleDateString(undefined, {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            })}
+          </span>
           <H1
             className={styles.heading}
           >
@@ -65,64 +98,42 @@ const Page: React.FC<IPage> = (props) => {
           </H1>
         </header>
 
-        {/* <aside
-          className={styles.aside}
-        >
-          {tableOfContents && tableOfContents.items?.length > 0 && (
-            <TableOfContents
-              className={styles.tableOfContents}
-              items={tableOfContents.items}
-            />
-          }
-        </aside> */}
-
         <section
           className={styles.content}
         >
-          <P>January 1, 2021 by Author Name</P>
-
-          <div
-            className={styles.placeholder}
-          >
-            <Logo />
-            <Logo />
-            <Logo />
-            <Logo />
-            <Logo />
-          </div>
+          <P>
+            {author && (
+              <>
+                {' '}
+                by
+                {' '}
+                {author}
+              </>
+            )}
+          </P>
 
           {props.children}
 
-          <div
-            className={styles.tags}
-          >
-            <Tag
-              content="IP Intelligence"
-            />
-            <Tag
-              content="minFraud"
-            />
-            <Tag
-              content="IP Geolocation"
-            />
-            <Tag
-              content="Online Fraud Prevention"
-            />
-          </div>
-
-          {modifiedTime && (
-            <P
-              className={styles['lastUpdated']}
+          {tags && (
+            <div
+              className={styles.tags}
             >
-              This page was last updated on
-              {' '}
-              {modifiedTime}
-              .
-            </P>
+              {tags.map(tag => (
+                <Tag
+                  key={tag}
+                  text={tag}
+                />
+              ))}
+            </div>
           )}
         </section>
 
-        <BlogFooter />
+        <Hr />
+
+        <Pagination
+          leftLink={leftLink}
+          rightLink={rightLink}
+        />
       </article>
     </Layout>
   );

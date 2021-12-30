@@ -66,10 +66,10 @@ const Header: React.FC<IHeader> = (props) => {
               Blog
             </span>
           </Link>
-          <SearchBar
+          {/* <SearchBar
             className={styles.search}
-          />
-          <button
+          /> */}
+          {/* <button
             aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
             className={styles.toggle}
             onClick={toggleSidebar}
@@ -83,7 +83,7 @@ const Header: React.FC<IHeader> = (props) => {
                 aria-hidden="true"
               />
             )}
-          </button>
+          </button> */}
         </div>
       </header>
     </>

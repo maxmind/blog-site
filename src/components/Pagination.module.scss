@@ -1,14 +1,13 @@
 @use '../styles/_variables.scss';
 
 .footer {
-  border-top: 1px solid var(--mm-color-border);
   display: grid;
   gap: var(--mm-spacing);
   grid-template-areas: 'newer older';
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  padding: var(--mm-spacing) 0;
   max-width: 880px;
+  padding: 0  0 var(--mm-spacing) 0;
   width: 100%;
   @include variables.max-width;
 }

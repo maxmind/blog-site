@@ -10,6 +10,13 @@
   @include variables.max-width;
 }
 
+.date {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: calc(var(--mm-spacing) / 4);
+}
+
 .heading {
   margin: 0;
   padding: 0 0 var(--mm-spacing);

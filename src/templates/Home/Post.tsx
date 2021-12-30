@@ -1,82 +1,103 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-import H2 from '../../../src/components/Mdx/H2';
 import { a as A, p as P } from '../../components/Mdx';
-import Tag from '../Home/Tag';
-import Link from './../../components/Link';
+import { IPost } from './query';
 
 import * as styles from './Post.module.scss';
 
-interface IPost {
-  continuereading: string;
-  paragraph: React.ReactNode;
-  published: string;
-  // tags?: string;
-  title: string;
+interface IPostProps {
+  isFeatured?: boolean;
+  post: IPost;
 }
 
-const Post: React.FC<IPost> = (props) => {
-  const {
-    continuereading,
-    paragraph,
-    published,
-    // tags,
-    title,
-  } = props;
+const Post: React.FC<IPostProps> = (props) => {
+  const { isFeatured, post } = props;
+  const { excerpt, fields, frontmatter } = post;
+  const { slug } = fields;
+  const { author, date, featuredImage, title } = frontmatter;
+
+  const publishedDate = new Date(date);
 
   return (
-    <div
-      className={styles.container}
+    <article
+      className={classNames(
+        styles.container,
+        {
+          [styles.containerFeatured]: isFeatured,
+        }
+      )}
     >
-      <H2>
-        {title}
-      </H2>
-      <div
-        className={styles.published}
-      >
-        {published}
-      </div>
       <div
         className={styles.content}
       >
-        <P>{paragraph}</P>
-      </div>
-      <div
-        className={styles.continuereading}
-      >
-        <A
-          href="/2021/09/data-updates-for-apple-icloud-private-relay"
+        <div
+          className={styles.meta}
         >
-          {continuereading}
-        </A>
+          <div
+            className={styles.published}
+          >
+            {publishedDate.toLocaleDateString(undefined, {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            })}
+          </div>
+
+          {author && (
+            <div >
+              Written by
+              {' '}
+              {author}
+            </div>
+          )}
+        </div>
+        <div
+          className={styles.copy}
+        >
+          <h2>
+            <A
+              className={styles.title}
+              href={slug}
+            >
+              {title}
+            </A>
+          </h2>
+
+          <P>
+            {excerpt}
+          </P>
+        </div>
+        <div
+          className={styles.readmore}
+        >
+          <A
+            className={styles['readmore__link']}
+            href={slug}
+          >
+            Read more &rsaquo;
+          </A>
+        </div>
       </div>
-      <div
-        className={styles.tags}
-      >
-        <Tag
-          content="IP Intelligence"
-        />
-        <Tag
-          content="minFraud"
-        />
-        <Tag
-          content="IP Geolocation"
-        />
-        <Tag
-          content="Online Fraud Prevention"
-        />
-      </div>
-    </div>
+      {isFeatured && featuredImage && (
+        <div
+          className={styles.graphic}
+        >
+          <img
+            alt="foo"
+            className={styles.image}
+            src={featuredImage.publicURL}
+          />
+        </div>
+      )}
+    </article>
   );
 };
 
 Post.propTypes = {
-  continuereading: PropTypes.string.isRequired,
-  paragraph: PropTypes.node.isRequired,
-  published: PropTypes.string.isRequired,
-  // tags: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  isFeatured: PropTypes.bool,
+  post: PropTypes.any.isRequired,
 };
 
 export default Post;

@@ -39,19 +39,7 @@ export default {
     },
     {
       options: {
-        ignore: [
-          ...GLOBALLY_IGNORED_SOURCE_FILES,
-          '**/!(content)/index.mdx',
-        ],
-        name: 'home',
-        path: `${GATSBY_ROOT}/content/`,
-      },
-      resolve: 'gatsby-source-filesystem',
-    },
-    {
-      options: {
         defaultLayouts: {
-          home: require.resolve(`${GATSBY_ROOT}src/templates/Home`),
           pages: require.resolve(`${GATSBY_ROOT}src/templates/Page`),
         },
         extensions: [

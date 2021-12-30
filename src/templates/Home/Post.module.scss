@@ -1,22 +1,117 @@
 @use '../../styles/variables';
 
 .container {
-  max-width: 600px;
+  display: grid;
+  grid-template-areas: 'content';
+}
+
+.containerFeatured {
+  display: grid;
+  gap: var(--mm-spacing);
+  grid-template-areas: 'graphic'  'content';
+  padding: var(--mm-spacing);
+  width: 100%;
 }
 
 .content {
-  padding: 0;
+  column-gap: var(--mm-spacing);
+  display: grid;
+  grid-area: content;
+  grid-template-areas:
+    'meta'
+    'copy'
+    'readmore';
+  width: 100%;
+}
+
+.containerFeatured .content {
+  align-items: start;
+  gap: calc(var(--mm-spacing) / 2);
+  grid-template-rows: max-content 1fr;
+}
+
+.meta {
+  font-size: 12px;
+  grid-area: meta;
+}
+
+.copy {
+  display: grid;
+}
+
+.title {
+  border: 0;
+  font-family: var(--mm-font-stack-display);
+  font-size: 20px;
+  font-weight: 700;
+  height: auto;
+  line-height: 1.5em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .published {
+  font-family: var(--mm-font-stack-display);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-top: 6px;
+}
+
+.graphic {
+  align-content: center;
+  border-radius: var(--mm-border-radius);
+  display: grid;
+  grid-area: graphic;
+  height: 100%;
+  justify-items: center;
+  overflow: hidden;
+  padding: var(--mm-spacing);
+  width: 100%;
+
+  @include variables.pattern;
+}
+
+.image {
+  filter: drop-shadow(1px 2px 5px #0077c2);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.readmore {
+  grid-area: readmore;
+}
+
+.readmore__link {
+  border: 0;
   font-size: 14px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.continuereading {
-  padding-bottom: calc(var(--mm-spacing) / 2);
-}
+@include variables.breakpoint('md') {
+  .containerFeatured {
+    grid-template-areas: 'content graphic';
+    grid-template-columns: 1fr 40%;
+  }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
+  .container:not(.containerFeatured) .meta {
+    display: grid;
+    justify-content: right;
+  }
+
+  .container:not(.containerFeatured) .content {
+    display: grid;
+    grid-template-areas:
+      'meta copy'
+      'meta readmore';
+    grid-template-columns: 130px 1fr;
+  }
 }

@@ -1,14 +1,24 @@
+import { ImageDataLike } from 'gatsby-plugin-image';
 export interface IBaseQuery {
+  excerpt: string;
   fields: {
     slug: string;
   };
   fileAbsolutePath: string,
   frontmatter: {
+    author?: string;
+    categories?: [];
+    date: string;
     description: string;
     draft: boolean;
+    featuredImage?: {
+      publicURL: string;
+    };
     keywords: string[];
+    tags: string[];
     title: string;
-  }
+  },
+  timeToRead: number;
 }
 
 export const BaseQuery = `
@@ -18,10 +28,18 @@ export const BaseQuery = `
     }
     fileAbsolutePath
     frontmatter {
-      title
+      author
+      categories
+      date
       description
-      keywords
       draft
+      featuredImage {
+        publicURL
+      }
+      keywords
+      tags
+      title
     }
+    timeToRead
   }
 `;
