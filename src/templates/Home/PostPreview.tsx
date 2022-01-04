@@ -5,14 +5,14 @@ import * as React from 'react';
 import { a as A, p as P } from '../../components/Mdx';
 import { IPost } from './query';
 
-import * as styles from './Post.module.scss';
+import * as styles from './PostPreview.module.scss';
 
-interface IPostProps {
+interface IPostPreviewProps {
   isFeatured?: boolean;
   post: IPost;
 }
 
-const Post: React.FC<IPostProps> = (props) => {
+const PostPreview: React.FC<IPostPreviewProps> = (props) => {
   const { isFeatured, post } = props;
   const { excerpt, fields, frontmatter } = post;
   const { slug } = fields;
@@ -95,9 +95,9 @@ const Post: React.FC<IPostProps> = (props) => {
   );
 };
 
-Post.propTypes = {
+PostPreview.propTypes = {
   isFeatured: PropTypes.bool,
   post: PropTypes.any.isRequired,
 };
 
-export default Post;
+export default PostPreview;

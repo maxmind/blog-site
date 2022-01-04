@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-import Logo from '../../assets/svgs/maxmind-logo.svg';
 import Layout from '../../components/Layout/Layout';
-import { a as A } from '../../components/Mdx';
 import Pagination from '../../components/Pagination';
-import Post from './Post';
+import PostPreview from './PostPreview';
 import { IHomeContext } from './query';
 
 import * as styles from './Home.module.scss';
@@ -42,7 +40,7 @@ const Home: React.FC<IHome> = (props) => {
           <div
             className={styles.featured}
           >
-            <Post
+            <PostPreview
               isFeatured={true}
               post={featuredPost}
             />
@@ -56,7 +54,7 @@ const Home: React.FC<IHome> = (props) => {
           className={styles.posts}
         >
           {posts && posts.map(post => (
-            <Post
+            <PostPreview
               key={post.fields.slug}
               post={post}
             />
