@@ -4,10 +4,10 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import { h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
 import Pagination from '../../components/Pagination';
-import Tag from './../Home/Tag';
-import { IPageContext } from './query';
+import Tag from '../Home/Tag';
+import { IPostContext } from './query';
 
-import * as styles from './Page.module.scss';
+import * as styles from './Post.module.scss';
 
 const caseInsensitiveIncludes = (
   haystack: string[] = [],
@@ -16,12 +16,12 @@ const caseInsensitiveIncludes = (
   (x) => x.toLowerCase().trim() === needle.toLowerCase().trim()
 );
 
-interface IPage {
+interface IPost {
   children: React.ReactNode;
-  pageContext: IPageContext;
+  pageContext: IPostContext;
 }
 
-const Page: React.FC<IPage> = (props) => {
+const Post: React.FC<IPost> = (props) => {
   const { frontmatter, nextPost, prevPost } = props.pageContext;
   const {
     author,
@@ -139,9 +139,9 @@ const Page: React.FC<IPage> = (props) => {
   );
 };
 
-Page.propTypes = {
+Post.propTypes = {
   children: PropTypes.node.isRequired,
   pageContext: PropTypes.any,
 };
 
-export default Page;
+export default Post;

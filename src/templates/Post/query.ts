@@ -1,24 +1,30 @@
 /* eslint-disable filenames/match-exported */
 import { BaseQuery, IBaseQuery } from '../../baseQuery';
-import { ITableOfContents } from './TableOfContents';
 
-export type IPageContext = IBaseQuery & {
-  readonly nextPost: any;
+export type IPostPreview = Omit<IBaseQuery, 'fileAbsolutePath'> & {
+  FeaturedImage: React.FC;
+};
+
+export type IPostContext = IPostPreview & {
+  readonly isFeatured?: boolean;
+  readonly nextPost: IPostPreview;
   readonly parent: {
     readonly modifiedTime: string;
   };
-  readonly prevPost: any;
-  readonly tableOfContents: ITableOfContents;
+  readonly prevPost: IPostPreview;
   readonly timeToRead: number;
 }
 
-const query: QueryFn<IPageContext> = (
+const query: QueryFn<IPostContext> = (
   graphql: GraphqlFn
-) => graphql<IPageContext>(`
+) => graphql<IPostContext>(`
   ${BaseQuery}
 
-  query PageTemplateQuery {
-    allMdx(filter: {fields: {layout: {eq: "pages"}}}) {
+  query PostTemplateQuery {
+    allMdx(
+      filter: {fields: {layout: {eq: "posts"}}}
+      sort: {fields: [frontmatter___date], order: DESC}
+    ) {
       nodes {
         ... BaseQuery
         timeToRead
