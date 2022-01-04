@@ -17,6 +17,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       categories: [String!]
       description: String
       keywords: [String!]
+      isFeatured: Boolean
       tags: [String!]
       title: String!
     }

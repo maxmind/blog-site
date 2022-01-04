@@ -1,4 +1,3 @@
-import { ImageDataLike } from 'gatsby-plugin-image';
 export interface IBaseQuery {
   excerpt: string;
   fields: {
@@ -7,13 +6,14 @@ export interface IBaseQuery {
   fileAbsolutePath: string,
   frontmatter: {
     author?: string;
-    categories?: [];
+    categories?: string[];
     date: string;
     description: string;
     draft: boolean;
     featuredImage?: {
       publicURL: string;
     };
+    isFeatured?: boolean;
     keywords: string[];
     tags: string[];
     title: string;
@@ -36,6 +36,7 @@ export const BaseQuery = `
       featuredImage {
         publicURL
       }
+      isFeatured
       keywords
       tags
       title

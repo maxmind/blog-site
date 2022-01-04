@@ -32,7 +32,7 @@ export default {
           ...GLOBALLY_IGNORED_SOURCE_FILES,
           '**/index.mdx',
         ],
-        name: 'pages',
+        name: 'posts',
         path: `${GATSBY_ROOT}/content/`,
       },
       resolve: 'gatsby-source-filesystem',
@@ -40,7 +40,7 @@ export default {
     {
       options: {
         defaultLayouts: {
-          pages: require.resolve(`${GATSBY_ROOT}src/templates/Page`),
+          posts: require.resolve(`${GATSBY_ROOT}src/templates/Post`),
         },
         extensions: [
           '.mdx',
