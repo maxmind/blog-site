@@ -1,11 +1,6 @@
 import { GatsbyConfig } from 'gatsby';
 
-// import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
-// import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
 // import remarkExternalLinks from 'remark-external-links';
-import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
-import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
-import sectionize from './remark/sectionize';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
 
@@ -47,7 +42,6 @@ export default {
           '.md',
         ],
         remarkPlugins: [
-          // sectionize,
           // remarkExternalLinks,
         ],
       },
@@ -86,24 +80,6 @@ export default {
       resolve: 'gatsby-plugin-react-svg',
     },
     'gatsby-plugin-remove-trailing-slashes',
-    // {
-    //   options: {
-    //     feeds: [],
-    //     query: `
-    //       {
-    //         site {
-    //           siteMetadata {
-    //             title
-    //             description
-    //             siteUrl
-    //             site_url: siteUrl
-    //           }
-    //         }
-    //       }
-    //     `,
-    //   },
-    //   resolve: 'gatsby-plugin-feed',
-    // },
     {
       options: {
         trackingIds: [],
