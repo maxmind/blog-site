@@ -1,6 +1,5 @@
 import { GatsbyConfig } from 'gatsby';
-
-// import remarkExternalLinks from 'remark-external-links';
+import remarkExternalLinks from 'remark-external-links';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
 
@@ -21,6 +20,7 @@ const GLOBALLY_IGNORED_SOURCE_FILES = [
 
 export default {
   plugins: [
+    'gatsby-remark-images',
     {
       options: {
         ignore: [
@@ -41,8 +41,23 @@ export default {
           '.mdx',
           '.md',
         ],
+        gatsbyRemarkPlugins: [
+          {
+            options: {
+              backgroundColor: 'transparent',
+              disableBgImageOnAlpha: true,
+              linkImagesToOriginal: true,
+              maxWidth: 1200,
+            },
+            resolve: 'gatsby-remark-images',
+          },
+          {
+            // eslint-disable-next-line max-len
+            resolve: require.resolve(`${GATSBY_ROOT}/plugins/gatsby-remark-mdx-v2-images`),
+          },
+        ],
         remarkPlugins: [
-          // remarkExternalLinks,
+          remarkExternalLinks,
         ],
       },
       resolve: 'gatsby-plugin-mdx',

@@ -17,7 +17,7 @@ const P: React.FC<React.HTMLProps<HTMLParagraphElement>> = ({
 );
 
 P.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
 };
 

@@ -109,8 +109,6 @@ glob(`${PUBLIC_DIR}/**/*.html`, {}, (err, files) => {
       return;
     }
 
-    console.log(cssFile);
-
     // eslint-disable-next-line security/detect-non-literal-fs-filename
     fs.writeFileSync(filename, cssFile.content);
   });

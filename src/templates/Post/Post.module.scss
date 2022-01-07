@@ -47,6 +47,14 @@
 
 .content {
   @include variables.max-width;
+
+  :global(.gatsby-resp-image-background-image) {
+    display: none !important;
+  }
+
+  :global(.gatsby-resp-image-wrapper) {
+    display: grid !important;
+  }
 }
 
 .content > [id^='toc-']:first-child > *:first-child {
