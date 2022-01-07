@@ -46,7 +46,7 @@ export default {
             options: {
               backgroundColor: 'transparent',
               disableBgImageOnAlpha: true,
-              linkImagesToOriginal: true,
+              linkImagesToOriginal: false,
               maxWidth: 1200,
             },
             resolve: 'gatsby-remark-images',
