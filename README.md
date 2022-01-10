@@ -100,3 +100,23 @@ yarn build && yarn preview
 **Firebase function resources are shared throughout environments.** If two PRs
 have changes to Firebase functions, the deployed functions will be those of the
 PR whose `Firebase - Staging` GitHub workflow has run most recently.
+
+## Known Issues
+
+### ESM Support
+
+Several lower-level packages, particularly packages that are a part of the Unist
+ecosystem, are ESM. [Gatsby does not play well with ESM packages](https://github.com/gatsbyjs/gatsby/issues/23705).
+
+The following packages are outdated, but the newer major versions are ESM
+only, which does not play nice with this project.
+  - `hast-util-from-dom`
+  - `remark-external-links`
+  - `remark-frontmatter`
+
+
+### Inline image issues
+
+MDX v2 does not work with `gatsby-remark-images` ([see issue](https://github.com/gatsbyjs/gatsby/issues/26662)). A custom plugin has been added to support inline png and
+jpeg files. Gifs are not supported at this time. If needed, [New Relic's docs website has
+an example of how to integrate gifs](https://github.com/newrelic/docs-website/pull/582/files#diff-b5e305780d9d473da97c61beab8bc36e5e8871b360942e4686c9b20d8c5d4cfaR209-R220).
