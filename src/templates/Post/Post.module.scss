@@ -180,11 +180,9 @@
   .article {
     display: grid;
     grid-template-areas:
-      'header header'
-      'content content'
-      'last-updated last-updated'
-      'footer footer';
-    // grid-template-columns: 50% 50%;
+      'header'
+      'content'
+      'footer';
     grid-template-rows: min-content min-content 1fr min-content;
     height: 100%;
     padding: var(--mm-spacing) 0;
