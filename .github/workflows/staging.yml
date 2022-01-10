@@ -78,30 +78,30 @@ jobs:
           GATSBY_URL: https://blog.maxmind.com
         run:  yarn build
 
-  # test-unit:
-  #   name: Test – Unit
-  #   needs: [cache-keys, build]
-  #   runs-on: ubuntu-latest
+  test-unit:
+    name: Test – Unit
+    needs: [cache-keys, build]
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout Repo
-  #       uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
-  #     - name: Setup Node environment
-  #       uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
-  #       with:
-  #         node-version: '14'
+      - name: Setup Node environment
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
+        with:
+          node-version: '14'
 
-  #     - name: Get cached dependencies
-  #       uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
-  #       with:
-  #         path: |
-  #           node_modules
-  #           functions/node_modules
-  #         key: ${{ needs.cache-keys.outputs.node-modules }}
+      - name: Get cached dependencies
+        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
+        with:
+          path: |
+            node_modules
+            functions/node_modules
+          key: ${{ needs.cache-keys.outputs.node-modules }}
 
-  #     - name: Run unit tests
-  #       run: yarn test:unit
+      - name: Run unit tests
+        run: yarn test:unit
 
   deploy-hosting:
     name: Deploy – Hosting
@@ -161,71 +161,71 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
 
-  # deploy-functions:
-  #   name: Deploy – Functions
-  #   needs: [cache-keys, build]
-  #   runs-on: ubuntu-latest
+  deploy-functions:
+    name: Deploy – Functions
+    needs: [cache-keys, build]
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout Repo
-  #       uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
-  #     - name: Setup Node environment
-  #       uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
-  #       with:
-  #         node-version: '14'
+      - name: Setup Node environment
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
+        with:
+          node-version: '14'
 
-  #     - name: Get cached build
-  #       uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
-  #       with:
-  #         path: |
-  #           functions/lib
-  #           public
-  #           firebase.json
-  #         key: ${{ needs.cache-keys.outputs.build }}
+      - name: Get cached build
+        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
+        with:
+          path: |
+            functions/lib
+            public
+            firebase.json
+          key: ${{ needs.cache-keys.outputs.build }}
 
-  #     - name: Set up Google Cloud SDK
-  #       uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba # v0.2.1
-  #       with:
-  #         project_id: ${{ env.FIREBASE_PROJECT_ID }}
-  #         service_account_key: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
-  #         export_default_credentials: true
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba # v0.2.1
+        with:
+          project_id: ${{ env.FIREBASE_PROJECT_ID }}
+          service_account_key: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
+          export_default_credentials: true
 
-  #     # Dependencies are needed here to run `yarn firbase` command
-  #     - name: Get cached dependencies
-  #       uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
-  #       with:
-  #         path: |
-  #           node_modules
-  #           functions/node_modules
-  #         key: ${{ needs.cache-keys.outputs.node-modules }}
+      # Dependencies are needed here to run `yarn firbase` command
+      - name: Get cached dependencies
+        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
+        with:
+          path: |
+            node_modules
+            functions/node_modules
+          key: ${{ needs.cache-keys.outputs.node-modules }}
 
-  #     - name: Deploy all other Firebase resources
-  #       run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force
+      - name: Deploy all other Firebase resources
+        run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force
 
-  # test-e2e:
-  #   name: Test – End-to-end
-  #   needs: [cache-keys, deploy-hosting, deploy-functions]
-  #   runs-on: ubuntu-latest
+  test-e2e:
+    name: Test – End-to-end
+    needs: [cache-keys, deploy-hosting, deploy-functions]
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout Repo
-  #       uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
-  #     - name: Setup Node environment
-  #       uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
-  #       with:
-  #         node-version: '14'
+      - name: Setup Node environment
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458  # v2.5.0
+        with:
+          node-version: '14'
 
-  #     - name: Get cached dependencies
-  #       uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
-  #       with:
-  #         path: |
-  #           node_modules
-  #           functions/node_modules
-  #         key: ${{ needs.cache-keys.outputs.node-modules }}
+      - name: Get cached dependencies
+        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # v2.1.6
+        with:
+          path: |
+            node_modules
+            functions/node_modules
+          key: ${{ needs.cache-keys.outputs.node-modules }}
 
-  #     - name: Run end-to-end tests
-  #       env:
-  #         E2E_TARGET_URL: ${{ needs.deploy-hosting.outputs.hosting-url }}
-  #       run: yarn test:e2e
+      - name: Run end-to-end tests
+        env:
+          E2E_TARGET_URL: ${{ needs.deploy-hosting.outputs.hosting-url }}
+        run: yarn test:e2e
