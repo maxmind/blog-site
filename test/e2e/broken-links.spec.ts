@@ -3,16 +3,10 @@ import blc from 'broken-link-checker';
 const targetUrl = process.env.E2E_TARGET_URL || 'http://localhost:5000';
 
 const falsePositives = [
-  'https://crates.io/crates/maxminddb',
-  'http://js.maxmind.com/js/geoip.js',
-  'http://js.maxmind.com/js/country.js',
-  'https://minfraud.maxmind.com/app/bin_http',
-  'https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf',
   'https://www.linkedin.com/company/maxmind',
   'http://www.maxmind.com',
   'https://www.maxmind.com',
-  'https://www.nuget.org/packages/MaxMind.GeoIP2/',
-  'https://www.nuget.org/packages/MaxMind.MinFraud',
+  'https://support.maxmind.com/',
 ];
 
 // eslint-disable-next-line compat/compat
@@ -27,10 +21,15 @@ const getBrokenLinks = (): Promise<any> => new Promise((resolve, reject) => {
       honorRobotExclusions: false,
     }, {
       end: () => {
-        resolve(brokenLinks);
+        return resolve(brokenLinks);
       },
       link: (result) => {
         const { broken, http, url } = result;
+
+        if (!http.response) {
+          return;
+        }
+
         const { statusCode } = http.response;
         const { resolved: resolvedUrl } = url;
 
@@ -54,7 +53,7 @@ const getBrokenLinks = (): Promise<any> => new Promise((resolve, reject) => {
 
     checker.enqueue(targetUrl, []);
   } catch(err) {
-    reject(err);
+    return reject(err);
   }
 });
 

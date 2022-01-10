@@ -1,13 +1,9 @@
 name: Production
 
-# on:
-#   push:
-#     branches:
-#       - main
-
 on:
-  pull_request:
-
+  push:
+    branches:
+      - main
 
 env:
   FIREBASE_PROJECT_ID: mm-blog-site-production
