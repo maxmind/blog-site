@@ -41,7 +41,7 @@ $containers: (
 
 @mixin max-width {
   @include breakpoint('xl') {
-    max-width: 880px;
+    max-width: var(--mm-max-width);
     width: 100%;
   }
 }

@@ -165,7 +165,7 @@
     flex-direction: column;
     height: 100%;
     margin: 0 auto;
-    max-width: 880px;
+    max-width: var(--mm-max-width);
   }
 
   .header,

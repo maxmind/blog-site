@@ -6,7 +6,7 @@
   grid-template-areas: 'newer older';
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  max-width: 880px;
+  max-width: var(--mm-max-width);
   padding: 0  0 var(--mm-spacing) 0;
   width: 100%;
   @include variables.max-width;
