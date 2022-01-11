@@ -58,14 +58,14 @@ const Post: React.FC<IPost> = (props) => {
     }
   }
 
-  const leftLink = nextPost ? {
-    text: nextPost.frontmatter.title,
-    to: nextPost.fields.slug,
-  } : undefined;
-
-  const rightLink = prevPost ? {
+  const previousLink = prevPost ? {
     text: prevPost.frontmatter.title,
     to: prevPost.fields.slug,
+  } : undefined;
+
+  const nextLink = nextPost ? {
+    text: nextPost.frontmatter.title,
+    to: nextPost.fields.slug,
   } : undefined;
 
   return (
@@ -131,8 +131,8 @@ const Post: React.FC<IPost> = (props) => {
         <Hr />
 
         <Pagination
-          leftLink={leftLink}
-          rightLink={rightLink}
+          nextLink={nextLink}
+          previousLink={previousLink}
         />
       </article>
     </Layout>

@@ -38,9 +38,9 @@ const queries = [
           context: {
             featuredPost: (offset === 0) ? featuredPost : null,
             limit: postsPerPage,
-            newerPostsLink: (i > 0) ? createPagePath(i) : null,
+            newerPostsPath: (i > 0) ? createPagePath(i) : null,
             numPages,
-            olderPostsLink: (i < numPages - 1) ? createPagePath(i + 2) : null,
+            olderPostsPath: (i < numPages - 1) ? createPagePath(i + 2) : null,
             posts: posts.slice(offset, offset + postsPerPage),
             skip: offset,
           },

@@ -13,16 +13,16 @@ interface IHome {
 
 const Home: React.FC<IHome> = (props) => {
   const { pageContext } = props;
-  const { featuredPost, newerPostsLink, olderPostsLink, posts } = pageContext;
+  const { featuredPost, newerPostsPath, olderPostsPath, posts } = pageContext;
 
-  const leftLink = newerPostsLink ? {
+  const previousLink = newerPostsPath ? {
     text: 'Newer',
-    to: newerPostsLink,
+    to: newerPostsPath,
   } : undefined;
 
-  const rightLink = olderPostsLink ? {
+  const nextLink = olderPostsPath ? {
     text: 'Older',
-    to: olderPostsLink,
+    to: olderPostsPath,
   } : undefined;
 
   return (
@@ -64,8 +64,8 @@ const Home: React.FC<IHome> = (props) => {
 
 
       <Pagination
-        leftLink={leftLink}
-        rightLink={rightLink}
+        nextLink={nextLink}
+        previousLink={previousLink}
       />
     </Layout>
   );

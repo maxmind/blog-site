@@ -9,8 +9,8 @@ export type IPost = Omit<IBaseQuery, 'fileAbsolutePath'> & {
 
 export interface IHomeContext {
   featuredPost: IPost;
-  newerPostsLink?: string;
-  olderPostsLink?: string;
+  newerPostsPath?: string;
+  olderPostsPath?: string;
   posts: IPost[];
   skip: string;
 }

@@ -12,20 +12,20 @@ interface ILink {
 }
 
 interface IPagination {
-  leftLink?: ILink;
-  rightLink?: ILink;
+  nextLink?: ILink;
+  previousLink?: ILink;
 }
 
 const Pagination: React.FC<IPagination> = (props) => {
-  const { leftLink, rightLink } = props;
+  const { previousLink, nextLink } = props;
   return (
     <footer
       className={styles.footer}
     >
-      {leftLink && (
+      {previousLink && (
         <Link
           className={styles['footerNewer']}
-          to={leftLink.to}
+          to={previousLink.to}
         >
           <FaArrowLeft
             className={styles['footerArrow']}
@@ -33,15 +33,15 @@ const Pagination: React.FC<IPagination> = (props) => {
           <span
             className={styles['footerDirection']}
           >
-            {leftLink.text}
+            {previousLink.text}
           </span>
         </Link>
       )}
 
-      {rightLink && (
+      {nextLink && (
         <Link
           className={styles['footerOlder']}
-          to={rightLink.to}
+          to={nextLink.to}
         >
           <FaArrowRight
             className={styles['footerArrow']}
@@ -49,7 +49,7 @@ const Pagination: React.FC<IPagination> = (props) => {
           <span
             className={styles['footerDirection']}
           >
-            {rightLink.text}
+            {nextLink.text}
           </span>
         </Link>
       )}
