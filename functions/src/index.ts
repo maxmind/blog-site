@@ -39,6 +39,14 @@ const parseHost = (request: functions.Request) => {
   return host;
 };
 
+
+/**
+ * TODO - Make this feed dynamic.
+ *
+ * This is a static port of the existing WP JSON feed that the marketing site
+ * consumes. This should eventually be made dynamic.
+ */
+
 export const featuredPosts = functions.https.onRequest(
   (req, res) => {
     const host = parseHost(req);
