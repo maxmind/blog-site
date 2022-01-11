@@ -101,16 +101,14 @@ const Post: React.FC<IPost> = (props) => {
         <section
           className={styles.content}
         >
-          <P>
-            {author && (
-              <>
-                {' '}
-                by
-                {' '}
-                {author}
-              </>
-            )}
-          </P>
+          {author && (
+            <P>
+              {' '}
+              by
+              {' '}
+              {author}
+            </P>
+          )}
 
           {props.children}
 
