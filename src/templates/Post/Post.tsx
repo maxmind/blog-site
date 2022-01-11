@@ -9,13 +9,6 @@ import { IPostContext } from './query';
 
 import * as styles from './Post.module.scss';
 
-const caseInsensitiveIncludes = (
-  haystack: string[] = [],
-  needle: string
-) => haystack.find(
-  (x) => x.toLowerCase().trim() === needle.toLowerCase().trim()
-);
-
 interface IPost {
   children: React.ReactNode;
   pageContext: IPostContext;
@@ -28,35 +21,10 @@ const Post: React.FC<IPost> = (props) => {
     date: publishDate,
     description,
     keywords,
-    tags,
     title,
   } = frontmatter;
 
   const date = new Date(publishDate);
-
-  let type;
-
-  if(tags) {
-    if (
-      caseInsensitiveIncludes(tags, 'minfraud')
-      && !(
-        caseInsensitiveIncludes(tags, 'geoip')
-        || caseInsensitiveIncludes(tags, 'geoip2')
-      )
-    ) {
-      type = 'minfraud';
-    }
-
-    if (
-      (
-        caseInsensitiveIncludes(tags, 'geoip')
-        || caseInsensitiveIncludes(tags, 'geoip2')
-      )
-      && !caseInsensitiveIncludes(tags, 'minfraud')
-    ) {
-      type = 'geoip';
-    }
-  }
 
   const previousLink = prevPost ? {
     text: prevPost.frontmatter.title,
@@ -73,7 +41,6 @@ const Post: React.FC<IPost> = (props) => {
       description={description}
       keywords={keywords}
       title={title}
-      type={type as 'minfraud' | 'geoip'}
     >
       <article
         className={styles.article}
