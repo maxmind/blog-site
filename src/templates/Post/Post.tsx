@@ -112,6 +112,10 @@ const Post: React.FC<IPost> = (props) => {
 
           {props.children}
 
+          {/*
+
+          TODO - Display tags once tags pages are created
+
           {tags && (
             <div
               className={styles.tags}
@@ -124,6 +128,8 @@ const Post: React.FC<IPost> = (props) => {
               ))}
             </div>
           )}
+
+          */}
         </section>
 
         <Hr />
