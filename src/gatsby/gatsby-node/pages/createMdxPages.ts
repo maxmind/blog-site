@@ -14,6 +14,8 @@ const featuredJsonPath = path.resolve(
   '../../../../public/wp-json/maxmind/v1/'
 );
 
+const { GATSBY_URL = 'http://localhost:5000' } = process.env;
+
 const queries = [
   {
     callback: (result: any, actions: Actions) => {
@@ -106,8 +108,8 @@ const queries = [
             date: new Date(node.frontmatter.date).toISOString(),
             excerpt: node.excerpt,
             // eslint-disable-next-line max-len
-            featured_image_src: `https://blog.maxmind.com${node.frontmatter.featuredImage?.publicURL}`,
-            link: `https://blog.maxmind.com${node.fields.slug}`,
+            featured_image_src: `${GATSBY_URL}${node.frontmatter.featuredImage?.publicURL}`,
+            link: `${GATSBY_URL}${node.fields.slug}`,
             title: node.frontmatter.title,
           }))
         )
