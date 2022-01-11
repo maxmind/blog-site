@@ -8,7 +8,7 @@
 .containerFeatured {
   display: grid;
   gap: var(--mm-spacing);
-  grid-template-areas: 'graphic content';
+  grid-template-areas: 'graphic' 'content';
   padding: var(--mm-spacing);
   width: 100%;
 }
