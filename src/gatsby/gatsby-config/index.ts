@@ -97,7 +97,9 @@ export default {
     'gatsby-plugin-remove-trailing-slashes',
     {
       options: {
-        trackingIds: [],
+        trackingIds: [
+          'G-8K33X585JF',
+        ],
       },
       resolve: 'gatsby-plugin-google-gtag',
     },
