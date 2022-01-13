@@ -1,27 +1,26 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import * as styles from './Tag.module.scss';
 
 interface ITag {
-  content: string;
+  text: string;
 }
 
 const Tag: React.FC<ITag> = (props) => {
-  const { content } = props;
+  const { text } = props;
 
   return (
     <div
       className={styles.tag}
     >
-      {content}
+      {text}
     </div>
   );
 };
 
 Tag.propTypes = {
-  content: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Tag;

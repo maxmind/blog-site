@@ -46,13 +46,6 @@ const Layout: React.FC<ILayout> = (props) => {
 
   const toggleSidebar = (): void => setIsSidebarOpen(!isSidebarOpen);
 
-  const pageTypeClass: string | undefined = [
-    'geoip',
-    'minfraud',
-  ].includes(type as string)
-    ? `page-type--${type}`
-    : undefined;
-
   return (
     <div
       className={classNames(
@@ -61,11 +54,6 @@ const Layout: React.FC<ILayout> = (props) => {
       )}
     >
       <SEO
-        bodyAttributes={{
-          class: classNames(
-            pageTypeClass,
-          ),
-        }}
         description={description}
         meta={[
           ...(keywords ? [

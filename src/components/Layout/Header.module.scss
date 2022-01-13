@@ -133,7 +133,7 @@
     // grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
     margin: auto;
-    max-width: 1320px;
+    max-width: var(--mm-max-width);
   }
 
   .logo__svg {
@@ -154,7 +154,7 @@
     align-self: center;
     display: flex;
     justify-self: center;
-    max-width: 880px;
+    max-width: var(--mm-max-width);
     padding-left: var(--mm-spacing);
     width: calc(100% - var(--mm-layout-sidebar-width) - calc(var(--mm-spacing) * 2));
     width: 100%;

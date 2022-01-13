@@ -23,7 +23,6 @@ module.exports = {
   testURL: 'http://localhost',
   transform: {
     '^.+\\.[jt]s(x)?$': '<rootDir>/test/preprocess.js',
-    '^.+\\.scss$': 'jest-style-transformer-sass-css-modules',
   },
   transformIgnorePatterns: [
     'node_modules/(?!(typeface-montserrat)/)',

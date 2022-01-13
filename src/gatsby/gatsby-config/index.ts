@@ -1,11 +1,5 @@
 import { GatsbyConfig } from 'gatsby';
-
-// import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
-// import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
-// import remarkExternalLinks from 'remark-external-links';
-import createReleaseNotesFeed from './feeds/createReleaseNotesFeed';
-import createServerIpAddressesFeed from './feeds/createServerIpAddressesFeed';
-import sectionize from './remark/sectionize';
+import remarkExternalLinks from 'remark-external-links';
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
 
@@ -26,24 +20,14 @@ const GLOBALLY_IGNORED_SOURCE_FILES = [
 
 export default {
   plugins: [
+    'gatsby-remark-images',
     {
       options: {
         ignore: [
           ...GLOBALLY_IGNORED_SOURCE_FILES,
           '**/index.mdx',
         ],
-        name: 'pages',
-        path: `${GATSBY_ROOT}/content/`,
-      },
-      resolve: 'gatsby-source-filesystem',
-    },
-    {
-      options: {
-        ignore: [
-          ...GLOBALLY_IGNORED_SOURCE_FILES,
-          '**/!(content)/index.mdx',
-        ],
-        name: 'home',
+        name: 'posts',
         path: `${GATSBY_ROOT}/content/`,
       },
       resolve: 'gatsby-source-filesystem',
@@ -51,16 +35,29 @@ export default {
     {
       options: {
         defaultLayouts: {
-          home: require.resolve(`${GATSBY_ROOT}src/templates/Home`),
-          pages: require.resolve(`${GATSBY_ROOT}src/templates/Page`),
+          posts: require.resolve(`${GATSBY_ROOT}src/templates/Post`),
         },
         extensions: [
           '.mdx',
           '.md',
         ],
+        gatsbyRemarkPlugins: [
+          {
+            options: {
+              backgroundColor: 'transparent',
+              disableBgImageOnAlpha: true,
+              linkImagesToOriginal: false,
+              maxWidth: 1200,
+            },
+            resolve: 'gatsby-remark-images',
+          },
+          {
+            // eslint-disable-next-line max-len
+            resolve: require.resolve(`${GATSBY_ROOT}/plugins/gatsby-remark-mdx-v2-images`),
+          },
+        ],
         remarkPlugins: [
-          // sectionize,
-          // remarkExternalLinks,
+          remarkExternalLinks,
         ],
       },
       resolve: 'gatsby-plugin-mdx',
@@ -98,24 +95,6 @@ export default {
       resolve: 'gatsby-plugin-react-svg',
     },
     'gatsby-plugin-remove-trailing-slashes',
-    // {
-    //   options: {
-    //     feeds: [],
-    //     query: `
-    //       {
-    //         site {
-    //           siteMetadata {
-    //             title
-    //             description
-    //             siteUrl
-    //             site_url: siteUrl
-    //           }
-    //         }
-    //       }
-    //     `,
-    //   },
-    //   resolve: 'gatsby-plugin-feed',
-    // },
     {
       options: {
         trackingIds: [],

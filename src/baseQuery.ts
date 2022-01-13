@@ -1,14 +1,24 @@
 export interface IBaseQuery {
+  excerpt: string;
   fields: {
     slug: string;
   };
   fileAbsolutePath: string,
   frontmatter: {
+    author?: string;
+    categories?: string[];
+    date: string;
     description: string;
     draft: boolean;
+    featuredImage?: {
+      publicURL: string;
+    };
+    isFeatured?: boolean;
     keywords: string[];
+    tags: string[];
     title: string;
-  }
+  },
+  timeToRead: number;
 }
 
 export const BaseQuery = `
@@ -18,10 +28,19 @@ export const BaseQuery = `
     }
     fileAbsolutePath
     frontmatter {
-      title
+      author
+      categories
+      date
       description
-      keywords
       draft
+      featuredImage {
+        publicURL
+      }
+      isFeatured
+      keywords
+      tags
+      title
     }
+    timeToRead
   }
 `;

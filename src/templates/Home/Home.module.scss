@@ -2,41 +2,59 @@
 
 .layout [class^='Layout-module--content'] {
   --mm-spacing: 20px;
-  background-color: var(--mm-color-background);
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
   justify-items: center;
 }
 
-.posts {
-  display: grid;
-  gap: var(--mm-spacing);
-  padding: var(--mm-spacing);
+.featured__wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--mm-spacing) var(--mm-spacing) 0;
+  position: relative;
+  width: 100%;
 }
 
-@include variables.breakpoint('xs') {
-  .placeholder {
-    display: none;
-  }
+.featured {
+  background: var(--mm-color-background);
+  border-radius: var(--mm-border-radius);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+  max-width: var(--mm-max-width);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.posts__wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--mm-spacing) var(--mm-spacing);
+  position: relative;
+  width: 100%;
+}
+
+.posts {
+  display: grid;
+  gap: calc(var(--mm-spacing) * 2) var(--mm-spacing);
+  max-width: var(--mm-max-width);
+  padding: var(--mm-spacing);
+  width: 100%;
 }
 
 @include variables.breakpoint('md') {
   .layout [class^='Layout-module--content'] {
     --mm-spacing: 40px;
-    background-color: var(--mm-color-background);
   }
 
   .posts {
-    gap: var(--mm-spacing);
-    grid-template-columns: repeat(2, minmax(0, 600px));
     justify-content: center;
   }
 }
 
 @include variables.breakpoint('lg') {
-  .placeholder {
-    display: block;
-    margin: auto auto;
-    width: 75%;
+  .posts {
+    gap: calc(var(--mm-spacing) * 2);
   }
 }

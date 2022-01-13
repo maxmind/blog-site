@@ -66,9 +66,24 @@ const Header: React.FC<IHeader> = (props) => {
               Blog
             </span>
           </Link>
+          {/*
+
+          TODO - Impelement Google Search integration, if necessary
+
           <SearchBar
             className={styles.search}
           />
+
+          */}
+
+
+          {/*
+
+          TODO - Delete or enable Sidebar functionality
+
+          This functionality is currently disabled for now, as it is unclear if
+          the blog will eventually need a sidebar navigation.
+
           <button
             aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
             className={styles.toggle}
@@ -84,6 +99,8 @@ const Header: React.FC<IHeader> = (props) => {
               />
             )}
           </button>
+
+          */}
         </div>
       </header>
     </>
