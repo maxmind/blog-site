@@ -3,7 +3,7 @@ import React from 'react';
 
 import Layout from '../../components/Layout/Layout';
 import { h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
-import Pagination from '../../components/Pagination';
+import Pagination from '../../components/PaginationPost';
 import Tag from '../Home/Tag';
 import { IPostContext } from './query';
 
