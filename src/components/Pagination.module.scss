@@ -1,15 +1,26 @@
 @use '../styles/_variables.scss';
+.paginationPost {
+  .footer {
+    grid-template-areas:
+    'newer'
+    'older';
+    grid-template-columns: 1fr;
+    padding: 0  0 var(--mm-spacing) 0;
+  }
+
+  .footerNewer,
+  .footerOlder {
+    width: 100%;
+  }
+}
 
 .footer {
   display: grid;
   gap: var(--mm-spacing);
-  grid-template-areas:
-    'newer'
-    'older';
-  grid-template-columns: 1fr;
+  grid-template-areas: 'newer older';
   margin: auto;
   max-width: var(--mm-max-width);
-  padding: 0  0 var(--mm-spacing) 0;
+  padding: 0 var(--mm-spacing) calc(var(--mm-spacing) * 2);
   width: 100%;
   @include variables.max-width;
 }
@@ -29,6 +40,7 @@
   position: relative;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  width: 50%;
 
   &:hover {
     background: var(--mm-color-sidebar);
@@ -40,6 +52,7 @@
   grid-area: newer;
   grid-template-areas: 'arrow direction';
   grid-template-columns: min-content 1fr;
+  justify-self: left;
   right: 0;
   padding-left: var(--mm-spacing);
   text-align: left;
@@ -53,6 +66,7 @@
   grid-area: older;
   grid-template-areas: 'direction arrow';
   grid-template-columns: 1fr min-content;
+  justify-self: right;
   left: 0;
   padding-right: var(--mm-spacing);
   text-align: right;
@@ -73,8 +87,10 @@
 }
 
 @include variables.breakpoint('sm') {
-  .footer {
-    grid-template-areas: 'newer older';
-    grid-template-columns: 1fr 1fr;
+  .paginationPost {
+    .footer {
+      grid-template-areas: 'newer older';
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
