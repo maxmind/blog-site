@@ -4,7 +4,7 @@ import * as React from 'react';
 import FaArrowLeft from '../assets/svgs/react-icons/FaArrowLeft.svg';
 import FaArrowRight from '../assets/svgs/react-icons/FaArrowRight.svg';
 
-import * as styles from './PaginationPost.module.scss';
+import * as styles from './Pagination.module.scss';
 
 interface ILink {
   text: string;
@@ -19,41 +19,46 @@ interface IPaginationPost {
 const PaginationPost: React.FC<IPaginationPost> = (props) => {
   const { previousLink, nextLink } = props;
   return (
-    <footer
-      className={styles.footer}
+    <div
+      className={styles.paginationPost}
     >
-      {previousLink && (
-        <Link
-          className={styles['footerNewer']}
-          to={previousLink.to}
-        >
-          <FaArrowLeft
-            className={styles['footerArrow']}
-          />
-          <span
-            className={styles['footerDirection']}
+      <footer
+        className={styles.footer}
+      >
+        {previousLink && (
+          <Link
+            className={styles['footerNewer']}
+            to={previousLink.to}
           >
-            {previousLink.text}
-          </span>
-        </Link>
-      )}
+            <FaArrowLeft
+              className={styles['footerArrow']}
+            />
+            <span
+              className={styles['footerDirection']}
+            >
+              {previousLink.text}
+            </span>
+          </Link>
+        )}
 
-      {nextLink && (
-        <Link
-          className={styles['footerOlder']}
-          to={nextLink.to}
-        >
-          <FaArrowRight
-            className={styles['footerArrow']}
-          />
-          <span
-            className={styles['footerDirection']}
+        {nextLink && (
+          <Link
+            className={styles['footerOlder']}
+            to={nextLink.to}
           >
-            {nextLink.text}
-          </span>
-        </Link>
-      )}
-    </footer>
+            <FaArrowRight
+              className={styles['footerArrow']}
+            />
+            <span
+              className={styles['footerDirection']}
+            >
+              {nextLink.text}
+            </span>
+          </Link>
+        )}
+      </footer>
+    </div>
+
   );
 };
 
