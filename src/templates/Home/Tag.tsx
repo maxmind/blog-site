@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
+import Link from '../../components/Link';
+import { a as A, p } from '../../components/Mdx';
+
 import * as styles from './Tag.module.scss';
 
 interface ITag {
@@ -14,7 +17,11 @@ const Tag: React.FC<ITag> = (props) => {
     <div
       className={styles.tag}
     >
-      {text}
+      <Link
+        to={`/category/${text.replace(/\s/g , '-')}`}
+      >
+        {text}
+      </Link>
     </div>
   );
 };

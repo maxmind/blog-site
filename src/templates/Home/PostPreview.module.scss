@@ -22,7 +22,8 @@
   grid-template-areas:
     'meta'
     'copy'
-    'readmore';
+    'readmore'
+    'tags';
   width: 100%;
 }
 
@@ -98,6 +99,11 @@
   }
 }
 
+.tags {
+  display: flex;
+  margin-top: 10px;
+}
+
 @include variables.breakpoint('md') {
   .containerFeatured {
     grid-template-areas: 'content graphic';
@@ -113,7 +119,8 @@
     display: grid;
     grid-template-areas:
       'meta copy'
-      'meta readmore';
+      'meta readmore'
+      'meta tags';
     grid-template-columns: 130px 1fr;
   }
 }

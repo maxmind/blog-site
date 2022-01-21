@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import { a as A, p as P } from '../../components/Mdx';
+import Tag from '../Home/Tag';
 import { IPost } from './query';
 
 import * as styles from './PostPreview.module.scss';
@@ -16,7 +17,7 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
   const { isFeatured, post } = props;
   const { excerpt, fields, frontmatter } = post;
   const { slug } = fields;
-  const { author, date, featuredImage, title } = frontmatter;
+  const { author, date, featuredImage, title, categories } = frontmatter;
 
   const publishedDate = new Date(date);
 
@@ -78,6 +79,22 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
           >
             Read more &rsaquo;
           </A>
+        </div>
+        <div
+          className={styles.tags}
+        >
+          {categories && (
+            <div
+              className={styles.tags}
+            >
+              {categories.map(category => (
+                <Tag
+                  key={category}
+                  text={category.replace(/-/g, ' ')}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
       {isFeatured && featuredImage && (
