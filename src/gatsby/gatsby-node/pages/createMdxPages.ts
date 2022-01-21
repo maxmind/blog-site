@@ -2,12 +2,15 @@
 import fs from 'fs';
 import { Actions, CreatePagesArgs } from 'gatsby';
 import path from 'path';
+import { node } from 'prop-types';
 
 import { IBaseQuery } from '../../../baseQuery';
+import categoryQuery from '../../../templates/Category/query';
 import homeQuery from '../../../templates/Home/query';
 import postQuery from '../../../templates/Post/query';
 
 const createPagePath = (i: number) =>  i === 1 ? '/' : `/page/${i}`;
+
 
 const featuredJsonPath = path.resolve(
   __dirname,
@@ -49,6 +52,64 @@ const queries = [
       });
     },
     query: homeQuery,
+  },
+  {
+    callback: (result: any, actions: Actions) => {
+      const { createPage } = actions;
+      const posts = result.data.allMdx.nodes;
+      const postsPerPage = 6;
+
+      const categoriesList: string[] = [];
+      const createCategoriesObject: any = [];
+
+      // Get the list of categories
+      posts.forEach((post: any) => {
+        post.frontmatter.categories.forEach((category: any) => {
+          if (categoriesList.indexOf(category) === -1) {
+            categoriesList.push(category);
+          }
+          createCategoriesObject.push(category);
+        });
+      });
+
+      // Get the total number of posts with a given category
+      const categoriesCount = createCategoriesObject.reduce(
+        (prev: any, curr: any) => {
+          prev[curr] = (prev[curr] || 0) + 1;
+          return prev;
+        }, {} );
+
+      categoriesList.forEach((category) => {
+        const numPages = Math.ceil(categoriesCount[category] / postsPerPage);
+        const createCategoryPath = (i: number) =>
+          i === 1
+            ? `/category/${category}/`
+            : `/category/${category}/page/${i}`;
+        Array.from({
+          length: numPages,
+        }).forEach((_, i) => {
+          const offset = i * postsPerPage;
+
+          createPage({
+            component: path.resolve(
+              __dirname,
+              '../../../templates/Category/Category.tsx'
+            ),
+            context: {
+              category,
+              limit: postsPerPage,
+              newerPostsPath: (i > 0) ? createCategoryPath(i) : null,
+              numPages,
+              olderPostsPath:
+                (i < numPages - 1) ? createCategoryPath(i + 2) : null,
+              posts: posts.slice(offset, offset + postsPerPage),
+            },
+            path: createCategoryPath(i + 1),
+          });
+        });
+      });
+    },
+    query: categoryQuery,
   },
   {
     callback: (result: any, actions: Actions) => {
