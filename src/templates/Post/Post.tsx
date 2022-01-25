@@ -3,8 +3,10 @@ import React from 'react';
 
 import Layout from '../../components/Layout/Layout';
 import { h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
+
 import PaginationPost from '../../components/PaginationPost';
-import Tag from '../Home/Tag';
+import TagContainer from '../Home/TagContainer';
+
 import { IPostContext } from './query';
 
 import * as styles from './Post.module.scss';
@@ -70,35 +72,29 @@ const Post: React.FC<IPost> = (props) => {
         <section
           className={styles.content}
         >
-          {author && (
+          {authors && (
             <P>
-              {' '}
               by
               {' '}
-              {author}
+              {authors}
             </P>
           )}
 
           {props.children}
-
-          {/*
-
-          TODO - Display tags once tags pages are created
 
           {tags && (
             <div
               className={styles.tags}
             >
               {tags.map(tag => (
-                <Tag
+                <TagContainer
                   key={tag}
-                  text={tag}
+                  text={tag.replace(/-/g, ' ')}
                 />
               ))}
             </div>
           )}
 
-          */}
         </section>
 
         <Hr />
