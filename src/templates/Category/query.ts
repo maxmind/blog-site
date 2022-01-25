@@ -13,6 +13,7 @@ export interface ICategoryContext {
   olderPostsPath?: string;
   posts: IPost[];
   skip: string;
+  tag: string;
 }
 
 const query: QueryFn<IBaseQuery & ICategoryContext> = (
@@ -20,10 +21,12 @@ const query: QueryFn<IBaseQuery & ICategoryContext> = (
 ) => graphql<IBaseQuery & ICategoryContext>(`
   ${BaseQuery}
 
-  query CategoryTemplateQuery($category: String) {
+  query CategoryTemplateQuery($category: String, $skip: Int, $limit: Int) {
     allMdx(
       sort: {fields: [frontmatter___date], order: DESC}
       filter: {frontmatter: { categories: { eq: $category } } }
+      limit: $limit
+      skip: $skip
     ) {
       nodes {
         ... BaseQuery

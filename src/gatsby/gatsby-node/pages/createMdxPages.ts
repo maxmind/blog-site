@@ -8,6 +8,7 @@ import { IBaseQuery } from '../../../baseQuery';
 import categoryQuery from '../../../templates/Category/query';
 import homeQuery from '../../../templates/Home/query';
 import postQuery from '../../../templates/Post/query';
+import tagQuery from '../../../templates/Tag/query';
 
 const createPagePath = (i: number) =>  i === 1 ? '/' : `/page/${i}`;
 
@@ -64,12 +65,14 @@ const queries = [
 
       // Get the list of categories
       posts.forEach((post: any) => {
-        post.frontmatter.categories.forEach((category: any) => {
-          if (categoriesList.indexOf(category) === -1) {
-            categoriesList.push(category);
-          }
-          createCategoriesObject.push(category);
-        });
+        if (post.frontmatter.categories) {
+          post.frontmatter.categories.forEach((category: any) => {
+            if (categoriesList.indexOf(category) === -1) {
+              categoriesList.push(category);
+            }
+            createCategoriesObject.push(category);
+          });
+        }
       });
 
       // Get the total number of posts with a given category
@@ -110,6 +113,66 @@ const queries = [
       });
     },
     query: categoryQuery,
+  },
+  {
+    callback: (result: any, actions: Actions) => {
+      const { createPage } = actions;
+      const posts = result.data.allMdx.nodes;
+      const postsPerPage = 6;
+
+      const tagsList: string[] = [];
+      const createTagObject: any = [];
+
+      // Get the list of tags
+      posts.forEach((post: any) => {
+        if (post.frontmatter.tags) {
+          post.frontmatter.tags.forEach((tag: any) => {
+            if (tagsList.indexOf(tag) === -1) {
+              tagsList.push(tag);
+            }
+            createTagObject.push(tag);
+          });
+        }
+      });
+
+      // Get the total number of posts with a given tag
+      const tagsCount = createTagObject.reduce(
+        (prev: any, curr: any) => {
+          prev[curr] = (prev[curr] || 0) + 1;
+          return prev;
+        }, {} );
+
+      tagsList.forEach((tag) => {
+        const numPages = Math.ceil(tagsCount[tag] / postsPerPage);
+        const createTagPath = (i: number) =>
+          i === 1
+            ? `/tag/${tag}/`
+            : `/tag/${tag}/page/${i}`;
+        Array.from({
+          length: numPages,
+        }).forEach((_, i) => {
+          const offset = i * postsPerPage;
+
+          createPage({
+            component: path.resolve(
+              __dirname,
+              '../../../templates/Tag/Tag.tsx'
+            ),
+            context: {
+              limit: postsPerPage,
+              newerPostsPath: (i > 0) ? createTagPath(i) : null,
+              numPages,
+              olderPostsPath:
+                (i < numPages - 1) ? createTagPath(i + 2) : null,
+              posts: posts.slice(offset, offset + postsPerPage),
+              tag,
+            },
+            path: createTagPath(i + 1),
+          });
+        });
+      });
+    },
+    query: tagQuery,
   },
   {
     callback: (result: any, actions: Actions) => {
