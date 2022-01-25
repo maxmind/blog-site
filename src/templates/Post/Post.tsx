@@ -17,7 +17,7 @@ interface IPost {
 const Post: React.FC<IPost> = (props) => {
   const { frontmatter, nextPost, prevPost } = props.pageContext;
   const {
-    author,
+    authors,
     categories,
     date: publishDate,
     description,

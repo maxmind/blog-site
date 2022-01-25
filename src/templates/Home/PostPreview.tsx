@@ -45,14 +45,6 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
               year: 'numeric',
             })}
           </div>
-
-          {author && (
-            <div >
-              Written by
-              {' '}
-              {author}
-            </div>
-          )}
         </div>
         <div
           className={styles.copy}

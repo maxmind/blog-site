@@ -5,7 +5,7 @@ export interface IBaseQuery {
   };
   fileAbsolutePath: string,
   frontmatter: {
-    author?: string;
+    authors?: string[];
     categories?: string[];
     date: string;
     description: string;
@@ -28,7 +28,7 @@ export const BaseQuery = `
     }
     fileAbsolutePath
     frontmatter {
-      author
+      authors
       categories
       date
       description
