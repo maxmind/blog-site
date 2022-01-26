@@ -72,22 +72,19 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
             Read more &rsaquo;
           </A>
         </div>
-        <div
-          className={styles.tags}
-        >
-          {tags && (
-            <div
-              className={styles.tags}
-            >
-              {tags.map(tag => (
-                <TagContainer
-                  key={tag}
-                  text={tag.replace(/-/g, ' ')}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+
+        {tags && (
+          <div
+            className={styles.tags}
+          >
+            {tags.map(tag => (
+              <TagContainer
+                key={tag}
+                text={tag.replace(/-/g, ' ')}
+              />
+            ))}
+          </div>
+        )}
       </div>
       {isFeatured && featuredImage && (
         <div
