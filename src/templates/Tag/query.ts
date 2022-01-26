@@ -21,7 +21,7 @@ const query: QueryFn<IBaseQuery & ITagContext> = (
 ) => graphql<IBaseQuery & ITagContext>(`
   ${BaseQuery}
 
-  query CategoryTemplateQuery($skip: Int, $limit: Int) {
+  query TagTemplateQuery($skip: Int, $limit: Int) {
     allMdx(
       sort: {fields: [frontmatter___date], order: DESC}
       limit: $limit
