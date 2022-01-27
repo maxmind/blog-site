@@ -180,6 +180,7 @@ const queries = [
       const { nodes } = result.data.allMdx;
 
       const featured: IBaseQuery[] = [];
+      const maxFeaturedPosts = 3;
 
       nodes.forEach((node: IBaseQuery, i: number) => {
         if (
@@ -187,24 +188,10 @@ const queries = [
           || !node.frontmatter.draft
         ) {
           if (
-            !featured[0]
-            && node.frontmatter.categories?.includes('featured-entry-1')
+            node.frontmatter.isFeatured === true
+            && featured.length <= maxFeaturedPosts
           ) {
-            featured[0] = node;
-          }
-
-          if (
-            !featured[1]
-            && node.frontmatter.categories?.includes('featured-entry-2')
-          ) {
-            featured[1] = node;
-          }
-
-          if (
-            !featured[2]
-            && node.frontmatter.categories?.includes('featured-entry-3')
-          ) {
-            featured[2] = node;
+            featured.push(node);
           }
 
           createPage({
