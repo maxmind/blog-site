@@ -82,12 +82,16 @@ const queries = [
           return prev;
         }, {} );
 
+
+
       categoriesList.forEach((category) => {
         const numPages = Math.ceil(categoriesCount[category] / postsPerPage);
+        const categoryUrl = `/category/${category}`.toLowerCase();
+
         const createCategoryPath = (i: number) =>
           i === 1
-            ? `/category/${category}/`
-            : `/category/${category}/page/${i}`;
+            ? `${categoryUrl}`
+            : `${categoryUrl}/page/${i}`;
         Array.from({
           length: numPages,
         }).forEach((_, i) => {
@@ -144,10 +148,12 @@ const queries = [
 
       tagsList.forEach((tag) => {
         const numPages = Math.ceil(tagsCount[tag] / postsPerPage);
+        const tagUrl = `/tag/${tag}`.toLowerCase();
+
         const createTagPath = (i: number) =>
           i === 1
-            ? `/tag/${tag}/`
-            : `/tag/${tag}/page/${i}`;
+            ? `${tagUrl}`
+            : `${tagUrl}/page/${i}`;
         Array.from({
           length: numPages,
         }).forEach((_, i) => {
