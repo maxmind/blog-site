@@ -2,11 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Layout from '../../components/Layout/Layout';
-import { h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
-
+import { a as A, h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
 import PaginationPost from '../../components/PaginationPost';
 import TagContainer from '../Home/TagContainer';
-
 import { IPostContext } from './query';
 
 import * as styles from './Post.module.scss';
@@ -21,14 +19,14 @@ const Post: React.FC<IPost> = (props) => {
   const {
     authors,
     categories,
-    date: publishDate,
+    date,
     description,
     keywords,
     tags,
     title,
   } = frontmatter;
 
-  const date = new Date(publishDate);
+  const publishedDate = new Date(date);
 
   const previousLink = prevPost ? {
     text: prevPost.frontmatter.title,
@@ -53,33 +51,71 @@ const Post: React.FC<IPost> = (props) => {
         <header
           className={styles.header}
         >
-          <span
-            className={styles.date}
-          >
-            {date.toLocaleDateString(undefined, {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </span>
+          {categories && (
+            <div
+              className={styles.categories}
+            >
+              {categories.map(category =>
+                (
+                  // eslint-disable-next-line react/jsx-key
+                  <A
+                    className={styles.category}
+                    href={`/category/${category}`.toLowerCase()}
+                  >
+                    {category.replace(/-/g, ' ')}
+                  </A>
+                )
+              )}
+            </div>
+          )}
           <H1
             className={styles.heading}
           >
             {title}
           </H1>
+          <div
+            className={styles.published}
+          >
+            <div
+              className={styles.authornames}
+            >
+              <div
+                className={styles.by}
+              >
+                by
+              </div>
+              {authors && (
+                <div
+                  className={styles.authors}
+                >
+                  {authors.map(author =>
+                    (
+                    // eslint-disable-next-line react/jsx-key
+                      <div
+                        className={styles.author}
+                      >
+                        {author}
+                      </div>
+                    )
+                  )}
+                </div>
+              )}
+            </div>
+            <div
+              className={styles.date}
+            >
+              {publishedDate.toLocaleDateString(undefined, {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              })}
+            </div>
+          </div>
         </header>
 
         <section
           className={styles.content}
         >
-          {authors && (
-            <P>
-              by
-              {' '}
-              {authors}
-            </P>
-          )}
-
           {props.children}
 
           {tags && (

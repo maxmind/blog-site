@@ -35,16 +35,16 @@ const Tag: React.FC<ITag> = (props) => {
       title={''}
     >
       <div
-        className={styles.header}
-      >
-        <H1>{tag.replace(/-/g, ' ')}</H1>
-      </div>
-      <div
         className={styles['posts__wrapper']}
       >
         <div
           className={styles.posts}
         >
+          <H1
+            className={styles.header}
+          >
+            {tag.replace(/-/g, ' ')}
+          </H1>
           {posts && posts.map(post => (
             <PostPreview
               key={post.fields.slug}
