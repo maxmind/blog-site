@@ -35,16 +35,16 @@ const Category: React.FC<ICategory> = (props) => {
       title={''}
     >
       <div
-        className={styles.header}
-      >
-        <H1>{category.replace(/-/g, ' ')}</H1>
-      </div>
-      <div
         className={styles['posts__wrapper']}
       >
         <div
           className={styles.posts}
         >
+          <H1
+            className={styles.header}
+          >
+            {category.replace(/-/g, ' ')}
+          </H1>
           {posts && posts.map(post => (
             <PostPreview
               key={post.fields.slug}

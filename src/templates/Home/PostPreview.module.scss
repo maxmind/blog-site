@@ -16,30 +16,48 @@
 }
 
 .content {
-  column-gap: var(--mm-spacing);
   display: grid;
   grid-area: content;
   grid-template-areas:
-    'meta'
-    'copy'
-    'readmore'
-    'tags';
+    'category'
+    'title'
+    'published'
+    'excerpt'
+    'readmore';
   width: 100%;
 }
 
 .containerFeatured .content {
   align-items: start;
-  gap: calc(var(--mm-spacing) / 2);
   grid-template-rows: max-content 1fr;
 }
 
-.meta {
-  font-size: 12px;
-  grid-area: meta;
+.categories {
+  display: flex;
+  grid-area: category;
+  flex-wrap: wrap;
+  font-family: var(--mm-font-stack-display);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-.copy {
-  display: grid;
+.category ~ .category::before {
+  content: ' • ';
+}
+
+.category:not(:last-child) {
+  padding-right: 4px;
+}
+
+.category {
+  border-bottom: none;
+  color: var(--mm-color-primary-text);
+
+  &:hover {
+    border-bottom: none;
+    color: var(--mm-color-display-text);
+  }
 }
 
 .title {
@@ -47,6 +65,7 @@
   font-family: var(--mm-font-stack-display);
   font-size: 20px;
   font-weight: 700;
+  grid-area: title;
   height: auto;
   line-height: 1.5em;
   text-decoration: none;
@@ -57,11 +76,41 @@
 }
 
 .published {
-  font-family: var(--mm-font-stack-display);
+  display: flex;
+  flex-wrap: wrap;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
+  gap: 4px;
+  grid-area: published;
+  grid-template-columns: max-content;
   line-height: 1.5em;
-  margin-top: 6px;
+  margin-top: 10px;
+}
+
+.authornames {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.by {
+  padding-right: 4px;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+
+  .author ~ .author::before {
+    content: ', '
+  }
+}
+
+.date::before {
+  content: ' • '
+}
+
+.excerpt {
+  grid-area: excerpt;
 }
 
 .graphic {
@@ -123,10 +172,7 @@
 
   .container:not(.containerFeatured) .content {
     display: grid;
-    grid-template-areas:
-      'meta copy'
-      'meta readmore'
-      'meta tags';
-    grid-template-columns: 130px 1fr;
+    justify-self: center;
+    max-width: 650px;
   }
 }

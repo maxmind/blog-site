@@ -4,7 +4,6 @@ import * as React from 'react';
 
 import { a as A, p as P } from '../../components/Mdx';
 import { IPost } from './query';
-import TagContainer from './TagContainer';
 
 import * as styles from './PostPreview.module.scss';
 
@@ -17,7 +16,7 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
   const { isFeatured, post } = props;
   const { excerpt, fields, frontmatter } = post;
   const { slug } = fields;
-  const { authors, date, featuredImage, title, categories, tags } = frontmatter;
+  const { authors, date, featuredImage, title, categories } = frontmatter;
 
   const publishedDate = new Date(date);
 
@@ -33,11 +32,61 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
       <div
         className={styles.content}
       >
+        {categories && (
+          <div
+            className={styles.categories}
+          >
+            {categories.map(category =>
+              (
+              // eslint-disable-next-line react/jsx-key
+                <A
+                  className={styles.category}
+                  href={`/category/${category}`.toLowerCase()}
+                >
+                  {category.replace(/-/g, ' ')}
+                </A>
+              )
+            )}
+          </div>
+        )}
+        <h2>
+          <A
+            className={styles.title}
+            href={slug}
+          >
+            {title}
+          </A>
+        </h2>
         <div
-          className={styles.meta}
+          className={styles.published}
         >
           <div
-            className={styles.published}
+            className={styles.authornames}
+          >
+            <div
+              className={styles.by}
+            >
+              by
+            </div>
+            {authors && (
+              <div
+                className={styles.authors}
+              >
+                {authors.map(author =>
+                  (
+                    // eslint-disable-next-line react/jsx-key
+                    <div
+                      className={styles.author}
+                    >
+                      {author}
+                    </div>
+                  )
+                )}
+              </div>
+            )}
+          </div>
+          <div
+            className={styles.date}
           >
             {publishedDate.toLocaleDateString(undefined, {
               day: 'numeric',
@@ -46,22 +95,11 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
             })}
           </div>
         </div>
-        <div
-          className={styles.copy}
+        <P
+          className={styles.excerpt}
         >
-          <h2>
-            <A
-              className={styles.title}
-              href={slug}
-            >
-              {title}
-            </A>
-          </h2>
-
-          <P>
-            {excerpt}
-          </P>
-        </div>
+          {excerpt}
+        </P>
         <div
           className={styles.readmore}
         >
@@ -72,20 +110,8 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
             Read more &rsaquo;
           </A>
         </div>
-
-        {tags && (
-          <div
-            className={styles.tags}
-          >
-            {tags.map(tag => (
-              <TagContainer
-                key={tag}
-                text={tag.replace(/-/g, ' ')}
-              />
-            ))}
-          </div>
-        )}
       </div>
+
       {isFeatured && featuredImage && (
         <div
           className={styles.graphic}
