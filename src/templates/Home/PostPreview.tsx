@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import { a as A, p as P } from '../../components/Mdx';
+import CategoryContainer from './CategoryContainer';
+import PublishedContainer from './PublishedContainer';
 import { IPost } from './query';
 
 import * as styles from './PostPreview.module.scss';
@@ -16,9 +18,7 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
   const { isFeatured, post } = props;
   const { excerpt, fields, frontmatter } = post;
   const { slug } = fields;
-  const { authors, date, featuredImage, title, categories } = frontmatter;
-
-  const publishedDate = new Date(date);
+  const { featuredImage, title } = frontmatter;
 
   return (
     <article
@@ -32,23 +32,9 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
       <div
         className={styles.content}
       >
-        {categories && (
-          <div
-            className={styles.categories}
-          >
-            {categories.map(category =>
-              (
-              // eslint-disable-next-line react/jsx-key
-                <A
-                  className={styles.category}
-                  href={`/category/${category}`.toLowerCase()}
-                >
-                  {category.replace(/-/g, ' ')}
-                </A>
-              )
-            )}
-          </div>
-        )}
+        <CategoryContainer
+          post={post}
+        />
         <h2>
           <A
             className={styles.title}
@@ -57,44 +43,9 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
             {title}
           </A>
         </h2>
-        <div
-          className={styles.published}
-        >
-          <div
-            className={styles.authornames}
-          >
-            <div
-              className={styles.by}
-            >
-              by
-            </div>
-            {authors && (
-              <div
-                className={styles.authors}
-              >
-                {authors.map(author =>
-                  (
-                    // eslint-disable-next-line react/jsx-key
-                    <div
-                      className={styles.author}
-                    >
-                      {author}
-                    </div>
-                  )
-                )}
-              </div>
-            )}
-          </div>
-          <div
-            className={styles.date}
-          >
-            {publishedDate.toLocaleDateString(undefined, {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </div>
-        </div>
+        <PublishedContainer
+          post={post}
+        />
         <P
           className={styles.excerpt}
         >

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import Link from '../../components/Link';
-import { a as A, p } from '../../components/Mdx';
 
 import * as styles from './TagContainer.module.scss';
 

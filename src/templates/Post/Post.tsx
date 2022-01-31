@@ -4,6 +4,8 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import { a as A, h1 as H1, hr as Hr, p as P } from '../../components/Mdx';
 import PaginationPost from '../../components/PaginationPost';
+import CategoryContainer from '../Home/CategoryContainer';
+import PublishedContainer from '../Home/PublishedContainer';
 import TagContainer from '../Home/TagContainer';
 import { IPostContext } from './query';
 
@@ -17,16 +19,11 @@ interface IPost {
 const Post: React.FC<IPost> = (props) => {
   const { frontmatter, nextPost, prevPost } = props.pageContext;
   const {
-    authors,
-    categories,
-    date,
     description,
     keywords,
     tags,
     title,
   } = frontmatter;
-
-  const publishedDate = new Date(date);
 
   const previousLink = prevPost ? {
     text: prevPost.frontmatter.title,
@@ -51,66 +48,17 @@ const Post: React.FC<IPost> = (props) => {
         <header
           className={styles.header}
         >
-          {categories && (
-            <div
-              className={styles.categories}
-            >
-              {categories.map(category =>
-                (
-                  // eslint-disable-next-line react/jsx-key
-                  <A
-                    className={styles.category}
-                    href={`/category/${category}`.toLowerCase()}
-                  >
-                    {category.replace(/-/g, ' ')}
-                  </A>
-                )
-              )}
-            </div>
-          )}
+          <CategoryContainer
+            post={props.pageContext}
+          />
           <H1
             className={styles.heading}
           >
             {title}
           </H1>
-          <div
-            className={styles.published}
-          >
-            <div
-              className={styles.authornames}
-            >
-              <div
-                className={styles.by}
-              >
-                by
-              </div>
-              {authors && (
-                <div
-                  className={styles.authors}
-                >
-                  {authors.map(author =>
-                    (
-                    // eslint-disable-next-line react/jsx-key
-                      <div
-                        className={styles.author}
-                      >
-                        {author}
-                      </div>
-                    )
-                  )}
-                </div>
-              )}
-            </div>
-            <div
-              className={styles.date}
-            >
-              {publishedDate.toLocaleDateString(undefined, {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
-            </div>
-          </div>
+          <PublishedContainer
+            post={props.pageContext}
+          />
         </header>
 
         <section
