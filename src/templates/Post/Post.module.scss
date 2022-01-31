@@ -10,68 +10,6 @@
   @include variables.max-width;
 }
 
-.categories {
-  display: flex;
-  grid-area: category;
-  flex-wrap: wrap;
-  font-family: var(--mm-font-stack-display);
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.category ~ .category::before {
-  content: ' • ';
-}
-
-.category:not(:last-child) {
-  padding-right: 4px;
-}
-
-.category {
-  border-bottom: none;
-  color: var(--mm-color-primary-text);
-
-  &:hover {
-    border-bottom: none;
-    color: var(--mm-color-display-text);
-  }
-}
-
-.published {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  font-weight: 600;
-  gap: 4px;
-  grid-area: published;
-  grid-template-columns: max-content;
-  line-height: 1.5em;
-  margin-bottom: calc(var(--mm-spacing) / 2);
-}
-
-.authornames {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.by {
-  padding-right: 4px;
-}
-
-.authors {
-  display: flex;
-  flex-wrap: wrap;
-
-  .author ~ .author::before {
-    content: ', '
-  }
-}
-
-.date::before {
-  content: ' • '
-}
-
 .heading {
   margin: 0;
   padding: 0 0 var(--mm-spacing);
@@ -110,10 +48,6 @@
   :global(.gatsby-resp-image-wrapper) {
     display: grid !important;
   }
-}
-
-.content > [id^='toc-']:first-child > *:first-child {
-  margin-top: 0;
 }
 
 .footer {
@@ -248,10 +182,6 @@
   .header {
     grid-area: header;
     padding: 0 var(--mm-spacing) 0;
-  }
-
-  .header ~ .content > *:first-child {
-    margin-top: 0;
   }
 
   .aside {
