@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import { a as A } from '../../components/Mdx';
+import { generateCategoryUrl } from '../../utils/url';
 import { IPost } from './query';
 
 import * as styles from './CategoryContainer.module.scss';
@@ -26,9 +27,9 @@ const CategoryContainer: React.FC<ICategoryContainer> = (props) => {
               // eslint-disable-next-line react/jsx-key
               <A
                 className={styles.category}
-                href={`/category/${category}`.toLowerCase()}
+                href={generateCategoryUrl(category)}
               >
-                {category.replace(/-/g, ' ')}
+                {category}
               </A>
             )
           )}

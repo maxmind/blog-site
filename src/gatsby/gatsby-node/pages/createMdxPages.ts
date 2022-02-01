@@ -9,6 +9,7 @@ import categoryQuery from '../../../templates/Category/query';
 import homeQuery from '../../../templates/Home/query';
 import postQuery from '../../../templates/Post/query';
 import tagQuery from '../../../templates/Tag/query';
+import { generateCategoryUrl, generateTagUrl } from '../../../utils/url';
 
 const createPagePath = (i: number) =>  i === 1 ? '/' : `/page/${i}`;
 
@@ -61,12 +62,12 @@ const queries = [
       const postsPerPage = 6;
 
       const categoriesList: string[] = [];
-      const createCategoriesObject: any = [];
+      const createCategoriesObject: string[] = [];
 
       // Get the list of categories
-      posts.forEach((post: any) => {
+      posts.forEach((post: IBaseQuery) => {
         if (post.frontmatter.categories) {
-          post.frontmatter.categories.forEach((category: any) => {
+          post.frontmatter.categories.forEach((category: string) => {
             if (categoriesList.indexOf(category) === -1) {
               categoriesList.push(category);
             }
@@ -77,16 +78,20 @@ const queries = [
 
       // Get the total number of posts with a given category
       const categoriesCount = createCategoriesObject.reduce(
-        (prev: any, curr: any) => {
-          prev[curr] = (prev[curr] || 0) + 1;
+        (prev: {[key: string]: number}, curr: string) => {
+          prev[String(curr)] = (prev[String(curr)] || 0) + 1;
           return prev;
         }, {} );
 
 
 
       categoriesList.forEach((category) => {
-        const numPages = Math.ceil(categoriesCount[category] / postsPerPage);
-        const categoryUrl = `/category/${category}`.toLowerCase();
+        const numPages =
+          Math.ceil(categoriesCount[String(category)] / postsPerPage);
+        const categoryUrl = generateCategoryUrl(category);
+        const filteredPosts = posts.filter((post: IBaseQuery) =>
+          post.frontmatter.categories?.includes(category)
+        );
 
         const createCategoryPath = (i: number) =>
           i === 1
@@ -109,7 +114,7 @@ const queries = [
               numPages,
               olderPostsPath:
                 (i < numPages - 1) ? createCategoryPath(i + 2) : null,
-              posts: posts.slice(offset, offset + postsPerPage),
+              posts: filteredPosts.slice(offset, offset + postsPerPage),
             },
             path: createCategoryPath(i + 1),
           });
@@ -125,12 +130,12 @@ const queries = [
       const postsPerPage = 6;
 
       const tagsList: string[] = [];
-      const createTagObject: any = [];
+      const createTagObject: string[] = [];
 
       // Get the list of tags
-      posts.forEach((post: any) => {
+      posts.forEach((post: IBaseQuery) => {
         if (post.frontmatter.tags) {
-          post.frontmatter.tags.forEach((tag: any) => {
+          post.frontmatter.tags.forEach((tag: string) => {
             if (tagsList.indexOf(tag) === -1) {
               tagsList.push(tag);
             }
@@ -141,14 +146,17 @@ const queries = [
 
       // Get the total number of posts with a given tag
       const tagsCount = createTagObject.reduce(
-        (prev: any, curr: any) => {
-          prev[curr] = (prev[curr] || 0) + 1;
+        (prev: {[key: string]: number}, curr: string) => {
+          prev[String(curr)] = (prev[String(curr)] || 0) + 1;
           return prev;
         }, {} );
 
       tagsList.forEach((tag) => {
-        const numPages = Math.ceil(tagsCount[tag] / postsPerPage);
-        const tagUrl = `/tag/${tag}`.toLowerCase();
+        const numPages = Math.ceil(tagsCount[String(tag)] / postsPerPage);
+        const tagUrl = generateTagUrl(tag);
+        const filteredPosts = posts.filter((post: IBaseQuery) =>
+          post.frontmatter.tags?.includes(tag)
+        );
 
         const createTagPath = (i: number) =>
           i === 1
@@ -170,7 +178,7 @@ const queries = [
               numPages,
               olderPostsPath:
                 (i < numPages - 1) ? createTagPath(i + 2) : null,
-              posts: posts.slice(offset, offset + postsPerPage),
+              posts: filteredPosts.slice(offset, offset + postsPerPage),
               tag,
             },
             path: createTagPath(i + 1),

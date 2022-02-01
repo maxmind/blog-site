@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import Link from '../../components/Link';
+import { generateTagUrl } from '../../utils/url';
 
 import * as styles from './TagContainer.module.scss';
 
@@ -17,7 +18,7 @@ const TagContainer: React.FC<ITagContainer> = (props) => {
       className={styles.tag}
     >
       <Link
-        to={`/tag/${text.replace(/\s/g , '-')}`}
+        to={`${generateTagUrl(text)}`}
       >
         {text}
       </Link>

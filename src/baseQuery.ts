@@ -15,7 +15,7 @@ export interface IBaseQuery {
     };
     isFeatured?: boolean;
     keywords: string[];
-    tags: string[];
+    tags?: string[];
     title: string;
   },
   timeToRead: number;

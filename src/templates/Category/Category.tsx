@@ -14,7 +14,7 @@ interface ICategory {
 
 const Category: React.FC<ICategory> = (props) => {
   const { pageContext } = props;
-  const { newerPostsPath, olderPostsPath, posts, category, tag } = pageContext;
+  const { newerPostsPath, olderPostsPath, posts, category } = pageContext;
 
   const previousLink = newerPostsPath ? {
     text: 'Newer',
