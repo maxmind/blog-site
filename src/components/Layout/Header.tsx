@@ -2,12 +2,9 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import Logo from '../../assets/svgs/maxmind-logo.svg';
-import FaBars from '../../assets/svgs/react-icons/FaBars.svg';
-import FaTimes from '../../assets/svgs/react-icons/FaTimes.svg';
 import useSystemStatus from '../../hooks/useSystemStatus';
 import Link from '../Link';
 import AccessibilityNav from './AccessibilityNav';
-import SearchBar from './SearchBar';
 
 import * as styles from './Header.module.scss';
 

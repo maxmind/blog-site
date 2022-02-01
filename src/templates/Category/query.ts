@@ -21,10 +21,9 @@ const query: QueryFn<IBaseQuery & ICategoryContext> = (
 ) => graphql<IBaseQuery & ICategoryContext>(`
   ${BaseQuery}
 
-  query CategoryTemplateQuery($category: String, $skip: Int, $limit: Int) {
+  query CategoryTemplateQuery($skip: Int, $limit: Int) {
     allMdx(
       sort: {fields: [frontmatter___date], order: DESC}
-      filter: {frontmatter: { categories: { eq: $category } } }
       limit: $limit
       skip: $skip
     ) {
