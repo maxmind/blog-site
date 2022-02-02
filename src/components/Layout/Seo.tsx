@@ -50,6 +50,7 @@ const SEO: React.FC<ISEO> = (props) => {
         {
           href: '/rss.xml',
           rel: 'alternate',
+          title: 'RSS Feed for blog.maxmind.com',
         },
       ]}
       meta={[
