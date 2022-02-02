@@ -181,7 +181,7 @@ export default {
                 });
               });
             },
-            title: 'MaxMind Blog',
+            title: 'RSS Feed for blog.maxmind.com',
           },
         ],
         query: `

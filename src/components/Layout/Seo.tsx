@@ -47,6 +47,10 @@ const SEO: React.FC<ISEO> = (props) => {
             `${site.siteMetadata.siteUrl}${useLocation()?.pathname}?lang=en`,
           rel:'canonical',
         },
+        {
+          href: '/rss.xml',
+          rel: 'alternate',
+        },
       ]}
       meta={[
         {
