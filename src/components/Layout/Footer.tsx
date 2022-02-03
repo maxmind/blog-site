@@ -3,6 +3,7 @@ import React from 'react';
 
 import Logo from '../../assets/svgs/maxmind-footer-logo.svg';
 import FaLinkedin from '../../assets/svgs/react-icons/FaLinkedin.svg';
+import FaRssSquare from '../../assets/svgs/react-icons/FaRssSquare.svg';
 import FaTwitterSquare from '../../assets/svgs/react-icons/FaTwitterSquare.svg';
 import useSystemStatus from '../../hooks/useSystemStatus';
 
@@ -45,6 +46,13 @@ const Footer: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
               href="https://www.linkedin.com/company/maxmind"
             >
               <FaLinkedin />
+            </a>
+            <a
+              aria-label="RSS"
+              className={styles.socialIcon}
+              href="/rss.xml"
+            >
+              <FaRssSquare />
             </a>
           </div>
         </div>
