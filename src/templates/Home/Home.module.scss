@@ -7,6 +7,12 @@
   justify-items: center;
 }
 
+.header {
+  border-bottom: 1px dashed var(--mm-color-border);
+  margin: 0 !important;
+  padding: 0 0 var(--mm-spacing) 0;
+}
+
 .featured__wrapper {
   display: flex;
   justify-content: center;

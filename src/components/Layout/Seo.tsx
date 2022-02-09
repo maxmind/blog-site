@@ -47,6 +47,11 @@ const SEO: React.FC<ISEO> = (props) => {
             `${site.siteMetadata.siteUrl}${useLocation()?.pathname}?lang=en`,
           rel:'canonical',
         },
+        {
+          href: '/rss.xml',
+          rel: 'alternate',
+          title: 'RSS Feed for blog.maxmind.com',
+        },
       ]}
       meta={[
         {

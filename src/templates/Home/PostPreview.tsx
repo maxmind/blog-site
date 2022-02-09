@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 import { a as A, p as P } from '../../components/Mdx';
+import CategoryContainer from './CategoryContainer';
+import PublishedContainer from './PublishedContainer';
 import { IPost } from './query';
 
 import * as styles from './PostPreview.module.scss';
@@ -16,9 +18,7 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
   const { isFeatured, post } = props;
   const { excerpt, fields, frontmatter } = post;
   const { slug } = fields;
-  const { author, date, featuredImage, title } = frontmatter;
-
-  const publishedDate = new Date(date);
+  const { featuredImage, title } = frontmatter;
 
   return (
     <article
@@ -32,43 +32,25 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
       <div
         className={styles.content}
       >
-        <div
-          className={styles.meta}
-        >
-          <div
-            className={styles.published}
+        <CategoryContainer
+          post={post}
+        />
+        <h2>
+          <A
+            className={styles.title}
+            href={slug}
           >
-            {publishedDate.toLocaleDateString(undefined, {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </div>
-
-          {author && (
-            <div >
-              Written by
-              {' '}
-              {author}
-            </div>
-          )}
-        </div>
-        <div
-          className={styles.copy}
+            {title}
+          </A>
+        </h2>
+        <PublishedContainer
+          post={post}
+        />
+        <P
+          className={styles.excerpt}
         >
-          <h2>
-            <A
-              className={styles.title}
-              href={slug}
-            >
-              {title}
-            </A>
-          </h2>
-
-          <P>
-            {excerpt}
-          </P>
-        </div>
+          {excerpt}
+        </P>
         <div
           className={styles.readmore}
         >
@@ -80,6 +62,7 @@ const PostPreview: React.FC<IPostPreviewProps> = (props) => {
           </A>
         </div>
       </div>
+
       {isFeatured && featuredImage && (
         <div
           className={styles.graphic}

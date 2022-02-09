@@ -12,7 +12,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
     }
 
     type MdxFrontmatter {
-      author: String
+      authors: [String!]
       draft: Boolean
       categories: [String!]
       description: String

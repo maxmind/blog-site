@@ -53,7 +53,9 @@ export default {
           },
           {
             // eslint-disable-next-line max-len
-            resolve: require.resolve(`${GATSBY_ROOT}/plugins/gatsby-remark-mdx-v2-images`),
+            resolve: require.resolve(
+              `${GATSBY_ROOT}/plugins/gatsby-remark-mdx-v2-images`
+            ),
           },
         ],
         remarkPlugins: [
@@ -127,12 +129,75 @@ export default {
           },
         },
         host: GATSBY_URL,
-        resolveEnv: () => GATSBY_URL === 'https://blog.maxmind.com'
-          ? 'production'
-          : 'nonProduction',
+        resolveEnv: () =>
+          GATSBY_URL === 'https://blog.maxmind.com'
+            ? 'production'
+            : 'nonProduction',
         sitemap: `${GATSBY_URL}/sitemap.xml`,
       },
       resolve: 'gatsby-plugin-robots-txt',
+    },
+    {
+      options: {
+        feeds: [
+          {
+            description: 'MaxMind Blog',
+            output: 'rss.xml',
+            query: `
+              {
+                allMdx(
+                  sort: {fields: [frontmatter___date], order: DESC}
+                  limit: 6
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    frontmatter {
+                      date
+                      description
+                      title
+                    }
+                    fields {
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            serialize: (args: any) => {
+              const { query } = args;
+              const { allMdx } = query;
+              const { siteUrl } = query.site.siteMetadata;
+              return allMdx.nodes.map((node: any) => {
+                return Object.assign({}, node.frontmatter, {
+                  custom_elements: [
+                    {
+                      'content:encoded': node.excerpt,
+                    },
+                  ],
+                  date: node.frontmatter.date,
+                  guid: `${siteUrl}${node.fields.slug}`,
+                  url: `${siteUrl}${node.fields.slug}`,
+                });
+              });
+            },
+            title: 'RSS Feed for blog.maxmind.com',
+          },
+        ],
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+      },
+      resolve: 'gatsby-plugin-feed',
     },
     // {
     //   options: {
@@ -146,7 +211,8 @@ export default {
   siteMetadata: {
     author: '@maxmind',
     // eslint-disable-next-line max-len
-    description: 'Develop applications using industry-leading IP intelligence and risk scoring.',
+    description:
+      'Develop applications using industry-leading IP intelligence and risk scoring.',
     siteUrl: GATSBY_URL,
     title: 'MaxMind Blog',
   },
