@@ -48,7 +48,7 @@ const SEO: React.FC<ISEO> = (props) => {
           rel:'canonical',
         },
         {
-          href: '/rss.xml',
+          href: '/feed',
           rel: 'alternate',
           title: 'RSS Feed for blog.maxmind.com',
         },
