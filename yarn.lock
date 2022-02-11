@@ -19310,7 +19310,7 @@
   "resolved" "https://registry.npmjs.org/sliced/-/sliced-1.0.1.tgz"
   "version" "1.0.1"
 
-"slugify@^1.4.4", "slugify@^1.6.1":
+"slugify@^1.4.4, slugify@^1.6.1, slugify@^1.6.5":
   "integrity" "sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ=="
   "resolved" "https://registry.npmjs.org/slugify/-/slugify-1.6.5.tgz"
   "version" "1.6.5"

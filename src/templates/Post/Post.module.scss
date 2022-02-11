@@ -10,13 +10,6 @@
   @include variables.max-width;
 }
 
-.date {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: calc(var(--mm-spacing) / 4);
-}
-
 .heading {
   margin: 0;
   padding: 0 0 var(--mm-spacing);
@@ -55,10 +48,6 @@
   :global(.gatsby-resp-image-wrapper) {
     display: grid !important;
   }
-}
-
-.content > [id^='toc-']:first-child > *:first-child {
-  margin-top: 0;
 }
 
 .footer {
@@ -191,10 +180,6 @@
   .header {
     grid-area: header;
     padding: 0 var(--mm-spacing) 0;
-  }
-
-  .header ~ .content > *:first-child {
-    margin-top: 0;
   }
 
   .aside {

@@ -1,0 +1,29 @@
+@use '../../styles/variables';
+
+.categories {
+  display: flex;
+  grid-area: category;
+  flex-wrap: wrap;
+  font-family: var(--mm-font-stack-display);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.category ~ .category::before {
+  content: ' • ';
+}
+
+.category:not(:last-child) {
+  padding-right: 4px;
+}
+
+.category {
+  border-bottom: none;
+  color: var(--mm-color-primary-text);
+
+  &:hover {
+    border-bottom: none;
+    color: var(--mm-color-display-text);
+  }
+}

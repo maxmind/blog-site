@@ -1,0 +1,33 @@
+.published {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 4px;
+  grid-area: published;
+  grid-template-columns: max-content;
+  line-height: 1.5em;
+  margin-top: 10px;
+}
+
+.authornames {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.by {
+  padding-right: 4px;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+
+  .author ~ .author::before {
+    content: ', '
+  }
+}
+
+.date::before {
+  content: ' • '
+}
