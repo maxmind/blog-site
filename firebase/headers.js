@@ -154,4 +154,13 @@ module.exports = [
       '**/*.@(jpg|jpeg|gif|png|svg)',
     ].join(',')}}`,
   },
+  {
+    headers: [
+      {
+        key: 'Content-Type',
+        value: 'application/xml',
+      },
+    ],
+    source: '/feed',
+  },
 ];
