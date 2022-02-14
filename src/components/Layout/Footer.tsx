@@ -198,7 +198,7 @@ const Footer: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
             className={styles.link}
             href="https://dev.maxmind.com/"
           >
-            Dev Center
+            Developer Portal
           </a>
           <a
             className={styles.link}
