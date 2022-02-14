@@ -142,7 +142,7 @@ export default {
         feeds: [
           {
             description: 'MaxMind Blog',
-            output: 'rss.xml',
+            output: 'feed',
             query: `
               {
                 allMdx(

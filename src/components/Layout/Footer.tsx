@@ -50,7 +50,7 @@ const Footer: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
             <a
               aria-label="RSS"
               className={styles.socialIcon}
-              href="/rss.xml"
+              href="/feed"
             >
               <FaRssSquare />
             </a>
