@@ -27,6 +27,7 @@ const query: QueryFn<IPostContext> = (
     ) {
       nodes {
         ... BaseQuery
+        excerpt
         timeToRead
         parent {
           ... on File {
