@@ -228,12 +228,14 @@ const queries = [
       // eslint-disable-next-line max-len
       const selectExcerpt = (description: string, excerpt: string, limit = 200) => {
         if (description) {
-          if (description.length <= limit) {
-            return description.replace(/\n/g,' ');
+          const cleanDescription = description.replace(/\n/g, ' ');
+          if (cleanDescription.length <= limit) {
+            return cleanDescription;
           }
-          return description.slice(0, limit) + '...';
+          return cleanDescription.slice(0, limit) + '…';
         }
-        return excerpt.replace(/\n/g,' ');
+        const cleanExcerpt = excerpt.replace(/\n/g,' ');
+        return cleanExcerpt;
       };
 
       // eslint-disable-next-line security/detect-non-literal-fs-filename
