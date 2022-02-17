@@ -226,15 +226,14 @@ const queries = [
       });
 
       // eslint-disable-next-line max-len
-      const selectExcerpt = (description: string, limit: number, excerpt: string) => {
+      const selectExcerpt = (description: string, excerpt: string, limit = 200) => {
         if (description) {
           if (description.length <= limit) {
             return description;
           }
           return description.slice(0, limit) + '...';
-        } else {
-          return excerpt;
         }
+        return excerpt;
       };
 
       // eslint-disable-next-line security/detect-non-literal-fs-filename
@@ -244,7 +243,7 @@ const queries = [
           featured.map((node: IBaseQuery) => ({
             date: new Date(node.frontmatter.date).toISOString(),
             // eslint-disable-next-line max-len
-            excerpt: selectExcerpt(node.frontmatter.description, 200, node.excerpt),
+            excerpt: selectExcerpt(node.frontmatter.description, node.excerpt),
             // eslint-disable-next-line max-len
             featured_image_src: `${GATSBY_URL}${node.frontmatter.featuredImage?.publicURL}`,
             link: `${GATSBY_URL}${node.fields.slug}`,
