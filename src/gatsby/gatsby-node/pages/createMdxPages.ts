@@ -229,11 +229,11 @@ const queries = [
       const selectExcerpt = (description: string, excerpt: string, limit = 200) => {
         if (description) {
           if (description.length <= limit) {
-            return description;
+            return description.replace(/\n/g,' ');
           }
           return description.slice(0, limit) + '...';
         }
-        return excerpt;
+        return excerpt.replace(/\n/g,' ');
       };
 
       // eslint-disable-next-line security/detect-non-literal-fs-filename
