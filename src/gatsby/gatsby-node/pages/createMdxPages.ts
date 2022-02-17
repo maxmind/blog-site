@@ -234,8 +234,7 @@ const queries = [
           }
           return cleanDescription.slice(0, limit) + '…';
         }
-        const cleanExcerpt = excerpt.replace(/\n/g,' ');
-        return cleanExcerpt;
+        return excerpt.replace(/\n/g,' ');
       };
 
       // eslint-disable-next-line security/detect-non-literal-fs-filename
