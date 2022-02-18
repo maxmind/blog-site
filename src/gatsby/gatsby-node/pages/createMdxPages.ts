@@ -16,7 +16,7 @@ const createPagePath = (i: number) =>  i === 1 ? '/' : `/page/${i}`;
 
 const featuredJsonPath = path.resolve(
   __dirname,
-  '../../../../public/wp-json/maxmind/v1/'
+  '../../../../public/'
 );
 
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
@@ -225,13 +225,26 @@ const queries = [
         recursive: true,
       });
 
+      // eslint-disable-next-line max-len
+      const selectExcerpt = (description: string, excerpt: string, limit = 200) => {
+        if (description) {
+          const cleanDescription = description.replace(/\n/g, ' ');
+          if (cleanDescription.length <= limit) {
+            return cleanDescription;
+          }
+          return cleanDescription.slice(0, limit) + '…';
+        }
+        return excerpt.replace(/\n/g,' ');
+      };
+
       // eslint-disable-next-line security/detect-non-literal-fs-filename
       fs.writeFileSync(
         `${featuredJsonPath}/featured-posts.json`,
         JSON.stringify(
           featured.map((node: IBaseQuery) => ({
             date: new Date(node.frontmatter.date).toISOString(),
-            excerpt: node.excerpt,
+            // eslint-disable-next-line max-len
+            excerpt: selectExcerpt(node.frontmatter.description, node.excerpt),
             // eslint-disable-next-line max-len
             featured_image_src: `${GATSBY_URL}${node.frontmatter.featuredImage?.publicURL}`,
             link: `${GATSBY_URL}${node.fields.slug}`,
