@@ -2487,11 +2487,6 @@
   dependencies:
     "@types/ms" "*"
 
-"@types/dedent@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmjs.org/@types/dedent/-/dedent-0.7.0.tgz"
-  integrity sha512-EGlKlgMhnLt/cM4DbUSafFdrkeJoC9Mvnj0PUCU7tFmTjMjNRT957kXCx0wYm3JuEq4o4ZsS5vG+NlkM2DMd2A==
-
 "@types/dompurify@^2.3.2":
   version "2.3.2"
   resolved "https://registry.npmjs.org/@types/dompurify/-/dompurify-2.3.2.tgz"
