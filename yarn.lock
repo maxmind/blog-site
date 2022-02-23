@@ -16149,7 +16149,7 @@ remark-lint-emphasis-marker@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-emphasis-marker@^3.0.0, remark-lint-emphasis-marker@^3.1.0:
+remark-lint-emphasis-marker@^3.0.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/remark-lint-emphasis-marker/-/remark-lint-emphasis-marker-3.1.1.tgz"
   integrity sha512-VduuT+KAr0vA78xBLJdIcenCQja4mAd81aNACfdz7BUPLphIQa84D5uzl+nZatSaCXLebCNp5jP/bzVUsBmRKw==
