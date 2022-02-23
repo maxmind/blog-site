@@ -2526,13 +2526,6 @@
     "@types/estree" "*"
     "@types/json-schema" "*"
 
-"@types/estree-jsx@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/@types/estree-jsx/-/estree-jsx-0.0.1.tgz"
-  integrity sha512-gcLAYiMfQklDCPjQegGn0TBAn9it05ISEsEhlKQUddIk7o2XDokOcTN7HBO8tznM0D9dGezvHEfRZBfZf6me0A==
-  dependencies:
-    "@types/estree" "*"
-
 "@types/estree@*", "@types/estree@^0.0.50":
   version "0.0.50"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-0.0.50.tgz"
@@ -12497,13 +12490,6 @@ mdast-comment-marker@^1.0.0, mdast-comment-marker@^1.0.1:
   resolved "https://registry.npmjs.org/mdast-comment-marker/-/mdast-comment-marker-1.1.2.tgz"
   integrity sha512-vTFXtmbbF3rgnTh3Zl3irso4LtvwUq/jaDvT2D1JqTGAwaipcS7RpTxzi6KjoRqI9n2yuAhzLDAC8xVTF3XYVQ==
 
-mdast-comment-marker@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/mdast-comment-marker/-/mdast-comment-marker-2.1.0.tgz"
-  integrity sha512-/+Cfm8A83PjkqjQDB9iYqHESGuXlriCWAwRGPJjkYmxXrF4r6saxeUlOKNrf+SogTwg9E8uyHRCFHLG6/BAAdA==
-  dependencies:
-    mdast-util-mdx-expression "^1.1.0"
-
 mdast-squeeze-paragraphs@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/mdast-squeeze-paragraphs/-/mdast-squeeze-paragraphs-4.0.0.tgz"
@@ -12626,20 +12612,6 @@ mdast-util-heading-style@^1.0.2:
   version "1.0.6"
   resolved "https://registry.npmjs.org/mdast-util-heading-style/-/mdast-util-heading-style-1.0.6.tgz"
   integrity sha512-8ZuuegRqS0KESgjAGW8zTx4tJ3VNIiIaGFNEzFpRSAQBavVc7AvOo9I4g3crcZBfYisHs4seYh0rAVimO6HyOw==
-
-mdast-util-heading-style@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/mdast-util-heading-style/-/mdast-util-heading-style-2.0.0.tgz"
-  integrity sha512-q9+WW2hJduW51LgV2r/fcU5wIt2GLFf0yYHxyi0f2aaxnC63ErBSOAJlhP6nbQ6yeG5rTCozbwOi4QNDPKV0zw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-
-mdast-util-mdx-expression@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/mdast-util-mdx-expression/-/mdast-util-mdx-expression-1.1.1.tgz"
-  integrity sha512-RDLRkBFmBKCJl6/fQdxxKL2BqNtoPFoNBmQAlj5ZNKOijIWRKjdhPkeufsUOaexLj+78mhJc+L7d1MYka8/LdQ==
-  dependencies:
-    "@types/estree-jsx" "^0.0.1"
 
 mdast-util-to-hast@9.1.0:
   version "9.1.0"
@@ -16146,15 +16118,6 @@ remark-lint-final-newline@^1.0.0:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-final-newline@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-final-newline/-/remark-lint-final-newline-2.1.1.tgz"
-  integrity sha512-cgKYaI7ujUse/kV4KajLv2j1kmi1CxpAu+w7wIU0/Faihhb3sZAf4a5ACf2Wu8NoTSIr1Q//3hDysG507PIoDg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-
 remark-lint-first-heading-level@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-first-heading-level/-/remark-lint-first-heading-level-2.0.1.tgz"
@@ -16173,18 +16136,6 @@ remark-lint-hard-break-spaces@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-hard-break-spaces@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-hard-break-spaces/-/remark-lint-hard-break-spaces-3.1.1.tgz"
-  integrity sha512-UfwFvESpX32qwyHJeluuUuRPWmxJDTkmjnWv2r49G9fC4Jrzm4crdJMs3sWsrGiQ3mSex6bgp/8rqDgtBng2IA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-heading-style@^2.0.1:
   version "2.0.1"
@@ -16206,17 +16157,6 @@ remark-lint-list-item-bullet-indent@^3.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-list-item-bullet-indent@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-list-item-bullet-indent/-/remark-lint-list-item-bullet-indent-4.1.1.tgz"
-  integrity sha512-NFvXVj1Nm12+Ma48NOjZCGb/D0IhmUcxyrTCpPp+UNJhEWrmFxM8nSyIiZgXadgXErnuv+xm2Atw7TAcZ9a1Cg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-list-item-indent@2.0.1, remark-lint-list-item-indent@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-list-item-indent/-/remark-lint-list-item-indent-2.0.1.tgz"
@@ -16227,19 +16167,6 @@ remark-lint-list-item-indent@2.0.1, remark-lint-list-item-indent@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-list-item-indent@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-list-item-indent/-/remark-lint-list-item-indent-3.1.1.tgz"
-  integrity sha512-OSTG64e52v8XBmmeT0lefpiAfCMYHJxMMUrMnhTjLVyWAbEO0vqqR5bLvfLwzK+P4nY2D/8XKku0hw35dM86Rw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-auto-link-without-protocol@^2.0.0:
   version "2.0.1"
@@ -16263,19 +16190,6 @@ remark-lint-no-blockquote-without-marker@^4.0.0:
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
 
-remark-lint-no-blockquote-without-marker@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-blockquote-without-marker/-/remark-lint-no-blockquote-without-marker-5.1.1.tgz"
-  integrity sha512-7jL7eKS25kKRhQ7SKKB5eRfNleDMWKWAmZ5Y/votJdDoM+6qsopLLumPWaSzP0onyV3dyHRhPfBtqelt3hvcyA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-    vfile-location "^4.0.0"
-
 remark-lint-no-consecutive-blank-lines@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/remark-lint-no-consecutive-blank-lines/-/remark-lint-no-consecutive-blank-lines-3.0.0.tgz"
@@ -16297,19 +16211,6 @@ remark-lint-no-duplicate-definitions@^2.0.0, remark-lint-no-duplicate-definition
     unist-util-position "^3.0.0"
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-duplicate-definitions@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-duplicate-definitions/-/remark-lint-no-duplicate-definitions-3.1.1.tgz"
-  integrity sha512-9p+nBz8VvV+t4g/ALNLVN8naV+ffAzC4ADyg9QivzmKwLjyF93Avt4HYNlb2GZ+aoXRQSVG1wjjWFeDC9c7Tdg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-stringify-position "^3.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-emphasis-as-heading@^2.0.1:
   version "2.0.1"
@@ -16378,20 +16279,6 @@ remark-lint-no-heading-content-indent@^3.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-heading-content-indent@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-heading-content-indent/-/remark-lint-no-heading-content-indent-4.1.1.tgz"
-  integrity sha512-W4zF7MA72IDC5JB0qzciwsnioL5XlnoE0r1F7sDS0I5CJfQtHYOLlxb3UAIlgRCkBokPWCp0E4o1fsY/gQUKVg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-heading-style "^2.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-heading-indent@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/remark-lint-no-heading-indent/-/remark-lint-no-heading-indent-3.0.0.tgz"
@@ -16423,18 +16310,6 @@ remark-lint-no-inline-padding@^3.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-inline-padding@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-inline-padding/-/remark-lint-no-inline-padding-4.1.1.tgz"
-  integrity sha512-++IMm6ohOPKNOrybqjP9eiclEtVX/Rd2HpF2UD9icrC1X5nvrI6tlfN55tePaFvWAB7pe6MW4LzNEMnWse61Lw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-to-string "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-literal-urls@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-no-literal-urls/-/remark-lint-no-literal-urls-2.0.1.tgz"
@@ -16445,19 +16320,6 @@ remark-lint-no-literal-urls@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-literal-urls@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-literal-urls/-/remark-lint-no-literal-urls-3.1.1.tgz"
-  integrity sha512-tZZ4gtZMA//ZAf7GJTE8S9yjzqXUfUTlR/lvU7ffc7NeSurqCBwAtHqeXVCHiD39JnlHVSW2MLYhvHp53lBGvA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-to-string "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-missing-blank-lines@^2.0.1:
   version "2.0.1"
@@ -16498,17 +16360,6 @@ remark-lint-no-shortcut-reference-image@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-shortcut-reference-image@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-shortcut-reference-image/-/remark-lint-no-shortcut-reference-image-3.1.1.tgz"
-  integrity sha512-m8tH+loDagd1JUns/T4eyulVXgVvE+ZSs7owRUOmP+dgsKJuO5sl1AdN9eyKDVMEvxHF3Pm5WqE62QIRNM48mA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-shortcut-reference-link@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-no-shortcut-reference-link/-/remark-lint-no-shortcut-reference-link-2.0.1.tgz"
@@ -16517,17 +16368,6 @@ remark-lint-no-shortcut-reference-link@^2.0.0:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-shortcut-reference-link@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-shortcut-reference-link/-/remark-lint-no-shortcut-reference-link-3.1.1.tgz"
-  integrity sha512-oDJ92/jXQ842HgrBGgZdP7FA+N2jBMCBU2+jRElkS+OWVut0UaDILtNavNy/e85B3SLPj3RoXKF96M4vfJ7B2A==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-table-indentation@^3.0.0:
   version "3.0.0"
@@ -16559,20 +16399,6 @@ remark-lint-no-undefined-references@^3.0.0:
     unist-util-visit "^2.0.0"
     vfile-location "^3.1.0"
 
-remark-lint-no-undefined-references@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-undefined-references/-/remark-lint-no-undefined-references-4.1.1.tgz"
-  integrity sha512-J20rKfTGflLiTI3T5JlLZSmINk6aDGmZi1y70lpU69LDfAyHAKgDK6sSW9XDeFmCPPdm8Ybxe5Gf2a70k+GcVQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    micromark-util-normalize-identifier "^1.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-    vfile-location "^4.0.0"
-
 remark-lint-no-unused-definitions@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-no-unused-definitions/-/remark-lint-no-unused-definitions-2.0.1.tgz"
@@ -16581,17 +16407,6 @@ remark-lint-no-unused-definitions@^2.0.0:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-unused-definitions@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-unused-definitions/-/remark-lint-no-unused-definitions-3.1.1.tgz"
-  integrity sha512-/GtyBukhAxi5MEX/g/m+FzDEflSbTe2/cpe2H+tJZyDmiLhjGXRdwWnPRDp+mB9g1iIZgVRCk7T4v90RbQX/mw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-ordered-list-marker-style@^2.0.0:
   version "2.0.1"
@@ -16602,18 +16417,6 @@ remark-lint-ordered-list-marker-style@^2.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-ordered-list-marker-style@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-ordered-list-marker-style/-/remark-lint-ordered-list-marker-style-3.1.1.tgz"
-  integrity sha512-IWcWaJoaSb4yoSOuvDbj9B2uXp9kSj58DqtrMKo8MoRShmbj1onVfulTxoTLeLtI11NvW+mj3jPSpqjMjls+5Q==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-ordered-list-marker-value@^2.0.1:
   version "2.0.1"
@@ -16715,15 +16518,6 @@ remark-lint@^8.0.0:
   dependencies:
     remark-message-control "^6.0.0"
 
-remark-lint@^9.0.0:
-  version "9.1.1"
-  resolved "https://registry.npmjs.org/remark-lint/-/remark-lint-9.1.1.tgz"
-  integrity sha512-zhe6twuqgkx/9KgZyNyaO0cceA4jQuJcyzMOBC+JZiAzMN6mFUmcssWZyY30ko8ut9vQDMX/pyQnolGn+Fg/Tw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    remark-message-control "^7.0.0"
-    unified "^10.1.0"
-
 remark-mdx@2.0.0-next.7, remark-mdx@2.0.0-next.8, remark-mdx@^2.0.0-next.8:
   version "2.0.0-next.8"
   resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-2.0.0-next.8.tgz#db1c3cbc606ea0d01526242199bb134d99020363"
@@ -16753,17 +16547,6 @@ remark-message-control@^6.0.0:
   dependencies:
     mdast-comment-marker "^1.0.0"
     unified-message-control "^3.0.0"
-
-remark-message-control@^7.0.0:
-  version "7.1.1"
-  resolved "https://registry.npmjs.org/remark-message-control/-/remark-message-control-7.1.1.tgz"
-  integrity sha512-xKRWl1NTBOKed0oEtCd8BUfH5m4s8WXxFFSoo7uUwx6GW/qdCy4zov5LfPyw7emantDmhfWn5PdIZgcbVcWMDQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-comment-marker "^2.0.0"
-    unified "^10.0.0"
-    unified-message-control "^4.0.0"
-    vfile "^5.0.0"
 
 remark-parse@8.0.2:
   version "8.0.2"
@@ -16892,29 +16675,6 @@ remark-preset-lint-recommended@^5.0.0:
     remark-lint-no-undefined-references "^3.0.0"
     remark-lint-no-unused-definitions "^2.0.0"
     remark-lint-ordered-list-marker-style "^2.0.0"
-
-remark-preset-lint-recommended@^6.1.1:
-  version "6.1.2"
-  resolved "https://registry.npmjs.org/remark-preset-lint-recommended/-/remark-preset-lint-recommended-6.1.2.tgz"
-  integrity sha512-x9kWufNY8PNAhY4fsl+KD3atgQdo4imP3GDAQYbQ6ylWVyX13suPRLkqnupW0ODRynfUg8ZRt8pVX0wMHwgPAg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    remark-lint "^9.0.0"
-    remark-lint-final-newline "^2.0.0"
-    remark-lint-hard-break-spaces "^3.0.0"
-    remark-lint-list-item-bullet-indent "^4.0.0"
-    remark-lint-list-item-indent "^3.0.0"
-    remark-lint-no-blockquote-without-marker "^5.0.0"
-    remark-lint-no-duplicate-definitions "^3.0.0"
-    remark-lint-no-heading-content-indent "^4.0.0"
-    remark-lint-no-inline-padding "^4.0.0"
-    remark-lint-no-literal-urls "^3.0.0"
-    remark-lint-no-shortcut-reference-image "^3.0.0"
-    remark-lint-no-shortcut-reference-link "^3.0.0"
-    remark-lint-no-undefined-references "^4.0.0"
-    remark-lint-no-unused-definitions "^3.0.0"
-    remark-lint-ordered-list-marker-style "^3.0.0"
-    unified "^10.0.0"
 
 remark-retext@^3.1.3:
   version "3.1.3"
@@ -19580,18 +19340,6 @@ unified-message-control@^3.0.0:
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
 
-unified-message-control@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/unified-message-control/-/unified-message-control-4.0.0.tgz"
-  integrity sha512-1b92N+VkPHftOsvXNOtkJm4wHlr+UDmTBF2dUzepn40oy9NxanJ9xS1RwUBTjXJwqr2K0kMbEyv1Krdsho7+Iw==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    unist-util-is "^5.0.0"
-    unist-util-visit "^3.0.0"
-    vfile "^5.0.0"
-    vfile-location "^4.0.0"
-    vfile-message "^3.0.0"
-
 unified@9.0.0:
   version "9.0.0"
   resolved "https://registry.npmjs.org/unified/-/unified-9.0.0.tgz"
@@ -19604,7 +19352,7 @@ unified@9.0.0:
     trough "^1.0.0"
     vfile "^4.0.0"
 
-unified@^10.0.0, unified@^10.1.0:
+unified@^10.0.0:
   version "10.1.1"
   resolved "https://registry.npmjs.org/unified/-/unified-10.1.1.tgz"
   integrity sha512-v4ky1+6BN9X3pQrOdkFIPWAaeDsHPE1svRDxq7YpTc2plkIqFMwukfqM+l0ewpP9EfwARlt9pPFAeWYhHm8X9w==
@@ -19836,14 +19584,6 @@ unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit-parents@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-4.1.1.tgz"
-  integrity sha512-1xAFJXAKpnnJl8G7K5KgU7FY55y3GcLIXqkzUj5QF/QVP7biUm0K0O2oqVkYsdjzJKifYeWn9+o6piAK2hGSHw==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    unist-util-is "^5.0.0"
-
 unist-util-visit-parents@^5.0.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-5.1.0.tgz"
@@ -19867,15 +19607,6 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
   dependencies:
     unist-util-visit-parents "^2.0.0"
-
-unist-util-visit@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-3.1.0.tgz"
-  integrity sha512-Szoh+R/Ll68QWAyQyZZpQzZQm2UPbxibDvaY8Xc9SUtYgPsDzx5AWSk++UUt2hJuow8mvwR+rG+LQLw+KsuAKA==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    unist-util-is "^5.0.0"
-    unist-util-visit-parents "^4.0.0"
 
 unist-util-visit@^4.0.0:
   version "4.1.0"
@@ -20207,14 +19938,6 @@ vfile-location@^3.0.0, vfile-location@^3.1.0, vfile-location@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/vfile-location/-/vfile-location-3.2.0.tgz"
   integrity sha512-aLEIZKv/oxuCDZ8lkJGhuhztf/BW4M+iHdCwglA/eWc+vtuRFJj8EtgceYFX4LRjOhCAAiNHsKGssC6onJ+jbA==
-
-vfile-location@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/vfile-location/-/vfile-location-4.0.1.tgz"
-  integrity sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    vfile "^5.0.0"
 
 vfile-message@*, vfile-message@^3.0.0:
   version "3.1.0"
