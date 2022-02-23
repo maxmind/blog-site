@@ -16041,19 +16041,6 @@ remark-lint-blockquote-indentation@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-blockquote-indentation@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-blockquote-indentation/-/remark-lint-blockquote-indentation-3.1.1.tgz"
-  integrity sha512-u9cjedM6zcK8vRicis5n/xeOSDIC3FGBCKc3K9pqw+nNrOjY85FwxDQKZZ/kx7rmkdRZEhgyHak+wzPBllcxBQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-checkbox-character-style@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/remark-lint-checkbox-character-style/-/remark-lint-checkbox-character-style-3.0.0.tgz"
@@ -16085,18 +16072,6 @@ remark-lint-code-block-style@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-code-block-style@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/remark-lint-code-block-style/-/remark-lint-code-block-style-3.1.0.tgz"
-  integrity sha512-Hv4YQ8ueLGpjItla4CkcOkcfGj+nlquqylDgCm1/xKnW+Ke2a4qVTMVJrP9Krp4FWmXgktJLDHjhRH+pzhDXLg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-definition-case@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-definition-case/-/remark-lint-definition-case-2.0.1.tgz"
@@ -16106,17 +16081,6 @@ remark-lint-definition-case@^2.0.1:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-definition-case@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-definition-case/-/remark-lint-definition-case-3.1.1.tgz"
-  integrity sha512-dirX0BSfbm1Ixx4Hv4xRQliEP1rw8dDitw2Om3XcO2QqF8bWrzF06/xeMlDNAaT77Cxqb9S7bODo/q+CYUxyWQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-definition-spacing@^2.0.1:
   version "2.0.1"
@@ -16128,17 +16092,6 @@ remark-lint-definition-spacing@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-definition-spacing@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-definition-spacing/-/remark-lint-definition-spacing-3.1.1.tgz"
-  integrity sha512-PR+cYvc0FMtFWjkaXePysW88r7Y7eIwbpUGPFDIWE48fiRiz8U3VIk05P3loQCpCkbmUeInAAYD8tIFPTg4Jlg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-emphasis-marker@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-emphasis-marker/-/remark-lint-emphasis-marker-2.0.1.tgz"
@@ -16148,17 +16101,6 @@ remark-lint-emphasis-marker@^2.0.1:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-emphasis-marker@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-emphasis-marker/-/remark-lint-emphasis-marker-3.1.1.tgz"
-  integrity sha512-VduuT+KAr0vA78xBLJdIcenCQja4mAd81aNACfdz7BUPLphIQa84D5uzl+nZatSaCXLebCNp5jP/bzVUsBmRKw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-fenced-code-flag@^2.0.1:
   version "2.0.1"
@@ -16170,18 +16112,6 @@ remark-lint-fenced-code-flag@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-fenced-code-flag@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-fenced-code-flag/-/remark-lint-fenced-code-flag-3.1.1.tgz"
-  integrity sha512-FFVZmYsBccKIIEgOtgdZEpQdARtAat1LTLBydnIpyNIvcntzWwtrtlj9mtjL8ZoSRre8HtwmEnBFyOfmM/NWaA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-fenced-code-marker@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-fenced-code-marker/-/remark-lint-fenced-code-marker-2.0.1.tgz"
@@ -16192,32 +16122,12 @@ remark-lint-fenced-code-marker@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-fenced-code-marker@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-fenced-code-marker/-/remark-lint-fenced-code-marker-3.1.1.tgz"
-  integrity sha512-x/t8sJWPvE46knKz6zW03j9VX5477srHUmRFbnXhZ3K8e37cYVUIvfbPhcPCAosSsOki9+dvGfZsWQiKuUNNfQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-file-extension@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/remark-lint-file-extension/-/remark-lint-file-extension-1.0.5.tgz"
   integrity sha512-oVQdf5vEomwHkfQ7R/mgmsWW2H/t9kSvnrxtVoNOHr+qnOEafKKDn+AFhioN2kqtjCZBAjSSrePs6xGKmXKDTw==
   dependencies:
     unified-lint-rule "^1.0.0"
-
-remark-lint-file-extension@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-file-extension/-/remark-lint-file-extension-2.1.1.tgz"
-  integrity sha512-r6OMe27YZzr2NFjPMbBxgm8RZxigRwzeFSjapPlqcxk0Q0w/6sosJsceBNlGGlk00pltvv7NPqSexbXUjirrQQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
 
 remark-lint-final-definition@^2.1.0:
   version "2.1.0"
@@ -16228,18 +16138,6 @@ remark-lint-final-definition@^2.1.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-final-definition@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-final-definition/-/remark-lint-final-definition-3.1.1.tgz"
-  integrity sha512-94hRV+EBIuLVFooiimsZwh5ZPEcTqjy5wr7LgqxoUUWy+srTanndaLoki7bxQJeIcWUnomZncsJAyL0Lo7toxw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-final-newline@^1.0.0:
   version "1.0.5"
@@ -16288,17 +16186,6 @@ remark-lint-hard-break-spaces@^3.0.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint-heading-increment@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-heading-increment/-/remark-lint-heading-increment-3.1.1.tgz"
-  integrity sha512-DtiMwZNAE/iAZWuZGjTXxYjNDQ375r59C99aVeVp1nKaovIufKuHWAm9U/9FAGBJNgBx6Ovfdej4YwIxd0yAPw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-heading-style@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-heading-style/-/remark-lint-heading-style-2.0.1.tgz"
@@ -16308,30 +16195,6 @@ remark-lint-heading-style@^2.0.1:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-heading-style@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-heading-style/-/remark-lint-heading-style-3.1.1.tgz"
-  integrity sha512-Qm7ZAF+s46ns0Wo5TlHGIn/PPMMynytn8SSLEdMIo6Uo/+8PAcmQ3zU1pj57KYxfyDoN5iQPgPIwPYMLYQ2TSQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-heading-style "^2.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
-
-remark-lint-link-title-style@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-link-title-style/-/remark-lint-link-title-style-3.1.1.tgz"
-  integrity sha512-JWWiuUFy/N2iwQ3eWIxFy6olX8D7xCFw8LoM0vZI2CHTZJrmDMaWwnl8jziP+HHHheFX3wkVqsoaYod536ArRw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-    vfile-location "^4.0.0"
 
 remark-lint-list-item-bullet-indent@^3.0.0:
   version "3.0.0"
@@ -16354,18 +16217,6 @@ remark-lint-list-item-bullet-indent@^4.0.0:
     unified-lint-rule "^2.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint-list-item-content-indent@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-list-item-content-indent/-/remark-lint-list-item-content-indent-3.1.1.tgz"
-  integrity sha512-gcZhAXLd1onkutTEqQTybyANjdxvlOlu0y/AU4H3f6L99UGC85ymRhEeu5vGSkvsKKPR1FrMTEH6G2nNgtavgg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-list-item-indent@2.0.1, remark-lint-list-item-indent@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-list-item-indent/-/remark-lint-list-item-indent-2.0.1.tgz"
@@ -16384,42 +16235,6 @@ remark-lint-list-item-indent@^3.0.0:
   dependencies:
     "@types/mdast" "^3.0.0"
     pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
-remark-lint-list-item-spacing@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-list-item-spacing/-/remark-lint-list-item-spacing-4.1.1.tgz"
-  integrity sha512-MqXmahPgYrvfA7SPqmcAC6fI40jIgXG33EeE/MhFvMLWh04k+fqGf2O2aH1KT664MlwM4oETbTI4xj3/KCIHZA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
-remark-lint-maximum-heading-length@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-maximum-heading-length/-/remark-lint-maximum-heading-length-3.1.1.tgz"
-  integrity sha512-hTOvRDnULpu0S+k51lovT28TLBgtw8XR0qq+mECSsoyuT4C38UBjQRic5OPo68AZMH0ad/93uj6yvfFtH0K8Lg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-to-string "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
-
-remark-lint-maximum-line-length@^3.0.0:
-  version "3.1.2"
-  resolved "https://registry.npmjs.org/remark-lint-maximum-line-length/-/remark-lint-maximum-line-length-3.1.2.tgz"
-  integrity sha512-KwddpVmNifTHNXwTQQgVufuUvv0hhu9kJVvmpNdEvfEc7tc3wBkaavyi3kKsUB8WwMhGtZuXVWy6OdPC1axzhw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
     unified "^10.0.0"
     unified-lint-rule "^2.0.0"
     unist-util-generated "^2.0.0"
@@ -16472,20 +16287,6 @@ remark-lint-no-consecutive-blank-lines@^3.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-consecutive-blank-lines@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/remark-lint-no-consecutive-blank-lines/-/remark-lint-no-consecutive-blank-lines-4.1.2.tgz"
-  integrity sha512-wRsR3kFgHaZ4mO3KASU43oXGLGezNZ64yNs1ChPUacKh0Bm7cwGnxN9GHGAbOXspwrYrN2eCDxzCbdPEZi2qKw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    "@types/unist" "^2.0.0"
-    pluralize "^8.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-duplicate-definitions@^2.0.0, remark-lint-no-duplicate-definitions@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-no-duplicate-definitions/-/remark-lint-no-duplicate-definitions-2.0.1.tgz"
@@ -16510,20 +16311,6 @@ remark-lint-no-duplicate-definitions@^3.0.0:
     unist-util-stringify-position "^3.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint-no-duplicate-headings@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-3.1.1.tgz"
-  integrity sha512-gSO/BngGkxF35Fsctzt3YMwGEZ8F7f71zx7h0Y97DylyL6WXVuWP4saCmQTlbB4FpD0UXEnRROJ6fBFDvJlzOA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-to-string "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-stringify-position "^3.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-emphasis-as-heading@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-no-emphasis-as-heading/-/remark-lint-no-emphasis-as-heading-2.0.1.tgz"
@@ -16532,17 +16319,6 @@ remark-lint-no-emphasis-as-heading@^2.0.1:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-emphasis-as-heading@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-emphasis-as-heading/-/remark-lint-no-emphasis-as-heading-3.1.1.tgz"
-  integrity sha512-F45yuLsYVP4r6OjVtePKk7Aymnf3rBLHXYjnSJggEaYn0j+72xOBLrqmj6ii5YGfDsBwG2pDNTBx4vm3xM7P0Q==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-empty-url@^3.1.0:
   version "3.1.1"
@@ -16562,30 +16338,12 @@ remark-lint-no-file-name-articles@^1.0.5:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-no-file-name-articles@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-file-name-articles/-/remark-lint-no-file-name-articles-2.1.1.tgz"
-  integrity sha512-7fiHKQUGvP4WOsieZ1dxm8WQWWjXjPj0Uix6pk2dSTJqxvaosjKH1AV0J/eVvliat0BGH8Cz4SUbuz5vG6YbdQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-
 remark-lint-no-file-name-consecutive-dashes@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/remark-lint-no-file-name-consecutive-dashes/-/remark-lint-no-file-name-consecutive-dashes-1.0.5.tgz"
   integrity sha512-Mg2IDsi790/dSdAzwnBnsMYdZm3qC2QgGwqOWcr0TPABJhhjC3p8r5fX4MNMTXI5It7B7bW9+ImmCeLOZiXkLg==
   dependencies:
     unified-lint-rule "^1.0.0"
-
-remark-lint-no-file-name-consecutive-dashes@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-file-name-consecutive-dashes/-/remark-lint-no-file-name-consecutive-dashes-2.1.1.tgz"
-  integrity sha512-tM4IpURGuresyeIBsXT5jsY3lZakgO6IO59ixcFt015bFjTOW54MrBvdJxA60QHhf5DAyHzD8wGeULPSs7ZQfg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
 
 remark-lint-no-file-name-irregular-characters@^1.0.5:
   version "1.0.5"
@@ -16594,15 +16352,6 @@ remark-lint-no-file-name-irregular-characters@^1.0.5:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-no-file-name-irregular-characters@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-file-name-irregular-characters/-/remark-lint-no-file-name-irregular-characters-2.1.1.tgz"
-  integrity sha512-rVeCv1XRdLtp/rxLaiFKElaIHuIlokypV/c2aCG3VVYcQ4+ZmJxq018kEsolR2+Dv9m3vKp8Fy1482US4g4WKA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-
 remark-lint-no-file-name-mixed-case@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/remark-lint-no-file-name-mixed-case/-/remark-lint-no-file-name-mixed-case-1.0.5.tgz"
@@ -16610,30 +16359,12 @@ remark-lint-no-file-name-mixed-case@^1.0.5:
   dependencies:
     unified-lint-rule "^1.0.0"
 
-remark-lint-no-file-name-mixed-case@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-file-name-mixed-case/-/remark-lint-no-file-name-mixed-case-2.1.1.tgz"
-  integrity sha512-mJU3hYzyXNo8NkoSafPcsgr+Gema+vDCzNWlLw05UdFXJK/cVy+6DVsbrEFjrz8L+WF7uQmUHBtTvd91SqoItg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-
 remark-lint-no-file-name-outer-dashes@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/remark-lint-no-file-name-outer-dashes/-/remark-lint-no-file-name-outer-dashes-1.0.6.tgz"
   integrity sha512-rT8CmcIlenegS0Yst4maYXdZfqIjBOiRUY8j/KJkORF5tKH+3O1/S07025qPGmcRihzK3w4yO0K8rgkKQw0b9w==
   dependencies:
     unified-lint-rule "^1.0.0"
-
-remark-lint-no-file-name-outer-dashes@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-file-name-outer-dashes/-/remark-lint-no-file-name-outer-dashes-2.1.1.tgz"
-  integrity sha512-2kRcVNzZb0zS3jE+Iaa6MEpplhqXSdsHBILS+BxJ4cDGAAIdeipY8hKaDLdZi+34wvrfnDxNgvNLcHpgqO+OZA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
 
 remark-lint-no-heading-content-indent@^3.0.0:
   version "3.0.0"
@@ -16681,18 +16412,6 @@ remark-lint-no-heading-punctuation@^2.0.1:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-heading-punctuation@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-heading-punctuation/-/remark-lint-no-heading-punctuation-3.1.1.tgz"
-  integrity sha512-ZexHx4rmsjKVF1/Fvdig0yOgpWl0wFa43+sqg880HT3PW9KmEczjSRkwlMaTlVgDzC0paNn2FXfQMuEQW4YDLg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-to-string "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-inline-padding@^3.0.0:
   version "3.0.0"
@@ -16761,19 +16480,6 @@ remark-lint-no-multiple-toplevel-headings@^2.0.1:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-multiple-toplevel-headings@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-multiple-toplevel-headings/-/remark-lint-no-multiple-toplevel-headings-3.1.1.tgz"
-  integrity sha512-bM//SIBvIkoGUpA8hR5QibJ+7C2R50PTIRrc4te93YNRG+ie8bJzjwuO9jIMedoDfJB6/+7EqO9FYBivjBZ3MA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-stringify-position "^3.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-no-shell-dollars@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/remark-lint-no-shell-dollars/-/remark-lint-no-shell-dollars-2.0.2.tgz"
@@ -16782,17 +16488,6 @@ remark-lint-no-shell-dollars@^2.0.2:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-no-shell-dollars@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-shell-dollars/-/remark-lint-no-shell-dollars-3.1.1.tgz"
-  integrity sha512-Q3Ad1TaOPxbYog5+Of/quPG3Fy+dMKiHjT8KsU7NDiHG6YJOnAJ3f3w+y13CIlNIaKc/MrisgcthhrZ7NsgXfA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-no-shortcut-reference-image@^2.0.0:
   version "2.0.1"
@@ -16843,18 +16538,6 @@ remark-lint-no-table-indentation@^3.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
     vfile-location "^3.0.0"
-
-remark-lint-no-table-indentation@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-no-table-indentation/-/remark-lint-no-table-indentation-4.1.1.tgz"
-  integrity sha512-eklvBxUSrkVbJxeokepOvFZ3n2V6zaJERIiOowR+y/Bz4dRHDMij1Ojg55AMO9yUMvxWPV3JPOeThliAcPmrMg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-    vfile-location "^4.0.0"
 
 remark-lint-no-tabs@^2.0.1:
   version "2.0.1"
@@ -16942,18 +16625,6 @@ remark-lint-ordered-list-marker-value@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-ordered-list-marker-value@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-ordered-list-marker-value/-/remark-lint-ordered-list-marker-value-3.1.1.tgz"
-  integrity sha512-+bQZbo+v/A8CuLrO71gobJuKR4/sfnPgWyEggSa+zq+LXPK1HiMDjap0Wr07uYgcUXsXIPh+HD/5J5by6JL+vg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-generated "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-rule-style@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/remark-lint-rule-style/-/remark-lint-rule-style-2.0.1.tgz"
@@ -16964,7 +16635,7 @@ remark-lint-rule-style@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-rule-style@^3.0.0, remark-lint-rule-style@^3.1.0:
+remark-lint-rule-style@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/remark-lint-rule-style/-/remark-lint-rule-style-3.1.1.tgz"
   integrity sha512-+oZe0ph4DWHGwPkQ/FpqiGp4WULTXB1edftnnNbizYT+Wr+/ux7GNTx78oXH/PHwlnOtVIExMc4W/vDXrUj/DQ==
@@ -16985,17 +16656,6 @@ remark-lint-strong-marker@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-strong-marker@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-strong-marker/-/remark-lint-strong-marker-3.1.1.tgz"
-  integrity sha512-tX9Os2C48Hh8P8CouY4dcnAhGnR3trL+NCDqIvJvFDR9Rvm9yfNQaY2N4ZHWVY0iUicq9DpqEiJTgUsT8AGv/w==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-table-cell-padding@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/remark-lint-table-cell-padding/-/remark-lint-table-cell-padding-3.0.0.tgz"
@@ -17005,18 +16665,6 @@ remark-lint-table-cell-padding@^3.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-table-cell-padding@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/remark-lint-table-cell-padding/-/remark-lint-table-cell-padding-4.1.2.tgz"
-  integrity sha512-cx5BXjHtpACa7Z51Vuqzy9BI4Z8Hnxz7vklhhrubkoB7mbctP/mR+Nh4B8eE5VtgFYJNHFwIltl96PuoctFCeQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    "@types/unist" "^2.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-table-pipe-alignment@^2.0.1:
   version "2.0.1"
@@ -17028,17 +16676,6 @@ remark-lint-table-pipe-alignment@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-table-pipe-alignment@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-table-pipe-alignment/-/remark-lint-table-pipe-alignment-3.1.1.tgz"
-  integrity sha512-WOHv2yL4ZwXHM06MIyQNnGFYKz9m2k/GFIA/6hpArF8Ph/3v8CF0J/Hb3Yyfg39e5nODw3D2G3okCO+xgyGQGA==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
-
 remark-lint-table-pipes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/remark-lint-table-pipes/-/remark-lint-table-pipes-3.0.0.tgz"
@@ -17048,17 +16685,6 @@ remark-lint-table-pipes@^3.0.0:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
-
-remark-lint-table-pipes@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/remark-lint-table-pipes/-/remark-lint-table-pipes-4.1.1.tgz"
-  integrity sha512-mJnB2FpjJTE4s9kE1JX8gcCjCFvtGPjzXUiQy0sbPHn2YM9EWG7kvFWYoqWK4w569CEQJyxZraEPltmhDjQTjg==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    unified "^10.0.0"
-    unified-lint-rule "^2.0.0"
-    unist-util-position "^4.0.0"
-    unist-util-visit "^4.0.0"
 
 remark-lint-unordered-list-marker-style@^2.0.1:
   version "2.0.1"
@@ -17070,7 +16696,7 @@ remark-lint-unordered-list-marker-style@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-unordered-list-marker-style@^3.0.0, remark-lint-unordered-list-marker-style@^3.1.0:
+remark-lint-unordered-list-marker-style@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/remark-lint-unordered-list-marker-style/-/remark-lint-unordered-list-marker-style-3.1.1.tgz"
   integrity sha512-JwH8oIDi9f5Z8cTQLimhJ/fkbPwI3OpNSifjYyObNNuc4PG4/NUoe5ZuD10uPmPYHZW+713RZ8S5ucVCkI8dDA==
@@ -17244,58 +16870,6 @@ remark-preset-github@^4.0.1:
     retext-english "^3.0.4"
     retext-preset-github "^0.0.6"
     unified "^9.2.0"
-
-remark-preset-lint-markdown-style-guide@^5.1.1:
-  version "5.1.2"
-  resolved "https://registry.npmjs.org/remark-preset-lint-markdown-style-guide/-/remark-preset-lint-markdown-style-guide-5.1.2.tgz"
-  integrity sha512-MIAhnz0wDOq/MqLucSaAPquKGFE2I5SxqRjgWT+ZGK7TmqTxrro53e11/Pc19xPX4evmzI5CZdvaRnIoxP3ysQ==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    remark-lint "^9.0.0"
-    remark-lint-blockquote-indentation "^3.0.0"
-    remark-lint-code-block-style "^3.0.0"
-    remark-lint-definition-case "^3.0.0"
-    remark-lint-definition-spacing "^3.0.0"
-    remark-lint-emphasis-marker "^3.0.0"
-    remark-lint-fenced-code-flag "^3.0.0"
-    remark-lint-fenced-code-marker "^3.0.0"
-    remark-lint-file-extension "^2.0.0"
-    remark-lint-final-definition "^3.0.0"
-    remark-lint-hard-break-spaces "^3.0.0"
-    remark-lint-heading-increment "^3.0.0"
-    remark-lint-heading-style "^3.0.0"
-    remark-lint-link-title-style "^3.0.0"
-    remark-lint-list-item-content-indent "^3.0.0"
-    remark-lint-list-item-indent "^3.0.0"
-    remark-lint-list-item-spacing "^4.0.0"
-    remark-lint-maximum-heading-length "^3.0.0"
-    remark-lint-maximum-line-length "^3.0.0"
-    remark-lint-no-blockquote-without-marker "^5.0.0"
-    remark-lint-no-consecutive-blank-lines "^4.0.0"
-    remark-lint-no-duplicate-headings "^3.0.0"
-    remark-lint-no-emphasis-as-heading "^3.0.0"
-    remark-lint-no-file-name-articles "^2.0.0"
-    remark-lint-no-file-name-consecutive-dashes "^2.0.0"
-    remark-lint-no-file-name-irregular-characters "^2.0.0"
-    remark-lint-no-file-name-mixed-case "^2.0.0"
-    remark-lint-no-file-name-outer-dashes "^2.0.0"
-    remark-lint-no-heading-punctuation "^3.0.0"
-    remark-lint-no-inline-padding "^4.0.0"
-    remark-lint-no-literal-urls "^3.0.0"
-    remark-lint-no-multiple-toplevel-headings "^3.0.0"
-    remark-lint-no-shell-dollars "^3.0.0"
-    remark-lint-no-shortcut-reference-image "^3.0.0"
-    remark-lint-no-shortcut-reference-link "^3.0.0"
-    remark-lint-no-table-indentation "^4.0.0"
-    remark-lint-ordered-list-marker-style "^3.0.0"
-    remark-lint-ordered-list-marker-value "^3.0.0"
-    remark-lint-rule-style "^3.0.0"
-    remark-lint-strong-marker "^3.0.0"
-    remark-lint-table-cell-padding "^4.0.0"
-    remark-lint-table-pipe-alignment "^3.0.0"
-    remark-lint-table-pipes "^4.0.0"
-    remark-lint-unordered-list-marker-style "^3.0.0"
-    unified "^10.0.0"
 
 remark-preset-lint-recommended@^5.0.0:
   version "5.0.0"
