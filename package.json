@@ -80,7 +80,6 @@
   "description": "Developer website for MaxMind",
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
-    "@types/airbnb-prop-types": "^2.13.1",
     "@types/broken-link-checker": "^0.7.0",
     "@types/dompurify": "^2.3.2",
     "@types/enzyme": "^3.10.8",

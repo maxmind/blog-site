@@ -2374,13 +2374,6 @@
   resolved "https://registry.npmjs.org/@turist/time/-/time-0.0.2.tgz"
   integrity sha512-qLOvfmlG2vCVw5fo/oz8WAZYlpe5a5OurgTj3diIxJCdjRHpapC+vQCz3er9LV79Vcat+DifBjeAhOAdmndtDQ==
 
-"@types/airbnb-prop-types@^2.13.1":
-  version "2.13.2"
-  resolved "https://registry.npmjs.org/@types/airbnb-prop-types/-/airbnb-prop-types-2.13.2.tgz"
-  integrity sha512-HwCshZ4EqcODNwCFVzmrcdf+XaP29XM6UoUQqGVThlp6ZnP0qxPgUbJhBi+xU4TQ5TT/1bxArr+tfrgmtho6AA==
-  dependencies:
-    "@types/prop-types" "*"
-
 "@types/archiver@^5.1.0":
   version "5.3.1"
   resolved "https://registry.npmjs.org/@types/archiver/-/archiver-5.3.1.tgz"
