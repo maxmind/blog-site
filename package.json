@@ -84,7 +84,6 @@
     "@types/dompurify": "^2.3.2",
     "@types/enzyme": "^3.10.8",
     "@types/jest-dev-server": "^5.0.0",
-    "@types/jsdom": "^16.2.14",
     "@types/lodash.debounce": "^4.0.6",
     "@types/lodash.isboolean": "^3.0.6",
     "@types/lodash.isnumber": "^3.0.6",
