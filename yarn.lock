@@ -16390,7 +16390,7 @@ remark-lint-list-item-indent@^3.0.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint-list-item-spacing@^4.0.0, remark-lint-list-item-spacing@^4.1.0:
+remark-lint-list-item-spacing@^4.0.0:
   version "4.1.1"
   resolved "https://registry.npmjs.org/remark-lint-list-item-spacing/-/remark-lint-list-item-spacing-4.1.1.tgz"
   integrity sha512-MqXmahPgYrvfA7SPqmcAC6fI40jIgXG33EeE/MhFvMLWh04k+fqGf2O2aH1KT664MlwM4oETbTI4xj3/KCIHZA==
