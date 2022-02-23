@@ -3414,21 +3414,6 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-airbnb-prop-types@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.npmjs.org/airbnb-prop-types/-/airbnb-prop-types-2.16.0.tgz"
-  integrity sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==
-  dependencies:
-    array.prototype.find "^2.1.1"
-    function.prototype.name "^1.1.2"
-    is-regex "^1.1.0"
-    object-is "^1.1.2"
-    object.assign "^4.1.0"
-    object.entries "^1.1.2"
-    prop-types "^15.7.2"
-    prop-types-exact "^1.2.0"
-    react-is "^16.13.1"
-
 ajv-keywords@^3.4.1, ajv-keywords@^3.5.2:
   version "3.5.2"
   resolved "https://registry.npmjs.org/ajv-keywords/-/ajv-keywords-3.5.2.tgz"
@@ -3749,15 +3734,6 @@ array.prototype.filter@^1.0.0:
     es-abstract "^1.19.0"
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.7"
-
-array.prototype.find@^2.1.1:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/array.prototype.find/-/array.prototype.find-2.1.2.tgz"
-  integrity sha512-00S1O4ewO95OmmJW7EesWfQlrCrLEL8kZ40w3+GkLX2yTt0m2ggcePPa2uHPJ9KUmJvwRq+lCV9bD8Yim23x/Q==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.3"
-    es-abstract "^1.19.0"
 
 array.prototype.flat@^1.2.3, array.prototype.flat@^1.2.5:
   version "1.2.5"
@@ -10676,7 +10652,7 @@ is-promise@^2.2.2:
   resolved "https://registry.npmjs.org/is-promise/-/is-promise-2.2.2.tgz"
   integrity sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
 
-is-regex@^1.0.5, is-regex@^1.1.0, is-regex@^1.1.4:
+is-regex@^1.0.5, is-regex@^1.1.4:
   version "1.1.4"
   resolved "https://registry.npmjs.org/is-regex/-/is-regex-1.1.4.tgz"
   integrity sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==
@@ -14366,7 +14342,7 @@ object.assign@^4.1.0, object.assign@^4.1.2:
     has-symbols "^1.0.1"
     object-keys "^1.1.1"
 
-object.entries@^1.1.1, object.entries@^1.1.2, object.entries@^1.1.5:
+object.entries@^1.1.1, object.entries@^1.1.5:
   version "1.1.5"
   resolved "https://registry.npmjs.org/object.entries/-/object.entries-1.1.5.tgz"
   integrity sha512-TyxmjUoZggd4OrrU1W66FMDG6CuqJxsFvymeyXI51+vQLN67zYfZseptRge703kKQdo4uccgAKebXFcRCzk4+g==
@@ -15777,15 +15753,6 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types-exact@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/prop-types-exact/-/prop-types-exact-1.2.0.tgz"
-  integrity sha512-K+Tk3Kd9V0odiXFP9fwDHUYRyvK3Nun3GVyPapSIs5OBkITAm15W0CPFD/YKTkMUAbc0b9CUwRQp2ybiBIq+eA==
-  dependencies:
-    has "^1.0.3"
-    object.assign "^4.1.0"
-    reflect.ownkeys "^0.2.0"
-
 prop-types@^15.6.1, prop-types@^15.7.0, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
@@ -16323,11 +16290,6 @@ redux@4.1.2:
   integrity sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==
   dependencies:
     "@babel/runtime" "^7.9.2"
-
-reflect.ownkeys@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/reflect.ownkeys/-/reflect.ownkeys-0.2.0.tgz"
-  integrity sha1-dJrO7H8/34tj+SegSAnpDFwLNGA=
 
 regenerate-unicode-properties@^9.0.0:
   version "9.0.0"
