@@ -16985,7 +16985,7 @@ remark-lint-strong-marker@^2.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-strong-marker@^3.0.0, remark-lint-strong-marker@^3.1.0:
+remark-lint-strong-marker@^3.0.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/remark-lint-strong-marker/-/remark-lint-strong-marker-3.1.1.tgz"
   integrity sha512-tX9Os2C48Hh8P8CouY4dcnAhGnR3trL+NCDqIvJvFDR9Rvm9yfNQaY2N4ZHWVY0iUicq9DpqEiJTgUsT8AGv/w==
