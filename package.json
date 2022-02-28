@@ -59,7 +59,7 @@
     "postcss": "^8.2.4",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^7.0.1",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.27.0",
     "promise-polyfill": "^8.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
