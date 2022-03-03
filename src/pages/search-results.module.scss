@@ -8,9 +8,10 @@
 }
 
 .wrapper {
-  margin: 0 var(--mm-spacing);
-  max-width: 960px;
+  margin: 0 auto;
+  max-width: var(--mm-max-width);
   min-height: 500px;
+  padding: 0 var(--mm-spacing);
 }
 
 .header {
