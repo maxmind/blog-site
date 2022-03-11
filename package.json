@@ -77,7 +77,7 @@
   },
   "description": "Developer website for MaxMind",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-parser": "^7.17.0",
     "@types/broken-link-checker": "^0.7.0",
     "@types/dompurify": "^2.3.2",
     "@types/enzyme": "^3.10.8",
