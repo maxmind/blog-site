@@ -8352,10 +8352,10 @@ gatsby-plugin-manifest@^4.3.0:
     semver "^7.3.5"
     sharp "^0.29.3"
 
-gatsby-plugin-mdx@^3.3.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.4.0.tgz"
-  integrity sha512-SJTIZsQ9lhjkd9GX1v4o1kzYPlu5LTWydHNdpddsP4w9U+dBLcKGXm4ee1PHWpwNL1Y8PeOhRQBUGhbLAbeXTA==
+gatsby-plugin-mdx@^3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.9.1.tgz#2603b8fd19c5835b9a60a9de4f3236c1e843cff2"
+  integrity sha512-oDm+KJ1VSD1dlPWrT0WLQdvtMYDDAcDMmKcTGDxfKxQGM+uktRgRdj4DevZjY6aFr50LWG3Lm+tM0/1Sj+BgZA==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/generator" "^7.15.4"
@@ -8373,7 +8373,7 @@ gatsby-plugin-mdx@^3.3.0:
     escape-string-regexp "^1.0.5"
     eval "^0.1.4"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.4.0"
+    gatsby-core-utils "^3.9.1"
     gray-matter "^4.0.2"
     json5 "^2.1.3"
     loader-utils "^1.4.0"
