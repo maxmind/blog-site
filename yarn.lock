@@ -2078,7 +2078,7 @@
   resolved "https://registry.npmjs.org/@mdn/browser-compat-data/-/browser-compat-data-3.3.14.tgz"
   integrity sha512-n2RC9d6XatVbWFdHLimzzUJxJ1KY8LdjqrW6YvGPiRmsHkhOUx74/Ct10x5Yo7bC/Jvqx7cDEW8IMPv/+vwEzA==
 
-"@mdx-js/mdx@2.0.0-next.8", "@mdx-js/mdx@^2.0.0-next.8":
+"@mdx-js/mdx@2.0.0-next.8", "@mdx-js/mdx@2.0.0-next.9":
   version "2.0.0-next.8"
   resolved "https://registry.npmjs.org/@mdx-js/mdx/-/mdx-2.0.0-next.8.tgz"
   integrity sha512-OT3bkvsA+rmqv378+UWFgeQuchaafhVgOO46+hc5U7KrGK3iPI2yGTcFwD3/KzSu+JGPCEUBREE96ncpvYqKjA==
@@ -2105,18 +2105,18 @@
     unist-builder "2.0.3"
     unist-util-visit "2.0.3"
 
-"@mdx-js/react@2.0.0-next.8", "@mdx-js/react@^2.0.0-next.8":
+"@mdx-js/react@2.0.0-next.8", "@mdx-js/react@2.0.0-next.9":
   version "2.0.0-next.8"
   resolved "https://registry.npmjs.org/@mdx-js/react/-/react-2.0.0-next.8.tgz"
   integrity sha512-I/ped8Wb1L4sUlumQmUlYQsH0tjd2Zj2eyCWbqgigpg+rtRlNFO9swkeyr0GY9hNZnwI8QOnJtNe+UdIZim8LQ==
 
-"@mdx-js/runtime@2.0.0-next.8":
-  version "2.0.0-next.8"
-  resolved "https://registry.npmjs.org/@mdx-js/runtime/-/runtime-2.0.0-next.8.tgz"
-  integrity sha512-W51pdm1NF5xjuHNYomKmK7ByiCvJ3rg6eGvvvGX8k3sUGZZbojBWxypamEiS25EX5Gt0FoDYxo6q0Yf9EmEs6Q==
+"@mdx-js/runtime@2.0.0-next.9":
+  version "2.0.0-next.9"
+  resolved "https://registry.yarnpkg.com/@mdx-js/runtime/-/runtime-2.0.0-next.9.tgz#9acea9d10f225ded9ef4175c9b9a5c6f6c48620b"
+  integrity sha512-a4vhOaq74T0ZZyAsENj1oNAvAZr1hg11QkTogFG40H9vVvehfTDM2/zOt5/zHegP6inWIngUZbI1YWyoM07H3w==
   dependencies:
-    "@mdx-js/mdx" "^2.0.0-next.8"
-    "@mdx-js/react" "^2.0.0-next.8"
+    "@mdx-js/mdx" "2.0.0-next.9"
+    "@mdx-js/react" "2.0.0-next.9"
     buble-jsx-only "^0.19.8"
 
 "@mdx-js/util@2.0.0-next.8", "@mdx-js/util@^2.0.0-next.8":
