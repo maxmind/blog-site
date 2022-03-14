@@ -205,7 +205,7 @@ jobs:
           key: ${{ needs.cache-keys.outputs.node-modules }}
 
       - name: Deploy all other Firebase resources
-        run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force
+        run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force --debug
 
   test-e2e:
     name: Test – End-to-end
