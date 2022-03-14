@@ -5,6 +5,7 @@ import Logo from '../../assets/svgs/maxmind-logo.svg';
 import useSystemStatus from '../../hooks/useSystemStatus';
 import Link from '../Link';
 import AccessibilityNav from './AccessibilityNav';
+import SearchBar from './SearchBar';
 
 import * as styles from './Header.module.scss';
 
@@ -63,16 +64,10 @@ const Header: React.FC<IHeader> = (props) => {
               Blog
             </span>
           </Link>
-          {/*
-
-          TODO - Impelement Google Search integration, if necessary
 
           <SearchBar
             className={styles.search}
           />
-
-          */}
-
 
           {/*
 

@@ -26,7 +26,7 @@ export interface ISearchResults {
 const endpoint =
   'https://www.googleapis.com/customsearch/v1/siterestrict?cx={cx}&key={key}';
 
-const cx = 'cde039a7678700a13';
+const cx = '5204c164979744d30';
 const key = 'AIzaSyAI4atAz3I5ujXCjoEXRvdwqcYn3AIsCA8';
 
 const url = endpoint

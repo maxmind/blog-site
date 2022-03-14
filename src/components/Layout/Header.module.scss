@@ -58,6 +58,8 @@
   grid-template-columns: max-content 1fr max-content;
   grid-template-rows: auto;
   height: calc(var(--page-header-height) - 10px);
+  margin: 0 auto;
+  max-width: var(--mm-max-width);
   padding: 0 var(--mm-spacing);
 }
 
@@ -130,10 +132,8 @@
 
 @include variables.breakpoint('lg') {
   .nav {
-    // grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
     margin: auto;
-    max-width: var(--mm-max-width);
   }
 
   .logo__svg {
@@ -152,9 +152,7 @@
 @include variables.breakpoint('xl') {
   .search {
     align-self: center;
-    display: flex;
     justify-self: center;
-    max-width: var(--mm-max-width);
     padding-left: var(--mm-spacing);
     width: calc(100% - var(--mm-layout-sidebar-width) - calc(var(--mm-spacing) * 2));
     width: 100%;
@@ -164,13 +162,6 @@
 @media only screen and (min-width: 1230px) {
   .search {
     max-width: 840px;
-  }
-}
-
-@include variables.breakpoint('xxl') {
-  .search {
-    justify-self: end;
-    width: calc(100% - var(--mm-layout-sidebar-width) + 60px);
   }
 }
 

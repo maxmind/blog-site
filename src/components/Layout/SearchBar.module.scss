@@ -5,26 +5,6 @@
   position: relative;
 }
 
-@include variables.breakpoint('lg') {
-  .searchbar {
-    display: inline-block;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: map-get(variables.$breakpoints, 'lg')) {
-  .searchbar__mobileOpen {
-    display: inline-block;
-    left: 0;
-    margin: 0 var(--mm-spacing);
-    position: absolute;
-    top: calc(50% + 5px);
-    transform: translateY(-50%);
-    width: calc(100% - (2 * var(--mm-spacing)));
-    z-index: 100;
-  }
-}
-
 .mag {
   color: var(--mm-color-primary-text);
   left: calc(var(--mm-spacing) / 2);
@@ -33,17 +13,23 @@
   transform: translateY(-50%);
 }
 
-.searchMobile {
+.searchbar__open {
+  display: inline-block;
+  left: calc(50% - 20px);
+  margin: 0 calc(var(--mm-spacing) / 2);
+  max-width: var(--mm-max-width);
+  position: absolute;
+  top: calc(50% + 5px);
+  transform: translate(-50%, -50%);
+  width: calc(100% - (2 * var(--mm-spacing)));
+  z-index: 100;
+}
+
+.search {
   position: relative;
 }
 
-@include variables.breakpoint('lg') {
-  .searchMobile {
-    display: none;
-  }
-}
-
-.mobileButton {
+.searchButton {
   @include variables.menu-button;
   float: right;
   margin-right: calc(var(--mm-spacing) / 4);

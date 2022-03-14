@@ -13,8 +13,8 @@ interface ISearchBar {
 
 const SearchBar: React.FC<ISearchBar> = (props) => {
   const [
-    isMobileOpen,
-    setIsMobileOpen,
+    isSearchOpen,
+    setIsSearchOpen,
   ] = useState(false);
 
   const [
@@ -24,8 +24,8 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const toggleMobileOpen = (): void => {
-    setIsMobileOpen(true);
+  const toggleSearchOpen = (): void => {
+    setIsSearchOpen(true);
     setTimeout(() => {
       inputRef.current?.focus();
     }, 1);
@@ -63,7 +63,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
         action="/search-results"
         className={classNames(
           styles.searchbar,
-          isMobileOpen && styles['searchbar__mobileOpen']
+          isSearchOpen && styles['searchbar__open']
         )}
         onSubmit={handleSubmit}
         role="search"
@@ -77,7 +77,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
           defaultValue={searchQuery}
           id="search"
           name='q'
-          onBlur={() => setIsMobileOpen(false)}
+          onBlur={() => setIsSearchOpen(false)}
           onChange={handleChange}
           placeholder="Search"
           ref={inputRef}
@@ -90,12 +90,12 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
         />
       </form>
       <div
-        className={styles.searchMobile}
+        className={styles.search}
       >
         <button
           aria-label="Show search bar"
-          className={styles.mobileButton}
-          onClick={toggleMobileOpen}
+          className={styles.searchButton}
+          onClick={toggleSearchOpen}
         >
           <FaSearch />
         </button>
