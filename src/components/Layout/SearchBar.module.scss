@@ -13,7 +13,7 @@
   transform: translateY(-50%);
 }
 
-.searchbar__mobileOpen {
+.searchbar__open {
   display: inline-block;
   left: calc(50% - 20px);
   margin: 0 calc(var(--mm-spacing) / 2);
@@ -25,11 +25,11 @@
   z-index: 100;
 }
 
-.searchMobile {
+.search {
   position: relative;
 }
 
-.mobileButton {
+.searchButton {
   @include variables.menu-button;
   float: right;
   margin-right: calc(var(--mm-spacing) / 4);
