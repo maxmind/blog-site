@@ -120,7 +120,7 @@
     "remark-lint-unordered-list-marker-style": "^3.1.0",
     "sass": "^1.32.4",
     "stylelint": "^14.1.0",
-    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-recommended": "^7.0.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-no-unsupported-browser-features": "^5.0.1",
     "stylelint-order": "^5.0.0",
