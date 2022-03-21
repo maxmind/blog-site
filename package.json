@@ -17,7 +17,7 @@
     "@types/mdx-js__react": "^1.5.3",
     "@types/node": "^17.0.21",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^17.0.40",
+    "@types/react": "^17.0.41",
     "@types/react-helmet": "^6.1.2",
     "cheerio": "^1.0.0-rc.5",
     "classnames": "^2.2.6",
