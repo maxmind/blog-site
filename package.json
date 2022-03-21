@@ -27,7 +27,7 @@
     "fontsource-montserrat": "^4.0.0",
     "fontsource-roboto": "^4.0.0",
     "fontsource-source-code-pro": "^4.0.0",
-    "gatsby": "^4.10.0",
+    "gatsby": "^4.10.1",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-feed": "^4.10.0",
     "gatsby-plugin-google-gtag": "^4.10.0",
