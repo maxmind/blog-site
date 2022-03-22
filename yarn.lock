@@ -8386,10 +8386,10 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-firebase-tools@^10.4.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-10.4.0.tgz#dbe42e890fb46395ca2ae7d658237ff511938bd6"
-  integrity sha512-a8YROv1QoRlzqkvhOyodcAMDTJdwNdfaT+yFJihovDcLsdTRjGKYWIwIUcC2+mK9YxuXwjya5fJg8/HNQ0jTmA==
+firebase-tools@^10.4.1:
+  version "10.4.1"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-10.4.1.tgz#173740f6a28ee7f6d7e088cbde6583ad3ce28a01"
+  integrity sha512-7IizmLZDd+FuKgeB5GNY0RfojMqzX/I37eGHZSy9tyvQnjqCHGaRp5ZEJiihBLJ+Nns4AP3lNEzqhiw2/I1NQQ==
   dependencies:
     "@google-cloud/pubsub" "^2.18.4"
     abort-controller "^3.0.0"
@@ -9089,7 +9089,7 @@ gatsby-plugin-typescript@^4.10.0, gatsby-plugin-typescript@^4.3.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.10.0"
 
-gatsby-plugin-utils@^3.4.0, gatsby-plugin-utils@^3.4.1:
+gatsby-plugin-utils@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.4.1.tgz#14c9cff75af32a32860575069af44bdabc8f65d9"
   integrity sha512-sDMVGauxMgXyX8WGZDndZI2vIaolJzlXBMdKhgP7DIT+Qa5wjvyHWvZy34dxtVrT3IHPK/PRMgpE81Gr7gKveg==
