@@ -62,6 +62,7 @@
     "prismjs": "^1.27.0",
     "promise-polyfill": "^8.2.3",
     "prop-types": "^15.7.2",
+    "puppeteer": "^13.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
