@@ -9,7 +9,7 @@ import useSystemStatus from '../../hooks/useSystemStatus';
 
 import * as styles from './Footer.module.scss';
 
-const Footer: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
+const Footer: React.FC<React.HTMLProps<HTMLElement>> = (props) => {
   const systemStatus = useSystemStatus();
 
   return (
