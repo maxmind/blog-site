@@ -67,6 +67,7 @@
     "react-helmet": "^6.1.0",
     "remark-external-links": "^8.0.0",
     "remark-frontmatter": "^4.0.1",
+    "remark-preset-github": "^4.0.1",
     "sass-loader": "^12.1.0",
     "slugify": "^1.6.5",
     "ts-node": "^10.7.0",
