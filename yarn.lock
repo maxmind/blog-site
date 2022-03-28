@@ -4616,7 +4616,7 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.10.0, babel-plugin-remove-graphql-queries@^4.10.1:
+babel-plugin-remove-graphql-queries@^4.10.1:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.10.1.tgz#09357b7afad1d1bf359d97701ba267bf968197f4"
   integrity sha512-1Irx5lUoQtU56u1hMtrgipjlRsUF4Pz6WDCDNVyTuvcHqlKHQK6pna4igHrdoWhSSgEcbimlxSy6tTvP6bkplg==
@@ -9164,7 +9164,7 @@ gatsby-source-filesystem@^4.10.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.10.0, gatsby-telemetry@^3.10.1:
+gatsby-telemetry@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.10.1.tgz#129c4309811cd9b2ba5e9d326ba47dddb59202ca"
   integrity sha512-935quI1YsQfzYREuvPLNKBb7IUE2vX9p7WoS7Dc9TbV2xDZPTAzeOfX+HE56ZltkxMi8Zivp7mqe5+n//WL7EQ==
@@ -15631,10 +15631,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
-  integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
+prettier@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.1.tgz#d472797e0d7461605c1609808e27b80c0f9cfe17"
+  integrity sha512-8UVbTBYGwN37Bs9LERmxCPjdvPxlEowx2urIL6urHzdb3SDq4B/Z6xLFCblrSnE4iKWcS6ziJ3aOYrc1kz/E2A==
 
 pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.6.0"
