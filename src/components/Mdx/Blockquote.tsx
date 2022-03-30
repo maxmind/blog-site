@@ -4,7 +4,7 @@ import React from 'react';
 
 import * as styles from './Blockquote.module.scss';
 
-const Blockquote: React.FC<React.HTMLProps<HTMLElement>> = ({
+const Blockquote: React.FC<React.HTMLProps<HTMLQuoteElement>> = ({
   className,
   ...props
 }) => (
