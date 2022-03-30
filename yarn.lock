@@ -4616,13 +4616,13 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.10.1:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.10.1.tgz#09357b7afad1d1bf359d97701ba267bf968197f4"
-  integrity sha512-1Irx5lUoQtU56u1hMtrgipjlRsUF4Pz6WDCDNVyTuvcHqlKHQK6pna4igHrdoWhSSgEcbimlxSy6tTvP6bkplg==
+babel-plugin-remove-graphql-queries@^4.10.1, babel-plugin-remove-graphql-queries@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.11.0.tgz#3911e99376fd03ab2a90efb9b23a25c0a2335e4c"
+  integrity sha512-e5zarZEx7CZLenV5vYA/v0Rcv0KevLUU47ggtP5jGFzuGujpBj9+alzW0ZwDQe4RqiXDQwedC0s8ZRvLjClOnA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.10.1"
+    gatsby-core-utils "^3.11.0"
 
 babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
@@ -9071,10 +9071,10 @@ gatsby-plugin-ts-checker@^1.1.0:
   dependencies:
     fork-ts-checker-webpack-plugin "^5.2.0"
 
-gatsby-plugin-typescript@^4.10.1, gatsby-plugin-typescript@^4.3.0:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.10.1.tgz#1d94532f4cd97677c38bda3b4d92a50b3856e11d"
-  integrity sha512-yQZYRAZwtj20OrvsF8+xr9V0Jew//3HghM1LKvCB58wECvwLW9SXHzema92JubirFOk7VrdeQfVe3u4jCYDDYw==
+gatsby-plugin-typescript@^4.10.1, gatsby-plugin-typescript@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.11.0.tgz#7f2c53dd96c16db86825f5eb9f062c701fe6c27e"
+  integrity sha512-Y1eAkGw2vTbRbmUfQdZyunAlpn2gztih0jnc3BRtpEnAZqG4R9kth0tg5/IZeN2QWmURFE9eo/Bi1ksQlgZzAg==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
@@ -9082,9 +9082,9 @@ gatsby-plugin-typescript@^4.10.1, gatsby-plugin-typescript@^4.3.0:
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
     "@babel/preset-typescript" "^7.15.0"
     "@babel/runtime" "^7.15.4"
-    babel-plugin-remove-graphql-queries "^4.10.1"
+    babel-plugin-remove-graphql-queries "^4.11.0"
 
-gatsby-plugin-utils@^3.4.1, gatsby-plugin-utils@^3.4.2, gatsby-plugin-utils@^3.5.0:
+gatsby-plugin-utils@^3.4.2, gatsby-plugin-utils@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.5.0.tgz#3d470726141051fc95afeccebb9649e4916a03ca"
   integrity sha512-049b5Gh0NazCWAtXvYbFQVS4gmlQqy5MX4/o44TRmzIFtUyPVKDmg9n2sAttHyDN61IogBXhmE4Y1y6dAE2QrA==
