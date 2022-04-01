@@ -9,6 +9,7 @@ import categoryQuery from '../../../templates/Category/query';
 import homeQuery from '../../../templates/Home/query';
 import postQuery from '../../../templates/Post/query';
 import tagQuery from '../../../templates/Tag/query';
+import { publishedDate } from '../../../utils/date';
 import { generateCategoryUrl, generateTagUrl } from '../../../utils/url';
 
 const createPagePath = (i: number) =>  i === 1 ? '/' : `/page/${i}`;
@@ -242,7 +243,7 @@ const queries = [
         `${featuredJsonPath}/featured-posts.json`,
         JSON.stringify(
           featured.map((node: IBaseQuery) => ({
-            date: new Date(node.frontmatter.date).toISOString(),
+            date: publishedDate(node.frontmatter.date).toISOString(),
             // eslint-disable-next-line max-len
             excerpt: selectExcerpt(node.frontmatter.description, node.excerpt),
             // eslint-disable-next-line max-len
