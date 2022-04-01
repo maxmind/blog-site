@@ -1,7 +1,7 @@
 import { GatsbyConfig } from 'gatsby';
 import remarkExternalLinks from 'remark-external-links';
 
-import { publishedDate } from '../../utils/date';
+import { generatePublishedDate } from '../../utils/date';
 const { GATSBY_URL = 'http://localhost:5000' } = process.env;
 
 /**
@@ -176,7 +176,7 @@ export default {
                       'content:encoded': node.excerpt,
                     },
                   ],
-                  date: publishedDate(node.frontmatter.date),
+                  date: generatePublishedDate(node.frontmatter.date),
                   guid: `${siteUrl}${node.fields.slug}`,
                   url: `${siteUrl}${node.fields.slug}`,
                 });

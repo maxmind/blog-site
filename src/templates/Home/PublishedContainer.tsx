@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-import { publishedDate } from '../../utils/date';
+import { generatePublishedDate } from '../../utils/date';
 import { IPost } from './query';
 
 import * as styles from './PublishedContainer.module.scss';
@@ -48,7 +48,7 @@ const PublishedContainer: React.FC<IPublishedContainer> = (props) => {
         <div
           className={styles.date}
         >
-          {publishedDate(date).toLocaleDateString('en-US', {
+          {generatePublishedDate(date).toLocaleDateString('en-US', {
             day: 'numeric',
             month: 'long',
             timeZone: 'America/New_York',
