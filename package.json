@@ -167,7 +167,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:gatsby": "gatsby clean && gatsby build && node ./bin/extract-inline-styles.mjs",
-    "build:firebase-config": "node firebase/index.js",
+    "build:firebase-config": "node firebase/index.cjs",
     "build:functions": "cd functions && yarn build",
     "deploy": "firebase deploy",
     "develop": "gatsby clean && GATSBY_URL=http://localhost:8000 gatsby develop",

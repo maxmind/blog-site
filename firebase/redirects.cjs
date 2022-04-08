@@ -1,4 +1,4 @@
-const rssFeedRedirect = require('./redirects/rss-feed');
+const rssFeedRedirect = require('./redirects/rss-feed.cjs');
 
 module.exports = [
   ...rssFeedRedirect,

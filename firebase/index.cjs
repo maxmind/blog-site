@@ -1,9 +1,9 @@
 const { existsSync, unlinkSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
 
-const headers = require('./headers');
-const redirects = require('./redirects');
-const rewrites = require('./rewrites');
+const headers = require('./headers.cjs');
+const redirects = require('./redirects.cjs');
+const rewrites = require('./rewrites.cjs');
 
 const worksWithOrWithoutTrailingSlash = redirect => {
   if (!redirect.source || redirect.source.endsWith('{,/}')) {
