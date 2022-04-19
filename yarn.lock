@@ -3245,10 +3245,10 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash.isboolean@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.isboolean/-/lodash.isboolean-3.0.6.tgz#f1f716792a72e8a806ac5a150ede55c5d2f25699"
-  integrity sha512-9ommZgIE6GlZW/GuSRIOSJP3X0FkOD2qqt8xBNqUVb/t4L62WiIGCPgIKK2PNfZem7bEZulM0djX9f8IG2Qg3Q==
+"@types/lodash.isboolean@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.isboolean/-/lodash.isboolean-3.0.7.tgz#7605221e0112d90cd36e59eca2902e6da7799d30"
+  integrity sha512-pQkjcu8A9aZPNLTxQ60zWI8Yqs1Qzd6ni8dhcax45oJgWWbiDcwEVAQDwxC+NucW337xhRMLxR1yh+Eb8R2YOQ==
   dependencies:
     "@types/lodash" "*"
 

@@ -87,7 +87,7 @@
     "@types/enzyme": "^3.10.12",
     "@types/jest-dev-server": "^5.0.0",
     "@types/lodash.debounce": "^4.0.6",
-    "@types/lodash.isboolean": "^3.0.6",
+    "@types/lodash.isboolean": "^3.0.7",
     "@types/lodash.isnumber": "^3.0.6",
     "@types/lodash.isplainobject": "^4.0.6",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
