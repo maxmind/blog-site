@@ -89,7 +89,7 @@
     "@types/lodash.debounce": "^4.0.6",
     "@types/lodash.isboolean": "^3.0.7",
     "@types/lodash.isnumber": "^3.0.6",
-    "@types/lodash.isplainobject": "^4.0.6",
+    "@types/lodash.isplainobject": "^4.0.7",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.19.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
