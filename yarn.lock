@@ -3238,10 +3238,10 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash.foreach@^4.5.6":
-  version "4.5.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.foreach/-/lodash.foreach-4.5.6.tgz#24735299139a739e436ab4fb8a6a31ca3d54bbb3"
-  integrity sha512-A8+157A+27zwJSstmW/eWPc9lHLJNEer4jiMlsyxWieBxEx0arwB9vgQm+iai6DEDYYQuufHrzVhQOiapCalQQ==
+"@types/lodash.foreach@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.foreach/-/lodash.foreach-4.5.7.tgz#9d731438e76744ad668977ac80eab1e902d284c7"
+  integrity sha512-YjBEB6/Bl19V+R70IpyB/MhMb2IvrSgD26maRNyqbGRNDTH9AnPrQoT+ECvhFJ/hwhQ+RgYWaZKvF+knCguMJw==
   dependencies:
     "@types/lodash" "*"
 
