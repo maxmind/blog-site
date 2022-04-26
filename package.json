@@ -91,7 +91,7 @@
     "@types/lodash.isnumber": "^3.0.6",
     "@types/lodash.isplainobject": "^4.0.7",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.19.0",
+    "@typescript-eslint/parser": "^5.21.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "babel-jest": "^27.5.1",
     "broken-link-checker": "^0.7.8",
