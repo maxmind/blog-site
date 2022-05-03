@@ -88,7 +88,7 @@
     "@types/jest-dev-server": "^5.0.0",
     "@types/lodash.debounce": "^4.0.7",
     "@types/lodash.isboolean": "^3.0.7",
-    "@types/lodash.isnumber": "^3.0.6",
+    "@types/lodash.isnumber": "^3.0.7",
     "@types/lodash.isplainobject": "^4.0.7",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
