@@ -3219,10 +3219,10 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash.findindex@^4.6.6":
-  version "4.6.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.findindex/-/lodash.findindex-4.6.6.tgz#36079decaaab8bcdcfb86cd5f3c0f20aca908691"
-  integrity sha512-quPh7tw70yhryaubH6wBvgIQgeU1PFjdoT4eaW6WCKzjIlxgImLKIv4bvJhMTUlRkMgf5VAfECKKXKuB8cexgw==
+"@types/lodash.findindex@^4.6.7":
+  version "4.6.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.findindex/-/lodash.findindex-4.6.7.tgz#1d3519cf56169fedf7288e4769e63ad58a5adb31"
+  integrity sha512-Rrcz/vl+yP0vl2vGiu2FCIeMNShoGTVMvG78o8oaxpg4oxwWuY0Pqz/itV3l/FhV6hPVAa3OmHYFQqy7FqSBWA==
   dependencies:
     "@types/lodash" "*"
 
