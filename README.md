@@ -70,10 +70,7 @@ yarn build && yarn serve
 ### Testing
 
 ```sh
-yarn test             # runs all tests
-yarn test:a11y        # runs accessibility tests
-yarn test:unit        # runs unit tests
-yarn test:regressions # runs regression tests
+yarn test        # runs unit tests
 ```
 
 ### Deployments

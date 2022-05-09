@@ -114,7 +114,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.0",
     "jest-dev-server": "^6.0.2",
-    "jest-enzyme": "^7.1.2",
+    "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^12.4.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
@@ -187,11 +187,7 @@
     "serve": "firebase emulators:start --only functions,hosting",
     "sitemap-query-string": "node ./bin/sitemap-query-string.js",
     "start": "yarn run develop",
-    "test": "run-s \"test:* --silent\"",
-    "test:unit": "jest --config .jestrc.js",
-    "test:e2e": "jest --config .jestrc.e2e.js",
-    "test:broken-links": "yarn test:e2e --verbose -t 'website has no broken links'",
-    "test:redirects": "yarn build:firebase-config && yarn test:e2e --verbose -t 'Static file redirects'"
+    "test": "jest --config .jestrc.js"
   },
   "version": "0.1.0"
 }

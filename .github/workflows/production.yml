@@ -100,7 +100,7 @@ jobs:
           key: ${{ needs.cache-keys.outputs.node-modules }}
 
       - name: Run unit tests
-        run: yarn test:unit
+        run: yarn test
 
   deploy-hosting:
     name: Deploy – Hosting
@@ -185,35 +185,3 @@ jobs:
 
       - name: Deploy all other Firebase resources
         run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force --debug
-
-  test-e2e:
-    name: Test – End-to-end
-    needs: [cache-keys, deploy-hosting, deploy-functions]
-    # Force this step to run after successful deployment jobs
-    if: |
-      always() &&
-      needs.deploy-hosting.result == 'success' &&
-      needs.deploy-functions.result == 'success'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check Out Repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Get cached dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            functions/node_modules
-          key: ${{ needs.cache-keys.outputs.node-modules }}
-
-      - name: Run end-to-end tests
-        env:
-          E2E_TARGET_URL: https://blog.maxmind.com
-        run: yarn test:e2e

@@ -101,7 +101,7 @@ jobs:
           key: ${{ needs.cache-keys.outputs.node-modules }}
 
       - name: Run unit tests
-        run: yarn test:unit
+        run: yarn test
 
   test-lint:
     name: Test – Lint
@@ -230,30 +230,3 @@ jobs:
 
       - name: Deploy all other Firebase resources
         run: yarn firebase deploy --except hosting --project ${{ env.FIREBASE_PROJECT_ID }} --force --debug
-
-  test-e2e:
-    name: Test – End-to-end
-    needs: [cache-keys, deploy-hosting, deploy-functions]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check Out Repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Get cached dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            functions/node_modules
-          key: ${{ needs.cache-keys.outputs.node-modules }}
-
-      - name: Run end-to-end tests
-        env:
-          E2E_TARGET_URL: ${{ needs.deploy-hosting.outputs.hosting-url }}
-        run: yarn test:e2e
