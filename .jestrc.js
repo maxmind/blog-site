@@ -14,13 +14,15 @@ module.exports = {
     './test/setup.ts',
   ],
   testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    url: 'http://localhost',
+  },
   testPathIgnorePatterns: [
     'node_modules',
     '\\.cache',
     '<rootDir>.*/public',
     '<rootDir>/test',
   ],
-  testURL: 'http://localhost',
   transform: {
     '^.+\\.[jt]s(x)?$': '<rootDir>/test/preprocess.js',
   },
