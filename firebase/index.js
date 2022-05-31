@@ -32,7 +32,7 @@ const config = {
       'package.json',
       'src',
       'tsconfig.json',
-      'yarn.lock',
+      'package-lock.json',
       '**/.*',
       '**/node_modules/**',
     ],
