@@ -46,7 +46,7 @@
     "gatsby-remark-images": "^6.15.0",
     "gatsby-source-filesystem": "^4.15.0",
     "gatsby-transformer-sharp": "^4.12.1",
-    "hast-util-from-dom": "^3.0.0",
+    "hast-util-from-dom": "^4.1.0",
     "intersection-observer": "^0.12.0",
     "lodash.debounce": "^4.0.8",
     "lodash.findindex": "^4.6.0",
