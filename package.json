@@ -65,7 +65,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "remark-external-links": "^8.0.0",
+    "remark-external-links": "^9.0.1",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^1.0.0",
     "remark-lint-first-heading-level": "^3.1.1",
