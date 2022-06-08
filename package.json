@@ -123,7 +123,7 @@
     "lint-staged": "^13.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
-    "remark-cli": "^9.0.0",
+    "remark-cli": "^10.0.1",
     "remark-lint-no-empty-url": "^3.1.0",
     "remark-lint-rule-style": "^3.1.0",
     "remark-lint-unordered-list-marker-style": "^3.1.0",
