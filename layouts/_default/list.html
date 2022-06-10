@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <div class="blog-posts__wrapper">
+    <div class="blog-posts">
+      <h1 class="posts__header">{{ .Title }}</h1>
+      {{ range .Paginator.Pages }}
+        {{ partial "post-list.html" . }}
+      {{ end }}
+    </div>
+  </div>
+  {{ partial "pagination" . }}
+{{ end }}
