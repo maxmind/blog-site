@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+
+  {{ $style := resources.Get "scss/index.scss" }}
+  {{ $options := dict "transpiler" "dartsass" }}
+  {{ $style := $style | resources.ToCSS $options}}
+
+  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}feed.xml" title="RSS Feed for blog.maxmind.com">
+
+  <script type="text/javascript" src="/js/google-search.js"></script>
+  <script type="text/javascript" src="/js/search.js"></script>
+  <script type="text/javascript" src="/js/system-status.js"></script>
+
+</head>

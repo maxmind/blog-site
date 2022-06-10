@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="search__results">
+    <header class="search__results-header">
+      <h1 class="search__results-heading">
+        Search results for
+      </h1>
+      <small class="search__results-count">results found</small>
+    </header>
+    <div class="search-results-list">
+      {{ range .Site.RegularPages }}
+        <article class="search__result-list-item">
+          <div class="search__result-title">
+            <a href="" class="search__result-link">
+              {{ .Title }}
+            </a>
+          </div>
+          <small class="search__result-url">
+            {{ .Permalink }}
+          </small>
+          <p class="search__result-description">
+            <span>
+              {{ .Date.Format "Jan 2, 2006" }}
+              <b>...</b>
+              {{ .Summary | safeHTML | truncate 200 }}
+            </span>
+          </p>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+  {{ partial "search-pagination" . }}
+{{ end }}
