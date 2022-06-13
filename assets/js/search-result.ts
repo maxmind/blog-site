@@ -1,7 +1,5 @@
 import GoogleSearch from './google-search';
 
-const searchForm = document.querySelector('#search__form');
-
 const handleFormSubmit = (event: any) => {
   event.preventDefault();
   console.log('hello');
@@ -13,5 +11,8 @@ const handleFormSubmit = (event: any) => {
   console.log(searchResults);
 }
 
-searchForm?.addEventListener('submit', handleFormSubmit);
+window.addEventListener('DOMContentLoaded', () => {
+  const searchForm = document.querySelector('#search__form');
+  searchForm?.addEventListener('submit', handleFormSubmit);
+});
 
