@@ -1,7 +1,7 @@
 interface IItems {
   cacheId: string;
-  htmlSnippet: string;
-  htmlTitle: string;
+  snippet: string;
+  title: string;
   link: string;
 }
 
@@ -35,7 +35,7 @@ const url = endpoint
 
 
 const GoogleSearch =
-  async (query: string, startIndex: number | null): Promise<ISearchResults> => {
+  async (query: string, startIndex: string | null): Promise<ISearchResults> => {
     let requestUrl = `${url}&q=${query}`;
 
     if (startIndex) {
