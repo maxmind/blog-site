@@ -25,7 +25,7 @@
   .search__results-heading {
     color: #00374c;
     font-family: var(--mm-font-stack-display);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2em;
     margin: 0;
     padding-top: var(--mm-spacing);
@@ -35,10 +35,6 @@
 
   .search__results-count {
     font-size: 14px;
-  }
-
-  p {
-    margin: 0;
   }
 
   a {
@@ -55,38 +51,32 @@
 .search__result-list-item {
   margin-bottom: calc(var(--mm-spacing) / 1.5);
 
-  .search__result-title {
-    margin: 0;
+}
 
-    a {
-      color: var(--mm-color-display-text);
-      display: inline-block;
-      font-size: 20px;
-      font-weight: 500;
-      margin-bottom: 3px;
-      text-decoration: none;
+a.search__result-title {
+  color: var(--mm-color-display-text);
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .search__result-url{
-    display: block;
-    font-size: 12px;
-    margin-bottom: 3px;
-  }
-
-  .search__result-description {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
 
-.search__results-promoted {
-  margin-bottom: var(--mm-spacing);
+.search__result-url{
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.search__result-description {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .search__result-heading {
@@ -98,5 +88,31 @@
   line-height: 1.2em;
   margin: var(--mm-spacing) 0 calc(var(--mm-spacing) / 2) 0;
   padding-top: var(--mm-spacing);
+}
+
+.search__pagination {
+  padding-bottom: calc(var(--mm-spacing) * 2);
+
+  a.search__next,
+  a.search__previous {
+    border-bottom: 2px dotted var(--mm-color-display-text);
+    color: var(--mm-color-display-text);
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid var(--mm-color-display-text) !important;
+    }
+  }
+
+  a.search__next {
+    display: none;
+    float: right;
+  }
+
+  a.search__previous {
+    display: none;
+    float: left;
+  }
 }
 
