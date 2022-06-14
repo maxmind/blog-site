@@ -15,23 +15,42 @@
 
 - **Static Site Generator**: [Hugo](https://gohugo.io/) +
   [TypeScript](https://www.typescriptlang.org/) +
-  [CSS Modules](https://github.com/css-modules/css-modules) +
   [MD](https://www.markdownguide.org/)
 - **Linting**: TBD
 - **Hosting**: [Cloudflare Pages](https://pages.cloudflare.com/)
 
 ## Usage
+
 - [Installation](#installation)
 - [Development](#development)
   - [Development Server](#development-server)
 
 ### Installation
 
-#### macOS and Linux
+#### Install Hugo
+
+##### Homebrew (macOS)
+
 ```sh
 brew install hugo
 ```
-Other OS: See [Hugo Installation](https://gohugo.io/getting-started/installing/)
+
+##### Linux
+
+```sh
+sudo apt-get install hugo
+```
+
+##### Other OS:
+
+See [Hugo Installation](https://gohugo.io/getting-started/installing/)
+
+#### Install Embedded Dart Sass
+
+Download [Embedded Dart Sass](https://github.com/sass/dart-sass-embedded/releases)
+and make sure it is in your `$PATH`. This is necessary for Hugo to process SASS
+and SCSS files. See the [Hugo documentation](https://gohugo.io/hugo-pipes/scss-sass/)
+for more information.
 
 ### Development
 
