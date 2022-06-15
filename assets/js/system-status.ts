@@ -1,12 +1,18 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const $headerStatus = document.querySelector('.header-system-status-container');
-  const $headerStatusMessage = document.querySelector('.header__status-message');
+  const $headerStatus =
+    document.querySelector('.header-system-status-container');
+  const $headerStatusMessage =
+    document.querySelector('.header__status-message');
 
   const $operationalIcons = document.querySelectorAll('.operational');
-  const $degradedPerformanceIcons = document.querySelectorAll('.degraded-performance');
-  const $partialServiceDisruptionIcons = document.querySelectorAll('.partial-service-disruption');
-  const $plannedMaintenanceIcons = document.querySelectorAll('.planned-maintenance');
-  const $serviceDisruptionIcons = document.querySelectorAll('.service-disruption');
+  const $degradedPerformanceIcons =
+    document.querySelectorAll('.degraded-performance');
+  const $partialServiceDisruptionIcons =
+    document.querySelectorAll('.partial-service-disruption');
+  const $plannedMaintenanceIcons =
+    document.querySelectorAll('.planned-maintenance');
+  const $serviceDisruptionIcons =
+    document.querySelectorAll('.service-disruption');
   const $securityEventIcons = document.querySelectorAll('.security-event');
   const $allSystemStatusIcons = document.querySelectorAll('.status-icon');
 
@@ -14,7 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const status = {
     DEGRADED_PERFORMANCE: {
       icons: $degradedPerformanceIcons,
-      message: 'Degraded Performance - We are currently experiencing degraded performance in some of our web services.',
+      message: 'Degraded Performance - We are currently experiencing ' +
+        'degraded performance in some of our web services.',
     },
     OPERATIONAL: {
       icons: $operationalIcons,
@@ -22,19 +29,23 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     PARTIAL_SERVICE_DISRUPTION: {
       icons: $partialServiceDisruptionIcons,
-      message: 'Partial Service Disruption - Some of our web services are temporarily unavailable.',
+      message: 'Partial Service Disruption - Some of our web services ' +
+        'are temporarily unavailable.',
     },
     PLANNED_MAINTENANCE: {
       icons: $plannedMaintenanceIcons,
-      message: 'Planned Maintenance - We are currently undergoing some scheduled maintenance.',
+      message: 'Planned Maintenance - We are currently undergoing some ' +
+       'scheduled maintenance.',
     },
     SECURITY_EVENT: {
       icons: $securityEventIcons,
-      message: 'Security Event - We are currently mitigating issues relating to some of our web services.',
+      message: 'Security Event - We are currently mitigating issues ' +
+        'relating to some of our web services.',
     },
     SERVICE_DISRUPTION: {
       icons: $serviceDisruptionIcons,
-      message: 'Service Disruption - Our web services are temporarily unavailable.',
+      message: 'Service Disruption - Our web services are temporarily ' +
+        'unavailable.',
     },
   };
 
@@ -45,9 +56,10 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // This should probably be cleaned up, but the operational icon appears on the
-    // page only once, whereas the other icons show twice. All are hidden on page load
-    // using display: none;.
+    // This should probably be cleaned up, but the
+    // operational icon appears on the
+    // page only once, whereas the other icons show twice.
+    // All are hidden on page load using display: none;.
 
     if ($icons.length > 1) {
       $headerStatus.classList.add('show-header-system-status');
@@ -68,24 +80,39 @@ window.addEventListener('DOMContentLoaded', () => {
       .then((json) => {
         const systemStatusCode = json.result.status_overall.status_code;
         switch (systemStatusCode) {
-          case 100:
-            setSystemStatus(status.OPERATIONAL.icons, status.OPERATIONAL.message);
-            break;
-          case 100:
-            setSystemStatus(status.PLANNED_MAINTENANCE.icons, status.PLANNED_MAINTENANCE.message);
-            break;
-          case 100:
-            setSystemStatus(status.DEGRADED_PERFORMANCE.icons, status.DEGRADED_PERFORMANCE.message);
-            break;
-          case 100:
-            setSystemStatus(status.PARTIAL_SERVICE_DISRUPTION.icons, status.PARTIAL_SERVICE_DISRUPTION.message);
-            break;
-          case 100:
-            setSystemStatus(status.SERVICE_DISRUPTION.icons, status.SERVICE_DISRUPTION.message);
-            break;
-          case 100:
-            setSystemStatus(status.SECURITY_EVENT.icons, status.SECURITY_EVENT.message);
-            break;
+        case 100:
+          setSystemStatus(status.OPERATIONAL.icons, status.OPERATIONAL.message);
+          break;
+        case 200:
+          setSystemStatus(
+            status.PLANNED_MAINTENANCE.icons,
+            status.PLANNED_MAINTENANCE.message
+          );
+          break;
+        case 300:
+          setSystemStatus(
+            status.DEGRADED_PERFORMANCE.icons,
+            status.DEGRADED_PERFORMANCE.message
+          );
+          break;
+        case 400:
+          setSystemStatus(
+            status.PARTIAL_SERVICE_DISRUPTION.icons,
+            status.PARTIAL_SERVICE_DISRUPTION.message
+          );
+          break;
+        case 500:
+          setSystemStatus(
+            status.SERVICE_DISRUPTION.icons,
+            status.SERVICE_DISRUPTION.message
+          );
+          break;
+        case 600:
+          setSystemStatus(
+            status.SECURITY_EVENT.icons,
+            status.SECURITY_EVENT.message
+          );
+          break;
         }
       })
       .catch(() => {

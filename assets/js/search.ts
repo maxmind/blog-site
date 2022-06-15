@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
   $searchBtn.addEventListener('click', () => {
     $searchBar.classList.add('searchbar__open');
     $searchBarInput.focus();
-  })
+  });
 
   const showSearchBar = () => {
     if ($searchBarInput === document.activeElement) {
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
       $searchBar.classList.remove('searchbar__open');
       $searchBtn.style.display = 'block';
     }
-  }
+  };
 
   document.body.addEventListener('click', showSearchBar);
-})
+});

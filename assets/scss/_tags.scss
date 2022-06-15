@@ -1,16 +1,15 @@
 .blog-post__tags {
   a {
-    border-bottom: none;
     background-color: var(--mm-color-sidebar);
     border-radius: var(--mm-border-radius);
     color: var(--mm-color-display-text);
     font-size: 12px;
-    padding: 3px 5px;
     margin: 20px 5px 5px 0;
+    padding: 3px 5px;
     text-decoration: none;
     transition: all 0.2s;
-    width: max-content;
     white-space: nowrap;
+    width: max-content;
 
     &:hover {
       background-color: var(--mm-color-display-text);

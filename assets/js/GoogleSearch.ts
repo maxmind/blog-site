@@ -1,8 +1,8 @@
 interface IItems {
   cacheId: string;
+  link: string;
   snippet: string;
   title: string;
-  link: string;
 }
 
 interface IQuery {
