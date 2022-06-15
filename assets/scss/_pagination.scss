@@ -1,20 +1,9 @@
 /***** Pagination *****/
 @use 'variables';
 
-.pagination__post {
-  .pagination__footer {
-    grid-template-areas:
-      'newer'
-      'older';
-    grid-template-columns: 1fr;
-    max-width: var(--mm-max-width);
-    padding: 0  0 var(--mm-spacing) 0;
-  }
-
-  .pagination__newer,
-  .pagination__older {
-    width: 85%;
-  }
+.pagination__arrow {
+  display: grid;
+  grid-area: arrow;
 }
 
 .pagination__footer {
@@ -29,6 +18,34 @@
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+.pagination__newer {
+  grid-area: newer;
+  grid-template-areas: 'arrow direction';
+  grid-template-columns: min-content 1fr;
+  justify-self: left;
+  padding-left: var(--mm-spacing);
+  right: 0;
+  text-align: left;
+
+  &:hover {
+    right: calc(var(--mm-spacing) / 2);
+  }
+}
+
+.pagination__older {
+  grid-area: older;
+  grid-template-areas: 'direction arrow';
+  grid-template-columns: 1fr min-content;
+  justify-self: right;
+  left: 0;
+  padding-right: var(--mm-spacing);
+  text-align: right;
+
+  &:hover {
+    left: calc(var(--mm-spacing) / 2);
   }
 }
 
@@ -55,37 +72,20 @@
   }
 }
 
-.pagination__newer {
-  grid-area: newer;
-  grid-template-areas: 'arrow direction';
-  grid-template-columns: min-content 1fr;
-  justify-self: left;
-  right: 0;
-  padding-left: var(--mm-spacing);
-  text-align: left;
-
-  &:hover {
-    right: calc(var(--mm-spacing) / 2);
+.pagination__post {
+  .pagination__footer {
+    grid-template-areas:
+      'newer'
+      'older';
+    grid-template-columns: 1fr;
+    max-width: var(--mm-max-width);
+    padding: 0  0 var(--mm-spacing) 0;
   }
-}
 
-.pagination__older {
-  grid-area: older;
-  grid-template-areas: 'direction arrow';
-  grid-template-columns: 1fr min-content;
-  justify-self: right;
-  left: 0;
-  padding-right: var(--mm-spacing);
-  text-align: right;
-
-  &:hover {
-    left: calc(var(--mm-spacing) / 2);
+  .pagination__newer,
+  .pagination__older {
+    width: 85%;
   }
-}
-
-.pagination__arrow {
-  display: grid;
-  grid-area: arrow;
 }
 
 .pagination__direction {

@@ -20,7 +20,7 @@ h1 {
   @include variables.heading;
   font-size: 28px;
   font-weight: 700;
-  margin: var(--mm-spacing) 0 0 ;
+  margin: var(--mm-spacing) 0 0;
   padding-top: var(--mm-spacing);
 }
 
@@ -84,7 +84,7 @@ hr {
   border-top: 1px dashed var(--mm-color-border);
   height: 0;
   margin: var(--mm-spacing) auto;
-  padding: 0!important;
+  padding: 0 !important;
   width: 200px;
 }
 

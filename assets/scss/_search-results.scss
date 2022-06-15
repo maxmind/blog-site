@@ -53,7 +53,7 @@
 
 }
 
-a.search__result-title {
+.search__result-title {
   color: var(--mm-color-display-text);
   display: inline-block;
   font-size: 20px;
@@ -67,7 +67,7 @@ a.search__result-title {
   }
 }
 
-.search__result-url{
+.search__result-url {
   display: block;
   font-size: 12px;
   margin-bottom: 3px;
@@ -93,8 +93,8 @@ a.search__result-title {
 .search__pagination {
   padding-bottom: calc(var(--mm-spacing) * 2);
 
-  a.search__next,
-  a.search__previous {
+  .search__next,
+  .search__previous {
     border-bottom: 2px dotted var(--mm-color-display-text);
     color: var(--mm-color-display-text);
     font-size: 18px;
@@ -105,12 +105,12 @@ a.search__result-title {
     }
   }
 
-  a.search__next {
+  .search__next {
     display: none;
     float: right;
   }
 
-  a.search__previous {
+  .search__previous {
     display: none;
     float: left;
   }

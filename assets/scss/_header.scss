@@ -20,16 +20,16 @@ $page-header-height: 80px;
   color: #c0d2e4;
   display: grid;
   font-size: 14px;
-  grid-gap: 10px;
   gap: 10px;
   grid-auto-flow: column;
+  grid-gap: 10px;
   justify-content: center;
   position: relative;
   z-index: 1;
 
   a {
     color: #fff;
-    }
+  }
 }
 
 .header {
