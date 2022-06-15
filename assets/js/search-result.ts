@@ -13,8 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const fetchResults = async () => {
     const results = await GoogleSearch(query, startIndex);
 
-    const searchNext = document.querySelector('.search__next');
-    const searchPrev = document.querySelector('.search__previous');
+    const searchNext = <HTMLLinkElement>document.querySelector('.search__next');
+    // eslint-disable-next-line max-len
+    const searchPrev = <HTMLLinkElement>document.querySelector('.search__previous');
 
     if (results.items) {
       resultsHeading.textContent = `Search results for ${query}`;
