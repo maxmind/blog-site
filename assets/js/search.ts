@@ -1,7 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const $searchBtn = document.querySelector('.search__button');
-  const $searchBar = document.querySelector('.searchbar');
-  const $searchBarInput = document.querySelector('.searchbar .input');
+  const $searchBtn =
+    <HTMLButtonElement>document.querySelector('.search__button');
+  const $searchBar =
+    <HTMLElement>document.querySelector('.searchbar');
+  const $searchBarInput =
+    <HTMLInputElement>document.querySelector('.searchbar .input');
 
   $searchBtn.addEventListener('click', () => {
     $searchBar.classList.add('searchbar__open');
