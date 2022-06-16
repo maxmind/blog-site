@@ -17,6 +17,8 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "markdownlint-cli": "^0.31.1",
     "npm-run-all": "^4.1.5",
     "remark-cli": "^10.0.1",
@@ -35,6 +37,20 @@
     "stylelint-order": "^5.0.0"
   },
   "license": "MIT",
+  "lint-staged": {
+    "**/*.json": [
+      "npm run fix:json"
+    ],
+    "./content/**/**/*.md": [
+      "npm run fix:content"
+    ],
+    "./assets/js/*.{js,ts}": [
+      "npm run fix:scripts"
+    ],
+    "./assets/scss/*.[s]css": [
+      "npm run fix:styles"
+    ]
+  },
   "name": "blog-site",
   "scripts": {
     "fix": "run-p fix:*",
