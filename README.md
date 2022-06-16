@@ -1,4 +1,4 @@
-<h3 align="center">
+<h2 align="center">
   <img
     alt="MaxMind"
     src="./assets/maxmind-logo.svg"
@@ -55,7 +55,7 @@ brew install hugo
 sudo apt-get install hugo
 ```
 
-##### Other OS:
+##### Other OS
 
 See [Hugo Installation](https://gohugo.io/getting-started/installing/)
 

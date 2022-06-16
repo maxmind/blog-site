@@ -20,6 +20,7 @@ review.
 This blog post investigates some high risk shipping addresses known to MaxMind,
 as well as provides some general fraud review tips for identifying them.
 
+<!--lint disable no-emphasis-as-heading-->
 **Where are the most high risk shipping addresses?**
 
 Let’s take a look at the current top ten zip codes with the most high risk
@@ -88,4 +89,5 @@ associated with a transaction. Leverage the data of the minFraud network to
 identify high risk addresses, stop shipments to fraudsters, and prevent
 chargebacks.
 
-\* _The equivalent data point in minFraud Insights is shipping\_address/is\_high\_risk._
+\* _The equivalent data point in minFraud Insights is
+shipping\_address/is\_high\_risk._

@@ -26,6 +26,7 @@ access Internet content generally.
 For details on our servers’ IPv6 address records, see the
 [web service release notes](https://dev.maxmind.com/release-note/adding-ipv6-access-for-web-endpoints/).
 
+<!--lint disable no-emphasis-as-heading-->
 **IP Address 101: What are IPv4 and IPv6? What does the transition from IPv4 to
 IPv6 mean?**
 

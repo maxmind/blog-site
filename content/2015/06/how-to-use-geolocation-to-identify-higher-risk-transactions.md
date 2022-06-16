@@ -34,6 +34,7 @@ What constitutes suspicious behavior will be specific to your business. However,
 there are some rules of thumb. As you review geolocation data associated with an
 order, ask yourself these questions:
 
+<!--lint disable no-emphasis-as-heading-->
 **Does the country of the IP address match the billing address country?**
 
 A mismatch indicates a higher risk of fraud. However, a cardholder on vacation

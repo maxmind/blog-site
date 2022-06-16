@@ -196,7 +196,7 @@ perl examples/01-getting-started.pl
 
 Your output should look something like:
 
-```null
+```shell
 users.mmdb has now been created
 ```
 
@@ -229,6 +229,7 @@ say np $record;
 
 ## Reading the File: Review
 
+<!--lint disable no-duplicate-headings -->
 ### Step 1
 
 Ensure that the user has provided an IP address via the command line.
@@ -281,7 +282,7 @@ perl examples/02-reader.pl 123.125.71.29
 
 Your output should look something like this:
 
-```null
+```shell
 vagrant@precise64:/vagrant$ perl examples/02-reader.pl 123.125.71.29
 Description: My database of IP data
 \ {
@@ -298,7 +299,7 @@ Description: My database of IP data
 We see that our `description` and our `Hash` of user data is returned exactly as
 we initially provided it. But what about Klaus, is he also in the database?
 
-```null
+```shell
 vagrant@precise64:/vagrant$ perl examples/02-reader.pl 8.8.8.0
 Description: My database of IP data
 \ {
@@ -378,7 +379,7 @@ today.)
 We've appropriately named the three arguments which are passed to the callback,
 so there's not much more to say about them. Let's look at the output.
 
-```null
+```shell
 vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
 8.8.8.0/28
 \ {
@@ -528,7 +529,7 @@ say "$filename has now been created";
 Now, when we iterate over the search tree, we'll see that the data has been
 augmented with the new fields.
 
-```null
+```shell
 vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
 8.8.8.0/28
 \ {
@@ -650,7 +651,7 @@ Next we add new keys to `Hash`. The new keys are `country`, `city` and
 
 Now, let's see what we get.
 
-```null
+```shell
 vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
 8.8.8.0/28
 \ {

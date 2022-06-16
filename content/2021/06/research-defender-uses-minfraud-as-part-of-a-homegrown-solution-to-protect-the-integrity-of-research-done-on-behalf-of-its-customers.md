@@ -41,8 +41,8 @@ detection solution would be part of the foundation of Research Defender’s
 success.
 
 > “When you use multiple services for fraud prevention, you want the ones that
-> make up the foundation of your system to be stable, dependable, usable. minFraud
-> is a really stable part of our foundation.”
+> make up the foundation of your system to be stable, dependable, usable.
+> minFraud is a really stable part of our foundation.”
 
 Research Defender uses a number of fraud detection services, along with
 homegrown machine learning, to prevent fraudulent responses . Research Defender

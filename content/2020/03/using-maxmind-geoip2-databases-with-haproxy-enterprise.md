@@ -43,7 +43,7 @@ Within your HAProxy configuration, you choose which GeoIP2 databases to query.
 For example, the following snippet shows how to load the module and the GeoIP2
 City and ISP databases:
 
-```
+```bash
 global
 module-path /opt/hapee-1.9/modules
 module-load hapee-lb-maxmind.so
@@ -55,7 +55,7 @@ HAProxy Enterprise makes it easy to keep these databases up to date. Use the
 update URL at a defined interval and replace the contents of the databases.
 Here's an example:
 
-```
+```bash
 maxmind-update url CITY http://localhost:8000/geoip/GeoIP2-City.mmdb url ISP http://localhost:8000/geoip/GeoIP2-ISP.mmdb
 ```
 
@@ -64,7 +64,7 @@ and countries. Use the `http-request add-header` directive to add a custom HTTP
 request header before the message is forwarded to your backend servers. Here's
 an example:
 
-```
+```bash
 listen www_proxy
 bind :80
 mode http

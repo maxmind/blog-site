@@ -32,7 +32,7 @@ If you don't need any of the MaxMind data, but you still want to create a fast,
 consult this example code showing [how to create an MMDB file from
 scratch](https://github.com/maxmind/mmdbwriter/blob/main/examples/asn-writer/main.go).
 
-### Prerequisites
+## Prerequisites
 
 - you must have [`git`](https://git-scm.com/downloads) installed in order to
 clone the code and install the dependencies, and it must be in your `$PATH`
@@ -95,6 +95,8 @@ code](https://github.com/maxmind/mmdb-from-go-blogpost/blob/main/main.go) that
 makes use of the MaxMind
 [`mmdbwriter`](https://pkg.go.dev/github.com/maxmind/mmdbwriter) Go module to:
 
+<!--lint disable list-item-content-indent-->
+<!--lint disable ordered-list-marker-value-->
 1. Load the GeoLite2 Country MaxMind DB.
     - We will take a pathname to the MMDB file and call
     [`mmdbwriter.Load()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Load)

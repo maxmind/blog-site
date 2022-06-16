@@ -34,6 +34,7 @@ in their control environment that result from new trends that we’ve observed
 while monitoring the methods that criminals are deploying to prevent merchants
 from accurately detecting high risk proxy servers.
 
+<!--lint disable no-emphasis-as-heading-->
 **Mark Your Calendar!** March 20, 2014 3:05 - 4:05 pm PT Aria Resort, Las Vegas
 
 We hope to see you at the Presentation or just stop by booth #1143 and say,

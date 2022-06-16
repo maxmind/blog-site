@@ -19,7 +19,7 @@ masquerading as a valued and trusted customer.
 In this blog post, we will provide you with information on what account takeover
 is, and how to combat it.
 
-### **Account Takeover**
+## **Account Takeover**
 
 As the term suggests, account takeover is a type of fraud attack where a
 fraudster gains access to a good customer’s account. The takeover can occur in a
@@ -41,7 +41,7 @@ of attack. Account takeover is no small problem for online merchants, with
 losses in 2016 [estimated to be $2.3
 billion](https://www.javelinstrategy.com/press-release/identity-fraud-hits-record-high-154-million-us-victims-2016-16-percent-according-new).
 
-### **Friendly Fire?**
+## **Friendly Fire?**
 
 Seeing as an account takeover scenario allows a fraudster to appear as a
 legitimate customer, you may believe chargebacks initiated by the true
@@ -59,7 +59,7 @@ If you confuse account takeover with friendly fraud, you may dispute a
 chargeback only to find it is a legitimate chargeback after you’ve already spent
 time and resources in the dispute process.
 
-### **What Do I Do?**
+## **What Do I Do?**
 
 Typical signs of account takeover include a change in email address, shipping
 address and password, and perhaps a sudden change in buying patterns. Using

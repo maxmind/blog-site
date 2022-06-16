@@ -43,6 +43,7 @@ Perry Toone, CEO at Thexyz.
 
 MaxMind’s minFraud service fit the bill.
 
+<!--lint disable no-emphasis-as-heading-->
 **How did MaxMind help?**
 
 Integrating the minFraud service with WHMCS had an immediate impact. Orders with

@@ -40,6 +40,7 @@ app for Elastic APM automatically creates maps based on monitoring data:
 But what if you want to take this one step further and create maps with
 different regions?
 
+<!--lint disable no-heading-punctuation-->
 ## Custom regions: metro area, proximity to IKEA, anything...
 
 Elastic Maps come with a lot of great region options so you can get started
@@ -61,6 +62,7 @@ example, say you want to spin up a marketing campaign based on the locations of
 your users or show executive stakeholders which metro areas you see are
 experiencing an uptick of traffic.
 
+<!--lint disable no-emphasis-as-heading-->
 _GeoIP databases contain latitude and longitude coordinates located near the
 center of the region or subdivision in which the IP address is located. If you
 rely on longitude and latitude data from IP geolocation, this may sometimes give
@@ -166,7 +168,11 @@ Run the following from Dev Tools in Kibana:
 // POST /_enrich/policy/csa_lookup/_execute
 ```
 
-This creates an enrich policy called `csa_lookup`. It uses the `coordinates` field which contains the shapes (it has a `geo_shape` field-type). The policy will enrich other documents with the `GEOID` and `NAME` fields. It also automatically attaches the `coordinates` field. The `_execute` call is required for initializing the policy.
+This creates an enrich policy called `csa_lookup`. It uses the `coordinates`
+field which contains the shapes (it has a `geo_shape` field-type). The
+policy will enrich other documents with the `GEOID` and `NAME` fields. It also
+automatically attaches the `coordinates` field. The `_execute` call is required
+for initializing the policy.
 
 Then we’ll integrate this reverse-geocoder into a pipeline.
 
@@ -199,14 +205,20 @@ Then we’ll integrate this reverse-geocoder into a pipeline.
 
 Our pipeline consists of two processors:
 
-1. The first is the `enrich` processor we just created. It references our `csa_lookup` policy. It creates a new field `csa` that contains the CSA identifiers (GEOID, NAME) and the CSA geometry (coordinates).
-2. The second is a `remove` processor that removes the CSA geometry field. (We don’t need it since we are only interested in the identifiers).
+<!--lint disable ordered-list-marker-value-->
+1. The first is the `enrich` processor we just created. It references our
+`csa_lookup` policy. It creates a new field `csa` that contains the CSA
+identifiers (GEOID, NAME) and the CSA geometry (coordinates).
+2. The second is a `remove` processor that removes the CSA geometry field.
+(We don’t need it since we are only interested in the identifiers).
 
 ### Step 4: Running the pipeline on all your documents
 
-Now that the pipeline is created, we can start using it. And a great thing about pipelines is **you can run them on your existing data**.
+Now that the pipeline is created, we can start using it. And a great thing about
+pipelines is **you can run them on your existing data**.
 
-With [\_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-reindex.html#reindex-with-an-ingest-pipeline), you can create a new index with a copy of your newly enriched documents:
+With [\_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-reindex.html#reindex-with-an-ingest-pipeline),
+you can create a new index with a copy of your newly enriched documents:
 
 ```json
 // POST \_reindex
@@ -221,7 +233,8 @@ With [\_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/do
 }
 ```
 
-With [\_update\_by\_query](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-update-by-query.html#docs-update-by-query-api-ingest-pipeline), all the documents are enriched in place:
+With [\_update\_by\_query](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-update-by-query.html#docs-update-by-query-api-ingest-pipeline),
+all the documents are enriched in place:
 
 ```json
 // POST kibana\_sample\_data\_logs/\_update\_by\_query?pipeline=lonlat-to-csa
@@ -229,7 +242,8 @@ With [\_update\_by\_query](https://www.elastic.co/guide/en/elasticsearch/referen
 
 ### Step 5: Running the pipeline on new documents at ingest
 
-All the existing docs are updated. Now we need to make sure we also use this pipeline when indexing new documents:
+All the existing docs are updated. Now we need to make sure we also use this
+pipeline when indexing new documents:
 
 ```json
 // POST kibana\_sample\_data\_logs/\_doc/testdoc?pipeline=lonlat-to-csa
@@ -249,7 +263,8 @@ Let's test it out:
 // GET kibana_sample_data_logs/_doc/testdoc
 ```
 
-You can also setup a default pipeline to have this reverse geocoding done for each incoming document by default:
+You can also setup a default pipeline to have this reverse geocoding done for
+each incoming document by default:
 
 ```json
 // PUT kibana_sample_data_logs/_settings

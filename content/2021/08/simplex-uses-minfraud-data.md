@@ -21,10 +21,11 @@ responsive algorithm at the heart of their fraud detection and prevention
 solutions. Simplex Data Analyst Talor Kars works closely with that algorithm.
 
 > “In the crypto market, everything changes quickly. Without an adaptive risk
-> model, we would have to rely on a strict rule-based system. We might use simple
-> IP geolocation and look at the distances involved in the transaction, or rely
-> solely on one risk score. If we had to update these rules manually in response
-> to emerging trends, our workflow would be very slow and inefficient.”
+> model, we would have to rely on a strict rule-based system. We might
+> use simple IP geolocation and look at the distances involved in the
+> transaction, or rely solely on one risk score. If we had to update
+> these rules manually in response to emerging trends, our workflow
+> would be very slow and inefficient.”
 
 For the analysts who work on Simplex’s fraud detection algorithm, data is key to
 a responsive algorithm. They decided to implement minFraud because, in addition

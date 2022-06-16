@@ -73,6 +73,7 @@ See the section below for steps on how to migrate to the new download mechanism.
 
 ### Steps for Migration
 
+<!--lint disable ordered-list-marker-value-->
 1. [Sign up for a MaxMind account](https://www.maxmind.com/en/geolite2/signup)
 (no purchase required)
 2. Set your password and create a [license
