@@ -36,6 +36,9 @@
     "stylelint-no-unsupported-browser-features": "^5.0.3",
     "stylelint-order": "^5.0.0"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "license": "MIT",
   "lint-staged": {
     "**/*.json": [
