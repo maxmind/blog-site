@@ -70,6 +70,7 @@ and process. Once she confirmed her theory was correct, Jenn created a custom
 rule so that the company’s fraud system automatically rejected these
 transactions without any manual review cycles.
 
+<!--lint disable no-emphasis-as-heading-->
 **Case Study Takeaway**
 
 Take existing order reports and compare them to known fraud or chargeback data.

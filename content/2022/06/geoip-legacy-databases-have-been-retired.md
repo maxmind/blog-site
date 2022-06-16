@@ -57,7 +57,8 @@ announcing these changes](/2020/06/data-changes-to-geoip-legacy-and-minfraud-leg
 
 ## Thank you for 20 years of GeoIP
 
-We look forward to continuing to serve our customers with industry-leading IP intelligence data and tools under the GeoIP brand for another twenty years!
+We look forward to continuing to serve our customers with industry-leading IP
+intelligence data and tools under the GeoIP brand for another twenty years!
 
 [Check out our GeoIP2 databases to see what’s on
 offer!](https://www.maxmind.com/en/geoip2-databases)

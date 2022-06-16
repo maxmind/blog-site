@@ -14,8 +14,8 @@ MaxMind and Dosh will be presenting at the Merchant Risk Council’s annual frau
 prevention conference, MRC Vegas, on Tuesday, March 19, from 4:15pm – 5pm. Read
 on below for the details and what you’ll take away from the session.
 
-## **Squad Goals: How to Prevent Referral Program Abuse and Ensure Your
-Customer-Referrers Are Your BFFs**
+<!--lint disable maximum-heading-length-->
+## Squad Goals: How to Prevent Referral Program Abuse and Ensure Your Customer-Referrers Are Your BFFs
 
 **When:** Tuesday, March 19, 4:15pm – 5:00pm PT
 **Where:** MRC Vegas 2019, Aria Resort, Las Vegas
@@ -33,6 +33,8 @@ millions of customers. In this session, you will learn about the economics of
 consumer referral programs and how to keep abusers out with the power of data.
 
 **Takeaways**
+
+<!--lint disable ordered-list-marker-value-->
 
 1. Differentiate between different types of consumer affiliate program abuse;
 2. Understand the economics of consumer affiliate program abuse and learn how to

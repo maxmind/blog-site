@@ -39,10 +39,10 @@ build applications that don’t perform their intended task.
 This post will look at how to use MaxMind’s mappable IP geolocation area
 alongside other tools by looking at an example use case. Below, you will find:
 
- - an overview of our example use case,
- - a discussion of other tools that should be used alongside IP geolocation
+- an overview of our example use case,
+- a discussion of other tools that should be used alongside IP geolocation
  lookups,
- - and how to work with MaxMind’s mappable IP geolocation area (accuracy radius)
+- and how to work with MaxMind’s mappable IP geolocation area (accuracy radius)
  instead of a geolocation point.
 
 This guide will cover how data may be used, but will not cover a technical
@@ -218,8 +218,9 @@ geolocation as an area rather than a point has implications for many other
 applications.
 
 You can learn more about IP geolocation by reading:
- - How accurate is IP geolocation data? on the MaxMind blog
- - [Geolocation Accuracy](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)
+
+- How accurate is IP geolocation data? on the MaxMind blog
+- [Geolocation Accuracy](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)
  on the MaxMind Knowledge Base
- - [Documentation on mappable area data](https://support.maxmind.com/hc/en-us/articles/4414877149467-IP-Geolocation-Data#h_01FRRHZZP6RAYSNZTYE4MQ3MWY)
+- [Documentation on mappable area data](https://support.maxmind.com/hc/en-us/articles/4414877149467-IP-Geolocation-Data#h_01FRRHZZP6RAYSNZTYE4MQ3MWY)
  on the MaxMind Knowledge Base

@@ -41,7 +41,7 @@ possible._
 
 * * *
 
-## **Important MRC Vegas Update:**
+## **Important MRC Vegas Update**
 
 We have just added a Demo Theater stage presentation by Mark Sulham, our
 Business Development Manager, on Wednesday, March 21, at 11:15. Mark will be

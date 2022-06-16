@@ -16,14 +16,15 @@ MRC Vegas 2018 is March 19 - 22 at the Aria Resort and Casino, and MaxMind has
 some great events scheduled to help you connect with us throughout the
 conference.
 
-### **Here's how you can connect with us at MRC Vegas:**
+## **Here's how you can connect with us at MRC Vegas**
 
 - **Teach Me How to Say Goodbye... to ATO!** - A speech hosted by MaxMind's
 Jenn Sessler and Shopify's Will Mowat on Tuesday, March 20, from 2:15 - 3pm in
 the Pinyon 2 conference room. Learn what geolocation and other transactional
 data can do to help you understand the context of an account takeover in order
 to identify suspicious activity and make better decisions while providing your
-good customers with the best experience possible.                                                                                                                                           [**Read More >>**](https://blog.maxmind.com/2018/01/24/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas/#more-359)
+good customers with the best experience possible.
+[**Read More >>**](https://blog.maxmind.com/2018/01/24/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas/#more-359)
 
 * * *
 

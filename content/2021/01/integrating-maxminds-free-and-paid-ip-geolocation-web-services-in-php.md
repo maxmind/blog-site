@@ -58,15 +58,15 @@ used in this code. This requires `git` to be installed.
 - [Composer](https://getcomposer.org/) must be installed. Composer will help you
 manage the dependencies required to integrate with GeoLite2.
 - A free MaxMind GeoLite2 account with a license key is required.
-    - If you already have a MaxMind account and have signed up for GeoLite2, you
-    can generate a new license key
-    [here](https://www.maxmind.com/en/accounts/current/license-key) (login
-    required) or use your existing one.
-    - If you have a MaxMind account but haven't signed up for GeoLite2, you can
-    do so [here](https://www.maxmind.com/en/accounts/current/geolite2/eula)
-    (login required).
-    - If you don't have a MaxMind GeoLite2 account, you can sign up for one
-    [here](https://www.maxmind.com/en/geolite2/signup).
+  - If you already have a MaxMind account and have signed up for GeoLite2, you
+  can generate a new license key
+  [here](https://www.maxmind.com/en/accounts/current/license-key) (login
+  required) or use your existing one.
+  - If you have a MaxMind account but haven't signed up for GeoLite2, you can
+  do so [here](https://www.maxmind.com/en/accounts/current/geolite2/eula)
+  (login required).
+  - If you don't have a MaxMind GeoLite2 account, you can sign up for one
+  [here](https://www.maxmind.com/en/geolite2/signup).
 
 ## Using Docker or Vagrant
 

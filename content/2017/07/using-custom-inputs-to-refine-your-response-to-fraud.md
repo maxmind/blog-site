@@ -25,7 +25,7 @@ stopping their ever-evolving tactics, you first have to look at what the
 transactional evidence is telling you. And each transaction may require a
 different analysis and approach.
 
-### **Introducing Custom Inputs**
+## **Introducing Custom Inputs**
 
 minFraud Score, minFraud Insights, and minFraud Factors customers can now use
 Custom Inputs to create Custom Rules that are fine-tuned by YOU to identify
@@ -46,7 +46,7 @@ Custom Inputs can help you...
 We currently support Custom Inputs using the following data types: **string,
 Boolean, number, and phone number**.
 
-### **Custom Inputs and Loyalty Program Fraud**
+## **Custom Inputs and Loyalty Program Fraud**
 
 Let’s consider how you can use Custom Inputs to help prevent a type of fraud
 that’s becoming increasingly popular with cybercriminals:

@@ -21,6 +21,7 @@ There are times though when such activity is expected and flagging such
 transactions as fraudulent would mean denying good orders and frustrating
 customers.
 
+<!--lint disable no-emphasis-as-heading-->
 **When to expect multiple different users on an IP address**
 
 There are many cases where one should expect many different users of an IP

@@ -10,7 +10,8 @@ authors:
   - "The Team at MaxMind"
 ---
 
-#### Important Update April 11, 2018.
+## Important Update April 11, 2018
+
 [Latitude and Longitude Will Remain in the GeoLite2
 Databases.](https://blog.maxmind.com/2018/04/11/we-are-listening-latitude-and-longitude-will-remain-in-geolite2-databases/)
 

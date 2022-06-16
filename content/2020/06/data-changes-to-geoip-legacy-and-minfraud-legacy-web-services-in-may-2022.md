@@ -39,6 +39,7 @@ data changes below will not disrupt your existing workflows.
 
 ## Data changes
 
+<!--lint disable ordered-list-marker-value -->
 1. **Region codes:**
 The legacy web services historically returned region codes in the FIPS 10-4
 standard (for all countries except for the US and Canada). At the end of May

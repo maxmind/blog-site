@@ -38,6 +38,7 @@ We’ll keep this brief: _why should you use the GeoLite2 web service?_
     require a subscription or commitment. You can pay as you go and service
     credits don’t expire.
 
+<!--lint disable no-emphasis-as-heading-->
 **To sign up for GeoLite2, head over to our [GeoLite2
 page](https://dev.maxmind.com/geoip/geoip2/geolite2/).**
 

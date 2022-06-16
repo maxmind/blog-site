@@ -11,10 +11,11 @@ authors:
   - "Christopher Luna"
 ---
 
-### Leveraging the strengths and understanding the limits of IP geolocation, the
+Leveraging the strengths and understanding the limits of IP geolocation, the
 Rescue Lab plays a critical role in rescuing children from online sexual
 exploitation crimes.
 
+<!--lint disable no-emphasis-as-heading-->
 **Warning: The following article discusses child sexual abuse and may be
 disturbing to some readers.**
 
@@ -35,7 +36,7 @@ investigations into geographical jurisdictions, the cases are unmanageable.
 Figuring which of these offenders may be in your area would be like looking for
 a needle in a haystack.
 
-### “What do you do with an IP address if you don’t have MaxMind?”
+## “What do you do with an IP address if you don’t have MaxMind?”
 
 Prior to the Rescue Lab’s involvement, the process was inefficient. If a law
 enforcement agency received a tip about child sexual abuse materials being
@@ -69,7 +70,7 @@ measure the rise of mobile networks in these crimes. This research has helped to
 inform policy and the strategies law enforcement agencies take to protect
 children and rescue them from abuse.
 
-### “We’ve always known about the limitations of IP geolocation.”
+## “We’ve always known about the limitations of IP geolocation.”
 
 As powerful a tool as IP geolocation is, it is critical to use the tool
 correctly, and the Rescue Lab is keenly aware of its limitations. “We’ve always

@@ -47,6 +47,7 @@ for something like the latitude and longitude of the end-user.
 
 ![accuracy radius](/images/2021/07/Accuracy-Radius.png)
 
+<!--lint disable no-emphasis-as-heading-->
 _All of our IP geolocation data comes with an accuracy radius field. The actual
 geolocation of the IP address is likely within the circle with its center at the
 geolocation coordinates and a radius equal to the accuracy radius field. While

@@ -9,6 +9,7 @@ authors:
   - "Miguel Atienza"
 ---
 
+<!--lint disable no-emphasis-as-heading-->
 **If the databases you use begin with `GeoIP2-` then the following is not
 applicable to you and can be ignored. This would most likely be true if you
 started using MaxMind databases after October 2017 and did not request access to

@@ -22,11 +22,11 @@ the advantages of GeoIP2 over GeoIP Legacy?**
 - Availability of both IPv4 and IPv6 data in downloadable database
 - Localized location name data in selected languages
 - New/modified data fields
-    - Different types of country data including the country an IP is registered
-    in and the country represented (e.g., for military bases) for content
-    licensing, legal regulation compliance, and other similar use cases
-    - Multi-level region data for countries with several region subdivisions
-    - Country information is returned in some cases even when IP is an anonymous
+  - Different types of country data including the country an IP is registered
+  in and the country represented (e.g., for military bases) for content
+  licensing, legal regulation compliance, and other similar use cases
+  - Multi-level region data for countries with several region subdivisions
+  - Country information is returned in some cases even when IP is an anonymous
     proxy or allocated by a satellite provider
 
 These differences are explained in more detail on our [What’s new in GeoIP2
@@ -54,6 +54,7 @@ this may change
 - GeoLite Country, City, and AS Num downloadable databases
 - GeoIP Country, City/ISP/Org, and Omni Web Services
 
+<!--lint disable no-emphasis-as-heading-->
 **Which GeoIP2 products and services can I access now?**
 
 As of right now, the [GeoIP2 JavaScript

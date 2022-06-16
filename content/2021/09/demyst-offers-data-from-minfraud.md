@@ -21,9 +21,9 @@ solutions Demyst’s clients are creating.
 
 > “minFraud’s IP scoring provides value to our clients, but some clients also
 > get value from additional checks. Does the location of the device conducting a
-> transaction match the consumer’s reported location? Is this a high risk mailing
-> address? This is extremely useful information for screening transactions or
-> deciding whether to do manual review.”
+> transaction match the consumer’s reported location? Is this a high risk
+> mailing  address? This is extremely useful information for screening
+> transactions or deciding whether to do manual review.”
 
 Demyst helps clients to integrate multiple data assets into a single unified
 API, and they are selective about the sources they include in their solutions.
@@ -41,7 +41,8 @@ geolocation of a person, check for proxy and VPN use, or draw on reputation data
 from the minFraud Network, MaxMind offers data products that are valuable.
 
 > “A high quality anti-fraud offering based on IP addresses is another weapon
-> organizations can have in their arsenal to flag potentially risky transactions.”
+> organizations can have in their arsenal to flag potentially risky
+> transactions.”
 
 And when it comes to fighting potentially expensive fraud, it’s important to
 have the best weapons, like the minFraud service, at your disposal. Demyst helps

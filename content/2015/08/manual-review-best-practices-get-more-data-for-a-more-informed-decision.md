@@ -48,6 +48,7 @@ information you would like to have. For example, most customers are unwilling to
 provide credit card information when signing up for a free trial. Additionally,
 if you are selling digital goods, you may not be able to get a shipping address.
 
+<!--lint disable no-emphasis-as-heading-->
 **Expert Tips**
 
 As you assess the data you have available to you, we encourage you to think

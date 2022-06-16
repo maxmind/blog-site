@@ -11,9 +11,8 @@ authors:
   - "Miguel Atienza"
 ---
 
-**by TJ Murphy, [@teej\_m](https://twitter.com/teej_m) on Twitter
-**This article was originally published on [**Towards Data
-Science**](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
+**by TJ Murphy**, [@teej\_m](https://twitter.com/teej_m) on Twitter
+This article was originally published on [Towards Data Science](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
 on Jan 18, 2019.
 
 It always starts with an innocent observation. _“We get a lot of traffic from
@@ -81,7 +80,7 @@ Using the
 provided by MaxMind, we will add the integer range representation of each
 network to our CSV.
 
-```
+```bash
 # Download the converter tool from Github
 curl -o geoip2-csv-converter-v1.1.0-darwin-amd64.tar.gz \
      -L https://github.com/maxmind/geoip2-csv-converter/releases/download/v1.1.0/geoip2-csv-converter-v1.1.0-darwin-amd64.tar.gz
@@ -101,7 +100,7 @@ weekly, so your version may be different._
 
 After uploading our modified CSV to S3, we can `COPY` it into Redshift.
 
-```
+```bash
 -- Create Maxmind IP to geo table in Redshift
 -- https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
 CREATE TABLE maxmind_ipv4_to_geo (
@@ -133,7 +132,7 @@ one written in SQL. We will call it `inet_aton` after the Linux utility that
 does the same thing. “inet” stands for “internet” and “aton” means “**A**ddress
 **TO** **N**umber”. Linux folks like to keep things short and sweet.
 
-```
+```bash
 -- Create a function to convert IPs to numbers. Named after the linux inet_aton utility.
 CREATE FUNCTION f_inet_aton(VARCHAR)
 RETURNS BIGINT IMMUTABLE as $$
@@ -157,7 +156,7 @@ dimension table like this, I recommend `DISTSTYLE ALL`. This makes a copy of the
 table on every node in your cluster, eliminating a data transfer step during
 joins. I also define our join column as a `SORTKEY` to speed things up.
 
-```
+```bash
 -- Create Maxmind geo to city table in Redshift
 CREATE TABLE maxmind_geo_to_city (
   geoname_id INTEGER
@@ -197,7 +196,7 @@ If we join our new MaxMind GeoIP tables to our log data, we will immediately run
 into a problem. Suppose I have some bare bones access logs and try to calculate
 the top 50 regions by traffic.
 
-```
+```sql
 CREATE TABLE access_logs (
   ip_address VARCHAR,
   created_at_utc TIMESTAMP,
@@ -205,9 +204,12 @@ CREATE TABLE access_logs (
 );
 ```
 
-If you ran this query, you’re going to have a **bad time**. You query will be running for minutes and you’ll start to sweat. Meanwhile your Redshift admin will be hunting for the individual who took down her cluster. Don’t be that person.
+If you ran this query, you’re going to have a **bad time**. You query will be
+running for minutes and you’ll start to sweat. Meanwhile your Redshift admin
+will be hunting for the individual who took down her cluster. Don’t be that
+person.
 
-```
+```sql
  SELECT mm_city.city_name
       , mm_city.country_name
       , COUNT(*) AS traffic
@@ -250,7 +252,7 @@ These sections act almost like a database index, allowing Redshift to narrow
 down which networks to check for each IP. Using a little bit-twiddling magic, we
 take our table and convert it into one that’s fast and optimized.
 
-```
+```sql
 -- Create a helper table to allow us to enumerate from 0-255.
 -- This is a quick hack to generate a table with just the numbers 0 to 255 in it.
  CREATE TEMPORARY TABLE range_0_to_255 AS
@@ -284,9 +286,10 @@ query, we swap out `maxmind_ipv4_to_geo` for `maxmind_ipv4_lookup` and add a new
 join condition. We will extract the first half of each IP with the regex
 `REGEXP_SUBSTR(log.ip_address, '\\d+\.\\d+')` and match it to it’s appropriate
 section in the table `mm_geo.first_16_bits`. Then we check which network it
-belongs in using the integer representation of the IP and network. With this optimization, our query returns quickly with no nested loop join in sight!
+belongs in using the integer representation of the IP and network. With this
+optimization, our query returns quickly with no nested loop join in sight!
 
-```
+```sql
  SELECT mm_city.city_name
       , mm_city.country_name
       , COUNT(*) AS traffic
@@ -318,7 +321,7 @@ Thanks to the [dbt](https://www.getdbt.com/) Slack for inspiring this post,
 Julian Ganguli for working with some early code, and to Nick James for reading
 an early draft.
 
-**by TJ Murphy, [@teej\_m](https://twitter.com/teej_m) on Twitter
-**This article was originally published on [**Towards Data
-Science**](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
+**by TJ Murphy**, [@teej\_m](https://twitter.com/teej_m) on Twitter
+This article was originally published on [Towards Data
+Science](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
 on Jan 18, 2019.
