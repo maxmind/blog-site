@@ -35,7 +35,8 @@ const url = endpoint
 
 
 const GoogleSearch =
-  async (query: string, startIndex: string | null): Promise<ISearchResults> => {
+  // eslint-disable-next-line max-len
+  async (query: string | null, startIndex: string | null): Promise<ISearchResults> => {
     let requestUrl = `${url}&q=${query}`;
 
     if (startIndex) {
