@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2019"
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    ".cache"
+  ],
+  "include": ["./assets/js/**/*"]
+}
