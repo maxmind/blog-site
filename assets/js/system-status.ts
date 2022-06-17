@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   const $headerStatus =
-    document.querySelector('.header-system-status-container');
+    <HTMLDivElement>document.querySelector('.header-system-status-container');
   const $headerStatusMessage =
-    document.querySelector('.header__status-message');
+    <HTMLDivElement>document.querySelector('.header__status-message');
 
   const $operationalIcons = document.querySelectorAll('.operational');
   const $degradedPerformanceIcons =
@@ -16,8 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const $securityEventIcons = document.querySelectorAll('.security-event');
   const $allSystemStatusIcons = document.querySelectorAll('.status-icon');
 
+  type SystemStatus = {
+    icons: NodeList;
+    message: string;
+  }
+
   // https://kb.status.io/developers/status-codes/
-  const status = {
+  const status: Record<string, SystemStatus> = {
     DEGRADED_PERFORMANCE: {
       icons: $degradedPerformanceIcons,
       message: 'Degraded Performance - We are currently experiencing ' +
@@ -49,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   };
 
-  const setSystemStatus = ($icons, message) => {
+  const setSystemStatus = ($icons: NodeList, message: string) => {
     $allSystemStatusIcons.forEach($systemStatusIcon => {
       if ($systemStatusIcon) {
         $systemStatusIcon.classList.remove('show-status-icon');
@@ -69,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     $icons.forEach((icon) => {
-      icon.classList.add('show-status-icon');
+      (icon as Element).classList.add('show-status-icon');
     });
   };
 
