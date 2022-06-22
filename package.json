@@ -21,6 +21,7 @@
     "lint-staged": "^13.0.1",
     "markdownlint-cli": "^0.31.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
     "remark-cli": "^10.0.1",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
@@ -58,7 +59,7 @@
   "name": "blog-site",
   "scripts": {
     "fix": "run-p fix:*",
-    "fix:content": "npm run lint:content --fix",
+    "fix:content": "prettier --write **/*.md --embedded-language-formatting off --loglevel silent && remark . --output --ext md --quiet",
     "fix:json": "npm run lint:json --fix",
     "fix:scripts": "npm run lint:scripts --fix",
     "fix:styles": "npm run lint:styles --fix",
