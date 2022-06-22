@@ -57,14 +57,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (results.queries.nextPage) {
         searchNext.style.display = 'block';
-        searchNext.href =
-          `?query=${query}&start=${results.queries.nextPage[0].startIndex}`;
+
+        const nextUrl = new URL(document.location.href);
+        nextUrl.search = new URLSearchParams({
+          query: query,
+          start: results.queries.nextPage[0].startIndex,
+        }).toString();
+        searchNext.href = nextUrl.toString();
       }
 
       if (results.queries.previousPage) {
         searchPrev.style.display = 'block';
-        searchPrev.href =
-          `?query=${query}&start=${results.queries.previousPage[0].startIndex}`;
+
+        const prevUrl = new URL(document.location.href);
+        prevUrl.search = new URLSearchParams({
+          query: query,
+          start: results.queries.previousPage[0].startIndex,
+        }).toString();
+        searchPrev.href = prevUrl.toString();
       }
     } else {
       resultsHeading.textContent = `No results found for ${query}`;
