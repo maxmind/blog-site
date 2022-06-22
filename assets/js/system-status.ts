@@ -79,7 +79,6 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const getSystemStatus = () =>
-    // eslint-disable-next-line compat/compat
     fetch('https://status.maxmind.com/1.0/status/53fcfbb2ac0c957972000235')
       .then((res) => res.json())
       .then((json) => {
@@ -121,12 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       })
       .catch(() => {
-        /**
-         * No-op
-         *
-         * If something goes wrong, we intentionally want to swallow the error
-         * and prevent the UI from knowing
-         */
+        throw new Error('There was an error retrieving the status.');
       });
   getSystemStatus();
 
