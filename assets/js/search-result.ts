@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const searchProperty = window.location.search;
   const urlSearchParams = new URLSearchParams(searchProperty);
-  const query = urlSearchParams.get('query');
+  const query = urlSearchParams.get('query') ?? '';
   const startIndex = urlSearchParams.get('start');
 
   const fetchResults = async () => {
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const nextUrl = new URL(document.location.href);
         nextUrl.search = new URLSearchParams({
           query: query,
-          start: results.queries.nextPage[0].startIndex,
+          start: results.queries.nextPage[0].startIndex.toString(),
         }).toString();
         searchNext.href = nextUrl.toString();
       }
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const prevUrl = new URL(document.location.href);
         prevUrl.search = new URLSearchParams({
           query: query,
-          start: results.queries.previousPage[0].startIndex,
+          start: results.queries.previousPage[0].startIndex.toString(),
         }).toString();
         searchPrev.href = prevUrl.toString();
       }
@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   if (searchProperty) {
-    if (!query || query.trim() === '') {
+    if (query.trim() === '') {
       resultsHeading.textContent = 'Please enter a search query';
     } else {
       fetchResults();
