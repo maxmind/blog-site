@@ -76,9 +76,9 @@ granularity is actually better than our IPv4 accuracy. Much of this variation
 comes down to ISP practices. For instance, we’ve found that IPv6 addresses are
 more accurate for certain ISPs (examples below):
 
-- EE (UK)
-- T-Mobile USA
-- Vodafone DSL (Germany)
+* EE (UK)
+* T-Mobile USA
+* Vodafone DSL (Germany)
 
 You can check out our accuracy statistics for yourself here:
-[https://www.maxmind.com/en/geoip2-city-accuracy-comparison](https://www.maxmind.com/en/geoip2-city-accuracy-comparison).
+<https://www.maxmind.com/en/geoip2-city-accuracy-comparison>.

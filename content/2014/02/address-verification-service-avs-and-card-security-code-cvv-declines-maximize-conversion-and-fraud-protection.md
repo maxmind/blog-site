@@ -102,4 +102,4 @@ Documentation.
 If you have any questions about this minFraud Service Best Practices
 recommendation and how your use of the minFraud Service can benefit by this Best
 Practice, please let us know at
-[support@maxmind.com](mailto:support@maxmind.com).
+<support@maxmind.com>.

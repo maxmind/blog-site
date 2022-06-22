@@ -20,6 +20,7 @@ In this post, we discuss the crucial role of minFraud’s riskScore to automated
 decision making.
 
 <!--lint disable no-emphasis-as-heading-->
+
 **What is the riskScore?**
 
 The riskScore is the starting point for fraud detection best practices. It

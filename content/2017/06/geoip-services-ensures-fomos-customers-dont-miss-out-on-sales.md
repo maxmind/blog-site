@@ -86,7 +86,7 @@ of localized, geocoded interactions for many e-commerce stores throughout the
 world. “We set out to solve a very specific problem for our clients, and are
 thrilled with the results we’ve seen since choosing MaxMind as our partner.”
 
-* * *
+***
 
 To find out more about MaxMind’s GeoIP2 Precision services or to request a free
 trial, simply click

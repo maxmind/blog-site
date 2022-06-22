@@ -22,6 +22,7 @@ transactions as fraudulent would mean denying good orders and frustrating
 customers.
 
 <!--lint disable no-emphasis-as-heading-->
+
 **When to expect multiple different users on an IP address**
 
 There are many cases where one should expect many different users of an IP
@@ -71,4 +72,4 @@ address. Review the proxyScore\* as well as the source of traffic to the IP
 address. This will enable you not only to stop fraudulent transactions, but
 reduce the false positives that impact your business as well.
 
-\* _minFraud Insights provides an IP risk score in place of the proxyScore._
+\* *minFraud Insights provides an IP risk score in place of the proxyScore.*

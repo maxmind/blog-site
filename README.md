@@ -9,29 +9,29 @@
   <small>Developer Documentation Static Site Generator</small>
 </h3>
 
-* * *
+***
 
 ## Overview
 
-- **Static Site Generator**: [Hugo](https://gohugo.io/) +
+* **Static Site Generator**: [Hugo](https://gohugo.io/) +
   [TypeScript](https://www.typescriptlang.org/) +
   [MD](https://www.markdownguide.org/)
-- **Linting**: [ESLint](https://eslint.org/) +
+* **Linting**: [ESLint](https://eslint.org/) +
   [StyleLint](https://stylelint.io/) +
   [RemarkLint](https://github.com/remarkjs/remark-lint)
-- **Hosting**: [Cloudflare Pages](https://pages.cloudflare.com/)
+* **Hosting**: [Cloudflare Pages](https://pages.cloudflare.com/)
 
 ## Usage
 
-- [Minimum Requirements](#minimum-requirements)
-- [Installation](#installation)
-- [Development](#development)
-  - [Development Server](#development-server)
-  - [Linting](#linting)
+* [Minimum Requirements](#minimum-requirements)
+* [Installation](#installation)
+* [Development](#development)
+  * [Development Server](#development-server)
+  * [Linting](#linting)
 
 ### Minimum Requirements
 
-- Node 16
+* Node 16
 
 If you need help installing and/or managing Node and Yarn versions, check out [NVM](https://github.com/nvm-sh/nvm).
 

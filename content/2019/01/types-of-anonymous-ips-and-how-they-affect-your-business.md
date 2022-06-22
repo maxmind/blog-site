@@ -93,20 +93,20 @@ MaxMind provides data on anonymous IPs along with a flag to indicate whether the
 IP is associated with a public proxy, VPN, hosting/data enter, or TOR exit node.
 This data is updated daily and is available in a downloadable database with our
 [GeoIP2 Anonymous IP
-database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database?utm_source=blog&utm_campaign=anon-types),
+database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database?utm_source=blog\&utm_campaign=anon-types),
 or in a web service with our [GeoIP2 Precision Insights
-service](https://www.maxmind.com/en/geoip2-precision-insights?utm_source=blog&utm_campaign=anon-types)
+service](https://www.maxmind.com/en/geoip2-precision-insights?utm_source=blog\&utm_campaign=anon-types)
 or our [minFraud
-service](https://www.maxmind.com/en/solutions/minfraud-services?utm_source=blog&utm_campaign=anon-types).
+service](https://www.maxmind.com/en/solutions/minfraud-services?utm_source=blog\&utm_campaign=anon-types).
 
 The [GeoIP2 Precision Insights
-service](https://www.maxmind.com/en/geoip2-precision-insights?utm_source=blog&utm_campaign=anon-types)
+service](https://www.maxmind.com/en/geoip2-precision-insights?utm_source=blog\&utm_campaign=anon-types)
 is MaxMind’s most accurate and comprehensive IP geolocation solution with
 anonymous IP flags, ISP, confidence factors, user type (e.g. business, traveler,
 cellular, etc.), and more.
 
 The [minFraud
-service](https://www.maxmind.com/en/solutions/minfraud-services?utm_source=blog&utm_campaign=anon-types)
+service](https://www.maxmind.com/en/solutions/minfraud-services?utm_source=blog\&utm_campaign=anon-types)
 provides an IP risk score that represents the relative riskiness of IP addresses
 (including anonymous IPs) in an e-commerce context. The score is affected by
 whether we observe transactions from mostly legitimate customers or from

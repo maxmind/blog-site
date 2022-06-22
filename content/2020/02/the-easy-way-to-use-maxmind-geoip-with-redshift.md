@@ -15,8 +15,8 @@ authors:
 This article was originally published on [Towards Data Science](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
 on Jan 18, 2019.
 
-It always starts with an innocent observation. _“We get a lot of traffic from
-Boston,”_ your boss remarks. You naturally throw out a guess or two and discuss
+It always starts with an innocent observation. *“We get a lot of traffic from
+Boston,”* your boss remarks. You naturally throw out a guess or two and discuss
 why that might be. Until your boss drops the bomb —
 
 > “Can you dig into that?”
@@ -47,10 +47,10 @@ find a number of CSV files, the most important among them being
 ![](/images/2020/02/Screen-Shot-2020-02-10-at-9.41.16-AM-1-1024x135.png)
 
 Right away we notice a problem — this data has something that looks like an IP
-but has a slash and an extra number at the end. This is an _IP network_
-represented in [_CIDR_](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+but has a slash and an extra number at the end. This is an *IP network*
+represented in [*CIDR*](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 notation and itrepresents a range of IPs. It’s composed of an IP, a slash, and a
-number after the slash called a _subnet mask_. It’s like how you might describe
+number after the slash called a *subnet mask*. It’s like how you might describe
 a street of physical addresses in New York City by saying “The 500 block of west
 23rd street.”
 
@@ -62,10 +62,10 @@ between `X.Y.Z.0` and `X.Y.Z.255`. So if we observed a user with the IP
 the smaller the number, the wider the network.
 
 If this MaxMind table were in Redshift, how would we join to it? Redshift
-doesn’t include any handy [_network address
-types_](https://www.postgresql.org/docs/9.3/datatype-net-types.html) likes
-modern Postgres or [_INET
-functions_](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet-aton)
+doesn’t include any handy [*network address
+types*](https://www.postgresql.org/docs/9.3/datatype-net-types.html) likes
+modern Postgres or [*INET
+functions*](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet-aton)
 like MySQL. Instead we will use knowledge of the [math behind
 IPs](https://en.wikipedia.org/wiki/IPv4#Addressing) to do the work ourselves.
 
@@ -95,8 +95,8 @@ tar xvf geoip2-csv-converter-v1.1.0-darwin-amd64.tar.gz
 gzip GeoLite2-City-Blocks-IPv4-with-ranges.csv
 ```
 
-_Note that I’m using the_ `20190108` _version. MaxMind updates this data set
-weekly, so your version may be different._
+*Note that I’m using the* `20190108` *version. MaxMind updates this data set
+weekly, so your version may be different.*
 
 After uploading our modified CSV to S3, we can `COPY` it into Redshift.
 
@@ -232,8 +232,8 @@ Suppose you ran an ice cream shop with millions of delicious flavors. What if
 each customer in line had to taste-test every single flavor before they could
 choose one? That’s what happens if we attempt to combine our log data
 (customers) to the MaxMind data (flavors) directly using our `BETWEEN` join
-(taste-test). This results in a [_nested loop
-join_](https://docs.aws.amazon.com/redshift/latest/dg/query-performance-improvement-opportunities.html#nested-loop),
+(taste-test). This results in a [*nested loop
+join*](https://docs.aws.amazon.com/redshift/latest/dg/query-performance-improvement-opportunities.html#nested-loop),
 one of the quickest ways to make a database cry.
 
 To speed up our ice cream shop, we are going to organize it into distinct
@@ -310,7 +310,7 @@ And with that, you’re ready to start your analysis. You can use this lookup
 table to join to any other in Redshift with an IP. Just remember to always
 include the join to `first_16_bits` as that’s the magic behind the approach.
 
----
+***
 
 This approach is inspired by a paper I read about optimizing IP lookups in a
 network appliance. I unfortunately can’t find the paper anymore. This post is a

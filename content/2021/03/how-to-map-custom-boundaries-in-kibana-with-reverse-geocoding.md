@@ -41,6 +41,7 @@ But what if you want to take this one step further and create maps with
 different regions?
 
 <!--lint disable no-heading-punctuation-->
+
 ## Custom regions: metro area, proximity to IKEA, anything...
 
 Elastic Maps come with a lot of great region options so you can get started
@@ -63,19 +64,20 @@ your users or show executive stakeholders which metro areas you see are
 experiencing an uptick of traffic.
 
 <!--lint disable no-emphasis-as-heading-->
-_GeoIP databases contain latitude and longitude coordinates located near the
+
+*GeoIP databases contain latitude and longitude coordinates located near the
 center of the region or subdivision in which the IP address is located. If you
 rely on longitude and latitude data from IP geolocation, this may sometimes give
 misleading results. For example, if GeoIP has identified that an IP address is
 in the United States, but MaxMind doesn't have data on which state the IP
 address is in, it will return longitude and latitude near the geographic center
-of the United States (e.g., Kansas)._
+of the United States (e.g., Kansas).*
 
-_GeoIP's longitude and latitude data can be combined with its `accuracy_radius`
-data to help combat false confidence in its geolocation coordinates._
+*GeoIP's longitude and latitude data can be combined with its `accuracy_radius`
+data to help combat false confidence in its geolocation coordinates.*
 
-_You can learn more about [the accuracy of GeoIP on our Support
-Center](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)._
+*You can learn more about [the accuracy of GeoIP on our Support
+Center](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy).*
 
 That kind of scale in the United States is often captured with what the Census
 Bureau calls the Combined Statistical Area (CSA). It is roughly equivalent with
@@ -110,8 +112,8 @@ Whatever process you have used to index your data, you’ll have a document usin
 the [ECS schema](https://www.elastic.co/guide/en/ecs/current/ecs-geo.html) that
 will contain two sets of fields created by the GeoIP processor:
 
-- destination.geo.\* for where requests are going (usually a data center)
-- client.geo.\* for the origin of the request, sometimes called`origin.geo.*`.
+* destination.geo.\* for where requests are going (usually a data center)
+* client.geo.\* for the origin of the request, sometimes called`origin.geo.*`.
 
 The relevant bit here is that `*.geo.location` field. It contains the
 **longitude** and **latitude** of the device.
@@ -119,7 +121,7 @@ The relevant bit here is that `*.geo.location` field. It contains the
 For the rest of this tutorial, we’ll use the `kibana_sample_data_logs` index
 that comes with Kibana, since that’s quicker to follow along with. The critical
 part for reverse geocoding is the presence of the longitude/latitude information
-and less _how_ that longitude/latitude field was created.
+and less *how* that longitude/latitude field was created.
 
 ### Step 2: Indexing the boundaries
 
@@ -206,11 +208,12 @@ Then we’ll integrate this reverse-geocoder into a pipeline.
 Our pipeline consists of two processors:
 
 <!--lint disable ordered-list-marker-value-->
+
 1. The first is the `enrich` processor we just created. It references our
-`csa_lookup` policy. It creates a new field `csa` that contains the CSA
-identifiers (GEOID, NAME) and the CSA geometry (coordinates).
-2. The second is a `remove` processor that removes the CSA geometry field.
-(We don’t need it since we are only interested in the identifiers).
+   `csa_lookup` policy. It creates a new field `csa` that contains the CSA
+   identifiers (GEOID, NAME) and the CSA geometry (coordinates).
+1. The second is a `remove` processor that removes the CSA geometry field.
+   (We don’t need it since we are only interested in the identifiers).
 
 ### Step 4: Running the pipeline on all your documents
 

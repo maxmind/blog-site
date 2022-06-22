@@ -48,16 +48,17 @@ for something like the latitude and longitude of the end-user.
 ![accuracy radius](/images/2021/07/Accuracy-Radius.png)
 
 <!--lint disable no-emphasis-as-heading-->
-_All of our IP geolocation data comes with an accuracy radius field. The actual
+
+*All of our IP geolocation data comes with an accuracy radius field. The actual
 geolocation of the IP address is likely within the circle with its center at the
 geolocation coordinates and a radius equal to the accuracy radius field. While
 the pin on the map might lead us to think that the IP address is close to the
 center of this circle, in reality we're defining a region in which the IP
-address is very likely to be._
+address is very likely to be.*
 
 Our data does a good job of estimating the approximate location of IP addresses
 (see the [accuracy for our GeoIP2 City
-database](https://www.maxmind.com/en/geoip2-city-accuracy-comparison?country=&resolution=100&cellular=excluding)).
+database](https://www.maxmind.com/en/geoip2-city-accuracy-comparison?country=\&resolution=100\&cellular=excluding)).
 But if you use any of our geolocation or fraud prevention products you’ve
 robably already seen the caveat we post throughout our documentation, that our
 data is never precise enough to locate the street address of a particular
@@ -67,7 +68,7 @@ GeoIP data so that, one day, we can locate street addresses? Do we already have
 a method to produce that kind of data, but withhold it for legal and ethical
 reasons?
 
-While it _is_ possible to map some IP addresses to street addresses, one of the
+While it *is* possible to map some IP addresses to street addresses, one of the
 major constraints on the accuracy of IP geolocation has to do with the
 infrastructure of the internet itself and the nature of IP addresses.
 
@@ -117,8 +118,8 @@ single server, providing the same IP address for multiple domain names.
 
 ![small webhosts](/images/2021/07/Small-Webhosts.png)
 
-_A web server may host several very different sites or apps behind a single IP
-address._
+*A web server may host several very different sites or apps behind a single IP
+address.*
 
 On a grander scale, content delivery networks (CDNs) like Cloudflare serve a
 high volume of domain names from a small set of IP addresses. These IP addresses
@@ -132,10 +133,10 @@ CDNs](https://humanwhocodes.com/blog/2011/11/29/how-content-delivery-networks-cd
 
 ![content delivery networks](/images/2021/07/CDNs-1.png)
 
-_In a content delivery network, the end-user communicates with an edge server,
+*In a content delivery network, the end-user communicates with an edge server,
 which in turn communicates with many origin servers that host content. In these
 cases, the end-user knows the IP address of the edge server, but not the actual
-origin server that hosts the website or application they're trying to access._
+origin server that hosts the website or application they're trying to access.*
 
 In all of these cases, the end-user never needs to know the IP address of the
 origin server providing them with content. Even if the origin server that hosts
@@ -173,10 +174,10 @@ political dissent, or circumvent censorship.
 
 ![get started](/images/2021/07/get-startedArtboard-1-2.png)
 
-_When people use an anonymizing proxy, a server makes requests for content on
+*When people use an anonymizing proxy, a server makes requests for content on
 behalf of the end-user. This means that the server's IP address is being used to
 browse the internet, not the end-user's, and it is not possible to determine the
-geolocation of the end-user._
+geolocation of the end-user.*
 
 To make matters more complicated, VPNs are only one kind of proxy an end-user
 might use to browse the internet. As more people work from home, corporate
@@ -220,15 +221,15 @@ for long durations of time, this can change suddenly due to business, technical,
 or even automated decisions made by ISPs to help manage their infrastructure. In
 this way, it’s better to think of the distinction between a static and dynamic
 residential IP address less as a binary and more as a spectrum. The question
-isn’t _whether_ an IP is dynamic, it’s a question of _how dynamic_ it is. At
+isn’t *whether* an IP is dynamic, it’s a question of *how dynamic* it is. At
 some point its geolocation may be subject to change, even if that’s because an
 end-user moves house and no longer retains the same static IP.
 
 ![get started](/images/2021/07/get-startedArtboard-1-1.png)
 
-_Internet service providers have a huge portion of the IP space to distribute
+*Internet service providers have a huge portion of the IP space to distribute
 among their customers. They may change the IP address of an end-user for any
-number of reasons._
+number of reasons.*
 
 In addition to reassigning IP addresses, there are a number of circumstances in
 which an end-user may share an IP address with others. In the same way that
@@ -260,9 +261,9 @@ their cell network, and then to their home wifi network.
 
 ![mobile users](/images/2021/07/Mobile-Users.png)
 
-_Mobile users may be assigned several different IP addresses as they travel, as
+*Mobile users may be assigned several different IP addresses as they travel, as
 they browse using their cellular data plan and public wifi available at a
-variety of businesses._
+variety of businesses.*
 
 More and more people browse, shop, and even perform sensitive transactions like
 banking from their smartphones. This means that applications that rely on

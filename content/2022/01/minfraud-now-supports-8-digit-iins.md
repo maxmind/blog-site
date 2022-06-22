@@ -25,6 +25,7 @@ last digits of a credit card has been renamed from `last_4_digits` to
 `last_digits`.**
 
 ## 8 digit IINs and data handling of credit card numbers
+
 Best practices for data handling include never collecting and storing more
 personal, sensitive data than is necessary for your business. There are specific
 regulations around the storage and processing of credit card numbers issued by
@@ -39,11 +40,12 @@ If you send more credit card data than we need, the minFraud service will issue
 a warning in its API response.
 
 ## Credit card data in the minFraud services
+
 When you send credit card data to the minFraud services, we compare two inputs
 to determine how much data we need to do risk analysis:
 
-- `credit_card/issuer_id_number`
-- `credit_card/last_digits`
+* `credit_card/issuer_id_number`
+* `credit_card/last_digits`
 
 First, we check to see whether the IIN that was sent can be identified as an 8
 digit IIN. Even if you only send us 6 digits of an 8 digit IIN, our system will
@@ -55,11 +57,12 @@ If the IIN you send is identified as an 8 digit IIN, we check to see whether it
 is permissible under PCI standards to collect 2 or 4 of the last digits of the
 credit card number depending on the card network scheme. In rare cases, it is
 not permissible to collect both the 8 digit IIN and the last 4 digits of the
-credit card number. In these cases, we will truncate the last_digits input, only
+credit card number. In these cases, we will truncate the last\_digits input, only
 accepting 2 of the digits, and the minFraud service will issue a warning in its
 API response.
 
 ## How to handle the minFraud truncation warning
+
 If you receive the minFraud truncation warning, it may indicate that the amount
 of credit card data being sent to us does not comply with PCI standards.
 Alternatively, it may be the case that you or your payment processor already
@@ -76,8 +79,9 @@ and Factors services will still return risk data and risk scores associated with
 the credit card, as long as a valid IIN can be detected in your input.**
 
 ## Read the documentation
+
 You can find documentation about how many digits to send for the minFraud credit
 card inputs in the API schema on our developer's portal:
 
-- [`/credit_card/issuer_id_number`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__issuer_id_number)
-- [`/credit_card/last_digits`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__last_digits)
+* [`/credit_card/issuer_id_number`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__issuer_id_number)
+* [`/credit_card/last_digits`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__last_digits)

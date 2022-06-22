@@ -16,6 +16,7 @@ Rescue Lab plays a critical role in rescuing children from online sexual
 exploitation crimes.
 
 <!--lint disable no-emphasis-as-heading-->
+
 **Warning: The following article discusses child sexual abuse and may be
 disturbing to some readers.**
 

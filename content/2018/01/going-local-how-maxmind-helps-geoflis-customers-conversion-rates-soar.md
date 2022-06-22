@@ -38,7 +38,7 @@ increased 92%.
 ## SNAPSHOT
 
 Web-based personalization is [becoming increasingly
-popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK&IR=T)
+popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK\&IR=T)
 among online companies and digital marketers. The practice allows a business to
 identify, segment, and target their visitors in order to serve them personalized
 content based on some identifiable attribute of the visitor - such as
@@ -100,7 +100,7 @@ want to make our customers relevant at one of the first points of contact with
 their consumers – a website. We have a tool in GeoFli that no other geomarketer
 has and a great partner in MaxMind behind us to do just that.”
 
-* * *
+***
 
 Founded in 2002, MaxMind is an industry-leading provider of IP intelligence and
 online fraud detection products. To learn more about how our GeoIP databases and

@@ -35,8 +35,8 @@ Additional information can also be found in our earlier blog: [Discontinuation
 of the GeoLite Legacy
 Databases](https://blog.maxmind.com/2018/01/02/discontinuation-of-the-geolite-legacy-databases/).
 
-* * *
+***
 
-_GeoLite2 databases are free IP geolocation databases comparable to, but less
+*GeoLite2 databases are free IP geolocation databases comparable to, but less
 accurate than, MaxMind’s GeoIP2 databases. Please remember to use the accuracy
-radius if displaying coordinates on a map._
+radius if displaying coordinates on a map.*

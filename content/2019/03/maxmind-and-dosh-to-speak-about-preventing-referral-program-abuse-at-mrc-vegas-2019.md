@@ -15,6 +15,7 @@ prevention conference, MRC Vegas, on Tuesday, March 19, from 4:15pm – 5pm. Rea
 on below for the details and what you’ll take away from the session.
 
 <!--lint disable maximum-heading-length-->
+
 ## Squad Goals: How to Prevent Referral Program Abuse and Ensure Your Customer-Referrers Are Your BFFs
 
 **When:** Tuesday, March 19, 4:15pm – 5:00pm PT
@@ -37,12 +38,12 @@ consumer referral programs and how to keep abusers out with the power of data.
 <!--lint disable ordered-list-marker-value-->
 
 1. Differentiate between different types of consumer affiliate program abuse;
-2. Understand the economics of consumer affiliate program abuse and learn how to
-identify it; and
-3. Identify the appropriate controls to manage and mitigate consumer affiliate
-program abuse
+1. Understand the economics of consumer affiliate program abuse and learn how to
+   identify it; and
+1. Identify the appropriate controls to manage and mitigate consumer affiliate
+   program abuse
 
-* * *
+***
 
 MRC Vegas 2019 runs March 18 – 21 at the Aria Resort and Casino. Each year, over
 1,600 attendees from over 450 companies, located in over 30 countries, attend
@@ -50,7 +51,7 @@ MRC Vegas. The conference is one of the largest global events focused on fraud
 prevention, payment processing, technology, cybersecurity, and financial
 services for e-commerce professionals.
 
-Send us an email at [mrc@maxmind.com](mailto:mrc@maxmind.com) to schedule a
+Send us an email at <mrc@maxmind.com> to schedule a
 meeting, or stop by booth #401 to meet us and [learn more about the minFraud
 service](https://www.maxmind.com/en/solutions/minfraud-services). We look
 forward to meeting you!

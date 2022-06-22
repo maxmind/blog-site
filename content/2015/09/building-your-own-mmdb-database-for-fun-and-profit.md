@@ -12,6 +12,7 @@ authors:
 ---
 
 ## September 2020 Update
+
 We've got a new post that deals with [writing MMDB files using the Go
 programming
 language](https://blog.maxmind.com/2020/09/01/enriching-mmdb-files-with-your-own-data-using-go/).
@@ -33,7 +34,7 @@ writer](https://metacpan.org/pod/MaxMind::DB::Writer) and the [Perl MMDB
 database reader](https://metacpan.org/pod/MaxMind::DB::Reader). You'll need to
 use Perl to write your own MMDB files, but you can read the files with the
 officially supported [.NET, PHP, Java and Python
-readers](https://github.com/maxmind?utf8=%E2%9C%93&query=reader) in addition to
+readers](https://github.com/maxmind?utf8=%E2%9C%93\&query=reader) in addition to
 unsupported third party MMDB readers. Many are listed on the [GeoIP2 download
 page](https://dev.maxmind.com/geoip/geoip2/downloadable/). So, as far as
 deployments go, you're not constrained to any one language when you want to read
@@ -52,9 +53,9 @@ In our example, we want to create an access list of some IP addresses to allow
 them access to a VPN or a hosted application. For each IP address or IP range,
 we need to track a few things about the person who is connecting from this IP.
 
-- name
-- development environments to which they need access
-- an arbitrary session expiration time, defined in seconds
+* name
+* development environments to which they need access
+* an arbitrary session expiration time, defined in seconds
 
 To do so, we create the following the file `examples/01-getting-started.pl`
 
@@ -230,6 +231,7 @@ say np $record;
 ## Reading the File: Review
 
 <!--lint disable no-duplicate-headings -->
+
 ### Step 1
 
 Ensure that the user has provided an IP address via the command line.
@@ -711,14 +713,14 @@ sub is_ip_valid {
 
 Here's a quick summary of what's going on:
 
-- As part of your deployment you'll naturally need to include your `users.mmdb`
-file, stored in the location of your choice.
-- You'll need to create a `MaxMind::DB::Reader` object to perform the lookup.
-- If the `$record` is undef, the IP could not be found.
-- If the IP is found, you can set a session expiration.
-- If the IP is found, you can also set a time zone for the user. Keep in mind
-that it's possible that the `time_zone` key does not exist, so it's important
-that you don't assume it will always be available.
+* As part of your deployment you'll naturally need to include your `users.mmdb`
+  file, stored in the location of your choice.
+* You'll need to create a `MaxMind::DB::Reader` object to perform the lookup.
+* If the `$record` is undef, the IP could not be found.
+* If the IP is found, you can set a session expiration.
+* If the IP is found, you can also set a time zone for the user. Keep in mind
+  that it's possible that the `time_zone` key does not exist, so it's important
+  that you don't assume it will always be available.
 
 ## Pro Tips
 
@@ -760,10 +762,10 @@ data from a GeoLite2-City database. We've only included a few data points, but
 MaxMind databases contain much more data you can use to build a solution to meet
 your business requirements.
 
-**About our contributor:**  _Olaf Alders is a Senior Software Engineer at
+**About our contributor:**  *Olaf Alders is a Senior Software Engineer at
 MaxMind. After taking his first course in Fortran, Olaf earned an M.A. in
 Classical Philology from McMaster University and an M.A. in Medieval Studies
 from the University of Toronto. His open source projects include
 [MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various [Perl
 modules](https://metacpan.org/author/OALDERS).  Follow him on Twitter
-[@olafalders](https://twitter.com/olafalders)._
+[@olafalders](https://twitter.com/olafalders).*

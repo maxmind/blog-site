@@ -21,7 +21,7 @@ location, and everywhere in between.
 
 Together, we will be presenting:
 
-_**Proxies and Merchants and Fraudsters ... Oh My!**_ Combating Fraud: Detecting
+***Proxies and Merchants and Fraudsters ... Oh My!*** Combating Fraud: Detecting
 Proxies and Other High Risk IPs
 
 In this presentation, we will explain the methods that criminals are using to
@@ -35,17 +35,18 @@ while monitoring the methods that criminals are deploying to prevent merchants
 from accurately detecting high risk proxy servers.
 
 <!--lint disable no-emphasis-as-heading-->
+
 **Mark Your Calendar!** March 20, 2014 3:05 - 4:05 pm PT Aria Resort, Las Vegas
 
 We hope to see you at the Presentation or just stop by booth #1143 and say,
-_“Hello!”_
+*“Hello!”*
 
-Contact us today at [mrc@maxmind.com](mailto:mrc@maxmind.com) to schedule a
+Contact us today at <mrc@maxmind.com> to schedule a
 meeting during the event or to receive a MaxMind client discount code to attend
 the MRC’s 2014 eCommerce Payments & Risk Conference - the largest professional
 development and networking event for eCommerce payments and fraud professionals
 in the Americas.
 
-_**What Happens in Vegas … can stop online fraud!**_
+***What Happens in Vegas … can stop online fraud!***
 
 [![MRC Logo Link](/images/2014/01/Full-MRC-Logo_blue-300x88.png)](https://www.merchantriskcouncil.org/Pages/home.aspx)

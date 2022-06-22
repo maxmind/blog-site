@@ -19,7 +19,7 @@ Sessler.
 
 Jenn will be on stage at the Spotlight Theatre on the Expo Floor Wednesday,
 November 1 at 12:10 and will be joined by Arun Gupta, U.S. Sales Director for
-[Adjust](https://www.adjust.com/working-with-adjust/?utm_channel=1&utm_source=google&utm_medium=search&utm_term=mobile%20analytics%20adjust&utm_content=noForm&utm_campaign=adjust_DT_US&_bk=adjust&_bt=190898160410&_bm=e&_bn=g&gclid=EAIaIQobChMI19vNvfSE1wIVCVmGCh17qgiKEAAYASAAEgIjWPD_BwE),
+[Adjust](https://www.adjust.com/working-with-adjust/?utm_channel=1\&utm_source=google\&utm_medium=search\&utm_term=mobile%20analytics%20adjust\&utm_content=noForm\&utm_campaign=adjust_DT_US&_bk=adjust&_bt=190898160410&_bm=e&_bn=g\&gclid=EAIaIQobChMI19vNvfSE1wIVCVmGCh17qgiKEAAYASAAEgIjWPD_BwE),
 to talk about the challenges of marketing to anonymous users. Jenn and Arun will
 discuss the dangers of “affiliate fraud” and “click fraud” and reveal how
 companies can identify anonymous web traffic to deliver targeted advertising to
@@ -32,12 +32,12 @@ The speech is titled "Anonymizers and IP Intelligence: Making the Most of
 Location." You can find out more about the speech by visiting [ad:tech's
 website](https://ny.ad-tech.com/programme-session-item/anonymizers-and-ip-intelligence-making-the-most-of-location).
 
-- **MaxMind Booth:** #154.
-- **Jenn's Spotlight Speech:** Wednesday, November 1, 12:10 - 12:25 at the
-Spotlight Theatre on the Expo Floor
-- **Days/Times:** Wednesday, November 1, 9am - 6pm/Thursday, November 2, 9am -
-4pm
-- **Where:** Metropolitan Pavilion (125 W 18th St, New York, NY 10011)
+* **MaxMind Booth:** #154.
+* **Jenn's Spotlight Speech:** Wednesday, November 1, 12:10 - 12:25 at the
+  Spotlight Theatre on the Expo Floor
+* **Days/Times:** Wednesday, November 1, 9am - 6pm/Thursday, November 2, 9am -
+  4pm
+* **Where:** Metropolitan Pavilion (125 W 18th St, New York, NY 10011)
 
 Adjust is a mobile measurement company, providing the highest-quality analytics
 and measurement solutions for app marketers worldwide. With Adjust, app
@@ -56,7 +56,7 @@ empowering companies to deliver real value to their online customers and users.
 
 If you’re attending, stop by and chat with us. We'd love to see you.
 
-* * *
+***
 
 Founded in 2002, MaxMind is an industry-leading provider of online fraud
 detection and IP intelligence. Our minFraud Network leverages IP intelligence

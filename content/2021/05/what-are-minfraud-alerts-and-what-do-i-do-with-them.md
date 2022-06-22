@@ -55,7 +55,7 @@ refund the payment. Other types of businesses may opt to stop or delay payouts
 or delivery of incentives, or take steps to limit the activities of the related
 account/user.
 
----
+***
 
 If you have any questions about minFraud alerts or any feedback, please [contact
-us]( https://support.maxmind.com/hc/en-us/requests/new/).
+us](https://support.maxmind.com/hc/en-us/requests/new/).

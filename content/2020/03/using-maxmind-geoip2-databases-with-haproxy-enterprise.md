@@ -72,7 +72,7 @@ http-request add-header X-Country %[src,maxmind-lookup("CITY","country","iso_cod
 server s1 127.0.0.1:8080
 ```
 
-The resulting request header will look like this: _X-Country: US_.
+The resulting request header will look like this: *X-Country: US*.
 
 ## Conclusion
 

@@ -10,6 +10,7 @@ authors:
 ---
 
 <!--lint disable no-emphasis-as-heading-->
+
 **If the databases you use begin with `GeoIP2-` then the following is not
 applicable to you and can be ignored. This would most likely be true if you
 started using MaxMind databases after October 2017 and did not request access to
@@ -32,16 +33,16 @@ multiple languages, additional data points, and a new format that has allowed us
 to continue making improvements to the data.  Retiring the GeoIP Legacy
 databases will allow us to:
 
-- spend more of our time and resources on our GeoIP2 offerings; and
-- avoid running into the limitations of the legacy format (which would prevent
-us from increasing the precision of the data past a certain point).
+* spend more of our time and resources on our GeoIP2 offerings; and
+* avoid running into the limitations of the legacy format (which would prevent
+  us from increasing the precision of the data past a certain point).
 
 We recognize that many projects and integrations still rely on the Legacy
 formats so we want to provide as much notice as possible and ample time for
 users to migrate to our current [GeoIP2
 formats](https://dev.maxmind.com/geoip/geoip2/downloadable/).
 
-**We will continue to support the [GeoIP Legacy web
+\*\*We will continue to support the [GeoIP Legacy web
 services](https://dev.maxmind.com/geoip/legacy/web-services/), although there
 will be data changes as they switch to relying on [GeoIP2
 data](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/). More
@@ -71,8 +72,8 @@ In either case, `{edition ID}` will be a three-digit number.  Users of our
 single-country GeoIP Legacy City databases will also have two or three letters
 after the number.
 
-_\* If your filenames begin with \`GeoIP2-\` then you are not using a GeoIP
-Legacy database._
+*\* If your filenames begin with \`GeoIP2-\` then you are not using a GeoIP
+Legacy database.*
 
 ## What do I do?
 
@@ -80,12 +81,12 @@ The GeoIP2 database equivalent (or replacement) of your GeoIP Legacy database is
 already accessible to you for download through your [MaxMind
 account](https://www.maxmind.com/en/accounts/current/geoip/downloads). If you
 have trouble finding the GeoIP2 equivalent, please feel free to [contact our
-support team]( https://support.maxmind.com/hc/en-us/requests/new/).
+support team](https://support.maxmind.com/hc/en-us/requests/new/).
 
 You will need to adjust the database you are downloading via your download
 mechanism (generally, we recommend using our [GeoIP Update
 program](https://dev.maxmind.com/geoip/geoipupdate/) \[a [docker
-image](https://hub.docker.com/r/maxmindinc/geoipupdate) is available\]).
+image](https://hub.docker.com/r/maxmindinc/geoipupdate) is available]).
 
 If you currently use the legacy binary format (.dat), you will need to integrate
 one of our
@@ -101,4 +102,4 @@ data in your workflows and systems (especially if you are using the CSV format).
 
 If you are unsure about how to proceed, please forward this information to the
 person(s) responsible for your technical integration. If you have any questions,
-please [contact us]( https://support.maxmind.com/hc/en-us/requests/new/).
+please [contact us](https://support.maxmind.com/hc/en-us/requests/new/).

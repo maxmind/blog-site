@@ -27,7 +27,7 @@ number of ways but one of the most common is when compromised information from a
 data breach gets into the hands of a fraudster. Even if a fraudster doesn’t get
 unhashed usernames and passwords, other sensitive information can potentially be
 used for [social
-engineering](https://en.wikipedia.org/wiki/Social_engineering_(security)) or
+engineering](https://en.wikipedia.org/wiki/Social_engineering_\(security\)) or
 other exploits. Malware, such as a keylogger, or phishing scams are other common
 ways for fraudsters to get a hold of the keys to the castle.
 
@@ -72,27 +72,27 @@ the tools and context to identify suspicious activity and make better decisions.
 Below are some tips on detecting account takeover with the help of the minFraud
 service.
 
-- Implement the [Device Tracking Add
-On](https://www.maxmind.com/en/minfraud-device-tracking) to [evaluate the
-riskiness of an IP
-address](https://www.maxmind.com/en/explanation-of-minfraud-riskscore) making
-account changes or placing orders on your site
-- Use [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and
-[Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) to flag
-potential account takeover scenarios. For example, you may define Custom Inputs
-for the number of days since the last email, password, and shipping address
-change, and manually review orders from accounts where those pieces of
-information were recently changed
-- Check IP address distances, such as distance between IP location and
-billing/shipping/historical login locations
-- Check for sudden pattern changes in the IP address or ISP used. For example, a
-customer who lives in Miami, FL who typically connects from Comcast cable in
-Miami suddenly changes to connecting from T-mobile in Bronx, NY
-- Watch out for package rerouting scenarios where existing emails and addresses
-are used but where a fraudster is able to contact the shipping service and
-reroute or hold the package for pickup
+* Implement the [Device Tracking Add
+  On](https://www.maxmind.com/en/minfraud-device-tracking) to [evaluate the
+  riskiness of an IP
+  address](https://www.maxmind.com/en/explanation-of-minfraud-riskscore) making
+  account changes or placing orders on your site
+* Use [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and
+  [Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) to flag
+  potential account takeover scenarios. For example, you may define Custom Inputs
+  for the number of days since the last email, password, and shipping address
+  change, and manually review orders from accounts where those pieces of
+  information were recently changed
+* Check IP address distances, such as distance between IP location and
+  billing/shipping/historical login locations
+* Check for sudden pattern changes in the IP address or ISP used. For example, a
+  customer who lives in Miami, FL who typically connects from Comcast cable in
+  Miami suddenly changes to connecting from T-mobile in Bronx, NY
+* Watch out for package rerouting scenarios where existing emails and addresses
+  are used but where a fraudster is able to contact the shipping service and
+  reroute or hold the package for pickup
 
-* * *
+***
 
 To learn more about how our minFraud service can help you, please visit our
 [website](https://www.maxmind.com/en/minfraud-services) or [contact our sales

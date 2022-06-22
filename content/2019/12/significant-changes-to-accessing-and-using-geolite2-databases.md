@@ -67,21 +67,22 @@ See the section below for steps on how to migrate to the new download mechanism.
 
 ### GeoLite2 Databases Affected
 
-- GeoLite2 Country
-- GeoLite2 City
-- GeoLite2 ASN
+* GeoLite2 Country
+* GeoLite2 City
+* GeoLite2 ASN
 
 ### Steps for Migration
 
 <!--lint disable ordered-list-marker-value-->
+
 1. [Sign up for a MaxMind account](https://www.maxmind.com/en/geolite2/signup)
-(no purchase required)
-2. Set your password and create a [license
-key](https://www.maxmind.com/en/accounts/current/license-key)
-3. Setup your download mechanism by using our [GeoIP Update
-program](https://dev.maxmind.com/geoip/geoipupdate/#For_Free_GeoLite2_Databases)
-or creating a [direct download
-script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
+   (no purchase required)
+1. Set your password and create a [license
+   key](https://www.maxmind.com/en/accounts/current/license-key)
+1. Setup your download mechanism by using our [GeoIP Update
+   program](https://dev.maxmind.com/geoip/geoipupdate/#For_Free_GeoLite2_Databases)
+   or creating a [direct download
+   script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
 
 On **December 30, 2019**, downloads will no longer be served from our [public
 GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
@@ -90,4 +91,4 @@ GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
 To continue using GeoLite2 databases:
 
 1. Review our new [GeoLite2 EULA](https://www.maxmind.com/en/geolite2/eula).
-2. Sign up for a [MaxMind account](https://www.maxmind.com/en/geolite2/signup).
+1. Sign up for a [MaxMind account](https://www.maxmind.com/en/geolite2/signup).
