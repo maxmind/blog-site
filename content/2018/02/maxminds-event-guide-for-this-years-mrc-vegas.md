@@ -16,7 +16,7 @@ MRC Vegas 2018 is March 19 - 22 at the Aria Resort and Casino, and MaxMind has
 some great events scheduled to help you connect with us throughout the
 conference.
 
-## **Here's how you can connect with us at MRC Vegas**
+## Here's how you can connect with us at MRC Vegas
 
 - **Teach Me How to Say Goodbye... to ATO!** - A speech hosted by MaxMind's
 Jenn Sessler and Shopify's Will Mowat on Tuesday, March 20, from 2:15 - 3pm in

@@ -23,7 +23,7 @@ are opening, and international brands are diversifying their offerings,
 fraudsters are seeking new, or rediscovering old, ways to capitalize on global
 opportunities.
 
-## **Omnichannel Fraud**
+## Omnichannel Fraud
 
 Research has found that consumers are [increasingly demanding omnichannel
 shopping options](https://hbr.org/2017/01/a-study-of-46000-shoppers-shows-that-omnichannel-retailing-works)
@@ -66,7 +66,7 @@ detection, and a [chargeback reporting
 feature](https://dev.maxmind.com/minfraud/chargeback/), to help our algorithms
 identify more fraud.
 
-## **Mobile Wallets Fraud**
+## Mobile Wallets Fraud
 
 According to a [2017 report by Allied Market
 Research](https://www.alliedmarketresearch.com/mobile-payments-market), the

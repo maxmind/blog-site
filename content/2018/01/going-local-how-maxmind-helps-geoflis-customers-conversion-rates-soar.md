@@ -35,7 +35,7 @@ said. After 30 days of using GeoFli software sourced by MaxMind’s data, the
 number of users that landed on UPTOP’s homepage and visited a second page
 increased 92%.
 
-## **SNAPSHOT**
+## SNAPSHOT
 
 Web-based personalization is [becoming increasingly
 popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK&IR=T)
@@ -69,7 +69,7 @@ be used in many different ways, including showing restaurant offers, retail
 promotions, local news, and community headlines to a specific subset of internet
 users,” Shontz said.
 
-## **CHALLENGE**
+## CHALLENGE
 
 GeoFli co-founders Shontz and Pucko built the service while working together in
 web development and admissions (respectively) at the University of Montana.
@@ -85,7 +85,7 @@ database – I don’t have to worry about it. It’s fast, updated, and easy to
 integrate into our code. Because of that, I can just focus on running my
 business.”
 
-## **FUTURE**
+## FUTURE
 
 Personalization is [forecast to rule the digital landscape in
 2017](https://www.adweek.com/digital/is-personalization-the-new-buzz-for-2017-infographic/)

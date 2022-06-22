@@ -28,7 +28,7 @@ lively presentation.
 ![Orbitz](/images/2015/02/Orbitz-e1424453363302.png)
 ![White Pages Pro](/images/2015/02/White-Pages-Pro-e1424453527304-150x35.png)
 
-## **Manual Review Best Practices** _Learnings from Peak Buying Times in 2014_
+## Manual Review Best Practices _Learnings from Peak Buying Times in 2014_
 
 We invite you to attend this panel discussion to learn more about best practices
 for preparing for, executing and evaluating your manual review processes. You’ll

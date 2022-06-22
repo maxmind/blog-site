@@ -29,13 +29,13 @@ solves this problem by using a 128-bit address instead of IPv4’s 32-bit addres
 which yields a possible pool of IPv6 addresses that is more than [7.9 x 10^28
 the pool of IPv4 addresses](https://en.wikipedia.org/wiki/IPv6).
 
-## **Accuracy**
+## Accuracy
 
 Since the pool of IPv6 addresses is many orders of magnitude higher than the
 pool of IPv4 addresses, many of our customers wonder whether accuracy suffers.
 The short answer is no.
 
-## **IP Block Allocation**
+## IP Block Allocation
 
 For both IPv6 and IPv4 standards, there are conventions for the flow down of IP
 block allocations from the [Internet Assigned Numbers Authority

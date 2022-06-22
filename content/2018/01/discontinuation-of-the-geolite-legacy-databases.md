@@ -28,7 +28,7 @@ January 2, 2019. _(Note that we will begin by discontinuing updates to the free
 GeoLite Legacy databases as of April 1, 2018. For info, see the "Important dates
 to consider" section.)_
 
-## **How does this affect me?**
+## How does this affect me?
 
 You will still be able to receive open source geolocation data from us, but you
 may need to take action depending on what database you are using.
@@ -57,7 +57,7 @@ the GeoLite Legacy databases. Also, your [commercial redistribution
 license](https://www.maxmind.com/en/geolite-commercial-redistribution-license)
 will not be affected as long as you are using the GeoLite2 databases.
 
-## **Important dates to consider**
+## Important dates to consider
 
 To make sure you have plenty of time to transition away from the GeoLite Legacy
 databases, we will be phasing out the databases gradually leading up to January
@@ -75,7 +75,7 @@ our website. GeoLite Legacy database users will need to have switched to the
 GeoIP](https://www.maxmind.com/en/geoip2-services-and-databases) databases and
 update their integrations.
 
-## **Commitment to the principles of open source**
+## Commitment to the principles of open source
 
 Open source is about more than just code; it's about community and process.
 Participating in open source projects and communities comes with its own unique

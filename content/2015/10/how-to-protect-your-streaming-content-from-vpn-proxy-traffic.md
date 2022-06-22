@@ -26,7 +26,7 @@ and other licensors if they are not able to restrict access based on where their
 customers are accessing this content from. This post describes the ways
 restrictions are being bypassed and offers some advice on solutions.
 
-## **A Typical Case**
+## A Typical Case
 
 A streaming content service that has the rights to show a given movie
 exclusively to viewers in the US will use an IP address geolocation filter to
@@ -47,7 +47,7 @@ perform digital rights management. However, with the growth of VPN services,
 more sophisticated solutions are additionally required to prevent unauthorized
 access to geo-restricted content.
 
-## **Identifying VPN and Proxy Traffic**
+## Identifying VPN and Proxy Traffic
 
 Streaming content providers need to identify the use of VPNs and proxies (DNS,
 HTTP, TOR, etc.) to ensure that their content is not being accessed outside of
@@ -65,7 +65,7 @@ context of the TOR network, these IP addresses are known as “exit nodes”. A
 [complete list of exit nodes](https://check.torproject.org/exit-addresses) is
 available for download.
 
-## **Limitations of the Above Methods**
+## Limitations of the Above Methods
 
 Compiling a list of known web hosts and VPN providers and comparing them to TOR
 lists and the WHOIS records of connecting IP addresses can be tedious.
@@ -77,7 +77,7 @@ daily and public data is usually stale. This is why content licensors require
 use of additional methods to ensure effective detecting geofiltering beyond
 traditional IP geolocation.
 
-## **MaxMind’s Database Solution**
+## MaxMind’s Database Solution
 
 We created the
 [GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip2-anonymous-ip-database)
@@ -88,7 +88,7 @@ circumventing geolocation restrictions, including TOR exit nodes, hosting, VPN,
 and DNS proxy IPs. To keep pace with the creation of new VPN and proxy services,
 this database is updated daily.
 
-## **Summing Up**
+## Summing Up
 
 Streaming providers, contractually required to restrict access to content based
 on location, need new tools in addition to standard IP geolocation filters to
