@@ -2,11 +2,11 @@ import GoogleSearch from './GoogleSearch';
 
 window.addEventListener('DOMContentLoaded', () => {
   // eslint-disable-next-line max-len
-  const resultsCount = <HTMLElement>document.querySelector('.search__results-count');
+  const resultsCount = <HTMLElement>document.querySelector('.search-results__count');
   // eslint-disable-next-line max-len
-  const resultsHeading = <HTMLHeadingElement>document.querySelector('.search__results-heading');
+  const resultsHeading = <HTMLHeadingElement>document.querySelector('.search-results__heading');
   // eslint-disable-next-line max-len
-  const resultsList = <HTMLDivElement>document.querySelector('.search-results-list');
+  const resultsList = <HTMLDivElement>document.querySelector('.search-results__list');
 
   const searchProperty = window.location.search;
   const urlSearchParams = new URLSearchParams(searchProperty);

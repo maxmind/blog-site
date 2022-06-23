@@ -2,27 +2,27 @@
 @use 'variables';
 
 @media only screen and (max-width: 992px) {
-  .search__results-heading {
+  .search-results__heading {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .search__results-heading {
+  .search-results__heading {
     font-size: 30px;
   }
 }
 
-.search__results {
+.search-results {
   margin: auto;
   max-width: 800px;
   padding: 0 var(--mm-spacing) 0;
 }
 
-.search__results-header {
+.search-results__header {
   margin-bottom: calc(var(--mm-spacing) / 2);
 
-  .search__results-heading {
+  .search-results__heading {
     color: #00374c;
     font-family: var(--mm-font-stack-display);
     font-weight: 700;
@@ -33,7 +33,7 @@
     scroll-margin-top: calc(var(--page-header-height) + var(--mm-spacing));
   }
 
-  .search__results-count {
+  .search-results__count {
     font-size: 14px;
   }
 
