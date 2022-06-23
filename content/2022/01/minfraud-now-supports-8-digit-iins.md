@@ -57,9 +57,9 @@ If the IIN you send is identified as an 8 digit IIN, we check to see whether it
 is permissible under PCI standards to collect 2 or 4 of the last digits of the
 credit card number depending on the card network scheme. In rare cases, it is
 not permissible to collect both the 8 digit IIN and the last 4 digits of the
-credit card number. In these cases, we will truncate the last\_digits input, only
-accepting 2 of the digits, and the minFraud service will issue a warning in its
-API response.
+credit card number. In these cases, we will truncate the last\_digits input,
+only accepting 2 of the digits, and the minFraud service will issue a warning
+in its API response.
 
 ## How to handle the minFraud truncation warning
 

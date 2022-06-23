@@ -29,10 +29,10 @@ conference.
 ***
 
 * **How to Detect and Overcome Fraud With minFraud Services -** A presentation
-  by MaxMind's Mark Sulham on Wednesday, March 21, from 11:15 to 11:30 on the Demo
-  Theater stage. Learn how to increase customer approvals, reduce fraud, and cut
-  manual review times with minFraud Services. The presentation includes a
-  discussion of how to use [Custom
+  by MaxMind's Mark Sulham on Wednesday, March 21, from 11:15 to 11:30 on the
+  Demo Theater stage. Learn how to increase customer approvals, reduce fraud,
+  and cut manual review times with minFraud Services. The presentation includes
+  a discussion of how to use [Custom
   Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and [Custom
   Rules](https://www.maxmind.com/en/minfraud-custom-rules) in your specific risk
   modeling.

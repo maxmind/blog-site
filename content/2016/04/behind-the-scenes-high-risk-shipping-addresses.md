@@ -65,18 +65,18 @@ not indicative of high risk, consider other factors:
 * What are the billing and IP addresses associated with the order? As an
   example, it makes sense that an order placed in the USA but originating from
   Mexico might use a freight forwarder in the US to reach a final Mexican
-  destination. On the other hand, it may be less obvious why a large order placed
-  from Wisconsin is being shipped to a freight forwarder.
+  destination. On the other hand, it may be less obvious why a large order
+  placed from Wisconsin is being shipped to a freight forwarder.
 * What items are included in the order? Does the order include higher risk
   items, for example, electronics or luxury goods?
 * What is the velocity around the shipping address? A large number of orders to
   the same shipping address may warrant additional scrutiny.
 * What delivery speed is associated with the order? Those paying with a stolen
   credit card can afford overnight shipping. Fraudsters are looking to have the
-  goods in hand as soon as possible and prior to the credit card being reported as
-  stolen. Consider the cost of the delivery option in comparison to the cost of
-  the item. If the cost of delivery is more than 50% of the purchase price, the
-  likelihood of fraud is higher.
+  goods in hand as soon as possible and prior to the credit card being reported
+  as stolen. Consider the cost of the delivery option in comparison to the cost
+  of the item. If the cost of delivery is more than 50% of the purchase price,
+  the likelihood of fraud is higher.
 * Once an order has been placed, watch out for changes in shipping address or
   delivery type. Fraudsters have learned that merchants give extra scrutiny to
   orders placed to high risk shipping addresses or with overnight delivery. To

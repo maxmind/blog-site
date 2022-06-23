@@ -79,9 +79,9 @@ service.
   account changes or placing orders on your site
 * Use [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and
   [Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) to flag
-  potential account takeover scenarios. For example, you may define Custom Inputs
-  for the number of days since the last email, password, and shipping address
-  change, and manually review orders from accounts where those pieces of
+  potential account takeover scenarios. For example, you may define Custom
+  Inputs for the number of days since the last email, password, and shipping
+  address change, and manually review orders from accounts where those pieces of
   information were recently changed
 * Check IP address distances, such as distance between IP location and
   billing/shipping/historical login locations

@@ -46,18 +46,18 @@ data changes below will not disrupt your existing workflows.
    standard (for all countries except for the US and Canada). At the end of May
    2022, region codes worldwide will be returned in the ISO 3166-2 standard. We
    will provide the most specific/granular ISO 3166-2 region code we have for a
-   given IP network. In addition, Kosovo will return an ISO country code of XK and
-   will no longer present as a region per the FIPS standard. For your convenience,
-   we’ve prepared a [FIPS-ISO region code mapping file
+   given IP network. In addition, Kosovo will return an ISO country code of XK
+   and will no longer present as a region per the FIPS standard. For your
+   convenience, we’ve prepared a [FIPS-ISO region code mapping file
    here](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/#ISO_31662,_FIPS_104,_and_Country_Subdivisions).
 1. **Area codes:**
-   Area codes are no longer available in GeoIP2. At the end of May 2022, area code
-   fields will return as blank.
+   Area codes are no longer available in GeoIP2. At the end of May 2022, area
+   code fields will return as blank.
 1. **Country/Region/City names:**
-   GeoIP2 contains more standardized country, region, and city names that come from
-   [GeoNames](https://www.geonames.org/). At the end of May 2022 there may be small
-   place name differences due to this. To get a full list of GeoIP2 place names we
-   recommend downloading a [GeoLite2 City CSV
+   GeoIP2 contains more standardized country, region, and city names that come
+   from [GeoNames](https://www.geonames.org/). At the end of May 2022 there may
+   be small place name differences due to this. To get a full list of GeoIP2
+   place names we recommend downloading a [GeoLite2 City CSV
    file](https://dev.maxmind.com/geoip/geoip2/geolite2/) (available at no cost).
    Details of this file format can be found
    [here](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/#csv-databases).
@@ -66,8 +66,8 @@ data changes below will not disrupt your existing workflows.
    Signup’ under the **GeoIP2 / GeoLite2** section in your left-hand navigation
    menu.
 1. **IPv6 \[minFraud Legacy services]:**
-   Historically, legacy minFraud services only provided IP country resolution for
-   IPv6 addresses. At the end of May 2022, all [GeoIP Location Check
+   Historically, legacy minFraud services only provided IP country resolution
+   for IPv6 addresses. At the end of May 2022, all [GeoIP Location Check
    outputs](https://dev.maxmind.com/minfraud/minfraud-legacy/#GeoIP_Location_Checks)
    (e.g., region, city, postal code) will support IPv6 addresses.
 

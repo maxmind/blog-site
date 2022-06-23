@@ -33,8 +33,8 @@ Private Relay works and delivers the best possible experience for your users.
 Apple has shared the following assurances built into Private Relay:
 
 * Geolocation information for clients is validated by the relay servers using
-  signed tokens, and visible to origins through the IP addresses selected by relay
-  servers.
+  signed tokens, and visible to origins through the IP addresses selected by
+  relay servers.
   * A user is not able to arbitrarily select their geolocation to evade
     geolocation controls.
 * Access to relay servers is rate-limited using device attestation to reduce

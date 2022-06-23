@@ -29,15 +29,15 @@ this informative and timely presentation on account takeover.
 * **Where:** MRC Vegas 2018
 * **Level:** Advanced
 * **Description**: *As more and more data breaches hit the news, account
-  takeover is a growing threat for online merchants. Even if fraudsters don’t get
-  clear-text usernames - emails, passwords, other sensitive information can
+  takeover is a growing threat for online merchants. Even if fraudsters don’t
+  get clear-text usernames - emails, passwords, other sensitive information can
   potentially be used for social engineering or other exploits. When it comes to
   account takeover, online merchants face the added challenge of recognizing a
-  fraudster masquerading as a valued and trusted customer. Learn what geolocation
-  and other transactional data can do to help you understand the context of an
-  account takeover in order to identify suspicious activity and make better
-  decisions while providing your good customers with the best experience
-  possible.*
+  fraudster masquerading as a valued and trusted customer. Learn what
+  geolocation and other transactional data can do to help you understand the
+  context of an account takeover in order to identify suspicious activity and
+  make better decisions while providing your good customers with the best
+  experience possible.*
 
 ***
 

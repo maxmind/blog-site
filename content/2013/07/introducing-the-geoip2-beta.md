@@ -36,10 +36,10 @@ page](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/).
 
 * Existing GeoIP Legacy users will have the ability to use or access GeoIP2
   versions of products and services that have been purchased (i.e., someone with
-  an active subscription to a GeoIP Legacy City database will be able to download
-  a GeoIP2 City database as well; similarly, someone with GeoIP Legacy City Web
-  Service lookups will be able to use their lookups for the GeoIP2 City Web
-  Service)
+  an active subscription to a GeoIP Legacy City database will be able to
+  download a GeoIP2 City database as well; similarly, someone with GeoIP Legacy
+  City Web Service lookups will be able to use their lookups for the GeoIP2
+  City Web Service)
 * New users will have the ability to use or access both the GeoIP Legacy and
   GeoIP2 versions of purchased products and services
 * New and existing users will need to integrate new Client APIs in order to
