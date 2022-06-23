@@ -3,7 +3,7 @@
     <div class="article__container">
         <div class="blog-post__categories">
           {{ range .Params.category }}
-              <a class="blog-post__category "href="/category/{{ . | urlize}}">{{ . }}</a>
+            <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
           {{ end }}
         </div>
       <h1 class="blog-post__heading">{{ .Title }}</h1>
