@@ -1,12 +1,15 @@
 import GoogleSearch from './GoogleSearch';
 
 window.addEventListener('DOMContentLoaded', () => {
-  // eslint-disable-next-line max-len
-  const resultsCount = <HTMLElement>document.querySelector('.search-results__count');
-  // eslint-disable-next-line max-len
-  const resultsHeading = <HTMLHeadingElement>document.querySelector('.search-results__heading');
-  // eslint-disable-next-line max-len
-  const resultsList = <HTMLDivElement>document.querySelector('.search-results__list');
+  const resultsCount = <HTMLElement>(
+    document.querySelector('.search-results__count')
+  );
+  const resultsHeading = <HTMLHeadingElement>(
+    document.querySelector('.search-results__heading')
+  );
+  const resultsList = <HTMLDivElement>(
+    document.querySelector('.search-results__list')
+  );
 
   const searchProperty = window.location.search;
   const urlSearchParams = new URLSearchParams(searchProperty);
@@ -17,18 +20,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const results = await GoogleSearch(query, startIndex);
 
     const searchNext = <HTMLLinkElement>document.querySelector('.search__next');
-    // eslint-disable-next-line max-len
-    const searchPrev = <HTMLLinkElement>document.querySelector('.search__previous');
+    const searchPrev = <HTMLLinkElement>(
+      document.querySelector('.search__previous')
+    );
 
     if (results.items) {
       resultsHeading.textContent = `Search results for ${query}`;
-      resultsCount.textContent =
-        `Displaying results
+      resultsCount.textContent = `Displaying results
         ${results.queries.request[0].startIndex}
         -
-        ${results.queries.request[0].startIndex
-        +
-        results.queries.request[0].count - 1}
+        ${
+          results.queries.request[0].startIndex +
+          results.queries.request[0].count -
+          1
+        }
         of
         ${results.queries.request[0].totalResults}`;
 
@@ -89,4 +94,3 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-

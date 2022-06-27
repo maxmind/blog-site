@@ -17,10 +17,10 @@ export interface ISearchResults {
     nextPage?: IQuery[];
     previousPage?: IQuery[];
     request: IQuery[];
-  }
+  };
   spelling?: {
     correctedQuery: string;
-  }
+  };
 }
 
 const endpoint =
@@ -29,14 +29,13 @@ const endpoint =
 const cx = '5204c164979744d30';
 const key = 'AIzaSyAI4atAz3I5ujXCjoEXRvdwqcYn3AIsCA8';
 
-const url = endpoint
-  .replace('{cx}', cx)
-  .replace('{key}', key);
-
+const url = endpoint.replace('{cx}', cx).replace('{key}', key);
 
 const GoogleSearch =
-  // eslint-disable-next-line max-len
-  async (query: string | null, startIndex: string | null): Promise<ISearchResults> => {
+  async (
+    query: string | null,
+    startIndex: string | null
+  ): Promise<ISearchResults> => {
     let requestUrl = `${url}&q=${query}`;
 
     if (startIndex) {
@@ -49,7 +48,7 @@ const GoogleSearch =
       throw new Error(`There was an error searching for ${query}`);
     }
 
-    return await response.json() as ISearchResults;
+    return (await response.json()) as ISearchResults;
   };
 
 export default GoogleSearch;
