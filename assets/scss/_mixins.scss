@@ -1,126 +1,27 @@
-// Mixins
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-@mixin max-width-container {
-  @media (min-width: #{$max-width-container}) {
-    padding: 0;
-    width: 90%;
-  }
-  margin: 0 auto;
-
-  max-width: $max-width-container;
-  padding: 0 5%;
-}
-
-@mixin vertical-align {
+/***** Mixins *****/
+@mixin heading {
+  color: #00374c;
+  font-family: var(--mm-font-stack-display);
+  font-weight: 500;
+  line-height: 1.2em;
+  margin: calc(var(--mm-spacing) * 2) 0 calc(var(--mm-spacing) / 4);
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@mixin text-overflow {
-  hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word; // IE/Edge compatibility
-}
-
-@mixin focus-ring {
-  box-shadow: 0 0 0 3px $brand-color;
-  outline: 0;
-}
-
-@mixin content-body {
-  img {
-    height: auto;
-    max-width: 100%;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ul,
-  ol {
-    list-style-position: outside;
-    margin: 20px 0 20px 20px;
-    padding-left: 20px;
-  }
-
-  // Sub level list
-  ul > ul,
-  ol > ol,
-  ol > ul,
-  ul > ol,
-  li > ul,
-  li > ol {
-    margin: 0;
-  }
-
-  ul [dir='rtl'],
-  ol [dir='rtl'] {
-    margin-left: 0;
-    margin-right: 20px;
-    padding-left: 0;
-    padding-right: 20px;
-  }
-
-  a:visited { color: unquote('$visited_link_color'); }
-
-  code {
-    background: $primary-shade;
-    border: 1px solid $border-color;
-    border-radius: 3px;
-    margin: 0 2px;
-    padding: 0 5px;
-  }
-
-  pre {
-    background: $primary-shade;
-    border: 1px solid $border-color;
-    border-radius: 3px;
-    overflow: auto;
-    padding: 10px 15px;
-    white-space: pre;
-  }
-
-  blockquote {
-    border-left: 1px solid $border-color;
-    color: $secondary-text-color;
-    font-style: italic;
-    padding: 0 15px;
-  }
-}
-
-@mixin visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  scroll-margin-top: calc(var(--page-header-height) + var(--mm-spacing));
 }
 
 $pattern-scale: 1;
+
+@mixin pattern {
+  position: relative;
+
+  &::before {
+    @include pattern-base;
+  }
+
+  &::after {
+    @include pattern-gradient;
+  }
+}
 
 @mixin pattern-base {
   background-color: #00a7e5;
@@ -135,29 +36,6 @@ $pattern-scale: 1;
   transform: translateZ(0);
   width: 100%;
   will-change: transform;
-}
-
-@mixin pattern-gradient {
-  background: rgb(0, 119, 194);
-  background: linear-gradient(90deg, rgba(0, 119, 194, 0.5) 0%, var(--page-type-color));
-  content: ' ';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-@mixin pattern {
-  position: relative;
-
-  &::before {
-    @include pattern-base;
-  }
-
-  &::after {
-    @include pattern-gradient;
-  }
 }
 
 @mixin pattern-border {
@@ -177,4 +55,38 @@ $pattern-scale: 1;
   }
 }
 
+@mixin pattern-gradient {
+  background: rgb(0, 119, 194);
+  background: linear-gradient(90deg, rgba(0, 119, 194, 0.5) 0%, var(--page-type-color));
+  content: ' ';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
+@mixin menu-button {
+  background: var(--mm-color-background);
+  border: 1px solid var(--mm-color-border);
+  border-radius: var(--mm-border-radius);
+  box-sizing: border-box;
+  color: var(--mm-color-primary-text);
+  cursor: pointer;
+  font-size: 12px;
+  height: 30px;
+  min-width: 30px;
+  padding: 0;
+  width: 30px;
+
+  &:hover {
+    background-color: var(--mm-color-sidebar);
+  }
+
+  @media only screen and (min-width: 420px) {
+    font-size: 16px;
+    height: 50px;
+    min-width: 50px;
+    width: 50px;
+  }
+}

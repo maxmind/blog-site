@@ -1,3 +1,4 @@
+@use 'mixins';
 @use 'variables';
 
 body {
@@ -17,7 +18,7 @@ main {
 }
 
 h1 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 28px;
   font-weight: 700;
   margin: var(--mm-spacing) 0 0;
@@ -25,28 +26,28 @@ h1 {
 }
 
 h2 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 24px;
   font-weight: 700;
 }
 
 h3 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 20px;
 }
 
 h4 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 18px;
 }
 
 h5 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 16px;
 }
 
 h6 {
-  @include variables.heading;
+  @include mixins.heading;
   font-size: 16px;
   text-transform: uppercase;
 

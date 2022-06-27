@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'mixins';
 
 .searchbar {
   display: none;
@@ -32,7 +32,7 @@
 }
 
 .search__button {
-  @include variables.menu-button;
+  @include mixins.menu-button;
   float: right;
 }
 

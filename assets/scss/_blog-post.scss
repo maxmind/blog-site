@@ -1,3 +1,4 @@
+@use 'mixins';
 @use 'variables';
 
 .blog-post__container-featured {
@@ -20,7 +21,7 @@
   overflow: hidden;
   width: 100%;
 
-  @include variables.pattern;
+  @include mixins.pattern;
 
   svg,
   img {
