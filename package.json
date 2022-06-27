@@ -19,7 +19,7 @@
     "@types/prismjs": "^1.26.0",
     "@types/react": "^18.0.8",
     "@types/react-helmet": "^6.1.2",
-    "cheerio": "^1.0.0-rc.10",
+    "cheerio": "^1.0.0-rc.12",
     "classnames": "^2.2.6",
     "css-vars-ponyfill": "^2.4.2",
     "custom-event-polyfill": "^1.0.7",
@@ -162,7 +162,7 @@
     "@mdx-js/react": "2.0.0-next.8",
     "@mdx-js/runtime": "2.0.0-next.8",
     "@mdx-js/util": "2.0.0-next.8",
-    "cheerio": "1.0.0-rc.10",
+    "cheerio": "1.0.0-rc.12",
     "remark-mdx": "2.0.0-next.8"
   },
   "repository": {
