@@ -68,7 +68,8 @@
     "lint:content": "remark . --ext md --quiet",
     "lint:json": "eslint . --ext json",
     "lint:scripts": "tsc && eslint . --ext js,ts",
-    "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}"
+    "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
+    "prettier:ts": "prettier --write './assets/js/**'"
   },
   "version": "0.1.0"
 }
