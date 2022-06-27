@@ -48,6 +48,11 @@
   max-width: var(--mm-max-width);
   padding: calc(var(--mm-spacing) / 2);
   width: 100%;
+
+  .blog-post__heading {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .blog-post__container {
@@ -98,15 +103,7 @@
 
 .blog-post__heading {
   margin-top: 0;
-}
-
-h1.blog-post__heading {
   padding: 0 0 var(--mm-spacing);
-}
-
-h2.blog-post__heading {
-  margin: 0;
-  padding: 0;
 }
 
 .blog-post__title {
@@ -161,7 +158,7 @@ h2.blog-post__heading {
   }
 }
 
-a.blog-post__category {
+.blog-post__category {
   border-bottom: 0;
   color: var(--mm-color-primary-text);
   font-weight: 600;
