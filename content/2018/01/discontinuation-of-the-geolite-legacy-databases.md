@@ -45,8 +45,8 @@ Legacy](https://dev.maxmind.com/geoip/legacy/downloadable/) equivalent of the
 database you are using. In that way, you would be able to continue to use your
 existing integrations. You may also want to consider upgrading to the [GeoIP2
 brand](https://www.maxmind.com/en/geoip2-services-and-databases). (*Please note
-that since the GeoIP Legacy databases have been superseded by* GeoIP2\_, the
-GeoIP Legacy databases may also be discontinued at some point in the future.)\_
+that since the GeoIP Legacy databases have been superseded by GeoIP2, the
+GeoIP Legacy databases may also be discontinued at some point in the future.*)
 
 ### GeoLite2 Developer’s Package customers
 
