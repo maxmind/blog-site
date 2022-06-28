@@ -2,14 +2,10 @@ name: Hugo
 
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -27,4 +23,6 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: ./build.sh
+        env:
+          DARTSASS_VERSION: 1.53.0
