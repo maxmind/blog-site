@@ -11,6 +11,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:import/warnings',
     'plugin:security/recommended',
+    'prettier', // needs to be last to prevent eslint and prettier conflicts
   ],
   globals: {
     __BASE_PATH__: true,
@@ -145,10 +146,6 @@ module.exports = {
     'filenames/match-exported': [
       1,
       'pascal',
-    ],
-    indent: [
-      'warn',
-      2,
     ],
     'max-len': [
       'warn',
