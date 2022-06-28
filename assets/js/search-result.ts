@@ -1,8 +1,7 @@
 import GoogleSearch from './GoogleSearch';
 
 window.addEventListener('DOMContentLoaded', () => {
-  const loading =
-    <HTMLDivElement>document.querySelector('.loading');
+  const loading = <HTMLDivElement>document.querySelector('.loading');
   const resultsCount = <HTMLElement>(
     document.querySelector('.search-results__count')
   );
