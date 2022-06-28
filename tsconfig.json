@@ -1,33 +1,16 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "ES2019"
-    ],
     "module": "commonjs",
     "noEmit": true,
-    "noUnusedLocals": false,
-    "paths": {
-      "*": ["src/types/*"],
-      "openapi-types": ["src/types/*"]
-    },
-    "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
-    "target": "ES2019",
-    "typeRoots": ["src/types", "./node_modules/@types"]
+    "target": "ES2019"
   },
-  "files": [
-    "test/loadershim.d.ts"
-  ],
   "exclude": [
     "node_modules",
     "public",
     ".cache"
   ],
-  "include": ["functions/**/*", "src/**/*", "test/**/*", "content/navigation.tsx", "plugins"]
+  "include": ["./assets/js/**/*"]
 }

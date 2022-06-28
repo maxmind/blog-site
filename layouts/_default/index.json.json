@@ -1,0 +1,11 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range first 3 (where .Site.RegularPages "Params.isFeatured" true) -}}
+    {{- $.Scratch.Add "index" (
+        dict "date" .Params.Date
+             "excerpt" .Summary
+             "featured_image_src" (.Site.BaseURL | replaceRE "/?$" .Params.featuredImage)
+             "link" .Permalink
+             "title" .Params.Title
+    ) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

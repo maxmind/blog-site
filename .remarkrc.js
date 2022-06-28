@@ -15,7 +15,7 @@ module.exports = {
     ],
     [
       'lint-file-extension',
-      'mdx',
+      'md',
     ],
     [
       'lint-list-item-indent',

@@ -1,0 +1,102 @@
+/***** Pagination *****/
+@use 'variables';
+
+.pagination__arrow {
+  display: grid;
+  grid-area: arrow;
+}
+
+.pagination__footer {
+  display: grid;
+  gap: var(--mm-spacing);
+  grid-template-areas: 'newer older';
+  margin: auto;
+  max-width: 800px;
+  padding: 0 0 calc(var(--mm-spacing) * 2);
+  place-content: end space-between;
+  width: 100%;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.pagination__newer {
+  grid-area: newer;
+  grid-template-areas: 'arrow direction';
+  grid-template-columns: min-content 1fr;
+  justify-self: left;
+  padding-left: var(--mm-spacing);
+  right: 0;
+  text-align: left;
+
+  &:hover {
+    right: calc(var(--mm-spacing) / 2);
+  }
+}
+
+.pagination__older {
+  grid-area: older;
+  grid-template-areas: 'direction arrow';
+  grid-template-columns: 1fr min-content;
+  justify-self: right;
+  left: 0;
+  padding-right: var(--mm-spacing);
+  text-align: right;
+
+  &:hover {
+    left: calc(var(--mm-spacing) / 2);
+  }
+}
+
+.pagination__newer,
+.pagination__older {
+  align-items: center;
+  background: 0.1s ease-in-out;
+  border-radius: var(--mm-border-radius);
+  color: var(--mm-color-display-text);
+  column-gap: calc(var(--mm-spacing) / 2);
+  display: grid;
+  font-size: 18px;
+  font-weight: 500;
+  grid-template-columns: auto;
+  padding: calc(var(--mm-spacing) / 4) calc(var(--mm-spacing) / 2);
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    background: var(--mm-color-sidebar);
+    cursor: pointer;
+  }
+}
+
+.pagination__post {
+  .pagination__footer {
+    grid-template-areas:
+      'newer'
+      'older';
+    grid-template-columns: 1fr;
+    max-width: var(--mm-max-width);
+    padding: 0  0 var(--mm-spacing) 0;
+  }
+
+  .pagination__newer,
+  .pagination__older {
+    width: 85%;
+  }
+}
+
+.pagination__direction {
+  grid-area: direction;
+}
+
+@include variables.breakpoint('md') {
+  .pagination__post {
+    .pagination__footer {
+      grid-template-areas: 'newer older';
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
