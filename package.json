@@ -50,7 +50,8 @@
       "npm run fix:content"
     ],
     "./assets/js/*.{js,ts}": [
-      "npm run fix:scripts"
+      "npm run fix:scripts",
+      "npm run prettier:ts"
     ],
     "./assets/scss/*.[s]css": [
       "npm run fix:styles"
