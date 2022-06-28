@@ -17,72 +17,83 @@ window.addEventListener('DOMContentLoaded', () => {
   const startIndex = urlSearchParams.get('start');
 
   const fetchResults = async () => {
-    const results = await GoogleSearch(query, startIndex);
+    try {
 
-    const searchNext = <HTMLLinkElement>document.querySelector('.search__next');
-    const searchPrev = <HTMLLinkElement>(
-      document.querySelector('.search__previous')
-    );
+      const results = await GoogleSearch(query, startIndex);
 
-    if (results.items) {
-      resultsHeading.textContent = `Search results for ${query}`;
-      resultsCount.textContent = `Displaying results
-        ${results.queries.request[0].startIndex}
-        -
-        ${
-          results.queries.request[0].startIndex +
-          results.queries.request[0].count -
-          1
+      const searchNext = <HTMLLinkElement>(
+        document.querySelector('.search__next')
+      );
+      const searchPrev = <HTMLLinkElement>(
+        document.querySelector('.search__previous')
+      );
+
+      if (results.items) {
+        resultsHeading.textContent = `Search results for ${query}`;
+        resultsCount.textContent = `Displaying results
+          ${results.queries.request[0].startIndex}
+          -
+          ${
+            results.queries.request[0].startIndex +
+            results.queries.request[0].count -
+            1
+          }
+          of
+          ${results.queries.request[0].totalResults}`;
+
+        results.items?.map((result) => {
+          const article = document.createElement('article');
+          article.className = 'search__result-list-item';
+
+          const a = document.createElement('a');
+          a.className = 'search__result-title';
+          a.href = `${result.link}`;
+          a.textContent = `${result.title}`;
+
+          const small = document.createElement('small');
+          small.className = 'search__result-url';
+          small.textContent = `${result.link}`;
+
+          const p = document.createElement('p');
+          p.className = 'search__result-description';
+          p.textContent = `${result.snippet}`;
+
+          resultsList.appendChild(article);
+          article.appendChild(a);
+          article.appendChild(small);
+          article.appendChild(p);
+        });
+
+        if (results.queries.nextPage) {
+          searchNext.style.display = 'block';
+
+          const nextUrl = new URL(document.location.href);
+          nextUrl.search = new URLSearchParams({
+            query: query,
+            start: results.queries.nextPage[0].startIndex.toString(),
+          }).toString();
+          searchNext.href = nextUrl.toString();
         }
-        of
-        ${results.queries.request[0].totalResults}`;
 
-      results.items?.map((result) => {
-        const article = document.createElement('article');
-        article.className = 'search__result-list-item';
+        if (results.queries.previousPage) {
+          searchPrev.style.display = 'block';
 
-        const a = document.createElement('a');
-        a.className = 'search__result-title';
-        a.href = `${result.link}`;
-        a.textContent = `${result.title}`;
-
-        const small = document.createElement('small');
-        small.className = 'search__result-url';
-        small.textContent = `${result.link}`;
-
-        const p = document.createElement('p');
-        p.className = 'search__result-description';
-        p.textContent = `${result.snippet}`;
-
-        resultsList.appendChild(article);
-        article.appendChild(a);
-        article.appendChild(small);
-        article.appendChild(p);
-      });
-
-      if (results.queries.nextPage) {
-        searchNext.style.display = 'block';
-
-        const nextUrl = new URL(document.location.href);
-        nextUrl.search = new URLSearchParams({
-          query: query,
-          start: results.queries.nextPage[0].startIndex.toString(),
-        }).toString();
-        searchNext.href = nextUrl.toString();
+          const prevUrl = new URL(document.location.href);
+          prevUrl.search = new URLSearchParams({
+            query: query,
+            start: results.queries.previousPage[0].startIndex.toString(),
+          }).toString();
+          searchPrev.href = prevUrl.toString();
+        }
+      } else {
+        resultsHeading.textContent = `No results found for ${query}`;
       }
+    } catch {
+      const p = document.createElement('p');
+      p.textContent = 'Please try again.';
 
-      if (results.queries.previousPage) {
-        searchPrev.style.display = 'block';
-
-        const prevUrl = new URL(document.location.href);
-        prevUrl.search = new URLSearchParams({
-          query: query,
-          start: results.queries.previousPage[0].startIndex.toString(),
-        }).toString();
-        searchPrev.href = prevUrl.toString();
-      }
-    } else {
-      resultsHeading.textContent = `No results found for ${query}`;
+      resultsHeading.textContent = 'There was an issue performing the search.';
+      resultsHeading.appendChild(p);
     }
   };
 
