@@ -1,6 +1,8 @@
 import GoogleSearch from './GoogleSearch';
 
 window.addEventListener('DOMContentLoaded', () => {
+  const loading =
+    <HTMLDivElement>document.querySelector('.loading');
   const resultsCount = <HTMLElement>(
     document.querySelector('.search-results__count')
   );
@@ -18,8 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const fetchResults = async () => {
     try {
-
       const results = await GoogleSearch(query, startIndex);
+      loading.style.display = 'none';
 
       const searchNext = <HTMLLinkElement>(
         document.querySelector('.search__next')
@@ -89,6 +91,8 @@ window.addEventListener('DOMContentLoaded', () => {
         resultsHeading.textContent = `No results found for ${query}`;
       }
     } catch {
+      loading.style.display = 'none';
+
       const p = document.createElement('p');
       p.textContent = 'Please try again.';
 
@@ -99,6 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (searchProperty) {
     if (query.trim() === '') {
+      loading.style.display = 'none';
       resultsHeading.textContent = 'Please enter a search query';
     } else {
       fetchResults();
