@@ -138,7 +138,9 @@ All Go programs begin with a `package main`, indicating that this file will
 contain a `main` function, the start of our program's execution. This program is
 no exception.
 
-`package main`
+```go
+package main
+```
 
 Most programs have a list of `import`ed packages next. In our case, the list of
 packages imported include some from the standard library:
@@ -151,12 +153,29 @@ from MaxMind's [`mmdbwriter`](https://github.com/maxmind/mmdbwriter/) repo,
 which are designed specifically for building MMDB files and for working with
 MMDB trees -- you'll see how we use those below.
 
-`import ( 	"log" 	"net" 	"os"  	"github.com/maxmind/mmdbwriter" 	"github.com/maxmind/mmdbwriter/inserter" 	"github.com/maxmind/mmdbwriter/mmdbtype" )`
+```go
+import (
+  "log"
+  "net"
+  "os"
+
+  "github.com/maxmind/mmdbwriter"
+  "github.com/maxmind/mmdbwriter/inserter"
+  "github.com/maxmind/mmdbwriter/mmdbtype"
+)
+```
 
 Now we're at the start of the program execution. We begin by loading the
 existing database, `GeoLite2-Country.mmdb`, that we're going to enrich.
 
-`func main() { 	// Load the database we wish to enrich. 	writer, err := mmdbwriter.Load("GeoLite2-Country.mmdb", mmdbwriter.Options{}) 	if err != nil { 		log.Fatal(err) 	}`
+```go
+func main() {
+  // Load the database we wish to enrich.
+  writer, err := mmdbwriter.Load("GeoLite2-Country.mmdb", mmdbwriter.Options{})
+  if err != nil {
+    log.Fatal(err)
+  }
+```
 
 Having loaded the existing GeoLite2 Country database, we begin defining the data
 we wish to enrich it with. The second return value of the
@@ -167,7 +186,13 @@ first parameter for our upcoming
 call, so we use `net.ParseCIDR()` to go from the
 `string`-literal CIDR form `"56.0.0.0/16"` to the desired `*net.IPnet`.
 
-`	// Define and insert the new data. 	_, sreNet, err := net.ParseCIDR("56.0.0.0/16") 	if err != nil { 		log.Fatal(err) 	}`
+```go
+  // Define and insert the new data.
+  _, sreNet, err := net.ParseCIDR("56.0.0.0/16")
+  if err != nil {
+    log.Fatal(err)
+  }
+```
 
 `sreData` is the data we will be merging into the existing records for the SRE
 range. We must define this data in terms of the
@@ -199,7 +224,16 @@ examining the `$.[0].Records[0].Record`
 stripped of its wrappers), then you'll see that it is a JSON Object, which as
 expected corresponds to the `mmdbtype.Map` type.]
 
-`	sreData := mmdbtype.Map{ 		"AcmeCorp.DeptName": mmdbtype.String("SRE"), 		"AcmeCorp.Environments": mmdbtype.Slice{ 			mmdbtype.String("development"), 			mmdbtype.String("staging"), 			mmdbtype.String("production"), 		}, 	}`
+```go
+  sreData := mmdbtype.Map{
+    "AcmeCorp.DeptName": mmdbtype.String("SRE"),
+    "AcmeCorp.Environments": mmdbtype.Slice{
+      mmdbtype.String("development"),
+      mmdbtype.String("staging"),
+      mmdbtype.String("production"),
+    },
+  }
+```
 
 Now that we've got our data, we insert it into the MMDB using
 [`InsertFunc`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree.InsertFunc).
@@ -221,19 +255,63 @@ What happens if there is an IP address for which no record exists? With the
 `inserter.TopLevelMergeWith` strategy, this IP address will also happily take
 our new top-level keys as well.
 
-`	if err := writer.InsertFunc(sreNet, inserter.TopLevelMergeWith(sreData)); err != nil { 		log.Fatal(err) 	}`
+```go
+  if err := writer.InsertFunc(sreNet, inserter.TopLevelMergeWith(sreData)); err != nil {
+    log.Fatal(err)
+  }
+```
 
 We repeat the process for the Development and Management departments, taking
 care to update the range itself, the list of environments, and the department
 name as we go.
 
-`	_, devNet, err := net.ParseCIDR("56.1.0.0/16") 	if err != nil { 		log.Fatal(err) 	} 	devData := mmdbtype.Map{ 		"AcmeCorp.DeptName": mmdbtype.String("Development"), 		"AcmeCorp.Environments": mmdbtype.Slice{ 			mmdbtype.String("development"), 			mmdbtype.String("staging"), 		}, 	} 	if err := writer.InsertFunc(devNet, inserter.TopLevelMergeWith(devData)); err != nil { 		log.Fatal(err) 	}  	_, mgmtNet, err := net.ParseCIDR("56.2.0.0/16") 	if err != nil { 		log.Fatal(err) 	} 	mgmtData := mmdbtype.Map{ 		"AcmeCorp.DeptName": mmdbtype.String("Management"), 		"AcmeCorp.Environments": mmdbtype.Slice{ 			mmdbtype.String("development"), 			mmdbtype.String("staging"), 		}, 	} 	if err := writer.InsertFunc(mgmtNet, inserter.TopLevelMergeWith(mgmtData)); err != nil { 		log.Fatal(err) 	}`
+```go
+  _, devNet, err := net.ParseCIDR("56.1.0.0/16")
+  if err != nil {
+    log.Fatal(err)
+  }
+  devData := mmdbtype.Map{
+    "AcmeCorp.DeptName": mmdbtype.String("Development"),
+    "AcmeCorp.Environments": mmdbtype.Slice{
+      mmdbtype.String("development"),
+      mmdbtype.String("staging"),
+    },
+  }
+  if err := writer.InsertFunc(devNet, inserter.TopLevelMergeWith(devData)); err != nil {
+    log.Fatal(err)
+  }
+
+  _, mgmtNet, err := net.ParseCIDR("56.2.0.0/16")
+  if err != nil {
+    log.Fatal(err)
+  }
+  mgmtData := mmdbtype.Map{
+    "AcmeCorp.DeptName": mmdbtype.String("Management"),
+    "AcmeCorp.Environments": mmdbtype.Slice{
+      mmdbtype.String("development"),
+      mmdbtype.String("staging"),
+    },
+  }
+  if err := writer.InsertFunc(mgmtNet, inserter.TopLevelMergeWith(mgmtData)); err != nil {
+    log.Fatal(err)
+  }
+```
 
 Finally we write the new database to disk.
 
-`	// Write the newly enriched DB to the filesystem. 	fh, err := os.Create("GeoLite2-Country-with-Department-Data.mmdb") 	if err != nil { 		log.Fatal(err) 	} 	_, err = writer.WriteTo(fh) 	if err != nil { 		log.Fatal(err) 	} }`
-
-### [](https://github.com/maxmind/mmdb-from-go-blogpost#building-the-code-and-running-it)Building the code and running it
+```go
+  // Write the newly enriched DB to the filesystem.
+  fh, err := os.Create("GeoLite2-Country-with-Department-Data.mmdb")
+  if err != nil {
+    log.Fatal(err)
+  }
+  _, err = writer.WriteTo(fh)
+  if err != nil {
+    log.Fatal(err)
+  }
+}
+```
+### [Building the code and running it](https://github.com/maxmind/mmdb-from-go-blogpost#building-the-code-and-running-it)
 
 So that's our code! Now we build the program and run it. On my 2015-model laptop
 it takes under 10 seconds to run.

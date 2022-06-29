@@ -14,6 +14,8 @@
 
   <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}feed.xml" title="RSS Feed for blog.maxmind.com">
 
+  {{ template "_internal/google_analytics.html" . }}
+
   {{ $search := resources.Get "js/search.ts" | js.Build }}
   {{ $searchResult := resources.Get "js/search-result.ts" | js.Build }}
   {{ $systemStatus := resources.Get "js/system-status.ts" | js.Build }}

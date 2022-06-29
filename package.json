@@ -9,6 +9,7 @@
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-compat": "^4.0.2",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.26.0",
@@ -50,7 +51,8 @@
       "npm run fix:content"
     ],
     "./assets/js/*.{js,ts}": [
-      "npm run fix:scripts"
+      "npm run fix:scripts",
+      "npm run prettier:ts"
     ],
     "./assets/scss/*.[s]css": [
       "npm run fix:styles"

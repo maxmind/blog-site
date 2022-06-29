@@ -33,3 +33,5 @@ rssLimit = 6
     noHl = false
     style = 'monokai'
     tabWidth = 4
+
+googleAnalytics= 'G-8K33X585JF'
