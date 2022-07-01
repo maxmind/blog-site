@@ -1,3 +1,4 @@
+/:year/:month/:day/:slug/ /:year/:month/:slug/ 302
 /feed /feed.xml 302
 /feed/ /feed.xml 302
 /rss.xml /feed.xml 302
