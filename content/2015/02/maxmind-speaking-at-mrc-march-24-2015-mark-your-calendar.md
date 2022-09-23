@@ -8,10 +8,10 @@ tag:
   - "Financial Services"
   - "Manual Review"
 authors:
-- "The Team at MaxMind"
+  - "The Team at MaxMind"
 ---
 
-![MRC\_Vegas\_15(Logo) (1)](/images/2015/02/MRC_Vegas_15Logo-1-e1424453851417.jpg)
+![MRC_Vegas_15(Logo) (1)](/images/2015/02/MRC_Vegas_15Logo-1-e1424453851417.jpg)
 
 MaxMind, the industry-leading provider of IP intelligence and online fraud
 detection tools, has been invited to present at the 2015 Merchant Risk Council
@@ -23,12 +23,12 @@ industry experience to the presentation as well. Whitepages Pro, one of the
 major providers of contact information in North America, will moderate our
 lively presentation.
 
-![cropped-cropped-maxmind\_logo.png](/images/2015/02/cropped-cropped-maxmind_logo-e1424453285396.png)
+![cropped-cropped-maxmind_logo.png](/images/2015/02/cropped-cropped-maxmind_logo-e1424453285396.png)
 ![Western Union](/images/2015/02/Western-Union-e1424453215447.png)
 ![Orbitz](/images/2015/02/Orbitz-e1424453363302.png)
 ![White Pages Pro](/images/2015/02/White-Pages-Pro-e1424453527304-150x35.png)
 
-## Manual Review Best Practices *Learnings from Peak Buying Times in 2014*
+## Manual Review Best Practices _Learnings from Peak Buying Times in 2014_
 
 We invite you to attend this panel discussion to learn more about best practices
 for preparing for, executing and evaluating your manual review processes. You’ll

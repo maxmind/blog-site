@@ -19,16 +19,17 @@ service partner with expertise in geolocation. They chose MaxMind. “We’re a
 relatively new company, but our growth has been phenomenal since we added
 MaxMind’s GeoIP2 Precision services,” said Fomo’s co-founder Ryan Kulp.
 
-Within five months of using [GeoIP2 Precision services (Country and
-City)](https://www.maxmind.com/en/geoip2-precision-services), Fomo has curated
-more than 100,000 unique browsing transactions for their e-commerce partners and
-helped their clients achieve double-digit growth in consumer adoptions. For
-example, Sphynx, a manufacturer of pocket-sized electric shavers, achieved a
-49.6% increase in their transactional conversions after they enabled GeoIP2
-Precision services through Fomo’s API. Another client, TidyMe, a large cleaning
-service in Australia, has seen its conversions increase by 12%. “Introducing
-MaxMind into our offering has been a game changer for us,” said Kulp. “Growth
-like that is not possible without a reliable geolocation provider like MaxMind.”
+Within five months of using
+[GeoIP2 Precision services (Country and City)](https://www.maxmind.com/en/geoip2-precision-services),
+Fomo has curated more than 100,000 unique browsing transactions for their
+e-commerce partners and helped their clients achieve double-digit growth in
+consumer adoptions. For example, Sphynx, a manufacturer of pocket-sized electric
+shavers, achieved a 49.6% increase in their transactional conversions after they
+enabled GeoIP2 Precision services through Fomo’s API. Another client, TidyMe, a
+large cleaning service in Australia, has seen its conversions increase by 12%.
+“Introducing MaxMind into our offering has been a game changer for us,” said
+Kulp. “Growth like that is not possible without a reliable geolocation provider
+like MaxMind.”
 
 ## Snapshot
 
@@ -47,15 +48,16 @@ social proof that other people also visit and interact with a website.
 Social proof is a relatively new branch of marketing that borrows from the
 [psychological phenomenon](https://en.wikipedia.org/wiki/Social_proof) known as
 Informational Social Influence. Social proof marketing advocates follow the
-principle that [customers seek influence from their
-peers](https://www.forbes.com/sites/miketempleman/2017/04/03/6-ways-to-integrate-social-proof-in-your-saas-marketing-strategy/#7e27d93585f8)
+principle that
+[customers seek influence from their peers](https://www.forbes.com/sites/miketempleman/2017/04/03/6-ways-to-integrate-social-proof-in-your-saas-marketing-strategy/#7e27d93585f8)
 before making a decision. In fact, Fomo is aptly named. The concept of “missing
-out” is ingrained in those who are [hooked on social
-media](https://psychcentral.com/blog/fear-of-missing-out). “People feel
-comfortable buying from a website they know other people are buying from,” said
-Kulp. “With Fomo and MaxMind, people visiting e-commerce shops can see, for
-example, that John just purchased a shirt 2 minutes ago and where he is from.
-Showing those interactions creates urgency and increases on-page conversions.”
+out” is ingrained in those who are
+[hooked on social media](https://psychcentral.com/blog/fear-of-missing-out).
+“People feel comfortable buying from a website they know other people are buying
+from,” said Kulp. “With Fomo and MaxMind, people visiting e-commerce shops can
+see, for example, that John just purchased a shirt 2 minutes ago and where he is
+from. Showing those interactions creates urgency and increases on-page
+conversions.”
 
 ## Challenge
 
@@ -86,7 +88,7 @@ of localized, geocoded interactions for many e-commerce stores throughout the
 world. “We set out to solve a very specific problem for our clients, and are
 thrilled with the results we’ve seen since choosing MaxMind as our partner.”
 
-***
+---
 
 To find out more about MaxMind’s GeoIP2 Precision services or to request a free
 trial, simply click

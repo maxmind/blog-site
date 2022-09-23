@@ -7,7 +7,7 @@ tag:
   - "Credit Card Fraud"
   - "eCommerce"
 authors:
- - "The Team at MaxMind"
+  - "The Team at MaxMind"
 ---
 
 ![img for blog](/images/2014/02/img-for-blog.jpg)
@@ -101,5 +101,4 @@ Documentation.
 
 If you have any questions about this minFraud Service Best Practices
 recommendation and how your use of the minFraud Service can benefit by this Best
-Practice, please let us know at
-<support@maxmind.com>.
+Practice, please let us know at <support@maxmind.com>.

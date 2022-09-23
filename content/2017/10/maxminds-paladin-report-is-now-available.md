@@ -12,8 +12,8 @@ authors:
 ---
 
 Deciding on the right fraud prevention and IP intelligence provider can be a
-daunting task. With [worldwide internet usage projected to grow every
-year](https://www.statista.com/statistics/325706/global-internet-user-penetration/),
+daunting task. With
+[worldwide internet usage projected to grow every year](https://www.statista.com/statistics/325706/global-internet-user-penetration/),
 your choice matters now more than ever. So, make an informed, educated one with
 MaxMind's Paladin Report.
 
@@ -23,13 +23,13 @@ examining our products and services through hands-on evaluation, industry
 comparisons, and customer interviews to create MaxMind's Paladin Report. It
 includes:
 
-* Personal reviews of product functionality
-* How our products work from a technical perspective
-* Services available to help customers during integration and throughout their
+- Personal reviews of product functionality
+- How our products work from a technical perspective
+- Services available to help customers during integration and throughout their
   client life cycle
-* Current partnerships and channels for direct and indirect customers
-* The verticals companies are focusing on
-* A breakdown of market segments
+- Current partnerships and channels for direct and indirect customers
+- The verticals companies are focusing on
+- A breakdown of market segments
 
 Presented below is MaxMind's Paladin Report. It’s completely free to download.
 
@@ -38,7 +38,7 @@ Presented below is MaxMind's Paladin Report. It’s completely free to download.
 We hope that you find the report useful and beneficial. If you have any
 questions, please [contact us](https://www.maxmind.com/en/contact) any time.
 
-***
+---
 
 Founded in 2002, MaxMind is an industry-leading provider of online fraud
 detection and IP intelligence. Our minFraud Network leverages IP intelligence

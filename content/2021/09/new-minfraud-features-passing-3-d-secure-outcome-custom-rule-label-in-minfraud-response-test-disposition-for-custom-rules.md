@@ -1,5 +1,7 @@
 ---
-title: "New minFraud features: passing 3-D Secure outcome, custom rule label in minFraud response, “test” disposition for custom rules"
+title:
+  "New minFraud features: passing 3-D Secure outcome, custom rule label in
+  minFraud response, “test” disposition for custom rules"
 date: "2021-09-03"
 category:
   - "Online Fraud Detection"
@@ -12,18 +14,18 @@ authors:
 ---
 
 We’re excited to share a couple of new features that we recently added to our
-[minFraud service client
-APIs](https://dev.maxmind.com/minfraud/api-documentation?lang=en#api-clients).
+[minFraud service client APIs](https://dev.maxmind.com/minfraud/api-documentation?lang=en#api-clients).
 
 ## Passing 3-D Secure Outcomes
 
-You can now send us whether the outcome of [3-D Secure
-verification](https://en.wikipedia.org/wiki/3-D_Secure) (e.g. Safekey,
-SecureCode, Verified by Visa) was successful. Sharing this data will help
-improve your risk scoring by providing our scoring model with positive feedback.
+You can now send us whether the outcome of
+[3-D Secure verification](https://en.wikipedia.org/wiki/3-D_Secure) (e.g.
+Safekey, SecureCode, Verified by Visa) was successful. Sharing this data will
+help improve your risk scoring by providing our scoring model with positive
+feedback.
 
-This new input is present in the [Credit Card request
-object](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__was_3d_secure_successful)
+This new input is present in the
+[Credit Card request object](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__was_3d_secure_successful)
 (links to our developer documentation).
 
 ## Receiving Custom Rule Labels in the minFraud Response
@@ -32,11 +34,10 @@ You now receive the custom rule label (the name you set for a rule) for minFraud
 transactions which were affected by a rule. This will allow you to better
 fine-tune the workflows you may have for specific types of transactions.
 
-This new output is present in the [Disposition response
-object](https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#schema--response--disposition__rule_label)
-(links to our developer documentation). You can read more about [minFraud custom
-rules
-here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).
+This new output is present in the
+[Disposition response object](https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#schema--response--disposition__rule_label)
+(links to our developer documentation). You can read more about
+[minFraud custom rules here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).
 
 ## A ‘Test’ Disposition
 
@@ -50,8 +51,7 @@ and manual review workflows respectively in your production system. If you would
 like to observe the effect of a new custom rule D for some period of time before
 full use in production, you may choose to set its disposition action to “test”
 as to not interfere with existing production workflows. This new value is
-present in the [Disposition response object in the `/action/`
-output](https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#schema--response--disposition__action)
-(links to our developer documentation). You can read more about [minFraud custom
-rules
-here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).
+present in the
+[Disposition response object in the `/action/` output](https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#schema--response--disposition__action)
+(links to our developer documentation). You can read more about
+[minFraud custom rules here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).

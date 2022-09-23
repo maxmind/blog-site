@@ -37,7 +37,7 @@ ensure your data is as safe and secure as possible. If you have any questions,
 please do not hesitate to
 [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
 
-***
+---
 
 ## TLS v1.0 and v1.1
 
@@ -63,7 +63,7 @@ v1.0/v1.1 is October 16, 2019.
 If you have any questions at all, please do not hesitate to
 [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
 
-***
+---
 
 ## HTTP Requests to Legacy minFraud Services
 
@@ -85,16 +85,16 @@ retirement date for HTTP requests to legacy **minFraud** services is October
 
 Below is a list of affected (legacy **minFraud** service) URLs:
 
-\*.maxmind.com/app/ccv2r \*.maxmind.com/app/minfraud\_soap
-\*.maxmind.com/app/fast\_proxy \*.maxmind.com/app/bin\_http
-\*.maxmind.com/app/ipauth\_http
+\*.maxmind.com/app/ccv2r \*.maxmind.com/app/minfraud_soap
+\*.maxmind.com/app/fast_proxy \*.maxmind.com/app/bin_http
+\*.maxmind.com/app/ipauth_http
 
 We also highly recommend that our **GeoIP** customers use HTTPS instead of HTTP.
 
 If you have any questions at all, please do not hesitate to
 [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
 
-***
+---
 
 ## Legacy minFraud SOAP API
 
@@ -113,11 +113,11 @@ more information.
 
 To move off the SOAP API, you will need to change your integration to either:
 
-* Integrate with the legacy **minFraud** service directly per
+- Integrate with the legacy **minFraud** service directly per
   <https://dev.maxmind.com/minfraud/minfraud-legacy/>.
-* Use our newer **minFraud** services (read about
+- Use our newer **minFraud** services (read about
   [what’s new in our latest minFraud services](https://dev.maxmind.com/minfraud/whats-new-in-minfraud-score-and-minfraud-insights/))
-* Use one of our other
+- Use one of our other
   [client APIs for legacy minFraud services](https://dev.maxmind.com/minfraud/minfraud-legacy/)
   (not recommended).
 
@@ -129,31 +129,31 @@ the legacy **minFraud** SOAP API is January 31, 2020 (**revised to May 8,
 **Timing with older TLS retirement**
 
 Please note that the retirement dates for TLS v1.0/v1.1 and HTTP requests to
-legacy **minFraud** services are *earlier* than the retirement date for the SOAP
+legacy **minFraud** services are _earlier_ than the retirement date for the SOAP
 API. As a result, we recommend moving off the legacy minFraud SOAP API and
 upgrading to TLS v1.2 or higher at the same time (and prior to October 16,
 2019\).
 
 If you need to continue using SOAP after October 16, 2019 until January 31,
 2020, you will need to either (1) upgrade to version 15, available at
-<https://www.maxmind.com/wsdl/minfraud-soap-15.wsdl>;
-or (2) override the URL used by your current WSDL file to force it to use HTTPS.
+<https://www.maxmind.com/wsdl/minfraud-soap-15.wsdl>; or (2) override the URL
+used by your current WSDL file to force it to use HTTPS.
 
 If you have any questions at all, please do not hesitate to
 [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
 
-***
+---
 
 ## Timeline
 
-|                                           |                                                                                   |   |   |
-| ----------------------------------------- | --------------------------------------------------------------------------------- | - | - |
-| Week of April 15, 2019                    | We will inform affected accounts (as of April 1, 2019) via email                  |   |   |
-| Week of July 29, 2019                     | Planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests     |   |   |
-| August 28, 2019                           | 2nd planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests |   |   |
-| September 25, 2019                        | 3rd planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests |   |   |
-| October 16, 2019                          | TLS v1.0 and v1.1, and minFraud HTTP requests no longer supported                 |   |   |
-| January 31, 2020 (revised to May 8, 2020) | Legacy minFraud SOAP API discontinued                                             |   |   |
+|                                           |                                                                                   |     |     |
+| ----------------------------------------- | --------------------------------------------------------------------------------- | --- | --- |
+| Week of April 15, 2019                    | We will inform affected accounts (as of April 1, 2019) via email                  |     |     |
+| Week of July 29, 2019                     | Planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests     |     |     |
+| August 28, 2019                           | 2nd planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests |     |     |
+| September 25, 2019                        | 3rd planned interruption of TLS v1.0 and 1.1 connections & minFraud HTTP requests |     |     |
+| October 16, 2019                          | TLS v1.0 and v1.1, and minFraud HTTP requests no longer supported                 |     |     |
+| January 31, 2020 (revised to May 8, 2020) | Legacy minFraud SOAP API discontinued                                             |     |     |
 
 If you have any questions, please do not hesitate to
 [contact us](https://support.maxmind.com/hc/en-us/requests/new/).

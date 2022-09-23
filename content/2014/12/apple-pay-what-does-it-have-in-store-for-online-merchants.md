@@ -4,10 +4,10 @@ date: "2014-12-02"
 category:
   - "Online Fraud Detection"
 tag:
- - "Credit Card Fraud"
- - "eCommerce"
+  - "Credit Card Fraud"
+  - "eCommerce"
 authors:
- - "The Team at MaxMind"
+  - "The Team at MaxMind"
 ---
 
 In the world of accepting online payments, credit and debit cards are the
@@ -33,7 +33,7 @@ payment options have been trying to take hold for several years now.
 
 While Google and Microsoft have tried their hand at mobile payment methods,
 Apple’s recent release of Apple Pay is the
-[first to show encouraging signs](https://www.nytimes.com/2014/11/15/technology/apple-pay-gives-glimpse-of-mainstream-appeal-for-mobile-payments.html?emc=edit_tu_20141117\&nl=technology\&nlid=23993500&_r=1)
+[first to show encouraging signs](https://www.nytimes.com/2014/11/15/technology/apple-pay-gives-glimpse-of-mainstream-appeal-for-mobile-payments.html?emc=edit_tu_20141117&nl=technology&nlid=23993500&_r=1)
 of nascent adoption. With the smartphone now ubiquitous, the ease of use at the
 cash register for this type of payment method becomes more compelling.
 

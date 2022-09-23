@@ -1,5 +1,6 @@
 ---
-title: "Going Local: How MaxMind Helps GeoFli’s Customers’ Conversion Rates Soar"
+title:
+  "Going Local: How MaxMind Helps GeoFli’s Customers’ Conversion Rates Soar"
 date: "2018-01-02"
 category:
   - "IP Geolocation and Network Data"
@@ -11,8 +12,8 @@ authors:
   - "The Team at MaxMind"
 ---
 
-Digitally savvy consumers are [increasingly seeking online
-experiences](https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/what-shoppers-really-want-from-personalized-marketing)
+Digitally savvy consumers are
+[increasingly seeking online experiences](https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/what-shoppers-really-want-from-personalized-marketing)
 tailored to their interests; meanwhile, web personalization companies like
 [GeoFli](https://geofli.com/) are increasingly seeking ways to deliver just the
 right experiences to those consumers, at the right time.
@@ -37,8 +38,8 @@ increased 92%.
 
 ## SNAPSHOT
 
-Web-based personalization is [becoming increasingly
-popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK\&IR=T)
+Web-based personalization is
+[becoming increasingly popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK&IR=T)
 among online companies and digital marketers. The practice allows a business to
 identify, segment, and target their visitors in order to serve them personalized
 content based on some identifiable attribute of the visitor - such as
@@ -55,14 +56,14 @@ approximate location. “It’s about delivering the most important, useful cont
 to them at the exact moment they are on a site,” said Taylor McDermott, GeoFli’s
 online strategist.
 
-GeoFli’s user interface (UI) features a very simple [point-and-click
-layout](https://geofli.com/support/getting-started). Customers select a
-geographical radius they would like to target through one of three options:
-Location Library (pre-defined regions), Radius Targeting (a numerical distance -
-such as 50, 100, etc. miles - from a central point), or Custom Draw (where the
-user literally draws a polygonal region on a map). GeoFli enables its customers
-to create website content only visible to internet users originating from IP
-addresses within a geographic area. So, everyone inside that radius sees
+GeoFli’s user interface (UI) features a very simple
+[point-and-click layout](https://geofli.com/support/getting-started). Customers
+select a geographical radius they would like to target through one of three
+options: Location Library (pre-defined regions), Radius Targeting (a numerical
+distance - such as 50, 100, etc. miles - from a central point), or Custom Draw
+(where the user literally draws a polygonal region on a map). GeoFli enables its
+customers to create website content only visible to internet users originating
+from IP addresses within a geographic area. So, everyone inside that radius sees
 specific, localized content relevant to them. Others, (for example, website
 visitors from Japan) would see regular, nonspecific content. “The software can
 be used in many different ways, including showing restaurant offers, retail
@@ -87,8 +88,8 @@ business.”
 
 ## FUTURE
 
-Personalization is [forecast to rule the digital landscape in
-2017](https://www.adweek.com/digital/is-personalization-the-new-buzz-for-2017-infographic/)
+Personalization is
+[forecast to rule the digital landscape in 2017](https://www.adweek.com/digital/is-personalization-the-new-buzz-for-2017-infographic/)
 and beyond. Shontz feels that GeoFli is well-positioned to take advantage of the
 growing demand for personalization services. “Industries can use us to solve new
 problems and find new uses for our software – especially in the world of higher
@@ -100,10 +101,10 @@ want to make our customers relevant at one of the first points of contact with
 their consumers – a website. We have a tool in GeoFli that no other geomarketer
 has and a great partner in MaxMind behind us to do just that.”
 
-***
+---
 
 Founded in 2002, MaxMind is an industry-leading provider of IP intelligence and
 online fraud detection products. To learn more about how our GeoIP databases and
 services can help you, please visit our
-[website](https://www.maxmind.com/en/geoip2-services-and-databases) or [contact
-us](https://www.maxmind.com/en/sales_contact).
+[website](https://www.maxmind.com/en/geoip2-services-and-databases) or
+[contact us](https://www.maxmind.com/en/sales_contact).

@@ -1,5 +1,7 @@
 ---
-title: "Research Defender uses minFraud as part of a homegrown solution to protect the integrity of research done on behalf of its customers."
+title:
+  "Research Defender uses minFraud as part of a homegrown solution to protect
+  the integrity of research done on behalf of its customers."
 date: "2021-06-28"
 category:
   - "Online Fraud Detection"
@@ -63,8 +65,8 @@ about minFraud, and that’s a good thing.”
 With minFraud working in the core of Research Defender’s fraud detection, their
 team could spend more time on data analysis and honing their own models.
 
-> “Since we started using minFraud we’ve seen a 70-80% reduction in fraud.
-> That translates to better relationships with our customers, reduced cost from
+> “Since we started using minFraud we’ve seen a 70-80% reduction in fraud. That
+> translates to better relationships with our customers, reduced cost from
 > fraudulent payouts of incentives, and less wasted time.”
 
 The bottom line in fraud prevention is results. You can’t catch all fraud, of

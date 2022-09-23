@@ -14,8 +14,8 @@ authors:
 As more and more TV, music, and movie content has moved online, a veritable
 industry has grown up around helping people to circumvent location based
 broadcast restrictions. Demonstrating the scale of the issue, GlobalWatchIndex
-reports that as many as [29% of VPN users globally accessed
-Netflix](https://www.globalwebindex.net/blog/29-of-vpn-users-accessing-netflix)
+reports that as many as
+[29% of VPN users globally accessed Netflix](https://www.globalwebindex.net/blog/29-of-vpn-users-accessing-netflix)
 in one recent month. Tutorials for how to access this and other streaming
 services abound.
 

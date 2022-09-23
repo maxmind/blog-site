@@ -19,10 +19,9 @@ confirmed with our key vendors that they are prepared to fulfill their
 obligations with regards to our contracts.
 
 Any impacts to MaxMind service will be posted on our status webpage,
-<https://status.maxmind.com/>, and our Twitter
-feed, <https://twitter.com/maxmind>. If you have
-any questions or concerns, please do not hesitate to reach out to us at
-<support@maxmind.com>.
+<https://status.maxmind.com/>, and our Twitter feed,
+<https://twitter.com/maxmind>. If you have any questions or concerns, please do
+not hesitate to reach out to us at <support@maxmind.com>.
 
 Sincerely,
 

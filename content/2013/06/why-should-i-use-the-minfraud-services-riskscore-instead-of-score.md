@@ -29,7 +29,7 @@ There are a number of limitations in the ‘score’ and its formula that motiva
 the development of the ‘riskScore’. First, the rapidly changing online fraud
 landscape can outpace static fraud rules. That is, fraud patterns can change in
 an instant and a risk model where there are only a handful of fixed fraud rules
-that are only occasionally changed isn’t good enough for fraud *prevention*.
+that are only occasionally changed isn’t good enough for fraud _prevention_.
 Second, with a published fraud formula, fraudsters essentially have a blueprint
 of how to bypass a fraud detection system. With the sophistication of today’s
 fraudster, spoofing enough elements to circumvent a static risk model is
@@ -57,5 +57,5 @@ in order to take advantage of this. To receive the ‘riskScore’, minFraud ser
 users will need to use at least minFraud version 1.1 (users with older minFraud
 versions may also need to update their API).
 
-*\*Beginning January 1, 2014, the ‘score’ and ‘explanation’ fields will no
-longer be supported by MaxMind.*
+_\*Beginning January 1, 2014, the ‘score’ and ‘explanation’ fields will no
+longer be supported by MaxMind._

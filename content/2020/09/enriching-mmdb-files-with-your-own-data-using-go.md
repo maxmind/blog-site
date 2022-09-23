@@ -18,37 +18,37 @@ easy to perform. While MMDB files are usable on a variety of platforms and in a
 number of different programming languages, this article will focus on building
 MMDB files using the [Go programming language](https://golang.org/).
 
-MaxMind offers several prebuilt MMDB files, like the free [GeoLite2
-Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) MMDB file. For many
-situations these MMDB files are useful enough as is. If, however, you have your
-own data associated with IP address ranges, you can create hybrid MMDB files,
-enriching existing MMDB contents with your own data. In this article, we're
-going to add details about a fictional company's IP address ranges to the
+MaxMind offers several prebuilt MMDB files, like the free
+[GeoLite2 Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) MMDB file.
+For many situations these MMDB files are useful enough as is. If, however, you
+have your own data associated with IP address ranges, you can create hybrid MMDB
+files, enriching existing MMDB contents with your own data. In this article,
+we're going to add details about a fictional company's IP address ranges to the
 GeoLite2 Country MMDB file. We'll be building a new MMDB file, one that contains
 both MaxMind's and our fictional company's data.
 
 If you don't need any of the MaxMind data, but you still want to create a fast,
 \easy-to-query database keyed on IP addresses and IP address ranges, you can
-consult this example code showing [how to create an MMDB file from
-scratch](https://github.com/maxmind/mmdbwriter/blob/main/examples/asn-writer/main.go).
+consult this example code showing
+[how to create an MMDB file from scratch](https://github.com/maxmind/mmdbwriter/blob/main/examples/asn-writer/main.go).
 
 ## Prerequisites
 
-* you must have [`git`](https://git-scm.com/downloads) installed in order to
+- you must have [`git`](https://git-scm.com/downloads) installed in order to
   clone the code and install the dependencies, and it must be in your `$PATH`
-* [Go 1.14](https://golang.org/dl/) or later must be installed, and `go` must be
+- [Go 1.14](https://golang.org/dl/) or later must be installed, and `go` must be
   in your `$PATH`
-* the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect) tool must be
+- the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect) tool must be
   installed and be in your `$PATH`
-* a copy of the [GeoLite2
-  Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) database must be in
-  your working directory
-* your working directory (which can be located under any parent directory) must
+- a copy of the
+  [GeoLite2 Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) database
+  must be in your working directory
+- your working directory (which can be located under any parent directory) must
   be named `mmdb-from-go-blogpost` (if you clone the code using the instructions
   below, this directory will be created for you)
-* a basic understanding of [Go](https://gobyexample.com/) and of [IP
-  addresses](https://en.wikipedia.org/wiki/IP_address) and [CIDR
-  notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)
+- a basic understanding of [Go](https://gobyexample.com/) and of
+  [IP addresses](https://en.wikipedia.org/wiki/IP_address) and
+  [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)
   will be helpful, but allowances have been made for the intrepid explorer for
   whom these concepts are novel!
 
@@ -73,9 +73,9 @@ that data maps to IP addresses or IP address ranges.
 
 AcmeCorp has three departments:
 
-* SRE, whose IP addresses come from the 56.0.0.0/16 range,
-* Development, whose IP addresses come from the 56.1.0.0/16 range, and
-* Management, whose IP addresses come from the 56.2.0.0/16 range.
+- SRE, whose IP addresses come from the 56.0.0.0/16 range,
+- Development, whose IP addresses come from the 56.1.0.0/16 range, and
+- Management, whose IP addresses come from the 56.2.0.0/16 range.
 
 Members of the SRE department have access to all three of AcmeCorp's
 environments, `development`, `staging`, and `production`. Members of the
@@ -90,9 +90,9 @@ For each of the AcmeCorp ranges, we're going to add to the existing data the
 
 ### The steps we're going to take
 
-We're going to [write some Go
-code](https://github.com/maxmind/mmdb-from-go-blogpost/blob/main/main.go) that
-makes use of the MaxMind
+We're going to
+[write some Go code](https://github.com/maxmind/mmdb-from-go-blogpost/blob/main/main.go)
+that makes use of the MaxMind
 [`mmdbwriter`](https://pkg.go.dev/github.com/maxmind/mmdbwriter) Go module to:
 
 <!--lint disable list-item-content-indent-->
@@ -100,19 +100,19 @@ makes use of the MaxMind
 <!--lint disable ordered-list-marker-value-->
 
 1. Load the GeoLite2 Country MaxMind DB.
-   * We will take a pathname to the MMDB file and call
+   - We will take a pathname to the MMDB file and call
      [`mmdbwriter.Load()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Load)
      on it, returning `writer`, an
      [`*mmdbwriter.Tree`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree).
 1. Add our own internal department data to the appropriate IP address ranges.
-   * We will call
+   - We will call
      [`writer.InsertFunc()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree.InsertFunc)
      once for each department's IP address range.
 1. Write the enriched database to a new MMDB file.
-   * We will call
+   - We will call
      [`writer.WriteTo()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree.WriteTo).
 1. Look up the new data in the enriched database to confirm our additions.
-   * We will use the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect)
+   - We will use the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect)
      tool to see our new data in the MMDB file we've built and compare a few
      ranges in it to those in the old GeoLite2 Country MMDB file.
 
@@ -120,10 +120,10 @@ The full code is presented in the next section. Let's dive in!
 
 ### The code, explained
 
-The repo for this tutorial is [available on
-GitHub](https://github.com/maxmind/mmdb-from-go-blogpost). You can clone it
-locally and `cd` into the repo dir by running the following in a terminal
-window:
+The repo for this tutorial is
+[available on GitHub](https://github.com/maxmind/mmdb-from-go-blogpost). You can
+clone it locally and `cd` into the repo dir by running the following in a
+terminal window:
 
 ```bash
 me@myhost:~/dev $ git clone https://github.com/maxmind/mmdb-from-go-blogpost.git
@@ -183,8 +183,8 @@ we wish to enrich it with. The second return value of the
 [`*net.IPNet`](https://golang.org/pkg/net/#IPNet), which is what we need for the
 first parameter for our upcoming
 [`writer.InsertFunc()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree.InsertFunc)
-call, so we use `net.ParseCIDR()` to go from the
-`string`-literal CIDR form `"56.0.0.0/16"` to the desired `*net.IPnet`.
+call, so we use `net.ParseCIDR()` to go from the `string`-literal CIDR form
+`"56.0.0.0/16"` to the desired `*net.IPnet`.
 
 ```go
   // Define and insert the new data.
@@ -212,10 +212,9 @@ containing the name of the department for the IP address range.
 
 `AcmeCorp.Environments` is an
 [`mmdbtype.Slice`](https://pkg.go.dev/github.com/maxmind/mmdbwriter/mmdbtype?tab=doc#Slice).
-A [slice](https://gobyexample.com/slices) contains an ordered list of values.
-In this case, it is a list of the environments that the IP address range is
-allowed to access. These environments are represented as `mmdbtype.String`
-values.
+A [slice](https://gobyexample.com/slices) contains an ordered list of values. In
+this case, it is a list of the environments that the IP address range is allowed
+to access. These environments are represented as `mmdbtype.String` values.
 
 \[An aside: If you look at the output of running the
 `mmdbinspect -db GeoLite2-Country.mmdb 56.0.0.1` command in your terminal,
@@ -237,8 +236,8 @@ expected corresponds to the `mmdbtype.Map` type.]
 
 Now that we've got our data, we insert it into the MMDB using
 [`InsertFunc`](https://pkg.go.dev/github.com/maxmind/mmdbwriter?tab=doc#Tree.InsertFunc).
-We use `InsertFunc` instead of `Insert` as it allows us to pass in an [inserter
-function](https://pkg.go.dev/github.com/maxmind/mmdbwriter/inserter?tab=doc)
+We use `InsertFunc` instead of `Insert` as it allows us to pass in an
+[inserter function](https://pkg.go.dev/github.com/maxmind/mmdbwriter/inserter?tab=doc)
 that will merge our new data with any existing data.
 
 In this case, we are using the
@@ -311,6 +310,7 @@ Finally we write the new database to disk.
   }
 }
 ```
+
 ### [Building the code and running it](https://github.com/maxmind/mmdb-from-go-blogpost#building-the-code-and-running-it)
 
 So that's our code! Now we build the program and run it. On my 2015-model laptop
