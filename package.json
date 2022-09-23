@@ -45,17 +45,18 @@
   "license": "MIT",
   "lint-staged": {
     "**/*.json": [
-      "npm run fix:json"
+      "npx eslint --fix --config '.eslintrc.js'"
     ],
     "./content/**/**/*.md": [
-      "npm run fix:content"
+      "npx remark --config '.remarkrc.js'",
+      "npx prettier --write --embedded-language-formatting off --config './content/.prettierrc.js'"
     ],
     "./assets/js/*.{js,ts}": [
-      "npm run fix:scripts",
-      "npm run prettier:ts"
+      "npx eslint --fix --ignore-pattern 'functions/**/*.js' --config '.eslintrc.js'",
+      "npx prettier --write --ignore-path 'functions/**/*.js' --config './assets/js/.prettierrc.js'"
     ],
     "./assets/scss/*.[s]css": [
-      "npm run fix:styles"
+      "npx stylelint --fix --config '.stylelintrc.js'"
     ]
   },
   "name": "blog-site",
