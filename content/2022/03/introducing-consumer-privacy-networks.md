@@ -20,8 +20,8 @@ economy, but of the way that we use the internet. For an ever-increasing
 population, there’s a digital-first approach to seeking entertainment, to
 staying in touch with family and friends, to education, and to work.
 
-When the internet was a smaller corner of our lives, [VPNs and other
-proxies](/2019/01/types-of-anonymous-ips-and-how-they-affect-your-business)
+When the internet was a smaller corner of our lives,
+[VPNs and other proxies](/2019/01/types-of-anonymous-ips-and-how-they-affect-your-business)
 were mostly used by privacy conscious techies, corporations, and fraudsters.
 Today, proxies are marketed to everyday users by major tech companies, offering
 privacy and limited anonymity for a modest subscription fee. When proxies are
@@ -52,25 +52,25 @@ Relay as consumer privacy networks.
 
 ### Get data on consumer proxies
 
-MaxMind has identified consumer privacy networks [in our ISP
-data](https://support.maxmind.com/hc/en-us/articles/4408618186907-Business-VPNs-and-Consumer-Privacy-Networks)
-since the summer of 2021, and we’ve just added consumer privacy networks to [our
-user type data](https://support.maxmind.com/hc/en-us/articles/4408208479131-User-Context-Data#h_01FN9BTGFQVP41YNPDGM454T2T).
+MaxMind has identified consumer privacy networks
+[in our ISP data](https://support.maxmind.com/hc/en-us/articles/4408618186907-Business-VPNs-and-Consumer-Privacy-Networks)
+since the summer of 2021, and we’ve just added consumer privacy networks to
+[our user type data](https://support.maxmind.com/hc/en-us/articles/4408208479131-User-Context-Data#h_01FN9BTGFQVP41YNPDGM454T2T).
 You can find this data in the following products and services from MaxMind:
 
-* [GeoIP2 City Plus web service](https://www.maxmind.com/en/geoip2-precision-city-service)
+- [GeoIP2 City Plus web service](https://www.maxmind.com/en/geoip2-precision-city-service)
   contains our ISP data
-* [GeoIP2 Insights web service](https://www.maxmind.com/en/geoip2-precision-insights)
+- [GeoIP2 Insights web service](https://www.maxmind.com/en/geoip2-precision-insights)
   contains our ISP and user type data
-* [GeoIP2 ISP database](https://www.maxmind.com/en/geoip2-isp-database) contains
+- [GeoIP2 ISP database](https://www.maxmind.com/en/geoip2-isp-database) contains
   our ISP data
-* [GeoIP2 Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database)
+- [GeoIP2 Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database)
   contains our ISP and user type data
-* [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/minfraud-services)
+- [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/minfraud-services)
   return our ISP and user type data
 
-At this time, consumer privacy networks are not flagged in our [GeoIP2 Anonymous
-IP](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database)
+At this time, consumer privacy networks are not flagged in our
+[GeoIP2 Anonymous IP](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database)
 data because we have not seen a high level of risky activity associated with
 these networks. We continue to monitor and assess these networks, and will make
 adjustments as we see how these networks are used as they are widely adopted.
@@ -80,11 +80,7 @@ adjustments as we see how these networks are used as they are widely adopted.
 You can learn more about consumer privacy networks and how we identify them on
 our knowledge base:
 
-* [Read about consumer privacy networks on our knowledge
-  base.](https://support.maxmind.com/hc/en-us/articles/4408618186907-Business-VPNs-and-Consumer-Privacy-Networks)
-* [Read about our ISP data, which identifies consumer privacy
-  networks.](https://support.maxmind.com/hc/en-us/articles/4408200231067-IP-Network-Data#h_01FN989KHXR7TGXPB5T2DK0Q77)
-* [Read about our user type data, which identifies consumer privacy
-  networks.](https://support.maxmind.com/hc/en-us/articles/4408208479131-User-Context-Data#h_01FN9BTGFQVP41YNPDGM454T2T)
-* [Read about the other kinds of anonymizers and proxies that are flagged in our GeoIP2 Anonymous IP
-  data.](https://support.maxmind.com/hc/en-us/articles/4408208507163-Anonymizer-and-Proxy-Data)
+- [Read about consumer privacy networks on our knowledge base.](https://support.maxmind.com/hc/en-us/articles/4408618186907-Business-VPNs-and-Consumer-Privacy-Networks)
+- [Read about our ISP data, which identifies consumer privacy networks.](https://support.maxmind.com/hc/en-us/articles/4408200231067-IP-Network-Data#h_01FN989KHXR7TGXPB5T2DK0Q77)
+- [Read about our user type data, which identifies consumer privacy networks.](https://support.maxmind.com/hc/en-us/articles/4408208479131-User-Context-Data#h_01FN9BTGFQVP41YNPDGM454T2T)
+- [Read about the other kinds of anonymizers and proxies that are flagged in our GeoIP2 Anonymous IP data.](https://support.maxmind.com/hc/en-us/articles/4408208507163-Anonymizer-and-Proxy-Data)

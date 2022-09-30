@@ -1,5 +1,6 @@
 ---
-title: "Integrating MaxMind's Free and Paid IP Geolocation Web Services (in PHP)"
+title:
+  "Integrating MaxMind's Free and Paid IP Geolocation Web Services (in PHP)"
 date: "2021-01-11"
 category:
   - "IP Geolocation and Network Data"
@@ -10,9 +11,9 @@ authors:
   - "Narsimham Chelluri"
 ---
 
-In December MaxMind released the new [GeoLite2 web
-services](https://dev.maxmind.com/geoip/geoip2/geolite2/), an IP geolocation API
-available free of charge.
+In December MaxMind released the new
+[GeoLite2 web services](https://dev.maxmind.com/geoip/geoip2/geolite2/), an IP
+geolocation API available free of charge.
 
 IP geolocation services provide information about the geographic location of an
 IP address. MaxMind offers such free web services, GeoLite2 City and GeoLite2
@@ -21,8 +22,9 @@ Precision City and GeoIP2 Precision Country web services. GeoLite2 is fully
 compatible with GeoIP2, using the same API and integration method, making it
 easy to switch between the free and paid services as your needs change. You can
 compare accuracy of the GeoLite2 and GeoIP2 web services by selecting a country
-on the [GeoIP2 City
-Accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison) page.
+on the
+[GeoIP2 City Accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison)
+page.
 
 In this blog post, we are going to review how to build a simple web page in PHP
 that uses GeoLite2 City. We will learn how to easily upgrade to the paid GeoIP2
@@ -52,20 +54,20 @@ Okay, let's get started!
 
 ## Requirements
 
-* A clone of the [repository](https://github.com/maxmind/geolite2-ws-blogpost)
+- A clone of the [repository](https://github.com/maxmind/geolite2-ws-blogpost)
   used in this code. This requires `git` to be installed.
-* A [PHP version >= 7.2](https://www.php.net/downloads.php) must be installed.
-* [Composer](https://getcomposer.org/) must be installed. Composer will help you
+- A [PHP version >= 7.2](https://www.php.net/downloads.php) must be installed.
+- [Composer](https://getcomposer.org/) must be installed. Composer will help you
   manage the dependencies required to integrate with GeoLite2.
-* A free MaxMind GeoLite2 account with a license key is required.
-  * If you already have a MaxMind account and have signed up for GeoLite2, you
+- A free MaxMind GeoLite2 account with a license key is required.
+  - If you already have a MaxMind account and have signed up for GeoLite2, you
     can generate a new license key
     [here](https://www.maxmind.com/en/accounts/current/license-key) (login
     required) or use your existing one.
-  * If you have a MaxMind account but haven't signed up for GeoLite2, you can
-    do so [here](https://www.maxmind.com/en/accounts/current/geolite2/eula)
-    (login required).
-  * If you don't have a MaxMind GeoLite2 account, you can sign up for one
+  - If you have a MaxMind account but haven't signed up for GeoLite2, you can do
+    so [here](https://www.maxmind.com/en/accounts/current/geolite2/eula) (login
+    required).
+  - If you don't have a MaxMind GeoLite2 account, you can sign up for one
     [here](https://www.maxmind.com/en/geolite2/signup).
 
 ## Using Docker or Vagrant
@@ -104,9 +106,8 @@ Anycast address, it doesn't make sense to return a precise location, since the
 IP address has locations all over the world). In these cases MaxMind will return
 the subset of the fields for which there is data.
 
-For a full list of the fields returned by each service, see this [side by side
-comparison of GeoLite2 and GeoIP2 Precision data
-points](https://dev.maxmind.com/static/pdf/GeoLite2-and-GeoIP2-Precision-Web-Services-Comparison.pdf).
+For a full list of the fields returned by each service, see this
+[side by side comparison of GeoLite2 and GeoIP2 Precision data points](https://dev.maxmind.com/static/pdf/GeoLite2-and-GeoIP2-Precision-Web-Services-Comparison.pdf).
 
 ## The Demo in Action
 
@@ -143,21 +144,21 @@ Next we install Composer as a
 [PHAR](https://www.php.net/manual/en/intro.phar.php). See the instructions
 [here](https://getcomposer.org/download/).
 
-Once we've installed Composer, we tell it to install the [GeoIP2 client
-API](https://github.com/maxmind/GeoIP2-php):
+Once we've installed Composer, we tell it to install the
+[GeoIP2 client API](https://github.com/maxmind/GeoIP2-php):
 
 ```bash
 php composer.phar require geoip2/geoip2:~2.0
 ```
 
 Now we start the server. This requires a MaxMind account ID and license key. You
-can use an existing, stored, license key or [generate a new one in your account
-portal](https://www.maxmind.com/en/accounts/current/license-key). Be careful
-with this key -- you don't want it getting out in the wild or else anyone can
-use it to use up your MaxMind credit! See [this
-link](https://support.maxmind.com/hc/en-us/articles/4407111617435-Secure-my-License-Key)
-for instructions on how to safely store your license key -- in particular,
-don't commit the key to any repository. Once you've obtained your account ID and
+can use an existing, stored, license key or
+[generate a new one in your account portal](https://www.maxmind.com/en/accounts/current/license-key).
+Be careful with this key -- you don't want it getting out in the wild or else
+anyone can use it to use up your MaxMind credit! See
+[this link](https://support.maxmind.com/hc/en-us/articles/4407111617435-Secure-my-License-Key)
+for instructions on how to safely store your license key -- in particular, don't
+commit the key to any repository. Once you've obtained your account ID and
 license key, replace `YOURACCOUNTID` with the account ID and `YOURLICENSEKEY`
 with the license key in the following command and run:
 
@@ -247,11 +248,11 @@ The `if` statement has a condition that says if the request method is POST
 (i.e., if someone has submitted the form), and the IP is set, and it's not
 blank, perform the lookup. You can find more details about the GeoIP2 client API
 on [GitHub](https://github.com/maxmind/GeoIP2-php) and in the current-as-of-this
-writing [API client
-documentation](http://maxmind.github.io/GeoIP2-php/doc/v2.11.0/). Here, we
-instantiate a GeoIP2 client using the host parameter `geolite.info`, which is
-used to specify that we wish to use the GeoLite2 web services, and use that
-client by calling its `city` method to perform the lookup.
+writing
+[API client documentation](http://maxmind.github.io/GeoIP2-php/doc/v2.11.0/).
+Here, we instantiate a GeoIP2 client using the host parameter `geolite.info`,
+which is used to specify that we wish to use the GeoLite2 web services, and use
+that client by calling its `city` method to perform the lookup.
 
 Next, within the same `if` block, we render the results of our lookup and close
 the block:
@@ -352,6 +353,6 @@ In this blog post, we've covered how to use the GeoLite2 City web service and
 the GeoIP2 Precision City web service. I hope you have found it useful and fun.
 If you have any questions, or want to tell MaxMind about what kind of
 application you're running using the GeoLite2 web services or GeoIP2 Precision
-web services, feel free to [leave an issue on the
-repo](https://github.com/maxmind/geolite2-ws-blogpost/issues). Thanks for
-reading!
+web services, feel free to
+[leave an issue on the repo](https://github.com/maxmind/geolite2-ws-blogpost/issues).
+Thanks for reading!

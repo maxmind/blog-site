@@ -36,11 +36,11 @@ fines, and false positives.
 
 Custom Inputs can help you...
 
-* Extend minFraud service features to capture data points specific to your
+- Extend minFraud service features to capture data points specific to your
   experience with fraud
-* Use data points you define to automatically accept, reject, or send
+- Use data points you define to automatically accept, reject, or send
   transactions to manual review
-* Enable review of custom data points in the context of minFraud service data
+- Enable review of custom data points in the context of minFraud service data
   points
 
 We currently support Custom Inputs using the following data types: **string,
@@ -79,12 +79,12 @@ acquires loyalty points on your site by making fraudulent purchases or makes a
 purchase in your loyalty store without applying any loyalty rewards at all.
 Simply put:
 
-* Good customers buy Amazon gift cards from loyalty store with full discount
+- Good customers buy Amazon gift cards from loyalty store with full discount
   ($100 gift card for $90 by applying $10 in loyalty rewards to the purchase)
-* Fraudsters buy Amazon gift cards from loyalty store with less than full
+- Fraudsters buy Amazon gift cards from loyalty store with less than full
   discount ($100 gift card for $98 or even full price for the gift cards.
-  *Fraudsters don’t care what they pay for the gift cards because they are using
-  stolen credit cards.)*
+  _Fraudsters don’t care what they pay for the gift cards because they are using
+  stolen credit cards.)_
 
 Creating a parameter “loyalty store price” using the “number” data type, you can
 create a Custom Rule to manually review a purchase if the purchase price of the
@@ -108,7 +108,7 @@ Custom Rules. With Custom Inputs fueling the creation of Custom Rules combined
 with results from the minFraud Network, your risk analysis can stay ahead of
 fraudsters.
 
-***
+---
 
 To learn more about MaxMind’s Custom Inputs, Custom Rules, or our minFraud
 services, simply

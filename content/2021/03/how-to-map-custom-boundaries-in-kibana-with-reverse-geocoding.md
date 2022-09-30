@@ -11,8 +11,8 @@ authors:
   - "Thomas Neirnyck"
 ---
 
-This article was originally published on [The Elastic
-Blog](https://www.elastic.co/blog/how-to-map-custom-boundaries-in-kibana-with-reverse-geocoding)
+This article was originally published on
+[The Elastic Blog](https://www.elastic.co/blog/how-to-map-custom-boundaries-in-kibana-with-reverse-geocoding)
 on Jan 20, 2021.
 
 This tutorial shows how you can leverage GeoIP data using tools developed by
@@ -23,16 +23,16 @@ professionals a one-stop-shop for spotting and neutralizing digital threats.
 Learn more at [elastic.co](http://www.elastic.co/).
 
 Want to create a map of where your users are? With the GeoIP processor, you can
-easily [attach the location of your users to your user
-metrics](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geoip-processor.html).
+easily
+[attach the location of your users to your user metrics](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geoip-processor.html).
 
 Right out of the box, Kibana can map this traffic immediately by country or
 country subdivision:
 
 ![](/images/2021/03/blog-custom-map-boundaries-1-1024x364.jpg)
 
-Plus, the new [User
-Experience](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities)
+Plus, the new
+[User Experience](https://www.elastic.co/blog/introducing-user-experience-monitoring-app-synthetic-capabilities)
 app for Elastic APM automatically creates maps based on monitoring data:
 
 ![](/images/2021/03/blog-custom-map-boundaries-2-1024x965.jpg)
@@ -65,19 +65,19 @@ experiencing an uptick of traffic.
 
 <!--lint disable no-emphasis-as-heading-->
 
-*GeoIP databases contain latitude and longitude coordinates located near the
+_GeoIP databases contain latitude and longitude coordinates located near the
 center of the region or subdivision in which the IP address is located. If you
 rely on longitude and latitude data from IP geolocation, this may sometimes give
 misleading results. For example, if GeoIP has identified that an IP address is
 in the United States, but MaxMind doesn't have data on which state the IP
 address is in, it will return longitude and latitude near the geographic center
-of the United States (e.g., Kansas).*
+of the United States (e.g., Kansas)._
 
-*GeoIP's longitude and latitude data can be combined with its `accuracy_radius`
-data to help combat false confidence in its geolocation coordinates.*
+_GeoIP's longitude and latitude data can be combined with its `accuracy_radius`
+data to help combat false confidence in its geolocation coordinates._
 
-*You can learn more about [the accuracy of GeoIP on our Support
-Center](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy).*
+_You can learn more about
+[the accuracy of GeoIP on our Support Center](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)._
 
 That kind of scale in the United States is often captured with what the Census
 Bureau calls the Combined Statistical Area (CSA). It is roughly equivalent with
@@ -104,16 +104,16 @@ below, we will use CSA boundaries to illustrate reverse geocoding.
 ### Step 1: Indexing the geospatial data
 
 This will probably be the most custom part of any solution, so we’ll skip it 😜.
-Most integrations can rely on the [GeoIP
-processor](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geoip-processor.html)
+Most integrations can rely on the
+[GeoIP processor](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geoip-processor.html)
 to transform an IP location into a `geo_point` field.
 
 Whatever process you have used to index your data, you’ll have a document using
 the [ECS schema](https://www.elastic.co/guide/en/ecs/current/ecs-geo.html) that
 will contain two sets of fields created by the GeoIP processor:
 
-* destination.geo.\* for where requests are going (usually a data center)
-* client.geo.\* for the origin of the request, sometimes called`origin.geo.*`.
+- destination.geo.\* for where requests are going (usually a data center)
+- client.geo.\* for the origin of the request, sometimes called`origin.geo.*`.
 
 The relevant bit here is that `*.geo.location` field. It contains the
 **longitude** and **latitude** of the device.
@@ -121,22 +121,22 @@ The relevant bit here is that `*.geo.location` field. It contains the
 For the rest of this tutorial, we’ll use the `kibana_sample_data_logs` index
 that comes with Kibana, since that’s quicker to follow along with. The critical
 part for reverse geocoding is the presence of the longitude/latitude information
-and less *how* that longitude/latitude field was created.
+and less _how_ that longitude/latitude field was created.
 
 ### Step 2: Indexing the boundaries
 
-To get the CSA boundary data, download the [Cartographic Boundary shapefile
-(.shp)](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
+To get the CSA boundary data, download the
+[Cartographic Boundary shapefile (.shp)](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
 from the Census Bureau’s website.
 
 To use it in Kibana, we need it as a GeoJSON format. I used QGIS to convert it
-to GeoJSON. Check out this [helpful
-tutorial](https://gist.github.com/YKCzoli/b7f5ff0e0f641faba0f47fa5d16c4d8d) if
-you'd like to do the same.
+to GeoJSON. Check out this
+[helpful tutorial](https://gist.github.com/YKCzoli/b7f5ff0e0f641faba0f47fa5d16c4d8d)
+if you'd like to do the same.
 
 Once you have your GeoJSON file, go to Maps in Kibana and upload the data using
-the [GeoJSON
-uploader](https://www.elastic.co/guide/en/kibana/7.10/indexing-geojson-data-tutorial.html).
+the
+[GeoJSON uploader](https://www.elastic.co/guide/en/kibana/7.10/indexing-geojson-data-tutorial.html).
 
 Zoomed in on the result, we get a sense of what exactly constitutes a metro area
 in the eyes of the Census Bureau. I added some tooltip fields using the
@@ -150,8 +150,8 @@ geocoding.
 ### Step 3: Reverse geocoding with a pipeline
 
 In order to create our pipeline, we first need to create the reverse geocoder.
-We can do this by [creating a geo\_match enrichment
-policy](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geo-match-enrich-policy-type.html).
+We can do this by
+[creating a geo_match enrichment policy](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/geo-match-enrich-policy-type.html).
 
 Run the following from Dev Tools in Kibana:
 
@@ -161,7 +161,7 @@ Run the following from Dev Tools in Kibana:
   "geo_match": {
     "indices": "csa",
     "match_field": "coordinates",
-    "enrich_fields": [ "GEOID", "NAME"]
+    "enrich_fields": ["GEOID", "NAME"]
   }
 }
 ```
@@ -171,8 +171,8 @@ Run the following from Dev Tools in Kibana:
 ```
 
 This creates an enrich policy called `csa_lookup`. It uses the `coordinates`
-field which contains the shapes (it has a `geo_shape` field-type). The
-policy will enrich other documents with the `GEOID` and `NAME` fields. It also
+field which contains the shapes (it has a `geo_shape` field-type). The policy
+will enrich other documents with the `GEOID` and `NAME` fields. It also
 automatically attaches the `coordinates` field. The `_execute` call is required
 for initializing the policy.
 
@@ -186,7 +186,7 @@ Then we’ll integrate this reverse-geocoder into a pipeline.
     {
       "enrich": {
         "field": "geo.coordinates",
-        "policy_name": "csa\_lookup",
+        "policy_name": "csa_lookup",
         "target_field": "csa",
         "ignore_missing": true,
         "ignore_failure": true,
@@ -212,15 +212,16 @@ Our pipeline consists of two processors:
 1. The first is the `enrich` processor we just created. It references our
    `csa_lookup` policy. It creates a new field `csa` that contains the CSA
    identifiers (GEOID, NAME) and the CSA geometry (coordinates).
-1. The second is a `remove` processor that removes the CSA geometry field.
-   (We don’t need it since we are only interested in the identifiers).
+1. The second is a `remove` processor that removes the CSA geometry field. (We
+   don’t need it since we are only interested in the identifiers).
 
 ### Step 4: Running the pipeline on all your documents
 
 Now that the pipeline is created, we can start using it. And a great thing about
 pipelines is **you can run them on your existing data**.
 
-With [\_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-reindex.html#reindex-with-an-ingest-pipeline),
+With
+[\_reindex](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-reindex.html#reindex-with-an-ingest-pipeline),
 you can create a new index with a copy of your newly enriched documents:
 
 ```json
@@ -236,7 +237,8 @@ you can create a new index with a copy of your newly enriched documents:
 }
 ```
 
-With [\_update\_by\_query](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-update-by-query.html#docs-update-by-query-api-ingest-pipeline),
+With
+[\_update_by_query](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/docs-update-by-query.html#docs-update-by-query-api-ingest-pipeline),
 all the documents are enriched in place:
 
 ```json
@@ -300,9 +302,9 @@ Dallas, Indianapolis, and New York metropolitan areas.
 
 Hopefully this got you thinking about how to use a reverse geocoder. It’s an
 incredibly powerful tool to create custom maps and gain new insights in your
-data.  If you're not already using Elastic Maps, try it out [free in Elastic
-Cloud](https://www.elastic.co/cloud). For any feedback and questions, our
-[Discuss forums](https://discuss.elastic.co/) are the perfect venue. And if you
-find yourself breaking the boundaries (ha!) of your old mapping limitations,
-show us what you made! Connect with us in the forums or [@ us on
-Twitter](https://twitter.com/elastic).
+data. If you're not already using Elastic Maps, try it out
+[free in Elastic Cloud](https://www.elastic.co/cloud). For any feedback and
+questions, our [Discuss forums](https://discuss.elastic.co/) are the perfect
+venue. And if you find yourself breaking the boundaries (ha!) of your old
+mapping limitations, show us what you made! Connect with us in the forums or
+[@ us on Twitter](https://twitter.com/elastic).

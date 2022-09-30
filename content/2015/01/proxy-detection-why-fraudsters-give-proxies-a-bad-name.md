@@ -23,8 +23,8 @@ As its name suggests, a proxy acts as an intermediary,
 But although there are legitimate uses of proxies, fraudsters find it useful to
 take advantage of one of its characteristics; accessing the Internet through a
 proxy makes it more difficult to locate a user by means of an IP address. This
-enables [some to use anonymizing proxies to access content from which they would
-otherwise be blocked](https://cyber.law.harvard.edu/publications/2010/Circumvention_Tool_Usage).
+enables
+[some to use anonymizing proxies to access content from which they would otherwise be blocked](https://cyber.law.harvard.edu/publications/2010/Circumvention_Tool_Usage).
 Others use open proxies to hide their whereabouts and thereby circumvent fraud
 detection rules associated with location.
 

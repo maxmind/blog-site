@@ -1,5 +1,7 @@
 ---
-title: "How to recognize legitimate proxy use and reduce false positives during order review"
+title:
+  "How to recognize legitimate proxy use and reduce false positives during order
+  review"
 date: "2016-03-04"
 category:
   - "IP Geolocation and Network Data"
@@ -50,17 +52,18 @@ IP address based on the [WHOIS record](https://whois.arin.net/ui). In many
 cases, this will help you determine if the IP address likely belongs to a
 company, an educational institution, a cellular carrier, or the like.
 
-MaxMind also provides several solutions to help with this. The [GeoIP2 Precision
-Insights service](https://www.maxmind.com/en/geoip2-precision-insights) includes
-user type data which can indicate what type of organization the IP address
-belongs to. Many users of a single “business” IP address would not itself raise
-the risk of fraud while many users being associated with a single “residential”
-IP address would.
+MaxMind also provides several solutions to help with this. The
+[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip2-precision-insights)
+includes user type data which can indicate what type of organization the IP
+address belongs to. Many users of a single “business” IP address would not
+itself raise the risk of fraud while many users being associated with a single
+“residential” IP address would.
 
-MaxMind’s [Proxy Detection
-service](https://www.maxmind.com/en/proxy-detection-service) scores IP addresses
-for their riskiness (e.g., being proxies favored by fraudsters) and so can also
-be used to assess the likelihood that a given IP is being used for fraud.
+MaxMind’s
+[Proxy Detection service](https://www.maxmind.com/en/proxy-detection-service)
+scores IP addresses for their riskiness (e.g., being proxies favored by
+fraudsters) and so can also be used to assess the likelihood that a given IP is
+being used for fraud.
 
 Of course, knowing that a transaction came through a corporate or other
 seemingly legitimate proxy doesn’t in itself mean that it’s not fraudulent. It
@@ -72,4 +75,4 @@ address. Review the proxyScore\* as well as the source of traffic to the IP
 address. This will enable you not only to stop fraudulent transactions, but
 reduce the false positives that impact your business as well.
 
-\* *minFraud Insights provides an IP risk score in place of the proxyScore.*
+\* _minFraud Insights provides an IP risk score in place of the proxyScore._

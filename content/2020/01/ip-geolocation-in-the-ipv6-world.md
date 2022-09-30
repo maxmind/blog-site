@@ -14,20 +14,20 @@ We get a lot of questions here at MaxMind about IPv6, and it’s not hard to
 imagine why. Accuracy is top of mind for every user of IP geolocation and this
 topic introduces questions about how effective geolocation can be for certain
 user segments. In this post, we explain a key reason for IPv6 addresses, how
-they’re allocated, and provide information about [IPv6 geolocation
-accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison).
+they’re allocated, and provide information about
+[IPv6 geolocation accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison).
 
 ## IPv6
 
-IPv6 is the latest standard developed by the [Internet Engineering Task
-Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) (IETF) for
-assigning addresses to devices in order to enable communication within networks.
-It is the successor to the IPv4 standard, which suffers from the problem of
-[exhaustion (of available IPv4
-addresses](https://www.ripe.net/manage-ips-and-asns/ipv4/ipv4-run-out)). IPv6
-solves this problem by using a 128-bit address instead of IPv4’s 32-bit address,
-which yields a possible pool of IPv6 addresses that is more than [7.9 x 10^28
-the pool of IPv4 addresses](https://en.wikipedia.org/wiki/IPv6).
+IPv6 is the latest standard developed by the
+[Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
+(IETF) for assigning addresses to devices in order to enable communication
+within networks. It is the successor to the IPv4 standard, which suffers from
+the problem of
+[exhaustion (of available IPv4 addresses](https://www.ripe.net/manage-ips-and-asns/ipv4/ipv4-run-out)).
+IPv6 solves this problem by using a 128-bit address instead of IPv4’s 32-bit
+address, which yields a possible pool of IPv6 addresses that is more than
+[7.9 x 10^28 the pool of IPv4 addresses](https://en.wikipedia.org/wiki/IPv6).
 
 ## Accuracy
 
@@ -38,11 +38,11 @@ The short answer is no.
 ## IP Block Allocation
 
 For both IPv6 and IPv4 standards, there are conventions for the flow down of IP
-block allocations from the [Internet Assigned Numbers Authority
-(IANA)](https://www.iana.org/numbers) to [regional internet
-registries](https://en.wikipedia.org/wiki/Regional_Internet_registry) (RIRs),
-[local internet
-registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_Internet_registry)
+block allocations from the
+[Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers) to
+[regional internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry)
+(RIRs),
+[local internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_Internet_registry)
 (LIRs), internet service providers (ISPs), and end users. The IP blocks at the
 end user level tend to have natural groupings for location assignment.
 
@@ -76,9 +76,9 @@ granularity is actually better than our IPv4 accuracy. Much of this variation
 comes down to ISP practices. For instance, we’ve found that IPv6 addresses are
 more accurate for certain ISPs (examples below):
 
-* EE (UK)
-* T-Mobile USA
-* Vodafone DSL (Germany)
+- EE (UK)
+- T-Mobile USA
+- Vodafone DSL (Germany)
 
 You can check out our accuracy statistics for yourself here:
 <https://www.maxmind.com/en/geoip2-city-accuracy-comparison>.

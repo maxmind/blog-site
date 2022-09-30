@@ -1,5 +1,7 @@
 ---
-title: "Learn how to import MaxMind GeoIP2 and GeoLite2 databases into PostgreSQL or MySQL"
+title:
+  "Learn how to import MaxMind GeoIP2 and GeoLite2 databases into PostgreSQL or
+  MySQL"
 date: "2021-07-15"
 category:
   - "IP Geolocation and Network Data"
@@ -20,5 +22,5 @@ easily manipulate and transform the data, or join and link the data with other
 datasets.Check out the tutorials for
 [PostgreSQL](https://dev.maxmind.com/geoip/importing-databases/postgresql?lang=en)
 and [MySQL](https://dev.maxmind.com/geoip/importing-databases/mysql?lang=en) on
-our [developer’s
-site](https://dev.maxmind.com/geoip/importing-databases?lang=en).
+our
+[developer’s site](https://dev.maxmind.com/geoip/importing-databases?lang=en).

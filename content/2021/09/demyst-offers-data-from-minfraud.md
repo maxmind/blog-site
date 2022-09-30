@@ -1,5 +1,7 @@
 ---
-title: "DemystData’s fraud solutions offer best-in-class IP risk data from the minFraud service to help financial services firms prevent fraud"
+title:
+  "DemystData’s fraud solutions offer best-in-class IP risk data from the
+  minFraud service to help financial services firms prevent fraud"
 date: "2021-09-07"
 featuredImage: /images/2021/09/demyst.svg
 isFeatured: true
@@ -22,7 +24,7 @@ solutions Demyst’s clients are creating.
 > “minFraud’s IP scoring provides value to our clients, but some clients also
 > get value from additional checks. Does the location of the device conducting a
 > transaction match the consumer’s reported location? Is this a high risk
-> mailing  address? This is extremely useful information for screening
+> mailing address? This is extremely useful information for screening
 > transactions or deciding whether to do manual review.”
 
 Demyst helps clients to integrate multiple data assets into a single unified

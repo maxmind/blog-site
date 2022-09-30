@@ -17,9 +17,8 @@ MaxMind has always been committed to an individual's right to privacy on the
 internet. We welcome the burgeoning privacy regulations, such as GDPR and CCPA,
 for the benefit they can provide to internet citizens. However, these new
 legislative measures place restrictions that impact our ability to continue
-distributing our GeoLite2 databases on a public page under the [Creative Commons
-Attribution-ShareAlike 4.0 International
-License](https://creativecommons.org/licenses/by-sa/4.0/).
+distributing our GeoLite2 databases on a public page under the
+[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 We recognize the impact of these changes on the open source community and we do
 not take these decisions lightly. We want to communicate these changes with
@@ -49,16 +48,16 @@ countless users across the internet.
 ## Summary Of Changes
 
 Starting **December 30, 2019,** we will be requiring users of our GeoLite2
-databases **to [register for a MaxMind
-account](https://www.maxmind.com/en/geolite2/signup) and obtain a license key in
-order to download GeoLite2 databases**. We will continue to offer the GeoLite2
-databases without charge, and with the ability to redistribute with proper
-attribution and in compliance with privacy regulations. In addition, we are
-**introducing a new [end-user license agreement to govern your use of the
-GeoLite2 databases](https://www.maxmind.com/en/geolite2/eula)**. Previously,
-GeoLite2 databases were accessible for download to the public on our developer
-website and were licensed under the [Creative Commons Attribution-ShareAlike 4.0
-International License](https://creativecommons.org/licenses/by-sa/4.0/).
+databases **to
+[register for a MaxMind account](https://www.maxmind.com/en/geolite2/signup) and
+obtain a license key in order to download GeoLite2 databases**. We will continue
+to offer the GeoLite2 databases without charge, and with the ability to
+redistribute with proper attribution and in compliance with privacy regulations.
+In addition, we are **introducing a new
+[end-user license agreement to govern your use of the GeoLite2 databases](https://www.maxmind.com/en/geolite2/eula)**.
+Previously, GeoLite2 databases were accessible for download to the public on our
+developer website and were licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Starting **December 30, 2019,** downloads will no longer be served from our
 [public GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
@@ -67,9 +66,9 @@ See the section below for steps on how to migrate to the new download mechanism.
 
 ### GeoLite2 Databases Affected
 
-* GeoLite2 Country
-* GeoLite2 City
-* GeoLite2 ASN
+- GeoLite2 Country
+- GeoLite2 City
+- GeoLite2 ASN
 
 ### Steps for Migration
 
@@ -77,15 +76,15 @@ See the section below for steps on how to migrate to the new download mechanism.
 
 1. [Sign up for a MaxMind account](https://www.maxmind.com/en/geolite2/signup)
    (no purchase required)
-1. Set your password and create a [license
-   key](https://www.maxmind.com/en/accounts/current/license-key)
-1. Setup your download mechanism by using our [GeoIP Update
-   program](https://dev.maxmind.com/geoip/geoipupdate/#For_Free_GeoLite2_Databases)
-   or creating a [direct download
-   script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
+1. Set your password and create a
+   [license key](https://www.maxmind.com/en/accounts/current/license-key)
+1. Setup your download mechanism by using our
+   [GeoIP Update program](https://dev.maxmind.com/geoip/geoipupdate/#For_Free_GeoLite2_Databases)
+   or creating a
+   [direct download script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
 
-On **December 30, 2019**, downloads will no longer be served from our [public
-GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
+On **December 30, 2019**, downloads will no longer be served from our
+[public GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
 `geolite.maxmind.com/download/geoip/database/\*`, or from any other public URL.
 
 To continue using GeoLite2 databases:

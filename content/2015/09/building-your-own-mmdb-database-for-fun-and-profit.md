@@ -13,13 +13,12 @@ authors:
 
 ## September 2020 Update
 
-We've got a new post that deals with [writing MMDB files using the Go
-programming
-language](https://blog.maxmind.com/2020/09/01/enriching-mmdb-files-with-your-own-data-using-go/).
+We've got a new post that deals with
+[writing MMDB files using the Go programming language](https://blog.maxmind.com/2020/09/01/enriching-mmdb-files-with-your-own-data-using-go/).
 And now back to our article...
 
-If you use a GeoIP database, you're probably familiar with MaxMind's [MMDB
-format](https://github.com/maxmind/MaxMind-DB/blob/master/MaxMind-DB-spec.md).
+If you use a GeoIP database, you're probably familiar with MaxMind's
+[MMDB format](https://github.com/maxmind/MaxMind-DB/blob/master/MaxMind-DB-spec.md).
 
 At MaxMind, we created the MMDB format because we needed a format that was very
 fast and highly portable. MMDB comes with supported readers in many languages.
@@ -29,23 +28,23 @@ a hosted application.
 
 ## Tools You'll Need
 
-The code samples I include here use the [Perl MMDB database
-writer](https://metacpan.org/pod/MaxMind::DB::Writer) and the [Perl MMDB
-database reader](https://metacpan.org/pod/MaxMind::DB::Reader). You'll need to
-use Perl to write your own MMDB files, but you can read the files with the
-officially supported [.NET, PHP, Java and Python
-readers](https://github.com/maxmind?utf8=%E2%9C%93\&query=reader) in addition to
-unsupported third party MMDB readers. Many are listed on the [GeoIP2 download
-page](https://dev.maxmind.com/geoip/geoip2/downloadable/). So, as far as
-deployments go, you're not constrained to any one language when you want to read
-from the database.
+The code samples I include here use the
+[Perl MMDB database writer](https://metacpan.org/pod/MaxMind::DB::Writer) and
+the [Perl MMDB database reader](https://metacpan.org/pod/MaxMind::DB::Reader).
+You'll need to use Perl to write your own MMDB files, but you can read the files
+with the officially supported
+[.NET, PHP, Java and Python readers](https://github.com/maxmind?utf8=%E2%9C%93&query=reader)
+in addition to unsupported third party MMDB readers. Many are listed on the
+[GeoIP2 download page](https://dev.maxmind.com/geoip/geoip2/downloadable/). So,
+as far as deployments go, you're not constrained to any one language when you
+want to read from the database.
 
 ## Following Along
 
-Use [our GitHub
-repository](https://github.com/maxmind/getting-started-with-mmdb) to follow
-along with the actual scripts. Fire up a pre-configured Vagrant VM or just
-install the required modules manually.
+Use
+[our GitHub repository](https://github.com/maxmind/getting-started-with-mmdb) to
+follow along with the actual scripts. Fire up a pre-configured Vagrant VM or
+just install the required modules manually.
 
 ## Getting Started
 
@@ -53,9 +52,9 @@ In our example, we want to create an access list of some IP addresses to allow
 them access to a VPN or a hosted application. For each IP address or IP range,
 we need to track a few things about the person who is connecting from this IP.
 
-* name
-* development environments to which they need access
-* an arbitrary session expiration time, defined in seconds
+- name
+- development environments to which they need access
+- an arbitrary session expiration time, defined in seconds
 
 To do so, we create the following the file `examples/01-getting-started.pl`
 
@@ -139,16 +138,15 @@ MaxMind::DB::Writer::Tree->new(...)
 ```
 
 The options we've used are all commented in the script, but there are additional
-options. They're all [fully
-documented](https://metacpan.org/pod/MaxMind::DB::Writer::Tree) as well. To keep
-things simple (and easily readable), we used IPv4 to store addresses in this
-example, but you could also use IPv6.
+options. They're all
+[fully documented](https://metacpan.org/pod/MaxMind::DB::Writer::Tree) as well.
+To keep things simple (and easily readable), we used IPv4 to store addresses in
+this example, but you could also use IPv6.
 
 We haven't used all available types in this script. For example, we also could
 have used a `map` to store some of these values. You're encouraged to review
-[the full list of available
-types](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES) which can
-be used in `map_key_type_callback`.
+[the full list of available types](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES)
+which can be used in `map_key_type_callback`.
 
 ### Step 2
 
@@ -160,7 +158,7 @@ second is a hash reference of values which describe the IP range.
 $tree->insert_network( $network, $address_for_employee{$address} );
 ```
 
-If you wish to insert an IP address range, use the \`insert\_range()\` method
+If you wish to insert an IP address range, use the \`insert_range()\` method
 instead:
 
 ```perl
@@ -327,9 +325,9 @@ Description: My database of IP data
 undef
 ```
 
-We gave Klaus an IP range of `8.8.8.8/28`, which translates to `8.8.8.0 to
-8.8.8.15`. You can see that when we get to `8.8.8.16` we get an `undef`
-response, because there is no record at this address.
+We gave Klaus an IP range of `8.8.8.8/28`, which translates to
+`8.8.8.0 to 8.8.8.15`. You can see that when we get to `8.8.8.16` we get an
+`undef` response, because there is no record at this address.
 
 ## Iterating Over the Search Tree
 
@@ -372,8 +370,7 @@ As in the previous example, we create a new `MaxMind::DB::Reader` object.
 ### Step 2
 
 To dump our data, we pass an anonymous subroutine to the
-[iterate\_search\_tree()
-method](https://metacpan.org/pod/MaxMind::DB::Reader#reader-iterate_search_tree-data_callback-node_callback).
+[iterate_search_tree() method](https://metacpan.org/pod/MaxMind::DB::Reader#reader-iterate_search_tree-data_callback-node_callback).
 (This method can actually take two callbacks, but the second callback is for
 debugging the actual nodes in the tree -- that's too low level for our purposes
 today.)
@@ -413,8 +410,8 @@ To extend our example, let’s take the data from an existing GeoIP2 database an
 combine it with our custom MMDB file.
 
 If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in
-`/usr/share/GeoIP`. If not, you may need to [download this
-file](https://dev.maxmind.com/geoip/geoip2/geolite2/) or use
+`/usr/share/GeoIP`. If not, you may need to
+[download this file](https://dev.maxmind.com/geoip/geoip2/geolite2/) or use
 [geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more details on
 how to set this up, you can look at the `provision` section of the `Vagrantfile`
 in the GitHub repository.
@@ -713,12 +710,12 @@ sub is_ip_valid {
 
 Here's a quick summary of what's going on:
 
-* As part of your deployment you'll naturally need to include your `users.mmdb`
+- As part of your deployment you'll naturally need to include your `users.mmdb`
   file, stored in the location of your choice.
-* You'll need to create a `MaxMind::DB::Reader` object to perform the lookup.
-* If the `$record` is undef, the IP could not be found.
-* If the IP is found, you can set a session expiration.
-* If the IP is found, you can also set a time zone for the user. Keep in mind
+- You'll need to create a `MaxMind::DB::Reader` object to perform the lookup.
+- If the `$record` is undef, the IP could not be found.
+- If the IP is found, you can set a session expiration.
+- If the IP is found, you can also set a time zone for the user. Keep in mind
   that it's possible that the `time_zone` key does not exist, so it's important
   that you don't assume it will always be available.
 
@@ -741,17 +738,17 @@ quite slow.
 This requires slightly more logic, but reading a CSV file line by line will give
 you a significant speed boost over search tree iteration.
 
-Free downloads of CSV files for GeoLite2 City and GeoLite2 Country [are
-available from MaxMind.com](https://dev.maxmind.com/geoip/geoip2/geolite2/). If
-you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
+Free downloads of CSV files for GeoLite2 City and GeoLite2 Country
+[are available from MaxMind.com](https://dev.maxmind.com/geoip/geoip2/geolite2/).
+If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
 `GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory.
 `examples/06-read-csv.pl` will give you a head start on parsing these CSVs.
 
 ### Insert Order, Merging and Overwriting
 
 It's important to understand `MaxMind::DB::Writer`'s configurable behaviour for
-inserting ranges. Please see our documentation on [Insert Order, Merging and
-Overwriting](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting)
+inserting ranges. Please see our documentation on
+[Insert Order, Merging and Overwriting](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting)
 so that you can choose the correct behaviour for any overlapping IP ranges you
 may come across when writing your own database files.
 
@@ -762,10 +759,10 @@ data from a GeoLite2-City database. We've only included a few data points, but
 MaxMind databases contain much more data you can use to build a solution to meet
 your business requirements.
 
-**About our contributor:**  *Olaf Alders is a Senior Software Engineer at
+**About our contributor:** _Olaf Alders is a Senior Software Engineer at
 MaxMind. After taking his first course in Fortran, Olaf earned an M.A. in
 Classical Philology from McMaster University and an M.A. in Medieval Studies
 from the University of Toronto. His open source projects include
-[MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various [Perl
-modules](https://metacpan.org/author/OALDERS).  Follow him on Twitter
-[@olafalders](https://twitter.com/olafalders).*
+[MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various
+[Perl modules](https://metacpan.org/author/OALDERS). Follow him on Twitter
+[@olafalders](https://twitter.com/olafalders)._

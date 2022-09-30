@@ -7,7 +7,7 @@ tag:
   - "Product Updates"
   - "IP Network Data"
 authors:
- - "The Team at MaxMind"
+  - "The Team at MaxMind"
 ---
 
 We’re happy to announce that MaxMind’s roll out of Internet Protocol version 6
@@ -43,8 +43,8 @@ Internet would grow, defined IP addresses as 32-bit numbers. In non-tech speak,
 this means there are a little more than 4 billion (2^32) possible addresses. As
 the Internet has become more popular, and as the number of devices per person
 has increased, it’s become obvious that 4 billion addresses just isn’t enough,
-even with [clever attempts at
-extension](https://en.wikipedia.org/wiki/IPv4_address_exhaustion#Early_mitigation_efforts)!
+even with
+[clever attempts at extension](https://en.wikipedia.org/wiki/IPv4_address_exhaustion#Early_mitigation_efforts)!
 In addition to introducing several other updates, IPv6 supports 128-bit IP
 addresses, meaning there are up to 2^128 or 3.4 \* 10^38 IP addresses
 available - a number unlikely to be exhausted. A global transition to IPv6 is

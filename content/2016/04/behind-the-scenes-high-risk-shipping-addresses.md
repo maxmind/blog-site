@@ -25,7 +25,7 @@ as well as provides some general fraud review tips for identifying them.
 **Where are the most high risk shipping addresses?**
 
 Let’s take a look at the current top ten zip codes with the most high risk
-shipping addresses, as identified by minFraud’s *shipForward* \* data point, and
+shipping addresses, as identified by minFraud’s _shipForward_ \* data point, and
 see what insight they provide.
 
 As indicated on this map, all top ten zip codes are on the coast and near a
@@ -62,22 +62,22 @@ for consideration in shipping address risk assessment.
 Since a shipping address associated with a freight forwarder in and of itself is
 not indicative of high risk, consider other factors:
 
-* What are the billing and IP addresses associated with the order? As an
+- What are the billing and IP addresses associated with the order? As an
   example, it makes sense that an order placed in the USA but originating from
   Mexico might use a freight forwarder in the US to reach a final Mexican
   destination. On the other hand, it may be less obvious why a large order
   placed from Wisconsin is being shipped to a freight forwarder.
-* What items are included in the order? Does the order include higher risk
+- What items are included in the order? Does the order include higher risk
   items, for example, electronics or luxury goods?
-* What is the velocity around the shipping address? A large number of orders to
+- What is the velocity around the shipping address? A large number of orders to
   the same shipping address may warrant additional scrutiny.
-* What delivery speed is associated with the order? Those paying with a stolen
+- What delivery speed is associated with the order? Those paying with a stolen
   credit card can afford overnight shipping. Fraudsters are looking to have the
   goods in hand as soon as possible and prior to the credit card being reported
   as stolen. Consider the cost of the delivery option in comparison to the cost
   of the item. If the cost of delivery is more than 50% of the purchase price,
   the likelihood of fraud is higher.
-* Once an order has been placed, watch out for changes in shipping address or
+- Once an order has been placed, watch out for changes in shipping address or
   delivery type. Fraudsters have learned that merchants give extra scrutiny to
   orders placed to high risk shipping addresses or with overnight delivery. To
   remain under the radar, fraudsters may place an order and then follow up with
@@ -90,5 +90,5 @@ associated with a transaction. Leverage the data of the minFraud network to
 identify high risk addresses, stop shipments to fraudsters, and prevent
 chargebacks.
 
-\* *The equivalent data point in minFraud Insights is
-shipping\_address/is\_high\_risk.*
+\* _The equivalent data point in minFraud Insights is
+shipping_address/is_high_risk._

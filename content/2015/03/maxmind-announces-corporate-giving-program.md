@@ -33,5 +33,5 @@ innovative solutions.
 
 We would like to thank our customers for making this possible!
 
-*To learn more about MaxMind's charitable giving, visit our
-[Corporate Giving page](https://www.maxmind.com/en/corporate-giving).*
+_To learn more about MaxMind's charitable giving, visit our
+[Corporate Giving page](https://www.maxmind.com/en/corporate-giving)._

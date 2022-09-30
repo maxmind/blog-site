@@ -10,9 +10,9 @@ authors:
 ---
 
 We recently released a number of updates to our minFraud alerts functionality,
-and we’d like to take the opportunity to explain how [minFraud
-service](https://www.maxmind.com/en/solutions/minfraud-services) customers can
-benefit from alerts.
+and we’d like to take the opportunity to explain how
+[minFraud service](https://www.maxmind.com/en/solutions/minfraud-services)
+customers can benefit from alerts.
 
 ## Recognizing fraud attacks in real-time
 
@@ -32,9 +32,8 @@ to these transactions that leads to a transaction having a re-calculated risk
 score greater than or equal to 75, a minFraud Alert is sent out containing the
 re-calculated risk score and a reason code.
 
-You can receive alerts by email and/or webhook by configuring your [minFraud
-alerts settings in your account portal \[login
-required\]](https://www.maxmind.com/en/accounts/current/minfraud/alerts/settings).
+You can receive alerts by email and/or webhook by configuring your
+[minFraud alerts settings in your account portal \[login required\]](https://www.maxmind.com/en/accounts/current/minfraud/alerts/settings).
 
 ![Sample alerts from alert log.](/images/2021/05/sample-alerts-log.png)
 
@@ -46,8 +45,8 @@ A number of options are available to you based on the nature of your business.
 First, you may wish to perform a deeper review of transactions tagged by alerts
 to see whether you agree with the updated risk assessment. You may also choose
 to perform additional verification on the related account/user. Reason codes
-(described on the [minFraud alert settings
-page](https://www.maxmind.com/en/accounts/current/minfraud/alerts/settings)),
+(described on the
+[minFraud alert settings page](https://www.maxmind.com/en/accounts/current/minfraud/alerts/settings)),
 which are included in the alert, provide additional insight on the re-scoring.
 
 E-commerce businesses may have the option to stop or delay fulfillment and/or
@@ -55,7 +54,7 @@ refund the payment. Other types of businesses may opt to stop or delay payouts
 or delivery of incentives, or take steps to limit the activities of the related
 account/user.
 
-***
+---
 
-If you have any questions about minFraud alerts or any feedback, please [contact
-us](https://support.maxmind.com/hc/en-us/requests/new/).
+If you have any questions about minFraud alerts or any feedback, please
+[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
