@@ -2,7 +2,6 @@
 title: "Introducing Consumer Privacy Networks"
 date: "2022-03-15"
 featuredImage: /images/2022/03/consumer-privacy-networks.svg
-isFeatured: true
 category:
   - "IP Geolocation and Network Data"
 tag:
