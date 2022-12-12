@@ -6,7 +6,7 @@
   />
   <br/>
   <br/>
-  <small>Developer Documentation Static Site Generator</small>
+  <small>Blog Static Site Generator</small>
 </h3>
 
 ---
@@ -49,11 +49,10 @@ npm install
 brew install hugo
 ```
 
-##### Linux
+##### Debian / Ubuntu
 
-```sh
-sudo apt-get install hugo
-```
+It is recommended that you install [the latest release of Hugo](https://github.com/gohugoio/hugo/releases/latest).
+For debian and ubuntu users, they offer a .deb file.
 
 ##### Other OS
 
