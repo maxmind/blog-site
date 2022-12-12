@@ -6,7 +6,7 @@
   />
   <br/>
   <br/>
-  <small>Developer Documentation Static Site Generator</small>
+  <small>Blog Static Site Generator</small>
 </h3>
 
 ---
