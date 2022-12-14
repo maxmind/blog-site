@@ -19,10 +19,10 @@ flagship fraud prevention conference, MRC Vegas, Tuesday, March 20, from 2:15pm
 MaxMind’s Director of Business Development, and
 [Will Mowat](https://s1.goeshow.com/mrc/annual/2018/Vegas18Agenda.cfm?&searchAuthor=Mowat,Will),
 Shopify’s Fraud Operations Lead, will be discussing the growing problem of
-[account takeover](/2017/08/16/e-commerce-fraud-101-account-takeover/)
-and what merchants can do to combat it. Jenn and Will bring years of industry
-insight and first-hand experience with fraud prevention and risk mitigation to
-this informative and timely presentation on account takeover.
+[account takeover](/2017/08/e-commerce-fraud-101-account-takeover/) and what
+merchants can do to combat it. Jenn and Will bring years of industry insight and
+first-hand experience with fraud prevention and risk mitigation to this
+informative and timely presentation on account takeover.
 
 - **Teach Me How to Say Goodbye … to ATO!**
 - **When:** Tuesday, March 20, 2:15pm - 3:00pm
