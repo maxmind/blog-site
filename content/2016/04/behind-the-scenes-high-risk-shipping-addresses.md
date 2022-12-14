@@ -31,7 +31,7 @@ see what insight they provide.
 As indicated on this map, all top ten zip codes are on the coast and near a
 shipping port:
 
-<iframe width="300" height="150" style="width: 100%; height: 300px;" src="https://blog.maxmind.com/wp-content/uploads/2016/03/map5.html"></iframe>
+<iframe width="300" height="150" style="width: 100%; height: 300px;" src="/wp-content/uploads/2016/03/map5.html"></iframe>
 
 Six of the ten zip codes are in Miami, FL. In fact, 75% of the high risk
 shipping addresses associated with these ten zip codes were in Miami, FL.
