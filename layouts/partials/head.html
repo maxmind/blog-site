@@ -21,6 +21,7 @@
   {{ $systemStatus := resources.Get "js/system-status.ts" | js.Build }}
   {{ $js := slice $search $searchResult $systemStatus | resources.Concat "js/bundle.js" }}
   <script src='{{ $js.RelPermalink }}'></script>
+  <script async src="https://www.maxmind.com/js/global-privacy-control.js"></script>
 
 
 </head>
