@@ -34,7 +34,7 @@ At MaxMind, “open communication” is one of our core values. We’re listenin
 you and we take your feedback seriously.
 
 Additional information can also be found in our earlier blog:
-[Discontinuation of the GeoLite Legacy Databases](https://blog.maxmind.com/2018/01/02/discontinuation-of-the-geolite-legacy-databases/).
+[Discontinuation of the GeoLite Legacy Databases](/2018/01/02/discontinuation-of-the-geolite-legacy-databases/).
 
 ---
 

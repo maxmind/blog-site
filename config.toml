@@ -1,4 +1,3 @@
-baseURL = 'https://blog.maxmind.com/'
 languageCode = 'en-us'
 title = 'MaxMind'
 paginate = 6

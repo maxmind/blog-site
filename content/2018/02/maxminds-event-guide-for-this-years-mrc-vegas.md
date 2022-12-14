@@ -24,7 +24,7 @@ conference.
   can do to help you understand the context of an account takeover in order to
   identify suspicious activity and make better decisions while providing your
   good customers with the best experience possible.
-  [**Read More >>**](https://blog.maxmind.com/2018/01/24/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas/#more-359)
+  [**Read More >>**](/2018/01/24/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas/#more-359)
 
 ---
 

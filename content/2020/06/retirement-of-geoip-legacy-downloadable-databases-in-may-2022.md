@@ -47,7 +47,7 @@ users to migrate to our current
 although there will be data changes as they switch to relying on
 [GeoIP2 data](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/). More
 information on this will be provided on June 15, 2020 in a
-[separate blog post](https://blog.maxmind.com/2020/06/15/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022/).
+[separate blog post](/2020/06/15/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022/).
 
 ## What does this mean for me?
 

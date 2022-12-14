@@ -14,7 +14,7 @@ authors:
 ## September 2020 Update
 
 We've got a new post that deals with
-[writing MMDB files using the Go programming language](https://blog.maxmind.com/2020/09/01/enriching-mmdb-files-with-your-own-data-using-go/).
+[writing MMDB files using the Go programming language](/2020/09/01/enriching-mmdb-files-with-your-own-data-using-go/).
 And now back to our article...
 
 If you use a GeoIP database, you're probably familiar with MaxMind's
