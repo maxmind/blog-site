@@ -1,3 +1,5 @@
+# We override this on deploy
+baseurl = "/"
 languageCode = 'en-us'
 title = 'MaxMind'
 paginate = 6
