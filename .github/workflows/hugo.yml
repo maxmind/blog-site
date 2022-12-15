@@ -25,4 +25,5 @@ jobs:
       - name: Build
         run: ./build.sh
         env:
-          DARTSASS_VERSION: 1.53.0
+          CF_PAGES_URL: /
+          DARTSASS_VERSION: 1.56.2

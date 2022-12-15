@@ -16,4 +16,4 @@ dart-sass-embedded --version
 
 echo "Building..."
 
-hugo --gc --minify
+hugo --gc --minify -b "$CF_PAGES_URL"
