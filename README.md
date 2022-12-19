@@ -38,8 +38,11 @@ If you need help installing and/or managing Node and Yarn versions, check out [N
 ### Installation
 
 ```sh
-npm install
+npm install && npm prepare
 ```
+
+* `npm install` installs the neccessary node modules for development.
+* `npm prepare` sets up the linting pre-commit hooks via husky.
 
 #### Install Hugo
 
