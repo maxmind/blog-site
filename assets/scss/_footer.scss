@@ -2,31 +2,29 @@
 @use 'variables';
 
 /***** Footer *****/
-@include variables.breakpoint('xs') {
-  .footer__container {
-    grid-template-areas: 'a b' 'c d' 'branding branding' 'copyright copyright';
-  }
+.footer__container {
+  grid-template-areas: 'a b' 'c d' 'branding branding' 'copyright copyright';
+}
 
-  .footer__branding {
-    display: flex;
-    justify-content: space-between;
-  }
+.footer__branding {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .footer__logo {
-    display: inline-block;
-    margin-right: 10px;
-    width: 180px;
-  }
+.footer__logo {
+  display: inline-block;
+  margin-right: 10px;
+  width: 180px;
+}
 
-  .footer__copyright {
-    grid-area: copyright;
-    text-align: center;
-  }
+.footer__copyright {
+  grid-area: copyright;
+  text-align: center;
+}
 
-  .footer__terms {
-    margin-top: calc(var(--mm-spacing) / 2);
-    text-align: center;
-  }
+.footer__terms {
+  margin-top: calc(var(--mm-spacing) / 2);
+  text-align: center;
 }
 
 @include variables.breakpoint('md') {
