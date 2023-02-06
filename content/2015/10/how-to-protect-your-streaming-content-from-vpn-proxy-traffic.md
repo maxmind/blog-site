@@ -8,7 +8,7 @@ tag:
   - "Digital Rights Management"
   - "Geofiltering and Geofencing"
 authors:
-  - "Olaf Alders"
+  - "The Team at MaxMind"
 ---
 
 As more and more TV, music, and movie content has moved online, a veritable
