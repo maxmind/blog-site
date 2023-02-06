@@ -7,65 +7,54 @@ window.addEventListener('DOMContentLoaded', () => {
   );
 
   const $operationalIcons = document.querySelectorAll('.operational');
-  const $degradedPerformanceIcons = document.querySelectorAll(
-    '.degraded-performance'
-  );
-  const $partialServiceDisruptionIcons = document.querySelectorAll(
-    '.partial-service-disruption'
-  );
-  const $plannedMaintenanceIcons = document.querySelectorAll(
-    '.planned-maintenance'
-  );
-  const $serviceDisruptionIcons = document.querySelectorAll(
-    '.service-disruption'
-  );
-  const $securityEventIcons = document.querySelectorAll('.security-event');
+  const $warningIcons = document.querySelectorAll('.degraded-performance');
   const $allSystemStatusIcons = document.querySelectorAll('.status-icon');
 
   type SystemStatus = {
-    icons: NodeList;
+    icon: NodeList;
     message: string;
+    title: string;
   };
 
   // https://kb.status.io/developers/status-codes/
-  const status: Record<string, SystemStatus> = {
-    DEGRADED_PERFORMANCE: {
-      icons: $degradedPerformanceIcons,
-      message:
-        'Degraded Performance - We are currently experiencing ' +
-        'degraded performance in some of our web services.',
-    },
-    OPERATIONAL: {
-      icons: $operationalIcons,
+  const status: Record<number, SystemStatus> = {
+    100: {
+      icon: $operationalIcons,
       message: '',
+      title: 'Operational',
     },
-    PARTIAL_SERVICE_DISRUPTION: {
-      icons: $partialServiceDisruptionIcons,
-      message:
-        'Partial Service Disruption - Some of our web services ' +
-        'are temporarily unavailable.',
+    200: {
+      icon: $warningIcons,
+      message: 'We are currently undergoing some scheduled maintenance.',
+      title: 'Planned Maintenance',
     },
-    PLANNED_MAINTENANCE: {
-      icons: $plannedMaintenanceIcons,
+    300: {
+      icon: $warningIcons,
+      // eslint-disable-next-line max-len
       message:
-        'Planned Maintenance - We are currently undergoing some ' +
-        'scheduled maintenance.',
+        'We are currently experiencing degraded performance in some of our web services.',
+      title: 'Degraded Performance',
     },
-    SECURITY_EVENT: {
-      icons: $securityEventIcons,
-      message:
-        'Security Event - We are currently mitigating issues ' +
-        'relating to some of our web services.',
+    400: {
+      icon: $warningIcons,
+      message: 'Some of our web services are temporarily unavailable.',
+      title: 'Partial Service Disruption',
     },
-    SERVICE_DISRUPTION: {
-      icons: $serviceDisruptionIcons,
+    500: {
+      icon: $warningIcons,
+      message: 'Our web services are temporarily unavailable.',
+      title: 'Service Disruption',
+    },
+    600: {
+      icon: $warningIcons,
+      // eslint-disable-next-line max-len
       message:
-        'Service Disruption - Our web services are temporarily ' +
-        'unavailable.',
+        'We are currently mitigating issues relating to some of our web services.',
+      title: 'Security Event',
     },
   };
 
-  const setSystemStatus = ($icons: NodeList, message: string) => {
+  const setSystemStatus = ($status: SystemStatus) => {
     $allSystemStatusIcons.forEach(($systemStatusIcon) => {
       if ($systemStatusIcon) {
         $systemStatusIcon.classList.remove('show-status-icon');
@@ -77,14 +66,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // page only once, whereas the other icons show twice.
     // All are hidden on page load using display: none;.
 
-    if ($icons.length > 1) {
+    if ($status.icon.length > 1) {
       $headerStatus.classList.add('show-header-system-status');
-      $headerStatusMessage.innerText = message;
+      $headerStatusMessage.innerText = `${$status.title}: ${$status.message}`;
     } else {
       $headerStatus.classList.remove('show-header-system-status');
     }
 
-    $icons.forEach((icon) => {
+    $status.icon.forEach((icon) => {
       (icon as Element).classList.add('show-status-icon');
     });
   };
@@ -93,49 +82,36 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('https://status.maxmind.com/1.0/status/53fcfbb2ac0c957972000235')
       .then((res) => res.json())
       .then((json) => {
-        const systemStatusCode = json.result.status_overall.status_code;
-        switch (systemStatusCode) {
-          case 100:
-            setSystemStatus(
-              status.OPERATIONAL.icons,
-              status.OPERATIONAL.message
-            );
-            break;
-          case 200:
-            setSystemStatus(
-              status.PLANNED_MAINTENANCE.icons,
-              status.PLANNED_MAINTENANCE.message
-            );
-            break;
-          case 300:
-            setSystemStatus(
-              status.DEGRADED_PERFORMANCE.icons,
-              status.DEGRADED_PERFORMANCE.message
-            );
-            break;
-          case 400:
-            setSystemStatus(
-              status.PARTIAL_SERVICE_DISRUPTION.icons,
-              status.PARTIAL_SERVICE_DISRUPTION.message
-            );
-            break;
-          case 500:
-            setSystemStatus(
-              status.SERVICE_DISRUPTION.icons,
-              status.SERVICE_DISRUPTION.message
-            );
-            break;
-          case 600:
-            setSystemStatus(
-              status.SECURITY_EVENT.icons,
-              status.SECURITY_EVENT.message
-            );
-            break;
+        const status_code = json.result.status_overall.status_code;
+        if (!(status_code in status)) {
+          throw new TypeError('status_code invalid');
         }
+        if (json.result.incidents.length != 0) {
+          setSystemStatus({
+            icon: $warningIcons,
+            message: json.result.incidents[0].name,
+            title: status[Number(status_code)].title,
+          });
+          return;
+        } else if (json.result.maintenance.active.length != 0) {
+          setSystemStatus({
+            icon: $warningIcons,
+            message: json.result.maintenance.active[0].name,
+            title: status[Number(status_code)].title,
+          });
+          return;
+        }
+        setSystemStatus(status[Number(status_code)]);
       })
       .catch(() => {
-        throw new Error('There was an error retrieving the status.');
+        /**
+         * No-op
+         *
+         * If something goes wrong, we intentionally want to swallow the error
+         * and prevent the UI from knowing
+         */
       });
+
   getSystemStatus();
 
   setInterval(() => {
