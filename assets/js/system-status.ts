@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   );
 
   const $operationalIcons = document.querySelectorAll('.operational');
-  const $warningIcons = document.querySelectorAll('.degraded-performance');
+  const $warningIcons = document.querySelectorAll('.warning');
   const $allSystemStatusIcons = document.querySelectorAll('.status-icon');
 
   type SystemStatus = {
