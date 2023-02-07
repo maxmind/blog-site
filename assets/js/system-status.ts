@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
       })
       .then((json) => {
         const status_code = json.result.status_overall.status_code;
-        if (!(status_code in status)) {
+        if (!(Number(status_code) in status)) {
           throw new TypeError('status_code invalid');
         }
         if (json.result.incidents.length != 0) {
