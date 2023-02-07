@@ -8,7 +8,7 @@ tag:
   - "IP Network Data"
   - "Technical Tutorials"
 authors:
-  - "The Team at MaxMind"
+  - "Olaf Alders"
 ---
 
 ## September 2020 Update
