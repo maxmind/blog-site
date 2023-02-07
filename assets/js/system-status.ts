@@ -30,9 +30,9 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     300: {
       icons: $warningIcons,
-      // eslint-disable-next-line max-len
       message:
-        'We are currently experiencing degraded performance in some of our web services.',
+        'We are currently experiencing degraded performance in some of our ' +
+        'web services.',
       title: 'Degraded Performance',
     },
     400: {
@@ -47,9 +47,9 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     600: {
       icons: $warningIcons,
-      // eslint-disable-next-line max-len
       message:
-        'We are currently mitigating issues relating to some of our web services.',
+        'We are currently mitigating issues relating to some of our ' +
+        'web services.',
       title: 'Security Event',
     },
   };
