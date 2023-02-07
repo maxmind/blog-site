@@ -80,7 +80,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const getSystemStatus = () =>
     fetch('https://status.maxmind.com/1.0/status/53fcfbb2ac0c957972000235')
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error('status document could not be fetched');
+      })
       .then((json) => {
         const status_code = json.result.status_overall.status_code;
         if (!(status_code in status)) {
