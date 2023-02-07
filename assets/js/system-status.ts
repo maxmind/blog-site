@@ -108,13 +108,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         setSystemStatus(status[Number(status_code)]);
       })
-      .catch(() => {
-        /**
-         * No-op
-         *
-         * If something goes wrong, we intentionally want to swallow the error
-         * and prevent the UI from knowing
-         */
+      .catch(($error) => {
+        console.error($error);
       });
 
   getSystemStatus();
