@@ -23,6 +23,8 @@ export interface ISearchResults {
   };
 }
 
+const foo = "bar";
+
 const endpoint =
   'https://www.googleapis.com/customsearch/v1/siterestrict?cx={cx}&key={key}';
 
