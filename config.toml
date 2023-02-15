@@ -1,5 +1,6 @@
 # We override this on deploy
 baseurl = "/"
+googleAnalytics = 'G-8K33X585JF'
 languageCode = 'en-us'
 title = 'MaxMind'
 paginate = 6
@@ -34,5 +35,3 @@ rssLimit = 6
     noHl = false
     style = 'monokai'
     tabWidth = 4
-
-googleAnalytics= 'G-8K33X585JF'
