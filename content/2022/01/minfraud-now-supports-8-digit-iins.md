@@ -83,5 +83,5 @@ the credit card, as long as a valid IIN can be detected in your input.**
 You can find documentation about how many digits to send for the minFraud credit
 card inputs in the API schema on our developer's portal:
 
-- [`/credit_card/issuer_id_number`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__issuer_id_number)
-- [`/credit_card/last_digits`](https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en#schema--request--credit-card__last_digits)
+- [`/credit_card/issuer_id_number`](https://dev.maxmind.com/minfraud/api-documentation/requests#schema--request--credit-card__issuer_id_number)
+- [`/credit_card/last_digits`](https://dev.maxmind.com/minfraud/api-documentation/requests#schema--request--credit-card__last_digits)
