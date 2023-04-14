@@ -44,9 +44,9 @@ Apple has shared the following assurances built into Private Relay:
 Customers do not need to take any action to receive this data.
 
 For web service customers, this data will be returned in the
-[`/traits/isp`](https://dev.maxmind.com/geoip/docs/web-services/responses/?lang=en#schema--response--traits__isp)
+[`/traits/isp`](https://dev.maxmind.com/geoip/docs/web-services/responses#schema--response--traits__isp)
 and
-[`/traits/organization`](https://dev.maxmind.com/geoip/docs/web-services/responses/?lang=en#schema--response--traits__organization)
+[`/traits/organization`](https://dev.maxmind.com/geoip/docs/web-services/responses#schema--response--traits__organization)
 outputs, and in geolocation outputs.
 
 For database customers, this data has been included in the latest release of our
