@@ -2,7 +2,6 @@
 title: "MaxMind’s New Look"
 date: "2022-12-15"
 featuredImage: /images/2022/12/new-maxmind-logo-white.png
-isFeatured: true
 category:
   - "Company Updates"
 tag:
