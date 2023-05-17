@@ -26,7 +26,7 @@
     "remark-cli": "^11.0.0",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
-    "remark-lint-first-heading-level": "^3.1.1",
+    "remark-lint-first-heading-level": "^3.1.2",
     "remark-lint-no-empty-url": "^3.1.1",
     "remark-lint-rule-style": "^3.1.1",
     "remark-lint-unordered-list-marker-style": "^3.1.1",
