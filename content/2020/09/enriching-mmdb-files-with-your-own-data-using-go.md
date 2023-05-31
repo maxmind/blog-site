@@ -28,7 +28,7 @@ GeoLite2 Country MMDB file. We'll be building a new MMDB file, one that contains
 both MaxMind's and our fictional company's data.
 
 If you don't need any of the MaxMind data, but you still want to create a fast,
-\easy-to-query database keyed on IP addresses and IP address ranges, you can
+easy-to-query database keyed on IP addresses and IP address ranges, you can
 consult this example code showing
 [how to create an MMDB file from scratch](https://github.com/maxmind/mmdbwriter/blob/main/examples/asn-writer/main.go).
 
