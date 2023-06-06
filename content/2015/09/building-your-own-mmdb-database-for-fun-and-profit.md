@@ -114,7 +114,7 @@ my %address_for_employee = (
 );
 
 for my $network ( keys %address_for_employee ) {
-    $tree->insert_network( $network, $address_for_employee{$address} );
+    $tree->insert_network( $network, $address_for_employee{$network} );
 }
 
 # Write the database to disk.
@@ -155,14 +155,14 @@ takes two arguments. The first is a CIDR representation of the network. The
 second is a hash reference of values which describe the IP range.
 
 ```perl
-$tree->insert_network( $network, $address_for_employee{$address} );
+$tree->insert_network( $network, $address_for_employee{$network} );
 ```
 
 If you wish to insert an IP address range, use the \`insert_range()\` method
 instead:
 
 ```perl
-$tree->insert_range( $first_ip, $last_ip, $address_for_employee{$address} );
+$tree->insert_range( $first_ip, $last_ip, $address_for_employee{$network} );
 ```
 
 We've inserted information about two employees, Jane and Klaus. They're both on
