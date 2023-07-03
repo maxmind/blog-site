@@ -57,4 +57,4 @@ account/user.
 ---
 
 If you have any questions about minFraud alerts or any feedback, please
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact us](https://share.hsforms.com/1wsOwiZ3LS1WlrB72grq0kAcntle/).

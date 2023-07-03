@@ -99,4 +99,4 @@ offerings at this time.
 
 If you are unsure about how to proceed, please forward this information to the
 person(s) responsible for your technical integration. If you have any questions,
-please [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+please [contact us](https://share.hsforms.com/1wsOwiZ3LS1WlrB72grq0kAcntle/).
