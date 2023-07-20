@@ -39,7 +39,12 @@
           <span class="footer__link">System Status</span>
         </a>
         <a class="footer__link" href="https://www.maxmind.com/en/geoip-data-correction-request">GeoIP Data Correction Request</a>
-        <a class="footer__link" href="https://www.maxmind.com/en/opt-out">Do Not Sell My Personal Information</a>
+        <a class="footer__link footer__ccpa" href="https://www.maxmind.com/en/opt-out">
+          <span class="footer__ccpa-icon">
+            {{ readFile "assets/icon-ccpa-opt-out.svg" | safeHTML }}
+          </span>
+          <span class="footer__link">Your Privacy Choices</span>
+        </a>
         <a class="footer__link" href="https://www.maxmind.com/en/privacy-policy#california-notice-of-collection">Notice of Collection</a>
       </div>
       <div class="footer__group footer__group__developers">

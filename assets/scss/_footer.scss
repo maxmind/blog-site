@@ -224,6 +224,7 @@
   grid-column-gap: var(--mm-spacing);
 }
 
+.footer__ccpa,
 .footer__status {
   position: relative;
 }
@@ -241,6 +242,17 @@
 
 .show-status-icon {
   display: block !important;
+}
+
+.footer__ccpa-icon {
+  left: -10px;
+  position: absolute;
+  top: 57%;
+  transform: translate(-100%, -50%);
+
+  svg {
+    height: 14px;
+  }
 }
 
 .footer__termsLink {
