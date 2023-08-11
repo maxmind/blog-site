@@ -1,6 +1,5 @@
 # baseurl is updated on deploy
 baseurl = "/"
-googleAnalytics = 'G-K5TR466MVE'
 languageCode = 'en-us'
 title = 'MaxMind'
 paginate = 6
