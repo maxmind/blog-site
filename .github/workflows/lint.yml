@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - id: build
         run: echo "::set-output name=hash::${{ hashFiles('assets/**', 'content/**', 'layouts/**', 'static/**', '**/package.json', '**/package-lock.json') }}"
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - uses: actions/setup-node@v3
         with:
