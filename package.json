@@ -7,7 +7,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.11",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-compat": "^4.2.0",
@@ -17,7 +17,7 @@
     "eslint-plugin-security": "^1.7.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-typescript-sort-keys": "^2.3.0",
+    "eslint-plugin-typescript-sort-keys": "^3.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "markdownlint-cli": "^0.36.0",
