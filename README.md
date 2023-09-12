@@ -31,7 +31,7 @@
 
 ### Minimum Requirements
 
-- Node 16
+- Node 18
 
 If you need help installing and/or managing Node and Yarn versions, check out [NVM](https://github.com/nvm-sh/nvm).
 
