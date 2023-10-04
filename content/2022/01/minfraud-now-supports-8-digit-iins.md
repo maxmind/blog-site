@@ -1,7 +1,8 @@
 ---
 title: "minFraud services now support 8 digit IINs"
 date: "2022-01-31"
-featuredImage: /images/minfraud.svg
+images:
+  - /images/minfraud.svg
 category:
   - "Online Fraud Detection"
 tag:

@@ -1,7 +1,8 @@
 ---
 title: "Using MaxMind’s accuracy radius"
 date: "2022-06-06"
-featuredImage: /images/2022/06/accuracy-radius.png
+images:
+  - /images/2022/06/accuracy-radius.png
 isFeatured: true
 category:
   - "IP Geolocation and Network Data"

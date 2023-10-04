@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="blog-post__featured-image">
-              {{ $image := .Params.featuredImage }}
+              {{ $image := (index (.Params.images) 0) }}
               <img src="{{ $image }}" alt="foo">
             </div>
           </article>
