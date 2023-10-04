@@ -1,7 +1,8 @@
 ---
 title: "Data Updates for Apple iCloud Private Relay"
 date: "2021-09-09"
-featuredImage: /images/2021/09/apple-relay.svg
+images:
+  - /images/2021/09/apple-relay.svg
 category:
   - "IP Geolocation and Network Data"
   - "Online Fraud Detection"

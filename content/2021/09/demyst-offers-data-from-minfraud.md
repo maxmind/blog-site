@@ -3,7 +3,8 @@ title:
   "DemystData’s fraud solutions offer best-in-class IP risk data from the
   minFraud service to help financial services firms prevent fraud"
 date: "2021-09-07"
-featuredImage: /images/2021/09/demyst.svg
+images:
+  - /images/2021/09/demyst.svg
 isFeatured: true
 category:
   - "Online Fraud Detection"

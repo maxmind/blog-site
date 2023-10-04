@@ -1,7 +1,8 @@
 ---
 title: "GeoIP Legacy Databases have been Retired"
 date: "2022-06-01"
-featuredImage: /images/2022/06/geoip-legacy-retirement.png
+images:
+  - /images/2022/06/geoip-legacy-retirement.png
 category:
   - "Company Updates"
   - "IP Geolocation and Network Data"

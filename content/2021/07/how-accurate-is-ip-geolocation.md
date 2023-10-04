@@ -1,7 +1,8 @@
 ---
 title: "How accurate is IP geolocation?"
 date: "2021-07-01"
-featuredImage: /images/2021/07/marker.svg
+images:
+  - /images/2021/07/marker.svg
 category:
   - "IP Geolocation and Network Data"
 tag:
