@@ -11,11 +11,15 @@ authors:
   - "Olaf Alders"
 ---
 
-## September 2020 Update
+## Deprecation Notice
 
-We've got a new post that deals with
+We have deprecated the Perl writer discussed in this article. It is no longer
+developed or supported. We encourage you to use our
+[Go `github.com/maxmind/mmdbwriter` module](https://pkg.go.dev/github.com/maxmind/mmdbwriter)
+instead. Please see our post on
 [writing MMDB files using the Go programming language](/2020/09/enriching-mmdb-files-with-your-own-data-using-go/).
-And now back to our article...
+
+## Introduction
 
 If you use a GeoIP database, you're probably familiar with MaxMind's
 [MMDB format](https://github.com/maxmind/MaxMind-DB/blob/master/MaxMind-DB-spec.md).
