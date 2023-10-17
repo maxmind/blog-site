@@ -33,7 +33,7 @@
             </div>
             <div class="blog-post__featured-image">
               {{ $image := (index (.Params.images) 0) }}
-              <img src="{{ $image }}" alt="foo">
+              <img src="{{ $image }}" alt="{{ .Title }}">
             </div>
           </article>
         </div>
