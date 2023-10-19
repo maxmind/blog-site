@@ -26,9 +26,11 @@ Read on to learn more about formatting, options, and behavior below:
 
 - [how to create a new blog post](#creating-a-new-blog-post)
 - [understanding the blog head where organizational parameters are defined](#blog-head)
-- [how the blog generates metadata](#metadata)
 - [formatting copy with markdown](#markdown)
 - [embedding images in your blog post](#images)
+
+If you're interested in learning about how the blog generates metadata for SEO
+purposes, you can [read more below](#metadata).
 
 ## Creating a New Blog Post
 
@@ -76,21 +78,6 @@ The head contains the following attributes:
 | `category` | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.              |
 | `tag`      | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                          |
 | `authors`  | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                       |
-
-## Metadata
-
-At this time, the blog generates metadata in the following ways:
-
-- the `title` parameter in the blog post head generates the `<title></title>` tag
-- [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
-  - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
-  - [`og:description`](https://ogp.me/#optional) is populated with the first paragaph of the copy
-  - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
-  - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
-  - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
-  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year of the post from the `date` parameter in the [blog post head](#blog-head)
-  - [`article:published_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
-  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
 
 ## Markdown
 
@@ -191,12 +178,20 @@ the text. It's easier to just show you how to make a table than to explain:
 | Row 1 Column 1  | Row 1 Column 2  | Row 1 Column 3  |
 | Row 2 Column 1  | Row 2 Column 2  | Row 2 Column 3  |
 
-I added extra hyphens and spaces to make the table above easier to read in the
-code, but tables render even if you make them ugly and don't line up the `|`
-dividers row to row. For example, this table will render the same way as the one
-above:
+If you want an easier way to make tables in markdown, you can also try this
+[Tables Generator](https://www.tablesgenerator.com/markdown_tables).
 
-| Header Column 1 | Header Column 2 | Header Column 3 |
-| --------------- | --------------- | --------------- |
-| Row 1 Column 1  | Row 1 Column 2  | Row 1 Column 3  |
-| Row 2 Column 1  | Row 2 Column 2  | Row 2 Column 3  |
+## Metadata
+
+At this time, the blog generates metadata in the following ways:
+
+- the `title` parameter in the blog post head generates the `<title></title>` tag
+- [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
+  - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
+  - [`og:description`](https://ogp.me/#optional) is populated with the first paragaph of the copy
+  - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
+  - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
+  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year of the post from the `date` parameter in the [blog post head](#blog-head)
+  - [`article:published_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
+  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
