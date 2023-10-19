@@ -31,6 +31,7 @@ Read on to learn more about formatting, options, and behavior below:
 - [embedding images in your blog post](#images)
 
 ## Creating a New Blog Post
+
 To get started, make a new file. The file should be located in the following
 directory:
 
@@ -59,6 +60,7 @@ Once you have the file created, you can paste the contents of this template into
 the new file and begin to modify it.
 
 ## Blog Head
+
 The head of each blog post is at the very top of the file. A line with three
 hyphens opens and closes the header, as you can see above.
 
@@ -76,47 +78,51 @@ The head contains the following attributes:
 | `authors`  | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                       |
 
 ## Metadata
+
 At this time, the blog generates metadata in the following ways:
 
 - the `title` parameter in the blog post head generates the `<title></title>` tag
 - [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
-    - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
-    - [`og:description`](https://ogp.me/#optional) is populated with the first paragaph of the copy
-    - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
-    - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
-    - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
-    - [`article:section`](https://ogp.me/#no_vertical) is populated with the year of the post from the `date` parameter in the [blog post head](#blog-head)
-    - [`article:published_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
-    - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
+  - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
+  - [`og:description`](https://ogp.me/#optional) is populated with the first paragaph of the copy
+  - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
+  - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
+  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year of the post from the `date` parameter in the [blog post head](#blog-head)
+  - [`article:published_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
+  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
 
 ## Markdown
+
 Posts are written in [markdown](https://www.markdownguide.org/cheat-sheet/), a
 simple markup language. Not all features of markdown will be available to the
 blog, but basic things like unordered lists and, for example:
 
 - [links](https://en.wikipedia.org/wiki/Hyperlink),
 - basic formatting for text, including
-    - **bold**,
-    - *italics*, and
-    - `inline code`
+  - **bold**,
+  - _italics_, and
+  - `inline code`
 
 are all supported. There are also ordered lists, and markdown from the extended
 syntax, for example:
 
 1. All the items in this after this one are anchor links to sections,
-2. [which are organized with headers](#headers-in-markdown).
-3. [Headers can be given custom IDs for anchor links to point to.](#custom-ids-for-anchor-links)
-4. [You can embed images in the blog.](#images)
-5. [You can make code blocks.](#code-blocks)
-6. [You can make tables.](#tables)
+1. [which are organized with headers](#headers-in-markdown).
+1. [Headers can be given custom IDs for anchor links to point to.](#custom-ids-for-anchor-links)
+1. [You can embed images in the blog.](#images)
+1. [You can make code blocks.](#code-blocks)
+1. [You can make tables.](#tables)
 
 ### Headers in Markdown
+
 Headers in markdown are easy to write. They're prefixed by some number of
 "pound" glyphs (`#`). The number of `#`s defines the level of the header, for
 example `##` followed by text would be a level 2 header, or `###` followed by
 text would be a level 3 header, like the header directly above this paragraph.
 
 ### Custom IDs for Anchor Links
+
 If you want to make links to your headers, you can create custom IDs that can be
 used in links. To do this, add something like `{#anchors}` after a header to
 allow you to link to that header.
@@ -135,6 +141,7 @@ transformed to all lowercase, special characters are ignored, and spaces are
 turned into hyphens.
 
 ### Images
+
 In markdown, you can embed images with the following format:
 
 ![alt-text](path/to/image)
@@ -158,6 +165,7 @@ The blog can render jpg, png, and svg images. The images will be rendered
 horizontally-centered with the copy of the blog post.
 
 ### Code Blocks
+
 Inline code is marked with a single opening and closing backtick (\`), as in
 `inline code`, for example. This renders the text with monospace font and subtle
 styling differences to indicate that you're looking at code.
@@ -174,6 +182,7 @@ but at least it will be displayed as if it is ...
 ```
 
 ### Tables
+
 You can even make tables in markdown, and they even kind of look like tables in
 the text. It's easier to just show you how to make a table than to explain:
 
@@ -188,6 +197,6 @@ dividers row to row. For example, this table will render the same way as the one
 above:
 
 | Header Column 1 | Header Column 2 | Header Column 3 |
-| ----------- | ----------- | ----------- |
-| Row 1 Column 1 | Row 1 Column 2 | Row 1 Column 3 |
-| Row 2 Column 1 | Row 2 Column 2 | Row 2 Column 3 |
+| --------------- | --------------- | --------------- |
+| Row 1 Column 1  | Row 1 Column 2  | Row 1 Column 3  |
+| Row 2 Column 1  | Row 2 Column 2  | Row 2 Column 3  |
