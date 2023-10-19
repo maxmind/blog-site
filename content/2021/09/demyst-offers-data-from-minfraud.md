@@ -5,7 +5,6 @@ title:
 date: "2021-09-07"
 images:
   - /images/2021/09/demyst.svg
-isFeatured: true
 category:
   - "Online Fraud Detection"
 tag:
