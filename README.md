@@ -28,6 +28,7 @@
 - [Development](#development)
   - [Development Server](#development-server)
   - [Linting](#linting)
+- [Writing Blog Posts](#writing-blog-posts)
 
 ### Minimum Requirements
 
@@ -84,3 +85,12 @@ hugo server
 ```sh
 npm run lint
 ```
+
+## Writing Blog Posts
+
+Blog posts are written using [markdown](https://www.markdownguide.org/cheat-sheet/),
+with each post corresponding to a markdown file in the `/content` directory,
+with subdirectories for the year and month of publication (e.g., `/content/YYYY/MM`).
+
+You can learn more about how blog post files work and how they are formatted in
+the [BLOG-POST-TEMPLATE.md](BLOG-POST-TEMPLATE.md) file.

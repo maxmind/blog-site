@@ -3,7 +3,6 @@ title: "An added layer of security for all MaxMind accounts"
 date: "2023-04-26"
 images:
   - /images/2023/04/email-2fa.png
-isFeatured: true
 category:
   - "Company Updates"
 tag:
