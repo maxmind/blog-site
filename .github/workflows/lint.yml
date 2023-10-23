@@ -45,7 +45,7 @@ jobs:
           key: ${{ needs.cache-keys.outputs.node-modules }}
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run linters
         run: npm run lint
