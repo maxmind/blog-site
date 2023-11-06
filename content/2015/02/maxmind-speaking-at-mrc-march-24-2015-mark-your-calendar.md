@@ -4,7 +4,7 @@ date: "2015-02-20"
 category:
   - "Online Fraud Detection"
 tag:
-  - "eCommerce"
+  - "Ecommerce"
   - "Financial Services"
   - "Manual Review"
 authors:

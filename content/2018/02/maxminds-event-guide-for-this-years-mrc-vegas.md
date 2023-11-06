@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Account Takeover"
-  - "eCommerce"
+  - "Ecommerce"
   - "Manual Review"
   - "Risk Data"
 authors:
