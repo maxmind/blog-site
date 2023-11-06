@@ -6,7 +6,7 @@ category:
   - "IP Geolocation and Network Data"
 tag:
   - "Case Studies"
-  - "eCommerce"
+  - "Ecommerce"
   - "Geofiltering and Geofencing"
 authors:
   - "The Team at MaxMind"

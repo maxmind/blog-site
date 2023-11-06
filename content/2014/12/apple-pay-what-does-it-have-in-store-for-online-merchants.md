@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Credit Card Fraud"
-  - "eCommerce"
+  - "Ecommerce"
 authors:
   - "The Team at MaxMind"
 ---
