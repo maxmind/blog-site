@@ -12,7 +12,7 @@ authors:
 
 We’re happy to announce that MaxMind’s roll out of Internet Protocol version 6
 (IPv6) access for our GeoIP2, Legacy GeoIP, Proxy Detection, and minFraud web
-service endpoints is complete. This update means each service is queriable at an
+service endpoints is complete. This update means each service is queryable at an
 [IPv6 address](https://en.wikipedia.org/wiki/IPv6_address) in addition to
 existing Internet Protocol version 4
 ([IPv4](https://en.wikipedia.org/wiki/IPv4)) addresses; no API updates are

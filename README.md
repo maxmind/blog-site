@@ -42,7 +42,7 @@ If you need help installing and/or managing Node and Yarn versions, check out [N
 npm install && npm run prepare
 ```
 
-- `npm install` installs the neccessary node modules for development.
+- `npm install` installs the necessary node modules for development.
 - `npm prepare` sets up the linting pre-commit hooks via husky.
 
 #### Install Hugo
