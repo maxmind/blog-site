@@ -68,7 +68,7 @@ One part of this application will use a customer’s geolocation to suggest the
 best local branch(es) to a customer, and automatically filter their search
 results based on that assumption.
 
-![A map of part of Massachussetts with several retail locations
+![A map of part of Massachusetts with several retail locations
 marked.](/images/2022/06/map-with-stores.png)
 
 Our application should leverage available customer preference and geolocation
@@ -132,7 +132,7 @@ When a new prospective customer visits our website, we check their IP
 geolocation. The GeoIP City Plus web service returns the geolocation coordinates
 42.1293, -72.7522.
 
-![The same map of Massachussetts with store branches marked, as above, but this
+![The same map of Massachusetts with store branches marked, as above, but this
 time there is also an IP geolocation point labeled on the map. The IP
 geolocation point on the map is located near a city named Springfield. There are
 store branches marked in Chicopee, near Springfield, but also further away to
@@ -144,7 +144,7 @@ that the customer is in a population center near the geographical coordinates,
 probably Springfield. We don’t really know where the customer is, but maybe this
 is what we expect:
 
-![The same map of Massachussetts with store branches and IP geolocation point
+![The same map of Massachusetts with store branches and IP geolocation point
 marked, as above, but this time there is also a marker for the actual customer
 location. The actual customer location marker is near the IP geolocation point
 marker, in the heart of Springfield, the largest town near the IP geolocation

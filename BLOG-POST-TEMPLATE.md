@@ -188,7 +188,7 @@ At this time, the blog generates metadata in the following ways:
 - the `title` parameter in the blog post head generates the `<title></title>` tag
 - [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
   - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
-  - [`og:description`](https://ogp.me/#optional) is populated with the first paragaph of the copy
+  - [`og:description`](https://ogp.me/#optional) is populated with the first paragraph of the copy
   - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
   - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
