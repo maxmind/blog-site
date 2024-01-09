@@ -10,7 +10,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/typescript',
     'plugin:import/warnings',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
     'prettier', // needs to be last to prevent eslint and prettier conflicts
   ],
   globals: {
