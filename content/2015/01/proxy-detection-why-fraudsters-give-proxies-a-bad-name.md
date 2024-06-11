@@ -7,7 +7,7 @@ tag:
   - "Anonymizer and Proxy Detection"
   - "Risk Score"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 When it comes to fraud detection, finding proxies is a big topic. But why? Fraud

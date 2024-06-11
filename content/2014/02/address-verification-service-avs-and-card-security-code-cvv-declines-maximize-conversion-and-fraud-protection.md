@@ -7,7 +7,7 @@ tag:
   - "Credit Card Fraud"
   - "Ecommerce"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 ![img for blog](/images/2014/02/img-for-blog.jpg)

@@ -8,7 +8,7 @@ tag:
   - "Ecommerce"
   - "Geofiltering and Geofencing"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Every year, more than a billion

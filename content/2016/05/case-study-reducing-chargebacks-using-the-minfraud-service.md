@@ -9,7 +9,7 @@ tag:
   - "Ecommerce"
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Thexyz, a Canadian company, provides a secure email service. This paid platform

@@ -7,7 +7,7 @@ tag:
   - "Anonymizer and Proxy Detection"
   - "Ecommerce"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 ![](/images/2014/01/MaxMind-shopify-logo-300x105.png)

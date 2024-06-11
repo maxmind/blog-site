@@ -6,7 +6,7 @@ category:
 tag:
   - "IP Geolocation Accuracy"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 ![free-map-navigation-psd-21](/images/2014/01/free-map-navigation-psd-21-300x200.jpg)

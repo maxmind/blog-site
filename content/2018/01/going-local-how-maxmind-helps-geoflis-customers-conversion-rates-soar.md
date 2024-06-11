@@ -9,7 +9,7 @@ tag:
   - "Ecommerce"
   - "Geofiltering and Geofencing"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Digitally savvy consumers are

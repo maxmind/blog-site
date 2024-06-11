@@ -7,7 +7,7 @@ tag:
   - "Credit Card Fraud"
   - "Ecommerce"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 In the world of accepting online payments, credit and debit cards are the

@@ -4,7 +4,7 @@ date: "2013-05-20"
 category:
   - "Company Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Hello and welcome to MaxMind's official blog. This blog will provide you with

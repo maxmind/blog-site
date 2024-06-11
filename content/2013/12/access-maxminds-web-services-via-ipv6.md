@@ -7,7 +7,7 @@ tag:
   - "Product Updates"
   - "IP Network Data"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 We’re happy to announce that MaxMind’s roll out of Internet Protocol version 6
