@@ -6,7 +6,7 @@ category:
 tag:
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Welcome to a new installment of MaxMind’s Best Practices Blog Series!

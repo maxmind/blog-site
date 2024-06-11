@@ -7,7 +7,7 @@ tag:
   - "GeoLite Free IP Geolocation"
   - "Product Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 ## Important Update April 11, 2018

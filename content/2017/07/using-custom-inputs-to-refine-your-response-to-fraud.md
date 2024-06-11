@@ -8,7 +8,7 @@ tag:
   - "Product Updates"
   - "Risk Data"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Online fraud is a complex, hard to detect, and constantly evolving type of crime

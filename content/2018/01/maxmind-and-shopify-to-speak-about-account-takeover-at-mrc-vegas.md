@@ -8,7 +8,7 @@ tag:
   - "Ecommerce"
   - "Risk Data"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 MaxMind will be presenting alongside Shopify at the Merchant Risk Council’s

@@ -6,7 +6,7 @@ category:
 tag:
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 The ‘riskScore’ is the most actionable piece of data returned by MaxMind’s

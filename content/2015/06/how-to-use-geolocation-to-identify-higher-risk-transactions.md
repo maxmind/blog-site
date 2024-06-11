@@ -6,7 +6,7 @@ category:
 tag:
   - "Manual Review"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 In our last blog post, we discussed how you can use a risk score to automate

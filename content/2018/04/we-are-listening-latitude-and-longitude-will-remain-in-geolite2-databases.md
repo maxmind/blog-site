@@ -10,7 +10,7 @@ tag:
   - "IP Geolocation Accuracy"
   - "Product Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Earlier this year, we announced our plans to discontinue the GeoLite Legacy

@@ -8,7 +8,7 @@ tag:
   - "Anonymizer and Proxy Detection"
   - "Geofiltering and Geofencing"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 MaxMind is heading to [ad:tech New York](https://ny.ad-tech.com/), one of the

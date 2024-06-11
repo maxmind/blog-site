@@ -8,7 +8,7 @@ tag:
   - "Financial Services"
   - "Manual Review"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 ![MRC_Vegas_15(Logo) (1)](/images/2015/02/MRC_Vegas_15Logo-1-e1424453851417.jpg)

@@ -9,7 +9,7 @@ tag:
   - "Manual Review"
   - "Risk Data"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 MRC Vegas 2018 is March 19 - 22 at the Aria Resort and Casino, and MaxMind has

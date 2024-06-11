@@ -9,7 +9,7 @@ tag:
   - "Risk Data"
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 The global e-commerce market size grew to a record $2.2 trillion in 2017, and

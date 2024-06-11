@@ -7,7 +7,7 @@ tag:
   - "IP Network Data"
   - "Product Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 We are happy to announce the public beta of GeoIP2. GeoIP2 is the successor line

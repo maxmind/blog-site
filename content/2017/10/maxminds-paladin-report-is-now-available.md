@@ -8,7 +8,7 @@ category:
 tag:
   - "Product Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Deciding on the right fraud prevention and IP intelligence provider can be a

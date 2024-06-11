@@ -8,7 +8,7 @@ tag:
   - "Risk Data"
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 Thus far, our Best Practices Series has discussed how you can use the data

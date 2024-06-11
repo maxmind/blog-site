@@ -4,7 +4,7 @@ date: "2015-03-26"
 category:
   - "Company Updates"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 MaxMind is pleased to announce our corporate giving program - we plan to give

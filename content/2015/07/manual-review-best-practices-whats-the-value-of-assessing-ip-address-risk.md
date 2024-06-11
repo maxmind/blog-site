@@ -8,7 +8,7 @@ tag:
   - "Anonymizer and Proxy Detection"
   - "Risk Scoring"
 authors:
-  - "The Team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 In this blog post, we continue our discussion of best practices for manual
