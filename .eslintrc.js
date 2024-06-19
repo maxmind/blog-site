@@ -23,35 +23,8 @@ module.exports = {
     '.cache',
     'node_modules',
     'public',
-    '*.json.json',
   ],
   overrides: [
-    {
-      extends: [
-        'plugin:json/recommended',
-      ],
-      files: [
-        '**/*.json',
-      ],
-      rules: {
-        'comma-dangle': [
-          'warn',
-          'never',
-        ],
-        'quote-props': [
-          'warn',
-          'always',
-        ],
-        quotes: [
-          'warn',
-          'double',
-        ],
-        semi: [
-          'warn',
-          'never',
-        ],
-      },
-    },
     {
       files: [
         'content/**',
@@ -122,7 +95,6 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'filenames',
-    'json',
     'security',
     'simple-import-sort',
     'sort-keys-fix',
