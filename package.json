@@ -44,9 +44,6 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "**/*.json": [
-      "npx eslint --fix --config '.eslintrc.js'"
-    ],
     "./content/**/**/*.md": [
       "npx remark --config '.remarkrc.js'",
       "npx prettier --write --embedded-language-formatting off --config './content/.prettierrc.js'"
