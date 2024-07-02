@@ -28,9 +28,9 @@ Science degree in Computer Science and Electrical Engineering.
 
 A technology and business-savvy leader with decades of industry experience,
 Rupert has held key roles in product, engineering, and business development at
-companies such as Neustar, AT&T, and most recently F5, where he was in charge of
-fraud and risk products. Over the last 15 years, Rupert has also worked closely
-with data science teams to uncover insights about—and for—customers.
+companies such as Neustar, AT\&T, and most recently F5, where he was in charge
+of fraud and risk products. Over the last 15 years, Rupert has also worked
+closely with data science teams to uncover insights about—and for—customers.
 
 As MaxMind’s Chief Product Officer, Rupert will be undertaking a number of
 strategic initiatives to accelerate product innovation.
