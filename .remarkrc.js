@@ -53,7 +53,7 @@ module.exports = {
   settings: {
     fences: true,
     incrementListMarker: false,
-    listItemIndent: 1,
+    listItemIndent: 'one',
     ruleRepetition: 3,
   },
 };
