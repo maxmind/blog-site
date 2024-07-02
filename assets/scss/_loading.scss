@@ -35,7 +35,6 @@
     animation: ani3 2s infinite;
     bottom: calc(28% - 5px);
     right: calc(11% - 5px);
-
   }
 }
 
@@ -62,7 +61,6 @@
 @keyframes anirotate {
   0% {
     transform: rotate(0deg);
-
   }
 
   100% {
@@ -73,7 +71,6 @@
 @keyframes ani1 {
   0% {
     transform: translate(0, 0);
-
   }
 
   100% {
@@ -84,7 +81,6 @@
 @keyframes ani2 {
   0% {
     transform: translate(0, 0);
-
   }
 
   100% {
@@ -95,7 +91,6 @@
 @keyframes ani3 {
   0% {
     transform: translate(0, 0);
-
   }
 
   100% {

@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 
 .fourOhFour {
   align-items: center;
@@ -19,8 +19,7 @@
   text-align: center;
 }
 
-
-@include variables.breakpoint('md') {
+@include variables.breakpoint("md") {
   .fourOhFour {
     font-size: 200px;
     padding: calc(var(--mm-spacing) * 2);

@@ -1,13 +1,13 @@
-@use 'mixins';
-@use 'variables';
+@use "mixins";
+@use "variables";
 
 .blog-post__container-featured {
   display: grid;
   gap: var(--mm-spacing);
   grid-gap: var(--mm-spacing);
   grid-template-areas:
-    'graphic'
-    'content';
+    "graphic"
+    "content";
   padding: calc(var(--mm-spacing) / 2);
 }
 
@@ -56,7 +56,7 @@
 }
 
 .blog-post__date::before {
-  content: ' • ';
+  content: " • ";
 }
 
 .blog-post__excerpt {
@@ -87,7 +87,7 @@
 }
 
 .blog-post__category ~ .blog-post__category::before {
-  content: ' • ';
+  content: " • ";
 }
 
 .blog-post__category:not(:last-child) {
@@ -132,7 +132,7 @@
   flex-wrap: wrap;
 
   .blog-post__author ~ .blog-post__author::before {
-    content: ', ';
+    content: ", ";
   }
 }
 
@@ -185,9 +185,9 @@
   }
 }
 
-@include variables.breakpoint('md') {
+@include variables.breakpoint("md") {
   .blog-post__container-featured {
-    grid-template-areas: 'content graphic';
+    grid-template-areas: "content graphic";
     grid-template-columns: 1fr 40%;
     padding: var(--mm-spacing);
   }

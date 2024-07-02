@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 
 .featured__wrapper {
   display: flex;
@@ -11,7 +11,9 @@
   background: var(--mm-color-background);
   border-radius: var(--mm-border-radius);
   border-top: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%);
   max-width: 800px;
   overflow: hidden;
   position: relative;
@@ -23,11 +25,11 @@
   display: grid;
   grid-area: content;
   grid-template-areas:
-    'category'
-    'title'
-    'published'
-    'excerpt'
-    'readmore';
+    "category"
+    "title"
+    "published"
+    "excerpt"
+    "readmore";
   width: 100%;
 }
 
@@ -41,4 +43,3 @@
   max-width: 650px;
   padding: 0 0 var(--mm-spacing) 0;
 }
-
