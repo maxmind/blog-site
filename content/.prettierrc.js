@@ -1,4 +1,1 @@
-module.exports = {
-  parser: 'markdown',
-  proseWrap: 'always',
-};
+module.exports = { parser: 'markdown', proseWrap: 'always', };

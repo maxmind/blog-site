@@ -5,7 +5,7 @@ $breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-  xxxl: 1660px
+  xxxl: 1660px,
 );
 
 @mixin breakpoint($size) {
@@ -22,7 +22,7 @@ $containers: (
   lg: 960px,
   xl: 1140px,
   xxl: 1320px,
-  xxxl: 1600px
+  xxxl: 1600px,
 );
 
 @mixin container($size) {

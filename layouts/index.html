@@ -1,22 +1,13 @@
 {{ define "main" }}
-  <main aria-role="main">
-    <div class="blog-posts__wrapper">
-      <div class="blog-posts">
-        {{ $page := $.Paginator }}
-        {{ if eq $page.PageNumber 1 }}
-          {{ partial "featured-post" . }}
-        {{ end }}
-        {{ if eq $page.PageNumber 1 }}
-          {{ range after 1 .Paginator.Pages }}
-            {{ partial "post-list.html" . }}
-          {{ end }}
-        {{ else }}
-          {{ range .Paginator.Pages }}
-            {{ partial "post-list.html" . }}
-          {{ end }}
-        {{ end  }}
-      </div>
+<main aria-role="main">
+  <div class="blog-posts__wrapper">
+    <div class="blog-posts">
+      {{ $page := $.Paginator }} {{ if eq $page.PageNumber 1 }} {{ partial
+      "featured-post" . }} {{ end }} {{ if eq $page.PageNumber 1 }} {{ range
+      after 1 .Paginator.Pages }} {{ partial "post-list.html" . }} {{ end }} {{
+      else }} {{ range .Paginator.Pages }} {{ partial "post-list.html" . }} {{
+      end }} {{ end }}
     </div>
-  </main>
-  {{ partial "pagination" . }}
-{{ end }}
+  </div>
+</main>
+{{ partial "pagination" . }} {{ end }}

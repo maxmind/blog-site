@@ -1,5 +1,7 @@
 ---
-title: "The WooCommerce Anti-Fraud plugin gets a power boost with MaxMind's fraud detection API integration"
+title:
+  "The WooCommerce Anti-Fraud plugin gets a power boost with MaxMind's fraud
+  detection API integration"
 date: "2023-11-06"
 images:
   - /images/2023/11/opmc-maxmind-ecommerce-plugin-partnership.jpg

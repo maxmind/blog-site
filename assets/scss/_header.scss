@@ -1,6 +1,5 @@
-@use 'mixins';
-@use 'variables';
-
+@use "mixins";
+@use "variables";
 
 /***** Header *****/
 $page-header-height: 80px;
@@ -35,7 +34,9 @@ $page-header-height: 80px;
 .header {
   @include mixins.pattern-border;
   background: var(--mm-color-background);
-  box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 13px 0 rgba(0, 0, 0, 0.1),
+    0 1px 5px 0 rgba(0, 0, 0, 0.06);
   height: calc(var(--page-header-height) - 10px);
   padding-top: 10px;
   position: sticky;
@@ -46,7 +47,7 @@ $page-header-height: 80px;
 
 .nav {
   display: grid;
-  grid-template-areas: 'logo search';
+  grid-template-areas: "logo search";
   grid-template-columns: max-content 1fr;
   grid-template-rows: auto;
   height: calc(var(--page-header-height) - 10px);
@@ -55,14 +56,14 @@ $page-header-height: 80px;
   padding: 0 var(--mm-spacing);
 }
 
-.nav>* {
+.nav > * {
   align-self: center;
 }
 
 .logo {
   display: grid;
   grid-area: logo;
-  grid-template-areas: 'svg site-name';
+  grid-template-areas: "svg site-name";
   grid-template-columns: auto;
   padding: calc(var(--mm-spacing) / 4);
   transform: translateX(calc(var(--mm-spacing) / -4));
@@ -102,7 +103,7 @@ $page-header-height: 80px;
 
 .logo span::before {
   background: #ccc;
-  content: ' ';
+  content: " ";
   display: block;
   height: 100%;
   left: 0;
@@ -145,13 +146,13 @@ $page-header-height: 80px;
   }
 }
 
-@include variables.breakpoint('md') {
+@include variables.breakpoint("md") {
   .nav {
     margin: auto;
   }
 }
 
-@include variables.breakpoint('xl') {
+@include variables.breakpoint("xl") {
   .nav {
     padding: 0 var(--mm-spacing) 0;
   }

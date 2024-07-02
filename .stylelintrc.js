@@ -1,25 +1,16 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   configBasedir: path.resolve(__dirname),
-  defaultSeverity: 'warning',
-  extends: [
-    'stylelint-config-recommended',
-    'stylelint-config-sass-guidelines',
-  ],
-  plugins: [
-    'stylelint-no-unsupported-browser-features',
-    'stylelint-order',
-  ],
+  defaultSeverity: "warning",
+  extends: ["stylelint-config-recommended", "stylelint-config-sass-guidelines"],
+  plugins: ["stylelint-no-unsupported-browser-features", "stylelint-order"],
   rules: {
     indentation: 2,
-    'max-nesting-depth': 4,
-    'order/order': [
-      'custom-properties',
-      'declarations',
-    ],
-    'order/properties-alphabetical-order': true,
-    'plugin/no-unsupported-browser-features': [
+    "max-nesting-depth": 4,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true,
+    "plugin/no-unsupported-browser-features": [
       true,
       {
         ignore: [
@@ -31,7 +22,7 @@ module.exports = {
            *
            * https://caniuse.com/calc
            */
-          'calc',
+          "calc",
 
           /**
            * Not supported - IE 11
@@ -39,21 +30,21 @@ module.exports = {
            *
            * https://caniuse.com/?search=appearance
            */
-          'css-appearance',
+          "css-appearance",
 
           /**
            * Not supported - IE11
            *
            * https://caniuse.com/?search=css-featurequeries
            */
-          'css-featurequeries',
+          "css-featurequeries",
 
           /**
            * Not supported - IE11
            *
            * https://caniuse.com/?search=css%20filters
            */
-          'css-filters',
+          "css-filters",
 
           /**
            * Partial support - Safari
@@ -65,14 +56,14 @@ module.exports = {
            *
            * https://caniuse.com/?search=css-gradients
            */
-          'css-gradients',
+          "css-gradients",
 
           /**
            * Not supported - IE11
            *
            * https://caniuse.com/?search=css-initial-value
            */
-          'css-initial-value',
+          "css-initial-value",
 
           /**
            * Not supported - IE11
@@ -87,7 +78,7 @@ module.exports = {
            *
            * https://caniuse.com/?search=css-sticky
            */
-          'css-sticky',
+          "css-sticky",
 
           /**
            * Partial support - IE11
@@ -96,7 +87,7 @@ module.exports = {
            *
            * https://caniuse.com/?search=flexbox
            */
-          'flexbox',
+          "flexbox",
 
           /**
            * Partial support - Chromium, Firefox
@@ -107,7 +98,7 @@ module.exports = {
            *
            * https://caniuse.com/?search=multicolumn
            */
-          'multicolumn',
+          "multicolumn",
 
           /**
            * Partial support - IE11
@@ -117,7 +108,7 @@ module.exports = {
            *
            * https://caniuse.com/?search=outline
            */
-          'outline',
+          "outline",
 
           /**
            * Partial support - IE11
@@ -128,7 +119,7 @@ module.exports = {
            *
            * https://caniuse.com/?search=transforms3d
            */
-          'transforms3d',
+          "transforms3d",
 
           /**
            * Partial support - IE11
@@ -137,23 +128,21 @@ module.exports = {
            *
            * https://caniuse.com/viewport-units
            */
-          'viewport-units',
+          "viewport-units",
         ],
       },
     ],
-    'selector-class-pattern': [
-      '[a-z]([a-zA-Z0-9]+)?$',
+    "selector-class-pattern": [
+      "[a-z]([a-zA-Z0-9]+)?$",
       {
         resolveNestedSelectors: true,
       },
     ],
-    'selector-max-compound-selectors': 5,
-    'selector-pseudo-class-no-unknown': [
+    "selector-max-compound-selectors": 5,
+    "selector-pseudo-class-no-unknown": [
       true,
       {
-        ignorePseudoClasses: [
-          'global',
-        ],
+        ignorePseudoClasses: ["global"],
       },
     ],
   },

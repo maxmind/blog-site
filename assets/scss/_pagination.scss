@@ -1,5 +1,5 @@
 /***** Pagination *****/
-@use 'variables';
+@use "variables";
 
 .pagination__arrow {
   display: grid;
@@ -9,7 +9,7 @@
 .pagination__footer {
   display: grid;
   gap: var(--mm-spacing);
-  grid-template-areas: 'newer older';
+  grid-template-areas: "newer older";
   margin: auto;
   max-width: 800px;
   padding: 0 0 calc(var(--mm-spacing) * 2);
@@ -23,7 +23,7 @@
 
 .pagination__newer {
   grid-area: newer;
-  grid-template-areas: 'arrow direction';
+  grid-template-areas: "arrow direction";
   grid-template-columns: min-content 1fr;
   justify-self: left;
   padding-left: var(--mm-spacing);
@@ -37,7 +37,7 @@
 
 .pagination__older {
   grid-area: older;
-  grid-template-areas: 'direction arrow';
+  grid-template-areas: "direction arrow";
   grid-template-columns: 1fr min-content;
   justify-self: right;
   left: 0;
@@ -75,11 +75,11 @@
 .pagination__post {
   .pagination__footer {
     grid-template-areas:
-      'newer'
-      'older';
+      "newer"
+      "older";
     grid-template-columns: 1fr;
     max-width: var(--mm-max-width);
-    padding: 0  0 var(--mm-spacing) 0;
+    padding: 0 0 var(--mm-spacing) 0;
   }
 
   .pagination__newer,
@@ -92,10 +92,10 @@
   grid-area: direction;
 }
 
-@include variables.breakpoint('md') {
+@include variables.breakpoint("md") {
   .pagination__post {
     .pagination__footer {
-      grid-template-areas: 'newer older';
+      grid-template-areas: "newer older";
       grid-template-columns: 1fr 1fr;
     }
   }

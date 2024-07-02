@@ -25,10 +25,10 @@ $pattern-scale: 1;
 
 @mixin pattern-base {
   background-color: #00a7e5;
-  background-image: url('/images/bg-pattern.svg');
+  background-image: url("/images/bg-pattern.svg");
   background-position: center center;
   background-size: (80px * $pattern-scale) (140px * $pattern-scale);
-  content: ' ';
+  content: " ";
   height: 100%;
   left: 0;
   position: absolute;
@@ -57,8 +57,12 @@ $pattern-scale: 1;
 
 @mixin pattern-gradient {
   background: rgb(0, 119, 194);
-  background: linear-gradient(90deg, rgba(0, 119, 194, 0.5) 0%, var(--page-type-color));
-  content: ' ';
+  background: linear-gradient(
+    90deg,
+    rgba(0, 119, 194, 0.5) 0%,
+    var(--page-type-color)
+  );
+  content: " ";
   height: 100%;
   left: 0;
   position: absolute;

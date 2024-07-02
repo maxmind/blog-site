@@ -1,5 +1,5 @@
-@use 'mixins';
-@use 'variables';
+@use "mixins";
+@use "variables";
 
 body {
   background: var(--mm-color-background);
@@ -103,7 +103,6 @@ ul {
 ul ul {
   margin: calc(var(--mm-spacing) / 4) 0;
 }
-
 
 ol {
   list-style-type: decimal;
@@ -212,7 +211,7 @@ td > *:last-child {
   margin-bottom: 0;
 }
 
-td [class^='Code-module'] {
+td [class^="Code-module"] {
   white-space: nowrap;
 }
 
@@ -240,7 +239,7 @@ tbody tr:nth-of-type(even) td {
   background: rgba(255, 255, 255, 0.7);
 }
 
-@include variables.breakpoint('md') {
+@include variables.breakpoint("md") {
   h1 {
     font-size: 42px;
   }
