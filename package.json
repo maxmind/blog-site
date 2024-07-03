@@ -59,7 +59,7 @@
   "name": "blog-site",
   "scripts": {
     "fix": "run-p fix:*",
-    "fix:content": "remark . --output --ext md --quiet && prettier --write '**/*.md' --embedded-language-formatting off --loglevel silent",
+    "fix:content": "remark . --output --ext md --quiet && prettier --write '**/*.md' --embedded-language-formatting off --log-level silent",
     "fix:scripts": "npm run lint:scripts --fix",
     "fix:styles": "npm run lint:styles --fix",
     "lint": "run-p lint:*",
