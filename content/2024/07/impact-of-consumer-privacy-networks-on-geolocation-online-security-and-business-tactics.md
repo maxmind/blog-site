@@ -2,17 +2,17 @@
 title: "The impact of consumer privacy networks on geolocation, online security, and business tactics"
 date: "2024-07-03"
 images:
-  - /images/2024/07/cpn_blog_post.jpg
+ - /images/2024/07/cpn_blog_post.jpg
 category:
-  - "Online Fraud Detection"
-  - "IP Geolocation and Network Data"
+ - "Online Fraud Detection"
+ - "IP Geolocation and Network Data"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Data Privacy"
-  - "Geofiltering and Geofencing"
-  - "IP Network Data"
+ - "Anonymizer and Proxy Detection"
+ - "Data Privacy"
+ - "Geofiltering and Geofencing"
+ - "IP Network Data"
 authors:
-  - "Christopher Luna"
+ - "Christopher Luna"
 ---
 
 In response to a growing appetite for privacy and security on the internet,
@@ -177,7 +177,8 @@ Consumer privacy networks are identified as such under the ISP/Org column. We
 also mark consumer privacy networks as such in our >user*type data, which does
 not appear in our demo, but is available in the [GeoIP Insights web
 service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9lzJga_HnWdqTZzffzaMYxzyAFRCNAsTJ5KY8q0Ttb0j6n*-wHrVbGxj9MQUaktpm-JLD0)
-and the [GeoIP Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database?utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9lzJga_HnWdqTZzffzaMYxzyAFRCNAsTJ5KY8q0Ttb0j6n_-wHrVbGxj9MQUaktpm-JLD0).
+and the
+[GeoIP Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database?utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9lzJga_HnWdqTZzffzaMYxzyAFRCNAsTJ5KY8q0Ttb0j6n_-wHrVbGxj9MQUaktpm-JLD0).
 
 One way to think about the geolocation challenge for consumer privacy networks
 is that geolocation is reliable but less precise. How you handle these networks
