@@ -46,8 +46,13 @@ period of time, as in the case of mobile networks. A user joins a mobile network
 for a brief period, ends their session, and the IP address is then passed off to
 someone else.
 
-> **Prefer watching instead of reading?**
-> [Access our on-demand webinar on consumer privacy networks.](https://get.maxmind.com/consumer-privacy-networks-on-demand-webinar?utm_campaign=CPN%20webinar&utm_source=blog&utm_medium=post)
+<!-- Use HTML due to prettier issue #9099 -->
+<blockquote>
+  <p>
+    <strong>Prefer watching instead of reading?</strong>
+    <a href="https://get.maxmind.com/consumer-privacy-networks-on-demand-webinar?utm_campaign=CPN%20webinar&amp;utm_source=blog&amp;utm_medium=post" target="_blank" rel="noreferrer noopener">Access our on-demand webinar on consumer privacy networks.</a>
+  </p>
+</blockquote>
 
 The opposite is also true. People use multiple IP addresses, even in a single
 day. Take an employee who works remotely at a data company. He signs into his
