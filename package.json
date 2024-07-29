@@ -17,8 +17,6 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
-    "husky": "^9.1.2",
-    "lint-staged": "^15.2.7",
     "markdownlint-cli": "^0.41.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
@@ -34,18 +32,6 @@
     "npm": ">=9"
   },
   "license": "MIT",
-  "lint-staged": {
-    "./content/**/**/*.md": [
-      "npx prettier --write --config './content/.prettierrc.js'"
-    ],
-    "./assets/js/*.{js,ts}": [
-      "npx eslint --fix --ignore-pattern 'functions/**/*.js' --config '.eslintrc.js'",
-      "npx prettier --write --ignore-path 'functions/**/*.js' --config './assets/js/.prettierrc.js'"
-    ],
-    "./assets/scss/*.[s]css": [
-      "npx stylelint --fix --config '.stylelintrc.js'"
-    ]
-  },
   "name": "blog-site",
   "scripts": {
     "fix": "run-p fix:*",
@@ -57,7 +43,6 @@
     "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
     "lint:scripts": "tsc && eslint . --ext js,ts",
     "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
-    "prepare": "husky install",
     "prettier:ts": "prettier --write './assets/js/**'"
   },
   "version": "0.1.0"
