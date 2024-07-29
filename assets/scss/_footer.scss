@@ -3,12 +3,23 @@
 
 /***** Footer *****/
 .footer__container {
+  column-gap: 0;
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   grid-template-areas: 'a b' 'c d' 'branding branding' 'copyright copyright';
+  position: relative;
+  row-gap: 0;
+  z-index: 2;
 }
 
 .footer__branding {
+  align-items: flex-end;
   display: flex;
+  flex: 1 0 0;
+  grid-area: branding;
   justify-content: space-between;
+  padding: var(--mm-spacing) var(--mm-spacing);
 }
 
 .footer__logo {
@@ -18,11 +29,15 @@
 }
 
 .footer__copyright {
+  font-size: 12px;
   grid-area: copyright;
+  padding: var(--mm-spacing) var(--mm-spacing) calc(var(--mm-spacing) * 2.5);
   text-align: center;
 }
 
 .footer__terms {
+  grid-area: terms;
+  grid-column-gap: var(--mm-spacing);
   margin-top: calc(var(--mm-spacing) / 2);
   text-align: center;
 }
@@ -133,23 +148,6 @@
   }
 }
 
-.footer__container {
-  column-gap: 0;
-  display: grid;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-  position: relative;
-  row-gap: 0;
-  z-index: 2;
-}
-
-.footer__branding {
-  align-items: flex-end;
-  flex: 1 0 0;
-  grid-area: branding;
-  padding: var(--mm-spacing) var(--mm-spacing);
-}
-
 .footer__social {
   display: grid;
   grid-template-areas: 'a b c';
@@ -208,20 +206,9 @@
   margin-bottom: calc(var(--mm-spacing) / 2);
 }
 
-.footer__copyright {
-  font-size: 12px;
-  grid-area: copyright;
-  padding: var(--mm-spacing) var(--mm-spacing) calc(var(--mm-spacing) * 2.5);
-}
-
 .footer__copyright p {
   grid-area: p;
   margin: 0;
-}
-
-.footer__terms {
-  grid-area: terms;
-  grid-column-gap: var(--mm-spacing);
 }
 
 .footer__ccpa,

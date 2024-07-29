@@ -68,6 +68,7 @@ p {
   margin: calc(var(--mm-spacing) / 2) 0;
 }
 
+/* stylelint-disable no-descending-specificity */
 a {
   color: var(--mm-color-display-text);
   text-decoration: none;

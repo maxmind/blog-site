@@ -12,7 +12,6 @@ module.exports = {
     'stylelint-order',
   ],
   rules: {
-    indentation: 2,
     'max-nesting-depth': 4,
     'order/order': [
       'custom-properties',

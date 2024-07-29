@@ -31,6 +31,8 @@
   text-align: left;
 
   &:hover {
+    background: var(--mm-color-sidebar);
+    cursor: pointer;
     right: calc(var(--mm-spacing) / 2);
   }
 }
@@ -45,10 +47,13 @@
   text-align: right;
 
   &:hover {
+    background: var(--mm-color-sidebar);
+    cursor: pointer;
     left: calc(var(--mm-spacing) / 2);
   }
 }
 
+/* stylelint-disable no-descending-specificity */
 .pagination__newer,
 .pagination__older {
   align-items: center;
@@ -65,11 +70,6 @@
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   width: 100%;
-
-  &:hover {
-    background: var(--mm-color-sidebar);
-    cursor: pointer;
-  }
 }
 
 .pagination__post {
