@@ -39,9 +39,9 @@
     "fix:scripts": "npm run lint:scripts --fix",
     "fix:styles": "npm run lint:styles --fix",
     "lint": "run-p lint:*",
-    "lint:configs": "eslint .*rc.js --no-ignore",
+    "lint:configs": "eslint .*rc.js --no-ignore --max-warnings=0",
     "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
-    "lint:scripts": "tsc && eslint . --ext js,ts",
+    "lint:scripts": "tsc && eslint . --ext js,ts --max-warnings=0",
     "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
     "prettier:ts": "prettier --write './assets/js/**'"
   },
