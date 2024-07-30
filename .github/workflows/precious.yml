@@ -1,0 +1,45 @@
+name: Precious
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  code-formatting:
+    runs-on: ubuntu-latest
+    name: Code Formatting
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - name: Fetch base ref
+        if: ${{ github.event.pull_request }}
+        run: git fetch origin ${{ github.base_ref }}:upstream
+
+      - name: Install precious
+        run: ./bin/install-precious /usr/local/bin
+
+      - run: git diff --name-only --diff-filter=ACM upstream...
+
+      - name: Select files
+        id: select-files
+        run: |
+          if [[ -n "${{ github.event.pull_request.number }}" ]]; then
+            echo 'precious-args=--git-diff-from upstream' >> "$GITHUB_OUTPUT"
+          else
+            echo 'precious-args=--all' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Lint files
+        run: precious lint ${{ steps.select-files.outputs.precious-args }}
