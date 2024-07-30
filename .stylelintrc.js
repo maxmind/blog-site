@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   configBasedir: path.resolve(__dirname),
-  defaultSeverity: 'warning',
+  defaultSeverity: 'error',
   extends: [
     'stylelint-config-recommended',
     'stylelint-config-sass-guidelines',
