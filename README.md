@@ -44,6 +44,12 @@ npm install
 
 - `npm install` installs the necessary node modules for development.
 
+```
+bin/install-precious
+```
+
+- `bash bin/install-precious` installs precious which is used for linting code.
+
 You should also install our pre-commit hook. You can do this from your checkout
 by running `git/setup.sh`. These hooks do things like ensure that the code you
 commit is tidy and passes various linter checks.
