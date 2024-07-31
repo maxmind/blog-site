@@ -17,20 +17,9 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
-    "husky": "^9.1.2",
-    "lint-staged": "^15.2.7",
     "markdownlint-cli": "^0.41.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
-    "remark-cli": "^12.0.1",
-    "remark-frontmatter": "^5.0.0",
-    "remark-gfm": "^4.0.0",
-    "remark-lint-first-heading-level": "^4.0.0",
-    "remark-lint-no-empty-url": "^4.0.0",
-    "remark-lint-rule-style": "^4.0.0",
-    "remark-lint-unordered-list-marker-style": "^4.0.0",
-    "remark-preset-lint-markdown-style-guide": "^6.0.0",
-    "remark-preset-lint-recommended": "^7.0.0",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-config-sass-guidelines": "^10.0.0",
@@ -43,31 +32,17 @@
     "npm": ">=9"
   },
   "license": "MIT",
-  "lint-staged": {
-    "./content/**/**/*.md": [
-      "npx remark --config '.remarkrc.js'",
-      "npx prettier --write --embedded-language-formatting off --config './content/.prettierrc.js'"
-    ],
-    "./assets/js/*.{js,ts}": [
-      "npx eslint --fix --ignore-pattern 'functions/**/*.js' --config '.eslintrc.js'",
-      "npx prettier --write --ignore-path 'functions/**/*.js' --config './assets/js/.prettierrc.js'"
-    ],
-    "./assets/scss/*.[s]css": [
-      "npx stylelint --fix --config '.stylelintrc.js'"
-    ]
-  },
   "name": "blog-site",
   "scripts": {
     "fix": "run-p fix:*",
-    "fix:content": "remark . --output --ext md --quiet && prettier --write '**/*.md' --embedded-language-formatting off --log-level silent",
+    "fix:content": "prettier --write '**/*.md' --config './content/.prettierrc.js'",
     "fix:scripts": "npm run lint:scripts --fix",
     "fix:styles": "npm run lint:styles --fix",
     "lint": "run-p lint:*",
-    "lint:configs": "eslint .*rc.js --no-ignore",
-    "lint:content": "remark . --ext md --quiet && prettier --check '**/*.md' --embedded-language-formatting off",
-    "lint:scripts": "tsc && eslint . --ext js,ts",
+    "lint:configs": "eslint .*rc.js --no-ignore --max-warnings=0",
+    "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
+    "lint:scripts": "tsc && eslint . --ext js,ts --max-warnings=0",
     "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
-    "prepare": "husky install",
     "prettier:ts": "prettier --write './assets/js/**'"
   },
   "version": "0.1.0"

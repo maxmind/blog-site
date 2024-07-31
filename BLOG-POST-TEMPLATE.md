@@ -39,8 +39,8 @@ directory:
 
 `/content/<YYYY>/<MM>`
 
-For example, if this was a real blog post, written on October 19, 2023,
-I would put it in:
+For example, if this was a real blog post, written on October 19, 2023, I would
+put it in:
 
 `/content/2023/10`
 
@@ -66,7 +66,8 @@ the new file and begin to modify it.
 The head of each blog post is at the very top of the file. A line with three
 hyphens opens and closes the header, as you can see above.
 
-Some attributes take an unordered list, which is part of [the basic markdown syntax](#markdown).
+Some attributes take an unordered list, which is part of
+[the basic markdown syntax](#markdown).
 
 The head contains the following attributes:
 
@@ -114,8 +115,8 @@ If you want to make links to your headers, you can create custom IDs that can be
 used in links. To do this, add something like `{#anchors}` after a header to
 allow you to link to that header.
 
-These custom IDs don't render properly in GitHub's markdown, but they do work
-in the blog's markdown. If you wanted to make the header directly above this
+These custom IDs don't render properly in GitHub's markdown, but they do work in
+the blog's markdown. If you wanted to make the header directly above this
 paragraph have the custom ID of `anchors` so that links pointing to `#anchors`
 will hit the header in question, you would write the header as follows:
 
@@ -159,8 +160,8 @@ styling differences to indicate that you're looking at code.
 
 Often in a technical blog we may need to share more code. For that we use code
 blocks, which are marked with three backticks followed by the code language to
-open the block (for example, \`\`\`bash). To close a code block, just put
-three backticks by themselves on their own line. For example:
+open the block (for example, \`\`\`bash). To close a code block, just put three
+backticks by themselves on their own line. For example:
 
 ```bash
 here's what it looks like to make a code block
@@ -185,13 +186,24 @@ If you want an easier way to make tables in markdown, you can also try this
 
 At this time, the blog generates metadata in the following ways:
 
-- the `title` parameter in the blog post head generates the `<title></title>` tag
+- the `title` parameter in the blog post head generates the `<title></title>`
+  tag
 - [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
-  - [`og:title`](https://ogp.me/#metadata) is populated with the `title` parameter in the [blog post head](#blog-head)
-  - [`og:description`](https://ogp.me/#optional) is populated with the first paragraph of the copy
-  - [`og:type`](https://ogp.me/#metadata) is populated with the value `"article"`
-  - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the article, which is derived from its path and filename
-  - [`og:image`](https://ogp.me/#metadata) is populated with the `image` parameter in the [blog post head](#blog-head)
-  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year of the post from the `date` parameter in the [blog post head](#blog-head)
-  - [`article:published_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
-  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the timestamp of midnight on the date specified in the `date` parameter in the [blog post head](#blog-head)
+  - [`og:title`](https://ogp.me/#metadata) is populated with the `title`
+    parameter in the [blog post head](#blog-head)
+  - [`og:description`](https://ogp.me/#optional) is populated with the first
+    paragraph of the copy
+  - [`og:type`](https://ogp.me/#metadata) is populated with the value
+    `"article"`
+  - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
+    article, which is derived from its path and filename
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `image`
+    parameter in the [blog post head](#blog-head)
+  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year
+    of the post from the `date` parameter in the [blog post head](#blog-head)
+  - [`article:published_time`](https://ogp.me/#no_vertical) is populated with
+    the timestamp of midnight on the date specified in the `date` parameter in
+    the [blog post head](#blog-head)
+  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the
+    timestamp of midnight on the date specified in the `date` parameter in the
+    [blog post head](#blog-head)

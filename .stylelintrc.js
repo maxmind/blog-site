@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   configBasedir: path.resolve(__dirname),
-  defaultSeverity: 'warning',
+  defaultSeverity: 'error',
   extends: [
     'stylelint-config-recommended',
     'stylelint-config-sass-guidelines',
@@ -12,7 +12,6 @@ module.exports = {
     'stylelint-order',
   ],
   rules: {
-    indentation: 2,
     'max-nesting-depth': 4,
     'order/order': [
       'custom-properties',
