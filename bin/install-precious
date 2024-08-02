@@ -4,14 +4,12 @@
 # in CI
 
 set -euo pipefail
+set -x
 
 if [ -z "${1:-}" ]; then
-    echo "usage: ./bin/install-precious /path/to/bin/dir"
+    echo "💥 You need to specify where to install precious. usage: ./bin/install-precious /path/to/bin/dir"
     exit 1
 fi
-
-TARGET=$1
-export TARGET
 
 TARGET=$1
 export TARGET

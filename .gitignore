@@ -4,3 +4,6 @@ public/
 resources/
 .sass-cache
 .hugo_build.lock
+
+# Precious install
+local/
