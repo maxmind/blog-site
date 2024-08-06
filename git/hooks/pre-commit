@@ -24,4 +24,4 @@ function timed_run() {
     fi
 }
 
-timed_run "precious lint" "precious lint --staged"
+timed_run "local/precious lint" "local/precious lint --staged"
