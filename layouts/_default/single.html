@@ -6,7 +6,13 @@
             <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
           {{ end }}
         </div>
-      <h1 class="blog-post__heading">{{ .Title }}</h1>
+      <h1 class="blog-post__heading">
+        {{ with .Params.Heading }}
+          {{ . }}
+        {{ else }}
+          {{ .Title }}
+        {{ end }}
+      </h1>
       <div class="blog-post__published">
         <div class="blog-post__authors">
           <div class="authors__by">
