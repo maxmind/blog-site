@@ -38,7 +38,7 @@ module.exports = {
           '^[a-z0-9-]+$',
         ],
         'max-len': [
-          100,
+          0,
         ],
       },
     },
@@ -128,7 +128,7 @@ module.exports = {
     'max-len': [
       'warn',
       {
-        code: 80,
+        code: 100,
       },
     ],
     'no-trailing-spaces': 'warn',
