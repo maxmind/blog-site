@@ -9,8 +9,6 @@
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.1",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-compat": "^6.0.0",
@@ -29,7 +27,8 @@
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-no-unsupported-browser-features": "^7.0.0",
     "stylelint-order": "^6.0.4",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
   },
   "engines": {
     "node": ">=20",
@@ -40,14 +39,15 @@
   "scripts": {
     "fix": "run-p fix:*",
     "fix:content": "prettier --write '**/*.md' --config './content/.prettierrc.js'",
-    "fix:scripts": "npm run lint:scripts --fix",
-    "fix:styles": "npm run lint:styles --fix",
+    "fix:scripts": "npm run lint:scripts -- --fix",
+    "fix:styles": "npm run lint:styles -- --fix",
     "lint": "run-p lint:*",
-    "lint:configs": "eslint .*rc.js --no-ignore --max-warnings=0",
+    "lint:configs": "eslint {.*rc.js,*.config.mjs} --no-ignore --max-warnings=0",
     "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
-    "lint:scripts": "tsc && eslint . --ext js,ts --max-warnings=0",
+    "lint:scripts": "tsc && eslint '**/*.{ts,js}' --max-warnings=0",
     "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
-    "prettier:ts": "prettier --write './assets/js/**'"
+    "prettier:ts": "prettier --write './assets/js/**'",
+    "rules:eslint": "eslint '**/*.{ts,js}' --debug 2>&1 | grep 'Loading rule' | awk -F\"'\" '{print $2}' | sort -u"
   },
   "version": "0.1.0"
 }

@@ -1,4 +1,6 @@
+/* eslint-disable */
 const path = require('path');
+/* eslint-enable */
 
 module.exports = {
   configBasedir: path.resolve(__dirname),
