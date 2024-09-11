@@ -29,7 +29,7 @@ type = "both"
 cmd = [
   "npx",
   "eslint",
-  "--quiet"
+  "."
 ]
 lint-flags = []
 tidy-flags = ["--fix"]
