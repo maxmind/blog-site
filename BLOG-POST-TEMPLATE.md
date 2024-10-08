@@ -71,14 +71,15 @@ Some attributes take an unordered list, which is part of
 
 The head contains the following attributes:
 
-| Attribute  | Description                                                                                                                                                                                                                                         |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`    | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title><\title>` meta tag. [Learn more about metadata on the blog.](#metadata) |
-| `date`     | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                        |
-| `images`   | The unordered list of paths to the featured image(s) of the post. The first image is displayed on the blog home, and all images are used for social sharing. [Learn more about images below.](#images)                                              |
-| `category` | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.              |
-| `tag`      | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                          |
-| `authors`  | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                       |
+| Attribute     | Description                                                                                                                                                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title><\title>` meta tag. [Learn more about metadata on the blog.](#metadata) |
+| `description` | The description of the post, contained in double quotes (`""`). This is optional.                                                                                                                                                                   |
+| `date`        | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                        |
+| `images`      | The unordered list of paths to the featured image(s) of the post. The first image is displayed on the blog home, and all images are used for social sharing. [Learn more about images below.](#images)                                              |
+| `category`    | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.              |
+| `tag`         | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                          |
+| `authors`     | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                       |
 
 ## Markdown
 
@@ -184,15 +185,25 @@ If you want an easier way to make tables in markdown, you can also try this
 
 ## Metadata
 
+We can use [OpenGraph meta tags](https://ogp.me/) for social sharing. Hugo has
+an embedded OpenGraph template:
+https://gohugo.io/templates/embedded/#open-graph.
+[Hugo OpenGraph embedded template source code](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html).
+
 At this time, the blog generates metadata in the following ways:
 
-- the `title` parameter in the blog post head generates the `<title></title>`
+- The `title` parameter in the blog post head generates the `<title></title>`
   tag
-- [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
+- The meta description in the blog post head is generated by the `description`
+  in the [blog post head](#blog-head). If no `description` is set in the front
+  matter of the post, there will not be a meta description tag.
+- [OpenGraph meta tags](https://ogp.me/):
   - [`og:title`](https://ogp.me/#metadata) is populated with the `title`
     parameter in the [blog post head](#blog-head)
-  - [`og:description`](https://ogp.me/#optional) is populated with the first
-    paragraph of the copy
+  - [`og:description`](https://ogp.me/#optional) is populated with the
+    `description` parameter in the [blog post head](#blog-head). If no
+    `description` is specified, this will default with the first paragraph of
+    the post.
   - [`og:type`](https://ogp.me/#metadata) is populated with the value
     `"article"`
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
