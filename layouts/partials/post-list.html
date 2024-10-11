@@ -6,7 +6,13 @@
         {{ end }}
       </div>
     <h2 class="blog-post__heading">
-      <a href="{{ .RelPermalink }}" class="blog-post__title">{{ .Title  }}</a>
+      <a href="{{ .RelPermalink }}" class="blog-post__title">
+        {{ with .Params.Heading }}
+          {{ . }}
+        {{ else }}
+          {{ .Title }}
+      {{ end }}
+      </a>
     </h2>
     <div class="blog-post__published">
       <div class="blog-post__authors">

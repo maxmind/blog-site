@@ -5,7 +5,13 @@
         <div class="pagination__arrow">
           {{ readFile "assets/FaArrowLeft.svg" | safeHTML }}
         </div>
-        <div class="pagination__direction">{{ .Title }}</div>
+        <div class="pagination__direction">
+          {{ with .Params.Heading }}
+              {{ . }}
+            {{ else }}
+              {{ .Title }}
+          {{ end }}
+        </div>
       </a>
     {{ end }}
     {{ with .Prev }}
@@ -13,7 +19,13 @@
         <div class="pagination__arrow">
           {{ readFile "assets/FaArrowRight.svg" | safeHTML }}
         </div>
-        <div class="pagination__direction">{{ .Title }}</div>
+        <div class="pagination__direction">
+          {{ with .Params.Heading }}
+              {{ . }}
+            {{ else }}
+              {{ .Title }}
+          {{ end }}
+        </div>
       </a>
     {{ end }}
   </footer>
