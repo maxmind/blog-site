@@ -205,6 +205,14 @@ At this time, the blog generates metadata in the following ways:
     `description` parameter in the [blog post head](#blog-head). If no
     `description` is specified, this will default with the first paragraph of
     the post.
+  - [`og:site_name`](https://ogp.me/#metadata) is `MaxMind`, which is the title
+    set in `config.toml`
+  - [`og:locale`](https://ogp.me/#metadata) is `en_us`, which is the
+    languageCode set in `config.toml`. (`-` is replaced with `_`.)
+  - [`og:audio`](https://ogp.me/#metadata) is populated with a list of audio
+    paths
+  - [`og:video`](https://ogp.me/#metadata) is populated with a list of video
+    paths
   - [`og:type`](https://ogp.me/#metadata) is populated with the value
     `"article"`
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
