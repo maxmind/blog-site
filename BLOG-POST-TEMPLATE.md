@@ -81,6 +81,8 @@ The head contains the following attributes:
 | `category`    | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                      |
 | `tag`         | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                                  |
 | `authors`     | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                                                                                                                                                                               |
+| `slug`        | This will override the automatically generated slug of the post `YYYY/MM/DD/name-of-the-file` will now become `YYYY/MM/DD/specified-slug-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                |
+| `url`         | This will override the automatically generated url of the post `YYYY/MM/DD/name-of-the-file` will now be `specified-url-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                 |
 
 ## Markdown
 
@@ -129,6 +131,35 @@ is a simple transformation of the text of the header. For example, the ID of the
 header for this section is `custom-ids-for-anchor-links`. The text is
 transformed to all lowercase, special characters are ignored, and spaces are
 turned into hyphens.
+
+### Content Summaries
+
+You can define a summary manually, in front matter, or automatically. A manual
+summary takes precedence over a front matter summary, and a front matter summary
+takes precedence over an automatic summary. To manually set a summary for a blog
+post, see https://gohugo.io/content-management/summaries/.
+
+### Internal Links and Shortcodes
+
+Using relative links and shortcodes to refer to other pages is strongly
+encouraged instead of hardcoding paths. Hugo emits an error or warning if a
+document cannot be uniquely resolved. See
+https://gohugo.io/content-management/cross-references/ for how to utilize the
+shortcodes.
+
+For example:
+
+Don't do this:
+
+```md
+[Discontinuation of the GeoLite Legacy Databases](/2018/01/discontinuation-of-the-geolite-legacy-databases/)
+```
+
+Do this:
+
+```md
+[Discontinuation of the GeoLite Legacy Databases]({{< relref "2018/01/discontinuation-of-the-geolite-legacy-databases.md" >}})
+```
 
 ### Images
 
@@ -227,3 +258,16 @@ At this time, the blog generates metadata in the following ways:
   - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the
     timestamp of midnight on the date specified in the `date` parameter in the
     [blog post head](#blog-head)
+
+### Redirects and Aliases
+
+You can use [Hugo's Aliases](https://gohugo.io/content-management/urls/#aliases)
+to create redirects from old URLs to new URLs.
+
+For example, you would change the new file name and make the alias the old file
+name:
+
+```md
+aliases:
+['2024/06/maxmind-appoints-seasoned-data-science-leader-rupert-young-as-chief-product-officer.md']
+```
