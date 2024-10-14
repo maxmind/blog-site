@@ -71,14 +71,18 @@ Some attributes take an unordered list, which is part of
 
 The head contains the following attributes:
 
-| Attribute  | Description                                                                                                                                                                                                                                         |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`    | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title><\title>` meta tag. [Learn more about metadata on the blog.](#metadata) |
-| `date`     | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                        |
-| `images`   | The unordered list of paths to the featured image(s) of the post. The first image is displayed on the blog home, and all images are used for social sharing. [Learn more about images below.](#images)                                              |
-| `category` | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.              |
-| `tag`      | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                          |
-| `authors`  | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                       |
+| Attribute     | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title></title>` meta tag. [Learn more about metadata on the blog.](#metadata)                                                                                                                                                         |
+| `heading`     | The heading for the blog post, contained in double quotes (`""`). This will be used as only the title displayed at the top of the post in a level 1 header. If this is omitted, then the `title` will be used as the level 1 header. **Note**: The <title></title> meta tag will still be the `title`. This is optional and should only be added if you want the metadata and h1 tag on the page to differ. |
+| `description` | The description of the post, contained in double quotes (`""`). This is optional.                                                                                                                                                                                                                                                                                                                           |
+| `date`        | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                                                                                |
+| `images`      | The unordered list of paths to the featured image(s) of the post. The first image is displayed on the blog home, and all images are used for social sharing. [Learn more about images below.](#images)                                                                                                                                                                                                      |
+| `category`    | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                      |
+| `tag`         | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                                  |
+| `authors`     | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                                                                                                                                                                               |
+| `slug`        | This will override the automatically generated slug of the post `YYYY/MM/DD/name-of-the-file` will now become `YYYY/MM/DD/specified-slug-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                |
+| `url`         | This will override the automatically generated url of the post `YYYY/MM/DD/name-of-the-file` will now be `specified-url-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                 |
 
 ## Markdown
 
@@ -128,11 +132,42 @@ header for this section is `custom-ids-for-anchor-links`. The text is
 transformed to all lowercase, special characters are ignored, and spaces are
 turned into hyphens.
 
+### Content Summaries
+
+You can define a summary manually, in front matter, or automatically. A manual
+summary takes precedence over a front matter summary, and a front matter summary
+takes precedence over an automatic summary. To manually set a summary for a blog
+post, see https://gohugo.io/content-management/summaries/.
+
+### Internal Links and Shortcodes
+
+Using relative links and shortcodes to refer to other pages is strongly
+encouraged instead of hardcoding paths. Hugo emits an error or warning if a
+document cannot be uniquely resolved. See
+https://gohugo.io/content-management/cross-references/ for how to utilize the
+shortcodes.
+
+For example:
+
+Don't do this:
+
+```md
+[Discontinuation of the GeoLite Legacy Databases](/2018/01/discontinuation-of-the-geolite-legacy-databases/)
+```
+
+Do this:
+
+```md
+[Discontinuation of the GeoLite Legacy Databases]({{< relref "2018/01/discontinuation-of-the-geolite-legacy-databases.md" >}})
+```
+
 ### Images
 
 In markdown, you can embed images with the following format:
 
+```
 ![alt-text](path/to/image)
+```
 
 The image above won't actually display properly, because you also need to add
 your image to the correct location and use the proper path.
@@ -184,20 +219,38 @@ If you want an easier way to make tables in markdown, you can also try this
 
 ## Metadata
 
+We can use [OpenGraph meta tags](https://ogp.me/) for social sharing. Hugo has
+an embedded OpenGraph template:
+https://gohugo.io/templates/embedded/#open-graph.
+[Hugo OpenGraph embedded template source code](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html).
+
 At this time, the blog generates metadata in the following ways:
 
-- the `title` parameter in the blog post head generates the `<title></title>`
+- The `title` parameter in the blog post head generates the `<title></title>`
   tag
-- [OpenGraph meta tags](https://ogp.me/) are generated for social sharing
+- The meta description in the blog post head is generated by the `description`
+  in the [blog post head](#blog-head). If no `description` is set in the front
+  matter of the post, there will not be a meta description tag.
+- [OpenGraph meta tags](https://ogp.me/):
   - [`og:title`](https://ogp.me/#metadata) is populated with the `title`
     parameter in the [blog post head](#blog-head)
-  - [`og:description`](https://ogp.me/#optional) is populated with the first
-    paragraph of the copy
+  - [`og:description`](https://ogp.me/#optional) is populated with the
+    `description` parameter in the [blog post head](#blog-head). If no
+    `description` is specified, this will default with the first paragraph of
+    the post.
+  - [`og:site_name`](https://ogp.me/#metadata) is `MaxMind`, which is the title
+    set in `config.toml`
+  - [`og:locale`](https://ogp.me/#metadata) is `en_us`, which is the
+    languageCode set in `config.toml`. (`-` is replaced with `_`.)
+  - [`og:audio`](https://ogp.me/#metadata) is populated with a list of audio
+    paths
+  - [`og:video`](https://ogp.me/#metadata) is populated with a list of video
+    paths
   - [`og:type`](https://ogp.me/#metadata) is populated with the value
     `"article"`
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
     article, which is derived from its path and filename
-  - [`og:image`](https://ogp.me/#metadata) is populated with the `image`
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `images`
     parameter in the [blog post head](#blog-head)
   - [`article:section`](https://ogp.me/#no_vertical) is populated with the year
     of the post from the `date` parameter in the [blog post head](#blog-head)
@@ -207,3 +260,16 @@ At this time, the blog generates metadata in the following ways:
   - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the
     timestamp of midnight on the date specified in the `date` parameter in the
     [blog post head](#blog-head)
+
+### Redirects and Aliases
+
+You can use [Hugo's Aliases](https://gohugo.io/content-management/urls/#aliases)
+to create redirects from old URLs to new URLs.
+
+For example, you would change the new file name and make the alias the old file
+name:
+
+```md
+aliases:
+['2024/06/maxmind-appoints-seasoned-data-science-leader-rupert-young-as-chief-product-officer.md']
+```

@@ -1,7 +1,13 @@
 {{ define "main" }}
   <div class="blog-posts__wrapper">
     <div class="blog-posts">
-      <h1 class="posts__header">{{ .Title }}</h1>
+      <h1 class="posts__header">
+        {{ with .Params.Heading }}
+            {{ . }}
+          {{ else }}
+            {{ .Title }}
+        {{ end }}
+      </h1>
       {{ range .Paginator.Pages }}
         {{ partial "post-list.html" . }}
       {{ end }}
