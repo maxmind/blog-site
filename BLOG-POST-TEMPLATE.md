@@ -165,7 +165,9 @@ Do this:
 
 In markdown, you can embed images with the following format:
 
+```
 ![alt-text](path/to/image)
+```
 
 The image above won't actually display properly, because you also need to add
 your image to the correct location and use the proper path.
