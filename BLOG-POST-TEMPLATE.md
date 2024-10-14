@@ -73,7 +73,7 @@ The head contains the following attributes:
 
 | Attribute     | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`       | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title><\title>` meta tag. [Learn more about metadata on the blog.](#metadata)                                                                                                                                                         |
+| `title`       | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title></title>` meta tag. [Learn more about metadata on the blog.](#metadata)                                                                                                                                                         |
 | `heading`     | The heading for the blog post, contained in double quotes (`""`). This will be used as only the title displayed at the top of the post in a level 1 header. If this is omitted, then the `title` will be used as the level 1 header. **Note**: The <title></title> meta tag will still be the `title`. This is optional and should only be added if you want the metadata and h1 tag on the page to differ. |
 | `description` | The description of the post, contained in double quotes (`""`). This is optional.                                                                                                                                                                                                                                                                                                                           |
 | `date`        | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                                                                                |
@@ -209,7 +209,7 @@ At this time, the blog generates metadata in the following ways:
     `"article"`
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
     article, which is derived from its path and filename
-  - [`og:image`](https://ogp.me/#metadata) is populated with the `image`
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `images`
     parameter in the [blog post head](#blog-head)
   - [`article:section`](https://ogp.me/#no_vertical) is populated with the year
     of the post from the `date` parameter in the [blog post head](#blog-head)
