@@ -5,7 +5,7 @@ title = 'MaxMind'
 rssLimit = 6
 
 [outputs]
-  home = ['HTML', 'JSON', 'RSS']
+  home = ['HTML', 'RSS']
   page = ['HTML']
 
 [pagination]
