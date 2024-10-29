@@ -5,8 +5,8 @@
 }
 
 .search__button {
-  @include mixins.menu-button;
   float: right;
+  @include mixins.menu-button;
 }
 
 .search__button svg {
