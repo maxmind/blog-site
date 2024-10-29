@@ -8,7 +8,7 @@
 
   {{ $style := resources.Get "scss/index.scss" }}
   {{ $options := dict "transpiler" "dartsass" }}
-  {{ $style := $style | resources.ToCSS $options}}
+  {{ $style := $style | css.Sass $options}}
 
   <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
 
