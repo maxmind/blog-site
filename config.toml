@@ -2,12 +2,14 @@
 baseurl = "/"
 languageCode = 'en-us'
 title = 'MaxMind'
-paginate = 6
 rssLimit = 6
 
 [outputs]
   home = ['HTML', 'JSON', 'RSS']
   page = ['HTML']
+
+[pagination]
+  pagerSize = 6
 
 [taxonomies]
   category = 'category'
