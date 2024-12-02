@@ -415,10 +415,10 @@ combine it with our custom MMDB file.
 
 If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in
 `/usr/share/GeoIP`. If not, you may need to
-[download this file](https://dev.maxmind.com/geoip/geoip2/geolite2/) or use
-[geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more details on
-how to set this up, you can look at the `provision` section of the `Vagrantfile`
-in the GitHub repository.
+[download this file](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+or use [geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more
+details on how to set this up, you can look at the `provision` section of the
+`Vagrantfile` in the GitHub repository.
 
 You can take any number of fields from existing MaxMind databases to create your
 own custom database. In this case, let's extend our existing database by adding
@@ -743,7 +743,7 @@ This requires slightly more logic, but reading a CSV file line by line will give
 you a significant speed boost over search tree iteration.
 
 Free downloads of CSV files for GeoLite2 City and GeoLite2 Country
-[are available from MaxMind.com](https://dev.maxmind.com/geoip/geoip2/geolite2/).
+[are available from MaxMind.com](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
 If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
 `GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory.
 `examples/06-read-csv.pl` will give you a head start on parsing these CSVs.

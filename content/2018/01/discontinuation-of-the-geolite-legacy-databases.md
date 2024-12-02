@@ -35,9 +35,9 @@ may need to take action depending on what database you are using.
 ### GeoLite Legacy users
 
 If you are using the GeoLite Legacy databases, you will need to switch to the
-[GeoLite2 databases](https://dev.maxmind.com/geoip/geoip2/geolite2/) and update
-your integrations to use the GeoLite2 databases before January 2, 2019 to ensure
-your continued access to geolocation data.
+[GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+and update your integrations to use the GeoLite2 databases before January 2,
+2019 to ensure your continued access to geolocation data.
 
 Another option is to switch to the paid
 [GeoIP Legacy](https://dev.maxmind.com/geoip/legacy/downloadable/) equivalent of
@@ -71,7 +71,7 @@ aware:
 
 - **January 2, 2019** – The remaining GeoLite Legacy builds will be removed from
   our website. GeoLite Legacy database users will need to have switched to the
-  [GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) or
+  [GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/) or
   [commercial GeoIP](https://www.maxmind.com/en/geoip2-services-and-databases)
   databases and update their integrations.
 
@@ -81,7 +81,7 @@ Open source is about more than just code; it's about community and process.
 Participating in open source projects and communities comes with its own unique
 set of challenges. We view open source as an important component of our services
 and will continue to offer free, open source data through our
-[GeoLite2 free downloadable databases](https://dev.maxmind.com/geoip/geoip2/geolite2/).
+[GeoLite2 free downloadable databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
 
 The difficult business decision to discontinue the GeoLite Legacy databases came
 about after careful analysis and thought. These types of decisions are never
