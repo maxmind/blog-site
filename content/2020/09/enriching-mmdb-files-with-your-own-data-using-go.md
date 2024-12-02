@@ -19,13 +19,13 @@ number of different programming languages, this article will focus on building
 MMDB files using the [Go programming language](https://golang.org/).
 
 MaxMind offers several prebuilt MMDB files, like the free
-[GeoLite2 Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) MMDB file.
-For many situations these MMDB files are useful enough as is. If, however, you
-have your own data associated with IP address ranges, you can create hybrid MMDB
-files, enriching existing MMDB contents with your own data. In this article,
-we're going to add details about a fictional company's IP address ranges to the
-GeoLite2 Country MMDB file. We'll be building a new MMDB file, one that contains
-both MaxMind's and our fictional company's data.
+[GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+MMDB file. For many situations these MMDB files are useful enough as is. If,
+however, you have your own data associated with IP address ranges, you can
+create hybrid MMDB files, enriching existing MMDB contents with your own data.
+In this article, we're going to add details about a fictional company's IP
+address ranges to the GeoLite2 Country MMDB file. We'll be building a new MMDB
+file, one that contains both MaxMind's and our fictional company's data.
 
 If you don't need any of the MaxMind data, but you still want to create a fast,
 easy-to-query database keyed on IP addresses and IP address ranges, you can
@@ -41,8 +41,8 @@ consult this example code showing
 - the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect) tool must be
   installed and be in your `$PATH`
 - a copy of the
-  [GeoLite2 Country](https://dev.maxmind.com/geoip/geoip2/geolite2/) database
-  must be in your working directory
+  [GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+  database must be in your working directory
 - your working directory (which can be located under any parent directory) must
   be named `mmdb-from-go-blogpost` (if you clone the code using the instructions
   below, this directory will be created for you)

@@ -12,8 +12,8 @@ authors:
 ---
 
 In December MaxMind released the new
-[GeoLite2 web services](https://dev.maxmind.com/geoip/geoip2/geolite2/), an IP
-geolocation API available free of charge.
+[GeoLite2 web services](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+an IP geolocation API available free of charge.
 
 IP geolocation services provide information about the geographic location of an
 IP address. MaxMind offers such free web services, GeoLite2 City and GeoLite2

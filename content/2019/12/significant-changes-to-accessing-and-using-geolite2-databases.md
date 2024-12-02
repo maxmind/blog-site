@@ -60,9 +60,10 @@ developer website and were licensed under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Starting **December 30, 2019,** downloads will no longer be served from our
-[public GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
-`geolite.maxmind.com/download/geoip/database/\*`, or from any other public URL.
-See the section below for steps on how to migrate to the new download mechanism.
+[public GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+from `geolite.maxmind.com/download/geoip/database/\*`, or from any other public
+URL. See the section below for steps on how to migrate to the new download
+mechanism.
 
 ### GeoLite2 Databases Affected
 
@@ -84,8 +85,9 @@ See the section below for steps on how to migrate to the new download mechanism.
    [direct download script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
 
 On **December 30, 2019**, downloads will no longer be served from our
-[public GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/), from
-`geolite.maxmind.com/download/geoip/database/\*`, or from any other public URL.
+[public GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+from `geolite.maxmind.com/download/geoip/database/\*`, or from any other public
+URL.
 
 To continue using GeoLite2 databases:
 

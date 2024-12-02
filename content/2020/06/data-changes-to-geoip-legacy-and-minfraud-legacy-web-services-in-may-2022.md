@@ -56,7 +56,7 @@ data changes below will not disrupt your existing workflows.
    region, and city names that come from [GeoNames](https://www.geonames.org/).
    At the end of May 2022 there may be small place name differences due to this.
    To get a full list of GeoIP2 place names we recommend downloading a
-   [GeoLite2 City CSV file](https://dev.maxmind.com/geoip/geoip2/geolite2/)
+   [GeoLite2 City CSV file](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
    (available at no cost). Details of this file format can be found
    [here](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/#csv-databases).
    You may request access by

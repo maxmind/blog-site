@@ -16,7 +16,8 @@ authors:
 Earlier this year, we announced our plans to discontinue the GeoLite Legacy
 databases. As part of sharing that decision with you, we mentioned that we would
 be removing latitude and longitude coordinates from the
-[GeoLite2 databases](https://dev.maxmind.com/geoip/geoip2/geolite2/) in 2019.
+[GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+in 2019.
 
 After careful consideration, taking into account customer feedback, we have
 decided against removing latitude and longitude coordinates from the GeoLite2

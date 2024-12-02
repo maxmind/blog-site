@@ -39,7 +39,7 @@ We’ll keep this brief: _why should you use the GeoLite2 web service?_
 <!--lint disable no-emphasis-as-heading-->
 
 **To sign up for GeoLite2, head over to our
-[GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/).**
+[GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).**
 
 If you’re an existing GeoLite2 database user, you can generate a license key and
 start using the service immediately. Our
