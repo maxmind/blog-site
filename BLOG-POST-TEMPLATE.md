@@ -158,7 +158,8 @@ Don't do this:
 Do this:
 
 ```md
-[Discontinuation of the GeoLite Legacy Databases]({{< relref "2018/01/discontinuation-of-the-geolite-legacy-databases.md" >}})
+[Discontinuation of the GeoLite Legacy
+Databases]({{< relref "2018/01/discontinuation-of-the-geolite-legacy-databases.md" >}})
 ```
 
 ### Images
