@@ -19,7 +19,7 @@
     "prettier": "^3.4.2",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended": "^15.0.0",
-    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-no-unsupported-browser-features": "^8.0.2",
     "stylelint-order": "^6.0.4",
     "typescript": "^5.7.2",
