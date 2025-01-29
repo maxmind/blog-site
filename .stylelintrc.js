@@ -75,6 +75,13 @@ module.exports = {
           'css-initial-value',
 
           /**
+           * Parcial supported - Safari
+           *
+           * https://caniuse.com/?search=css-marker-pseudo
+           */
+          'css-marker-pseudo',
+
+          /**
            * Not supported - IE11
            *
            * Partial support - Chromium
