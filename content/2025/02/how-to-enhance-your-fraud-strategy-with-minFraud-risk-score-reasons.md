@@ -43,7 +43,7 @@ understandable reasons for why a risk score is high or low.
 Here is an example of a demo transaction that has been determined to be
 high-risk.
 
-![high risk demo](/images/2025/02//high-risk-demo.png)
+![high risk demo](/images/2025/02//high-risk-demo.webp)
 
 We return a risk multiplier value in addition to a reason code and a
 human-readable string. Multipliers greater than 1.5 (risk increaser) and less
@@ -78,7 +78,7 @@ fraud. In the real-life example below, a MaxMind minFraud customer was able to
 isolate a pair of attacks based on the risk score reasons returned for
 individual transactions within that time frame.
 
-![case exammple #1](/images/2025/02/case-example-1.png)
+![case exammple #1](/images/2025/02/case-example-1.webp)
 
 In this image above, the yellow line is the average risk related to email
 domains, and the spike indicates fraud attempted with fake email domains. The
@@ -86,7 +86,7 @@ purple line represents the average IP activity, and the spike indicates a high
 velocity bot attack, with IP addresses exhibiting significant and concurrent
 activity across the minFraud network.
 
-![mean risk multiplier example](/images/2025/02//mean-risk-multiplier-example.png)
+![mean risk multiplier example](/images/2025/02//mean-risk-multiplier-example.webp)
 
 ## Accessing risk score reasons
 
@@ -138,7 +138,7 @@ In the real-life example below, another minFraud customer was able to pinpoint
 an increase in IP activity risk (purple spike) to a bot attack involving
 anonymous IPs (yellow) which led to an increase in payment card declines.
 
-![case exammple #2](/images/2025/02/case-example-2.png)
+![case exammple #2](/images/2025/02/case-example-2.webp)
 
 ## Information sharing and its role in fraud detection
 
