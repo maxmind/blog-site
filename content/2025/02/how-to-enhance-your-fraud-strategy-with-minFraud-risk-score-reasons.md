@@ -3,7 +3,7 @@ title: "Enhance your fraud strategy with risk score reasons | MaxMind"
 heading: "How to enhance your fraud strategy with minFraud risk score reasons"
 date: "2025-02-19"
 images:
-  - /images/2025/02/risk-score-reasons.jpg
+  - /images/2025/02/risk-score-reasons.webp
 category:
   - "Online Fraud Detection"
 tag:
