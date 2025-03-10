@@ -35,7 +35,7 @@ fraud risk patterns emerge and performance drops.
 This realization, namely that most current fraud models are a blackbox, is what
 inspired the MaxMind minFraud team to introduce risk score reasons.
 
-## What are risk score reasons?
+## What are risk score Reasons?
 
 Risk score reasons are a set of data that provide users with specific and
 understandable reasons for why a risk score is high or low.
