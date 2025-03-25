@@ -1,7 +1,11 @@
 ---
 title: "Why and how Quad9 relies on user type data and other GeoIP data"
-heading:"How open DNS recursive service Quad9 uses MaxMind data to understand usage patterns and secure funding"
-description: "DNS recursive service Quad9 uses MaxMind data to understand usage patterns and secure funding. Read our blog post for more details/inspiration."
+heading:
+  "How open DNS recursive service Quad9 uses MaxMind data to understand usage
+  patterns and secure funding"
+description:
+  "DNS recursive service Quad9 uses MaxMind data to understand usage patterns
+  and secure funding. Read our blog post for more details/inspiration."
 date: "2025-03-26"
 images:
   - /images/2025/03/quad9.png
