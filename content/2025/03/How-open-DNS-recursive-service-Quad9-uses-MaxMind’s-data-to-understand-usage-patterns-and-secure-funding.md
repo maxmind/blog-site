@@ -22,7 +22,7 @@ By replacing a user’s default Internet Service Provider (ISP) or enterprise DN
 
 As [John Todd](https://www.linkedin.com/in/johntodd/), Quad9’s Chief Technical Officer sums up: “We block domains where we have sufficient evidence that the intentions of the website are not in line with the intentions of the end-user.” 
 
-![A world map illustrating the number of malicious lookups blocked by Quad9.](/images/2025/03/Quad9 malicious lookups blocked.png)
+![A world map illustrating the number of malicious lookups blocked by Quad9.](/images/2025/03/Quad9_malicious_lookups_blocked.png)
 
 Quad9 currently operates in more than 240 locations across over 110 nations and protects more than an estimated 100 million users daily. While Quad9 operates extensively in Western Europe and North America, the company’s primary goal is to proactively safeguard citizens and organizations in developing countries from malware, ransomware, stalkerware, malvertising, and other kinds of cyber threats. For a detailed look, [see this report](https://quad9.net/uploads/Quad9_Cyber_insights_Malawi_dbb9c0acfc.pdf) on Quad9’s implementation in Malawi.
 
