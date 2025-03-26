@@ -25,6 +25,7 @@ the upper-right to see the markdown syntax.
 Read on to learn more about formatting, options, and behavior below:
 
 - [how to create a new blog post](#creating-a-new-blog-post)
+- [scheduling a blog post for the future](#scheduling-a-blog-post-for-the-future)
 - [understanding the blog head where organizational parameters are defined](#blog-head)
 - [formatting copy with markdown](#markdown)
 - [embedding images in your blog post](#images)
@@ -32,7 +33,7 @@ Read on to learn more about formatting, options, and behavior below:
 If you're interested in learning about how the blog generates metadata for SEO
 purposes, you can [read more below](#metadata).
 
-## Creating a New Blog Post
+## Creating a new blog post
 
 To get started, make a new file. The file should be located in the following
 directory:
@@ -61,7 +62,20 @@ the blog post.
 Once you have the file created, you can paste the contents of this template into
 the new file and begin to modify it.
 
-## Blog Head
+## Scheduling a blog post for the future
+
+To schedule a blog post to be released on a particular date, simply create that
+blog post with a date in the future. This should be reflected both in the
+content directories in which the post and any static content are stored, and in
+the blog head metadata ([see below](#blog-head)).
+
+Please note that the files associated with this content will be visible in
+Github prior to the release date. It is unlikely anyone from the public will be
+monitoring the Github repository for content, but if there was something
+particularly sensitive which should not be leaked before a particular date, you
+should exercise caution in using this feature.
+
+## Blog head
 
 The head of each blog post is at the very top of the file. A line with three
 hyphens opens and closes the header, as you can see above.
@@ -106,14 +120,14 @@ syntax, for example:
 1. [You can make code blocks.](#code-blocks)
 1. [You can make tables.](#tables)
 
-### Headers in Markdown
+### Headers in markdown
 
 Headers in markdown are easy to write. They're prefixed by some number of
 "pound" glyphs (`#`). The number of `#`s defines the level of the header, for
 example `##` followed by text would be a level 2 header, or `###` followed by
 text would be a level 3 header, like the header directly above this paragraph.
 
-### Custom IDs for Anchor Links
+### Custom IDs for anchor links
 
 If you want to make links to your headers, you can create custom IDs that can be
 used in links. To do this, add something like `{#anchors}` after a header to
@@ -132,14 +146,14 @@ header for this section is `custom-ids-for-anchor-links`. The text is
 transformed to all lowercase, special characters are ignored, and spaces are
 turned into hyphens.
 
-### Content Summaries
+### Content summaries
 
 You can define a summary manually, in front matter, or automatically. A manual
 summary takes precedence over a front matter summary, and a front matter summary
 takes precedence over an automatic summary. To manually set a summary for a blog
 post, see https://gohugo.io/content-management/summaries/.
 
-### Internal Links and Shortcodes
+### Internal links and shortcodes
 
 Using relative links and shortcodes to refer to other pages is strongly
 encouraged instead of hardcoding paths. Hugo emits an error or warning if a
@@ -188,7 +202,7 @@ be added to the same directory.
 The blog can render jpg, png, and svg images. The images will be rendered
 horizontally-centered with the copy of the blog post.
 
-### Code Blocks
+### Code blocks
 
 Inline code is marked with a single opening and closing backtick (\`), as in
 `inline code`, for example. This renders the text with monospace font and subtle
@@ -262,7 +276,7 @@ At this time, the blog generates metadata in the following ways:
     timestamp of midnight on the date specified in the `date` parameter in the
     [blog post head](#blog-head)
 
-### Redirects and Aliases
+### Redirects and aliases
 
 You can use [Hugo's Aliases](https://gohugo.io/content-management/urls/#aliases)
 to create redirects from old URLs to new URLs.
