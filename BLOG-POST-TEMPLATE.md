@@ -67,7 +67,7 @@ the new file and begin to modify it.
 To schedule a blog post to be released on a particular date, simply create that
 blog post with a date in the future. This should be reflected both in the
 content directories in which the post and any static content are stored, and in
-the blog head metadata ([see below](#blog-head])).
+the blog head metadata ([see below](#blog-head)).
 
 Please note that the files associated with this content will be visible in
 Github prior to the release date. It is unlikely anyone from the public will be
