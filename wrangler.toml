@@ -1,6 +1,6 @@
 name = "blog-site"
 pages_build_output_dir = "public"
-compatibility_date = "2021-11-02"
+compatibility_date = "2025-04-02"
 
 [vars]
 HUGO_BUILD_TAGS = "extended"
