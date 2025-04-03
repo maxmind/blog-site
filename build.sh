@@ -4,7 +4,7 @@ set -eux
 
 extra_args=()
 
-if [[ ${PREVIEW:-} ]]; then
+if [[ "${BUILD_ENV:-}" == "preview" ]]; then
   extra_args+=("--buildFuture")
 fi
 
