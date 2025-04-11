@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <div class="blog-posts__wrapper">
+    <div>
+    <h3>Categories</h3>
+    <ul>
+      {{ range .Site.Taxonomies.category }}
+        <li>
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+        </li>
+      {{ end }}
+    </ul>
+
+    <h3>Tags</h3>
+    <ul>
+      {{ range .Site.Taxonomies.tag }}
+        <li>
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+        </li>
+      {{ end }}
+    </ul>
+    </div>
+  </div>
+{{ end }}

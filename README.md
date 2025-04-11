@@ -110,3 +110,11 @@ subdirectories for the year and month of publication (e.g., `/content/YYYY/MM`).
 
 You can learn more about how blog post files work and how they are formatted in
 the [BLOG-POST-TEMPLATE.md](BLOG-POST-TEMPLATE.md) file.
+
+### Categories and Tags
+
+To see a full list of categories and tags, check out the
+[all taxonomies](https://blog.maxmind.com/all-taxonomies) page. This page is
+automatically updated on build and push to production. If you want to see it on
+your local machine, start up the [development server](#development-server) and
+go to [/all-taxonomies](http://localhost:1313/all-taxonomies).
