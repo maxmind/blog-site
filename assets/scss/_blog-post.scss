@@ -82,6 +82,17 @@
 
 .blog-post__excerpt {
   grid-area: excerpt;
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--mm-color-primary-text);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+  }
 }
 
 .blog-post__readmore {
