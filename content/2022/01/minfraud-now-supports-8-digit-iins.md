@@ -10,6 +10,7 @@ tag:
   - "Product Updates"
 authors:
   - "Christopher Luna"
+  - "Miguel Atienza"
 ---
 
 For many years, the issuer of a credit card could be identified by the first 6

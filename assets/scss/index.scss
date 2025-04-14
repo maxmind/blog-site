@@ -12,6 +12,7 @@
 @use 'search';
 @use 'variables';
 @use 'recaptcha';
+@use 'post-author-bio';
 
 :root {
   --mm-color-active-blue: #2b7ec6;
