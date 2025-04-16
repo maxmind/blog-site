@@ -1,0 +1,11 @@
+.author-bio {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 calc(var(--mm-spacing) / 2) calc(var(--mm-spacing) / 2);
+  width: 100%;
+
+  @media (min-width: 768px) {
+    box-sizing: unset;
+  }
+}

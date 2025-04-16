@@ -1,7 +1,7 @@
 {{ $authorPages := where .Site.Pages "Section" "authors" }}
 {{ $authorPages := where $authorPages "Title" "in" .Params.authors }}
 
-{{ if gt (len $authorPages) 0 }}
+{{ if $authorPages }}
   <hr />
   <div class="post-author-bio article__container">
     {{ if gt (len $authorPages) 1 }}
