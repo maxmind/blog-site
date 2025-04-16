@@ -1,33 +1,26 @@
-{{ $authorsIDs := slice }}
-{{ range $key, $value := $.Site.Data.authors }}
-  {{ $authorsIDs = $authorsIDs | append $key }}
-{{ end }}
+{{ $authorPages := where .Site.Pages "Section" "authors" }}
+{{ $authorPages := where $authorPages "Title" "in" .Params.authors }}
 
-{{ $intersection := intersect .Params.authors $authorsIDs }}
-
-{{ if gt (len $intersection) 0 }}
+{{ if gt (len $authorPages) 0 }}
   <hr />
   <div class="post-author-bio article__container">
-    {{ if gt (len $intersection) 1 }}
+    {{ if gt (len $authorPages) 1 }}
       <h3>About the authors</h3>
     {{ else }}
       <h3>About the author</h3>
     {{ end }}
-    {{ range $intersection }}
-      {{ $authorID := . }}
-      {{ with index $.Site.Data.authors . }}
+    {{ range $authorPages }}
         <div class="post-author-bio__item">
-          <h4><a href="#">{{ $authorID }}</a></h4>
-          <p>{{ .bio }}</p>
-          {{ if ne .linkedin nil }}
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+          {{ .Content }}
+          {{ if ne .Params.linkedin nil }}
             <p>
-              <a href="{{ .linkedin }}" target="_blank" rel="noopener noreferrer">
-                Connect with {{ $authorID }} on LinkedIn
+              <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
+                Connect with {{ .Title }} on LinkedIn
               </a>
             </p>
           {{ end }}
         </div>
-      {{ end }}
     {{ end }}
   </div>
 {{ end }}

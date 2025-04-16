@@ -18,7 +18,6 @@ tag:
   - "Data Privacy"
 authors:
   - "Christopher Luna"
-  - "Miguel Atienza"
 ---
 
 [Quad9](https://quad9.net/) is a free recursive DNS (domain name server) that
