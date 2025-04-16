@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <div class="article">
+      <div class="article__container">
+        <div class="author-bio">
+          <h1>Articles by {{ .Title }}</h1>
+          <p>{{ .Content }}</p>
+          {{ if ne .Params.linkedin "" }}
+            <p>
+              <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
+                Connect with {{ .Title }} on LinkedIn
+              </a>
+            </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+{{ end }}
