@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Anonymizer and Proxy Detection"
-  - "Risk Score"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

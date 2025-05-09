@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Account Takeover"
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Risk Data"
 authors:
   - "the team at MaxMind"

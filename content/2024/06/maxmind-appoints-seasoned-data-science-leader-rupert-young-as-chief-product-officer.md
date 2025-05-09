@@ -9,8 +9,6 @@ category:
   - "Company Updates"
 tag:
   - "News"
-  - "MaxMind Team"
-  - "Hiring Announcement"
 authors:
   - "the team at MaxMind"
 ---

@@ -9,8 +9,6 @@ category:
 tag:
   - "Product Updates"
   - "Risk Scoring"
-  - "Risk Score Reasons"
-  - "minFraud"
 authors:
   - "Miguel Atienza"
 ---

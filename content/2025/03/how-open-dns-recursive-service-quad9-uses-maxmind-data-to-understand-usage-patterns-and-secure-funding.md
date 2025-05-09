@@ -14,7 +14,7 @@ category:
 tag:
   - "Case Studies"
   - "IP Geolocation Accuracy"
-  - "GeoIP"
+  - " IP network data"
   - "Data Privacy"
 authors:
   - "Christopher Luna"

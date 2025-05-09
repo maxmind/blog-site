@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Anonymizer and Proxy Detection"
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
 authors:
   - "the team at MaxMind"
 ---

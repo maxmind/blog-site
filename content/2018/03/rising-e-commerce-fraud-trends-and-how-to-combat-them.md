@@ -5,7 +5,7 @@ category:
   - "Online Fraud Detection"
 tag:
   - "Credit Card Fraud"
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Risk Data"
   - "Risk Scoring"
 authors:
