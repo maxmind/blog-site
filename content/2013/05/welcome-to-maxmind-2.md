@@ -2,7 +2,9 @@
 title: "Welcome to MaxMind"
 date: "2013-05-20"
 category:
-  - "Company Updates"
+  - "News"
+tag:
+  - "News"
 authors:
   - "the team at MaxMind"
 ---

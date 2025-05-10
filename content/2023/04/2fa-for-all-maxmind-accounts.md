@@ -7,7 +7,6 @@ category:
   - "Company Updates"
 tag:
   - "Account Takeover"
-  - "Cyber Security"
   - "Data Privacy"
   - "Product Updates"
 authors:
