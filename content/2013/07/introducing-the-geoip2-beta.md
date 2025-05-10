@@ -2,10 +2,11 @@
 title: "Introducing the GeoIP2 Beta"
 date: "2013-07-01"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "IP Network Data"
-  - "Product Updates"
+  - "IP network data"
+  - "Product updates"
 authors:
   - "the team at MaxMind"
 ---
