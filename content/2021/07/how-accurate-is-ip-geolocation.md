@@ -61,7 +61,7 @@ Our data does a good job of estimating the approximate location of IP addresses
 (see the
 [accuracy for our GeoIP2 City database](https://www.maxmind.com/en/geoip2-city-accuracy-comparison?country=&resolution=100&cellular=excluding)).
 But if you use any of our geolocation or fraud prevention products you’ve
-robably already seen the caveat we post throughout our documentation, that our
+probably already seen the caveat we post throughout our documentation, that our
 data is never precise enough to locate the street address of a particular
 household. If you start with the premise of finding an end-user’s location, you
 might wonder why we repeat this disclaimer so often. Will we be able to improve
@@ -117,7 +117,7 @@ an IP address from your web hosting server into the domain name server where you
 purchased your domain. In this case, you may host more than one website on a
 single server, providing the same IP address for multiple domain names.
 
-![small webhosts](/images/2021/07/Small-Webhosts.png)
+![small web hosts](/images/2021/07/Small-Web-Hosts.png)
 
 _A web server may host several very different sites or apps behind a single IP
 address._

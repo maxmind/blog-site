@@ -37,7 +37,7 @@ By using our modern GeoIP2
 format, you can quickly query any IPv4 or IPv6 address and get access to our up
 to date IP geolocation and intelligence data.
 
-![Farwell to GeoIP Legacy](/images/2022/06/end-of-an-era.png)
+![Farewell to GeoIP Legacy](/images/2022/06/end-of-an-era.png)
 
 ## Transitioning to GeoIP2
 

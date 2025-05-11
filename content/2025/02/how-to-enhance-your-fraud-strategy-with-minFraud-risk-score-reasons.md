@@ -32,7 +32,7 @@ that the data and the methodology behind most fraud models are both often
 concealed or poorly explained. This can cause serious issues when—not if—new
 fraud risk patterns emerge and performance drops.
 
-This realization, namely that most current fraud models are a blackbox, is what
+This realization, namely that most current fraud models are a black box, is what
 inspired the MaxMind minFraud team to introduce risk score reasons.
 
 ## What are risk score reasons?
@@ -60,8 +60,8 @@ Risk score reasons are a set of data that help fraud and risk professionals
 understand risk patterns for individual transactions and for their overall
 transaction stream, both at a point in time and over time. The detailed
 information provided by risk score reasons intends to transform the traditional
-blackbox process into a transparent one, giving fraud analysts insights into our
-fraud signals at a granular level.
+black box process into a transparent one, giving fraud analysts insights into
+our fraud signals at a granular level.
 
 Fraud patterns change constantly. Risk score reasons allow customers to identify
 which patterns are driving the scores and fine-tune specific aspects of their
@@ -78,7 +78,7 @@ fraud. In the real-life example below, a MaxMind minFraud customer was able to
 isolate a pair of attacks based on the risk score reasons returned for
 individual transactions within that time frame.
 
-![case exammple #1](/images/2025/02/case-example-1.webp)
+![case example #1](/images/2025/02/case-example-1.webp)
 
 In this image above, the yellow line is the average risk related to email
 domains, and the spike indicates fraud attempted with fake email domains. The
@@ -138,7 +138,7 @@ In the real-life example below, another minFraud customer was able to pinpoint
 an increase in IP activity risk (purple spike) to a bot attack involving
 anonymous IPs (yellow) which led to an increase in payment card declines.
 
-![case exammple #2](/images/2025/02/case-example-2.webp)
+![case example #2](/images/2025/02/case-example-2.webp)
 
 ## Information sharing and its role in fraud detection
 
