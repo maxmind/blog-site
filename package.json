@@ -8,6 +8,7 @@
     "@eslint/compat": "^1.2.8",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.24.0",
+    "cspell": "^9.0.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-filenames": "^1.3.2",
@@ -39,6 +40,7 @@
     "lint": "run-p lint:*",
     "lint:configs": "npx eslint . .*rc.js --max-warnings=0",
     "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
+    "lint:cspell": "cspell '**/*.md' --no-summary --no-progress --color",
     "lint:scripts": "tsc && npx eslint .  --max-warnings=0",
     "lint:styles": "stylelint ./assets/scss/*.{css,scss,sass}",
     "prettier:ts": "prettier --write './assets/js/**'"

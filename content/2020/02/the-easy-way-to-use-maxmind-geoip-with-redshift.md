@@ -133,6 +133,9 @@ IGNOREHEADER AS 1
 
 Now let’s write a function to convert IPs to really big numbers. Here’s a simple
 one written in SQL. We will call it `inet_aton` after the Linux utility that
+
+<!-- cspell:ignore ddress -->
+
 does the same thing. “inet” stands for “internet” and “aton” means “**A**ddress
 **TO** **N**umber”. Linux folks like to keep things short and sweet.
 
