@@ -1,0 +1,26 @@
+{{ $authorPages := where .Site.Pages "Section" "authors" }}
+{{ $authorPages := where $authorPages "Title" "in" .Params.authors }}
+
+{{ if $authorPages }}
+  <hr />
+  <div class="post-author-bio article__container">
+    {{ if gt (len $authorPages) 1 }}
+      <h3>About the authors</h3>
+    {{ else }}
+      <h3>About the author</h3>
+    {{ end }}
+    {{ range $authorPages }}
+        <div class="post-author-bio__item">
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+          {{ .Content }}
+          {{ if ne .Params.linkedin nil }}
+            <p>
+              <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
+                Connect with {{ .Title }} on LinkedIn
+              </a>
+            </p>
+          {{ end }}
+        </div>
+    {{ end }}
+  </div>
+{{ end }}
