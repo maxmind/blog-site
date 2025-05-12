@@ -3,6 +3,7 @@ baseurl = "/"
 languageCode = 'en-us'
 title = 'MaxMind'
 rssLimit = 6
+titleCaseStyle = 'none'
 
 [outputs]
   home = ['HTML', 'RSS']
