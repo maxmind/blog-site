@@ -6,14 +6,13 @@ date: "2023-11-06"
 images:
   - /images/2023/11/opmc-maxmind-ecommerce-plugin-partnership.jpg
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Credit Card Fraud"
   - "Fraud Detection"
   - "Fraud Prevention"
   - "Ecommerce Fraud Detection"
-  - "Chargeback Prevention"
 authors:
   - "Andra Mircioiu"
 ---

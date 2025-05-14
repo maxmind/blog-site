@@ -4,7 +4,7 @@ date: "2016-04-04"
 category:
   - "Online Fraud Detection"
 tag:
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Risk Data"
 authors:
   - "Miguel Atienza"

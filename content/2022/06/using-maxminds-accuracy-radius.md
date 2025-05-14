@@ -7,7 +7,7 @@ category:
   - "IP Geolocation and Network Data"
 tag:
   - "Data Privacy"
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Geofiltering and Geofencing"
   - "IP Geolocation Accuracy"
   - "Technical Tutorials"
