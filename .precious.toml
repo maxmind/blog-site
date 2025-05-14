@@ -58,3 +58,13 @@ tidy-flags = ["--fix"]
 path-args = "absolute-file"
 include = ["assets/scss/**"]
 ok-exit-codes = 0
+
+[commands.cspell-content]
+type="lint"
+include = ["*.md"]
+cmd = [
+  "npm",
+  "run",
+  "lint:cspell",
+]
+ok-exit-codes = 0

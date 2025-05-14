@@ -67,9 +67,9 @@ back to them. This can include P.O. boxes, hotel addresses and freight
 forwarders. Certain cities, such as Houston, Seattle, Miami and Newark, are
 known freight forwarding hubs, and addresses in those cities may be higher risk.
 
-Keep in mind, a single datapoint is only one piece as you puzzle over the bigger
-picture. Best practices include using all of the data available to assess the
-risk for a specific transaction.
+Keep in mind, a single data point is only one piece as you puzzle over the
+bigger picture. Best practices include using all of the data available to assess
+the risk for a specific transaction.
 
 Given the usefulness of geolocation data provided by the IP address, it’s no
 surprise that savvy fraudsters take evasive measures to hide their location. How

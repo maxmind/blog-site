@@ -1,6 +1,6 @@
 ---
 title:
-  "Going Local: How MaxMind Helps GeoFli’s Customers’ Conversion Rates Soar"
+  "Going Local: How MaxMind Helps GeoFli's Customers’ Conversion Rates Soar"
 date: "2018-01-02"
 category:
   - "IP Geolocation and Network Data"
@@ -45,7 +45,7 @@ identify, segment, and target their visitors in order to serve them personalized
 content based on some identifiable attribute of the visitor - such as
 geographical location, browsing history, and demographic data.
 
-In GeoFli’s case, the company identifies visitors through the process of
+In GeoFli's case, the company identifies visitors through the process of
 [geotargeting](https://geofli.com/geotargeting-101/). This practice allows
 websites to serve specific content to visitors based on their geographic
 location - usually their country, state, or city via their IP address.
@@ -53,10 +53,10 @@ location - usually their country, state, or city via their IP address.
 GeoFli first reviews the IP address of each visitor. They then do a lookup of
 that IP address in the GeoIP2 City database in order to determine the visitor’s
 approximate location. “It’s about delivering the most important, useful content
-to them at the exact moment they are on a site,” said Taylor McDermott, GeoFli’s
+to them at the exact moment they are on a site,” said Taylor McDermott, GeoFli's
 online strategist.
 
-GeoFli’s user interface (UI) features a very simple
+GeoFli's user interface (UI) features a very simple
 [point-and-click layout](https://geofli.com/support/getting-started). Customers
 select a geographical radius they would like to target through one of three
 options: Location Library (pre-defined regions), Radius Targeting (a numerical

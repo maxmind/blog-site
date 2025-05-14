@@ -52,7 +52,7 @@ Right away we notice a problem — this data has something that looks like an IP
 but has a slash and an extra number at the end. This is an _IP network_
 represented in
 [_CIDR_](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
-and itrepresents a range of IPs. It’s composed of an IP, a slash, and a number
+and it represents a range of IPs. It’s composed of an IP, a slash, and a number
 after the slash called a _subnet mask_. It’s like how you might describe a
 street of physical addresses in New York City by saying “The 500 block of west
 23rd street.”
@@ -133,6 +133,9 @@ IGNOREHEADER AS 1
 
 Now let’s write a function to convert IPs to really big numbers. Here’s a simple
 one written in SQL. We will call it `inet_aton` after the Linux utility that
+
+<!-- cspell:ignore ddress -->
+
 does the same thing. “inet” stands for “internet” and “aton” means “**A**ddress
 **TO** **N**umber”. Linux folks like to keep things short and sweet.
 

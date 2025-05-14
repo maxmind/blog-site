@@ -181,7 +181,7 @@ addresses (/28) whereas Jane will only connect from one (/32).
 
 ### Step 3
 
-Open a filehandle and the write the database to disk.
+Open a file handle and the write the database to disk.
 
 ```perl
 open my $fh, '>:raw', 'my-vpn.mmdb';
@@ -475,7 +475,7 @@ my $tree = MaxMind::DB::Writer::Tree->new(
     map_key_type_callback => sub { $types{ $_[0] } },
 
     # let the writer handle merges of IP ranges. if we don't set this then the
-    # default behaviour is for the last network to clobber any overlapping
+    # default behavior is for the last network to clobber any overlapping
     # ranges.
     merge_record_collisions => 1,
 
@@ -750,10 +750,10 @@ If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
 
 ### Insert Order, Merging and Overwriting
 
-It's important to understand `MaxMind::DB::Writer`'s configurable behaviour for
+It's important to understand `MaxMind::DB::Writer`'s configurable behavior for
 inserting ranges. Please see our documentation on
 [Insert Order, Merging and Overwriting](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting)
-so that you can choose the correct behaviour for any overlapping IP ranges you
+so that you can choose the correct behavior for any overlapping IP ranges you
 may come across when writing your own database files.
 
 ## Taking This Further
