@@ -8,7 +8,6 @@ category:
 tag:
   - "Fraud Screening"
   - "Data Privacy"
-  - "Security"
 authors:
   - "Andra Mircioiu"
 ---

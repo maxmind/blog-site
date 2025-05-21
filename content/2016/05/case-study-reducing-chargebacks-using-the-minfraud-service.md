@@ -6,7 +6,7 @@ category:
 tag:
   - "Anonymizer and Proxy Detection"
   - "Case Studies"
-  - "Ecommerce"
+  - "Ecommerce fraud detection"
   - "Risk Scoring"
 authors:
   - "the team at MaxMind"

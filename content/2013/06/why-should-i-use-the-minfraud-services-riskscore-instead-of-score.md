@@ -2,7 +2,7 @@
 title: "Why Should I Use the minFraud Service's ‘riskScore’ Instead of ‘score’?"
 date: "2013-06-04"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
   - "Risk Scoring"
 authors:

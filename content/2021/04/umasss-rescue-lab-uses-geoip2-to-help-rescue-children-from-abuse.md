@@ -1,12 +1,11 @@
 ---
-title: "UMass’s Rescue Lab uses GeoIP2 to Help Rescue Children from Abuse"
+title: "UMass’s Rescue Lab uses GeoIP to help rescue children from abuse"
 date: "2021-04-05"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
 tag:
-  - "Case Study"
-  - "Cybersecurity"
-  - "IP Geolocation Accuracy"
+  - "Case studies"
+  - "IP geolocation accuracy"
 authors:
   - "Christopher Luna"
 ---

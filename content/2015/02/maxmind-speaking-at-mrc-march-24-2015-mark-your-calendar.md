@@ -4,8 +4,8 @@ date: "2015-02-20"
 category:
   - "Online Fraud Detection"
 tag:
-  - "Ecommerce"
-  - "Financial Services"
+  - "Ecommerce fraud detection"
+  - "News"
   - "Manual Review"
 authors:
   - "the team at MaxMind"

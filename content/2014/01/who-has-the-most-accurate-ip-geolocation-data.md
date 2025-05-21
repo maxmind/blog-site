@@ -2,9 +2,9 @@
 title: "Who Has the Most Accurate IP Geolocation Data?"
 date: "2014-01-31"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
 tag:
-  - "IP Geolocation Accuracy"
+  - "IP geolocation accuracy"
 authors:
   - "the team at MaxMind"
 ---

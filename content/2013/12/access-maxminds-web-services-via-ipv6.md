@@ -2,10 +2,11 @@
 title: "Access MaxMind's data services via IPv6"
 date: "2013-12-12"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "Product Updates"
-  - "IP Network Data"
+  - "Product updates"
+  - "IP network data"
 authors:
   - "the team at MaxMind"
 ---

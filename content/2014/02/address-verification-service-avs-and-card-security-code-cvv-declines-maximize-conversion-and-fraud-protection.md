@@ -2,10 +2,10 @@
 title: '"AVS" and "CVV" Declines - Maximize Conversion AND Fraud Protection'
 date: "2014-02-14"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Credit Card Fraud"
-  - "Ecommerce"
+  - "Credit card fraud"
+  - "Ecommerce fraud detection"
 authors:
   - "the team at MaxMind"
 ---

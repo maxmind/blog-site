@@ -2,11 +2,10 @@
 title: "Building Your Own MMDB Database for Fun and Profit"
 date: "2015-09-29"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
 tag:
-  - "Cybersecurity"
-  - "IP Network Data"
-  - "Technical Tutorials"
+  - "IP network data"
+  - "Technical tutorials"
 authors:
   - "Olaf Alders"
 ---
