@@ -2,9 +2,10 @@
 title: "MaxMind Speaking at MRC. March 20, 2014 - Mark Your Calendar!"
 date: "2014-01-17"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Anonymizer and proxy detection"
+
 tag:
-  - "Anonymizer and Proxy Detection"
   - "Ecommerce fraud detection"
 authors:
   - "the team at MaxMind"

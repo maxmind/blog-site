@@ -9,10 +9,7 @@ category:
   - "Fraud and risk"
 tag:
   - "Ecommerce fraud detection"
-  - "Credit Card Fraud"
-  - "Fraud Detection"
-  - "Fraud Prevention"
-  - "Ecommerce Fraud Detection"
+  - "Credit card fraud"
 authors:
   - "Andra Mircioiu"
 ---

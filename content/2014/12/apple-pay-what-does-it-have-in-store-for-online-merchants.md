@@ -2,9 +2,9 @@
 title: "Apple Pay: What Does It Have in Store for Online Merchants?"
 date: "2014-12-02"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Credit Card Fraud"
+  - "Credit card fraud"
   - "Ecommerce fraud detection"
 authors:
   - "the team at MaxMind"
