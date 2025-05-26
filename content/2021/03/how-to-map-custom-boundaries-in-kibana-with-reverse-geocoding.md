@@ -2,7 +2,7 @@
 title: "How to map custom boundaries in Kibana with reverse geocoding"
 date: "2021-03-03"
 category:
-  - "IP intellingence"
+  - "IP intelligence"
   - "Case studies"
   - "Tutorials"
 tag:
