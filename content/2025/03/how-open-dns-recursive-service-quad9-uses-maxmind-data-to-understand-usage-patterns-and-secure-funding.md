@@ -10,7 +10,7 @@ date: "2025-03-26"
 images:
   - /images/2025/03/quad9.png
 category:
-  - "IP geolocation and network data"
+  - "IP intelligence"
   - "Case studies"
 tag:
   - "Case studies"
