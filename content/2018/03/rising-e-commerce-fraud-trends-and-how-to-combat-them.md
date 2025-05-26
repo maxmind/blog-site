@@ -2,12 +2,12 @@
 title: "Rising E-Commerce Fraud Trends and How to Combat Them"
 date: "2018-03-22"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Credit Card Fraud"
-  - "Ecommerce"
-  - "Risk Data"
-  - "Risk Scoring"
+  - "Credit card fraud"
+  - "Ecommerce fraud detection"
+  - "Risk data"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

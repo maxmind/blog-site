@@ -2,10 +2,11 @@
 title: "GeoLite2 Web Service: Free IP Geolocation API"
 date: "2020-12-15"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "GeoLite Free IP Geolocation"
-  - "Product Updates"
+  - "GeoLite free IP geolocation"
+  - "Product updates"
 authors:
   - "Miguel Atienza"
 ---

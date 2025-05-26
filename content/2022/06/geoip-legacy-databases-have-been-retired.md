@@ -4,10 +4,10 @@ date: "2022-06-01"
 images:
   - /images/2022/06/geoip-legacy-retirement.png
 category:
-  - "Company Updates"
-  - "IP Geolocation and Network Data"
+  - "News"
+  - "IP intelligence"
 tag:
-  - "Product Updates"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

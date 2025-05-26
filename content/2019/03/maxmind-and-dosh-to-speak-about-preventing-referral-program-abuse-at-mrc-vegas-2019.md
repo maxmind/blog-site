@@ -1,13 +1,14 @@
 ---
 title:
-  "MaxMind and Dosh to Speak About Preventing Referral Program Abuse at MRC
+  "MaxMind and Dosh to speak about preventing referral program abuse at MRC
   Vegas 2019"
 date: "2019-03-06"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Affiliate Program Abuse"
-  - "Manual Review"
+  - "News"
+  - "Manual review"
 authors:
   - "Miguel Atienza"
 ---

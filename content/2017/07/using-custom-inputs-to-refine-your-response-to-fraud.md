@@ -2,11 +2,12 @@
 title: "Using Custom Inputs to Refine Your Response to Fraud"
 date: "2017-07-13"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Manual Review"
-  - "Product Updates"
-  - "Risk Data"
+  - "Manual review"
+  - "Product updates"
+  - "Risk data"
 authors:
   - "the team at MaxMind"
 ---

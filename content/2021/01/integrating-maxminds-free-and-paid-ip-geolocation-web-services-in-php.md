@@ -3,10 +3,11 @@ title:
   "Integrating MaxMind's Free and Paid IP Geolocation Web Services (in PHP)"
 date: "2021-01-11"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Tutorials"
 tag:
-  - "GeoLite Free IP Geolocation"
-  - "Technical Tutorials"
+  - "GeoLite free IP geolocation"
+  - "Technical tutorials"
 authors:
   - "Narsimham Chelluri"
 ---

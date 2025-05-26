@@ -2,11 +2,12 @@
 title: "Significant Changes to Accessing and Using GeoLite2 Databases"
 date: "2019-12-18"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "Data Privacy"
-  - "GeoLite Free IP Geolocation"
-  - "Product Updates"
+  - "Data privacy"
+  - "GeoLite free IP geolocation"
+  - "Product updates"
 authors:
   - "Miguel Atienza"
 ---

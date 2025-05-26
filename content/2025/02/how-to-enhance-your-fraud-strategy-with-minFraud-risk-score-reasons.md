@@ -5,12 +5,12 @@ date: "2025-02-19"
 images:
   - /images/2025/02/risk-score-reasons.webp
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Product Updates"
-  - "Risk Scoring"
-  - "Risk Score Reasons"
-  - "minFraud"
+  - "Product updates"
+  - "Risk scoring"
+  - "Risk data"
 authors:
   - "Miguel Atienza"
 ---

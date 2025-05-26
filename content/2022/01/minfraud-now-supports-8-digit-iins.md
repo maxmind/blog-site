@@ -4,10 +4,11 @@ date: "2022-01-31"
 images:
   - /images/minfraud.svg
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Credit Card Fraud"
-  - "Product Updates"
+  - "Credit card fraud"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

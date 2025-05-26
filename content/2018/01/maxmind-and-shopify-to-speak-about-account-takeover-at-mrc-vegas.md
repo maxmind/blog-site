@@ -2,11 +2,12 @@
 title: "MaxMind and Shopify to Speak About Account Takeover at MRC Vegas"
 date: "2018-01-24"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Account Takeover"
-  - "Ecommerce"
-  - "Risk Data"
+  - "Account takeover"
+  - "Ecommerce fraud detection"
+  - "Risk data"
 authors:
   - "the team at MaxMind"
 ---

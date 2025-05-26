@@ -4,13 +4,14 @@ date: "2022-03-15"
 images:
   - /images/2022/03/consumer-privacy-networks.svg
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Anonymizer and proxy detection"
+  - "News"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Data Privacy"
-  - "Geofiltering and Geofencing"
-  - "IP Network Data"
-  - "Product Updates"
+  - "Data privacy"
+  - "Geofiltering and geofencing"
+  - "IP network data"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

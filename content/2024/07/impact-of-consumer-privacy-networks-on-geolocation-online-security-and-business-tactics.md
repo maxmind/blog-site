@@ -6,13 +6,13 @@ date: "2024-07-03"
 images:
   - /images/2024/07/cpn_blog_post.jpg
 category:
-  - "Online Fraud Detection"
-  - "IP Geolocation and Network Data"
+  - "Fraud and risk"
+  - "IP intelligence"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Data Privacy"
-  - "Geofiltering and Geofencing"
-  - "IP Network Data"
+  - "Data privacy"
+  - "Geofiltering and geofencing"
+  - "IP network data"
 authors:
   - "Christopher Luna"
 ---

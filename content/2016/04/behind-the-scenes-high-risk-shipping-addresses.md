@@ -2,10 +2,10 @@
 title: "Behind the Scenes: High Risk Shipping Addresses"
 date: "2016-04-04"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Ecommerce"
-  - "Risk Data"
+  - "Ecommerce fraud detection"
+  - "Risk data"
 authors:
   - "Miguel Atienza"
 ---

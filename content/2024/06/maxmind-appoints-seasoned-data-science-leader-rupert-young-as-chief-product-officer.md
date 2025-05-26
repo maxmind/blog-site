@@ -6,11 +6,9 @@ date: "2024-06-11"
 images:
   - /images/2024/06/cpo-announcement.jpg
 category:
-  - "Company Updates"
+  - "News"
 tag:
   - "News"
-  - "MaxMind Team"
-  - "Hiring Announcement"
 authors:
   - "the team at MaxMind"
 ---

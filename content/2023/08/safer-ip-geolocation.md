@@ -4,11 +4,10 @@ date: "2023-08-09"
 images:
   - /images/2023/08/safe-coordinates-v2.png
 category:
-  - "Company Updates"
+  - "News"
 tag:
-  - "Cyber Security"
-  - "Data Privacy"
-  - "Product Updates"
+  - "Data privacy"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

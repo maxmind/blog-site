@@ -4,11 +4,12 @@ title:
   Databases"
 date: "2018-04-11"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "GeoLite Free IP Geolocation"
-  - "IP Geolocation Accuracy"
-  - "Product Updates"
+  - "GeoLite free IP geolocation"
+  - "IP geolocation accuracy"
+  - "Product updates"
 authors:
   - "the team at MaxMind"
 ---

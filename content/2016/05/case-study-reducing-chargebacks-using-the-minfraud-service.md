@@ -2,12 +2,13 @@
 title: "Case Study: Reducing Chargebacks Using the minFraud Service"
 date: "2016-05-04"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Case studies"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Case Studies"
-  - "Ecommerce"
-  - "Risk Scoring"
+  - "Case studies"
+  - "Ecommerce fraud detection"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

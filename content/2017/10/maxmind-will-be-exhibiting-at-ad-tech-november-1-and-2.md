@@ -2,11 +2,13 @@
 title: "MaxMind Will Be Exhibiting at ad:tech November 1 and 2"
 date: "2017-10-09"
 category:
-  - "IP Geolocation and Network Data"
-  - "Online Fraud Detection"
-tag:
+  - "IP intelligence"
+  - "Fraud and risk"
   - "Anonymizer and Proxy Detection"
-  - "Geofiltering and Geofencing"
+  - "News"
+tag:
+  - "Geofiltering and geofencing"
+  - "News"
 authors:
   - "the team at MaxMind"
 ---

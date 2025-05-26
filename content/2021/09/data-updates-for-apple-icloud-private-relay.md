@@ -4,12 +4,14 @@ date: "2021-09-09"
 images:
   - /images/2021/09/apple-relay.svg
 category:
-  - "IP Geolocation and Network Data"
-  - "Online Fraud Detection"
+  - "IP intelligence"
+  - "Fraud and risk"
+  - "Anonymizer and proxy detection"
+  - "News"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "IP Network Data"
-  - "Product Updates"
+  - "Data privacy"
+  - "IP network data"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

@@ -2,9 +2,9 @@
 title: "How a Risk Score Saves You Time and Money"
 date: "2015-05-27"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Risk Scoring"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

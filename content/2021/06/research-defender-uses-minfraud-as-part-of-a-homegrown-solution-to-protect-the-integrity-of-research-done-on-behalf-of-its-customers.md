@@ -4,10 +4,11 @@ title:
   the integrity of research done on behalf of its customers."
 date: "2021-06-28"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Case studies"
 tag:
-  - "Case Studies"
-  - "Risk Scoring"
+  - "Case studies"
+  - "Risk scoring"
 authors:
   - "Christopher Luna"
 ---
