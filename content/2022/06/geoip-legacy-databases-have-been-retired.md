@@ -5,7 +5,7 @@ images:
   - /images/2022/06/geoip-legacy-retirement.png
 category:
   - "News"
-  - "IP geolocation and network data"
+  - "IP intelligence"
 tag:
   - "Product updates"
 authors:
