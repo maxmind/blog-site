@@ -4,11 +4,11 @@ date: "2023-04-26"
 images:
   - /images/2023/04/email-2fa.png
 category:
-  - "Company Updates"
+  - "News"
 tag:
-  - "Account Takeover"
-  - "Data Privacy"
-  - "Product Updates"
+  - "Account takeover"
+  - "Data privacy"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

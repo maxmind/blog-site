@@ -2,9 +2,10 @@
 title: "Changes to Database Access for Expired Subscriptions"
 date: "2021-01-18"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "Product Updates"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

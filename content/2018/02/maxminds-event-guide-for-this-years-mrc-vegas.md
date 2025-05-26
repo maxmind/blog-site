@@ -2,12 +2,12 @@
 title: "MaxMind's Event Guide for This Year's MRC Vegas"
 date: "2018-02-28"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Account Takeover"
+  - "Account takeover"
   - "Ecommerce fraud detection"
-  - "Manual Review"
-  - "Risk Data"
+  - "Manual review"
+  - "Risk data"
 authors:
   - "the team at MaxMind"
 ---

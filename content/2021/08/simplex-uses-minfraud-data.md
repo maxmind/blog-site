@@ -4,11 +4,12 @@ title:
   cryptocurrency fraud patterns in real time"
 date: "2021-08-12"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Case studies"
 tag:
-  - "Case Studies"
-  - "Risk Data"
-  - "Risk Scoring"
+  - "Case studies"
+  - "Risk data"
+  - "Risk scoring"
 authors:
   - "Christopher Luna"
 ---

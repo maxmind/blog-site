@@ -2,11 +2,11 @@
 title: "How to Protect Your Streaming Content from VPN & Proxy Traffic"
 date: "2015-10-29"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Digital Rights Management"
-  - "Geofiltering and Geofencing"
+  - "Digital rights management"
+  - "Geofiltering and geofencing"
 authors:
   - "the team at MaxMind"
 ---

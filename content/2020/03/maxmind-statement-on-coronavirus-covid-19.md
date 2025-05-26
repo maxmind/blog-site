@@ -2,7 +2,9 @@
 title: "MaxMind Statement on Coronavirus (COVID-19)"
 date: "2020-03-20"
 category:
-  - "Company Updates"
+  - "News"
+tag:
+  - "News"
 authors:
   - "Miguel Atienza"
 ---

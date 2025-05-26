@@ -3,10 +3,10 @@ title:
   "Manual Review Best Practices: What’s the Value of Assessing IP Address Risk?"
 date: "2015-07-29"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "Risk Scoring"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

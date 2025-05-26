@@ -3,10 +3,10 @@ title:
   "Manual Review Best Practices: Get More Data for a More Informed Decision"
 date: "2015-08-31"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Risk Data"
-  - "Risk Scoring"
+  - "Risk data"
+  - "Risk scoring"
 authors:
   - "the team at MaxMind"
 ---

@@ -2,11 +2,11 @@
 title: "E-commerce Fraud 101: Account Takeover"
 date: "2017-08-16"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Account Takeover"
+  - "Account takeover"
   - "Ecommerce fraud detection"
-  - "Manual Review"
+  - "Manual review"
 authors:
   - "Miguel Atienza"
 ---

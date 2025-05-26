@@ -4,8 +4,9 @@ date: "2022-12-15"
 images:
   - /images/2022/12/new-maxmind-logo-white.png
 category:
-  - "Company Updates"
+  - "News"
 tag:
+  - "News"
 authors:
   - "Christopher Luna"
 ---

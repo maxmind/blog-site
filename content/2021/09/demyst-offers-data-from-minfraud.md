@@ -6,10 +6,11 @@ date: "2021-09-07"
 images:
   - /images/2021/09/demyst.svg
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Case studies"
 tag:
-  - "Case Studies"
-  - "Risk Scoring"
+  - "Case studies"
+  - "Risk scoring"
 authors:
   - "Christopher Luna"
 ---

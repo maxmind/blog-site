@@ -3,11 +3,12 @@ title:
   "Going Local: How MaxMind Helps GeoFli’s Customers’ Conversion Rates Soar"
 date: "2018-01-02"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Case studies"
 tag:
-  - "Case Studies"
+  - "Case studies"
   - "Ecommerce fraud detection"
-  - "Geofiltering and Geofencing"
+  - "Geofiltering and geofencing"
 authors:
   - "the team at MaxMind"
 ---

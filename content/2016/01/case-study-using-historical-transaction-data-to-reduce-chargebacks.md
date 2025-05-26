@@ -2,10 +2,12 @@
 title: "Case Study: Using Historical Transaction Data to Reduce Chargebacks"
 date: "2016-01-04"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Case studies"
 tag:
-  - "Manual Review"
-  - "Risk Data"
+  - "Manual review"
+  - "Risk data"
+  - "Case studies"
 authors:
   - "Miguel Atienza"
 ---

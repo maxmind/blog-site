@@ -4,11 +4,12 @@ title:
   minFraud response, “test” disposition for custom rules"
 date: "2021-09-03"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Credit Card Fraud"
-  - "Manual Review"
-  - "Product Updates"
+  - "Credit card fraud"
+  - "Manual review"
+  - "Product updates"
 authors:
   - "Christopher Luna"
 ---

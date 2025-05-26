@@ -2,11 +2,11 @@
 title: "Enriching MMDB files with your own data using Go"
 date: "2020-09-01"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "IP Network Data"
-  - "Technical Tutorials"
+  - "IP network data"
+  - "Technical tutorials"
 authors:
   - "Narsimham Chelluri"
 ---

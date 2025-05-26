@@ -2,9 +2,10 @@
 title: "Proxy Detection - Why Fraudsters Give Proxies a Bad Name"
 date: "2015-01-23"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
+  - "Data privacy"
   - "Risk scoring"
 authors:
   - "the team at MaxMind"

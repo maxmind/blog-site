@@ -4,9 +4,10 @@ title:
   MySQL"
 date: "2021-07-15"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Tutorials"
 tag:
-  - "Technical Tutorials"
+  - "Technical tutorials"
 authors:
   - "Christopher Luna"
 ---

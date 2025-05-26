@@ -2,10 +2,11 @@
 title: "Discontinuation of the GeoLite Legacy Databases"
 date: "2018-01-02"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "GeoLite Free IP Geolocation"
-  - "Product Updates"
+  - "GeoLite free IP geolocation"
+  - "Product updates"
 authors:
   - "the team at MaxMind"
 ---

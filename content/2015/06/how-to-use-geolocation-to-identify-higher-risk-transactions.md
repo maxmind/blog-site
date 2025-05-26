@@ -2,9 +2,9 @@
 title: "How to Use Geolocation to Identify Higher Risk Transactions"
 date: "2015-06-26"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
 tag:
-  - "Manual Review"
+  - "Manual review"
 authors:
   - "the team at MaxMind"
 ---

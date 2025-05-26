@@ -4,9 +4,9 @@ title:
   Legacy minFraud SOAP API"
 date: "2019-04-12"
 category:
-  - "Online Fraud Detection"
+  - "News"
 tag:
-  - "Product Updates"
+  - "Product updates"
 authors:
   - "Miguel Atienza"
 ---

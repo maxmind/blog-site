@@ -2,9 +2,13 @@
 title: "What Are minFraud Alerts And What Do I Do With Them?"
 date: "2021-05-12"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
-  - "Product Updates"
+  - "Product updates"
+  - "Risk scoring"
+  - "Risk data"
+  - "Fraud prevention"
 authors:
   - "Miguel Atienza"
 ---

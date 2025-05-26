@@ -2,11 +2,13 @@
 title: "How to map custom boundaries in Kibana with reverse geocoding"
 date: "2021-03-03"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intellingence"
+  - "Case studies"
+  - "Tutorials"
 tag:
-  - "Case Studies"
-  - "Geofiltering and Geofencing"
-  - "Technical Tutorials"
+  - "Case studies"
+  - "Geofiltering and geofencing"
+  - "Technical tutorials"
 authors:
   - "Thomas Neirnyck"
 ---

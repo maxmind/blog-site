@@ -2,9 +2,10 @@
 title: "Retirement of GeoIP Legacy Downloadable Databases in May 2022"
 date: "2020-06-01"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "News"
 tag:
-  - "Product Updates"
+  - "Product updates"
 authors:
   - "Miguel Atienza"
 ---

@@ -2,7 +2,9 @@
 title: "MaxMind Announces Corporate Giving Program"
 date: "2015-03-26"
 category:
-  - "Company Updates"
+  - "News"
+tag:
+  - "News"
 authors:
   - "the team at MaxMind"
 ---

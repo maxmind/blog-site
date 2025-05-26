@@ -2,7 +2,8 @@
 title: "MaxMind Speaking at MRC. March 24, 2015 – Mark Your Calendar!"
 date: "2015-02-20"
 category:
-  - "Online Fraud Detection"
+  - "Fraud and risk"
+  - "News"
 tag:
   - "Ecommerce fraud detection"
   - "News"

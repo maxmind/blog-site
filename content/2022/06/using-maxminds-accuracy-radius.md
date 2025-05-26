@@ -4,13 +4,14 @@ date: "2022-06-06"
 images:
   - /images/2022/06/accuracy-radius.png
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Tutorials"
 tag:
-  - "Data Privacy"
+  - "Data privacy"
   - "Ecommerce fraud detection"
-  - "Geofiltering and Geofencing"
-  - "IP Geolocation Accuracy"
-  - "Technical Tutorials"
+  - "Geofiltering and geofencing"
+  - "IP geolocation accuracy"
+  - "Technical tutorials"
 authors:
   - "Christopher Luna"
 ---

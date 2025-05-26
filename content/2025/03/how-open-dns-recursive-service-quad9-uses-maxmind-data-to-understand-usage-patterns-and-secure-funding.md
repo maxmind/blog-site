@@ -10,12 +10,13 @@ date: "2025-03-26"
 images:
   - /images/2025/03/quad9.png
 category:
-  - "IP Geolocation and Network Data"
+  - "IP geolocation and network data"
+  - "Case studies"
 tag:
-  - "Case Studies"
-  - "IP Geolocation Accuracy"
+  - "Case studies"
+  - "IP geolocation accuracy"
   - "IP network data"
-  - "Data Privacy"
+  - "Data privacy"
 authors:
   - "Christopher Luna"
 ---

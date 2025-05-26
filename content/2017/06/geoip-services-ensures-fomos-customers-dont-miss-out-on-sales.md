@@ -2,11 +2,12 @@
 title: "GeoIP Services Ensure Fomo’s Customers Don’t “Miss Out” on Sales"
 date: "2017-06-05"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Case studies"
 tag:
-  - "Case Studies"
+  - "Case studies"
   - "Ecommerce fraud detection"
-  - "Geofiltering and Geofencing"
+  - "Geofiltering and geofencing"
 authors:
   - "the team at MaxMind"
 ---

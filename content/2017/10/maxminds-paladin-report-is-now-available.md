@@ -2,11 +2,11 @@
 title: "MaxMind's Paladin Report Is Now Available"
 date: "2017-10-09"
 category:
-  - "Company Updates"
-  - "IP Geolocation and Network Data"
-  - "Online Fraud Detection"
+  - "News"
+  - "IP intelligence"
+  - "Fraud and risk"
 tag:
-  - "Product Updates"
+  - "News"
 authors:
   - "the team at MaxMind"
 ---

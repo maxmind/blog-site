@@ -2,10 +2,11 @@
 title: "Types of Anonymous IPs and How They Affect Your Business"
 date: "2019-01-24"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "IP Network Data"
+  - "IP network data"
+  - "Data privacy"
 authors:
   - "Miguel Atienza"
 ---

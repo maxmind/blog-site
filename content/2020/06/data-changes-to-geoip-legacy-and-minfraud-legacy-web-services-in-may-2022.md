@@ -3,11 +3,11 @@ title:
   "Data Changes to GeoIP Legacy and minFraud Legacy Web Services in May 2022"
 date: "2020-06-15"
 category:
-  - "Company Updates"
-  - "IP Geolocation and Network Data"
-  - "Online Fraud Detection"
+  - "News"
+  - "IP intelligence"
+  - "Fraud and risk"
 tag:
-  - "Product Updates"
+  - "Product updates"
 authors:
   - "Miguel Atienza"
 ---

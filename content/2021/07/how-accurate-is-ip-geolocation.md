@@ -4,10 +4,10 @@ date: "2021-07-01"
 images:
   - /images/2021/07/marker.svg
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
 tag:
-  - "IP Geolocation Accuracy"
-  - "IP Network Data"
+  - "IP geolocation accuracy"
+  - "IP network data"
 authors:
   - "Christopher Luna"
 ---

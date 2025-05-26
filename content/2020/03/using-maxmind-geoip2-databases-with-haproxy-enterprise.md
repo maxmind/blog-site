@@ -2,11 +2,12 @@
 title: "Using MaxMind GeoIP2 Databases with HAProxy Enterprise"
 date: "2020-03-02"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
+  - "Case studies"
 tag:
-  - "Case Studies"
-  - "Geofiltering and Geofencing"
-  - "Technical Tutorials"
+  - "Case studies"
+  - "Geofiltering and geofencing"
+  - "Technical tutorials"
 authors:
   - "Miguel Atienza"
 ---

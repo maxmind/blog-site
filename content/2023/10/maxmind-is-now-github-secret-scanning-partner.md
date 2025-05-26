@@ -4,10 +4,11 @@ date: "2023-10-30"
 images:
   - /images/2023/10/maxmind-is-now-github-secret-scanning-partner.png
 category:
-  - "Company Updates"
+  - "News"
 tag:
-  - "Fraud Screening"
-  - "Data Privacy"
+  - "Fraud screening"
+  - "Data privacy"
+  - "Product updates"
 authors:
   - "Andra Mircioiu"
 ---

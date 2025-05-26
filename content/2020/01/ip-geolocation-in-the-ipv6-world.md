@@ -2,10 +2,10 @@
 title: "IP Geolocation in the IPv6 World"
 date: "2020-01-22"
 category:
-  - "IP Geolocation and Network Data"
+  - "IP intelligence"
 tag:
-  - "IP Geolocation Accuracy"
-  - "IP Network Data"
+  - "IP geolocation accuracy"
+  - "IP network data"
 authors:
   - "Miguel Atienza"
 ---

@@ -4,12 +4,12 @@ title:
   review"
 date: "2016-03-04"
 category:
-  - "IP Geolocation and Network Data"
-  - "Online Fraud Detection"
+  - "IP intelligence"
+  - "Fraud and risk"
+  - "Anonymizer and proxy detection"
 tag:
-  - "Anonymizer and Proxy Detection"
-  - "IP Network Data"
-  - "Risk Scoring"
+  - "IP network data"
+  - "Risk scoring"
 authors:
   - "Miguel Atienza"
 ---

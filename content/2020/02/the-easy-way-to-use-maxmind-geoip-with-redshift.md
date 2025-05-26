@@ -2,11 +2,12 @@
 title: "The Easy Way to Use MaxMind GeoIP with Redshift"
 date: "2020-02-13"
 category:
-  - "IP Geolocation and Network Data"
-tag:
+  - "IP intelligence"
   - "Case Studies"
-  - "Geofiltering and Geofencing"
-  - "Technical Tutorials"
+tag:
+  - "Geofiltering and geofencing"
+  - "Technical tutorials"
+  - "Case studies"
 authors:
   - "Miguel Atienza"
 ---

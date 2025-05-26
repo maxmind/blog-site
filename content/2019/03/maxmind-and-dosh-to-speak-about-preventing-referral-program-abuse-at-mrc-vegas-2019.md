@@ -8,7 +8,7 @@ category:
   - "News"
 tag:
   - "News"
-  - "Manual Review"
+  - "Manual review"
 authors:
   - "Miguel Atienza"
 ---
