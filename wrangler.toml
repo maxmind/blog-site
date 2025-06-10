@@ -5,10 +5,10 @@ compatibility_date = "2025-04-02"
 [vars]
 BUILD_ENV = "preview"
 HUGO_BUILD_TAGS = "extended"
-HUGO_VERSION = "0.145.0"
+HUGO_VERSION = "0.147.8"
 
 [env.production.vars]
 BUILD_ENV = "production"
 CF_PAGES_URL = "https://blog.maxmind.com/"
 HUGO_BUILD_TAGS = "extended"
-HUGO_VERSION = "0.145.0"
+HUGO_VERSION = "0.147.8"
