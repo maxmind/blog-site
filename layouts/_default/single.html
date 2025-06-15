@@ -1,41 +1,51 @@
 {{ define "main" }}
-  <article class="article">
-    <div class="article__container">
-        <div class="blog-post__categories">
-          {{ range .Params.category }}
-            <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
-          {{ end }}
-        </div>
-      <h1 class="blog-post__heading">
-        {{ with .Params.Heading }}
-          {{ . }}
-        {{ else }}
-          {{ .Title }}
-        {{ end }}
-      </h1>
-      <div class="blog-post__published">
-        <div class="blog-post__authors">
-          <div class="authors__by">
-            by
+<div class="page__wrapper">
+  <div class="page__article">
+    <article class="article">
+      <div class="article__container">
+          <div class="blog-post__categories">
+            {{ range .Params.category }}
+              <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
+            {{ end }}
           </div>
-          {{ range .Params.authors }}
-            <div class="blog-post__author">{{ . }}</div>
+        <h1 class="blog-post__heading">
+          {{ with .Params.Heading }}
+            {{ . }}
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h1>
+        <div class="blog-post__published">
+          <div class="blog-post__authors">
+            <div class="authors__by">
+              by
+            </div>
+            {{ range .Params.authors }}
+              <div class="blog-post__author">{{ . }}</div>
+            {{ end }}
+          </div>
+          <div class="blog-post__date">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+          </div>
+        </div>
+        <div class="blog-post__content">
+          <img src="/images/2025/03/sample.webp" alt="Example image" class="landscape-image">
+          <!--<img src="/images/2025/03/sample2.jpg" alt="Example image" class="landscape-image">-->
+          {{ .Content }}
+        </div>
+        <div class="blog-post__tags">
+          {{ range .Params.tag }}
+            <a href="/tag/{{ . | urlize }}">{{ . }}</a>
           {{ end }}
         </div>
-        <div class="blog-post__date">
-          <time>{{ .Date.Format "January 2, 2006" }}</time>
-        </div>
       </div>
-      <div class="blog-post__content">
-        {{ .Content }}
-      </div>
-      <div class="blog-post__tags">
-        {{ range .Params.tag }}
-          <a href="/tag/{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-      </div>
-    </div>
-    <hr>
+      <hr>
+    </article>
+  </div>
+  <div class="page__sidebar">
+    {{ partial "related-posts" . }}
+  </div>
     {{ partial "post-pagination" . }}
-  </article>
+
+</div>
 {{ end }}
