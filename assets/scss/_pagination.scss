@@ -6,7 +6,7 @@
   grid-area: arrow;
 }
 
-.pagination__footer {
+.pagination__nav {
   display: grid;
   gap: var(--mm-spacing);
   grid-template-areas: 'newer older';
@@ -71,8 +71,8 @@
   width: 100%;
 }
 
-.pagination__post {
-  .pagination__footer {
+.pagination__footer {
+  .pagination__nav {
     grid-template-areas:
       'newer'
       'older';
@@ -92,8 +92,8 @@
 }
 
 @include variables.breakpoint('md') {
-  .pagination__post {
-    .pagination__footer {
+  .pagination__footer {
+    .pagination__nav {
       grid-template-areas: 'newer older';
       grid-template-columns: 1fr 1fr;
     }
