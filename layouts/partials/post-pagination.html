@@ -1,5 +1,5 @@
-<div class="pagination__post">
-  <footer class="pagination__footer">
+<footer class="pagination__footer" data-nosnippet>
+  <nav class="pagination__nav">
     {{ with .Next }}
       <a class="pagination__newer" href="{{ .RelPermalink }}">
         <div class="pagination__arrow">
@@ -28,5 +28,5 @@
         </div>
       </a>
     {{ end }}
-  </footer>
- </div>
+  </nav>
+ </footer>
