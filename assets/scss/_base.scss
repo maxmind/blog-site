@@ -134,17 +134,22 @@ li::marker {
 
 blockquote {
   color: var(--mm-color-primary-text);
-  padding: var(--mm-spacing);
+  margin: 0 0 calc(var(--mm-spacing) / 2);
+  padding: calc(var(--mm-spacing) / 2);
   position: relative;
   z-index: 3;
 
   p {
     font-family: var(--mm-font-stack-display);
-    font-size: 20px;
+    font-size: 17px;
     font-style: italic;
     font-weight: 500;
     line-height: 1.5em;
     text-align: center;
+
+    @include variables.breakpoint('sm') {
+      font-size: 20px;
+    }
   }
 
   > p:first-of-type {

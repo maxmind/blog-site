@@ -37,3 +37,19 @@ titleCaseStyle = 'none'
     noHl = false
     style = 'monokai'
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[related]
+  includeNewer = true
+  threshold = 85
+  toLower = false
+
+  [[related.indices]]
+  name = "tag"
+  weight = 10
+
+  [[related.indices]]
+  name = "date"
+  weight = 10
