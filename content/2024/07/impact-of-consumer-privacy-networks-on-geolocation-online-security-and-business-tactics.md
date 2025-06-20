@@ -3,8 +3,8 @@ title:
   "The impact of consumer privacy networks on geolocation, online security, and
   business tactics"
 date: "2024-07-03"
-images:
-  - /images/2024/07/cpn_blog_post.jpg
+headerImage:
+  - /images/2024/07/cpn_blog_post.png
 category:
   - "Fraud and risk"
   - "IP intelligence"
@@ -15,6 +15,7 @@ tag:
   - "IP network data"
 authors:
   - "Christopher Luna"
+popular: true
 ---
 
 In response to a growing appetite for privacy and security on the internet,

@@ -3,14 +3,15 @@ title:
   "MaxMind appoints seasoned data science leader Rupert Young as Chief Product
   Officer"
 date: "2024-06-11"
-images:
-  - /images/2024/06/cpo-announcement.jpg
+headerImage:
+  - /images/2024/06/cpo-announcement.png
 category:
   - "News"
 tag:
   - "News"
 authors:
   - "the team at MaxMind"
+popular: true
 ---
 
 Rupert Young’s cross-disciplinary career in machine learning, fraud and
