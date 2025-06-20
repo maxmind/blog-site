@@ -10,6 +10,7 @@ tag:
   - "Product updates"
 authors:
   - "Christopher Luna"
+popular: true
 ---
 
 People who understand the inherent limitation on precision for IP geolocation

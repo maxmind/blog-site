@@ -1,0 +1,33 @@
+.cta-square {
+  background-color: var(--mm-color-light-blue);
+  border-radius: 5px;
+  display: grid;
+  padding: var(--mm-spacing);
+}
+
+.cta-square__image {
+  height: 100px;
+  margin: 0 0 calc(var(--mm-spacing) / 2);
+  width: auto;
+}
+
+.cta-square__heading {
+  color: var(--mm-color-dark-blue);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.cta-square__description {
+  color: var(--mm-color-dark-blue);
+}
+
+.cta-square__btn {
+  background-color: var(--mm-color-geoip);
+  border: 1px solid var(--mm-color-geoip);
+  border-radius: 5px;
+  font-family: var(--mm-font-stack-default);
+  font-size: 19px;
+  font-weight: 500;
+  padding: 6px 12px;
+  width: max-content;  /* stylelint-disable-line */
+}

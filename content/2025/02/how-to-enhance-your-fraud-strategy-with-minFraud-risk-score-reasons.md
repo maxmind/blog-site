@@ -2,7 +2,7 @@
 title: "Enhance your fraud strategy with risk score reasons | MaxMind"
 heading: "How to enhance your fraud strategy with minFraud risk score reasons"
 date: "2025-02-19"
-images:
+headerImage:
   - /images/2025/02/risk-score-reasons.webp
 category:
   - "Fraud and risk"
@@ -13,6 +13,7 @@ tag:
   - "Risk data"
 authors:
   - "Miguel Atienza"
+popular: true
 ---
 
 Fraud has always been a covert war between cybercriminals and fraud teams.

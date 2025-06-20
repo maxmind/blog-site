@@ -7,8 +7,8 @@ description:
   "DNS recursive service Quad9 uses MaxMind data to understand usage patterns
   and secure funding. Read our blog post for more details/inspiration."
 date: "2025-03-26"
-images:
-  - /images/2025/03/quad9.png
+headerImage:
+  - /images/2025/03/quad9.webp
 category:
   - "IP intelligence"
   - "Case studies"
@@ -19,6 +19,7 @@ tag:
   - "Data privacy"
 authors:
   - "Christopher Luna"
+popular: true
 ---
 
 [Quad9](https://quad9.net/) is a free recursive DNS (domain name server) that

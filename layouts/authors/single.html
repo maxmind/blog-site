@@ -1,17 +1,20 @@
 {{ define "main" }}
-    <div class="author-bio article__container">
-      <h1>Posts by {{ .Title }}</h1>
-      <p>{{ .Content }}</p>
-      {{ if ne .Params.linkedin "" }}
-        <p>
+    <div class="author-bio">
+      <h1 class="author-bio__heading">Articles by {{ .Title }}</h1>
+      <div class="post-author-bio__item">
+        <div class="post-author-bio__image">
+          {{ if .Params.image }}
+          <img src="/{{ .Params.image }}" alt="{{ .Title }}">
+          {{ end }}
+        </div>
+        <div class="post-author-bio__content">
+          {{ .Content }}
           <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
             Connect with {{ .Title }} on LinkedIn
           </a>
-        </p>
-      {{ end }}
+        </div>
+      </div>
     </div>
-
-    <hr />
 
     {{ $posts := where .Site.RegularPages "Params.authors" "intersect" (slice .Title) }}
     {{ if $posts }}

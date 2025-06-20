@@ -1,0 +1,18 @@
+@use 'mixins';
+
+.popular-reads {
+  @include mixins.page-alignment;
+}
+
+.popular-reads__heading {
+  margin-top: 0;
+}
+
+.popular-reads__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.popular-reads__item {
+  margin-bottom: calc(var(--mm-spacing) / 2);
+}
