@@ -8,6 +8,7 @@
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas: 'a b' 'c d' 'branding branding' 'copyright copyright';
+  margin: auto;
   position: relative;
   row-gap: 0;
   z-index: 2;
@@ -51,7 +52,6 @@
 
   .footer__branding {
     display: flex;
-    grid-column: span 2;
     justify-content: left;
     order: 1;
     padding-bottom: var(--mm-spacing);
