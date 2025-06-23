@@ -1,21 +1,23 @@
 {{ $pages := $.Paginator }}
 {{ if gt $pages.TotalPages 1 }}
   <footer class="pagination__footer">
-    {{ if $pages.HasPrev  }}
-      <a class="pagination__newer" href="{{ $pages.Prev.URL }}">
-        <div class="pagination__arrow">
-          {{ readFile "assets/FaArrowLeft.svg" | safeHTML }}
-        </div>
-        <div class="pagination__direction">Newer</div>
-      </a>
-    {{ end }}
-    {{ if $pages.HasNext }}
-      <a class="pagination__older" href="{{ $pages.Next.URL }}">
-        <div class="pagination__arrow">
-          {{ readFile "assets/FaArrowRight.svg" | safeHTML }}
-        </div>
-        <div class="pagination__direction">Older</div>
-      </a>
-    {{ end }}
+    <nav class="pagination__nav" data-nosnippet>
+      {{ if $pages.HasPrev  }}
+        <a class="pagination__newer pagination__newer--pages" href="{{ $pages.Prev.URL }}">
+          <div class="pagination__arrow">
+            {{ readFile "assets/FaArrowLeft.svg" | safeHTML }}
+          </div>
+          <div class="pagination__direction">Newer</div>
+        </a>
+      {{ end }}
+      {{ if $pages.HasNext }}
+        <a class="pagination__older pagination__older--pages" href="{{ $pages.Next.URL }}">
+          <div class="pagination__arrow">
+            {{ readFile "assets/FaArrowRight.svg" | safeHTML }}
+          </div>
+          <div class="pagination__direction">Older</div>
+        </a>
+      {{ end }}
+    </nav>
   </footer>
 {{ end }}

@@ -71,13 +71,27 @@
   width: 100%;
 }
 
+.pagination__newer--pages,
+.pagination__older--pages {
+  grid-template-columns: min-content;
+  width: min-content !important; /* stylelint-disable-line */
+}
+
+.pagination__newer--pages {
+  justify-content: start;
+}
+
+.pagination__older--pages {
+  justify-content: end;
+}
+
 .pagination__footer {
   .pagination__nav {
     grid-template-areas:
       'newer'
       'older';
     grid-template-columns: 1fr;
-    max-width: var(--mm-max-width);
+    max-width: 800px;
     padding: 0  0 var(--mm-spacing) 0;
   }
 
