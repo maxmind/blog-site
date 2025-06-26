@@ -1,7 +1,8 @@
+@use 'variables';
+
 /***** Mixins *****/
 @mixin heading {
-  color: #00374c;
-  font-family: var(--mm-font-stack-display);
+  color: var(--mm-color-dark-blue);
   font-weight: 500;
   line-height: 1.2em;
   margin: var(--mm-spacing) 0 calc(var(--mm-spacing) / 4);
@@ -88,5 +89,15 @@ $pattern-scale: 1;
     height: 50px;
     min-width: 50px;
     width: 50px;
+  }
+}
+
+@mixin page-alignment {
+  margin: auto;
+  max-width: var(--mm-max-width);
+  padding: calc(var(--mm-spacing) / 2);
+
+  @include variables.breakpoint('md') {
+    padding: var(--mm-spacing);
   }
 }

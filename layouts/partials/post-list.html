@@ -1,11 +1,12 @@
 <article class="blog-post__container">
   <div class="content">
-      <div class="blog-post__categories">
+      <!-- <div class="blog-post__categories">
         {{ range .Params.category }}
             <a class="blog-post__category "href="/category/{{ . | urlize}}">{{ . }}</a>
         {{ end }}
-      </div>
-    <h2 class="blog-post__heading">
+      </div> -->
+    <img src="/images/header-placeholder.webp" alt="{{ .Title }}" class="blog-post__header-image">
+    <h3 class="blog-post__heading">
       <a href="{{ .RelPermalink }}" class="blog-post__title">
         {{ with .Params.Heading }}
           {{ . }}
@@ -13,7 +14,7 @@
           {{ .Title }}
       {{ end }}
       </a>
-    </h2>
+    </h3>
     <div class="blog-post__published">
       <div class="blog-post__authors">
         <div class="authors__by">
@@ -27,11 +28,11 @@
         <time>{{ .Date.Format "January 2, 2006" }}</time>
       </div>
     </div>
-    <div class="blog-post__excerpt">
+    <!-- <div class="blog-post__excerpt">
       <p>{{ .Summary | safeHTML | truncate 200 }}</p>
-    </div>
-    <div class="blog-post__readmore">
+    </div> -->
+    <!-- <div class="blog-post__readmore">
       <a href="{{ .Permalink }}">Read more ›</a>
-    </div>
+    </div> -->
   </div>
 </article>

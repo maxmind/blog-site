@@ -10,7 +10,7 @@ titleCaseStyle = 'none'
   page = ['HTML']
 
 [pagination]
-  pagerSize = 6
+  pagerSize = 9
 
 [taxonomies]
   category = 'category'
@@ -53,3 +53,6 @@ titleCaseStyle = 'none'
   [[related.indices]]
   name = "date"
   weight = 10
+
+[params]
+  topics = ['Anonymizer and proxy detection', 'Fraud and risk', 'IP intelligence', 'Case studies', 'News', 'Tutorials', ]

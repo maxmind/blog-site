@@ -2,14 +2,18 @@
       <div class="featured__wrapper">
         <div class="featured">
           <article class="blog-post__container-featured">
-            <div class="content">
-              <div class="blog-post__categories">
+            <div class="blog-post__featured-image">
+              {{ $image := (index (.Params.images) 0) }}
+              <img src="{{ $image }}" alt="{{ .Title }}">
+            </div>
+            <div class="blog-post__featured-content">
+                            <div class="blog-post__categories">
                 {{ range .Params.category }}
                     <a class="blog-post__category "href="/category/{{ . | urlize}}">{{ . }}</a>
                 {{ end }}
               </div>
-              <h2 class="blog-post__heading">
-                <a href="{{ .RelPermalink }}" class="blog-post__title">
+              <h2 class="blog-post__featured-heading">
+                <a href="{{ .RelPermalink }}">
                   {{ with .Params.Heading }}
                       {{ . }}
                     {{ else }}
@@ -33,13 +37,6 @@
               <div class="blog-post__excerpt">
                 <p>{{ .Summary | safeHTML | truncate 200 }}</p>
               </div>
-              <div class="blog-post__readmore">
-                <a href="{{ .Permalink }}">Read more ›</a>
-              </div>
-            </div>
-            <div class="blog-post__featured-image">
-              {{ $image := (index (.Params.images) 0) }}
-              <img src="{{ $image }}" alt="{{ .Title }}">
             </div>
           </article>
         </div>

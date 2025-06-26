@@ -1,4 +1,5 @@
 /***** Pagination *****/
+@use 'mixins';
 @use 'variables';
 
 .pagination__arrow {
@@ -7,11 +8,12 @@
 }
 
 .pagination__nav {
+  @include mixins.page-alignment;
+
   display: grid;
   gap: var(--mm-spacing);
   grid-template-areas: 'newer older';
   margin: auto;
-  max-width: 800px;
   padding: 0 0 calc(var(--mm-spacing) * 2);
   place-content: end space-between;
   width: 100%;
@@ -60,7 +62,6 @@
 .pagination__older {
   align-items: center;
   border-radius: var(--mm-border-radius);
-  color: var(--mm-color-link);
   column-gap: calc(var(--mm-spacing) / 2);
   display: grid;
   font-size: 18px;
@@ -92,7 +93,6 @@
       'newer'
       'older';
     grid-template-columns: 1fr;
-    max-width: 800px;
     padding: 0  0 var(--mm-spacing) 0;
   }
 

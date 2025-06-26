@@ -1,4 +1,8 @@
+@use 'mixins';
+
 .page__wrapper {
+
+  @include mixins.page-alignment;
   column-gap: var(--mm-spacing);
   display: grid;
   grid-template-areas:
@@ -8,9 +12,6 @@
     'pagination';
   grid-template-columns: 1fr;
   height: 100%;
-  margin: auto;
-  max-width: var(--mm-max-width);
-  padding: var(--mm-spacing);
 
   @media only screen and (min-width: 768px) {
     grid-template-areas:

@@ -1,43 +1,13 @@
 @use 'mixins';
 @use 'variables';
 
-.blog-post__container-featured {
-  display: grid;
-  gap: var(--mm-spacing);
-  grid-gap: var(--mm-spacing);
-  grid-template-areas:
-    'graphic'
-    'content';
-  padding: calc(var(--mm-spacing) / 2);
-}
-
-.blog-post__featured-image {
-  align-content: center;
-  border-radius: var(--mm-border-radius);
-  display: grid;
-  grid-area: graphic;
-  height: 100%;
-  justify-items: center;
-  overflow: hidden;
-  width: 100%;
-
-  img {
-    margin: 0;
-    width: 100%;
-  }
-}
-
 .blog-posts__wrapper {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
+  @include mixins.page-alignment;
 }
 
 .blog-post__content {
   a {
     align-items: center;
-    color: var(--mm-color-link);
     font-weight: 500;
     height: 20px;
   }
@@ -52,10 +22,15 @@
 .blog-posts {
   display: grid;
   gap: var(--mm-spacing);
-  justify-content: center;
-  max-width: var(--mm-max-width);
-  padding: calc(var(--mm-spacing) / 2);
-  width: 100%;
+  justify-content: start;
+
+  @include variables.breakpoint('sm') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include variables.breakpoint('lg') {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   .blog-post__heading {
     margin: 0;
@@ -67,50 +42,46 @@
   }
 }
 
-.blog-post__container {
-  display: grid;
-  margin: auto;
-  max-width: 650px;
-  padding: calc(var(--mm-spacing) / 2);
+.blog-post__header-image {
+  margin: 0;
 }
 
-.blog-post__excerpt {
-  grid-area: excerpt;
+// .blog-post__excerpt {
+//   grid-area: excerpt;
 
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-    margin: 0;
-  }
-}
+//   h2,
+//   h3,
+//   h4,
+//   h5 {
+//     font-size: 16px;
+//     font-style: italic;
+//     font-weight: 400;
+//     margin: 0;
+//   }
+// }
 
-.blog-post__readmore {
-  grid-area: readmore;
+// .blog-post__readmore {
+//   grid-area: readmore;
 
-  /* stylelint-disable no-descending-specificity */
-  a {
-    font-size: 14px;
-    font-weight: bold;
+//   /* stylelint-disable no-descending-specificity */
+//   a {
+//     font-size: 14px;
+//     font-weight: bold;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
 
-.blog-post__categories {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: var(--mm-font-stack-display);
-  font-size: 14px;
-  font-weight: 500;
-  grid-area: category;
-  margin-bottom: calc(var(--mm-spacing) / 2);
-}
+// .blog-post__categories {
+//   display: flex;
+//   flex-wrap: wrap;
+//   font-size: 14px;
+//   font-weight: 500;
+//   grid-area: category;
+//   margin-bottom: calc(var(--mm-spacing) / 2);
+// }
 
 .blog-post__category ~ .blog-post__category::before {
   content: ' • ';
@@ -137,7 +108,7 @@
 
 .blog-post__title {
   border: 0;
-  font-family: var(--mm-font-stack-display);
+  color: var(--mm-color-medium-blue);
   font-size: 20px;
   font-weight: 700;
   grid-area: title;
@@ -196,16 +167,47 @@
   }
 }
 
-@include variables.breakpoint('md') {
-  .blog-post__container-featured {
-    grid-template-areas: 'content graphic';
-    grid-template-columns: 1fr 40%;
-    padding: var(--mm-spacing);
-  }
+.blog-posts__topics {
+  @include mixins.page-alignment;
+}
 
-  .blog-posts {
-    padding: var(--mm-spacing);
+.blog-posts__topics-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-posts__topics-item {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.blog-posts__topics-link {
+  background-color: #f2f2f2;
+  border-radius: var(--mm-border-radius);
+  color: var(--mm-color-dark-blue);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 17px;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    text-decoration: none;
   }
+}
+
+.blog-posts__topics-link--active {
+  background-color: var(--mm-color-medium-blue);
+  color: #fff;
+}
+
+.blog-posts__topics-link:not(.blog-posts__topics-link--active):hover {
+  background-color: #f2f2f2;
+  color: var(--mm-color-link);
 }
 
 .blog-post__meta {

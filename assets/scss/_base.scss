@@ -75,7 +75,7 @@ p {
 
 /* stylelint-disable no-descending-specificity */
 a {
-  color: var(--mm-color-display-text);
+  color: var(--mm-color-link);
   text-decoration: none;
 
   &:hover,
@@ -140,7 +140,6 @@ blockquote {
   z-index: 3;
 
   p {
-    font-family: var(--mm-font-stack-display);
     font-size: 17px;
     font-style: italic;
     font-weight: 500;
@@ -169,7 +168,7 @@ code {
   background: #fff;
   border: 1px solid var(--mm-color-border);
   border-radius: 4px;
-  color: var(--mm-color-display-text);
+  color: var(--mm-color-link);
   font-family: var(--mm-font-stack-monospace);
   font-size: 14px;
   font-weight: 700;
@@ -229,8 +228,7 @@ td [class^='Code-module'] {
 
 th {
   border-bottom: 1px solid var(--mm-color-border);
-  color: var(--mm-color-display-text);
-  font-family: var(--mm-font-stack-display);
+  color: var(--mm-color-dark-blue);
   font-size: 14px;
   font-weight: 700;
   padding: 16px;

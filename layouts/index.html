@@ -1,11 +1,12 @@
 {{ define "main" }}
   <main aria-role="main">
+    {{ $page := $.Paginator }}
+      {{ if eq $page.PageNumber 1 }}
+        {{ partial "featured-post" . }}
+      {{ end }}
+    {{ partial "topics-nav" . }}
     <div class="blog-posts__wrapper">
       <div class="blog-posts">
-        {{ $page := $.Paginator }}
-        {{ if eq $page.PageNumber 1 }}
-          {{ partial "featured-post" . }}
-        {{ end }}
         {{ if eq $page.PageNumber 1 }}
           {{ range after 1 .Paginator.Pages }}
             {{ partial "post-list.html" . }}

@@ -1,0 +1,12 @@
+{{ $current := .RelPermalink }}
+
+<div class="blog-posts__topics">
+  <ul class="blog-posts__topics-list">
+  {{ range $name := site.Params.topics }}
+    {{ $href := (print "/category/" (urlize $name) "/") }}
+    <li class="blog-posts__topics-item {{ if strings.Contains $current $href }}blog-posts__topics-item--active{{ end }}">
+      <a class="blog-posts__topics-link {{ if strings.Contains $current $href }}blog-posts__topics-link--active{{ end }}" href="{{ $href }}">{{ $name }}</a>
+    </li>
+  {{ end }}
+  </ul>
+</div>
