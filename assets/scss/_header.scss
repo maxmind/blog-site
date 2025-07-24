@@ -1,7 +1,6 @@
 @use 'mixins';
 @use 'variables';
 
-
 /***** Header *****/
 $page-header-height: 80px;
 
@@ -44,14 +43,18 @@ $page-header-height: 80px;
 }
 
 .nav {
+  @include mixins.page-alignment;
+
   display: grid;
   grid-template-areas: 'logo search';
   grid-template-columns: max-content 1fr;
   grid-template-rows: auto;
   height: var(--page-header-height);
-  margin: 0 auto;
-  max-width: var(--mm-max-width);
-  padding: 0 var(--mm-spacing);
+  padding: 0 calc(var(--mm-spacing) / 2) !important;
+
+  @include variables.breakpoint('md') {
+    padding: 0 var(--mm-spacing) !important;
+  }
 }
 
 .nav>* {
@@ -86,7 +89,6 @@ $page-header-height: 80px;
 .logo span {
   align-self: center;
   color: var(--mm-color-primary-text);
-  font-family: var(--mm-font-stack-display);
   font-size: 10px;
   font-style: italic;
   font-weight: 600;
@@ -141,12 +143,6 @@ $page-header-height: 80px;
 
   .logo span {
     font-size: 12px;
-  }
-}
-
-@include variables.breakpoint('md') {
-  .nav {
-    margin: auto;
   }
 }
 
