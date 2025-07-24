@@ -75,7 +75,7 @@
 @include variables.breakpoint('xl') {
   .footer__container {
     grid-template-areas: 'branding a b c d' 'branding copyright copyright copyright copyright';
-    grid-template-columns: var(--mm-layout-sidebar-width) 1fr 1fr 1fr 1fr;
+    grid-template-columns: 350px 1fr 1fr 1fr 1fr;
   }
 
   .footer__branding {

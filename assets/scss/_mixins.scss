@@ -40,23 +40,6 @@ $pattern-scale: 1;
   will-change: transform;
 }
 
-@mixin pattern-border {
-  &::before,
-  &::after {
-    display: block;
-    height: 10px !important;
-    overflow: hidden;
-  }
-
-  &::before {
-    @include pattern-base;
-  }
-
-  &::after {
-    @include pattern-gradient;
-  }
-}
-
 @mixin pattern-gradient {
   background: rgb(0, 119, 194);
   background: linear-gradient(90deg, rgba(0, 119, 194, 0.5) 0%, var(--page-type-color));
