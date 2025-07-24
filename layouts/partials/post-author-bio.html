@@ -3,23 +3,28 @@
 
 {{ if $authorPages }}
   <hr />
-  <div class="post-author-bio article__container">
-    {{ if gt (len $authorPages) 1 }}
-      <h3>About the authors</h3>
-    {{ else }}
-      <h3>About the author</h3>
-    {{ end }}
+  <div class="post-author-bio">
     {{ range $authorPages }}
         <div class="post-author-bio__item">
-          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-          {{ .Content }}
-          {{ if ne .Params.linkedin nil }}
-            <p>
-              <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
-                Connect with {{ .Title }} on LinkedIn
+          <div class="post-author-bio__image">
+            {{ if .Params.image }}
+              <a href="{{ .RelPermalink }}">
+                <img src="/{{ .Params.image }}" alt="{{ .Title }}">
               </a>
-            </p>
-          {{ end }}
+            {{ end }}
+          </div>
+          <div class="post-author-bio__content">
+            <h4 class="post-author-bio__heading">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ if ne .Params.linkedin nil }}
+              <span class="post-author-bio__separator">•</span>
+                <a class="post-author-bio__linkedin" href="{{ .Params.linkedin }}" target="_blank"  rel="noopener noreferrer" alt="Connect with {{ .Title }} on LinkedIn">
+                  {{ readFile "assets/FaLinkedin.svg" | safeHTML }}
+                </a>
+              {{ end }}
+            </h4>
+            {{ .Content }}
+          </div>
         </div>
     {{ end }}
   </div>
