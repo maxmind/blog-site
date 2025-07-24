@@ -1,3 +1,5 @@
+@use 'variables';
+
 /***** Mixins *****/
 @mixin heading {
   color: #00374c;
@@ -88,5 +90,15 @@ $pattern-scale: 1;
     height: 50px;
     min-width: 50px;
     width: 50px;
+  }
+}
+
+@mixin page-alignment {
+  margin: auto;
+  max-width: var(--mm-max-width);
+  padding: calc(var(--mm-spacing) / 2);
+
+  @include variables.breakpoint('md') {
+    padding: var(--mm-spacing);
   }
 }
