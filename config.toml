@@ -38,5 +38,18 @@ titleCaseStyle = 'none'
     style = 'monokai'
     tabWidth = 4
 
+[related]
+  includeNewer = true
+  threshold = 85
+  toLower = false
+
+  [[related.indices]]
+  name = "tag"
+  weight = 10
+
+  [[related.indices]]
+  name = "date"
+  weight = 10
+
 [params]
   topics = ['Anonymizer and proxy detection', 'Fraud and risk', 'IP intelligence', 'Case studies', 'News', 'Tutorials', ]
