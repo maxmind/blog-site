@@ -10,7 +10,7 @@ titleCaseStyle = 'none'
   page = ['HTML']
 
 [pagination]
-  pagerSize = 6
+  pagerSize = 9
 
 [taxonomies]
   category = 'category'

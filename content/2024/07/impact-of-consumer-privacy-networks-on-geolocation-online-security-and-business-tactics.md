@@ -3,8 +3,7 @@ title:
   "The impact of consumer privacy networks on geolocation, online security, and
   business tactics"
 date: "2024-07-03"
-images:
-  - /images/2024/07/cpn_blog_post.jpg
+headerImage: "/images/2024/07/cpn_blog_post.webp"
 category:
   - "Fraud and risk"
   - "IP intelligence"

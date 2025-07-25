@@ -1,8 +1,7 @@
 ---
 title: "How accurate is IP geolocation?"
 date: "2021-07-01"
-images:
-  - /images/2021/07/marker.svg
+headerImage: "/images/2021/07/how-accurate-is-ip-geolocation.webp"
 category:
   - "IP intelligence"
 tag:
@@ -10,6 +9,7 @@ tag:
   - "IP network data"
 authors:
   - "Christopher Luna"
+popular: true
 ---
 
 With nearly two decades in the business of IP geolocation, we spend a lot of

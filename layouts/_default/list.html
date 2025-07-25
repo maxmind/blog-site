@@ -1,13 +1,14 @@
 {{ define "main" }}
+  {{ partial "topics-nav" . }}
   <div class="blog-posts__wrapper">
+    <h1 class="posts__header">
+      {{ with .Params.Heading }}
+          {{ . }}
+        {{ else }}
+          {{ .Title }}
+      {{ end }}
+    </h1>
     <div class="blog-posts">
-      <h1 class="posts__header">
-        {{ with .Params.Heading }}
-            {{ . }}
-          {{ else }}
-            {{ .Title }}
-        {{ end }}
-      </h1>
       {{ range .Paginator.Pages }}
         {{ partial "post-list.html" . }}
       {{ end }}

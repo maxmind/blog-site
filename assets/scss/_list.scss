@@ -1,34 +1,10 @@
 @use 'variables';
 
-.featured__wrapper {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-}
-
-.featured {
-  background: var(--mm-color-background);
-  border-radius: var(--mm-border-radius);
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
-  max-width: 800px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  z-index: 5;
-}
-
 .content {
   display: grid;
-  grid-area: content;
-  grid-template-areas:
-    'category'
-    'title'
-    'published'
-    'excerpt'
-    'readmore';
-  width: 100%;
+  grid-template-rows: max-content max-content auto;
+  height: 100%;
+  row-gap: calc(var(--mm-spacing) / 4);
 }
 
 .authors__by {
@@ -36,9 +12,7 @@
 }
 
 .posts__header {
-  border-bottom: 1px dashed var(--mm-color-border);
-  margin: 0 !important;
-  max-width: 650px;
+  margin: 0;
   padding: 0 0 var(--mm-spacing) 0;
 }
 
