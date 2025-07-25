@@ -1,6 +1,7 @@
 ---
 title: "IP Geolocation in the IPv6 World"
 date: "2020-01-22"
+headerImage: "/images/2020/01/ip-geolocation-in-the-ipv6-world.webp"
 category:
   - "IP intelligence"
 tag:
@@ -8,6 +9,7 @@ tag:
   - "IP network data"
 authors:
   - "Miguel Atienza"
+popular: true
 ---
 
 We get a lot of questions here at MaxMind about IPv6, and it’s not hard to

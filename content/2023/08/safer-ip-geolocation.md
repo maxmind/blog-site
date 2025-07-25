@@ -1,8 +1,7 @@
 ---
 title: "Safer IP geolocation with MaxMind"
 date: "2023-08-09"
-images:
-  - /images/2023/08/safe-coordinates-v2.png
+headerImage: "/images/2023/08/safer-ip-geolocation.webp"
 category:
   - "News"
 tag:
