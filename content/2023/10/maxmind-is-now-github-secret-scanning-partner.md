@@ -1,8 +1,7 @@
 ---
 title: "MaxMind is now a Github secret scanning partner"
 date: "2023-10-30"
-images:
-  - /images/2023/10/maxmind-is-now-github-secret-scanning-partner.png
+headerImage: "/images/2023/10/maxmind-is-now-github-secret-scanning-partner.webp"
 category:
   - "News"
 tag:

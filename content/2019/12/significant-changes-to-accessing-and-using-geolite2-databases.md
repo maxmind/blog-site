@@ -1,6 +1,7 @@
 ---
 title: "Significant Changes to Accessing and Using GeoLite2 Databases"
 date: "2019-12-18"
+headerImage: "/images/2019/12/significant-changes-to-accessing-and-using-geolite2-databases.webp"
 category:
   - "IP intelligence"
   - "News"
@@ -10,6 +11,7 @@ tag:
   - "Product updates"
 authors:
   - "Miguel Atienza"
+popular: true
 ---
 
 ## Reasons For Changes

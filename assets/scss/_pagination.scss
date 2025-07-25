@@ -1,4 +1,5 @@
 /***** Pagination *****/
+@use 'mixins';
 @use 'variables';
 
 .pagination__arrow {
@@ -11,8 +12,6 @@
   gap: var(--mm-spacing);
   grid-template-areas: 'newer older';
   margin: auto;
-  max-width: 800px;
-  padding: 0 0 calc(var(--mm-spacing) * 2);
   place-content: end space-between;
   width: 100%;
 
@@ -26,14 +25,15 @@
   grid-template-areas: 'arrow direction';
   grid-template-columns: min-content 1fr;
   justify-self: left;
-  padding-left: var(--mm-spacing);
+  padding: calc(var(--mm-spacing) / 4) calc(var(--mm-spacing) / 2) calc(var(--mm-spacing) / 4) 0;
   right: 0;
   text-align: left;
 
   &:hover {
     background: var(--mm-color-sidebar);
     cursor: pointer;
-    right: calc(var(--mm-spacing) / 2);
+    padding-left: calc(var(--mm-spacing) / 4);
+    right: calc(var(--mm-spacing) /2);
   }
 }
 
@@ -43,13 +43,14 @@
   grid-template-columns: 1fr min-content;
   justify-self: right;
   left: 0;
-  padding-right: var(--mm-spacing);
+  padding: calc(var(--mm-spacing) / 4) 0 calc(var(--mm-spacing) / 4) calc(var(--mm-spacing) / 2);
   text-align: right;
 
   &:hover {
     background: var(--mm-color-sidebar);
     cursor: pointer;
     left: calc(var(--mm-spacing) / 2);
+    padding-right: calc(var(--mm-spacing) / 4);
   }
 }
 
@@ -63,7 +64,6 @@
   font-size: 18px;
   font-weight: 500;
   grid-template-columns: auto;
-  padding: calc(var(--mm-spacing) / 4) calc(var(--mm-spacing) / 2);
   position: relative;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -85,13 +85,20 @@
 }
 
 .pagination__footer {
+  @include mixins.page-alignment;
+
+  padding-top: 0 !important;
+
   .pagination__nav {
     grid-template-areas:
       'newer'
       'older';
     grid-template-columns: 1fr;
-    max-width: 800px;
-    padding: 0  0 var(--mm-spacing) 0;
+
+    @include variables.breakpoint('md') {
+      grid-template-areas: 'newer older';
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .pagination__newer,
@@ -102,13 +109,4 @@
 
 .pagination__direction {
   grid-area: direction;
-}
-
-@include variables.breakpoint('md') {
-  .pagination__footer {
-    .pagination__nav {
-      grid-template-areas: 'newer older';
-      grid-template-columns: 1fr 1fr;
-    }
-  }
 }
