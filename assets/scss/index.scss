@@ -12,6 +12,7 @@
 @use 'popular-reads';
 @use 'pre';
 @use 'search';
+@use 'topics-nav';
 @use 'variables';
 @use 'recaptcha';
 @use 'author-bio';
@@ -42,3 +43,6 @@
   outline-width: 2px;
 }
 
+.show {
+  display: block;
+}

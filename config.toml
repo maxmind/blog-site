@@ -37,3 +37,6 @@ titleCaseStyle = 'none'
     noHl = false
     style = 'monokai'
     tabWidth = 4
+
+[params]
+  topics = ['Anonymizer and proxy detection', 'Fraud and risk', 'IP intelligence', 'Case studies', 'News', 'Tutorials', ]

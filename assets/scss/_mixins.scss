@@ -85,3 +85,11 @@ $pattern-scale: 1;
     padding: var(--mm-spacing);
   }
 }
+
+@mixin dropdown-width {
+  width: 100%;
+
+  @include variables.breakpoint('sm') {
+    width: auto;
+  }
+}
