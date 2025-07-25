@@ -1,0 +1,57 @@
+@use 'mixins';
+@use 'variables';
+
+.popular-reads {
+  @include mixins.page-alignment;
+}
+
+.popular-reads__wrapper {
+  display: grid;
+  grid-template-areas:
+    'image'
+    'heading'
+    'list';
+  grid-template-columns: 1fr;
+
+  @include variables.breakpoint('md') {
+    column-gap: var(--mm-spacing);
+    grid-template-areas:
+      'image heading'
+      'image list';
+    grid-template-columns: min-content 1fr;
+  }
+}
+
+.popular-reads__heading {
+  grid-area: heading;
+  margin-top: 0;
+}
+
+.popular-reads__list {
+  grid-area: list;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.popular-reads__item {
+  margin-bottom: calc(var(--mm-spacing) / 2);
+}
+
+.popular-reads__image {
+  grid-area: image;
+  margin-bottom: var(--mm-spacing);
+
+  @include variables.breakpoint('md') {
+    display: grid;
+    margin: 0;
+    place-content: center;
+  }
+
+  img {
+    display: flex;
+    height: auto;
+    margin: 0;
+    width: 373px;
+  }
+}
+
