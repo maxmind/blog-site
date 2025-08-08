@@ -109,6 +109,7 @@
   flex-wrap: wrap;
   font-size: 14px;
   font-weight: 600;
+  height: min-content; /* stylelint-disable-line */
   line-height: 1.5em;
 }
 
