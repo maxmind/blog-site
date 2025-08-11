@@ -1,0 +1,38 @@
+{{ define "main" }}
+    <div class="author-bio">
+      <div class="author-bio__header">
+        <div class="author-bio__image author-bio__image--mobile">
+          {{ if .Params.image }}
+            <img src="/{{ .Params.image }}" alt="{{ .Title }}">
+          {{ end }}
+        </div>
+        <h1 class="author-bio__heading">Articles by {{ .Title }}</h1>
+      </div>
+      <div class="author-bio__item">
+        <div class="author-bio__image author-bio__image--desktop">
+          {{ if .Params.image }}
+            <img src="/{{ .Params.image }}" alt="{{ .Title }}">
+          {{ end }}
+        </div>
+        <div class="author-bio__content">
+          {{ .Content }}
+        </div>
+        <a class="author-bio__linkedin" href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer">
+          Connect with {{ .Title }} on LinkedIn.
+        </a>
+      </div>
+    </div>
+
+    {{ $posts := where .Site.RegularPages "Params.authors" "intersect" (slice .Title) }}
+    {{ $paginator := .Paginate $posts }}
+    {{ if $paginator }}
+    <div class="blog-posts__wrapper">
+      <div class="blog-posts">
+        {{ range $paginator.Pages }}
+          {{ partial "post-list.html" . }}
+        {{ end }}
+      </div>
+    </div>
+    {{ partial "pagination" . }}
+  {{ end }}
+{{ end }}

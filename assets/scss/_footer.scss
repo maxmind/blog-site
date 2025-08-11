@@ -75,7 +75,7 @@
 @include variables.breakpoint('xl') {
   .footer__container {
     grid-template-areas: 'branding a b c d' 'branding copyright copyright copyright copyright';
-    grid-template-columns: var(--mm-layout-sidebar-width) 1fr 1fr 1fr 1fr;
+    grid-template-columns: 350px 1fr 1fr 1fr 1fr;
   }
 
   .footer__branding {
@@ -203,7 +203,6 @@
 
 .footer__heading {
   color: #c0d2e4;
-  font-family: var(--mm-font-stack-display);
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 calc(var(--mm-spacing) / 2);

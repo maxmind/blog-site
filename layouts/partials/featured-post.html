@@ -1,15 +1,22 @@
     {{ range first 1 .Site.RegularPages }}
-      <div class="featured__wrapper">
-        <div class="featured">
+      <div class="featured">
+        <div>
           <article class="blog-post__container-featured">
-            <div class="content">
+            <div class="featured__image">
+              {{ if $headerImage := .Params.headerImage }}
+                <img src="{{ $headerImage }}" alt="{{ .Title }}">
+              {{ else }}
+                <img src="/images/header-placeholder.webp" alt="{{ .Title }}">
+              {{ end }}
+            </div>
+            <div class="featured__content">
               <div class="blog-post__categories">
                 {{ range .Params.category }}
-                    <a class="blog-post__category "href="/category/{{ . | urlize}}">{{ . }}</a>
+                  <a class="blog-post__category "href="/category/{{ . | urlize}}">{{ . }}</a>
                 {{ end }}
               </div>
-              <h2 class="blog-post__heading">
-                <a href="{{ .RelPermalink }}" class="blog-post__title">
+              <h2 class="featured__heading">
+                <a href="{{ .RelPermalink }}">
                   {{ with .Params.Heading }}
                       {{ . }}
                     {{ else }}
@@ -31,15 +38,8 @@
                 </div>
               </div>
               <div class="blog-post__excerpt">
-                <p>{{ .Summary | safeHTML | truncate 200 }}</p>
+                <p>{{ .Summary | plainify | truncate 200 "" }}</p>
               </div>
-              <div class="blog-post__readmore">
-                <a href="{{ .Permalink }}">Read more ›</a>
-              </div>
-            </div>
-            <div class="blog-post__featured-image">
-              {{ $image := (index (.Params.images) 0) }}
-              <img src="{{ $image }}" alt="{{ .Title }}">
             </div>
           </article>
         </div>

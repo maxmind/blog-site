@@ -1,0 +1,31 @@
+{{ $authorPages := where .Site.Pages "Section" "authors" }}
+{{ $authorPages := where $authorPages "Title" "in" .Params.authors }}
+
+{{ if $authorPages }}
+  <hr />
+  <div class="post-author-bio">
+    {{ range $authorPages }}
+        <div class="post-author-bio__item">
+          <div class="post-author-bio__image">
+            {{ if .Params.image }}
+              <a href="{{ .RelPermalink }}">
+                <img src="/{{ .Params.image }}" alt="{{ .Title }}">
+              </a>
+            {{ end }}
+          </div>
+          <div class="post-author-bio__content">
+            <h4 class="post-author-bio__heading">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ if ne .Params.linkedin nil }}
+              <span class="post-author-bio__separator">•</span>
+                <a class="post-author-bio__linkedin" href="{{ .Params.linkedin }}" target="_blank"  rel="noopener noreferrer" alt="Connect with {{ .Title }} on LinkedIn">
+                  {{ readFile "assets/FaLinkedin.svg" | safeHTML }}
+                </a>
+              {{ end }}
+            </h4>
+            {{ .Content }}
+          </div>
+        </div>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "Enriching MMDB files with your own data using Go"
 date: "2020-09-01"
+headerImage: "/images/2020/09/enriching-mmdb-files-with-your-own-data-using-go.webp"
 category:
   - "IP intelligence"
   - "Anonymizer and proxy detection"
@@ -9,6 +10,7 @@ tag:
   - "Technical tutorials"
 authors:
   - "Narsimham Chelluri"
+popular: true
 ---
 
 [MaxMind DB](https://github.com/maxmind/MaxMind-DB/blob/main/MaxMind-DB-spec.md)

@@ -1,0 +1,71 @@
+@use 'mixins';
+@use 'variables';
+
+.author-bio {
+  @include mixins.page-alignment;
+
+  padding-bottom: 0 !important;
+}
+
+.author-bio__heading {
+  margin-top: 0;
+  padding: 0;
+}
+
+.author-bio__item {
+  gap: calc(var(--mm-spacing) / 2);
+  max-width: 800px;
+
+  @include variables.breakpoint('sm') {
+    display: grid;
+    grid-template-areas:
+      'image content'
+      '. linkedin';
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.author-bio__content p {
+  @include variables.breakpoint('sm') {
+    margin-bottom: 0;
+  }
+}
+
+.author-bio__linkedin {
+  @include variables.breakpoint('sm') {
+    grid-area: linkedin;
+  }
+}
+
+.author-bio__image {
+  align-self: center;
+  height: auto;
+  width: 65px;
+
+  img {
+    margin: 0;
+  }
+}
+
+.author-bio__image--mobile {
+  display: block;
+
+  @include variables.breakpoint('sm') {
+    display: none;
+  }
+}
+
+.author-bio__image--desktop {
+  display: none;
+
+  @include variables.breakpoint('sm') {
+    display: grid;
+  }
+}
+
+.author-bio__header {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--mm-spacing) / 2);
+  padding-bottom: calc(var(--mm-spacing) / 2);
+}

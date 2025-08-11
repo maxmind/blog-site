@@ -1,0 +1,59 @@
+@use 'variables';
+
+.post-author-bio {
+  box-sizing: border-box;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    box-sizing: unset;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 0;
+  }
+}
+
+.post-author-bio__heading {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--mm-spacing) / 4);
+}
+
+.post-author-bio__linkedin {
+  font-size: 24px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.post-author-bio__separator {
+  color: var(--mm-color-primary-text);
+  font-size: 24px;
+}
+
+.post-author-bio__item {
+  display: grid;
+  gap: calc(var(--mm-spacing) / 2);
+  max-width: 800px;
+
+  @include variables.breakpoint('sm') {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.post-author-bio__image {
+  align-self: center;
+  display: grid;
+  height: auto;
+  width: 65px;
+
+  img {
+    margin: 0;
+  }
+}

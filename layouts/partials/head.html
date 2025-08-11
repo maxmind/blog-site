@@ -17,8 +17,9 @@
 
   <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}feed.xml" title="RSS Feed for blog.maxmind.com">
 
+  {{ $dropdown := resources.Get "js/dropdown.ts" | js.Build }}
   {{ $systemStatus := resources.Get "js/system-status.ts" | js.Build }}
-  {{ $js := slice $systemStatus | resources.Concat "js/bundle.js" }}
+  {{ $js := slice $dropdown $systemStatus | resources.Concat "js/bundle.js" }}
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {

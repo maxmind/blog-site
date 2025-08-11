@@ -1,0 +1,12 @@
+<div class="related-articles">
+  {{ with .Site.RegularPages.Related . | first 3 }}
+  <h4 class="related-articles__heading">Related articles</h4>
+  <ul class="related-articles__list">
+    {{ range . }}
+      <li class="related-articles__item">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+</div>

@@ -1,45 +1,51 @@
 @use 'article';
 @use 'base';
 @use 'blog-post';
+@use 'cta';
 @use 'header';
+@use 'featured';
 @use 'footer';
 @use 'fourohfour';
 @use 'list';
 @use 'loading';
 @use 'mixins';
+@use 'page';
 @use 'pagination';
+@use 'popular-reads';
 @use 'pre';
+@use 'related-articles';
 @use 'search';
+@use 'topics-nav';
 @use 'variables';
 @use 'recaptcha';
+@use 'author-bio';
+@use 'post-author-bio';
 
 :root {
-  --mm-color-active-blue: #2b7ec6;
   --mm-color-background: #fff;
   --mm-color-background-code: #274958;
   --mm-color-sidebar: #f5f6f7;
   --mm-color-border: #ddd;
-  --mm-color-logo-blue-light: #00aeef;
-  --mm-color-logo-blue-dark: #005f83;
+  --mm-color-dark-blue: #130832;
+  --mm-color-geoip: #2ca695;
+  --mm-color-light-blue: #ecf5fb;
+  --mm-color-medium-blue: #4877bb;
   --mm-color-primary-text: #595959;
-  --mm-color-display-text: #005f83;
+  --mm-color-link: #007db8;
   --mm-border-radius: 6px;
-  --mm-font-stack-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
-  --mm-font-stack-display: 'montserrat', var(--mm-font-stack-default);
+  --mm-font-stack-default: 'Montserrat', sans-serif;
   --mm-font-stack-monospace: 'Source Code Pro', monospace;
-  --mm-layout-toc-width: 290px;
-  --mm-layout-sidebar-width: 350px;
-  --mm-max-width: 880px;
-  --mm-outline: 2px solid var(--mm-color-logo-blue-light);
-  --mm-overview-heading-drop-shadow: 1px 3px 0 rgba(0, 0, 0, 0.25);
+  --mm-max-width: 1200px;
   --mm-spacing: 40px;
-  --page-header-height: 80px;
-  --page-type-color: rgba(255, 255, 255, 0.3);
+  --page-header-height: 78px;
 }
 
 *:focus {
-  outline-color: var(--mm-color-logo-blue-light);
+  outline-color: var(--mm-color-link);
   outline-style: solid;
   outline-width: 2px;
 }
 
+.show {
+  display: block;
+}

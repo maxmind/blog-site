@@ -1,0 +1,17 @@
+<div class="popular-reads">
+  <div class="popular-reads__wrapper">
+    <div class="popular-reads__image">
+      <img src="/images/popular-reads.webp" alt="Popular reads">
+    </div>
+    <h2 class="popular-reads__heading">Popular reads</h2>
+    <ul class="popular-reads__list">
+      {{ range first 5 (where .Site.RegularPages "Params.popular" "==" true) }}
+        <li class="popular-reads__item">
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

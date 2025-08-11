@@ -1,41 +1,85 @@
 {{ define "main" }}
-  <article class="article">
-    <div class="article__container">
-        <div class="blog-post__categories">
-          {{ range .Params.category }}
-            <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
-          {{ end }}
-        </div>
-      <h1 class="blog-post__heading">
-        {{ with .Params.Heading }}
-          {{ . }}
-        {{ else }}
-          {{ .Title }}
-        {{ end }}
-      </h1>
-      <div class="blog-post__published">
-        <div class="blog-post__authors">
-          <div class="authors__by">
-            by
+
+{{ $authorPages := where .Site.Pages "Section" "authors" }}
+{{ $authorPages := where $authorPages "Title" "in" .Params.authors }}
+<div class="page__wrapper">
+  <div class="page__header">
+    <div class="blog-post__categories">
+      {{ range .Params.category }}
+        <a class="blog-post__category" href="/category/{{ . | urlize}}">{{ . }}</a>
+      {{ end }}
+    </div>
+    <h1 class="blog-post__heading">
+      {{ with .Params.Heading }}
+        {{ . }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </h1>
+    <div class="blog-post__meta">
+      <div class="blog-post__meta-column-1">
+        <div class="blog-post__published">
+          <div class="blog-post__authors">
+            <div class="authors__by">
+              by
+            </div>
+            {{ if $authorPages }}
+              {{ range $authorPages }}
+                <a class="blog-post__author" href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+            {{ else }}
+              {{ range .Params.authors }}
+                  <div class="blog-post__author">{{ . }}</div>
+              {{ end }}
+            {{ end }}
           </div>
-          {{ range .Params.authors }}
-            <div class="blog-post__author">{{ . }}</div>
-          {{ end }}
         </div>
-        <div class="blog-post__date">
-          <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <div class="blog-post__date-reading-time">
+          <span class="blog-post__date">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+          </span>
+          <span class="blog-post__reading-time">{{ .ReadingTime }} min read</span>
         </div>
       </div>
-      <div class="blog-post__content">
-        {{ .Content }}
-      </div>
-      <div class="blog-post__tags">
-        {{ range .Params.tag }}
-          <a href="/tag/{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
+      <div class="blog-post__meta-column-2">
+        <div class="blog-post__share-buttons">
+          <div class="blog-post__share-label">Share:</div>
+          <a class="blog-post__share-button blog-post__share-button--x" href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank">{{ readFile "assets/x-logo.svg" | safeHTML }}</a>
+          <a class="blog-post__share-button" href="https://www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title }}" target="_blank">{{ readFile "assets/FaLinkedin.svg" | safeHTML }}</a>
+        </div>
       </div>
     </div>
     <hr>
+    {{ if $headerImage := .Params.headerImage }}
+      <img src="{{ $headerImage }}" alt="{{ .Title }}" class="article__header-image">
+    {{ else }}
+      <img src="/images/header-placeholder.webp" alt="{{ .Title }}" class="article__header-image">
+    {{ end }}
+  </div>
+  <div class="page__article">
+    <article class="article">
+      <div class="article__container">
+        <div class="blog-post__content">
+          {{ .Content }}
+        </div>
+        <div class="blog-post__tags">
+          {{ range .Params.tag }}
+            <a href="/tag/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ partial "post-author-bio" . }}
+      <hr>
+    </article>
+  </div>
+  <div class="page__sidebar">
+    <div class="page__sidebar-content">
+      {{ partial "cta" . }}
+      {{ partial "related-articles" . }}
+    </div>
+  </div>
+  <div class="page__pagination">
     {{ partial "post-pagination" . }}
-  </article>
+  </div>
+</div>
 {{ end }}
