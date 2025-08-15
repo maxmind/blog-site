@@ -1,7 +1,9 @@
 ---
 draft: false
-title: MaxMind Blog
+title: Expert insights from the team at Maxmind
 keywords:
   - MaxMind blog
-description: Latest news and thoughts from MaxMind.
+description:
+  Cut through the noise with fact-driven articles on IP geolocation and fraud
+  detection. From the creators of GeoIP and minFraud. Subscribe to the blog.
 ---
