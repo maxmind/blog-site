@@ -131,7 +131,7 @@ achieved by using the risk indicator compared to random guessing:
 | ------------------- | --------------------------------------------------------- |
 | is_anonymous        | +43%                                                      |
 | IP risk score       | +125%                                                     |
-| minFraud risk score | +300                                                      |
+| minFraud risk score | +300%                                                     |
 
 For predicting chargeback risk, the IP risk scoring model outperforms a simple
 anonymizer check by about 3 times, while the multi-attribute risk scoring model
@@ -152,7 +152,7 @@ We now proceed to investigate the relative impact of the following data inputs:
 - phone number
 - billing address
 - shipping address
-- browser
+- browser (user agent and accept language HTTP headers)
 - device
 - order amount
 
@@ -184,11 +184,6 @@ minFraud model, especially helpful when only a limited number of inputs are
 passed.
 
 That said, there are other inputs that further increase lift.
-
-We plan to analyze the impact of the event type input when scoring multi-event
-flows, i.e. account creation, login, email change, password reset, etc. If you
-want to know when we publish these findings,
-[subscribe to our blog email notifications](https://comms.maxmind.com/maxmind-blog-subscription).
 
 [Reach out to your customer success manager](mailto:customersuccess@maxmind.com)
 if you’d like guidance on how to optimize your minFraud integration for your
