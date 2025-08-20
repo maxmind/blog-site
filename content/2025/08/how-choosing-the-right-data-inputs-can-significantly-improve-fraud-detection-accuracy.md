@@ -171,7 +171,7 @@ As highlighted in the chart below, the IP address input contributed the most,
 followed by email address and credit card—although all of the analyzed data
 points had a positive impact when it came to correctly predicting chargebacks.
 
-![Image shows the impact of the average PR-AUC increase vs. the minFraud input.](/images/2025/08/average-pr-auc-increase-minfraud-inputs.png)
+![Image shows the impact of the average PR-AUC increase vs. the minFraud input.](/images/2025/08/graph-average-PR-AUC-increase-vs-minFraud-input.png)
 
 ## Conclusion
 
@@ -185,6 +185,6 @@ passed.
 
 That said, there are other inputs that further increase lift.
 
-[Reach out to your customer success manager](mailto:customersuccess@maxmind.com)
-if you’d like guidance on how to optimize your minFraud integration for your
-specific situation.
+[Reach out to the MaxMind support team](mailto:support@maxmind.com) if you’d
+like guidance on how to optimize your minFraud integration for your specific
+situation.
