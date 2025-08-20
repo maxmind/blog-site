@@ -1,14 +1,19 @@
 ---
-title: "Fraud detection accuracy: An analysis of data inputs that significantly improve risk scoring"
+title:
+  "Fraud detection accuracy: An analysis of data inputs that significantly
+  improve risk scoring"
 heading:
-  "How choosing the right data inputs can significantly improve fraud detection accuracy"
+  "How choosing the right data inputs can significantly improve fraud detection
+  accuracy"
 description:
-  "Using the PR-AUC metric, we investigate the contributions of various inputs on fraud detection accuracy to help provide more information for customers deciding which inputs to send to the minFraud API."
+  "Using the PR-AUC metric, we investigate the contributions of various inputs
+  on fraud detection accuracy to help provide more information for customers
+  deciding which inputs to send to the minFraud API."
 date: "2025-08-20"
 headerImage: /images/2025/08/improve-fraud-detection-accuracy.png
 category:
   - "Fraud and risk"
-  tag:
+tag:
   - "Fraud prevention"
   - "Fraud screening"
   - "Risk data"
