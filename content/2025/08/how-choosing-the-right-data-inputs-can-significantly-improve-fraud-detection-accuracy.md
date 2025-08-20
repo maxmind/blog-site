@@ -9,6 +9,10 @@ description:
   "Using the PR-AUC metric, we investigate the contributions of various inputs
   on fraud detection accuracy to help provide more information for customers
   deciding which inputs to send to the minFraud API."
+og:description:
+  "Using the PR-AUC metric, we investigate the contributions of various inputs
+  on fraud detection accuracy to help provide more information for customers
+  deciding which inputs to send to the minFraud API."
 date: "2025-08-20"
 headerImage: /images/2025/08/improve-fraud-detection-accuracy.png
 category:
@@ -25,8 +29,8 @@ authors:
 ## Introduction
 
 Powered by evolving machine learning models and one of the largest global fraud
-detection networks, minFraud<sup>U+00AE</sup> helps assess online transaction
-data and improve fraud detection accuracy.
+detection networks, minFraud helps assess online transaction data and improve
+fraud detection accuracy.
 
 The built-in flexibility of the
 [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/for-platforms)
@@ -76,7 +80,7 @@ score thresholds. Higher PR-AUC values indicate better performance in fraud
 detection accuracy, i.e. distinguishing fraudulent transactions from legitimate
 ones.
 
-## Fraud detection accuracy: minFraud vs. GeoIP<sup>U+00AE</sup>
+## Fraud detection accuracy: minFraud vs. GeoIP
 
 Many of our customers choose to include our
 [IP intelligence data](https://www.maxmind.com/en/geoip-anonymous-ip-database)
@@ -99,7 +103,7 @@ Before we reveal the results, here are the three risk indicators in detail:
   network, such as a proxy or VPN.
 
 - **IP risk score** Available in the
-  [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview[),
+  [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
   the
   [IP risk score](https://support.maxmind.com/hc/en-us/articles/30721692872603-IP-Risk-Score)
   goes beyond the Anonymous IP flag to report the relative riskiness of IPs,
