@@ -9,7 +9,7 @@ description:
   "Using the PR-AUC metric, we investigate the contributions of various inputs
   on fraud detection accuracy to help provide more information for customers
   deciding which inputs to send to the minFraud API."
-og:description:
+summary:
   "Using the PR-AUC metric, we investigate the contributions of various inputs
   on fraud detection accuracy to help provide more information for customers
   deciding which inputs to send to the minFraud API."
