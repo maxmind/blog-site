@@ -11,8 +11,8 @@ description:
   deciding which inputs to send to the minFraud API."
 summary:
   "Using the PR-AUC metric, we investigate the contributions of various inputs
-  on fraud detection accuracy to help customers decide which inputs to send to
-  the minFraud API."
+  on fraud detection accuracy to help you decide which inputs to send to the
+  minFraud API."
 date: "2025-08-20"
 headerImage: /images/2025/08/improve-fraud-detection-accuracy.png
 category:
