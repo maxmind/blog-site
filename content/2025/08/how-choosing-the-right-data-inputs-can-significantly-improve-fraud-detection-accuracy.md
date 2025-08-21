@@ -171,7 +171,11 @@ As highlighted in the chart below, the IP address input contributed the most,
 followed by email address and credit card—although all of the analyzed data
 points had a positive impact when it came to correctly predicting chargebacks.
 
-![Image shows the impact of the average PR-AUC increase vs. the minFraud input.](/images/2025/08/graph-average-PR-AUC-increase-vs-minFraud-input.png)
+For the billing address input, it’s worth noting that passing the complete
+address is not critical as most of the value of this input comes from passing
+the billing city, postal code, and country.
+
+![Image shows the impact of the average PR-AUC increase vs. the minFraud input.](/images/2025/08/Average-PR-AUC-increase-for-adding-selected-minFraud-inputs.png)
 
 ## Conclusion
 
