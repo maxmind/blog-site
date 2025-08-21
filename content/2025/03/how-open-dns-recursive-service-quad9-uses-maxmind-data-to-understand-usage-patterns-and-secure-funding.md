@@ -6,6 +6,9 @@ heading:
 description:
   "DNS recursive service Quad9 uses MaxMind data to understand usage patterns
   and secure funding. Read our blog post for more details/inspiration."
+summary:
+  "See how Quad9 relies on MaxMind data to understand user demographics to
+  generate funding and measure impact without compromising privacy."
 date: "2025-03-26"
 headerImage: /images/2025/03/quad9.webp
 category:
