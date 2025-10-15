@@ -158,7 +158,7 @@ post, see https://gohugo.io/content-management/summaries/.
 Using relative links and shortcodes to refer to other pages is strongly
 encouraged instead of hardcoding paths. Hugo emits an error or warning if a
 document cannot be uniquely resolved. See
-https://gohugo.io/content-management/cross-references/ for how to utilize the
+https://gohugo.io/methods/shortcode/relref/#article for how to utilize the
 shortcodes.
 
 For example:
@@ -237,7 +237,7 @@ If you want an easier way to make tables in markdown, you can also try this
 We can use [OpenGraph meta tags](https://ogp.me/) for social sharing. Hugo has
 an embedded OpenGraph template:
 https://gohugo.io/templates/embedded/#open-graph.
-[Hugo OpenGraph embedded template source code](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html).
+[Hugo OpenGraph embedded template source code](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_partials/opengraph.html).
 
 At this time, the blog generates metadata in the following ways:
 

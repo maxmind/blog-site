@@ -24,7 +24,7 @@ limited options, mostly confined to physical security keys (like Yubikeys). Over
 the years, more and more devices have begun to work with the standard so that
 today many common devices that use biometric input (such as a user’s
 fingerprint) can be used, including most smartphones and many laptops.
-[Learn more about 2FA using security keys on our Knowledge Base.](https://support.maxmind.com/hc/en-us/articles/1260803946470-Set-Up-Two-Factor-Authentication)
+[Learn more about 2FA using security keys on our Knowledge Base.](https://support.maxmind.com/knowledge-base/articles/two-factor-authentication-2fa)
 
 MaxMind will continue to allow customers to use FIDO2 compatible devices for
 2FA, but accounts that are not using a FIDO2 security key will be required to
@@ -50,7 +50,7 @@ they can receive their one-time security codes:
 Alternatively, if you prefer to use security key authentication, you should
 enable this for all of your users:
 
-- [Learn how to enable security key 2FA on our Knowledge Base.](https://support.maxmind.com/hc/en-us/articles/1260803946470-Set-Up-Two-Factor-Authentication)
+- [Learn how to enable security key 2FA on our Knowledge Base.](https://support.maxmind.com/knowledge-base/articles/two-factor-authentication-2fa)
 
 ## When will 2FA be required?
 

@@ -52,8 +52,9 @@ discussing the minFraud services, including our
 and how they may be used to help merchants detect and prevent more fraud
 in 2018.
 
-For additional information, please see
-[MaxMind's Event Guide for This Year's MRC Vegas](https://wp.me/p3xED4-5Z).
+For additional information, please see [MaxMind's Event Guide for This Year's
+MRC
+Vegas]({{< relref "2018/02/maxminds-event-guide-for-this-years-mrc-vegas.md" >}}).
 
 ---
 

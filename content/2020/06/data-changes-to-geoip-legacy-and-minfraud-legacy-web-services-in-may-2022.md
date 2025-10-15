@@ -49,7 +49,7 @@ data changes below will not disrupt your existing workflows.
    code we have for a given IP network. In addition, Kosovo will return an ISO
    country code of XK and will no longer present as a region per the FIPS
    standard. For your convenience, we’ve prepared a
-   [FIPS-ISO region code mapping file here](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/#ISO_31662,_FIPS_104,_and_Country_Subdivisions).
+   [FIPS-ISO region code mapping file here](https://dev.maxmind.com/geoip/whats-new-in-geoip2/).
 1. **Area codes:** Area codes are no longer available in GeoIP2. At the end of
    May 2022, area code fields will return as blank.
 1. **Country/Region/City names:** GeoIP2 contains more standardized country,
@@ -58,8 +58,8 @@ data changes below will not disrupt your existing workflows.
    To get a full list of GeoIP2 place names we recommend downloading a
    [GeoLite2 City CSV file](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
    (available at no cost). Details of this file format can be found
-   [here](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/#csv-databases).
-   You may request access by
+   [here](https://dev.maxmind.com/geoip/docs/databases/city-and-country/). You
+   may request access by
    [logging into your account](https://www.maxmind.com/en/account/login) and
    clicking on ‘GeoLite2 Signup’ under the **GeoIP2 / GeoLite2** section in your
    left-hand navigation menu.
@@ -92,11 +92,11 @@ will not have to make further adjustments in the future.
 You may also wish to consider upgrading to our current, actively developed
 offerings at this time.
 
-| Current service                           | Product info                                                                                               | Dev info                                                                                                   | What's new                                                                                                                                 |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **minFraud Score, Insights, and Factors** | [Learn about product features on our main website](https://www.maxmind.com/en/solutions/minfraud-services) | [Read technical documentation on our developer's site](https://dev.maxmind.com/minfraud/)                  | [Read about updated features on our developer's site](https://dev.maxmind.com/minfraud/whats-new-in-minfraud-score-and-minfraud-insights/) |
-| **GeoIP2 City Plus, and Insights**        | [Learn about product features on our main website](https://www.maxmind.com/en/geoip2-precision-services)   | [Read technical documentation on our developer's site](https://dev.maxmind.com/geoip/geoip2/web-services/) | [Read about updated features on our developer's site](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/)                           |
+| Current service                           | Product info                                                                                               | Dev info                                                                                                 | What's new                                                                                                                                 |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **minFraud Score, Insights, and Factors** | [Learn about product features on our main website](https://www.maxmind.com/en/solutions/minfraud-services) | [Read technical documentation on our developer's site](https://dev.maxmind.com/minfraud/)                | [Read about updated features on our developer's site](https://dev.maxmind.com/minfraud/whats-new-in-minfraud-score-and-minfraud-insights/) |
+| **GeoIP2 City Plus, and Insights**        | [Learn about product features on our main website](https://www.maxmind.com/en/geoip2-precision-services)   | [Read technical documentation on our developer's site](https://dev.maxmind.com/geoip/docs/web-services/) | [Read about updated features on our developer's site](https://dev.maxmind.com/geoip/whats-new-in-geoip2/)                                  |
 
 If you are unsure about how to proceed, please forward this information to the
 person(s) responsible for your technical integration. If you have any questions,
-please [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+please [contact us](https://support.maxmind.com/).

@@ -14,7 +14,7 @@ authors:
 
 **by TJ Murphy**, [@teej_m](https://twitter.com/teej_m) on Twitter This article
 was originally published on
-[Towards Data Science](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
+[Towards Data Science](https://web.archive.org/web/20201108000746/https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1?gi=e549502547a9)
 on Jan 18, 2019.
 
 It always starts with an innocent observation. _“We get a lot of traffic from
@@ -331,5 +331,5 @@ an early draft.
 
 **by TJ Murphy**, [@teej_m](https://twitter.com/teej_m) on Twitter This article
 was originally published on
-[Towards Data Science](https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1)
+[Towards Data Science](https://web.archive.org/web/20201108000746/https://towardsdatascience.com/the-easy-way-to-use-maxmind-geoip-with-redshift-65cf979e63b1?gi=e549502547a9)
 on Jan 18, 2019.

@@ -38,9 +38,9 @@ You'll need to use Perl to write your own MMDB files, but you can read the files
 with the officially supported
 [.NET, PHP, Java and Python readers](https://github.com/maxmind?utf8=%E2%9C%93&query=reader)
 in addition to unsupported third party MMDB readers. Many are listed on the
-[GeoIP2 download page](https://dev.maxmind.com/geoip/geoip2/downloadable/). So,
-as far as deployments go, you're not constrained to any one language when you
-want to read from the database.
+[GeoIP2 download page](https://dev.maxmind.com/geoip/docs/databases/). So, as
+far as deployments go, you're not constrained to any one language when you want
+to read from the database.
 
 ## Following Along
 
@@ -415,9 +415,9 @@ combine it with our custom MMDB file.
 If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in
 `/usr/share/GeoIP`. If not, you may need to
 [download this file](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
-or use [geoipupdate](https://dev.maxmind.com/geoip/geoipupdate/). For more
-details on how to set this up, you can look at the `provision` section of the
-`Vagrantfile` in the GitHub repository.
+or use [geoipupdate](https://dev.maxmind.com/geoip/updating-databases/). For
+more details on how to set this up, you can look at the `provision` section of
+the `Vagrantfile` in the GitHub repository.
 
 You can take any number of fields from existing MaxMind databases to create your
 own custom database. In this case, let's extend our existing database by adding
