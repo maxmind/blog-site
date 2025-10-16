@@ -40,7 +40,7 @@ increased 92%.
 ## SNAPSHOT
 
 Web-based personalization is
-[becoming increasingly popular](https://www.businessinsider.com/shoppers-expect-more-personalization-2017-10?r=UK&IR=T)
+[becoming increasingly popular](https://www.businessinsider.com/sc/sailthru-personalization-segmentation-revenue-marketing-2017-11)
 among online companies and digital marketers. The practice allows a business to
 identify, segment, and target their visitors in order to serve them personalized
 content based on some identifiable attribute of the visitor - such as

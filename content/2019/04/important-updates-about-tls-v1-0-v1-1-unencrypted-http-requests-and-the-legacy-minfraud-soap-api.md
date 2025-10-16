@@ -34,8 +34,7 @@ In the coming months, we will be retiring the following:
 Read on below for more information. MaxMind is deeply committed to information
 security and protecting customer data, and taking these steps will allow us to
 ensure your data is as safe and secure as possible. If you have any questions,
-please do not hesitate to
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+please do not hesitate to [contact us](https://support.maxmind.com/).
 
 ---
 
@@ -61,7 +60,7 @@ version, or you may need to make code changes. The retirement date for TLS
 v1.0/v1.1 is October 16, 2019.
 
 If you have any questions at all, please do not hesitate to
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact us](https://support.maxmind.com/).
 
 ---
 
@@ -92,7 +91,7 @@ Below is a list of affected (legacy **minFraud** service) URLs:
 We also highly recommend that our **GeoIP** customers use HTTPS instead of HTTP.
 
 If you have any questions at all, please do not hesitate to
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact us](https://support.maxmind.com/).
 
 ---
 
@@ -140,7 +139,7 @@ If you need to continue using SOAP after October 16, 2019 until January 31,
 used by your current WSDL file to force it to use HTTPS.
 
 If you have any questions at all, please do not hesitate to
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact us](https://support.maxmind.com/).
 
 ---
 
@@ -156,4 +155,4 @@ If you have any questions at all, please do not hesitate to
 | January 31, 2020 (revised to May 8, 2020) | Legacy minFraud SOAP API discontinued                                             |     |     |
 
 If you have any questions, please do not hesitate to
-[contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact us](https://support.maxmind.com/).

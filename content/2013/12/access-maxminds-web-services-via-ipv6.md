@@ -25,7 +25,7 @@ vast majority of our users to access our services and used by web users to
 access Internet content generally.
 
 For details on our servers’ IPv6 address records, see the
-[web service release notes](https://dev.maxmind.com/release-note/adding-ipv6-access-for-web-endpoints/).
+[web service release notes](https://dev.maxmind.com/minfraud/release-notes/2013/#adding-ipv6-access-for-web-endpoints).
 
 <!--lint disable no-emphasis-as-heading-->
 

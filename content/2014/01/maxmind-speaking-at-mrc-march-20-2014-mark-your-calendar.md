@@ -49,4 +49,4 @@ event for eCommerce payments and fraud professionals in the Americas.
 
 **_What Happens in Vegas … can stop online fraud!_**
 
-[![MRC Logo Link](/images/2014/01/Full-MRC-Logo_blue-300x88.png)](https://www.merchantriskcouncil.org/Pages/home.aspx)
+[![MRC Logo Link](/images/2014/01/Full-MRC-Logo_blue-300x88.png)](https://merchantriskcouncil.org/)

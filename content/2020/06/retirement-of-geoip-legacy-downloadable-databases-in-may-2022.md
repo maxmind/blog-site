@@ -26,10 +26,10 @@ your earliest convenience.
 [Our GeoIP Legacy databases have been retired!](/2022/06/geoip-legacy-databases-have-been-retired)
 
 We have provided GeoIP databases in the
-[‘Legacy’ formats](https://dev.maxmind.com/geoip/legacy/downloadable/) since
-MaxMind began about 18 years ago. A lot has changed on the Internet since then,
-and we have continued to adapt and innovate our offerings accordingly in order
-to serve our users. We introduced GeoIP2 in 2014 with full IPv6 support,
+['Legacy' formats](https://dev.maxmind.com/geoip/docs/web-services/legacy/)
+since MaxMind began about 18 years ago. A lot has changed on the Internet since
+then, and we have continued to adapt and innovate our offerings accordingly in
+order to serve our users. We introduced GeoIP2 in 2014 with full IPv6 support,
 localized data in multiple languages, additional data points, and a new format
 that has allowed us to continue making improvements to the data. Retiring the
 GeoIP Legacy databases will allow us to:
@@ -41,12 +41,12 @@ GeoIP Legacy databases will allow us to:
 We recognize that many projects and integrations still rely on the Legacy
 formats so we want to provide as much notice as possible and ample time for
 users to migrate to our current
-[GeoIP2 formats](https://dev.maxmind.com/geoip/geoip2/downloadable/).
+[GeoIP2 formats](https://dev.maxmind.com/geoip/docs/databases/).
 
 \*\*We will continue to support the
-[GeoIP Legacy web services](https://dev.maxmind.com/geoip/legacy/web-services/),
+[GeoIP Legacy web services](https://dev.maxmind.com/geoip/docs/web-services/legacy/),
 although there will be data changes as they switch to relying on
-[GeoIP2 data](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/). More
+[GeoIP2 data](https://dev.maxmind.com/geoip/whats-new-in-geoip2/). More
 information on this will be provided on June 15, 2020 in a
 [separate blog post](/2020/06/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022/).
 
@@ -56,7 +56,7 @@ If you are using one of our GeoIP Legacy databases, we recommend migrating to a
 GeoIP2 database in advance. We will send semi-annual email reminders to accounts
 which continue to download Legacy databases. You may be interested in reading
 our
-[What’s New in GeoIP2 page](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/).
+[What's New in GeoIP2 page](https://dev.maxmind.com/geoip/whats-new-in-geoip2/).
 
 ## How can I tell if I’m using a GeoIP Legacy database?
 
@@ -82,26 +82,23 @@ The GeoIP2 database equivalent (or replacement) of your GeoIP Legacy database is
 already accessible to you for download through your
 [MaxMind account](https://www.maxmind.com/en/accounts/current/geoip/downloads).
 If you have trouble finding the GeoIP2 equivalent, please feel free to
-[contact our support team](https://support.maxmind.com/hc/en-us/requests/new/).
+[contact our support team](https://support.maxmind.com/).
 
 You will need to adjust the database you are downloading via your download
 mechanism (generally, we recommend using our
-[GeoIP Update program](https://dev.maxmind.com/geoip/geoipupdate/) \[a
+[GeoIP Update program](https://dev.maxmind.com/geoip/updating-databases/) \[a
 [docker image](https://hub.docker.com/r/maxmindinc/geoipupdate) is available]).
 
 If you currently use the legacy binary format (.dat), you will need to integrate
-one of our
-[official](https://dev.maxmind.com/geoip/geoip2/downloadable/#MaxMind_Supported_APIs)
-or
-[third-party](https://dev.maxmind.com/geoip/geoip2/downloadable/#ThirdParty_APIs)
-GeoIP2 client APIs.
+one of our [official](https://dev.maxmind.com/geoip/docs/databases/) or
+[third-party](https://dev.maxmind.com/geoip/docs/databases/) GeoIP2 client APIs.
 
 You should also be familiar with GeoIP2 data changes (see our
-[What’s New in GeoIP2 page](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/)
+[What's New in GeoIP2 page](https://dev.maxmind.com/geoip/whats-new-in-geoip2/)
 for an overview) as you may need to adjust how you process/manipulate/transform
 the data in your workflows and systems (especially if you are using the CSV
 format).
 
 If you are unsure about how to proceed, please forward this information to the
 person(s) responsible for your technical integration. If you have any questions,
-please [contact us](https://support.maxmind.com/hc/en-us/requests/new/).
+please [contact us](https://support.maxmind.com/).

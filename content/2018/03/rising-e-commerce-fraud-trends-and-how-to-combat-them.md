@@ -57,14 +57,14 @@ services provide customers with many granular data points, along with
 [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) creation, to
 help refine their fraud management strategies. We also provide device
 identification and a
-[free Device Tracking Add-on](https://dev.maxmind.com/minfraud/device/), which
-tracks devices as they move across websites and IP addresses. Additionally, we
-provide
+[free Device Tracking Add-on](https://dev.maxmind.com/minfraud/track-devices/),
+which tracks devices as they move across websites and IP addresses.
+Additionally, we provide
 [post-query alerts](https://www.maxmind.com/en/minfraud-getting-started), which
 will alert merchants to suspicious transactions that may escape their initial
 risk detection, and a
-[chargeback reporting feature](https://dev.maxmind.com/minfraud/chargeback/), to
-help our algorithms identify more fraud.
+[chargeback reporting feature](https://dev.maxmind.com/minfraud/report-a-transaction/),
+to help our algorithms identify more fraud.
 
 ## Mobile Wallets Fraud
 

@@ -31,7 +31,7 @@ the advantages of GeoIP2 over GeoIP Legacy?**
     proxy or allocated by a satellite provider
 
 These differences are explained in more detail on our
-[What’s new in GeoIP2 page](https://dev.maxmind.com/geoip/geoip2/whats-new-in-geoip2/).
+[What's new in GeoIP2 page](https://dev.maxmind.com/geoip/whats-new-in-geoip2/).
 
 **How will the launch of GeoIP2 affect me?**
 

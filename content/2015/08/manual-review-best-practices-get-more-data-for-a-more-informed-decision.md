@@ -66,7 +66,7 @@ using a billing address in Florida with a departure airport in Chicago fails the
 common sense test from a consumer point of view, and could be pulled for review.
 
 Think about fraud scenarios common to your business and review the
-[inputs available to you](https://dev.maxmind.com/minfraud/minfraud-score-and-insights-api-documentation/).
+[inputs available to you](https://dev.maxmind.com/minfraud/api-documentation/).
 Prioritize the data you want to collect, and weigh the cost of increased
 customer friction relative to the benefits of enhanced fraud detection. Provide
 these inputs to the minFraud service for the best possible riskScore and help

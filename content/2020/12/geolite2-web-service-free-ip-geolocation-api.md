@@ -44,5 +44,5 @@ We’ll keep this brief: _why should you use the GeoLite2 web service?_
 
 If you’re an existing GeoLite2 database user, you can generate a license key and
 start using the service immediately. Our
-[GeoIP2 Precision web service client APIs](https://dev.maxmind.com/geoip/geoip2/web-services/)
+[GeoIP2 Precision web service client APIs](https://dev.maxmind.com/geoip/docs/web-services/)
 may be used with the GeoLite2 web services.

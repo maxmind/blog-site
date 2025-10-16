@@ -83,9 +83,9 @@ mechanism.
 1. Set your password and create a
    [license key](https://www.maxmind.com/en/accounts/current/license-key)
 1. Setup your download mechanism by using our
-   [GeoIP Update program](https://dev.maxmind.com/geoip/geoipupdate/#For_Free_GeoLite2_Databases)
-   or creating a
-   [direct download script](https://dev.maxmind.com/geoip/geoipupdate/#Direct_Downloads)
+   [GeoIP Update program](https://dev.maxmind.com/geoip/updating-databases/) or
+   creating a
+   [direct download script](https://dev.maxmind.com/geoip/updating-databases/)
 
 On **December 30, 2019**, downloads will no longer be served from our
 [public GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
