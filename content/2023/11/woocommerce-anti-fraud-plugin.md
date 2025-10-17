@@ -7,7 +7,7 @@ headerImage: "/images/2023/11/opmc-maxmind-ecommerce-plugin-partnership.webp"
 category:
   - "Fraud and risk"
 tag:
-  - "Ecommerce fraud detection"
+  - "eCommerce fraud detection"
   - "Credit card fraud"
 authors:
   - "Andra Mircioiu"
@@ -18,10 +18,8 @@ The
 is one of the simplest and most effective ways for online retailers to avoid
 losses from payment fraud.
 
-Online payment fraud has kept pace with the rapid growth of ecommerce sales.
-[One recent study by Juniper Research](https://web.archive.org/web/20211119083702/https://www.juniperresearch.com/researchstore/fintech-payments/online-payment-fraud-research-report)
-found that, in 2023, ecommerce merchants lost $38 billion in revenue to online
-fraud. By 2028, losses are expected to reach $91 billion.
+Online payment fraud has kept pace with the rapid growth of sales, with
+eCommerce fraud predicted by experts to exceed $107 billion in 2029.
 
 The
 [WooCommerce Anti-Fraud plugin](https://woocommerce.com/products/woocommerce-anti-fraud/?utm_source=maxmind&utm_medium=blog&utm_campaign=OPMC)
