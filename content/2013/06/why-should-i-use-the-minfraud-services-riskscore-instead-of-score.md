@@ -48,10 +48,10 @@ fraudulent behavior and adapt accordingly. Lastly, the algorithms behind the
 ‘riskScore’ aren’t disclosed. To learn more about the ‘riskScore’, please see
 our [website](https://www.maxmind.com/en/riskscore).
 
-MaxMind is constantly improving the ‘riskScore’ model to catch more fraud and we
+MaxMind is constantly improving the 'riskScore' model to catch more fraud and we
 highly recommend that minFraud service users keep their
 [minFraud versions](https://www.maxmind.com/en/minfraud_version) and
-[APIs](https://dev.maxmind.com/minfraud/#Client_APIs-1) up to date, and use the
+[APIs](https://dev.maxmind.com/minfraud/api-documentation/#client-apis) up to date, and use the
 minFraud
 [chargeback reporting API](https://dev.maxmind.com/minfraud/report-a-transaction/)
 in order to take advantage of this. To receive the ‘riskScore’, minFraud service

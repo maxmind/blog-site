@@ -14,8 +14,8 @@ authors:
   - "Christopher Luna"
 ---
 
-We’re excited to share a couple of new features that we recently added to our
-[minFraud service client APIs](https://dev.maxmind.com/minfraud/api-documentation#api-clients).
+We're excited to share a couple of new features that we recently added to our
+[minFraud service client APIs](https://dev.maxmind.com/minfraud/api-documentation#client-apis).
 
 ## Passing 3-D Secure Outcomes
 

@@ -54,7 +54,7 @@ payment options
 
 [NFC payment systems](https://www.cnet.com/how-to/how-nfc-works-and-mobile-payments/)
 are incorporating unique digital signatures and Apple Pay is
-[moving personal data off servers](https://www.cnbc.com/id/101992749#.) to
+[moving personal data off servers](https://www.cnbc.com/2014/09/11/how-hackers-could-still-get-around-apple-pay-security.html) to
 thwart fraud. At the same time, Apple Pay and other mobile payment options are
 really no more than glorified credit cards. Is the new technology real progress,
 or will the fraudsters just step up their game? Adaptation of the new payment

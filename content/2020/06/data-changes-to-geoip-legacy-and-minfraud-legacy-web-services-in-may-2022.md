@@ -66,7 +66,7 @@ data changes below will not disrupt your existing workflows.
 1. **IPv6 \[minFraud Legacy services]:** Historically, legacy minFraud services
    only provided IP country resolution for IPv6 addresses. At the end of May
    2022, all
-   [GeoIP Location Check outputs](https://dev.maxmind.com/minfraud/minfraud-legacy/#GeoIP_Location_Checks)
+   [GeoIP Location Check outputs](https://dev.maxmind.com/minfraud/minfraud-legacy/#output)
    (e.g., region, city, postal code) will support IPv6 addresses.
 
 ## What do I do?
