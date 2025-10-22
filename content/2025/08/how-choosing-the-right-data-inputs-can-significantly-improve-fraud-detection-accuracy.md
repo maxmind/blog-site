@@ -39,7 +39,7 @@ enrichment into a variety of business applications.
 
 This flexibility, however, means that our customers sometimes pass fewer than
 the
-[recommended minimum inputs for the minFraud service](https://support.maxmind.com/hc/en-us/articles/4407964824859-Pass-Inputs-to-minFraud#h_01GD1ECZX37JKW9DF69K5AXX7S).
+[recommended minimum inputs for the minFraud service](https://support.maxmind.com/hc/en-us/articles/4407964824859-Pass-Inputs-to-minFraud#recommended-minimum-inputs).
 
 Limiting the number of inputs sent to the minFraud API limits risk score
 accuracy. As highlighted in our

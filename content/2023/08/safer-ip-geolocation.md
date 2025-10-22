@@ -50,7 +50,7 @@ the misuse of data related to individuals, including huge fines. You can learn
 more about some best (and, in some cases, required) practices for dealing with
 MaxMind’s geolocation data on our Knowledge Base and Developer Portal:
 
-- [Keep geolocation databases up to date](https://support.maxmind.com/hc/en-us/articles/4408216129947-Download-and-Update-Databases#h_01G3XX572NHEHWRFGD30NVAT2R)
+- [Keep geolocation databases up to date](https://support.maxmind.com/hc/en-us/articles/4408216129947-Download-and-Update-Databases#update-schedule)
 - [Delete old geolocation data](https://support.maxmind.com/hc/en-us/articles/4408927681307)
 - [Monitor our Privacy Exclusions API](https://dev.maxmind.com/geoip/privacy-exclusions-api)
 
