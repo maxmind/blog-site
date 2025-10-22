@@ -33,7 +33,7 @@ within 7 days.
 
 If your license key has been exposed, you can replace it and correct the
 underlying issue that’s exposing your license key in your repositories.
-[Here’s how to replace your license key](https://support.maxmind.com/hc/en-us/articles/4407111761435-Replace-my-License-Key).
+[Here’s how to replace your license key](https://support.maxmind.com/knowledge-base/articles/replace-your-maxmind-license-key).
 
 All GitHub users can
 [enable push protection](https://docs.github.com/en/code-security/secret-scanning/push-protection-for-repositories-and-organizations)

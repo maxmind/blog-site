@@ -38,7 +38,7 @@ fine-tune the workflows you may have for specific types of transactions.
 This new output is present in the
 [Disposition response object](https://dev.maxmind.com/minfraud/api-documentation/responses#schema--response--disposition__rule_label)
 (links to our developer documentation). You can read more about
-[minFraud custom rules here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).
+[minFraud custom rules here](https://support.maxmind.com/knowledge-base/articles/use-custom-rules-and-dispositions-minfraud-maxmind).
 
 ## A ‘Test’ Disposition
 
@@ -55,4 +55,4 @@ as to not interfere with existing production workflows. This new value is
 present in the
 [Disposition response object in the `/action/` output](https://dev.maxmind.com/minfraud/api-documentation/responses#schema--response--disposition__action)
 (links to our developer documentation). You can read more about
-[minFraud custom rules here](https://support.maxmind.com/hc/en-us/articles/4408801942811-Use-Custom-Rules-and-Dispositions).
+[minFraud custom rules here](https://support.maxmind.com/knowledge-base/articles/use-custom-rules-and-dispositions-minfraud-maxmind).

@@ -45,7 +45,7 @@ your account.
 Make sure that all users on your account have an up-to-date email address where
 they can receive their one-time security codes:
 
-- [Learn how to update user information on our Knowledge Base.](https://support.maxmind.com/hc/en-us/articles/4407099960347-Update-my-Account-Information)
+- [Learn how to update user information on our Knowledge Base.](https://support.maxmind.com/knowledge-base/articles/update-your-maxmind-account-information)
 
 Alternatively, if you prefer to use security key authentication, you should
 enable this for all of your users:

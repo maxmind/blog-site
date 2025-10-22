@@ -157,7 +157,7 @@ can use an existing, stored, license key or
 [generate a new one in your account portal](https://www.maxmind.com/en/accounts/current/license-key).
 Be careful with this key -- you don't want it getting out in the wild or else
 anyone can use it to use up your MaxMind credit! See
-[this link](https://support.maxmind.com/hc/en-us/articles/4407111617435-Secure-my-License-Key)
+[this link](https://support.maxmind.com/knowledge-base/articles/secure-your-maxmind-license-key)
 for instructions on how to safely store your license key -- in particular, don't
 commit the key to any repository. Once you've obtained your account ID and
 license key, replace `YOURACCOUNTID` with the account ID and `YOURLICENSEKEY`
