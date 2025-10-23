@@ -2,6 +2,8 @@
 ^https://dev\.mysql\.com
 ^https://eslint\.org
 ^http://localhost
+https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#DATA\-TYPES
+https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#Insert\-Order\-Merging\-and\-Overwriting
 ^https://minfraud\.maxmind\.com
 ^https://paymentweek\.com
 ^https://sandbox\.maxmind\.com

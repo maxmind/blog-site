@@ -39,7 +39,7 @@ enrichment into a variety of business applications.
 
 This flexibility, however, means that our customers sometimes pass fewer than
 the
-[recommended minimum inputs for the minFraud service](https://support.maxmind.com/hc/en-us/articles/4407964824859-Pass-Inputs-to-minFraud#h_01GD1ECZX37JKW9DF69K5AXX7S).
+[recommended minimum inputs for the minFraud service](https://support.maxmind.com/knowledge-base/articles/pass-inputs-to-minfraud#recommended-minimum-inputs).
 
 Limiting the number of inputs sent to the minFraud API limits risk score
 accuracy. As highlighted in our
@@ -105,14 +105,14 @@ Before we reveal the results, here are the three risk indicators in detail:
 - **IP risk score** Available in the
   [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
   the
-  [IP risk score](https://support.maxmind.com/hc/en-us/articles/30721692872603-IP-Risk-Score)
+  [IP risk score](https://support.maxmind.com/knowledge-base/articles/minfraud-ip-risk-score)
   goes beyond the Anonymous IP flag to report the relative riskiness of IPs,
   which includes risky IPs that are not flagged as anonymous.
 
 - **minFraud risk score** Available in the
   [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
   the
-  [overall risk score](https://support.maxmind.com/hc/en-us/articles/4408382414235-Overall-Risk-Score)
+  [overall risk score](https://support.maxmind.com/knowledge-base/articles/overall-risk-score-minfraud-maxmind)
   factors in the IP risk score and also incorporates real-time dynamic checks
   from a wide range of input data (i.e. attributes such as email, phone number,
   shipping address, IIN, and billing postal code).

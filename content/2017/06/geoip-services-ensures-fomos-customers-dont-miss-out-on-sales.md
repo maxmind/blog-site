@@ -50,7 +50,7 @@ Social proof is a relatively new branch of marketing that borrows from the
 [psychological phenomenon](https://en.wikipedia.org/wiki/Social_proof) known as
 Informational Social Influence. Social proof marketing advocates follow the
 principle that
-[customers seek influence from their peers](https://www.forbes.com/sites/miketempleman/2017/04/03/6-ways-to-integrate-social-proof-in-your-saas-marketing-strategy/#7e27d93585f8)
+[customers seek influence from their peers](https://www.forbes.com/sites/miketempleman/2017/04/03/6-ways-to-integrate-social-proof-in-your-saas-marketing-strategy/)
 before making a decision. In fact, Fomo is aptly named. The concept of “missing
 out” is ingrained in those who are
 [hooked on social media](https://psychcentral.com/blog/fear-of-missing-out).

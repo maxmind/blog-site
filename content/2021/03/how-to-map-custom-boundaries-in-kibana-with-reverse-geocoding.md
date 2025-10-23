@@ -79,7 +79,7 @@ _GeoIP's longitude and latitude data can be combined with its `accuracy_radius`
 data to help combat false confidence in its geolocation coordinates._
 
 _You can learn more about
-[the accuracy of GeoIP on our Support Center](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)._
+[the accuracy of GeoIP on our Support Center](https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy)._
 
 That kind of scale in the United States is often captured with what the Census
 Bureau calls the Combined Statistical Area (CSA). It is roughly equivalent with

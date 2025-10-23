@@ -221,7 +221,7 @@ applications.
 You can learn more about IP geolocation by reading:
 
 - How accurate is IP geolocation data? on the MaxMind blog
-- [Geolocation Accuracy](https://support.maxmind.com/hc/en-us/articles/4407630607131-Geolocation-Accuracy)
+- [Geolocation Accuracy](https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy)
   on the MaxMind Knowledge Base
-- [Documentation on mappable area data](https://support.maxmind.com/hc/en-us/articles/4414877149467-IP-Geolocation-Data#h_01FRRHZZP6RAYSNZTYE4MQ3MWY)
+- [Documentation on mappable area data](https://support.maxmind.com/knowledge-base/articles/maxmind-ip-geolocation-data#geolocation-area)
   on the MaxMind Knowledge Base
