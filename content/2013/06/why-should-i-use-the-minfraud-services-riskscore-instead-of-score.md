@@ -51,8 +51,8 @@ our [website](https://www.maxmind.com/en/riskscore).
 MaxMind is constantly improving the 'riskScore' model to catch more fraud and we
 highly recommend that minFraud service users keep their
 [minFraud versions](https://www.maxmind.com/en/minfraud_version) and
-[APIs](https://dev.maxmind.com/minfraud/api-documentation/#client-apis) up to date, and use the
-minFraud
+[APIs](https://dev.maxmind.com/minfraud/api-documentation/#client-apis) up to
+date, and use the minFraud
 [chargeback reporting API](https://dev.maxmind.com/minfraud/report-a-transaction/)
 in order to take advantage of this. To receive the ‘riskScore’, minFraud service
 users will need to use at least minFraud version 1.1 (users with older minFraud
