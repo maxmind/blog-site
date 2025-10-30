@@ -59,7 +59,7 @@ address is very likely to be._
 
 Our data does a good job of estimating the approximate location of IP addresses
 (see the
-[accuracy for our GeoIP2 City database](https://www.maxmind.com/en/geoip2-city-accuracy-comparison?country=&resolution=100&cellular=excluding)).
+[accuracy for our GeoIP2 City database](https://www.maxmind.com/en/geoip-accuracy-comparison?country=&resolution=100&cellular=excluding)).
 But if you use any of our geolocation or fraud prevention products you’ve
 probably already seen the caveat we post throughout our documentation, that our
 data is never precise enough to locate the street address of a particular
@@ -194,10 +194,10 @@ determined. Only the IP address of the proxy can be geolocated, and often this
 isn’t what you’re looking for at all. You can read more about
 [VPNs and other anonymizers on our blog](/2019/01/types-of-anonymous-ips-and-how-they-affect-your-business/).
 We provide solutions for proxy detection through the
-[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database),
-[GeoIP2 Precision Insights web service](https://www.maxmind.com/en/geoip2-precision-insights),
+[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database),
+[GeoIP2 Precision Insights web service](https://www.maxmind.com/en/geoip-api-web-services),
 and
-[the minFraud Insights and Factors services](https://www.maxmind.com/en/solutions/minfraud-services#compare-features),
+[the minFraud Insights and Factors services](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
 but geolocation of the end-user isn’t possible.
 
 ##### Static IPs and multiple users
@@ -294,11 +294,11 @@ only tool in your toolbox when it comes to analyzing IP addresses. In addition
 to geolocation, MaxMind offers IP intelligence data and tools that can help you
 to (among other things) contextualize and make better use of geolocation data
 itself. These tools include things like an accuracy radius that comes in all of
-our [GeoIP2 City](https://www.maxmind.com/en/geoip2-precision-city-service)
-products and services, as well as confidence factors in our
-[GeoIP2 Precision Insights web service](https://www.maxmind.com/en/geoip2-precision-insights)
+our [GeoIP2 City](https://www.maxmind.com/en/geoip-api-web-services) products
+and services, as well as confidence factors in our
+[GeoIP2 Precision Insights web service](https://www.maxmind.com/en/geoip-api-web-services)
 and
-[GeoIP2 Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database).
+[GeoIP2 Enterprise database](https://www.maxmind.com/en/geoip-enterprise-database).
 Looking beyond raw indicators of accuracy, we provide a diverse array of IP
 intelligence data through GeoIP2 products and web services that can be used to
 help answer the underlying questions that you may be attempting to answer with

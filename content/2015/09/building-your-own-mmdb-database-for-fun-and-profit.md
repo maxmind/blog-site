@@ -21,7 +21,7 @@ instead. Please see our post on
 ## Introduction
 
 If you use a GeoIP database, you're probably familiar with MaxMind's
-[MMDB format](https://github.com/maxmind/MaxMind-DB/blob/master/MaxMind-DB-spec.md).
+[MMDB format](https://github.com/maxmind/MaxMind-DB/blob/main/MaxMind-DB-spec.md).
 
 At MaxMind, we created the MMDB format because we needed a format that was very
 fast and highly portable. MMDB comes with supported readers in many languages.
@@ -373,7 +373,7 @@ As in the previous example, we create a new `MaxMind::DB::Reader` object.
 ### Step 2
 
 To dump our data, we pass an anonymous subroutine to the
-[iterate_search_tree() method](https://metacpan.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree(-%24data_callback%2C-%24node_callback-)).
+[iterate_search_tree() method](<https://metacpan.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree(-%24data_callback%2C-%24node_callback-)>).
 (This method can actually take two callbacks, but the second callback is for
 debugging the actual nodes in the tree -- that's too low level for our purposes
 today.)

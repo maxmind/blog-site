@@ -82,7 +82,7 @@ The GeoIP2 database equivalent (or replacement) of your GeoIP Legacy database is
 already accessible to you for download through your
 [MaxMind account](https://www.maxmind.com/en/accounts/current/geoip/downloads).
 If you have trouble finding the GeoIP2 equivalent, please feel free to
-[contact our support team](https://support.maxmind.com/).
+[contact our support team](https://support.maxmind.com/knowledge-base).
 
 You will need to adjust the database you are downloading via your download
 mechanism (generally, we recommend using our
@@ -101,4 +101,4 @@ format).
 
 If you are unsure about how to proceed, please forward this information to the
 person(s) responsible for your technical integration. If you have any questions,
-please [contact us](https://support.maxmind.com/).
+please [contact us](https://support.maxmind.com/knowledge-base).

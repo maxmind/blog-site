@@ -17,7 +17,7 @@ authors:
 ---
 
 We have updated our data in a number of ways in preparation for the rollout of
-[iCloud Private Relay](https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/).
+[iCloud Private Relay](https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/).
 We have worked with Apple’s to ensure that our data accurately reflects how
 Private Relay works and delivers the best possible experience for your users.
 
@@ -25,12 +25,12 @@ Private Relay works and delivers the best possible experience for your users.
   geolocation feeds published by Apple, which provides coarse city or region
   geolocation mappings for iCloud Private Relay IPs.
 - We identify iCloud Private Relay IPs in our ISP dataset (present in our
-  [GeoIP2 ISP](https://www.maxmind.com/en/geoip2-isp-database) and
-  [Enterprise](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database)
-  databases, and our
-  [GeoIP2 Precision Insights](https://www.maxmind.com/en/geoip2-precision-insights)
+  [GeoIP2 ISP](https://www.maxmind.com/en/geoip-databases) and
+  [Enterprise](https://www.maxmind.com/en/geoip-enterprise-database) databases,
+  and our
+  [GeoIP2 Precision Insights](https://www.maxmind.com/en/geoip-api-web-services)
   and
-  [minFraud Insights and Factors](https://www.maxmind.com/en/solutions/minfraud-services)
+  [minFraud Insights and Factors](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
   web services) by tagging ranges as `iCloud Private Relay`.
 
 Apple has shared the following assurances built into Private Relay:
@@ -47,9 +47,8 @@ Apple has shared the following assurances built into Private Relay:
 Customers do not need to take any action to receive this data.
 
 For web service customers, this data will be returned in the
-[`/traits/isp`](https://dev.maxmind.com/geoip/docs/web-services/responses#schema--response--traits__isp)
-and
-[`/traits/organization`](https://dev.maxmind.com/geoip/docs/web-services/responses#schema--response--traits__organization)
+[`/traits/isp`](https://dev.maxmind.com/geoip/docs/web-services/responses/) and
+[`/traits/organization`](https://dev.maxmind.com/geoip/docs/web-services/responses/)
 outputs, and in geolocation outputs.
 
 For database customers, this data has been included in the latest release of our
@@ -59,7 +58,7 @@ included in the latest GeoIP2 City or Enterprise database.
 
 For more information about Private Relay along with helpful technical
 information, visit
-[Prepare Your Network or Web Server for Private Relay](https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/)
+[Prepare Your Network or Web Server for Private Relay](https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/)
 on Apple’s developer website.
 
 We will continue to monitor these IPs and may change how we handle them in the

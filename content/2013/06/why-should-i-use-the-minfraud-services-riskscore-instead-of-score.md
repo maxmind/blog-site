@@ -46,7 +46,7 @@ which allows for the analysis of more risk elements. In addition, the
 network of minFraud merchants in order to better recognize patterns of
 fraudulent behavior and adapt accordingly. Lastly, the algorithms behind the
 ‘riskScore’ aren’t disclosed. To learn more about the ‘riskScore’, please see
-our [website](https://www.maxmind.com/en/riskscore).
+our [website](https://www.maxmind.com/en/solutions/fraud-prevention/overview).
 
 MaxMind is constantly improving the 'riskScore' model to catch more fraud and we
 highly recommend that minFraud service users keep their

@@ -21,7 +21,7 @@ relatively new company, but our growth has been phenomenal since we added
 MaxMind’s GeoIP2 Precision services,” said Fomo’s co-founder Ryan Kulp.
 
 Within five months of using
-[GeoIP2 Precision services (Country and City)](https://www.maxmind.com/en/geoip2-precision-services),
+[GeoIP2 Precision services (Country and City)](https://www.maxmind.com/en/geoip-api-web-services),
 Fomo has curated more than 100,000 unique browsing transactions for their
 e-commerce partners and helped their clients achieve double-digit growth in
 consumer adoptions. For example, Sphynx, a manufacturer of pocket-sized electric
@@ -42,9 +42,9 @@ uses GeoIP2 Precision services to determine the geographic location of website
 users. The intent is to localize user interactions and transactional behaviors
 such as purchases, sign-ups and comments. That intelligence is displayed in
 real-time notifications that appear on websites (click
-[here](https://www.usefomo.com/solutions/super-sized) to see Fomo in action).
-It’s the online equivalent of a busy restaurant, showing prospective customers
-social proof that other people also visit and interact with a website.
+[here](https://fomo.com/product-tour) to see Fomo in action). It’s the online
+equivalent of a busy restaurant, showing prospective customers social proof that
+other people also visit and interact with a website.
 
 Social proof is a relatively new branch of marketing that borrows from the
 [psychological phenomenon](https://en.wikipedia.org/wiki/Social_proof) known as
@@ -53,7 +53,7 @@ principle that
 [customers seek influence from their peers](https://www.forbes.com/sites/miketempleman/2017/04/03/6-ways-to-integrate-social-proof-in-your-saas-marketing-strategy/)
 before making a decision. In fact, Fomo is aptly named. The concept of “missing
 out” is ingrained in those who are
-[hooked on social media](https://psychcentral.com/blog/fear-of-missing-out).
+[hooked on social media](https://psychcentral.com/health/what-is-fomo-the-fear-of-missing-out).
 “People feel comfortable buying from a website they know other people are buying
 from,” said Kulp. “With Fomo and MaxMind, people visiting e-commerce shops can
 see, for example, that John just purchased a shirt 2 minutes ago and where he is
@@ -92,5 +92,4 @@ thrilled with the results we’ve seen since choosing MaxMind as our partner.”
 ---
 
 To find out more about MaxMind’s GeoIP2 Precision services or to request a free
-trial, simply click
-[here](https://www.maxmind.com/en/geoip2-precision-services).
+trial, simply click [here](https://www.maxmind.com/en/geoip-api-web-services).

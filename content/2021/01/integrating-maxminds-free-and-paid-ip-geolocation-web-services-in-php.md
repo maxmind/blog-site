@@ -24,7 +24,7 @@ compatible with GeoIP2, using the same API and integration method, making it
 easy to switch between the free and paid services as your needs change. You can
 compare accuracy of the GeoLite2 and GeoIP2 web services by selecting a country
 on the
-[GeoIP2 City Accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison)
+[GeoIP2 City Accuracy](https://www.maxmind.com/en/geoip-accuracy-comparison)
 page.
 
 In this blog post, we are going to review how to build a simple web page in PHP
@@ -325,11 +325,10 @@ Finally, we end the HTML page and our script is complete:
 ## Upgrading to the GeoIP2 Precision City Web Service
 
 In order to upgrade to the GeoIP2 Precision City web service, we have to
-[purchase credit](https://www.maxmind.com/en/geoip2-precision-city-service) for
-our MaxMind account and be approved for service. Once our account has been
-approved for GeoIP2, we remove the locale and host parameters from the
-constructor, where we've previously defined the host used for the lookups to be
-`geolite.info`.
+[purchase credit](https://www.maxmind.com/en/geoip-api-web-services) for our
+MaxMind account and be approved for service. Once our account has been approved
+for GeoIP2, we remove the locale and host parameters from the constructor, where
+we've previously defined the host used for the lookups to be `geolite.info`.
 
 ```phtml
 // This creates a Client object that can be reused across requests. To

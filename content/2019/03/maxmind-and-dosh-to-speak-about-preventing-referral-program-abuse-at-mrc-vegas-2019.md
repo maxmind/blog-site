@@ -56,7 +56,7 @@ services for e-commerce professionals.
 
 Send us an email at <mrc@maxmind.com> to schedule a meeting, or stop by booth
 \#401 to meet us and
-[learn more about the minFraud service](https://www.maxmind.com/en/solutions/minfraud-services).
+[learn more about the minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview).
 We look forward to meeting you!
 
 ![](/images/2019/03/branded_images.php_-1024x205.jpeg)

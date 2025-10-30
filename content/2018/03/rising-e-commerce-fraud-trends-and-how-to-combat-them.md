@@ -14,7 +14,7 @@ authors:
 
 The global e-commerce market size grew to a record $2.2 trillion in 2017, and
 there are
-[no signs of a slowdown in 2018](https://www.researchandmarkets.com/research/hvj5vs/global_ecommerce?w=12),
+[no signs of a slowdown in 2018](https://www.researchandmarkets.com/reports/5145207/e-commerce-logistics-and-e-fulfilment-market-2025?w=12),
 as more and more people turn to the virtual marketplace for their shopping
 needs.
 
@@ -32,7 +32,7 @@ businesses’ internal fraud detection strategies. According to a recent report,
 more than 90 percent of businesses support omnichannel commerce, but only about
 46 percent have sufficient fraud management solutions on all those channels. In
 fact, card-not-present fraud is
-[expected to outpace e-commerce growth](https://www.thepaypers.com/interviews/fraud-solutions-for-order-reviews-are-of-seminal-importance-for-ecommerce/771568-38),
+[expected to outpace e-commerce growth](https://thepaypers.com:443/interviews/fraud-solutions-for-order-reviews-are-of-seminal-importance-for-ecommerce/771568-38),
 leaving many businesses to quickly scale their anti-fraud capabilities in order
 to keep up.
 
@@ -51,18 +51,19 @@ the merchant.
 from many different data sets, rather than focusing on one fraud type at a time.
 In this way, businesses may quickly adjust and rebalance their fraud detection
 to scale alongside their current and future omnichannel applications. MaxMind’s
-[minFraud Insights and minFraud Factors](https://www.maxmind.com/en/minfraud-services)
+[minFraud Insights and minFraud Factors](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 services provide customers with many granular data points, along with
-[Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) and
-[Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) creation, to
-help refine their fraud management strategies. We also provide device
-identification and a
+[Custom Rules](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+and
+[Custom Inputs](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+creation, to help refine their fraud management strategies. We also provide
+device identification and a
 [free Device Tracking Add-on](https://dev.maxmind.com/minfraud/track-devices/),
 which tracks devices as they move across websites and IP addresses.
 Additionally, we provide
-[post-query alerts](https://www.maxmind.com/en/minfraud-getting-started), which
-will alert merchants to suspicious transactions that may escape their initial
-risk detection, and a
+[post-query alerts](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
+which will alert merchants to suspicious transactions that may escape their
+initial risk detection, and a
 [chargeback reporting feature](https://dev.maxmind.com/minfraud/report-a-transaction/),
 to help our algorithms identify more fraud.
 
@@ -96,15 +97,16 @@ inherent in any e-commerce transaction.
 
 **What to do:** Fortunately, machine learning algorithms get smarter as they
 process more data. Our
-[minFraud services](https://www.maxmind.com/en/minfraud-services) use
-transactional data from over 2 billion historical transactions as the basis for
-our risk assessment. Each minFraud service (minFraud Score, minFraud Insights,
-and minFraud Factors) includes, at minimum, an IP risk score and a proprietary
-riskScore to help fraud analysts make informed decisions. For more granular
-data, minFraud Insights and minFraud Factors provide a Confidence Score, phone
-checks, email checks, IP address checks,
-[anonymizer-type outputs](https://dev.maxmind.com/minfraud/release-notes/), and
-[many other data points](https://www.maxmind.com/en/minfraud-service-comparison)
+[minFraud services](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+use transactional data from over 2 billion historical transactions as the basis
+for our risk assessment. Each minFraud service (minFraud Score, minFraud
+Insights, and minFraud Factors) includes, at minimum, an IP risk score and a
+proprietary riskScore to help fraud analysts make informed decisions. For more
+granular data, minFraud Insights and minFraud Factors provide a Confidence
+Score, phone checks, email checks, IP address checks,
+[anonymizer-type outputs](https://dev.maxmind.com/minfraud/release-notes/2025/),
+and
+[many other data points](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 that support informed risk modeling applications.
 
 We hope you find this information useful to your e-commerce strategies. With a

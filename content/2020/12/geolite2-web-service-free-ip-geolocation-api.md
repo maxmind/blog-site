@@ -26,14 +26,14 @@ We’ll keep this brief: _why should you use the GeoLite2 web service?_
   uptime.
 - **Accuracy.** We know that IP geolocation has its limitations and we strive to
   be as transparent as possible about our
-  [accuracy numbers](https://www.maxmind.com/en/geoip2-city-accuracy-comparison)
-  for both our free and paid solutions.
+  [accuracy numbers](https://www.maxmind.com/en/geoip-accuracy-comparison) for
+  both our free and paid solutions.
 - **Accessibility.** [Our APIs are public](https://dev.maxmind.com/geoip/) and
   widely adopted which is why you have probably seen MaxMind integrated in some
   of the platforms you use, and probably why you know about us.
 - **Flexibility.** If you need more accurate or other kinds of IP data all you
   need to do is switch out the URL to call one of our
-  [paid web services](https://www.maxmind.com/en/geoip2-precision-services). We
+  [paid web services](https://www.maxmind.com/en/geoip-api-web-services). We
   don’t require a subscription or commitment. You can pay as you go and service
   credits don’t expire.
 

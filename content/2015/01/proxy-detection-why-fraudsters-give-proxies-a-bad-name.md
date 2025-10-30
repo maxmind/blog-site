@@ -25,7 +25,7 @@ But although there are legitimate uses of proxies, fraudsters find it useful to
 take advantage of one of its characteristics; accessing the Internet through a
 proxy makes it more difficult to locate a user by means of an IP address. This
 enables
-[some to use anonymizing proxies to access content from which they would otherwise be blocked](https://cyber.law.harvard.edu/publications/2010/Circumvention_Tool_Usage).
+[some to use anonymizing proxies to access content from which they would otherwise be blocked](https://cyber.harvard.edu/publications/2010/Circumvention_Tool_Usage).
 Others use open proxies to hide their whereabouts and thereby circumvent fraud
 detection rules associated with location.
 
@@ -62,8 +62,8 @@ detection systems need to incorporate monitoring for this type of activity in
 order to stop them. Since proxies can generate good traffic as well as bad,
 proxy detection requires analysis of transaction data to assess which IPs are
 higher risk. Merchants using MaxMind’s
-[minFraud service](https://www.maxmind.com/en/minfraud-services) benefit from a
-corresponding increased risk score to enable them to take action.
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+benefit from a corresponding increased risk score to enable them to take action.
 
 ![open proxy list](/images/2015/01/open-proxy-list-300x231.png)
 

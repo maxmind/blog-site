@@ -22,7 +22,7 @@ Elastic. Elastic builds software to make data usable in real time and at scale
 for search, logging, security, and analytics use cases. Elastic's tools make it
 easier for operations teams to keep applications running, or give security
 professionals a one-stop-shop for spotting and neutralizing digital threats.
-Learn more at [elastic.co](http://www.elastic.co/).
+Learn more at [elastic.co](https://www.elastic.co/).
 
 Want to create a map of where your users are? With the GeoIP processor, you can
 easily
@@ -111,8 +111,8 @@ Most integrations can rely on the
 to transform an IP location into a `geo_point` field.
 
 Whatever process you have used to index your data, you’ll have a document using
-the [ECS schema](https://www.elastic.co/guide/en/ecs/current/ecs-geo.html) that
-will contain two sets of fields created by the GeoIP processor:
+the [ECS schema](https://www.elastic.co/docs/reference/ecs/ecs-geo) that will
+contain two sets of fields created by the GeoIP processor:
 
 - destination.geo.\* for where requests are going (usually a data center)
 - client.geo.\* for the origin of the request, sometimes called`origin.geo.*`.

@@ -15,9 +15,9 @@ As more and more TV, music, and movie content has moved online, a veritable
 industry has grown up around helping people to circumvent location based
 broadcast restrictions. Demonstrating the scale of the issue, GlobalWatchIndex
 reports that as many as
-[29% of VPN users globally accessed Netflix](https://www.globalwebindex.net/blog/29-of-vpn-users-accessing-netflix)
-in one recent month. Tutorials for how to access this and other streaming
-services abound.
+[29% of VPN users globally accessed Netflix](https://www.gwi.com/blog) in one
+recent month. Tutorials for how to access this and other streaming services
+abound.
 
 Streaming providers are required by content licensors to geographically restrict
 access to the content they license. Providers risk losing content licensors’
@@ -80,7 +80,7 @@ traditional IP geolocation.
 ## MaxMind’s Database Solution
 
 We created the
-[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip2-anonymous-ip-database)
+[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database)
 to assist content licensees in meeting their geofiltering contract requirements
 while addressing their needs for a low-latency solution. Our GeoIP2 Anonymous IP
 database identifies IP addresses such that are likely to be used for
