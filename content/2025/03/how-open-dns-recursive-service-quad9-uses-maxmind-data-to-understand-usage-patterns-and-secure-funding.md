@@ -25,7 +25,7 @@ provides enhanced cybersecurity measures, privacy protection, and improved
 internet performance for privacy-conscious users around the world. The only
 global DNS security provider that offers universal privacy protections, Quad9
 moved its headquarters to Zürich, Switzerland in 2021. As Quad9 writes in their
-[announcement of the move](https://www.quad9.net/news/blog/quad9-public-domain-name-service-moves-to-switzerland-for-maximum-internet-privacy-protection/),
+[announcement of the move](https://quad9.net/news/blog/quad9-public-domain-name-service-moves-to-switzerland-for-maximum-internet-privacy-protection/),
 “Switzerland has a legal privacy regime harmonized with the European-standard
 General Data Protection Regulation. It grants individuals enforceable rights and
 effective remedies, giving Quad9 users around the world the full protection of
@@ -72,7 +72,7 @@ equipment.
 
 Quad9 does not collect or sell personal data, which is often a revenue stream
 relied on by other free DNS services. More specifics can be found in Quad9’s
-[Transparency Report](https://www.quad9.net/about/transparency-report/) but John
+[Transparency Report](https://quad9.net/about/transparency-report/) but John
 summarizes:
 
 “It’s impossible for us to associate DNS queries with any one person. This is by
@@ -155,4 +155,4 @@ businesses, that level of accuracy may be more of a value than a liability.
 
 If you would like to support Quad9 in its mission to provide everyone with a
 safer and more robust Internet, you can
-[donate online](https://www.quad9.net/donate).
+[donate online](https://quad9.net/donate/).

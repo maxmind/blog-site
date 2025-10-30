@@ -52,7 +52,7 @@ MaxMind’s geolocation data on our Knowledge Base and Developer Portal:
 
 - [Keep geolocation databases up to date](https://support.maxmind.com/knowledge-base/articles/download-and-update-maxmind-databases#update-schedule)
 - [Delete old geolocation data](https://support.maxmind.com/knowledge-base/articles/maintain-up-to-date-data)
-- [Monitor our Privacy Exclusions API](https://dev.maxmind.com/geoip/privacy-exclusions-api)
+- [Monitor our Privacy Exclusions API](https://dev.maxmind.com/geoip/privacy-exclusions-api/)
 
 Following good data handling practices may help reduce your risk of accidental
 or intentional regulatory non-compliance, and Safe Coordinates is just one of

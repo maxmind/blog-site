@@ -26,7 +26,7 @@ IPv6 is the latest standard developed by the
 (IETF) for assigning addresses to devices in order to enable communication
 within networks. It is the successor to the IPv4 standard, which suffers from
 the problem of
-[exhaustion (of available IPv4 addresses](https://www.ripe.net/manage-ips-and-asns/ipv4/ipv4-run-out)).
+[exhaustion (of available IPv4 addresses](https://www.ripe.net/manage-ips-and-asns/ipv4/ipv4-run-out/)).
 IPv6 solves this problem by using a 128-bit address instead of IPv4’s 32-bit
 address, which yields a possible pool of IPv6 addresses that is more than
 [7.9 x 10^28 the pool of IPv4 addresses](https://en.wikipedia.org/wiki/IPv6).

@@ -61,4 +61,4 @@ account/user.
 ---
 
 If you have any questions about minFraud alerts or any feedback, please
-[contact us](https://support.maxmind.com/).
+[contact us](https://support.maxmind.com/knowledge-base).

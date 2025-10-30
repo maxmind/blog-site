@@ -73,7 +73,7 @@ For debian and ubuntu users, they offer a .deb file.
 
 ##### Other OS
 
-See [Hugo Installation](https://gohugo.io/getting-started/installing/)
+See [Hugo Installation](https://gohugo.io/installation/)
 
 #### Install Embedded Dart Sass
 

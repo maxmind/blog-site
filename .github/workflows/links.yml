@@ -18,7 +18,7 @@ jobs:
         uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0
         with:
           fail: true
-          args: --include-fragments --accept '100..=103, 200..=299, 403, 429, 500..=599, 999' './**/*.md' './**/*.html'
+          args: --include-fragments --max-redirects 0 --accept '100..=103, 200, 201, 202, 203, 204, 205, 206, 301, 302, 307, 308, 403, 429, 500..=599, 999' './content/**/*.md' './layouts/**/*.html' './README.md'
 
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0

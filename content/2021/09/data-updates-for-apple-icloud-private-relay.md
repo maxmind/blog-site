@@ -17,7 +17,7 @@ authors:
 ---
 
 We have updated our data in a number of ways in preparation for the rollout of
-[iCloud Private Relay](https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/).
+[iCloud Private Relay](https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/).
 We have worked with Apple’s to ensure that our data accurately reflects how
 Private Relay works and delivers the best possible experience for your users.
 
@@ -59,7 +59,7 @@ included in the latest GeoIP2 City or Enterprise database.
 
 For more information about Private Relay along with helpful technical
 information, visit
-[Prepare Your Network or Web Server for Private Relay](https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/)
+[Prepare Your Network or Web Server for Private Relay](https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/)
 on Apple’s developer website.
 
 We will continue to monitor these IPs and may change how we handle them in the
