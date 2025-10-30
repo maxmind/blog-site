@@ -89,7 +89,7 @@ high fraud rates, leading to
 stateside. To try to stem those concerns, the US and other countries began
 advocating additional security measures, like two-factor authentication for
 mobile payment applications. But dedicated fraudsters have
-[little problem bypassing weaker implementations](https://shahmeeramir.com/4-methods-to-bypass-two-factor-authentication-2b0075d9eb5f),
+[little problem bypassing weaker implementations](https://portswigger.net/web-security/authentication/multi-factor),
 using tried-and-true methods including phishing, malware, Wi-Fi snooping,
 credential stuffing, and tons of other ways to beat the system. In short, any
 online payment method, no matter the type, will always be subject to the risks

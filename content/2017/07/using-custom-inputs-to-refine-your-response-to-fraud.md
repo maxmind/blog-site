@@ -55,7 +55,7 @@ that’s becoming increasingly popular with cybercriminals:
 
 Loyalty programs are an excellent way to strengthen your relationship with
 customers. In fact, loyalty programs in the U.S. alone
-[achieved double-digit growth](https://www.colloquy.com/latest-news/u-s-customer-loyalty-program-memberships-reach-double-digit-growth-at-3-8-billion-2017-colloquy-loyalty-census-reports/)
+[achieved double-digit growth](https://www.pymnts.com/news/retail/2017/customer-loyalty-programs-reach-3-8-billion-in-u-s/)
 (to 3.8 billion members) in 2017. Loyalty points can be spent like cash, making
 them highly appealing to fraudsters. Data-profiling solutions that monitor
 transactions for suspicious activities commonly linked to Loyalty Program Fraud

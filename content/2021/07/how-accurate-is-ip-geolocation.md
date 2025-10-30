@@ -166,7 +166,7 @@ In spite of their sometimes questionable reputation, people use VPNs for any
 number of reasons. Due to effective advertising and media coverage, VPNs have
 entered the consciousness of a broader section of the general public. This has
 only increased with the COVID-19 pandemic, as
-[CNET reported last year](https://www.cnet.com/news/vpn-use-surges-during-the-coronavirus-lockdown-but-so-do-security-risks/),
+[CNET reported last year](https://www.cnet.com/tech/services-and-software/vpn-use-surges-during-the-coronavirus-lockdown-but-so-do-security-risks/),
 with more users working and streaming from home, and having to familiarize
 themselves with new digital technologies and privacy concerns. It’s true that
 fraudsters and digital pirates may use VPNs, but privacy-conscious end-users may
