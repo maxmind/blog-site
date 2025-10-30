@@ -75,13 +75,13 @@ the global mobile payments market is estimated to reach nearly $3.4 billion by
 2022, with a compound annual growth rate of 33.4 percent from 2016 to 2022.
 Mobile wallets, which store users’ credit card information in an app, are
 becoming a
-[key contributor to that phenomenal growth](https://www.businessinsider.com/mastercard-study-shows-mobile-wallets-are-growing-2017-3).
+[key contributor to that phenomenal growth](https://www.paymentscardsandmobile.com/mobile-wallets-poised-growth/).
 In fact, China is considered to be both
 [one of the fastest growing e-commerce markets](https://www.paymentscardsandmobile.com/fastest-growing-e-commerce-markets/)
 in the world and
-[one of the primary drivers of mobile wallet](https://tender-retail.acceo.com/blog/chinese-tourists-are-adopting-mobile-payments-for-shopping-abroad-2/)
+[one of the primary drivers of mobile wallet](https://nielseniq.com/global/en/insights/report/2018/nielsen-over-90-percent-chinese-tourists-would-use-mobile-payment-overseas-given-the-option/)
 usage. But Chinese consumers also suffer from
-[increased rates of mobile payments fraud](https://paymentweek.com/2018-1-22-unionpay-mobile-payment-fraud-rise-china/).
+[increased rates of mobile payments fraud](https://thepaypers.com/digital-identity-security-online-fraud/mobile-payment-fraud-on-the-rise-in-china-unionpay-survey-reveals/771616-26).
 
 When mobile wallets first emerged in the US, people became concerned by China’s
 high fraud rates, leading to

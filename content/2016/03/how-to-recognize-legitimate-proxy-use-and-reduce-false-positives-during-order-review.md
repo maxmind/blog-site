@@ -48,7 +48,7 @@ users**
 
 There are several ways to identify IP addresses that may legitimately have
 multiple different users. One is to analyze the registering organization of the
-IP address based on the [WHOIS record](https://whois.arin.net/ui/). In many
+IP address based on the [WHOIS record](https://search.arin.net/rdap/). In many
 cases, this will help you determine if the IP address likely belongs to a
 company, an educational institution, a cellular carrier, or the like.
 

@@ -53,7 +53,7 @@ Streaming content providers need to identify the use of VPNs and proxies (DNS,
 HTTP, TOR, etc.) to ensure that their content is not being accessed outside of
 contractually-negotiated areas. Fortunately, a wide swath of VPNs and proxies
 are not hard to identify. For example, publicly available
-[WHOIS records](https://whois.arin.net/ui/) will show you the registering
+[WHOIS records](https://search.arin.net/rdap/) will show you the registering
 organization of an IP address. If someone accessing your site is using an IP
 address that belongs to a hosting provider, this is a very strong indication
 that the person is using a VPN or proxy service. In some cases, the registering
