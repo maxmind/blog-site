@@ -373,7 +373,7 @@ As in the previous example, we create a new `MaxMind::DB::Reader` object.
 ### Step 2
 
 To dump our data, we pass an anonymous subroutine to the
-[iterate_search_tree() method](https://metacpan.org/pod/MaxMind::DB::Reader#reader-iterate_search_tree-data_callback-node_callback).
+[iterate_search_tree() method](https://metacpan.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree(-%24data_callback%2C-%24node_callback-)).
 (This method can actually take two callbacks, but the second callback is for
 debugging the actual nodes in the tree -- that's too low level for our purposes
 today.)
