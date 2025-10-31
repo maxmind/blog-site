@@ -21,7 +21,7 @@ data. You can package the values up as HTTP request headers before the request
 is proxied. The integration also allows GeoIP2 databases to be updated quickly
 and seamlessly without the need for scripts across your application fleet.
 
-[HAProxy Enterprise](https://www.haproxy.com/products/haproxy-enterprise-edition/)
+[HAProxy Enterprise](https://www.haproxy.com/products/haproxy-enterprise)
 combines HAProxy, the world's fastest and most widely used, open-source load
 balancer, with enterprise-class features, services, and premium support. By
 placing it at the edge of your network, you instantly gain access to improved
@@ -36,7 +36,7 @@ manager. Once you've added the HAProxy package repositories, you can use apt on
 Ubuntu or yum on CentOS to install it. Check out the
 [official documentation here](https://www.haproxy.com/haproxy-integrations/maxmind/)
 (you will need subscriptions to the
-[GeoIP2 databases](https://www.maxmind.com/en/geoip2-databases) to make use of
+[GeoIP2 databases](https://www.maxmind.com/en/geoip-databases) to make use of
 the integration).
 
 Within your HAProxy configuration, you choose which GeoIP2 databases to query.

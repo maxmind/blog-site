@@ -36,7 +36,8 @@ Presented below is MaxMind's Paladin Report. It’s completely free to download.
 [**MaxMind's Paladin Report**](/wp-content/uploads/2017/09/MaxMind_Paladin_Group_2017-Report.pdf)
 
 We hope that you find the report useful and beneficial. If you have any
-questions, please [contact us](https://www.maxmind.com/en/contact) any time.
+questions, please [contact us](https://www.maxmind.com/en/company/contact-us)
+any time.
 
 ---
 

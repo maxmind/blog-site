@@ -47,10 +47,11 @@ informative and timely presentation on account takeover.
 We have just added a Demo Theater stage presentation by Mark Sulham, our
 Business Development Manager, on Wednesday, March 21, at 11:15. Mark will be
 discussing the minFraud services, including our
-[Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) and
-[Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) additions,
-and how they may be used to help merchants detect and prevent more fraud
-in 2018.
+[Custom Rules](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+and
+[Custom Inputs](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+additions, and how they may be used to help merchants detect and prevent more
+fraud in 2018.
 
 For additional information, please see [MaxMind's Event Guide for This Year's
 MRC
@@ -65,7 +66,7 @@ financial services for e-commerce professionals.
 
 MRC Vegas 2018 runs March 19 - 22 at the Aria Resort and Casino. Stop by booth
 \#500 for informal conversations with us and
-[learn more about the minFraud service](https://www.maxmind.com/en/minfraud-services?pkit_lang=en).
+[learn more about the minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview?pkit_lang=en).
 
 ---
 

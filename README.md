@@ -68,12 +68,12 @@ brew install hugo
 ##### Debian / Ubuntu
 
 It is recommended that you install
-[the latest release of Hugo](https://github.com/gohugoio/hugo/releases/latest).
-For debian and ubuntu users, they offer a .deb file.
+[the latest release of Hugo](https://github.com/gohugoio/hugo/releases). For
+debian and ubuntu users, they offer a .deb file.
 
 ##### Other OS
 
-See [Hugo Installation](https://gohugo.io/getting-started/installing/)
+See [Hugo Installation](https://gohugo.io/installation/)
 
 #### Install Embedded Dart Sass
 
@@ -114,7 +114,7 @@ the [BLOG-POST-TEMPLATE.md](BLOG-POST-TEMPLATE.md) file.
 ### Categories and Tags
 
 To see a full list of categories and tags, check out the
-[all taxonomies](https://blog.maxmind.com/all-taxonomies) page. This page is
+[all taxonomies](https://blog.maxmind.com/all-taxonomies/) page. This page is
 automatically updated on build and push to production. If you want to see it on
 your local machine, start up the [development server](#development-server) and
 go to [/all-taxonomies](http://localhost:1313/all-taxonomies).

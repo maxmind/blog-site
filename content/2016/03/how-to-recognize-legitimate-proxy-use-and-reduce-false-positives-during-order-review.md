@@ -48,19 +48,19 @@ users**
 
 There are several ways to identify IP addresses that may legitimately have
 multiple different users. One is to analyze the registering organization of the
-IP address based on the [WHOIS record](https://whois.arin.net/ui/). In many
+IP address based on the [WHOIS record](https://search.arin.net/rdap/). In many
 cases, this will help you determine if the IP address likely belongs to a
 company, an educational institution, a cellular carrier, or the like.
 
 MaxMind also provides several solutions to help with this. The
-[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip2-precision-insights)
+[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip-api-web-services)
 includes user type data which can indicate what type of organization the IP
 address belongs to. Many users of a single “business” IP address would not
 itself raise the risk of fraud while many users being associated with a single
 “residential” IP address would.
 
-MaxMind’s
-[Proxy Detection service](https://www.maxmind.com/en/proxy-detection-service)
+MaxMind's
+[Proxy Detection service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 scores IP addresses for their riskiness (e.g., being proxies favored by
 fraudsters) and so can also be used to assess the likelihood that a given IP is
 being used for fraud.

@@ -35,11 +35,12 @@ that.
 
 What you need is
 [geolocation](https://en.wikipedia.org/wiki/Geolocation_software) using IPs, aka
-GeoIP. The place folks commonly start is [MaxMind](https://www.maxmind.com/),
-mostly because it’s the first Google result for “GeoIP”. Together we will use
-their IP-to-City dataset to enrich our log data and determine what city and
-country our users are from. We will use MaxMind data because it’s reliable and
-robust. Also it’s free. One less thing to bother your boss about.
+GeoIP. The place folks commonly start is
+[MaxMind](https://www.maxmind.com/en/home), mostly because it’s the first Google
+result for “GeoIP”. Together we will use their IP-to-City dataset to enrich our
+log data and determine what city and country our users are from. We will use
+MaxMind data because it’s reliable and robust. Also it’s free. One less thing to
+bother your boss about.
 
 So off we go to download
 [MaxMind’s GeoLite2 City data](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).

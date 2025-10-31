@@ -14,10 +14,10 @@ authors:
 
 Online fraud is a complex, hard to detect, and constantly evolving type of crime
 with serious business consequences. While many e-commerce merchants are
-[looking for new ways](https://www.jazva.com/blog/ecommerce-trends-2017) to
-engage with customers, fraudsters are also looking for new ways to exploit them.
-In a way, every touchpoint you create - from buy online/pick up in store options
-to social click-to-buy ads, mobile shopping to loyalty rewards programs - is
+[looking for new ways](https://blog.jazva.com/ecommerce-trends-2017) to engage
+with customers, fraudsters are also looking for new ways to exploit them. In a
+way, every touchpoint you create - from buy online/pick up in store options to
+social click-to-buy ads, mobile shopping to loyalty rewards programs - is
 another opportunity for cybercriminals to bypass your fraud screening.
 
 Fraudsters are clever. They will often make multiple attempts to infiltrate your
@@ -55,7 +55,7 @@ that’s becoming increasingly popular with cybercriminals:
 
 Loyalty programs are an excellent way to strengthen your relationship with
 customers. In fact, loyalty programs in the U.S. alone
-[achieved double-digit growth](https://www.colloquy.com/latest-news/u-s-customer-loyalty-program-memberships-reach-double-digit-growth-at-3-8-billion-2017-colloquy-loyalty-census-reports/)
+[achieved double-digit growth](https://www.pymnts.com/news/retail/2017/customer-loyalty-programs-reach-3-8-billion-in-u-s/)
 (to 3.8 billion members) in 2017. Loyalty points can be spent like cash, making
 them highly appealing to fraudsters. Data-profiling solutions that monitor
 transactions for suspicious activities commonly linked to Loyalty Program Fraud
@@ -113,4 +113,4 @@ fraudsters.
 
 To learn more about MaxMind’s Custom Inputs, Custom Rules, or our minFraud
 services, simply
-[click here](https://www.maxmind.com/en/minfraud-custom-inputs).
+[click here](https://www.maxmind.com/en/solutions/fraud-prevention/overview).

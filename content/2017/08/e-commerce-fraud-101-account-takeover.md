@@ -39,7 +39,7 @@ orders or engage in other bad activities while appearing squeaky clean. As a
 result, it is important to not let your guard down when it comes to this method
 of attack. Account takeover is no small problem for online merchants, with
 losses in 2016
-[estimated to be $2.3 billion](https://www.javelinstrategy.com/press-release/identity-fraud-hits-record-high-154-million-us-victims-2016-16-percent-according-new).
+[estimated to be $2.3 billion](https://javelinstrategy.com/press-release/identity-fraud-hits-record-high-154-million-us-victims-2016-16-percent-according-new).
 
 ## Friendly Fire?
 
@@ -47,7 +47,7 @@ Seeing as an account takeover scenario allows a fraudster to appear as a
 legitimate customer, you may believe chargebacks initiated by the true
 cardholder constitute friendly fraud. Friendly fraud refers to the filing of
 illegitimate chargebacks by customers. The
-[US Fair Credit Billing Act](https://www.consumer.ftc.gov/articles/0219-disputing-credit-card-charges)
+[US Fair Credit Billing Act](https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges)
 (FCBA) allows cardholders to dispute credit card charges and file chargebacks to
 get their money back only in disputes related to billing errors. This definition
 includes unauthorized charges, double-billing, incorrect charge amounts, etc. In
@@ -73,16 +73,18 @@ Below are some tips on detecting account takeover with the help of the minFraud
 service.
 
 - Implement the
-  [Device Tracking Add On](https://www.maxmind.com/en/minfraud-device-tracking)
+  [Device Tracking Add On](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
   to
-  [evaluate the riskiness of an IP address](https://www.maxmind.com/en/explanation-of-minfraud-riskscore)
+  [evaluate the riskiness of an IP address](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
   making account changes or placing orders on your site
-- Use [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and
-  [Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) to flag
-  potential account takeover scenarios. For example, you may define Custom
-  Inputs for the number of days since the last email, password, and shipping
-  address change, and manually review orders from accounts where those pieces of
-  information were recently changed
+- Use
+  [Custom Inputs](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  and
+  [Custom Rules](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  to flag potential account takeover scenarios. For example, you may define
+  Custom Inputs for the number of days since the last email, password, and
+  shipping address change, and manually review orders from accounts where those
+  pieces of information were recently changed
 - Check IP address distances, such as distance between IP location and
   billing/shipping/historical login locations
 - Check for sudden pattern changes in the IP address or ISP used. For example, a
@@ -95,5 +97,5 @@ service.
 ---
 
 To learn more about how our minFraud service can help you, please visit our
-[website](https://www.maxmind.com/en/minfraud-services) or
-[contact our sales team](https://www.maxmind.com/en/sales_contact).
+[website](https://www.maxmind.com/en/solutions/fraud-prevention/overview) or
+[contact our sales team](https://www.maxmind.com/en/sales-contact).

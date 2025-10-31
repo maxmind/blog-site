@@ -23,7 +23,7 @@ Similarly, with charitable giving, we look for opportunities to apply research
 to find how our funding can have high impact per dollar invested. Sometimes the
 most cost-effective program can be surprising. For example, according to MIT’s
 Abdul Latif Jameel
-[Poverty Action Lab](https://www.povertyactionlab.org/policy-lessons/education/improving-student-participation),
+[Poverty Action Lab](https://www.povertyactionlab.org/policy-insights/education),
 deworming may be one of the most effective ways to increase student
 participation in school.
 
@@ -36,4 +36,4 @@ innovative solutions.
 We would like to thank our customers for making this possible!
 
 _To learn more about MaxMind's charitable giving, visit our
-[Corporate Giving page](https://www.maxmind.com/en/corporate-giving)._
+[Corporate Giving page](https://www.maxmind.com/en/company)._

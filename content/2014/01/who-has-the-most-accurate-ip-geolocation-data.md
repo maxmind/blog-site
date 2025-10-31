@@ -18,7 +18,7 @@ there, our customers have told us they are most interested in one thing –
 accuracy. The question is, who provides the most accurate data?
 
 Many IP geolocation data providers, MaxMind included, make available
-[statistics on the accuracy of their own data](https://www.maxmind.com/en/city_accuracy).
+[statistics on the accuracy of their own data](https://www.maxmind.com/en/geoip-accuracy-comparison).
 Others hire auditors to certify their procedures for calculating accuracy. While
 this is all helpful information, it doesn’t help you choose between companies
 since each company’s testing methods and data are different.
@@ -34,7 +34,7 @@ included comparisons with known IP-location pairs.
 In 2011, the
 [Cooperative Association for Internet Data Analysis](https://www.caida.org)
 released a
-[report comparing several free and commercial IP geolocation databases head to head](https://www.caida.org/publications/papers/2011/geocompare-tr/).
+[report comparing several free and commercial IP geolocation databases head to head](https://catalog.caida.org/paper/2011_geocompare_tr/).
 Many, though not all, of the most popular IP geolocation providers participated.
 
 The gold standard for establishing IP geolocation accuracy involves comparing
@@ -53,7 +53,7 @@ algorithms, and we have increased our postal code coverage and accuracy.
 ## How to Access MaxMind’s Most Accurate IP Geolocation Data
 
 Check out our most accurate IP geolocation data in the
-[GeoIP2 Precision Web Services](https://www.maxmind.com/en/web_services).The
+[GeoIP2 Precision Web Services](https://www.maxmind.com/en/geoip-api-web-services).The
 GeoIP2 Precision Services contain our most accurate data, geolocating 7% more
 IPs to postal codes and 3% more IPs to cities in the United States than the
 GeoIP2 Databases. In addition, both the City and Insights services identify the

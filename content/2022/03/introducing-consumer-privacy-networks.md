@@ -59,19 +59,19 @@ since the summer of 2021, and we've just added consumer privacy networks to
 [our user type data](https://support.maxmind.com/knowledge-base/articles/maxmind-user-context-data#user-types).
 You can find this data in the following products and services from MaxMind:
 
-- [GeoIP2 City Plus web service](https://www.maxmind.com/en/geoip2-precision-city-service)
+- [GeoIP2 City Plus web service](https://www.maxmind.com/en/geoip-api-web-services)
   contains our ISP data
-- [GeoIP2 Insights web service](https://www.maxmind.com/en/geoip2-precision-insights)
+- [GeoIP2 Insights web service](https://www.maxmind.com/en/geoip-api-web-services)
   contains our ISP and user type data
-- [GeoIP2 ISP database](https://www.maxmind.com/en/geoip2-isp-database) contains
-  our ISP data
-- [GeoIP2 Enterprise database](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/enterprise-database)
+- [GeoIP2 ISP database](https://www.maxmind.com/en/geoip-databases) contains our
+  ISP data
+- [GeoIP2 Enterprise database](https://www.maxmind.com/en/geoip-enterprise-database)
   contains our ISP and user type data
-- [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/minfraud-services)
+- [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
   return our ISP and user type data
 
 At this time, consumer privacy networks are not flagged in our
-[GeoIP2 Anonymous IP](https://www.maxmind.com/en/solutions/geoip2-enterprise-product-suite/anonymous-ip-database)
+[GeoIP2 Anonymous IP](https://www.maxmind.com/en/geoip-anonymous-ip-database)
 data because we have not seen a high level of risky activity associated with
 these networks. We continue to monitor and assess these networks, and will make
 adjustments as we see how these networks are used as they are widely adopted.

@@ -33,9 +33,10 @@ conference.
   Demo Theater stage. Learn how to increase customer approvals, reduce fraud,
   and cut manual review times with minFraud Services. The presentation includes
   a discussion of how to use
-  [Custom Inputs](https://www.maxmind.com/en/minfraud-custom-inputs) and
-  [Custom Rules](https://www.maxmind.com/en/minfraud-custom-rules) in your
-  specific risk modeling.
+  [Custom Inputs](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  and
+  [Custom Rules](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  in your specific risk modeling.
 
 Also, stop by booth #500 all conference long for informal discussions with
 MaxMind business development and product specialists to learn how we can help
@@ -45,8 +46,8 @@ merchants combat the ever-evolving nature of fraud.
 
 Founded in 2002, MaxMind is an industry-leading provider of online fraud
 detection, with our
-[minFraud services](https://www.maxmind.com/en/minfraud-services), and IP
-intelligence, through our
-[GeoIP brand](https://www.maxmind.com/en/geoip2-services-and-databases). We are
-dedicated to providing our customers with quality products, excellent customer
-service, and innovative solutions.
+[minFraud services](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
+and IP intelligence, through our
+[GeoIP brand](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services).
+We are dedicated to providing our customers with quality products, excellent
+customer service, and innovative solutions.

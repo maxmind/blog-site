@@ -48,7 +48,7 @@ alongside other tools by looking at an example use case. Below, you will find:
 
 This guide will cover how data may be used, but will not cover a technical
 integration in any specific programming language.
-[For help with integration, see the resources on our developer portal.](https://dev.maxmind.com/geoip/geolocate-an-ip)
+[For help with integration, see the resources on our developer portal.](https://dev.maxmind.com/geoip/geolocate-an-ip/)
 
 For our example, we’ll consider a simple localization use case.
 

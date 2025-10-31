@@ -62,10 +62,12 @@ These differences are explained in more detail on our
 As of right now, the
 [GeoIP2 JavaScript API](”https://www.maxmind.com/en/javascript”) is fully
 released. GeoIP2 Web Service Client APIs in Java, Perl, PHP, and Python are
-available for [beta testing](https://www.maxmind.com/en/geoip2_beta). Please see
-our [GeoIP2 beta page](https://www.maxmind.com/en/geoip2_beta) to see our
-tentative release schedule and to contribute. Suggestions, criticisms, and
-questions are welcome in the
+available for
+[beta testing](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services).
+Please see our
+[GeoIP2 beta page](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services)
+to see our tentative release schedule and to contribute. Suggestions,
+criticisms, and questions are welcome in the
 [MaxMind Customer Community](https://getsatisfaction.com/maxmind).
 
 Don't forget to follow us on [Twitter](https://twitter.com/maxmind) for the

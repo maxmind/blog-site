@@ -15,12 +15,13 @@ authors:
 
 We recently released a number of updates to our minFraud alerts functionality,
 and we’d like to take the opportunity to explain how
-[minFraud service](https://www.maxmind.com/en/solutions/minfraud-services)
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 customers can benefit from alerts.
 
 ## Recognizing fraud attacks in real-time
 
-The [minFraud service](https://www.maxmind.com/en/solutions/minfraud-services)
+The
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 is a real-time risk scoring API that adapts its scoring based on the stream of
 transactions (and transaction feedback) submitted by thousands of businesses
 world-wide. In some cases, transactions we initially scored as low-risk are
@@ -61,4 +62,4 @@ account/user.
 ---
 
 If you have any questions about minFraud alerts or any feedback, please
-[contact us](https://support.maxmind.com/).
+[contact us](https://support.maxmind.com/knowledge-base).

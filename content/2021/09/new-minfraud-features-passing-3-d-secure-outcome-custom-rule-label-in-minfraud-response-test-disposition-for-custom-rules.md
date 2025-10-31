@@ -15,7 +15,7 @@ authors:
 ---
 
 We're excited to share a couple of new features that we recently added to our
-[minFraud service client APIs](https://dev.maxmind.com/minfraud/api-documentation#client-apis).
+[minFraud service client APIs](https://dev.maxmind.com/minfraud/api-documentation/).
 
 ## Passing 3-D Secure Outcomes
 
@@ -26,7 +26,7 @@ help improve your risk scoring by providing our scoring model with positive
 feedback.
 
 This new input is present in the
-[Credit Card request object](https://dev.maxmind.com/minfraud/api-documentation/requests#schema--request--credit-card__was_3d_secure_successful)
+[Credit Card request object](https://dev.maxmind.com/minfraud/api-documentation/requests/)
 (links to our developer documentation).
 
 ## Receiving Custom Rule Labels in the minFraud Response
@@ -36,7 +36,7 @@ transactions which were affected by a rule. This will allow you to better
 fine-tune the workflows you may have for specific types of transactions.
 
 This new output is present in the
-[Disposition response object](https://dev.maxmind.com/minfraud/api-documentation/responses#schema--response--disposition__rule_label)
+[Disposition response object](https://dev.maxmind.com/minfraud/api-documentation/responses/)
 (links to our developer documentation). You can read more about
 [minFraud custom rules here](https://support.maxmind.com/knowledge-base/articles/use-custom-rules-and-dispositions-minfraud-maxmind).
 
@@ -53,6 +53,6 @@ like to observe the effect of a new custom rule D for some period of time before
 full use in production, you may choose to set its disposition action to “test”
 as to not interfere with existing production workflows. This new value is
 present in the
-[Disposition response object in the `/action/` output](https://dev.maxmind.com/minfraud/api-documentation/responses#schema--response--disposition__action)
+[Disposition response object in the `/action/` output](https://dev.maxmind.com/minfraud/api-documentation/responses/)
 (links to our developer documentation). You can read more about
 [minFraud custom rules here](https://support.maxmind.com/knowledge-base/articles/use-custom-rules-and-dispositions-minfraud-maxmind).

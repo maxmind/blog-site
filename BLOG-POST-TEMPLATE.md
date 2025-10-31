@@ -230,7 +230,7 @@ the text. It's easier to just show you how to make a table than to explain:
 | Row 2 Column 1  | Row 2 Column 2  | Row 2 Column 3  |
 
 If you want an easier way to make tables in markdown, you can also try this
-[Tables Generator](https://www.tablesgenerator.com/markdown_tables).
+[Tables Generator](https://tableconvert.com/markdown-generator).
 
 ## Metadata
 

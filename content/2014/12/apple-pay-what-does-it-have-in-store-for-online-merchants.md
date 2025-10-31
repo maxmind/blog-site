@@ -39,20 +39,20 @@ cash register for this type of payment method becomes more compelling.
 
 Apple Pay has immediate benefits for merchants taking CNP payments as well.
 Apple Pay incorporates fraud detection technology such as
-[TouchID biometric sensors, NFC, and geolocation data](https://readwrite.com/2014/09/05/apple-payments-interchange-rebates).
+[TouchID biometric sensors, NFC, and geolocation data](https://readwrite.com/apple-payments-interchange-rebates/).
 Apple is banking on these features to make Apple Pay more attractive to
 merchants, and is even going so far as to assume some of the risk of fraudulent
 transactions themselves.
 
 **The future of payment security** Apple’s initial Apple Pay push covers
-[35 brick and mortar retail stores](https://www.computerworld.com/article/2834651/apple-pay-hits-u-s-stores-monday-assuming-buyers-can-find-anywhere-to-use-it.html)
+[35 brick and mortar retail stores](https://www.computerworld.com/article/1605237/apple-pay-hits-u-s-stores-monday-assuming-buyers-can-find-anywhere-to-use-it-2.html)
 and provides a new opportunity for widespread use. But considering the amount of
 consumer data and financial information involved, consumers and merchants alike
 are sure to closely monitor what E-commerce fraud detection looks like as new
 payment options
 [spread online within Apple apps](https://www.toledoblade.com/Retail/2014/10/25/Apple-Pay-shows-flaws-in-real-world-but-shines-online.html).
 
-[NFC payment systems](https://www.cnet.com/how-to/how-nfc-works-and-mobile-payments/)
+[NFC payment systems](https://www.cnet.com/tech/mobile/how-nfc-works-and-mobile-payments/)
 are incorporating unique digital signatures and Apple Pay is
 [moving personal data off servers](https://www.cnbc.com/2014/09/11/how-hackers-could-still-get-around-apple-pay-security.html)
 to thwart fraud. At the same time, Apple Pay and other mobile payment options

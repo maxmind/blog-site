@@ -15,9 +15,9 @@ As more and more TV, music, and movie content has moved online, a veritable
 industry has grown up around helping people to circumvent location based
 broadcast restrictions. Demonstrating the scale of the issue, GlobalWatchIndex
 reports that as many as
-[29% of VPN users globally accessed Netflix](https://www.globalwebindex.net/blog/29-of-vpn-users-accessing-netflix)
-in one recent month. Tutorials for how to access this and other streaming
-services abound.
+[29% of VPN users globally accessed Netflix](https://www.gwi.com/blog) in one
+recent month. Tutorials for how to access this and other streaming services
+abound.
 
 Streaming providers are required by content licensors to geographically restrict
 access to the content they license. Providers risk losing content licensors’
@@ -53,7 +53,7 @@ Streaming content providers need to identify the use of VPNs and proxies (DNS,
 HTTP, TOR, etc.) to ensure that their content is not being accessed outside of
 contractually-negotiated areas. Fortunately, a wide swath of VPNs and proxies
 are not hard to identify. For example, publicly available
-[WHOIS records](https://whois.arin.net/ui/) will show you the registering
+[WHOIS records](https://search.arin.net/rdap/) will show you the registering
 organization of an IP address. If someone accessing your site is using an IP
 address that belongs to a hosting provider, this is a very strong indication
 that the person is using a VPN or proxy service. In some cases, the registering
@@ -80,7 +80,7 @@ traditional IP geolocation.
 ## MaxMind’s Database Solution
 
 We created the
-[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip2-anonymous-ip-database)
+[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database)
 to assist content licensees in meeting their geofiltering contract requirements
 while addressing their needs for a low-latency solution. Our GeoIP2 Anonymous IP
 database identifies IP addresses such that are likely to be used for

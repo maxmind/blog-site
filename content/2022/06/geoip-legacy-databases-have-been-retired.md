@@ -60,4 +60,4 @@ You can read about all the changes to our Legacy web services on
 We look forward to continuing to serve our customers with industry-leading IP
 intelligence data and tools under the GeoIP brand for another twenty years!
 
-[Check out our GeoIP2 databases to see what’s on offer!](https://www.maxmind.com/en/geoip2-databases)
+[Check out our GeoIP2 databases to see what’s on offer!](https://www.maxmind.com/en/geoip-databases)

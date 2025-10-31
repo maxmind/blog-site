@@ -98,7 +98,7 @@ Before we reveal the results, here are the three risk indicators in detail:
 - **Anonymous IP flag** Available in our
   [GeoIP Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database),
   the
-  [`is_anonymous` boolean flag](https://dev.maxmind.com/geoip/docs/web-services/responses/#schema--response--traits__is_anonymous)
+  [`is_anonymous` boolean flag](https://dev.maxmind.com/geoip/docs/web-services/responses/)
   indicates whether we believe the IP address to be part of an anonymizing
   network, such as a proxy or VPN.
 

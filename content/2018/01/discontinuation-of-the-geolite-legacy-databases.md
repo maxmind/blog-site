@@ -45,7 +45,7 @@ Another option is to switch to the paid
 equivalent of the database you are using. In that way, you would be able to
 continue to use your existing integrations. You may also want to consider
 upgrading to the
-[GeoIP2 brand](https://www.maxmind.com/en/geoip2-services-and-databases).
+[GeoIP2 brand](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services).
 (_Please note that since the GeoIP Legacy databases have been superseded by
 GeoIP2, the GeoIP Legacy databases may also be discontinued at some point in the
 future._)
@@ -53,10 +53,10 @@ future._)
 ### GeoLite2 Developer’s Package customers
 
 If you use the
-[GeoLite2 Developer’s Package](https://www.maxmind.com/en/geolite2-developer-package)
+[GeoLite2 Developer’s Package](https://www.maxmind.com/en/commercial-geolite-license)
 and are already using the GeoLite2 databases, you will not be affected by the
 discontinuation of the GeoLite Legacy databases. Also, your
-[commercial redistribution license](https://www.maxmind.com/en/geolite-commercial-redistribution-license)
+[commercial redistribution license](https://www.maxmind.com/en/commercial-geolite-license-agreement)
 will not be affected as long as you are using the GeoLite2 databases.
 
 ## Important dates to consider
@@ -68,13 +68,13 @@ aware:
 
 - **April 1, 2018** – Updated versions of the GeoLite Legacy databases are now
   only available to
-  [redistribution license customers](https://www.maxmind.com/en/geolite-commercial-redistribution-license),
+  [redistribution license customers](https://www.maxmind.com/en/commercial-geolite-license-agreement),
   although anyone can continue to download the March 2018 GeoLite Legacy builds.
 
 - **January 2, 2019** – The remaining GeoLite Legacy builds will be removed from
   our website. GeoLite Legacy database users will need to have switched to the
   [GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/) or
-  [commercial GeoIP](https://www.maxmind.com/en/geoip2-services-and-databases)
+  [commercial GeoIP](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services)
   databases and update their integrations.
 
 ## Commitment to the principles of open source
