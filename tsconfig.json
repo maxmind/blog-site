@@ -12,5 +12,9 @@
     "public",
     ".cache"
   ],
-  "include": ["./assets/js/**/*"]
+  "include": [
+    "./assets/js/**/*",
+    "./scripts/**/*.ts",
+    "./static/**/*.ts"
+  ]
 }

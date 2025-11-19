@@ -8,6 +8,7 @@
     "@eslint/compat": "^1.4.1",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
     "cspell": "^9.3.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
@@ -23,6 +24,7 @@
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-no-unsupported-browser-features": "^8.0.5",
     "stylelint-order": "^7.0.0",
+    "tsx": "^4.19.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
   },
@@ -33,6 +35,7 @@
   "license": "MIT",
   "name": "blog-site",
   "scripts": {
+    "build:headers": "tsx scripts/generate-headers.ts",
     "fix": "run-p fix:*",
     "fix:content": "prettier --write '**/*.md' --config './content/.prettierrc.js'",
     "fix:scripts": "npm run lint:scripts --fix",
