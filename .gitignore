@@ -7,3 +7,6 @@ resources/
 
 # Precious install
 local/
+
+# Cloudflare Pages headers
+static/_headers

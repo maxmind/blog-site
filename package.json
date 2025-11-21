@@ -24,7 +24,6 @@
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-no-unsupported-browser-features": "^8.0.5",
     "stylelint-order": "^7.0.0",
-    "tsx": "^4.19.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
   },
@@ -35,13 +34,13 @@
   "license": "MIT",
   "name": "blog-site",
   "scripts": {
-    "build:headers": "tsx scripts/generate-headers.ts",
+    "build:headers": "node --experimental-strip-types bin/generate-headers.ts",
     "fix": "run-p fix:*",
     "fix:content": "prettier --write '**/*.md' --config './content/.prettierrc.js'",
     "fix:scripts": "npm run lint:scripts --fix",
     "fix:styles": "npm run lint:styles --fix",
     "lint": "run-p lint:*",
-    "lint:configs": "npx eslint . .*rc.js --max-warnings=0",
+    "lint:configs": "npx eslint . .*rc.cjs --max-warnings=0",
     "lint:content": "prettier --check '**/*.md' --config './content/.prettierrc.js'",
     "lint:cspell": "cspell '**/*.md' --no-summary --no-progress --color",
     "lint:scripts": "tsc && npx eslint .  --max-warnings=0",

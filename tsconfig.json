@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,7 +16,7 @@
   ],
   "include": [
     "./assets/js/**/*",
-    "./scripts/**/*.ts",
+    "./bin/**/*.ts",
     "./static/**/*.ts"
   ]
 }
