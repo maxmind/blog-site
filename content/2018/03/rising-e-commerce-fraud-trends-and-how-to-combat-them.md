@@ -85,7 +85,7 @@ usage. But Chinese consumers also suffer from
 
 When mobile wallets first emerged in the US, people became concerned by China’s
 high fraud rates, leading to
-[slower adoption of that payment method](https://www.cardtrak.com/data/97380/consumers-love-mobile-wallets-fraud-fear-powerful-inhibitor)
+[slower adoption of that payment method](https://web.archive.org/web/20220124011452/https://cardtrak.com/2017/06/19/mobile/consumers-love-mobile-wallets-fraud-fear-powerful-inhibitor/)
 stateside. To try to stem those concerns, the US and other countries began
 advocating additional security measures, like two-factor authentication for
 mobile payment applications. But dedicated fraudsters have
