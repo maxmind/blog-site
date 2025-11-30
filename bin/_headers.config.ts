@@ -17,114 +17,135 @@ const config: HeadersConfig = {
       pattern: '/*',
       headers: {
         'Content-Security-Policy': {
-          // Allow AJAX/fetch requests to status page, marketing site, HubSpot, and Google services
           'connect-src': [
-            '\'self\'',
+            "'self'",
             'https://status.maxmind.com',
             'https://www.maxmind.com',
-            // HubSpot API endpoint
-            // https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-custom-domain-for-my-forms
-            'https://api.hubspot.com',
-            // HubSpot static assets used by conversations embed
+
             // eslint-disable-next-line max-len
-            // https://developers.hubspot.com/beta-docs/guides/apps/authentication/working-with-oauth#frequently-asked-questions
+            // https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot#content-security-policy
+
+            // HubSpot API
+            'https://api.hubspot.com',
+
+            // HubSpot static assets (conversations embed)
             'https://forms.hsforms.com',
+
             'https://*.googleapis.com',
+
+            // eslint-disable-next-line max-len
+            // https://developers.google.com/tag-platform/security/guides/csp#google_analytics_4_google_analytics
             'https://*.google-analytics.com',
             'https://*.analytics.google.com',
             'https://*.googletagmanager.com',
+
+            // https://developers.google.com/tag-platform/security/guides/csp#google_ads
             'https://*.g.doubleclick.net',
-            // Google
-            // eslint-disable-next-line max-len
-            // https://developers.google.com/tag-platform/tag-manager/csp#google_analytics_4_google_analytics
+
+            // Google domains (various TLDs for international support)
             'https://*.google.com',
           ],
           'default-src': [
-            '\'self\'',
+            "'self'",
           ],
-          // Google Fonts and Vertex search (indirectly loaded when setting up the searchbox)
           'font-src': [
-            '\'self\'',
+            "'self'",
+
+            // Loaded indirectly by Google Vertex search
             'https://fonts.gstatic.com',
           ],
           'form-action': [
-            '\'self\'',
+            "'self'",
           ],
           'frame-ancestors': [
-            '\'self\'',
+            "'self'",
           ],
-          // HubSpot calls-to-action (pop-ups) and chatflows
-          // eslint-disable-next-line max-len
-          // https://knowledge.hubspot.com/website-pages/use-hubspot-content-on-external-sites#calls-to-action
-          // Google Vertex search
           'frame-src': [
-            '\'self\'',
+            "'self'",
+
+            // eslint-disable-next-line max-len
+            // https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot#content-security-policy
+
+            // HubSpot calls-to-action (pop-ups) and chatflows
             'https://app.hubspot.com',
-            'https://www.google.com',
+
+            // https://developers.google.com/tag-platform/security/guides/csp#google_ads
             'https://www.googletagmanager.com',
+
+            // Google Vertex search
+            'https://www.google.com',
           ],
           'img-src': [
-            '\'self\'',
+            "'self'",
             'data:',
             'https:',
           ],
           'object-src': [
-            '\'none\'',
+            "'none'",
           ],
           'script-src': [
-            '\'self\'',
-            '\'report-sample\'',
-            '\'unsafe-inline\'',
+            "'self'",
+            "'report-sample'",
+            "'unsafe-inline'",
+
+            // eslint-disable-next-line max-len
+            // https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot#content-security-policy
+
             // HubSpot tracking code
-            // eslint-disable-next-line max-len
-            // https://developers.hubspot.com/beta-docs/guides/api/tracking-code-api/tracking-code-quickstart-guide#frequently-asked-questions
             'https://js.hs-scripts.com',
-            // HubSpot analytics
-            // https://knowledge.hubspot.com/reports/install-the-hubspot-tracking-code
+
+            // HubSpot Analytics
             'https://js.hs-analytics.net',
+
             // HubSpot cookie banner
-            // https://knowledge.hubspot.com/privacy-and-consent/add-a-cookie-banner-to-your-website
             'https://js.hs-banner.com',
-            // HubSpot conversations (live chat widget, chat flow)
-            // https://knowledge.hubspot.com/chatflows/install-the-hubspot-tracking-code-for-chat
+
+            // HubSpot Conversations and Chatflows
             'https://js.usemessages.com',
-            // HubSpot form widgets
-            // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
+
+            // HubSpot forms
             'https://js.hsforms.net',
+
+            // MaxMind marketing site
             'https://www.maxmind.com',
-            // Google
-            // eslint-disable-next-line max-len
-            // https://developers.google.com/tag-platform/tag-manager/csp#google_analytics_4_google_analytics
+
+            // Google Vertex search
             'https://cloud.google.com',
             'https://www.gstatic.com',
+
+            // https://developers.google.com/tag-platform/security/guides/csp#google_ads_conversions
             'https://www.googleadservices.com',
             'https://www.google.com',
+
+            // Google Tag Manager
             'https://*.googletagmanager.com',
           ],
-          // Google Fonts API and Vertex search
-          // Google static assets
           'style-src': [
-            '\'self\'',
-            '\'unsafe-inline\'',
+            "'self'",
+            "'unsafe-inline'",
+
+            // Google Fonts API and Vertex search default styles
             'https://fonts.googleapis.com',
+
+            // Google static assets
             'https://www.gstatic.com',
           ],
         },
         'Feature-Policy': [
-          'accelerometer \'none\'',
-          'autoplay \'none\'',
-          'camera \'none\'',
-          'encrypted-media \'none\'',
-          'fullscreen \'none\'',
-          'geolocation \'none\'',
-          'gyroscope \'none\'',
-          'magnetometer \'none\'',
-          'microphone \'none\'',
-          'midi \'none\'',
-          'payment \'none\'',
-          'picture-in-picture \'none\'',
-          'usb \'none\'',
-          'sync-xhr \'none\'',
+          "accelerometer 'none'",
+          "autoplay 'none'",
+          "camera 'none'",
+          "encrypted-media 'none'",
+          "fullscreen 'none'",
+          "geolocation 'none'",
+          "gyroscope 'none'",
+          "magnetometer 'none'",
+          "microphone 'none'",
+          "midi 'none'",
+          "payment 'none'",
+          "picture-in-picture 'none'",
+          "usb 'none'",
+          "sync-xhr 'none'",
         ],
         'Permissions-Policy': [
           'accelerometer=()',
@@ -157,23 +178,23 @@ const config: HeadersConfig = {
           'xr-spatial-tracking=()',
         ],
         'Referrer-Policy': [
-'strict-origin-when-cross-origin',
-],
+          'strict-origin-when-cross-origin',
+        ],
         'Strict-Transport-Security': [
           'max-age=63072000',
           'includeSubDomains',
           'preload',
         ],
         'X-Content-Type-Options': [
-'nosniff',
-],
+          'nosniff',
+        ],
         'X-Frame-Options': [
-'DENY',
-],
+          'DENY',
+        ],
         'X-XSS-Protection': [
-'1',
-'mode=block',
-],
+          '1',
+          'mode=block',
+        ],
       },
     },
   ],

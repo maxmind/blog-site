@@ -35,16 +35,16 @@ function generateHeaders(config: { paths: PathConfig[] }): string {
 
     // Process all headers
     for (const [
-header,
-value,
-] of Object.entries(pathConfig.headers)) {
+      header,
+      value,
+    ] of Object.entries(pathConfig.headers)) {
       if (typeof value === 'object' && !Array.isArray(value)) {
         // CSP-style header with directives
         const directives: string[] = [];
         for (const [
-directive,
-sources,
-] of Object.entries(value)) {
+          directive,
+          sources,
+        ] of Object.entries(value)) {
           directives.push(`${directive} ${sources.join(' ')}`);
         }
         output += `  ${header}: ${directives.join('; ')}\n`;
