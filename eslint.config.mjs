@@ -144,6 +144,9 @@ export default tseslint.config(
       quotes: [
         'warn',
         'single',
+        {
+          avoidEscape: true,
+        },
       ],
       semi: [
         1,

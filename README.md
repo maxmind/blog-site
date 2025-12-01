@@ -101,6 +101,28 @@ hugo server
 npm run lint
 ```
 
+#### Cloudflare Pages HTTP Headers Configuration
+
+The `static/_headers` file is automatically generated from
+`bin/_headers.config.ts`. **Do not edit `static/_headers` directly**.
+
+##### Making Changes to Headers
+
+1. Edit `bin/_headers.config.ts` (the source of truth with readable format and
+   TypeScript type safety)
+2. Test your changes locally:
+   ```sh
+   npm run build:headers
+   ```
+3. Commit only `bin/_headers.config.ts` - the headers file is regenerated during
+   deployment
+
+##### Build-Time Generation
+
+The `static/_headers` file is generated during the build process via `build.sh`
+and is not committed to git. For local testing, you can manually generate it
+with `npm run build:headers`.
+
 ## Writing Blog Posts
 
 Blog posts are written using

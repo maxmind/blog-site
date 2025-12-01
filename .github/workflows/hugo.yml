@@ -19,6 +19,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22.6'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f # 3.0.0
         with:
