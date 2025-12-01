@@ -38,20 +38,26 @@ function generateHeaders(config: { paths: PathConfig[] }): string {
       header,
       value,
     ] of Object.entries(pathConfig.headers)) {
-      if (typeof value === 'object' && !Array.isArray(value)) {
-        // CSP-style header with directives
+      // Handle Content-Security-Policy (nested object)
+      if (header === 'Content-Security-Policy') {
+        const csp = value as Record<string, string[]>;
         const directives: string[] = [];
+
         for (const [
           directive,
           sources,
-        ] of Object.entries(value)) {
+        ] of Object.entries(csp)) {
           directives.push(`${directive} ${sources.join(' ')}`);
         }
-        output += `  ${header}: ${directives.join('; ')}\n`;
-      } else {
-        // Simple array-based header
-        output += `  ${header}: ${value.join(' ')}\n`;
+
+        output += `  Content-Security-Policy: ${directives.join('; ')}\n`;
+        continue;
       }
+
+      // Handle all other headers (arrays)
+      const values = value as string[];
+      const separator = header === 'Permissions-Policy' ? ', ' : '; ';
+      output += `  ${header}: ${values.join(separator)}\n`;
     }
   }
 
