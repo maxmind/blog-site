@@ -14,7 +14,7 @@
 
   @media only screen and (min-width: 992px) {
     grid-template-areas:
-      'header .'
+      'header header'
       'article sidebar'
       'pagination .';
     grid-template-columns: 2fr 1fr;
