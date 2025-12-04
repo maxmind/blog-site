@@ -26,6 +26,6 @@
 .article__header-image {
   border-radius: var(--mm-border-radius);
   margin: 0;
-  margin-bottom: calc(var(--mm-spacing) / 2);
+  margin: var(--mm-spacing) 0;
   width: 100%;
 }
