@@ -71,6 +71,7 @@ Sphynx
 Sulham
 Talor
 teej
+Telesign
 Thexyz
 Toone
 unencrypted
