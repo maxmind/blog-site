@@ -7,7 +7,7 @@ description:
   "See how Telesign was able to identify 23% more online fraud by using MaxMind's GeoIP Enterprise and Anonymous IP databases."
 summary:
   "See how Telesign was able to better protect their customers by flagging 23% more high-risk transactions with the GeoIP Enterprise and Anonymous IP databases."
-date: "2025-12-04"
+date: "2025-12-05"
 headerImage: images/2025/12/maxmind-fraud-detection-telesign.webp
 category:
   - "Case studies"
