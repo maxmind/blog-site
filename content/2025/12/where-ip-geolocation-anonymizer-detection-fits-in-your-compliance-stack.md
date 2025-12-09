@@ -100,11 +100,13 @@ Kryptonite Financial’s internal compliance team has created a list of countrie
 they use to determine which traffic to block. Kryptonite Financial has flagged
 traffic associated with Ukraine, triggering the evaluation of additional inputs.
 
-Decision: <mark>continue filtering</mark> Rationale: While Ukraine is not
-explicitly listed as a sanctioned country, there are regions of the Ukraine that
-are occupied by Russia or whose claims are currently contested. Kryptonite
-Financial’s compliance team has triggered the evaluation of additional inputs to
-avoid doing business with people operating in those regions.
+Decision: continue filtering
+
+Rationale: While Ukraine is not explicitly listed as a sanctioned country, there
+are regions of the Ukraine that are occupied by Russia or whose claims are
+currently contested. Kryptonite Financial’s compliance team has triggered the
+evaluation of additional inputs to avoid doing business with people operating in
+those regions.
 
 **3. Evaluate geolocation subdivision**
 
@@ -117,7 +119,7 @@ United States these are states like California. In our Kryptonite Financial
 example, the subdivision data returns Dnipropetrovsk, an oblast (province) in
 Ukraine.
 
-Decision: <mark>continue filtering</mark>
+Decision: continue filtering
 
 Rationale: Since Dnipropetrovsk borders Donesk, a region of Ukraine currently
 occupied by Russia and subject to sanctions, additional data is needed to
@@ -131,7 +133,7 @@ This field returns a value between 0-100 indicating the confidence with which
 MaxMind has geolocated the subdivision. A lower number indicates lower
 confidence. In our example, the value returned is 40.
 
-Decision: <mark>continue filtering</mark>
+Decision: continue filtering
 
 Rationale: The subdivision level data for this IP address has relatively low
 confidence. Kryptonite. Financial would need more information In order to
@@ -139,7 +141,7 @@ determine if they should block or serve this traffic.
 
 **5. Evaluate user type** `User_type = cellular`
 
-Decision: <mark style="background-color: lightred">block traffic</mark>
+Decision: block traffic
 
 Because the IP address is associated with a cellular network, it could be in use
 by people on the move or across the border of the province in a potentially
@@ -192,7 +194,7 @@ often key to balancing security with user experience.
 
 As shown through the above example, subdivision and city level data can help to
 minimize the risk of OFAC non-compliance. It’s worth keeping in mind that even
-[OFAC does not maintain a list of blocked countries](https://ofac.treasury.gov/sanctions-programs-and-country-information/where-is-ofacs-country-list-what-countries-do-i-need-to-worry-about-in-terms-of-us-sanctions#:~:text=Due%20to%20the%20diversity%20among,at%20our%20Frequently%20Asked%20Questions),
+[OFAC does not maintain a list of blocked countries](https://ofac.treasury.gov/sanctions-programs-and-country-information/where-is-ofacs-country-list-what-countries-do-i-need-to-worry-about-in-terms-of-us-sanctions),
 “due to the diversity among sanctions” as there are a number of politically
 contested regions also affected. In disputed regions, MaxMind makes its own
 determinations as to which country the region should be assigned to, and does
