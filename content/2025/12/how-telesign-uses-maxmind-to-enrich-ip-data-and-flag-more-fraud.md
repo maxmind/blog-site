@@ -15,10 +15,10 @@ category:
   - "Fraud and risk"
 tag:
   - "Case studies"
-  - "Fraud prevention"
   - "Fraud screening"
   - "Risk data"
   - "Risk scoring"
+  - "Manual review"
 authors:
   - "the team at MaxMind"
 ---
