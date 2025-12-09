@@ -73,7 +73,9 @@ returned that provide risk context to Kryptonite Financial’s automated
 compliance system. They’ve designed and implemented IP intelligence as a front
 line traffic filter using the following rules:
 
-**1. Detect and block all anonymized traffic** `is_anonymous = false`
+**1. Detect and block all anonymized traffic**
+
+`is_anonymous = false`
 
 The risk with anonymized traffic is that the geolocation data it provides is
 that of the anonymizing host—the server or compromised personal computer being
@@ -85,11 +87,13 @@ significantly. We’ve seen rates of anonymized traffic as low as 0.2% and as hi
 as 35%. It depends largely on industry, geography and the type of business you
 operate.
 
-**Decision**: continue filtering **Rationale**: Despite the traffic not being
-associated with an anonymizer, KF’s system continues to evaluate inputs to
-ensure regulatory compliance.
+Decision: continue filtering
+
+Rationale: Despite the traffic not being associated with an anonymizer, KF’s
+system continues to evaluate inputs to ensure regulatory compliance.
 
 **2. Detect and block traffic from countries associated with OFAC sanctions**
+
 `Country = Ukraine`
 
 Kryptonite Financial’s internal compliance team has created a list of countries
@@ -102,7 +106,9 @@ are occupied by Russia or whose claims are currently contested. Kryptonite
 Financial’s compliance team has triggered the evaluation of additional inputs to
 avoid doing business with people operating in those regions.
 
-**3. Evaluate geolocation subdivision** `Subdivision = Dnipropetrovsk Oblast`
+**3. Evaluate geolocation subdivision**
+
+`Subdivision = Dnipropetrovsk Oblast`
 
 ISO subdivisions are an internationally recognized standard for dividing
 countries into regions of different scales. In most countries, level 1
@@ -111,27 +117,32 @@ United States these are states like California. In our Kryptonite Financial
 example, the subdivision data returns Dnipropetrovsk, an oblast (province) in
 Ukraine.
 
-Decision: <mark>continue filtering</mark> Rationale: Since Dnipropetrovsk
-borders Donesk, a region of Ukraine currently occupied by Russia and subject to
-sanctions, additional data is needed to determine whether or not to serve this
-traffic.
+Decision: <mark>continue filtering</mark>
 
-**4. Evaluate subdivision confidence** `Subdivision_confidence = 40`
+Rationale: Since Dnipropetrovsk borders Donesk, a region of Ukraine currently
+occupied by Russia and subject to sanctions, additional data is needed to
+determine whether or not to serve this traffic.
+
+**4. Evaluate subdivision confidence**
+
+`Subdivision_confidence = 40`
 
 This field returns a value between 0-100 indicating the confidence with which
 MaxMind has geolocated the subdivision. A lower number indicates lower
 confidence. In our example, the value returned is 40.
 
-Decision: <mark>continue filtering</mark> Rationale: The subdivision level data
-for this IP address has relatively low confidence. Kryptonite. Financial would
-need more information In order to determine if they should block or serve this
-traffic.
+Decision: <mark>continue filtering</mark>
+
+Rationale: The subdivision level data for this IP address has relatively low
+confidence. Kryptonite. Financial would need more information In order to
+determine if they should block or serve this traffic.
 
 **5. Evaluate user type** `User_type = cellular`
 
-Decision: <mark style="background-color: lightred">block traffic</mark> Because
-the IP address is associated with a cellular network, it could be in use by
-people on the move or across the border of the province in a potentially
+Decision: <mark style="background-color: lightred">block traffic</mark>
+
+Because the IP address is associated with a cellular network, it could be in use
+by people on the move or across the border of the province in a potentially
 sanctioned region. Considering that Kryptonite Financial is concerned with
 Russian actors attempting financial transactions through cell networks, their
 system would and should block this traffic.
