@@ -9,7 +9,7 @@ description:
 summary:
   "Reserve premium verification for high-risk traffic. Learn how IP intelligence
   can enable a risk-based screening for compliance use cases."
-date: "2025-12-09"
+date: "2025-12-10"
 headerImage: /images/2025/12/where-ip-geolocation-anonymizer-detection-fits-in-your-compliance-stack.webp
 category:
   - "IP intelligence"
@@ -87,7 +87,7 @@ significantly. We’ve seen rates of anonymized traffic as low as 0.2% and as hi
 as 35%. It depends largely on industry, geography and the type of business you
 operate.
 
-Decision: continue filtering
+Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: Despite the traffic not being associated with an anonymizer, KF’s
 system continues to evaluate inputs to ensure regulatory compliance.
@@ -100,7 +100,7 @@ Kryptonite Financial’s internal compliance team has created a list of countrie
 they use to determine which traffic to block. Kryptonite Financial has flagged
 traffic associated with Ukraine, triggering the evaluation of additional inputs.
 
-Decision: continue filtering
+Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: While Ukraine is not explicitly listed as a sanctioned country, there
 are regions of the Ukraine that are occupied by Russia or whose claims are
@@ -119,7 +119,7 @@ United States these are states like California. In our Kryptonite Financial
 example, the subdivision data returns Dnipropetrovsk, an oblast (province) in
 Ukraine.
 
-Decision: continue filtering
+Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: Since Dnipropetrovsk borders Donesk, a region of Ukraine currently
 occupied by Russia and subject to sanctions, additional data is needed to
@@ -133,7 +133,7 @@ This field returns a value between 0-100 indicating the confidence with which
 MaxMind has geolocated the subdivision. A lower number indicates lower
 confidence. In our example, the value returned is 40.
 
-Decision: continue filtering
+Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: The subdivision level data for this IP address has relatively low
 confidence. Kryptonite. Financial would need more information In order to
@@ -141,7 +141,7 @@ determine if they should block or serve this traffic.
 
 **5. Evaluate user type** `User_type = cellular`
 
-Decision: block traffic
+Decision: {{< highlight danger >}} block traffic {{</ highlight >}}
 
 Because the IP address is associated with a cellular network, it could be in use
 by people on the move or across the border of the province in a potentially
