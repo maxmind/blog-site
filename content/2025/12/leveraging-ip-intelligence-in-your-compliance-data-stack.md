@@ -62,16 +62,16 @@ A one-size-fits-all approach can create several challenges:
 
 ## An example of IP intelligence filters:
 
-Let’s look at an example using the fictional business Kryptonite Financial.
-Kryptonite Financial (KF) is a US-based financial institution that must block
-transactions from sanctioned countries such as Russia and North Korea due to
-OFAC regulations. KF are highly risk-averse and have opted to take the most
-proactive approach to blocking non-compliant traffic/risky traffic.
+Let’s look at an example using the fictional business Safe Compliant Bank. Safe
+Compliant Bank is a US-based financial institution that must block transactions
+from sanctioned countries such as Russia and North Korea due to OFAC
+regulations. Safe Compliant Bank are highly risk-averse and have opted to take
+the most proactive approach to blocking non-compliant traffic/risky traffic.
 
 When an IP address is run through MaxMind, a number of different data fields are
-returned that provide risk context to Kryptonite Financial’s automated
-compliance system. They’ve designed and implemented IP intelligence as a front
-line traffic filter using the following rules:
+returned that provide risk context to Safe Compliant Bank’s automated compliance
+system. They’ve designed and implemented IP intelligence as a front line traffic
+filter using the following rules:
 
 **1. Detect and block all anonymized traffic**
 
@@ -89,22 +89,23 @@ operate.
 
 Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
-Rationale: Despite the traffic not being associated with an anonymizer, KF’s
-system continues to evaluate inputs to ensure regulatory compliance.
+Rationale: Despite the traffic not being associated with an anonymizer, Safe
+Compliant Bank’s system continues to evaluate inputs to ensure regulatory
+compliance.
 
 **2. Detect and block traffic from countries associated with OFAC sanctions**
 
 `Country = Ukraine`
 
-Kryptonite Financial’s internal compliance team has created a list of countries
-they use to determine which traffic to block. Kryptonite Financial has flagged
+Safe Compliant Bank’s internal compliance team has created a list of countries
+they use to determine which traffic to block. Safe Compliant Bank has flagged
 traffic associated with Ukraine, triggering the evaluation of additional inputs.
 
 Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: While Ukraine is not explicitly listed as a sanctioned country, there
 are regions of the Ukraine that are occupied by Russia or whose claims are
-currently contested. Kryptonite Financial’s compliance team has triggered the
+currently contested. Safe Compliant Bank’s compliance team has triggered the
 evaluation of additional inputs to avoid doing business with people operating in
 those regions.
 
@@ -115,7 +116,7 @@ those regions.
 ISO subdivisions are an internationally recognized standard for dividing
 countries into regions of different scales. In most countries, level 1
 subdivisions are typically provinces, like Fujian or Guangdong in China. In the
-United States these are states like California. In our Kryptonite Financial
+United States these are states like California. In our Safe Compliant Bank
 example, the subdivision data returns Dnipropetrovsk, an oblast (province) in
 Ukraine.
 
@@ -136,7 +137,7 @@ confidence. In our example, the value returned is 40.
 Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: The subdivision level data for this IP address has relatively low
-confidence. Kryptonite. Financial would need more information In order to
+confidence. Safe Compliant Bank would need more information In order to
 determine if they should block or serve this traffic.
 
 **5. Evaluate user type** `User_type = cellular`
@@ -145,7 +146,7 @@ Decision: {{< highlight danger >}} block traffic {{</ highlight >}}
 
 Because the IP address is associated with a cellular network, it could be in use
 by people on the move or across the border of the province in a potentially
-sanctioned region. Considering that Kryptonite Financial is concerned with
+sanctioned region. Considering that Safe Compliant Bank is concerned with
 Russian actors attempting financial transactions through cell networks, their
 system would and should block this traffic.
 
