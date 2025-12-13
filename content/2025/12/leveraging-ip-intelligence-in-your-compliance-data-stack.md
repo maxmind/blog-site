@@ -65,8 +65,8 @@ A one-size-fits-all approach can create several challenges:
 Let’s look at an example using the fictional business Safe Compliant Bank. Safe
 Compliant Bank is a US-based financial institution that must block transactions
 from sanctioned countries such as Russia and North Korea due to OFAC
-regulations. Safe Compliant Bank are highly risk-averse and have opted to take
-the most proactive approach to blocking non-compliant traffic/risky traffic.
+regulations. Safe Compliant Bank is highly risk-averse and has opted to take the
+most proactive approach to blocking non-compliant traffic/risky traffic.
 
 When an IP address is run through MaxMind, a number of different data fields are
 returned that provide risk context to Safe Compliant Bank’s automated compliance
@@ -137,7 +137,7 @@ confidence. In our example, the value returned is 40.
 Decision: {{< highlight warning >}} continue filtering {{</ highlight >}}
 
 Rationale: The subdivision level data for this IP address has relatively low
-confidence. Safe Compliant Bank would need more information In order to
+confidence. Safe Compliant Bank would need more information in order to
 determine if they should block or serve this traffic.
 
 **5. Evaluate user type** `User_type = cellular`
