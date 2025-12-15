@@ -34,7 +34,7 @@ a responsive algorithm. They decided to implement minFraud because, in addition
 to a risk score, the
 [minFraud Insights service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 gave them access to a breadth of high quality data on
-[inputs ranging from IP geolocation and email risk to financial institution data](https://www.maxmind.com/en/solutions/fraud-prevention/data-points),
+[inputs ranging from IP geolocation and email risk to financial institution data](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
 all via a flexible easy-to-use API.
 
 > “The more data I have, the more significant my results can be. More data means
