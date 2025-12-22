@@ -1,14 +1,14 @@
 name = "blog-site"
 pages_build_output_dir = "public"
-compatibility_date = "2025-05-05"
+compatibility_date = "2025-12-22"
 
 [vars]
 BUILD_ENV = "preview"
 HUGO_BUILD_TAGS = "extended"
-HUGO_VERSION = "0.147.8"
+HUGO_VERSION = "0.153.1"
 
 [env.production.vars]
 BUILD_ENV = "production"
 CF_PAGES_URL = "https://blog.maxmind.com/"
 HUGO_BUILD_TAGS = "extended"
-HUGO_VERSION = "0.147.8"
+HUGO_VERSION = "0.153.1"
