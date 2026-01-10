@@ -32,7 +32,11 @@ jobs:
 
       - name: Fetch base ref
         if: ${{ github.event.pull_request }}
-        run: git fetch origin ${{ github.base_ref }}:upstream
+        run: |
+          origin="${BASE_REF}:upstream"
+          git fetch origin $origin
+        env:
+          BASE_REF: ${{ github.base_ref }}
 
       - name: Install precious
         run: ./bin/install-precious /usr/local/bin
@@ -49,4 +53,8 @@ jobs:
           fi
 
       - name: Lint files
-        run: precious lint ${{ steps.select-files.outputs.precious-args }}
+        run: |
+          args="${PRECIOUS_ARGS}"
+          precious lint $args
+        env:
+          PRECIOUS_ARGS: ${{ steps.select-files.outputs.precious-args }}
