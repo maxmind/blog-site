@@ -98,7 +98,7 @@ hugo server
 #### Linting
 
 ```sh
-npm run lint
+precious tidy --all
 ```
 
 #### Cloudflare Pages HTTP Headers Configuration
