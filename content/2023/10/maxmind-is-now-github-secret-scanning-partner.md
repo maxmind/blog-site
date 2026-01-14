@@ -36,7 +36,7 @@ underlying issue that’s exposing your license key in your repositories.
 [Here’s how to replace your license key](https://support.maxmind.com/knowledge-base/articles/replace-your-maxmind-license-key).
 
 All GitHub users can
-[enable push protection](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection)
+[enable push protection](https://docs.github.com/en/code-security/concepts/secret-security/about-push-protection)
 for free, which prevents MaxMind keys from entering your organization or public
 repositories. If you’re a GitHub Advanced Security customer, you can also scan
 for and block MaxMind keys in your private repositories.
