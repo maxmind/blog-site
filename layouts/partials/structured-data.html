@@ -1,0 +1,94 @@
+{{- /* Open Graph Meta Tags */ -}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+{{- if .IsPage -}}
+{{- /* Article-specific Open Graph tags */ -}}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- if .Lastmod -}}
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- end -}}
+{{- with .Params.authors -}}
+  {{- range . -}}
+<meta property="article:author" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- with .Params.category -}}
+  {{- range . -}}
+<meta property="article:section" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- with .Params.tag -}}
+  {{- range . -}}
+<meta property="article:tag" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* Twitter Card Tags */ -}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+
+{{- /* Images for Open Graph and Twitter */ -}}
+{{- if .Params.headerImage -}}
+<meta property="og:image" content="{{ .Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.headerImage }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.headerImage }}" />
+{{- end -}}
+
+{{- /* JSON-LD Structured Data */ -}}
+{{- if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  {{- with .Params.heading }}
+  "alternativeHeadline": {{ . | jsonify }},
+  {{- end }}
+  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  {{- with .Params.authors }}
+  "author": [
+    {{- range $i, $author := . }}
+    {{- if $i }}, {{ end }}
+    {
+      "@type": "Person",
+      "name": {{ $author | jsonify }}
+    }
+    {{- end }}
+  ],
+  {{- end }}
+  "publisher": {
+    "@type": "Organization",
+    "name": "MaxMind",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL | strings.TrimSuffix "/" }}/images/maxmind-logo.png"
+    }
+  },
+  {{- with .Params.headerImage }}
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ $.Site.BaseURL | strings.TrimSuffix "/" }}{{ . }}"
+  },
+  {{- end }}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  },
+  {{- with .Params.category }}
+  "articleSection": {{ index . 0 | jsonify }},
+  {{- end }}
+  {{- with .Params.tag }}
+  "keywords": {{ . | jsonify }},
+  {{- end }}
+  "inLanguage": "en-US"
+}
+</script>
+{{- end -}}
