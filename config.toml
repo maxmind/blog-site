@@ -16,6 +16,9 @@ titleCaseStyle = 'none'
   category = 'category'
   tag = 'tag'
 
+[permalinks]
+  page = '/:filename/'
+
 [outputFormats.RSS]
   mediatype = 'application/rss'
   baseName = 'feed'
