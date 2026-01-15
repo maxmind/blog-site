@@ -11,6 +11,8 @@ on:
 
 jobs:
   code-formatting:
+    env:
+      BASE_REF: ${{ github.base_ref }}
     runs-on: ubuntu-latest
     name: Code Formatting
     steps:
@@ -33,15 +35,9 @@ jobs:
       - name: Fetch base ref
         if: ${{ github.event.pull_request }}
         run: git fetch origin "${BASE_REF}"
-        env:
-          BASE_REF: ${{ github.base_ref }}
 
       - name: Install precious
         run: ./bin/install-precious /usr/local/bin
-
-      - run: git diff --name-only --diff-filter=ACM "origin/${BASE_REF}"...
-        env:
-          BASE_REF: ${{ github.base_ref }}
 
       - name: Select files
         id: select-files
@@ -51,12 +47,8 @@ jobs:
           else
             echo 'precious-args=--all' >> "$GITHUB_OUTPUT"
           fi
-        env:
-          BASE_REF: ${{ github.base_ref }}
 
       - name: Lint files
-        run: |
-          args="${PRECIOUS_ARGS}"
-          precious lint $args
+        run: precious lint ${PRECIOUS_ARGS}
         env:
           PRECIOUS_ARGS: ${{ steps.select-files.outputs.precious-args }}
