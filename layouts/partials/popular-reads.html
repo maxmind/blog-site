@@ -5,7 +5,9 @@
     </div>
     <h2 class="popular-reads__heading">Popular reads</h2>
     <ul class="popular-reads__list">
-      {{ range first 5 (where .Site.RegularPages "Params.popular" "==" true) }}
+      {{ $popularPosts := where .Site.RegularPages "Params.popular" "==" true }}
+      {{ $sortedPopular := partial "sort-by-latest.html" $popularPosts }}
+      {{ range first 5 $sortedPopular }}
         <li class="popular-reads__item">
           <a href="{{ .RelPermalink }}">
             {{ .Title }}

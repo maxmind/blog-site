@@ -1,4 +1,5 @@
-    {{ range first 1 .Site.RegularPages }}
+    {{ $sortedPages := partial "sort-by-latest.html" .Site.RegularPages }}
+    {{ range first 1 $sortedPages }}
       <div class="featured">
         <div>
           <article class="blog-post__container-featured">
@@ -32,9 +33,6 @@
                   {{ range .Params.authors }}
                     <div class="blog-post__author">{{ . }}</div>
                   {{ end }}
-                </div>
-                <div class="blog-post__date">
-                  <time>{{ .Date.Format "January 2, 2006" }}</time>
                 </div>
               </div>
               <div class="blog-post__excerpt">
