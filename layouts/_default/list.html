@@ -9,7 +9,9 @@
       {{ end }}
     </h1>
     <div class="blog-posts">
-      {{ range .Paginator.Pages }}
+      {{ $sortedPages := partial "sort-by-latest.html" .Pages }}
+      {{ $paginator := .Paginate $sortedPages }}
+      {{ range $paginator.Pages }}
         {{ partial "post-list.html" . }}
       {{ end }}
     </div>
