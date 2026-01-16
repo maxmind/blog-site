@@ -84,5 +84,5 @@ Test your hypothesis and use your findings to refine and automate your fraud
 detection practices - increase automation and decrease manual review, all while
 maintaining a positive customer experiences for your legitimate customers.
 
-[Jenn Sessler](https://www.maxmind.com/en/company) is currently MaxMind, Inc.’s
-Director of Business Development.
+[Jenn Sessler](https://www.maxmind.com/en/company/our-story) is currently
+MaxMind, Inc.’s Director of Business Development.
