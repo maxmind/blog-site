@@ -9,7 +9,7 @@ tag:
   - "Data privacy"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 At MaxMind, we take cyber security seriously -- both the security of our

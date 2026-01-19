@@ -13,7 +13,7 @@ tag:
   - "IP geolocation accuracy"
   - "Technical tutorials"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 As more of the world takes a privacy-focused approach to web use, IP geolocation

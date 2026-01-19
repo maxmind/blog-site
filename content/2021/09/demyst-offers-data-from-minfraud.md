@@ -12,7 +12,7 @@ tag:
   - "Case studies"
   - "Risk scoring"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 [Demyst](https://demyst.com/)’s Platform has helped Tier 1 financial services

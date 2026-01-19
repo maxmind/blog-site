@@ -8,7 +8,7 @@ tag:
   - "IP geolocation accuracy"
   - "IP network data"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 popular: true
 ---
 

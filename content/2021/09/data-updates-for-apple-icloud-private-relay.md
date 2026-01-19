@@ -13,7 +13,7 @@ tag:
   - "IP network data"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 We have updated our data in a number of ways in preparation for the rollout of

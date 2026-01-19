@@ -9,7 +9,7 @@ category:
 tag:
   - "Technical tutorials"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 We’ve added documentation to our developer’s site giving a tutorial on how to

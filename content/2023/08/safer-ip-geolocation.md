@@ -8,7 +8,7 @@ tag:
   - "Data privacy"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 People who understand the inherent limitation on precision for IP geolocation
