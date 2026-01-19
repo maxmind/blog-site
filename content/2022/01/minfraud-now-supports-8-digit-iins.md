@@ -10,7 +10,7 @@ tag:
   - "Credit card fraud"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 For many years, the issuer of a credit card could be identified by the first 6

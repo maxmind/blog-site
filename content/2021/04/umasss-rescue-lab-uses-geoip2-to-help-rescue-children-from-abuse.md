@@ -7,7 +7,7 @@ tag:
   - "Case studies"
   - "IP geolocation accuracy"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 Leveraging the strengths and understanding the limits of IP geolocation, the

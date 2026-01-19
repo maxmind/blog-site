@@ -7,7 +7,7 @@ category:
 tag:
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 In order to better ensure that out-of-date IP data is not being used, MaxMind

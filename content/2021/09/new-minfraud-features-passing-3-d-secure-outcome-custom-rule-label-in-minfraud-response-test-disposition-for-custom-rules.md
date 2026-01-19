@@ -11,7 +11,7 @@ tag:
   - "Manual review"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 We're excited to share a couple of new features that we recently added to our

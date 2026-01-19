@@ -13,7 +13,7 @@ tag:
   - "Geofiltering and geofencing"
   - "IP network data"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 In response to a growing appetite for privacy and security on the internet,

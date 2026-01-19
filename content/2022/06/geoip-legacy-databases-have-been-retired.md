@@ -9,7 +9,7 @@ category:
 tag:
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 It’s the end of an era! For 20 years, MaxMind has provided IP geolocation data

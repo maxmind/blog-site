@@ -13,7 +13,7 @@ tag:
   - "IP network data"
   - "Product updates"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 The last couple of years have accelerated the transformation not just of our

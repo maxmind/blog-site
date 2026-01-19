@@ -10,7 +10,7 @@ tag:
   - "Case studies"
   - "Risk scoring"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 When Vignesh Krishan founded Research Defender in 2018 he knew that managing

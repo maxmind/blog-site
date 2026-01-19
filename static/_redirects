@@ -26,3 +26,4 @@
 /feed /feed.xml 302
 /feed/ /feed.xml 302
 /rss.xml /feed.xml 302
+/authors/christopher-luna/ /authors/luna/ 302

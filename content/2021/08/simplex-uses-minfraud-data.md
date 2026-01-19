@@ -11,7 +11,7 @@ tag:
   - "Risk data"
   - "Risk scoring"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 [Simplex](https://www.simplex.com/) has been changing the status quo of crypto

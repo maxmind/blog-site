@@ -17,7 +17,7 @@ tag:
   - "IP network data"
   - "IP geolocation accuracy"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 We continue to hear a similar story: regulatory pressure and the cost of

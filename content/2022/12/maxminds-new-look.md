@@ -7,7 +7,7 @@ category:
 tag:
   - "News"
 authors:
-  - "Christopher Luna"
+  - "Luna"
 ---
 
 Over the last twenty years, MaxMind has secured its place as a cornerstone of
