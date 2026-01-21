@@ -83,6 +83,6 @@
   {{- $structuredData = merge $structuredData (dict "keywords" .) -}}
 {{- end -}}
 <script type="application/ld+json">
-{{ $structuredData | jsonify }}
+{{ $structuredData | jsonify | safeJS }}
 </script>
 {{- end -}}
