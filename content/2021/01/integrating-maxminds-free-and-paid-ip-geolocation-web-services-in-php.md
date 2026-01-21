@@ -107,9 +107,6 @@ Anycast address, it doesn't make sense to return a precise location, since the
 IP address has locations all over the world). In these cases MaxMind will return
 the subset of the fields for which there is data.
 
-For a full list of the fields returned by each service, see this
-[side by side comparison of GeoLite2 and GeoIP2 Precision data points](https://dev.maxmind.com/static/pdf/GeoLite2-and-GeoIP2-Precision-Web-Services-Comparison.pdf).
-
 ## The Demo in Action
 
 Let's take a look at the demo application we're going to write today. Here is a
