@@ -23,8 +23,8 @@ conference.
   Pinyon 2 conference room. Learn what geolocation and other transactional data
   can do to help you understand the context of an account takeover in order to
   identify suspicious activity and make better decisions while providing your
-  good customers with the best experience possible. [**Read More
-  >>**]({{< relref "2018/01/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas.md" >}})
+  good customers with the best experience possible. [Read
+  More]({{< relref "2018/01/maxmind-and-shopify-to-speak-about-account-takeover-at-mrc-vegas.md" >}})
 
 ---
 

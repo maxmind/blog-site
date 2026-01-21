@@ -10,3 +10,4 @@ local/
 
 # Cloudflare Pages headers
 static/_headers
+.lycheecache

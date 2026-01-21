@@ -60,7 +60,7 @@ These differences are explained in more detail on our
 **Which GeoIP2 products and services can I access now?**
 
 As of right now, the
-[GeoIP2 JavaScript API](”https://www.maxmind.com/en/javascript”) is fully
+[GeoIP2 JavaScript API](https://www.maxmind.com/en/javascript) is fully
 released. GeoIP2 Web Service Client APIs in Java, Perl, PHP, and Python are
 available for
 [beta testing](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services).
