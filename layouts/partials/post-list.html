@@ -13,7 +13,7 @@
           {{ . }}
         {{ else }}
           {{ .Title }}
-      {{ end }}
+        {{ end }}
       </a>
     </h3>
     <div class="blog-post__published">
@@ -24,9 +24,6 @@
         {{ range .Params.authors }}
           <div class="blog-post__author">{{ . }}</div>
         {{ end }}
-      </div>
-      <div class="blog-post__date">
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
       </div>
     </div>
   </div>

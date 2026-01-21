@@ -1,0 +1,88 @@
+{{- /* Open Graph Meta Tags */ -}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+{{- if .IsPage -}}
+{{- /* Article-specific Open Graph tags */ -}}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- if .Lastmod -}}
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- end -}}
+{{- with .Params.authors -}}
+  {{- range . -}}
+<meta property="article:author" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- with .Params.category -}}
+  {{- range . -}}
+<meta property="article:section" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- with .Params.tag -}}
+  {{- range . -}}
+<meta property="article:tag" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* Twitter Card Tags */ -}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+
+{{- /* Images for Open Graph and Twitter */ -}}
+{{- if .Params.headerImage -}}
+<meta property="og:image" content="{{ .Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.headerImage }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.headerImage }}" />
+{{- end -}}
+
+{{- /* JSON-LD Structured Data */ -}}
+{{- if .IsPage -}}
+{{- $structuredData := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" (default .Summary .Description)
+  "url" .Permalink
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+  "publisher" (dict
+    "@type" "Organization"
+    "name" "MaxMind"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" (printf "%s/images/maxmind-logo.png" (.Site.BaseURL | strings.TrimSuffix "/"))
+    )
+  )
+  "mainEntityOfPage" (dict
+    "@type" "WebPage"
+    "@id" .Permalink
+  )
+  "inLanguage" "en-US"
+-}}
+{{- with .Params.heading -}}
+  {{- $structuredData = merge $structuredData (dict "alternativeHeadline" .) -}}
+{{- end -}}
+{{- with .Params.authors -}}
+  {{- $authors := slice -}}
+  {{- range . -}}
+    {{- $authors = $authors | append (dict "@type" "Person" "name" .) -}}
+  {{- end -}}
+  {{- $structuredData = merge $structuredData (dict "author" $authors) -}}
+{{- end -}}
+{{- with .Params.headerImage -}}
+  {{- $structuredData = merge $structuredData (dict "image" (dict "@type" "ImageObject" "url" (printf "%s%s" ($.Site.BaseURL | strings.TrimSuffix "/") .))) -}}
+{{- end -}}
+{{- with .Params.category -}}
+  {{- $structuredData = merge $structuredData (dict "articleSection" (index . 0)) -}}
+{{- end -}}
+{{- with .Params.tag -}}
+  {{- $structuredData = merge $structuredData (dict "keywords" .) -}}
+{{- end -}}
+<script type="application/ld+json">
+{{ $structuredData | jsonify | safeJS }}
+</script>
+{{- end -}}

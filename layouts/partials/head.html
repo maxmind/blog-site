@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}">
   {{ end }}
 
   {{ $style := resources.Get "scss/index.scss" }}
@@ -34,5 +34,5 @@
   <script src='{{ $js.RelPermalink }}'></script>
   <script async src="https://www.maxmind.com/js/global-privacy-control.js"></script>
 
-  {{ template "_internal/opengraph.html" . }}
+  {{ partial "structured-data.html" . }}
 </head>

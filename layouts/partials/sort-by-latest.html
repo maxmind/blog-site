@@ -1,0 +1,7 @@
+{{- /*
+Sorts pages by the most recent date (lastmod takes priority over date)
+Returns: sorted collection of pages
+Usage: {{ $sorted := partial "sort-by-latest.html" .Site.RegularPages }}
+*/ -}}
+{{- $pages := . -}}
+{{- return sort $pages ".Lastmod" "desc" -}}

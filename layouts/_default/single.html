@@ -29,16 +29,21 @@
               {{ end }}
             {{ else }}
               {{ range .Params.authors }}
-                  <div class="blog-post__author">{{ . }}</div>
+                <div class="blog-post__author">{{ . }}</div>
               {{ end }}
             {{ end }}
           </div>
+          <span class="blog-post__reading-time">{{ .ReadingTime }} min read</span>
         </div>
         <div class="blog-post__date-reading-time">
           <span class="blog-post__date">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if ne .Date .Lastmod }}
+              <time>Published on {{ .Date.Format "January 2, 2006" }}</time><br>
+              <time>Last updated {{ .Lastmod.Format "January 2, 2006" }}</time>
+            {{ else }}
+              <time>{{ .Date.Format "January 2, 2006" }}</time>
+            {{ end }}
           </span>
-          <span class="blog-post__reading-time">{{ .ReadingTime }} min read</span>
         </div>
       </div>
       <div class="blog-post__meta-column-2">

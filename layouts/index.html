@@ -1,7 +1,8 @@
 {{ define "main" }}
 
   <main aria-role="main">
-    {{ $page := $.Paginator }}
+    {{ $sortedPages := partial "sort-by-latest.html" .Site.RegularPages }}
+    {{ $page := .Paginate $sortedPages }}
       {{ if eq $page.PageNumber 1 }}
         {{ partial "featured-post" . }}
       {{ end }}
@@ -9,7 +10,7 @@
     <div class="blog-posts__wrapper">
       <div class="blog-posts">
         {{ if eq $page.PageNumber 1 }}
-          {{ $pages := .Site.RegularPages }}
+          {{ $pages := $sortedPages }}
 
           {{ $after1 := after 1 $pages }}
           {{ range first 3 $after1 }}
@@ -23,10 +24,10 @@
             {{ partial "post-list.html" . }}
           {{ end }}
         {{ else }}
-          {{ range .Paginator.Pages }}
+          {{ range $page.Pages }}
             {{ partial "post-list.html" . }}
           {{ end }}
-        {{ end  }}
+        {{ end }}
       </div>
     </div>
   </main>

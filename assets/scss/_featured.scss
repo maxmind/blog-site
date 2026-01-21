@@ -82,8 +82,4 @@
   .blog-post__category:hover {
     color: var(--mm-color-link);
   }
-
-  .blog-post__date::before {
-    content: ' • ';
-  }
 }
