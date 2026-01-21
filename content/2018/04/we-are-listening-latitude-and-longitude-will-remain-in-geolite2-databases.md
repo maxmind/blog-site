@@ -35,8 +35,9 @@ updates on our review of GeoLite2 database coordinates.
 At MaxMind, “open communication” is one of our core values. We’re listening to
 you and we take your feedback seriously.
 
-Additional information can also be found in our earlier blog:
-[Discontinuation of the GeoLite Legacy Databases](/2018/01/discontinuation-of-the-geolite-legacy-databases/).
+Additional information can also be found in our earlier blog: [Discontinuation
+of the GeoLite Legacy
+Databases]({{< relref "2018/01/discontinuation-of-the-geolite-legacy-databases.md" >}}).
 
 ---
 

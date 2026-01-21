@@ -35,6 +35,15 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
+      - name: Check for hardcoded internal links
+        run: |
+          # Detect hardcoded internal blog links (should use relref instead)
+          # Pattern matches markdown links like [text](/some-slug/) but excludes defined paths
+          if grep -rE '\]\(/[a-z0-9-]+/?\)' content/ --include='*.md' | grep -vE '\]\(/(images|wp-content|feed|authors|tag|category)/'; then
+            echo "::error::Found hardcoded internal links. Use relref shortcode instead. See BLOG-POST-TEMPLATE.md"
+            exit 1
+          fi
+
       - name: Build
         run: ./build.sh
         env:

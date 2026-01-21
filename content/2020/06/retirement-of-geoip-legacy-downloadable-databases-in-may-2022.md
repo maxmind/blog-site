@@ -22,8 +22,8 @@ means that neither updates nor older versions of the Legacy databases will be
 available after that date. We recommend migrating to our GeoIP2 databases at
 your earliest convenience.
 
-**Update (June 1, 2022):**
-[Our GeoIP Legacy databases have been retired!](/2022/06/geoip-legacy-databases-have-been-retired)
+**Update (June 1, 2022):** [Our GeoIP Legacy databases have been
+retired!]({{< relref "2022/06/geoip-legacy-databases-have-been-retired.md" >}})
 
 We have provided GeoIP databases in the
 ['Legacy' formats](https://dev.maxmind.com/geoip/docs/web-services/legacy/)
@@ -47,8 +47,8 @@ users to migrate to our current
 [GeoIP Legacy web services](https://dev.maxmind.com/geoip/docs/web-services/legacy/),
 although there will be data changes as they switch to relying on
 [GeoIP2 data](https://dev.maxmind.com/geoip/whats-new-in-geoip2/). More
-information on this will be provided on June 15, 2020 in a
-[separate blog post](/2020/06/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022/).
+information on this will be provided on June 15, 2020 in a [separate blog
+post]({{< relref "2020/06/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022.md" >}}).
 
 ## What does this mean for me?
 

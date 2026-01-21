@@ -26,10 +26,11 @@ The mappable geolocation area data included in MaxMind’s geolocation products
 and services is composed of geolocation coordinates (latitude and longitude),
 and an accuracy radius (in kilometers). This mappable area is our most precise
 geolocation data because, as discussed in our previous post on accuracy, IP
-[geolocation isn’t precise enough to put a pin on a map](/2021/07/how-accurate-is-ip-geolocation).
-Some geolocation technology (for example, GPS) may return a point, or a point
-with such a small accuracy radius that it can easily be treated as a point, but
-IP geolocation is different.
+[geolocation isn't precise enough to put a pin on a
+map]({{< relref "2021/07/how-accurate-is-ip-geolocation.md" >}}). Some
+geolocation technology (for example, GPS) may return a point, or a point with
+such a small accuracy radius that it can easily be treated as a point, but IP
+geolocation is different.
 
 When doing data analysis and building applications, working with geolocation
 area data is different than working with a geolocation point. If we assume we

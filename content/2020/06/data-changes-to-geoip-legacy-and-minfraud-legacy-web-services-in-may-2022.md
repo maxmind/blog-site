@@ -13,13 +13,14 @@ authors:
 ---
 
 Several data changes are coming to the legacy web services outlined below due to
-the
-[**Retirement of GeoIP Legacy Downloadable Databases on May 31, 2022**](/2020/06/retirement-of-geoip-legacy-downloadable-databases-in-may-2022/).
+the [**Retirement of GeoIP Legacy Downloadable Databases on May 31,
+2022**]({{< relref "2020/06/retirement-of-geoip-legacy-downloadable-databases-in-may-2022.md" >}}).
 We will continue to support these web services with data from our more modern
 GeoIP2 data set.
 
-**Update (June 1, 2022):**
-[Our GeoIP Legacy databases have been retired, and these changes are now live!](/2022/06/geoip-legacy-databases-have-been-retired)
+**Update (June 1, 2022):** [Our GeoIP Legacy databases have been retired, and
+these changes are now
+live!]({{< relref "2022/06/geoip-legacy-databases-have-been-retired.md" >}})
 
 ## Are these changes applicable to my web services?
 

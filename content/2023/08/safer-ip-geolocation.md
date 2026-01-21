@@ -16,8 +16,10 @@ know that you should never geolocate an IP address to a point on a map. That’s
 why, at MaxMind, all of our products with geolocation data return a geolocation
 area. Rather than a point on a map, our products contain a circle that can be
 drawn onto a map using a center defined by latitude and longitude, along with an
-accuracy radius.
-[Learn more about the geolocation area data we provide, how it differs from a geolocation point, and how to use a geolocation area in your applications on our blog.](/2022/06/using-maxminds-accuracy-radius/)
+accuracy radius. [Learn more about the geolocation area data we provide, how it
+differs from a geolocation point, and how to use a geolocation area in your
+applications on our
+blog.]({{< relref "2022/06/using-maxminds-accuracy-radius.md" >}})
 
 While using a geolocation area is safer and more accurate than relying on a
 point, we wanted to add an additional layer of protection. That’s why we
