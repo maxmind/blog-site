@@ -41,54 +41,48 @@
 
 {{- /* JSON-LD Structured Data */ -}}
 {{- if .IsPage -}}
+{{- $structuredData := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" (default .Summary .Description)
+  "url" .Permalink
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+  "publisher" (dict
+    "@type" "Organization"
+    "name" "MaxMind"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" (printf "%s/images/maxmind-logo.png" (.Site.BaseURL | strings.TrimSuffix "/"))
+    )
+  )
+  "mainEntityOfPage" (dict
+    "@type" "WebPage"
+    "@id" .Permalink
+  )
+  "inLanguage" "en-US"
+-}}
+{{- with .Params.heading -}}
+  {{- $structuredData = merge $structuredData (dict "alternativeHeadline" .) -}}
+{{- end -}}
+{{- with .Params.authors -}}
+  {{- $authors := slice -}}
+  {{- range . -}}
+    {{- $authors = $authors | append (dict "@type" "Person" "name" .) -}}
+  {{- end -}}
+  {{- $structuredData = merge $structuredData (dict "author" $authors) -}}
+{{- end -}}
+{{- with .Params.headerImage -}}
+  {{- $structuredData = merge $structuredData (dict "image" (dict "@type" "ImageObject" "url" (printf "%s%s" ($.Site.BaseURL | strings.TrimSuffix "/") .))) -}}
+{{- end -}}
+{{- with .Params.category -}}
+  {{- $structuredData = merge $structuredData (dict "articleSection" (index . 0)) -}}
+{{- end -}}
+{{- with .Params.tag -}}
+  {{- $structuredData = merge $structuredData (dict "keywords" .) -}}
+{{- end -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | jsonify }},
-  {{- with .Params.heading }}
-  "alternativeHeadline": {{ . | jsonify }},
-  {{- end }}
-  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
-  "url": {{ .Permalink | jsonify }},
-  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
-  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
-  {{- with .Params.authors }}
-  "author": [
-    {{- range $i, $author := . }}
-    {{- if $i }}, {{ end }}
-    {
-      "@type": "Person",
-      "name": {{ $author | jsonify }}
-    }
-    {{- end }}
-  ],
-  {{- end }}
-  "publisher": {
-    "@type": "Organization",
-    "name": "MaxMind",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ .Site.BaseURL | strings.TrimSuffix "/" }}/images/maxmind-logo.png"
-    }
-  },
-  {{- with .Params.headerImage }}
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ $.Site.BaseURL | strings.TrimSuffix "/" }}{{ . }}"
-  },
-  {{- end }}
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
-  },
-  {{- with .Params.category }}
-  "articleSection": {{ index . 0 | jsonify }},
-  {{- end }}
-  {{- with .Params.tag }}
-  "keywords": {{ . | jsonify }},
-  {{- end }}
-  "inLanguage": "en-US"
-}
+{{ $structuredData | jsonify }}
 </script>
 {{- end -}}
