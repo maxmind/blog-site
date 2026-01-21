@@ -27,13 +27,13 @@
     {{ $sortedPosts := partial "sort-by-latest.html" $posts }}
     {{ $paginator := .Paginate $sortedPosts }}
     {{ if $paginator }}
-    <div class="blog-posts__wrapper">
-      <div class="blog-posts">
-        {{ range $paginator.Pages }}
-          {{ partial "post-list.html" . }}
-        {{ end }}
+      <div class="blog-posts__wrapper">
+        <div class="blog-posts">
+          {{ range $paginator.Pages }}
+            {{ partial "post-list.html" . }}
+          {{ end }}
+        </div>
       </div>
-    </div>
-    {{ partial "pagination" . }}
-  {{ end }}
+      {{ partial "pagination" . }}
+    {{ end }}
 {{ end }}

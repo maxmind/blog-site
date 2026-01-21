@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}">
   {{ end }}
 
   {{ $style := resources.Get "scss/index.scss" }}
