@@ -42,8 +42,9 @@ to date IP geolocation and intelligence data.
 ## Transitioning to GeoIP2
 
 If you’re still in the process of transitioning from GeoIP Legacy to GeoIP2, you
-can get more information in
-[the blog post announcing the retirement of our Legacy databases from 2020](/2020/06/retirement-of-geoip-legacy-downloadable-databases-in-may-2022).
+can get more information in [the blog post announcing the retirement of our
+Legacy databases from
+2020]({{< relref "2020/06/retirement-of-geoip-legacy-downloadable-databases-in-may-2022.md" >}}).
 
 ## GeoIP Legacy Web Services
 
@@ -52,8 +53,9 @@ some important data changes to minFraud and GeoIP Legacy web services. The most
 notable of these is the change in our region codes, and the move to GeoNames for
 standardized location names.
 
-You can read about all the changes to our Legacy web services on
-[our blog post announcing these changes](/2020/06/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022).
+You can read about all the changes to our Legacy web services on [our blog post
+announcing these
+changes]({{< relref "2020/06/data-changes-to-geoip-legacy-and-minfraud-legacy-web-services-in-may-2022.md" >}}).
 
 ## Thank you for 20 years of GeoIP
 

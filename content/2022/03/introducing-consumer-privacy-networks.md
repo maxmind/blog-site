@@ -21,8 +21,8 @@ economy, but of the way that we use the internet. For an ever-increasing
 population, there’s a digital-first approach to seeking entertainment, to
 staying in touch with family and friends, to education, and to work.
 
-When the internet was a smaller corner of our lives,
-[VPNs and other proxies](/2019/01/types-of-anonymous-ips-and-how-they-affect-your-business)
+When the internet was a smaller corner of our lives, [VPNs and other
+proxies]({{< relref "2019/01/types-of-anonymous-ips-and-how-they-affect-your-business.md" >}})
 were mostly used by privacy conscious techies, corporations, and fraudsters.
 Today, proxies are marketed to everyday users by major tech companies, offering
 privacy and limited anonymity for a modest subscription fee. When proxies are

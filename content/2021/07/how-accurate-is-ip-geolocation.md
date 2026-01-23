@@ -191,8 +191,9 @@ difficult to detect.
 The use of VPNs and other proxies for work or privacy effectively masks the IP
 address of the end-user so that their true geolocation cannot be accurately
 determined. Only the IP address of the proxy can be geolocated, and often this
-isn’t what you’re looking for at all. You can read more about
-[VPNs and other anonymizers on our blog](/2019/01/types-of-anonymous-ips-and-how-they-affect-your-business/).
+isn’t what you’re looking for at all. You can read more about [VPNs and other
+anonymizers on our
+blog]({{< relref "2019/01/types-of-anonymous-ips-and-how-they-affect-your-business.md" >}}).
 We provide solutions for proxy detection through the
 [GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database),
 [GeoIP2 Precision Insights web service](https://www.maxmind.com/en/geoip-api-web-services),

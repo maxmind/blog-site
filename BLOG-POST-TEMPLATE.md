@@ -166,7 +166,7 @@ For example:
 Don't do this:
 
 ```md
-[Discontinuation of the GeoLite Legacy Databases](/2018/01/discontinuation-of-the-geolite-legacy-databases/)
+[Discontinuation of the GeoLite Legacy Databases](/discontinuation-of-the-geolite-legacy-databases/)
 ```
 
 Do this:

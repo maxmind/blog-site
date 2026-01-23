@@ -35,8 +35,23 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
+      - name: Check for hardcoded internal links
+        run: |
+          # Detect hardcoded internal blog links (should use relref instead)
+          # Pattern matches markdown links like [text](/some-slug/) but excludes defined paths
+          if grep -rE '\]\(/[a-z0-9-]+/?\)' content/ --include='*.md' | grep -vE '\]\(/(images|wp-content|feed|authors|tag|category)/'; then
+            echo "::error::Found hardcoded internal links. Use relref shortcode instead. See BLOG-POST-TEMPLATE.md"
+            exit 1
+          fi
+
       - name: Build
         run: ./build.sh
         env:
           CF_PAGES_URL: /
           DARTSASS_VERSION: 1.56.2
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@885c65f3dc543b57c898c8099f4e08c8afd178a2
+        with:
+          fail: true
+          args: "'./public/**/*.html' --offline --root-dir ${{ github.workspace }}/public --include-fragments --config /dev/null --exclude '/wp-content/uploads/2017/09/MaxMind_Paladin_Group_2017-Report.pdf'"

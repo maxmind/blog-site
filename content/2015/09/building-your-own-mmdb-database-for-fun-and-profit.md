@@ -15,8 +15,8 @@ authors:
 We have deprecated the Perl writer discussed in this article. It is no longer
 developed or supported. We encourage you to use our
 [Go `github.com/maxmind/mmdbwriter` module](https://pkg.go.dev/github.com/maxmind/mmdbwriter)
-instead. Please see our post on
-[writing MMDB files using the Go programming language](/2020/09/enriching-mmdb-files-with-your-own-data-using-go/).
+instead. Please see our post on [writing MMDB files using the Go programming
+language]({{< relref "2020/09/enriching-mmdb-files-with-your-own-data-using-go.md" >}}).
 
 ## Introduction
 
