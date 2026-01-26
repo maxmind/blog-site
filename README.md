@@ -22,67 +22,38 @@
 
 ## Usage
 
-- [Minimum Requirements](#minimum-requirements)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Development](#development)
   - [Development Server](#development-server)
   - [Linting](#linting)
 - [Writing Blog Posts](#writing-blog-posts)
 
-### Minimum Requirements
+### Prerequisites
 
-- Node 18
+This project uses [mise](https://mise.jdx.dev/) to manage tool versions
+(Node.js, Hugo, pnpm, precious, Dart Sass).
 
-If you need help installing and/or managing Node and Yarn versions, check out
-[NVM](https://github.com/nvm-sh/nvm).
+#### Install mise
+
+```sh
+curl https://mise.jdx.dev/install.sh | sh
+```
+
+See the [mise installation guide](https://mise.jdx.dev/getting-started.html)
+for other installation methods.
 
 ### Installation
 
 ```sh
-npm install
+mise trust    # Trust the mise.toml configuration
+mise install  # Install all required tools (Node, Hugo, pnpm, etc.)
+pnpm install  # Install Node.js dependencies
 ```
-
-- `npm install` installs the necessary node modules for development.
-
-```
-bin/install-precious <path/to/install>
-```
-
-- `bash bin/install-precious` installs precious which is used for linting code.
-- To install it directly within the repository you can run `mkdir -p local` to
-  create a `local` folder. Then run `bin/install-precious local` to install
-  precious.
 
 You should also install our pre-commit hook. You can do this from your checkout
 by running `git/setup.sh`. These hooks do things like ensure that the code you
 commit is tidy and passes various linter checks.
-
-#### Install Hugo
-
-##### Homebrew (macOS)
-
-```sh
-brew install hugo
-```
-
-##### Debian / Ubuntu
-
-It is recommended that you install
-[the latest release of Hugo](https://github.com/gohugoio/hugo/releases). For
-debian and ubuntu users, they offer a .deb file.
-
-##### Other OS
-
-See [Hugo Installation](https://gohugo.io/installation/)
-
-#### Install Embedded Dart Sass
-
-Download
-[Embedded Dart Sass](https://github.com/sass/dart-sass-embedded/releases) and
-make sure it is in your `$PATH`. This is necessary for Hugo to process SASS and
-SCSS files. See the
-[Hugo documentation](https://gohugo.io/functions/css/sass/#dart-sass) for more
-information.
 
 ### Development
 
@@ -112,7 +83,7 @@ The `static/_headers` file is automatically generated from
    TypeScript type safety)
 2. Test your changes locally:
    ```sh
-   npm run build:headers
+   pnpm run build:headers
    ```
 3. Commit only `bin/_headers.config.ts` - the headers file is regenerated during
    deployment
@@ -121,7 +92,7 @@ The `static/_headers` file is automatically generated from
 
 The `static/_headers` file is generated during the build process via `build.sh`
 and is not committed to git. For local testing, you can manually generate it
-with `npm run build:headers`.
+with `pnpm run build:headers`.
 
 ## Writing Blog Posts
 
