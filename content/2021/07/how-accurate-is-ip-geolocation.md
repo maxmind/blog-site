@@ -266,7 +266,7 @@ as a fallback or alternative.
 
 ## The impact of privacy opt-outs on IP addresses
 
-Under a number of laws and regulations (i.e. GDPR and CCPA), individuals may
+Under a number of laws and regulations (e.g. GDPR and CCPA), individuals may
 request to opt out of the sale of their personal information which includes IP
 address data. Although these regulations are generally meant to protect the
 privacy of individuals, and
@@ -279,9 +279,9 @@ most of our databases. MaxMind does sell specialized databases (GeoIP Shield)
 which contain these IP addresses, and which can only be used for specific use
 cases in which these regulations do not apply—fraud prevention, compliance, and
 many security use cases. If you are interested in GeoIP Shield, please contact
-[enterprise@maxmind.com](mailto: enterprise@maxmind.com) or your MaxMind
-Customer Success Manager to discuss if this specialized database is suitable for
-your use case.
+[enterprise@maxmind.com](mailto:enterprise@maxmind.com) or your MaxMind Customer
+Success Manager to discuss if this specialized database is suitable for your use
+case.
 
 An IP address may be missing for reasons other than data privacy requests. An IP
 address may not be routed on the internet, or MaxMind may exclude some ranges
