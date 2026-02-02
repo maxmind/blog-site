@@ -1,6 +1,7 @@
 ---
 title: "How accurate is IP geolocation?"
 date: "2021-07-01"
+lastmod: "2026-02-02"
 headerImage: "/images/2021/07/how-accurate-is-ip-geolocation.webp"
 category:
   - "IP intelligence"
@@ -12,25 +13,14 @@ authors:
 popular: true
 ---
 
-With nearly two decades in the business of IP geolocation, we spend a lot of
+With more than two decades in the business of IP geolocation, we spend a lot of
 time thinking about accuracy, but, as with all things big data, a simple
-question usually has a complex answer. As we approach our twentieth anniversary,
-we’ll be offering some insights into the industry. This month we’ll cover the
-basics, answering questions about how accurate IP geolocation is and why. In
+question (“How accurate is IP geolocation?") usually has a complex answer. In
 this post, we’ll talk about some common assumptions about how IP geolocation
 works and contextualize those assumptions in light of the structure of the
 internet and the distribution of the IP space across geographical regions. In
 light of these considerations, we’ll develop a deeper understanding of the
 constraints and opportunities for IP geolocation.
-
-In the coming months, we’ll go into more detail about the specific methods we
-use to measure accuracy and gauge confidence in our geolocation data. We’ll also
-dive into some of the considerations that shape the kind of data we produce and
-how we face questions of coverage, precision, and accuracy in order to deliver
-the most valuable data possible to our users. Finally, we’ll consider a breadth
-of IP intelligence data that can be used in tandem with geolocation to answer
-key questions about IP addresses that you can leverage to get the most value for
-your applications.
 
 ## Is IP geolocation about a pin on a map?
 
@@ -164,14 +154,12 @@ associated with the server.
 
 In spite of their sometimes questionable reputation, people use VPNs for any
 number of reasons. Due to effective advertising and media coverage, VPNs have
-entered the consciousness of a broader section of the general public. This has
-only increased with the COVID-19 pandemic, as
-[CNET reported last year](https://www.cnet.com/tech/services-and-software/vpn-use-surges-during-the-coronavirus-lockdown-but-so-do-security-risks/),
-with more users working and streaming from home, and having to familiarize
-themselves with new digital technologies and privacy concerns. It’s true that
-fraudsters and digital pirates may use VPNs, but privacy-conscious end-users may
-also use a VPN to protect their identity from casual data-gathering, express
-political dissent, or circumvent censorship.
+entered the consciousness of a broader section of the general public and VPN
+usage [continues to see an upward trend]
+(https://www.security.org/vpn/statistics/). It’s true that fraudsters and
+digital pirates may use VPNs, but privacy-conscious end-users may also use a VPN
+to protect their identity from casual data-gathering, express political dissent,
+or circumvent censorship.
 
 ![get started](/images/2021/07/get-startedArtboard-1-2.png)
 
@@ -275,6 +263,30 @@ even to applications from well-known businesses. Businesses have to choose
 whether they want to lose potential customers who are unwilling to grant
 location permissions or learn how to understand and leverage IP geolocation data
 as a fallback or alternative.
+
+## The impact of privacy opt-outs on IP addresses
+
+Under a number of laws and regulations (e.g. GDPR and CCPA), individuals may
+request to opt out of the sale of their personal information which includes IP
+address data. Although these regulations are generally meant to protect the
+privacy of individuals, and
+[MaxMind data cannot be used to locate individual people](https://blog.maxmind.com/safer-ip-geolocation/),
+we honor these data privacy requests in compliance with local and international
+regulations.
+
+When MaxMind receives a valid opt-out request, we remove the IP address from
+most of our databases. MaxMind does sell specialized databases (GeoIP Shield)
+which contain these IP addresses, and which can only be used for specific use
+cases in which these regulations do not apply—fraud prevention, compliance, and
+many security use cases. If you are interested in GeoIP Shield, please contact
+[enterprise@maxmind.com](mailto:enterprise@maxmind.com) or your MaxMind Customer
+Success Manager to discuss if this specialized database is suitable for your use
+case.
+
+An IP address may be missing for reasons other than data privacy requests. An IP
+address may not be routed on the internet, or MaxMind may exclude some ranges
+for other reasons. MaxMind is unable to confirm whether an IP is missing due to
+an opt-out request for privacy reasons.
 
 ## Rethinking IP Geolocation Accuracy
 
