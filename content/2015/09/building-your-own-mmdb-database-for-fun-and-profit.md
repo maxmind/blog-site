@@ -38,9 +38,9 @@ You'll need to use Perl to write your own MMDB files, but you can read the files
 with the officially supported
 [.NET, PHP, Java and Python readers](https://github.com/maxmind?utf8=%E2%9C%93&query=reader)
 in addition to unsupported third party MMDB readers. Many are listed on the
-[GeoIP2 download page](https://dev.maxmind.com/geoip/docs/databases/). So, as
-far as deployments go, you're not constrained to any one language when you want
-to read from the database.
+[GeoIP download page](https://dev.maxmind.com/geoip/docs/databases/). So, as far
+as deployments go, you're not constrained to any one language when you want to
+read from the database.
 
 ## Following Along
 
@@ -409,7 +409,7 @@ The output shows the first IP in each range (note that Jane's IP is just a
 
 ## The Mashup
 
-To extend our example, let’s take the data from an existing GeoIP2 database and
+To extend our example, let's take the data from an existing GeoIP database and
 combine it with our custom MMDB file.
 
 If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in
@@ -560,7 +560,7 @@ vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
 }
 ```
 
-## Adding GeoLite2-City Data: Review
+## Adding GeoLite City Data: Review
 
 To extend our example we make two additions to our original file:
 
@@ -580,7 +580,7 @@ Note that this file may be in a different location if you're not using
 
 ### Step 2
 
-Now, we take our existing data so that we can augment it with GeoIP2 data.
+Now, we take our existing data so that we can augment it with GeoIP data.
 
 ```perl
     my $user_metadata = $address_for_employee{$range};
@@ -609,7 +609,7 @@ Now, we take our existing data so that we can augment it with GeoIP2 data.
 As in our first example, we're create a new `Net::Works::Network` object.
 However, in this case we are going to insert each individual IP in the range.
 The reason for this is that we don't know if our IP ranges match the ranges in
-the GeoLite2 database. If we just rely on using the reader data for some
+the GeoLite database. If we just rely on using the reader data for some
 arbitrary IP in the range, we can't be 100% sure that this is representative of
 all other IPs in the range. If we insert each IP in the range, we don't need to
 rely on the assumption that the data for a random IP will be consistent across
@@ -726,7 +726,7 @@ Here's a quick summary of what's going on:
 
 ### Including the Contents of an Entire MaxMind DB
 
-To include the contents of an entire GeoIP2 database rather than selected data
+To include the contents of an entire GeoIP database rather than selected data
 points, you have a couple of options for iterating over a database in Perl.
 
 #### MaxMind::DB::Reader
@@ -741,7 +741,7 @@ quite slow.
 This requires slightly more logic, but reading a CSV file line by line will give
 you a significant speed boost over search tree iteration.
 
-Free downloads of CSV files for GeoLite2 City and GeoLite2 Country
+Free downloads of CSV files for GeoLite City and GeoLite Country
 [are available from MaxMind.com](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
 If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
 `GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory.
@@ -758,7 +758,7 @@ may come across when writing your own database files.
 ## Taking This Further
 
 Today we've shown how you can create your own MMDB database and augment it with
-data from a GeoLite2-City database. We've only included a few data points, but
+data from a GeoLite City database. We've only included a few data points, but
 MaxMind databases contain much more data you can use to build a solution to meet
 your business requirements.
 

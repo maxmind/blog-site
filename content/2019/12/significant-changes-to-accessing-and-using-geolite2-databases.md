@@ -1,5 +1,5 @@
 ---
-title: "Significant Changes to Accessing and Using GeoLite2 Databases"
+title: "Significant Changes to Accessing and Using GeoLite Databases"
 date: "2019-12-18"
 headerImage: "/images/2019/12/significant-changes-to-accessing-and-using-geolite2-databases.webp"
 category:
@@ -20,7 +20,7 @@ MaxMind has always been committed to an individual's right to privacy on the
 internet. We welcome the burgeoning privacy regulations, such as GDPR and CCPA,
 for the benefit they can provide to internet citizens. However, these new
 legislative measures place restrictions that impact our ability to continue
-distributing our GeoLite2 databases on a public page under the
+distributing our GeoLite databases on a public page under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 We recognize the impact of these changes on the open source community and we do
@@ -29,11 +29,11 @@ transparency and ensure we are balancing your business needs with the privacy
 needs of individuals.
 
 The [California Consumer Privacy Act (CCPA)](https://oag.ca.gov/privacy/ccpa)
-mandates that businesses honor valid “Do Not Sell” requests from California
+mandates that businesses honor valid "Do Not Sell" requests from California
 residents. In this context, complying with a valid request involves MaxMind
-removing IP addresses from the GeoLite2 data and communicating to GeoLite2 users
+removing IP addresses from the GeoLite data and communicating to GeoLite users
 that the IP addresses in question should (immediately) not be utilized for uses
-covered under the CCPA. Serving GeoLite2 database downloads on a public page
+covered under the CCPA. Serving GeoLite database downloads on a public page
 simply does not allow us to communicate and honor valid “Do Not Sell” requests
 we receive from individuals.
 
@@ -44,35 +44,35 @@ with applicable data privacy regulations. Additionally, by requiring a MaxMind
 account and contact information from you, we will be able to communicate all
 valid “Do Not Sell” requests to you as we receive them.
 
-With this approach, we can continue to offer GeoLite2 databases, without charge,
+With this approach, we can continue to offer GeoLite databases, without charge,
 while remaining responsible stewards of data that improves the experience of
 countless users across the internet.
 
 ## Summary Of Changes
 
-Starting **December 30, 2019,** we will be requiring users of our GeoLite2
+Starting **December 30, 2019,** we will be requiring users of our GeoLite
 databases **to
 [register for a MaxMind account](https://www.maxmind.com/en/geolite2/signup) and
-obtain a license key in order to download GeoLite2 databases**. We will continue
-to offer the GeoLite2 databases without charge, and with the ability to
+obtain a license key in order to download GeoLite databases**. We will continue
+to offer the GeoLite databases without charge, and with the ability to
 redistribute with proper attribution and in compliance with privacy regulations.
 In addition, we are **introducing a new
-[end-user license agreement to govern your use of the GeoLite2 databases](https://www.maxmind.com/en/geolite2/eula)**.
-Previously, GeoLite2 databases were accessible for download to the public on our
+[end-user license agreement to govern your use of the GeoLite databases](https://www.maxmind.com/en/geolite2/eula)**.
+Previously, GeoLite databases were accessible for download to the public on our
 developer website and were licensed under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Starting **December 30, 2019,** downloads will no longer be served from our
-[public GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+[public GeoLite page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
 from `geolite.maxmind.com/download/geoip/database/\*`, or from any other public
 URL. See the section below for steps on how to migrate to the new download
 mechanism.
 
-### GeoLite2 Databases Affected
+### GeoLite Databases Affected
 
-- GeoLite2 Country
-- GeoLite2 City
-- GeoLite2 ASN
+- GeoLite Country
+- GeoLite City
+- GeoLite ASN
 
 ### Steps for Migration
 
@@ -88,11 +88,11 @@ mechanism.
    [direct download script](https://dev.maxmind.com/geoip/updating-databases/)
 
 On **December 30, 2019**, downloads will no longer be served from our
-[public GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+[public GeoLite page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
 from `geolite.maxmind.com/download/geoip/database/\*`, or from any other public
 URL.
 
-To continue using GeoLite2 databases:
+To continue using GeoLite databases:
 
-1. Review our new [GeoLite2 EULA](https://www.maxmind.com/en/geolite2/eula).
+1. Review our new [GeoLite EULA](https://www.maxmind.com/en/geolite2/eula).
 1. Sign up for a [MaxMind account](https://www.maxmind.com/en/geolite2/signup).

@@ -21,12 +21,12 @@ number of different programming languages, this article will focus on building
 MMDB files using the [Go programming language](https://go.dev/).
 
 MaxMind offers several prebuilt MMDB files, like the free
-[GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+[GeoLite Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
 MMDB file. For many situations these MMDB files are useful enough as is. If,
 however, you have your own data associated with IP address ranges, you can
 create hybrid MMDB files, enriching existing MMDB contents with your own data.
 In this article, we're going to add details about a fictional company's IP
-address ranges to the GeoLite2 Country MMDB file. We'll be building a new MMDB
+address ranges to the GeoLite Country MMDB file. We'll be building a new MMDB
 file, one that contains both MaxMind's and our fictional company's data.
 
 If you don't need any of the MaxMind data, but you still want to create a fast,
@@ -43,7 +43,7 @@ consult this example code showing
 - the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect) tool must be
   installed and be in your `$PATH`
 - a copy of the
-  [GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+  [GeoLite Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
   database must be in your working directory
 - your working directory (which can be located under any parent directory) must
   be named `mmdb-from-go-blogpost` (if you clone the code using the instructions
@@ -84,8 +84,8 @@ environments, `development`, `staging`, and `production`. Members of the
 Development and Management departments have access to the `development` and
 `staging` environments (but not to `production`).
 
-Each valid record in GeoLite2 Country is a map, containing data about the
-country associated with the IP address.
+Each valid record in GeoLite Country is a map, containing data about the country
+associated with the IP address.
 
 For each of the AcmeCorp ranges, we're going to add to the existing data the
 `AcmeCorp.Environments` and `AcmeCorp.DeptName` keys. More on this later.
@@ -101,7 +101,7 @@ that makes use of the MaxMind
 
 <!--lint disable ordered-list-marker-value-->
 
-1. Load the GeoLite2 Country MaxMind DB.
+1. Load the GeoLite Country MaxMind DB.
    - We will take a pathname to the MMDB file and call
      [`mmdbwriter.Load()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Load)
      on it, returning `writer`, an
@@ -116,7 +116,7 @@ that makes use of the MaxMind
 1. Look up the new data in the enriched database to confirm our additions.
    - We will use the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect)
      tool to see our new data in the MMDB file we've built and compare a few
-     ranges in it to those in the old GeoLite2 Country MMDB file.
+     ranges in it to those in the old GeoLite Country MMDB file.
 
 The full code is presented in the next section. Let's dive in!
 
@@ -179,7 +179,7 @@ func main() {
   }
 ```
 
-Having loaded the existing GeoLite2 Country database, we begin defining the data
+Having loaded the existing GeoLite Country database, we begin defining the data
 we wish to enrich it with. The second return value of the
 [`net.ParseCIDR()`](https://pkg.go.dev/net#ParseCIDR) function is of type
 [`*net.IPNet`](https://pkg.go.dev/net#IPNet), which is what we need for the
@@ -203,7 +203,7 @@ range. We must define this data in terms of the
 interface to determine the data type to associate with the data when inserting
 it into the database.
 
-As the existing GeoLite2 Country records are maps, we use a
+As the existing GeoLite Country records are maps, we use a
 [`mmdbtype.Map`](https://pkg.go.dev/github.com/maxmind/mmdbwriter/mmdbtype#Map)
 as the top level data structure. This map contains our two new keys,
 `AcmeCorp.DeptName` and `AcmeCorp.Environments`.
@@ -248,9 +248,9 @@ function. This updates the existing map with the keys from our new map.
 
 After inserting, our MMDB tree will have the AcmeCorp SRE IP addresses in the
 56.0.0.0/16 range, whose maps contain the new environment and department name
-keys in addition to whatever GeoLite2 Country data they returned previously.
+keys in addition to whatever GeoLite Country data they returned previously.
 (Note that we carefully picked non-clashing, top-level keys; no key in the
-GeoLite2 Country data starts with `AcmeCorp.`)
+GeoLite Country data starts with `AcmeCorp.`)
 
 What happens if there is an IP address for which no record exists? With the
 `inserter.TopLevelMergeWith` strategy, this IP address will also happily take
@@ -338,7 +338,7 @@ original MMDB file at all and that they are present in the enriched MMDB file
 when expected. The 56.3.0.1 IP address remains identical across both databases
 (without any AcmeCorp fields) as a control.
 
-And that's it! You've now built yourself a GeoLite2 Country MMDB file enriched
+And that's it! You've now built yourself a GeoLite Country MMDB file enriched
 with custom data.
 
 ### Contacting Us

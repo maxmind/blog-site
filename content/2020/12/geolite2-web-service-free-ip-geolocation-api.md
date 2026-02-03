@@ -1,5 +1,5 @@
 ---
-title: "GeoLite2 Web Service: Free IP Geolocation API"
+title: "GeoLite Web Service: Free IP Geolocation API"
 date: "2020-12-15"
 category:
   - "IP intelligence"
@@ -11,15 +11,15 @@ authors:
   - "Miguel Atienza"
 ---
 
-We are happy to announce the release of the GeoLite2 web service, a limited free
-IP geolocation API. You may use up to 1000 look-ups per day for the GeoLite2 web
+We are happy to announce the release of the GeoLite web service, a limited free
+IP geolocation API. You may use up to 1000 look-ups per day for the GeoLite web
 service.
 
 Since 2002 MaxMind has been trusted by hundreds of thousands of developers to
 provide IP geolocation data for projects of passion to enterprise-grade
 applications and everything in between.
 
-We’ll keep this brief: _why should you use the GeoLite2 web service?_
+We'll keep this brief: _why should you use the GeoLite web service?_
 
 - **Reliability.** We have been at this for 18 years and our web service
   infrastructure serves tens of billions of requests annually with 99.99%
@@ -39,10 +39,10 @@ We’ll keep this brief: _why should you use the GeoLite2 web service?_
 
 <!--lint disable no-emphasis-as-heading-->
 
-**To sign up for GeoLite2, head over to our
-[GeoLite2 page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).**
+**To sign up for GeoLite, head over to our
+[GeoLite page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).**
 
-If you’re an existing GeoLite2 database user, you can generate a license key and
+If you're an existing GeoLite database user, you can generate a license key and
 start using the service immediately. Our
-[GeoIP2 Precision web service client APIs](https://dev.maxmind.com/geoip/docs/web-services/)
-may be used with the GeoLite2 web services.
+[GeoIP web service client APIs](https://dev.maxmind.com/geoip/docs/web-services/)
+may be used with the GeoLite web services.

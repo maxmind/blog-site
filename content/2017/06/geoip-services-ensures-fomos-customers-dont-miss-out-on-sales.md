@@ -18,16 +18,16 @@ shop on e-commerce websites. And in 2016, a new startup called Fomo set out to
 help merchants reach that audience. To do that, Fomo first needed to find a
 service partner with expertise in geolocation. They chose MaxMind. “We’re a
 relatively new company, but our growth has been phenomenal since we added
-MaxMind’s GeoIP2 Precision services,” said Fomo’s co-founder Ryan Kulp.
+MaxMind's GeoIP web services," said Fomo's co-founder Ryan Kulp.
 
 Within five months of using
-[GeoIP2 Precision services (Country and City)](https://www.maxmind.com/en/geoip-api-web-services),
+[GeoIP web services (Country and City Plus)](https://www.maxmind.com/en/geoip-api-web-services),
 Fomo has curated more than 100,000 unique browsing transactions for their
 e-commerce partners and helped their clients achieve double-digit growth in
 consumer adoptions. For example, Sphynx, a manufacturer of pocket-sized electric
 shavers, achieved a 49.6% increase in their transactional conversions after they
-enabled GeoIP2 Precision services through Fomo’s API. Another client, TidyMe, a
-large cleaning service in Australia, has seen its conversions increase by 12%.
+enabled GeoIP web services through Fomo's API. Another client, TidyMe, a large
+cleaning service in Australia, has seen its conversions increase by 12%.
 “Introducing MaxMind into our offering has been a game changer for us,” said
 Kulp. “Growth like that is not possible without a reliable geolocation provider
 like MaxMind.”
@@ -38,10 +38,10 @@ Fomo helps websites optimize their conversions through social proof marketing.
 Originally a [plugin on Shopify called Notify](https://apps.shopify.com/fomo),
 the company changed its name to Fomo (short for "fear of missing out") and began
 establishing its own identity outside of the e-commerce giant. The Fomo plugin
-uses GeoIP2 Precision services to determine the geographic location of website
-users. The intent is to localize user interactions and transactional behaviors
-such as purchases, sign-ups and comments. That intelligence is displayed in
-real-time notifications that appear on websites (click
+uses GeoIP web services to determine the geographic location of website users.
+The intent is to localize user interactions and transactional behaviors such as
+purchases, sign-ups and comments. That intelligence is displayed in real-time
+notifications that appear on websites (click
 [here](https://fomo.com/product-tour) to see Fomo in action). It’s the online
 equivalent of a busy restaurant, showing prospective customers social proof that
 other people also visit and interact with a website.
@@ -66,7 +66,7 @@ Fomo’s business goal has always been to increase customer conversions. But, as
 Fomo began to work with large global clients, they found out quickly those
 companies wanted a method to localize their customer interactions. Kulp believes
 that Fomo’s notifications without a geolocation solution would be far less
-effective for social proof marketing. “GeoIP2 Precision services enable us to
+effective for social proof marketing. "GeoIP web services enable us to
 personalize those notifications for our clients so that users only see the
 interactions which their neighbors are making,” Kulp said.
 
@@ -83,13 +83,13 @@ intelligence, especially as social media continues to grow in popularity. “We
 expect the future of the web to be more localized, and MaxMind will play a major
 role in sites providing localized content,” Kulp said.
 
-In the next few months, Kulp estimates that with GeoIP2 Precision services
-helping to fuel the company’s growth, Fomo will be processing tens of millions
-of localized, geocoded interactions for many e-commerce stores throughout the
+In the next few months, Kulp estimates that with GeoIP web services helping to
+fuel the company’s growth, Fomo will be processing tens of millions of
+localized, geocoded interactions for many e-commerce stores throughout the
 world. “We set out to solve a very specific problem for our clients, and are
 thrilled with the results we’ve seen since choosing MaxMind as our partner.”
 
 ---
 
-To find out more about MaxMind’s GeoIP2 Precision services or to request a free
-trial, simply click [here](https://www.maxmind.com/en/geoip-api-web-services).
+To find out more about MaxMind's GeoIP web services or to request a free trial,
+simply click [here](https://www.maxmind.com/en/geoip-api-web-services).

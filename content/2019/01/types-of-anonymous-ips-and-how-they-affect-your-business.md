@@ -92,15 +92,15 @@ behavior looks like for their particular use cases.
 MaxMind provides data on anonymous IPs along with a flag to indicate whether the
 IP is associated with a public proxy, VPN, hosting/data enter, or TOR exit node.
 This data is updated daily and is available in a downloadable database with our
-[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database?utm_source=blog&utm_campaign=anon-types),
+[GeoIP Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database?utm_source=blog&utm_campaign=anon-types),
 or in a web service with our
-[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
+[GeoIP Insights service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
 or our
 [minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview?utm_source=blog&utm_campaign=anon-types).
 
 The
-[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
-is MaxMind’s most accurate and comprehensive IP geolocation solution with
+[GeoIP Insights service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
+is MaxMind's most accurate and comprehensive IP geolocation solution with
 anonymous IP flags, ISP, confidence factors, user type (e.g. business, traveler,
 cellular, etc.), and more.
 

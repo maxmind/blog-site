@@ -43,7 +43,7 @@ MaxMind data because it’s reliable and robust. Also it’s free. One less thin
 bother your boss about.
 
 So off we go to download
-[MaxMind’s GeoLite2 City data](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
+[MaxMind's GeoLite City data](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
 Upon opening the zip, we find a number of CSV files, the most important among
 them being `GeoLite2-City-Blocks-IPv4.csv`. If we peek inside, this is what we
 see:

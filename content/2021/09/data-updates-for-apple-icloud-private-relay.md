@@ -25,10 +25,9 @@ Private Relay works and delivers the best possible experience for your users.
   geolocation feeds published by Apple, which provides coarse city or region
   geolocation mappings for iCloud Private Relay IPs.
 - We identify iCloud Private Relay IPs in our ISP dataset (present in our
-  [GeoIP2 ISP](https://www.maxmind.com/en/geoip-databases) and
+  [GeoIP ISP](https://www.maxmind.com/en/geoip-databases) and
   [Enterprise](https://www.maxmind.com/en/geoip-enterprise-database) databases,
-  and our
-  [GeoIP2 Precision Insights](https://www.maxmind.com/en/geoip-api-web-services)
+  and our [GeoIP Insights](https://www.maxmind.com/en/geoip-api-web-services)
   and
   [minFraud Insights and Factors](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
   web services) by tagging ranges as `iCloud Private Relay`.
@@ -53,8 +52,8 @@ outputs, and in geolocation outputs.
 
 For database customers, this data has been included in the latest release of our
 databases. ISP data that includes Private Relay IPs is included in the latest
-GeoIP2 ISP or Enterprise database. Geolocation data for Private Relay IPs is
-included in the latest GeoIP2 City or Enterprise database.
+GeoIP ISP or Enterprise database. Geolocation data for Private Relay IPs is
+included in the latest GeoIP City or Enterprise database.
 
 For more information about Private Relay along with helpful technical
 information, visit
