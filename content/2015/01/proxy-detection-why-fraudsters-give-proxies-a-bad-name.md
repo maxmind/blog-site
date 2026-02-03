@@ -54,8 +54,8 @@ address associated with a transaction in order to assess risk.
 Fraud detection uses transaction data as the basis for this thinking and risk
 assessment. Using this data and analysis, we gain insight into the kind of
 traffic on a particular IP address. At MaxMind, the minFraud Network provides
-the backbone for this reputation analysis. It informs our our proxyScore, a
-summary of risk associated with an IP address.
+the backbone for this reputation analysis. It informs our proxyScore, a summary
+of risk associated with an IP address.
 
 In conclusion, fraudsters know how to use proxies to further their scams. Fraud
 detection systems need to incorporate monitoring for this type of activity in
