@@ -72,3 +72,9 @@ cmd = [
   "lint:cspell",
 ]
 ok-exit-codes = 0
+
+[commands.validate-lockfile]
+type = "lint"
+cmd = ["mise", "exec", "--", "yq", "eval", "."]
+include = ["pnpm-lock.yaml"]
+ok-exit-codes = 0
