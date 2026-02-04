@@ -2,6 +2,8 @@
 title:
   "We Are Listening: Latitude and Longitude Will Remain in the GeoLite Databases"
 date: "2018-04-11"
+aliases:
+  - /we-are-listening-latitude-and-longitude-will-remain-in-geolite2-databases/
 category:
   - "IP intelligence"
   - "News"

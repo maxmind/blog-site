@@ -1,6 +1,8 @@
 ---
 title: "Significant Changes to Accessing and Using GeoLite Databases"
 date: "2019-12-18"
+aliases:
+  - /significant-changes-to-accessing-and-using-geolite2-databases/
 headerImage: "/images/2019/12/significant-changes-to-accessing-and-using-geolite2-databases.webp"
 category:
   - "IP intelligence"

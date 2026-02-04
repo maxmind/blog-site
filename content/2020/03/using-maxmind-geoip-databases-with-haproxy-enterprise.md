@@ -1,6 +1,8 @@
 ---
 title: "Using MaxMind GeoIP Databases with HAProxy Enterprise"
 date: "2020-03-02"
+aliases:
+  - /using-maxmind-geoip2-databases-with-haproxy-enterprise/
 category:
   - "IP intelligence"
   - "Case studies"

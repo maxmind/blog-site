@@ -1,6 +1,8 @@
 ---
 title: "GeoLite Web Service: Free IP Geolocation API"
 date: "2020-12-15"
+aliases:
+  - /geolite2-web-service-free-ip-geolocation-api/
 category:
   - "IP intelligence"
   - "News"

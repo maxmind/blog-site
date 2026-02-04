@@ -3,6 +3,8 @@ title:
   "Learn how to import MaxMind GeoIP and GeoLite databases into PostgreSQL or
   MySQL"
 date: "2021-07-15"
+aliases:
+  - /learn-how-to-import-maxmind-geoip2-and-geolite2-databases-into-postgresql-or-mysql/
 category:
   - "IP intelligence"
   - "Tutorials"

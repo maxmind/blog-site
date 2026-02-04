@@ -1,6 +1,8 @@
 ---
-title: "UMass’s Rescue Lab uses GeoIP to help rescue children from abuse"
+title: "UMass's Rescue Lab uses GeoIP to help rescue children from abuse"
 date: "2021-04-05"
+aliases:
+  - /umasss-rescue-lab-uses-geoip2-to-help-rescue-children-from-abuse/
 category:
   - "IP intelligence"
 tag:
