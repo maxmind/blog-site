@@ -27,10 +27,11 @@ Private Relay works and delivers the best possible experience for your users.
 - We identify iCloud Private Relay IPs in our ISP dataset (present in our
   [GeoIP ISP](https://www.maxmind.com/en/geoip-databases) and
   [Enterprise](https://www.maxmind.com/en/geoip-enterprise-database) databases,
-  and our [GeoIP Insights](https://www.maxmind.com/en/geoip-api-web-services)
+  and our
+  [GeoIP Insights web service](https://www.maxmind.com/en/geoip-api-web-services)
   and
-  [minFraud Insights and Factors](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
-  web services) by tagging ranges as `iCloud Private Relay`.
+  [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-prevention/overview))
+  by tagging ranges as `iCloud Private Relay`.
 
 Apple has shared the following assurances built into Private Relay:
 
