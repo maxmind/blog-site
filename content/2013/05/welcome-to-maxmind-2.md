@@ -21,7 +21,7 @@ like to see on our blog.
 ## MaxMind in a Nutshell
 
 We are a tech-driven, customer-focused company committed to providing great
-products and services. We want to build the the best IP geolocation and fraud
+products and services. We want to build the best IP geolocation and fraud
 detection systems in the industry and make them available to everyone.
 
 We keep our prices low and our sales process simple. You can visit our website

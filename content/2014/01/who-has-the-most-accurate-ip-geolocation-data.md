@@ -53,8 +53,8 @@ algorithms, and we have increased our postal code coverage and accuracy.
 ## How to Access MaxMind’s Most Accurate IP Geolocation Data
 
 Check out our most accurate IP geolocation data in the
-[GeoIP2 Precision Web Services](https://www.maxmind.com/en/geoip-api-web-services).The
-GeoIP2 Precision Services contain our most accurate data, geolocating 7% more
-IPs to postal codes and 3% more IPs to cities in the United States than the
-GeoIP2 Databases. In addition, both the City and Insights services identify the
+[GeoIP Web Services](https://www.maxmind.com/en/geoip-api-web-services). The
+GeoIP web services contain our most accurate data, geolocating 7% more IPs to
+postal codes and 3% more IPs to cities in the United States than the GeoIP
+databases. In addition, both the City Plus and Insights services identify the
 organization associated with a business IP address in 10% more instances.

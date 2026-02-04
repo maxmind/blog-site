@@ -53,7 +53,7 @@ cases, this will help you determine if the IP address likely belongs to a
 company, an educational institution, a cellular carrier, or the like.
 
 MaxMind also provides several solutions to help with this. The
-[GeoIP2 Precision Insights service](https://www.maxmind.com/en/geoip-api-web-services)
+[GeoIP Insights web service](https://www.maxmind.com/en/geoip-api-web-services)
 includes user type data which can indicate what type of organization the IP
 address belongs to. Many users of a single “business” IP address would not
 itself raise the risk of fraud while many users being associated with a single

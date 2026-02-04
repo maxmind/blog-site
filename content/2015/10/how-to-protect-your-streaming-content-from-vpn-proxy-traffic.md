@@ -80,9 +80,9 @@ traditional IP geolocation.
 ## MaxMind’s Database Solution
 
 We created the
-[GeoIP2 Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database)
+[GeoIP Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database)
 to assist content licensees in meeting their geofiltering contract requirements
-while addressing their needs for a low-latency solution. Our GeoIP2 Anonymous IP
+while addressing their needs for a low-latency solution. Our GeoIP Anonymous IP
 database identifies IP addresses such that are likely to be used for
 circumventing geolocation restrictions, including TOR exit nodes, hosting, VPN,
 and DNS proxy IPs. To keep pace with the creation of new VPN and proxy services,
@@ -96,4 +96,4 @@ keep up with those trying to access their restricted content. Public WHOIS and
 TOR data can be used to identify some IPs used by VPN and proxy services, in
 particular when these services are run on web hosts. Identifying these and other
 proxies and keeping up with their creation requires using a service like
-MaxMind’s GeoIP2 Anonymous IP database.
+MaxMind's GeoIP Anonymous IP database.

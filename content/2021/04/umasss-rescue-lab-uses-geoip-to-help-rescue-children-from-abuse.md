@@ -1,6 +1,8 @@
 ---
-title: "UMass’s Rescue Lab uses GeoIP to help rescue children from abuse"
+title: "UMass's Rescue Lab uses GeoIP to help rescue children from abuse"
 date: "2021-04-05"
+aliases:
+  - /umasss-rescue-lab-uses-geoip2-to-help-rescue-children-from-abuse/
 category:
   - "IP intelligence"
 tag:
@@ -62,7 +64,7 @@ where to send a case, what can you do?”
 This was, in and of itself, an important forensic tool for law enforcement
 agencies. Suddenly, a much larger proportion of the cases could be accurately
 delegated to the proper investigative authorities. Beyond the immediate
-application of determining jurisdiction, GeoIP2 data has helped the Rescue Lab
+application of determining jurisdiction, GeoIP data has helped the Rescue Lab
 better analyze the problem of child sexual abuse material file sharing.
 MaxMind’s data has allowed Prof. Levine and others to measure the geographic
 distribution of online, public crimes against children over time, and helped
@@ -81,7 +83,7 @@ mistakes with it. Forensic tools are just the start; they can’t be used in
 isolation, and they have to be coupled with properly trained investigators.”
 
 The Rescue Lab is careful to ensure that its partners understand that IP
-geolocation data, even data that is as maintained and accurate as GeoIP2, will
+geolocation data, even data that is as maintained and accurate as GeoIP, will
 never be able to link an IP to something like a street address. Taking the next
 step in rescuing a child from abuse requires steps beyond MaxMind and Rescue Lab
 tools. For example, to discover a street address investigators require days of
@@ -94,7 +96,7 @@ can be carried out successfully by the people who can act on them.
 
 Over the last ten years, the forensic tools developed by the Rescue Lab have
 found their way into daily use in every US state and by many federal agencies
-that investigate crimes against children. Using GeoIP2 data, these tools have
+that investigate crimes against children. Using GeoIP data, these tools have
 resulted in the rescue of hundreds of sexually abused children. If you would
 like to support the critical work of the Rescue Lab, you can make a tax
 deductible donation or learn more on their website:

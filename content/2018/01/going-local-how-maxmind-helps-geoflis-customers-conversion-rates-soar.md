@@ -19,11 +19,11 @@ tailored to their interests; meanwhile, web personalization companies like
 [GeoFli](https://www.geofli.com/) are increasingly seeking ways to deliver just
 the right experiences to those consumers, at the right time.
 
-“We wanted to create a service to display website content based on a visitor’s
-IP address,” said GeoFli co-founder Nick Shontz. “Using MaxMind’s GeoIP2 City
+"We wanted to create a service to display website content based on a visitor's
+IP address," said GeoFli co-founder Nick Shontz. "Using MaxMind's GeoIP City
 database combined with GeoFli's custom software, we have seen conversion rates
-double for our customers. It’s great having an industry-leading tool like GeoIP2
-City that’s so easy to integrate with our systems and have such great
+double for our customers. It's great having an industry-leading tool like GeoIP
+City that's so easy to integrate with our systems and have such great
 application and scalability,” Shontz added.
 
 As co-founder Kyle Pucko explains: “One customer, an app developer, measured
@@ -53,7 +53,7 @@ their geographic location - usually their country, state, or city via their IP
 address.
 
 GeoFli first reviews the IP address of each visitor. They then do a lookup of
-that IP address in the GeoIP2 City database in order to determine the visitor’s
+that IP address in the GeoIP City database in order to determine the visitor's
 approximate location. “It’s about delivering the most important, useful content
 to them at the exact moment they are on a site,” said Taylor McDermott, GeoFli's
 online strategist.
@@ -83,8 +83,8 @@ provider whose offerings were reliable, well-regarded, and fast.
 Shontz and Pucko searched online for a provider, but could not find exactly what
 they were looking for. Then a friend told them about MaxMind. “You offered
 everything we needed: a reliable, industry leader who maintains and updates
-their product,” Shontz said, adding, “The great thing about MaxMind’s GeoIP2
-database – I don’t have to worry about it. It’s fast, updated, and easy to
+their product,” Shontz said, adding, "The great thing about MaxMind's GeoIP
+database – I don't have to worry about it. It's fast, updated, and easy to
 integrate into our code. Because of that, I can just focus on running my
 business.”
 

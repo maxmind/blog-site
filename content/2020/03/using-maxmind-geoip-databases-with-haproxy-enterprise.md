@@ -1,6 +1,8 @@
 ---
-title: "Using MaxMind GeoIP2 Databases with HAProxy Enterprise"
+title: "Using MaxMind GeoIP Databases with HAProxy Enterprise"
 date: "2020-03-02"
+aliases:
+  - /using-maxmind-geoip2-databases-with-haproxy-enterprise/
 category:
   - "IP intelligence"
   - "Case studies"
@@ -18,7 +20,7 @@ this work from your backend servers. This native module integration lets you
 analyze real-time traffic and assign GeoIP properties to requests as they pass
 through your HAProxy Enterprise load balancer in order to make decisions on this
 data. You can package the values up as HTTP request headers before the request
-is proxied. The integration also allows GeoIP2 databases to be updated quickly
+is proxied. The integration also allows GeoIP databases to be updated quickly
 and seamlessly without the need for scripts across your application fleet.
 
 [HAProxy Enterprise](https://www.haproxy.com/products/haproxy-enterprise)
@@ -36,11 +38,11 @@ manager. Once you've added the HAProxy package repositories, you can use apt on
 Ubuntu or yum on CentOS to install it. Check out the
 [official documentation here](https://www.haproxy.com/haproxy-integrations/maxmind/)
 (you will need subscriptions to the
-[GeoIP2 databases](https://www.maxmind.com/en/geoip-databases) to make use of
-the integration).
+[GeoIP databases](https://www.maxmind.com/en/geoip-databases) to make use of the
+integration).
 
-Within your HAProxy configuration, you choose which GeoIP2 databases to query.
-For example, the following snippet shows how to load the module and the GeoIP2
+Within your HAProxy configuration, you choose which GeoIP databases to query.
+For example, the following snippet shows how to load the module and the GeoIP
 City and ISP databases:
 
 ```bash
@@ -76,7 +78,7 @@ The resulting request header will look like this: _X-Country: US_.
 
 ## Conclusion
 
-In the guide, you learned about the integration between MaxMind's GeoIP2
+In the guide, you learned about the integration between MaxMind's GeoIP
 databases and HAProxy Enterprise. You can use this to gain better insights about
 your clients so that you can customize your site's content depending on their
 location. Tailoring content based on geolocation data is a great way to optimize

@@ -13,24 +13,23 @@ authors:
 ---
 
 In December MaxMind released the new
-[GeoLite2 web services](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
+[GeoLite web services](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/),
 an IP geolocation API available free of charge.
 
 IP geolocation services provide information about the geographic location of an
-IP address. MaxMind offers such free web services, GeoLite2 City and GeoLite2
-Country, which are comparable to, but less accurate than, MaxMind's paid GeoIP2
-Precision City and GeoIP2 Precision Country web services. GeoLite2 is fully
-compatible with GeoIP2, using the same API and integration method, making it
-easy to switch between the free and paid services as your needs change. You can
-compare accuracy of the GeoLite2 and GeoIP2 web services by selecting a country
-on the
-[GeoIP2 City Accuracy](https://www.maxmind.com/en/geoip-accuracy-comparison)
+IP address. MaxMind offers such free web services, GeoLite City and GeoLite
+Country, which are comparable to, but less accurate than, MaxMind's paid GeoIP
+City Plus and GeoIP Country web services. GeoLite is fully compatible with
+GeoIP, using the same API and integration method, making it easy to switch
+between the free and paid services as your needs change. You can compare
+accuracy of the GeoLite and GeoIP web services by selecting a country on the
+[GeoIP City Accuracy](https://www.maxmind.com/en/geoip-accuracy-comparison)
 page.
 
 In this blog post, we are going to review how to build a simple web page in PHP
-that uses GeoLite2 City. We will learn how to easily upgrade to the paid GeoIP2
-Precision City web service, for greater accuracy and unlimited queries (GeoLite2
-web service users are limited to 1,000 queries per day).
+that uses GeoLite City. We will learn how to easily upgrade to the paid GeoIP
+City Plus web service, for greater accuracy and unlimited queries (GeoLite web
+service users are limited to 1,000 queries per day).
 
 ## A Warning About Precision
 
@@ -59,16 +58,16 @@ Okay, let's get started!
   used in this code. This requires `git` to be installed.
 - A [PHP version >= 7.2](https://www.php.net/downloads.php) must be installed.
 - [Composer](https://getcomposer.org/) must be installed. Composer will help you
-  manage the dependencies required to integrate with GeoLite2.
-- A free MaxMind GeoLite2 account with a license key is required.
-  - If you already have a MaxMind account and have signed up for GeoLite2, you
+  manage the dependencies required to integrate with GeoLite.
+- A free MaxMind GeoLite account with a license key is required.
+  - If you already have a MaxMind account and have signed up for GeoLite, you
     can generate a new license key
     [here](https://www.maxmind.com/en/accounts/current/license-key) (login
     required) or use your existing one.
-  - If you have a MaxMind account but haven't signed up for GeoLite2, you can do
+  - If you have a MaxMind account but haven't signed up for GeoLite, you can do
     so [here](https://www.maxmind.com/en/accounts/current/geolite2/eula) (login
     required).
-  - If you don't have a MaxMind GeoLite2 account, you can sign up for one
+  - If you don't have a MaxMind GeoLite account, you can sign up for one
     [here](https://www.maxmind.com/en/geolite2/signup).
 
 ## Using Docker or Vagrant
@@ -85,9 +84,9 @@ started with
 and
 [Vagrant](https://github.com/maxmind/geolite2-ws-blogpost/blob/main/README-Vagrant.md).
 
-## GeoLite2 City Web Services
+## GeoLite City Web Services
 
-The GeoLite2 City web services return information about a provided IP address,
+The GeoLite City web services return information about a provided IP address,
 such as its city, subdivision, postal code, country, continent, and approximate
 latitude and longitude. For example, when I look up my IP address (i.e., provide
 it in an API call to the web service), the service returns the city that I live
@@ -95,10 +94,10 @@ in, my province, my postal code, my country, and the circle containing my
 estimated latitude and longitude, as well as a number of other fields describing
 my IP address.
 
-The GeoLite2 Country web service returns, among other things, the country and
-continent in which an IP address resides. GeoLite2 Country responses are
-strictly a subset of GeoLite2 City responses, as is the case with GeoIP2
-Precision Country and GeoIP2 Precision City.
+The GeoLite Country web service returns, among other things, the country and
+continent in which an IP address resides. GeoLite Country responses are strictly
+a subset of GeoLite City responses, as is the case with GeoIP Country and GeoIP
+City Plus.
 
 It is important to note that the web services do not always return every field
 for every IP address. Some information is unavailable and some information is
@@ -180,7 +179,7 @@ The first few lines are as follows:
 <html>
 
 <head>
-    <title>GeoLite2 Web Service Demo</title>
+    <title>GeoLite Web Service Demo</title>
 </head>
 
 <body>
@@ -249,7 +248,7 @@ on [GitHub](https://github.com/maxmind/GeoIP2-php) and in the current-as-of-this
 writing
 [API client documentation](http://maxmind.github.io/GeoIP2-php/doc/v2.11.0/).
 Here, we instantiate a GeoIP2 client using the host parameter `geolite.info`,
-which is used to specify that we wish to use the GeoLite2 web services, and use
+which is used to specify that we wish to use the GeoLite web services, and use
 that client by calling its `city` method to perform the lookup.
 
 Next, within the same `if` block, we render the results of our lookup and close
@@ -319,12 +318,12 @@ Finally, we end the HTML page and our script is complete:
 </html>
 ```
 
-## Upgrading to the GeoIP2 Precision City Web Service
+## Upgrading to the GeoIP City Plus Web Service
 
-In order to upgrade to the GeoIP2 Precision City web service, we have to
+In order to upgrade to the GeoIP City Plus web service, we have to
 [purchase credit](https://www.maxmind.com/en/geoip-api-web-services) for our
 MaxMind account and be approved for service. Once our account has been approved
-for GeoIP2, we remove the locale and host parameters from the constructor, where
+for GeoIP, we remove the locale and host parameters from the constructor, where
 we've previously defined the host used for the lookups to be `geolite.info`.
 
 ```phtml
@@ -340,16 +339,16 @@ $client = new Client(
 
 The locale parameter already defaults to the array containing only the value
 `'en'` so there is no need to specify it, and the default host for the
-constructor will point to the GeoIP2 Precision City web service, so there's no
-need to specify it either. Now your application will be performing lookups with
-the more accurate, paid GeoIP2 Precision City web service.
+constructor will point to the GeoIP City Plus web service, so there's no need to
+specify it either. Now your application will be performing lookups with the more
+accurate, paid GeoIP City Plus web service.
 
 ## Wrapping up
 
-In this blog post, we've covered how to use the GeoLite2 City web service and
-the GeoIP2 Precision City web service. I hope you have found it useful and fun.
-If you have any questions, or want to tell MaxMind about what kind of
-application you're running using the GeoLite2 web services or GeoIP2 Precision
-web services, feel free to
+In this blog post, we've covered how to use the GeoLite City web service and the
+GeoIP City Plus web service. I hope you have found it useful and fun. If you
+have any questions, or want to tell MaxMind about what kind of application
+you're running using the GeoLite web services or GeoIP web services, feel free
+to
 [leave an issue on the repo](https://github.com/maxmind/geolite2-ws-blogpost/issues).
 Thanks for reading!
