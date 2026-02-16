@@ -7,6 +7,9 @@
 # Include URL fragments in checks
 include_fragments = true
 
+# Resolve directory URLs to index.html for fragment checking (Hugo pretty URLs)
+index_files = ["index.html"]
+
 # Don't allow any redirects
 max_redirects = 0
 
@@ -28,7 +31,6 @@ accept = [
 
 # Exclude URL patterns from checking (treated as regular expressions)
 exclude = [
-    '^file://',                                           # Local file:// URLs
     '^http://localhost',                                  # Development server
     '^https://minfraud\.maxmind\.com',                    # MaxMind minFraud service
     '^https://sandbox\.maxmind\.com',                     # MaxMind sandbox environment
@@ -44,6 +46,7 @@ exclude = [
     'https://metacpan\.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree\(-%24data_callback%2C-%24node_callback-\)',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting',
+    '^https://s1\.goeshow\.com',                          # Site refuses connections
 ]
 
 # Exclude file paths from getting checked (treated as regular expressions)
