@@ -42,9 +42,9 @@ the
 [recommended minimum inputs for the minFraud service](https://support.maxmind.com/knowledge-base/articles/pass-inputs-to-minfraud#recommended-minimum-inputs).
 
 Limiting the number of inputs sent to the minFraud API limits risk score
-accuracy. As highlighted in our
-[case study with crypto market leader Simplex](https://blog.maxmind.com/2021/08/simplex-uses-minfraud-data/),
-more inputs enrich data outputs—and increase fraud detection accuracy.
+accuracy. As highlighted in our [case study with crypto market leader
+Simplex]({{< relref "2021/08/simplex-uses-minfraud-data.md" >}}), more inputs
+enrich data outputs—and increase fraud detection accuracy.
 
 The decision to limit inputs is usually due to implementation costs, including
 the effort needed to ensure compliance with applicable data security and privacy
