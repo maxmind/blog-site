@@ -1,15 +1,8 @@
 # Lychee link checker configuration
 # https://lychee.cli.rs/#/usage/config
 #
-# To check the generated site (after running `hugo`):
-#   lychee './public/**/*.html'
-#
-# To check source files:
-#   lychee './content/**/*.md' './layouts/**/*.html'
-
-# Base URL for resolving relative links
-# This allows checking internal site links against the live/generated site
-base_url = "https://blog.maxmind.com"
+# CI runs against built HTML with --root-dir:
+#   hugo && lychee './public/**/*.html' --root-dir "$(pwd)/public"
 
 # Include URL fragments in checks
 include_fragments = true
@@ -36,9 +29,6 @@ accept = [
 # Exclude URL patterns from checking (treated as regular expressions)
 exclude = [
     '^file://',                                           # Local file:// URLs
-    # Exclude internal blog.maxmind.com links (they're relative paths in source)
-    # To check internal links, run against generated site: lychee './public/**/*.html'
-    '^https://blog\.maxmind\.com/',
     '^http://localhost',                                  # Development server
     '^https://minfraud\.maxmind\.com',                    # MaxMind minFraud service
     '^https://sandbox\.maxmind\.com',                     # MaxMind sandbox environment
