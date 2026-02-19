@@ -43,7 +43,7 @@ exclude = [
     '^https://www\.haproxy\.com/haproxy-integrations',    # Unavoidable redirects
 
     # Works in browser but fails in lychee
-    'https://metacpan\.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree\(-%24data_callback%2C-%24node_callback-\)',
+    'https://metacpan\.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree%28-%24data_callback%2C-%24node_callback-%29',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting',
     '^https://s1\.goeshow\.com',                          # Site refuses connections
