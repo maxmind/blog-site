@@ -104,7 +104,7 @@ Rule would be:
 `If price (input) < loyalty store price (Custom Input) AND riskScore > 20, THEN reject`.
 
 Those are just a few examples of how you can use Custom Inputs as part of your
-fraud prevention strategy. You can create up to 24 Custom Inputs for use with
+fraud prevention strategy. You can create up to 100 Custom Inputs for use with
 Custom Rules. With Custom Inputs fueling the creation of Custom Rules combined
 with results from the minFraud Network, your risk analysis can stay ahead of
 fraudsters.
