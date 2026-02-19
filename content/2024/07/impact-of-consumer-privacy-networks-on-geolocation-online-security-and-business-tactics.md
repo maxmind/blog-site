@@ -21,10 +21,10 @@ major tech companies including Google, Apple, Microsoft, and Cloudflare now
 offer a new class of anonymizing networks administered by them and tied to a
 specific user account.
 
-We
-[first began identifying this class of IPs in 2022](https://blog.maxmind.com/2022/03/introducing-consumer-privacy-networks/)
-and we refer to them as consumer privacy networks, or CPNs, to distinguish them
-from traditional proxies and VPNs.
+We [first began identifying this class of IPs in
+2022]({{< relref "2022/03/introducing-consumer-privacy-networks.md" >}}) and we
+refer to them as consumer privacy networks, or CPNs, to distinguish them from
+traditional proxies and VPNs.
 
 The consumer privacy networks most in play right now are Apple’s iCloud Private
 Relay and Google's variety of VPN-like offerings associated with Google One,

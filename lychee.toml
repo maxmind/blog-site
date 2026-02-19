@@ -1,18 +1,14 @@
 # Lychee link checker configuration
 # https://lychee.cli.rs/#/usage/config
 #
-# To check the generated site (after running `hugo`):
-#   lychee './public/**/*.html'
-#
-# To check source files:
-#   lychee './content/**/*.md' './layouts/**/*.html'
-
-# Base URL for resolving relative links
-# This allows checking internal site links against the live/generated site
-base_url = "https://blog.maxmind.com"
+# CI runs against built HTML with --root-dir:
+#   hugo && lychee './public/**/*.html' --root-dir "$(pwd)/public"
 
 # Include URL fragments in checks
 include_fragments = true
+
+# Resolve directory URLs to index.html for fragment checking (Hugo pretty URLs)
+index_files = ["index.html"]
 
 # Don't allow any redirects
 max_redirects = 0
@@ -35,10 +31,6 @@ accept = [
 
 # Exclude URL patterns from checking (treated as regular expressions)
 exclude = [
-    '^file://',                                           # Local file:// URLs
-    # Exclude internal blog.maxmind.com links (they're relative paths in source)
-    # To check internal links, run against generated site: lychee './public/**/*.html'
-    '^https://blog\.maxmind\.com/',
     '^http://localhost',                                  # Development server
     '^https://minfraud\.maxmind\.com',                    # MaxMind minFraud service
     '^https://sandbox\.maxmind\.com',                     # MaxMind sandbox environment
@@ -51,9 +43,10 @@ exclude = [
     '^https://www\.haproxy\.com/haproxy-integrations',    # Unavoidable redirects
 
     # Works in browser but fails in lychee
-    'https://metacpan\.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree\(-%24data_callback%2C-%24node_callback-\)',
+    'https://metacpan\.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree%28-%24data_callback%2C-%24node_callback-%29',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting',
+    '^https://s1\.goeshow\.com',                          # Site refuses connections
 ]
 
 # Exclude file paths from getting checked (treated as regular expressions)

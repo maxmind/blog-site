@@ -31,9 +31,9 @@ includes:
 - The verticals companies are focusing on
 - A breakdown of market segments
 
-Presented below is MaxMind's Paladin Report. It’s completely free to download.
+Presented below is MaxMind's Paladin Report. It's completely free to download.
 
-[**MaxMind's Paladin Report**](/wp-content/uploads/2017/09/MaxMind_Paladin_Group_2017-Report.pdf)
+**MaxMind's Paladin Report** (no longer available for download)
 
 We hope that you find the report useful and beneficial. If you have any
 questions, please [contact us](https://www.maxmind.com/en/company/contact-us)

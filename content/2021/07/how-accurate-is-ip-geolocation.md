@@ -155,11 +155,11 @@ associated with the server.
 In spite of their sometimes questionable reputation, people use VPNs for any
 number of reasons. Due to effective advertising and media coverage, VPNs have
 entered the consciousness of a broader section of the general public and VPN
-usage [continues to see an upward trend]
-(https://www.security.org/vpn/statistics/). It’s true that fraudsters and
-digital pirates may use VPNs, but privacy-conscious end-users may also use a VPN
-to protect their identity from casual data-gathering, express political dissent,
-or circumvent censorship.
+usage
+[continues to see an upward trend](https://www.security.org/vpn/statistics/).
+It's true that fraudsters and digital pirates may use VPNs, but
+privacy-conscious end-users may also use a VPN to protect their identity from
+casual data-gathering, express political dissent, or circumvent censorship.
 
 ![get started](/images/2021/07/get-startedArtboard-1-2.png)
 
@@ -268,10 +268,9 @@ as a fallback or alternative.
 Under a number of laws and regulations (e.g. GDPR and CCPA), individuals may
 request to opt out of the sale of their personal information which includes IP
 address data. Although these regulations are generally meant to protect the
-privacy of individuals, and
-[MaxMind data cannot be used to locate individual people](https://blog.maxmind.com/safer-ip-geolocation/),
-we honor these data privacy requests in compliance with local and international
-regulations.
+privacy of individuals, and [MaxMind data cannot be used to locate individual
+people]({{< relref "2023/08/safer-ip-geolocation.md" >}}), we honor these data
+privacy requests in compliance with local and international regulations.
 
 When MaxMind receives a valid opt-out request, we remove the IP address from
 most of our databases. MaxMind does sell specialized databases (GeoIP Shield)
