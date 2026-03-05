@@ -138,7 +138,7 @@ cd geolite2-ws-blogpost
 ```
 
 Next we install Composer as a
-[PHAR](https://www.php.net/manual/en/intro.phar.php). See the instructions
+[PHAR](https://www.php.net/manual/en/book.phar.php). See the instructions
 [here](https://getcomposer.org/download/).
 
 Once we've installed Composer, we tell it to install the

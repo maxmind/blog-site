@@ -59,7 +59,7 @@ obtain a license key in order to download GeoLite databases**. We will continue
 to offer the GeoLite databases without charge, and with the ability to
 redistribute with proper attribution and in compliance with privacy regulations.
 In addition, we are **introducing a new
-[end-user license agreement to govern your use of the GeoLite databases](https://www.maxmind.com/en/geolite2/eula)**.
+[end-user license agreement to govern your use of the GeoLite databases](https://www.maxmind.com/en/geolite/eula)**.
 Previously, GeoLite databases were accessible for download to the public on our
 developer website and were licensed under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -96,5 +96,5 @@ URL.
 
 To continue using GeoLite databases:
 
-1. Review our new [GeoLite EULA](https://www.maxmind.com/en/geolite2/eula).
+1. Review our new [GeoLite EULA](https://www.maxmind.com/en/geolite/eula).
 1. Sign up for a [MaxMind account](https://www.maxmind.com/en/geolite2/signup).
