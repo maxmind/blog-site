@@ -35,7 +35,7 @@
   "license": "MIT",
   "name": "blog-site",
   "scripts": {
-    "build:headers": "node --experimental-strip-types bin/generate-headers.ts",
+    "build:headers": "node bin/generate-headers.ts",
     "lint:cspell": "cspell '**/*.md' --no-summary --no-progress --color",
     "lint:internal-links": "node ./bin/check-internal-links.mjs"
   },
