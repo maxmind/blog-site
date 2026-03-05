@@ -34,7 +34,7 @@ answer these questions as a web service provider, please
 [reach out to our team](https://www.maxmind.com/en/solutions/connect-with-a-geoip-expert).**
 {{</ highlight >}}
 
-### Questions to ask data providers who license IP addresses or other personal data
+## Questions to ask data providers who license IP addresses or other personal data
 
 **Q: How are deletion and opt out requests applied to your product?**
 
