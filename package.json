@@ -37,7 +37,7 @@
   "scripts": {
     "build:headers": "node --experimental-strip-types bin/generate-headers.ts",
     "lint:cspell": "cspell '**/*.md' --no-summary --no-progress --color",
-    "lint:internal-links": "node --experimental-strip-types ./bin/check-internal-links.ts"
+    "lint:internal-links": "node ./bin/check-internal-links.mjs"
   },
   "version": "0.1.0"
 }
