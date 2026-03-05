@@ -8,7 +8,7 @@ summary:
   "Learn what to ask before you purchase IP address information or other
   personal data from a supplier to ensure you reduce your legal liability."
 date: "2026-03-05"
-headerImage: images/2026/03/questions-to-ask-your-ip-intelligence-data-partner.webp
+headerImage: /images/2026/03/questions-to-ask-your-ip-intelligence-data-partner.webp
 category:
   - "IP intelligence"
 tag:
