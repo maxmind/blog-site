@@ -182,7 +182,7 @@ databases are hosted locally on servers that you control which do not connect
 back to MaxMind in any way, meaning an outage on MaxMind's side would not impact
 your use of the GeoIP databases you have already downloaded.
 
-**Q: Do you have an up-to-date privacy policy posted on your website?**;
+**Q: Do you have an up-to-date privacy policy posted on your website?**
 
 {{< highlight warning >}} Why this matters: {{</ highlight >}} Any data vendor
 should have an up-to-date privacy policy posted on its website that is
