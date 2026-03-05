@@ -15,7 +15,7 @@ tag:
   - "IP network data"
   - "IP geolocation accuracy"
 authors:
-  - "team at MaxMind"
+  - "the team at MaxMind"
 ---
 
 If you’re considering partnering with an IP intelligence and geolocation data
