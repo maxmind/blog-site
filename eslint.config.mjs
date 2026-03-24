@@ -1,4 +1,3 @@
-import { fixupPluginRules } from '@eslint/compat';
 import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import security from 'eslint-plugin-security';
@@ -21,7 +20,7 @@ export default tseslint.config(
   },
   {
     plugins: {
-      security: fixupPluginRules(security),
+      security,
       'simple-import-sort': simpleImportSort,
     },
 
