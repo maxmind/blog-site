@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -40,6 +41,26 @@ export default tseslint.config(
       ],
     },
   }, {
+  files: [
+    '**/*.{js,cjs}',
+  ],
+
+  languageOptions: {
+    globals: {
+      ...globals.node,
+    },
+  },
+}, {
+  files: [
+    '**/*.mjs',
+  ],
+
+  languageOptions: {
+    globals: {
+      ...globals.nodeBuiltin,
+    },
+  },
+}, {
   files: [
     '**/*.ts',
   ],
