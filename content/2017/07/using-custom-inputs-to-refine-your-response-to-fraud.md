@@ -48,7 +48,7 @@ Custom inputs can be used during review of transactional details in support of
 your minFraud queries to help identify suspicious activities and prevent
 chargebacks, card association fines, and false positives.
 
-Custom Inputs can help you:
+Custom inputs can help you:
 
 - Extend minFraud service features to capture data points specific to your
   experience with fraud
