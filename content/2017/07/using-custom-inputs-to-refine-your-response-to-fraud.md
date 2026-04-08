@@ -108,7 +108,7 @@ program example above, your custom rule would be:
 `If price (input) < loyalty store price (Custom Input) AND riskScore > 20, THEN reject`.
 
 This is, of course, just one example of how you can use custom inputs. You can
-also leverage your own blocklists by creating custom inputs of greylists,
+also leverage your own blocklists by creating custom inputs of greylisted,
 blacklisted, or whitelisted data. You then create a custom rule that confirms
 whether a scammer alias, email address, email domain, phone number, shipping
 address etc. is on a specific blocklist. MaxMind does not have direct access to
@@ -126,7 +126,7 @@ You can create up to 100 custom inputs for use with custom rules.
 [Learn more about custom inputs](https://support.maxmind.com/knowledge-base/articles/use-custom-inputs-minfraud?utm_source=blog&utm_medium=article&utm_campaign=update)
 on the MaxMind Knowledge Base.
 
-If you’re not already using
-[minFraud](https://www.maxmind.com/en/request-service-trial?utm_source=blog&utm_medium=article&utm_campaign=update)
-as part of your fraud detection strategy, learn more or try minFraud for free on
-the MaxMind website.
+If you’re not already using minFraud as part of your fraud detection strategy,
+learn more or
+[try minFraud for free](https://www.maxmind.com/en/request-service-trial?utm_source=blog&utm_medium=article&utm_campaign=update)
+on the MaxMind website.
