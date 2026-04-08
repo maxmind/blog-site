@@ -1,12 +1,14 @@
 ---
-title: "Using custom inputs to refine your response to fraud"
-heading: "Examples of minFraud custom inputs to help you detect more fraud"
+title: "Examples of minFraud custom inputs to help you detect more fraud"
+heading: "Using custom inputs to refine your response to fraud"
 description:
-  "Learn how to create your own MaxMind minFraud custom inputs and how they can
-  be used in your fraud prevention strategy together with custom rules."
+  "Learn how to create your own MaxMind minFraud custom inputs and how custom
+  inputs can be used in your fraud prevention strategy together with custom
+  rules."
 summary:
-  "Learn how you can create custom data fields and see examples of how they can
-  be used to improve risk scoring accuracy and fraud detection."
+  "Explore examples of how custom data fields can be used to improve risk
+  scoring accuracy and fraud detection when used together with minFraud custom
+  rules."
 date: "2017-07-13"
 lastmod: "2026-04-09"
 headerImage: "/images/2017/07/using-custom-inputs-to-refine-your-response-to-fraud.webp"
