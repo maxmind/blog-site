@@ -1,6 +1,7 @@
 ---
 title: "Building Your Own MMDB Database for Fun and Profit"
 date: "2015-09-29"
+lastmod: "2026-04-09"
 category:
   - "IP intelligence"
 tag:
