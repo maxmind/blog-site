@@ -100,7 +100,7 @@ func main() {
 	// Define employee data to insert.
 	employees := map[string]mmdbtype.Map{
 		// Jane connects from a single IP address.
-		"123.125.71.29/32": {
+		"214.71.225.36/32": {
 			"environments": mmdbtype.Slice{
 				mmdbtype.String("development"),
 				mmdbtype.String("staging"),
@@ -110,7 +110,7 @@ func main() {
 			"name":    mmdbtype.String("Jane"),
 		},
 		// Klaus could connect from any of 16 IP addresses (/28).
-		"8.8.8.8/28": {
+		"6.248.221.67/28": {
 			"environments": mmdbtype.Slice{
 				mmdbtype.String("development"),
 				mmdbtype.String("staging"),
@@ -363,7 +363,7 @@ type UserRecord struct {
 Now let's run the script and perform a lookup on Jane's IP address:
 
 ```bash
-$ go run main.go 123.125.71.29
+$ go run main.go 214.71.225.36
 Description: My database of IP data
 {
   "environments": [
@@ -380,7 +380,7 @@ We see that our `Description` and our map of user data is returned exactly as we
 initially provided it. But what about Klaus, is he also in the database?
 
 ```bash
-$ go run main.go 8.8.8.0
+$ go run main.go 6.248.221.64
 Description: My database of IP data
 {
   "environments": [
@@ -391,7 +391,7 @@ Description: My database of IP data
   "name": "Klaus"
 }
 
-$ go run main.go 8.8.8.15
+$ go run main.go 6.248.221.79
 Description: My database of IP data
 {
   "environments": [
@@ -402,14 +402,14 @@ Description: My database of IP data
   "name": "Klaus"
 }
 
-$ go run main.go 8.8.8.16
+$ go run main.go 6.248.221.80
 Description: My database of IP data
-No record found for 8.8.8.16
+No record found for 6.248.221.80
 ```
 
-We gave Klaus an IP range of `8.8.8.8/28`, which translates to
-`8.8.8.0 to 8.8.8.15`. You can see that when we get to `8.8.8.16` there is no
-record at this address.
+We gave Klaus an IP range of `6.248.221.67/28`, which translates to
+`6.248.221.64 to 6.248.221.79`. You can see that when we get to `6.248.221.80`
+there is no record at this address.
 
 ## Iterating Over the Search Tree
 
@@ -473,7 +473,7 @@ Let's look at the output.
 
 ```bash
 $ go run main.go
-8.8.8.0/28
+6.248.221.64/28
 {
   "environments": [
     "development",
@@ -483,7 +483,7 @@ $ go run main.go
   "name": "Klaus"
 }
 
-123.125.71.29/32
+214.71.225.36/32
 {
   "environments": [
     "development",
@@ -496,8 +496,8 @@ $ go run main.go
 ```
 
 The output shows each network and its associated record. Note that even though
-we specified Klaus's range as `8.8.8.8/28`, the writer correctly stored it as
-`8.8.8.0/28`, the canonical form of the network.
+we specified Klaus's range as `6.248.221.67/28`, the writer correctly stored it
+as `6.248.221.64/28`, the canonical form of the network.
 
 ## The Mashup
 
@@ -545,7 +545,7 @@ func main() {
 
 	// Define employee data to merge into the existing records.
 	employees := map[string]mmdbtype.Map{
-		"123.125.71.29/32": {
+		"214.71.225.36/32": {
 			"environments": mmdbtype.Slice{
 				mmdbtype.String("development"),
 				mmdbtype.String("staging"),
@@ -554,7 +554,7 @@ func main() {
 			"expires": mmdbtype.Uint32(86400),
 			"name":    mmdbtype.String("Jane"),
 		},
-		"8.8.8.8/28": {
+		"6.248.221.67/28": {
 			"environments": mmdbtype.Slice{
 				mmdbtype.String("development"),
 				mmdbtype.String("staging"),
@@ -597,27 +597,27 @@ func main() {
 ```
 
 Now, when we look up our employee IP addresses in the enriched database using
-`mmdbinspect -db users-enriched.mmdb 123.125.71.29`, we can see that the records
+`mmdbinspect -db users-enriched.mmdb 214.71.225.36`, we can see that the records
 contain both the geographic data and our custom fields. `mmdbinspect` outputs
 YAML by default:
 
 ```yaml
 database_path: users-enriched.mmdb
-requested_lookup: 123.125.71.29
-network: 123.125.71.29/32
+requested_lookup: 214.71.225.36
+network: 214.71.225.36/32
 record:
   continent:
-    code: AS
-    geoname_id: 6255147
+    code: NA
+    geoname_id: 6255149
     names:
-      de: Asien
-      en: Asia
+      de: Nordamerika
+      en: North America
       ...
   country:
-    geoname_id: 1814991
-    iso_code: CN
+    geoname_id: 6252001
+    iso_code: US
     names:
-      en: China
+      en: United States
       ...
   environments:
     - development
@@ -626,9 +626,9 @@ record:
   expires: 86400
   location:
     accuracy_radius: 1000
-    latitude: 34.7732
-    longitude: 113.722
-    time_zone: Asia/Shanghai
+    latitude: 37.751
+    longitude: -97.822
+    time_zone: America/Chicago
   name: Jane
   registered_country:
     ...
