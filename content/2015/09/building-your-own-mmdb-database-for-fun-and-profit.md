@@ -1,22 +1,15 @@
 ---
 title: "Building Your Own MMDB Database for Fun and Profit"
 date: "2015-09-29"
+lastmod: "2026-04-09"
 category:
   - "IP intelligence"
 tag:
   - "IP network data"
   - "Technical tutorials"
 authors:
-  - "Olaf Alders"
+  - "the team at MaxMind"
 ---
-
-## Deprecation Notice
-
-We have deprecated the Perl writer discussed in this article. It is no longer
-developed or supported. We encourage you to use our
-[Go `github.com/maxmind/mmdbwriter` module](https://pkg.go.dev/github.com/maxmind/mmdbwriter)
-instead. Please see our post on [writing MMDB files using the Go programming
-language]({{< relref "2020/09/enriching-mmdb-files-with-your-own-data-using-go.md" >}}).
 
 ## Introduction
 
@@ -25,29 +18,36 @@ If you use a GeoIP database, you're probably familiar with MaxMind's
 
 At MaxMind, we created the MMDB format because we needed a format that was very
 fast and highly portable. MMDB comes with supported readers in many languages.
-In this blog post, we’ll create an MMDB file which contains an access list of IP
+In this blog post, we'll create an MMDB file which contains an access list of IP
 addresses. This kind of database could be used when allowing access to a VPN or
 a hosted application.
 
-## Tools You'll Need
+## Prerequisites
 
-The code samples I include here use the
-[Perl MMDB database writer](https://metacpan.org/pod/MaxMind::DB::Writer) and
-the [Perl MMDB database reader](https://metacpan.org/pod/MaxMind::DB::Reader).
-You'll need to use Perl to write your own MMDB files, but you can read the files
-with the officially supported
-[.NET, PHP, Java and Python readers](https://github.com/maxmind?utf8=%E2%9C%93&query=reader)
-in addition to unsupported third party MMDB readers. Many are listed on the
+The code samples in this post use the
+[Go `mmdbwriter` module](https://pkg.go.dev/github.com/maxmind/mmdbwriter) to
+create MMDB files and the
+[`maxminddb-golang` module](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2)
+to read them. You can also read MMDB files with the officially supported
+[.NET](https://github.com/maxmind/MaxMind-DB-Reader-dotnet),
+[Java](https://github.com/maxmind/MaxMind-DB-Reader-java),
+[Node.js](https://github.com/maxmind/GeoIP2-node),
+[PHP](https://github.com/maxmind/MaxMind-DB-Reader-php),
+[Python](https://github.com/maxmind/MaxMind-DB-Reader-python), and
+[Ruby](https://github.com/maxmind/MaxMind-DB-Reader-ruby) readers, in addition
+to unsupported third party MMDB readers. Many are listed on the
 [GeoIP download page](https://dev.maxmind.com/geoip/docs/databases/). So, as far
 as deployments go, you're not constrained to any one language when you want to
 read from the database.
 
-## Following Along
+You will need:
 
-Use
-[our GitHub repository](https://github.com/maxmind/getting-started-with-mmdb) to
-follow along with the actual scripts. Fire up a pre-configured Vagrant VM or
-just install the required modules manually.
+- [Go 1.24](https://go.dev/dl/) or later installed, with `go` in your `$PATH`
+- the [`mmdbinspect`](https://github.com/maxmind/mmdbinspect) tool installed and
+  in your `$PATH`
+- a basic understanding of [Go](https://gobyexample.com/) and of
+  [IP addresses](https://en.wikipedia.org/wiki/IP_address) and
+  [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)
 
 ## Getting Started
 
@@ -59,73 +59,96 @@ we need to track a few things about the person who is connecting from this IP.
 - development environments to which they need access
 - an arbitrary session expiration time, defined in seconds
 
-To do so, we create the following the file `examples/01-getting-started.pl`
+To do so, we create the following Go program:
 
-```perl
-#!/usr/bin/env perl
+```go
+package main
 
-use strict;
-use warnings;
-use feature qw( say );
+import (
+	"fmt"
+	"log"
+	"net"
+	"os"
 
-use MaxMind::DB::Writer::Tree;
+	"github.com/maxmind/mmdbwriter"
+	"github.com/maxmind/mmdbwriter/mmdbtype"
+)
 
-my $filename = 'users.mmdb';
+func main() {
+	// Create a new MMDB tree.
+	writer, err := mmdbwriter.New(mmdbwriter.Options{
+		// "DatabaseType" is some arbitrary string describing the database.
+		// At MaxMind we use strings like "GeoIP2-City", "GeoIP2-Country", etc.
+		DatabaseType: "My-IP-Data",
 
-# Your top level data structure will always be a map (hash).  The MMDB format
-# is strongly typed.  Describe your data types here.
-# See https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES
+		// "Description" is a map where the keys are language codes and the
+		// values are descriptions of the database in that language.
+		Description: map[string]string{
+			"en": "My database of IP data",
+			"fr": "Mon Data d'IP",
+		},
 
-my %types = (
-    environments => [ 'array', 'utf8_string' ],
-    expires      => 'uint32',
-    name         => 'utf8_string',
-);
+		// "IPVersion" can be either 4 or 6.
+		IPVersion: 4,
 
-my $tree = MaxMind::DB::Writer::Tree->new(
+		// "RecordSize" is the record size in bits. Either 24, 28, or 32.
+		RecordSize: 24,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    # "database_type" is some arbitrary string describing the database.  At
-    # MaxMind we use strings like 'GeoIP2-City', 'GeoIP2-Country', etc.
-    database_type => 'My-IP-Data',
+	// Define employee data to insert.
+	employees := map[string]mmdbtype.Map{
+		// Jane connects from a single IP address.
+		"214.71.225.36/32": {
+			"environments": mmdbtype.Slice{
+				mmdbtype.String("development"),
+				mmdbtype.String("staging"),
+				mmdbtype.String("production"),
+			},
+			"expires": mmdbtype.Uint32(86400),
+			"name":    mmdbtype.String("Jane"),
+		},
+		// Klaus could connect from any of 16 IP addresses (/28).
+		"6.248.221.67/28": {
+			"environments": mmdbtype.Slice{
+				mmdbtype.String("development"),
+				mmdbtype.String("staging"),
+			},
+			"expires": mmdbtype.Uint32(3600),
+			"name":    mmdbtype.String("Klaus"),
+		},
+	}
 
-    # "description" is a hashref where the keys are language names and the
-    # values are descriptions of the database in that language.
-    description =>
-        { en => 'My database of IP data', fr => "Mon Data d'IP", },
+	for cidr, data := range employees {
+		_, network, err := net.ParseCIDR(cidr)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if err := writer.Insert(network, data); err != nil {
+			log.Fatal(err)
+		}
+	}
 
-    # "ip_version" can be either 4 or 6
-    ip_version => 4,
+	// Write the database to disk.
+	fh, err := os.Create("users.mmdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer fh.Close()
 
-    # add a callback to validate data going in to the database
-    map_key_type_callback => sub { $types{ $_[0] } },
+	_, err = writer.WriteTo(fh)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    # "record_size" is the record size in bits.  Either 24, 28 or 32.
-    record_size => 24,
-);
+	if err := fh.Close(); err != nil {
+		log.Fatal(err)
+	}
 
-my %address_for_employee = (
-    '123.125.71.29/32' => {
-        environments => [ 'development', 'staging', 'production' ],
-        expires      => 86400,
-        name         => 'Jane',
-    },
-    '8.8.8.8/28' => {
-        environments => [ 'development', 'staging' ],
-        expires      => 3600,
-        name         => 'Klaus',
-    },
-);
-
-for my $network ( keys %address_for_employee ) {
-    $tree->insert_network( $network, $address_for_employee{$network} );
+	fmt.Println("users.mmdb has now been created")
 }
-
-# Write the database to disk.
-open my $fh, '>:raw', $filename;
-$tree->write_tree( $fh );
-close $fh;
-
-say "$filename has now been created";
 ```
 
 ## The Code in Review
@@ -133,45 +156,46 @@ say "$filename has now been created";
 ### Step 1
 
 Create a new
-[MaxMind::DB::Writer::Tree](https://metacpan.org/pod/MaxMind::DB::Writer::Tree)
-object. The tree is where the database is stored in memory as it is created.
+[`mmdbwriter.Tree`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Tree) by
+calling
+[`mmdbwriter.New()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#New). The
+tree is where the database is stored in memory as it is created.
 
-```perl
-MaxMind::DB::Writer::Tree->new(...)
+```go
+writer, err := mmdbwriter.New(mmdbwriter.Options{...})
 ```
 
-The options we've used are all commented in the script, but there are additional
-options. They're all
-[fully documented](https://metacpan.org/pod/MaxMind::DB::Writer::Tree) as well.
-To keep things simple (and easily readable), we used IPv4 to store addresses in
-this example, but you could also use IPv6.
-
-We haven't used all available types in this script. For example, we also could
-have used a `map` to store some of these values. You're encouraged to review
-[the full list of available types](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES)
-which can be used in `map_key_type_callback`.
+The options we've used are all commented in the script, but there are
+[additional options](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Options)
+available. To keep things simple (and easily readable), we used IPv4 to store
+addresses in this example, but you could also use IPv6.
 
 ### Step 2
 
-For each IP address or range, we call the `insert_network()` method. This method
-takes two arguments. The first is a CIDR representation of the network. The
-second is a hash reference of values which describe the IP range.
+For each IP address or range, define the data using
+[`mmdbtype`](https://pkg.go.dev/github.com/maxmind/mmdbwriter/mmdbtype) types
+and call the
+[`Insert()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Tree.Insert)
+method. This method takes a `*net.IPNet` (from
+[`net.ParseCIDR()`](https://pkg.go.dev/net#ParseCIDR)) and an
+`mmdbtype.DataType` value.
 
-```perl
-$tree->insert_network( $network, $address_for_employee{$network} );
+```go
+for cidr, data := range employees {
+	_, network, err := net.ParseCIDR(cidr)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := writer.Insert(network, data); err != nil {
+		log.Fatal(err)
+	}
+}
 ```
 
-If you wish to insert an IP address range, use the \`insert_range()\` method
-instead:
-
-```perl
-$tree->insert_range( $first_ip, $last_ip, $address_for_employee{$network} );
-```
-
-We've inserted information about two employees, Jane and Klaus. They're both on
-different IP ranges. You'll see that Jane has access to more environments than
-Klaus has, but Klaus could theoretically connect from any of 16 different IP
-addresses (/28) whereas Jane will only connect from one (/32).
+The MMDB format is strongly typed. You must define your data using `mmdbtype`
+types such as `Map`, `String`, `Uint32`, and `Slice`. You're encouraged to
+review
+[the full list of available types](https://pkg.go.dev/github.com/maxmind/mmdbwriter/mmdbtype).
 
 We've inserted information about two employees, Jane and Klaus. They're both on
 different IP ranges. You'll see that Jane has access to more environments than
@@ -180,53 +204,86 @@ addresses (/28) whereas Jane will only connect from one (/32).
 
 ### Step 3
 
-Open a file handle and the write the database to disk.
+Open a file and write the database to disk.
 
-```perl
-open my $fh, '>:raw', 'my-vpn.mmdb';
-$tree->write_tree( $fh );
-close $fh;
+```go
+fh, err := os.Create("users.mmdb")
+// ...
+_, err = writer.WriteTo(fh)
 ```
 
 ## Let's Do This
 
-Now we're ready to run the script.
+First, initialize a Go module and then run the script:
 
-```shell
-perl examples/01-getting-started.pl
-```
-
-Your output should look something like:
-
-```shell
+```bash
+$ go mod init mmdb-tutorial
+$ go mod tidy
+$ go run main.go
 users.mmdb has now been created
 ```
 
-You should also see the file mentioned above in the folder from which you ran
-the script.
+You should also see the `users.mmdb` file in the folder from which you ran the
+script.
 
 ## Reading the File
 
 Now we have our brand new MMDB file. Let's read the information we stored in it.
+Save this as `main.go` (replacing the previous one) and run `go mod tidy` to
+fetch the new dependency.
 
-```perl
-#!/usr/bin/env perl
+```go
+package main
 
-use strict;
-use warnings;
-use feature qw( say );
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/netip"
+	"os"
 
-use Data::Printer;
-use MaxMind::DB::Reader;
+	"github.com/oschwald/maxminddb-golang/v2"
+)
 
-my $ip = shift @ARGV or die 'Usage: perl examples/02-reader.pl [ip_address]';
+func main() {
+	if len(os.Args) < 2 {
+		log.Fatal("Usage: go run main.go <ip_address>")
+	}
+	ipStr := os.Args[1]
 
-my $reader = MaxMind::DB::Reader->new( file => 'users.mmdb' );
+	db, err := maxminddb.Open("users.mmdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
 
-say 'Description: ' . $reader->metadata->{description}->{en};
+	fmt.Printf("Description: %s\n", db.Metadata.Description["en"])
 
-my $record = $reader->record_for_address( $ip );
-say np $record;
+	ip, err := netip.ParseAddr(ipStr)
+	if err != nil {
+		log.Fatalf("Invalid IP address: %s", ipStr)
+	}
+
+	result := db.Lookup(ip)
+	if err := result.Err(); err != nil {
+		log.Fatal(err)
+	}
+	if !result.Found() {
+		fmt.Println("No record found for", ipStr)
+		return
+	}
+
+	var record map[string]any
+	if err := result.Decode(&record); err != nil {
+		log.Fatal(err)
+	}
+
+	out, err := json.MarshalIndent(record, "", "  ")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(out))
+}
 ```
 
 ## Reading the File: Review
@@ -237,535 +294,493 @@ say np $record;
 
 Ensure that the user has provided an IP address via the command line.
 
-```perl
-my $ip = shift @ARGV or die 'Usage: perl examples/02-reader.pl [ip_address]';
+```go
+if len(os.Args) < 2 {
+	log.Fatal("Usage: go run main.go <ip_address>")
+}
 ```
 
 ### Step 2
 
 We create a new
-[MaxMind::DB::Reader](https://metacpan.org/pod/MaxMind::DB::Reader) object,
-using the name of the file we just created as the sole argument.
+[`maxminddb.Reader`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Reader)
+by calling
+[`maxminddb.Open()`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Open),
+using the name of the file we just created as the argument.
 
-```perl
-my $reader = MaxMind::DB::Reader->new( file => 'users.mmdb' );
+```go
+db, err := maxminddb.Open("users.mmdb")
 ```
 
 ### Step 3
 
-Check the metadata. This is optional, but here print the description we added to
-the metadata in the previous script.
+Check the metadata. This is optional, but here we print the description we added
+to the metadata in the previous script.
 
-```perl
-say 'Description: ' . $reader->metadata->{description}->{en};
+```go
+fmt.Printf("Description: %s\n", db.Metadata.Description["en"])
 ```
 
-Much more metadata is available in addition to the `description`.
-`$reader->metadata` returns a
-[MaxMind::DB::Metadata](https://metacpan.org/pod/MaxMind::DB::Metadata) object
-which provides much more information about the file you created.
+`db.Metadata` is a
+[`Metadata`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Metadata)
+struct. Beyond the `Description`, it provides extensive details about the
+generated file.
 
 ### Step 4
 
-We perform a record lookup and dump it using Data::Printer's handy `np()`
-method.
+We perform a record lookup and print it as formatted JSON. The `Lookup` method
+returns a
+[`Result`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Result).
+We check for errors with `Err()`, then use `Found()` to determine whether the IP
+has a record, and finally `Decode` the result.
 
-```perl
-my $record_for_jane = $reader->record_for_address( '123.125.71.29' );
-say np $record_for_jane;
+```go
+result := db.Lookup(ip)
+if err := result.Err(); err != nil {
+	log.Fatal(err)
+}
+if !result.Found() {
+	fmt.Println("No record found for", ipStr)
+	return
+}
+var record map[string]any
+if err := result.Decode(&record); err != nil {
+	log.Fatal(err)
+}
+```
+
+You could also define a struct with `maxminddb` tags for type-safe decoding:
+
+```go
+type UserRecord struct {
+	Name         string   `maxminddb:"name"`
+	Environments []string `maxminddb:"environments"`
+	Expires      uint32   `maxminddb:"expires"`
+}
 ```
 
 ## Running the Script
 
 Now let's run the script and perform a lookup on Jane's IP address:
 
-```shell
-perl examples/02-reader.pl 123.125.71.29
-```
-
-Your output should look something like this:
-
-```shell
-vagrant@precise64:/vagrant$ perl examples/02-reader.pl 123.125.71.29
+```bash
+$ go run main.go 214.71.225.36
 Description: My database of IP data
-\ {
-    environments   [
-        [0] "development",
-        [1] "staging",
-        [2] "production"
-    ],
-    expires        86400,
-    name           "Jane"
+{
+  "environments": [
+    "development",
+    "staging",
+    "production"
+  ],
+  "expires": 86400,
+  "name": "Jane"
 }
 ```
 
-We see that our `description` and our `Hash` of user data is returned exactly as
-we initially provided it. But what about Klaus, is he also in the database?
+We see that our `Description` and our map of user data is returned exactly as we
+initially provided it. But what about Klaus, is he also in the database?
 
-```shell
-vagrant@precise64:/vagrant$ perl examples/02-reader.pl 8.8.8.0
+```bash
+$ go run main.go 6.248.221.64
 Description: My database of IP data
-\ {
-    environments   [
-        [0] "development",
-        [1] "staging"
-    ],
-    expires        3600,
-    name           "Klaus"
+{
+  "environments": [
+    "development",
+    "staging"
+  ],
+  "expires": 3600,
+  "name": "Klaus"
 }
-vagrant@precise64:/vagrant$ perl examples/02-reader.pl 8.8.8.15
+
+$ go run main.go 6.248.221.79
 Description: My database of IP data
-\ {
-    environments   [
-        [0] "development",
-        [1] "staging"
-    ],
-    expires        3600,
-    name           "Klaus"
+{
+  "environments": [
+    "development",
+    "staging"
+  ],
+  "expires": 3600,
+  "name": "Klaus"
 }
-vagrant@precise64:/vagrant$ perl examples/02-reader.pl 8.8.8.16
+
+$ go run main.go 6.248.221.80
 Description: My database of IP data
-undef
+No record found for 6.248.221.80
 ```
 
-We gave Klaus an IP range of `8.8.8.8/28`, which translates to
-`8.8.8.0 to 8.8.8.15`. You can see that when we get to `8.8.8.16` we get an
-`undef` response, because there is no record at this address.
+We gave Klaus an IP range of `6.248.221.67/28`, which translates to
+`6.248.221.64 to 6.248.221.79`. You can see that when we get to `6.248.221.80`
+there is no record at this address.
 
 ## Iterating Over the Search Tree
 
 It takes time to look up every address individually. Is there a way to speed
 things up? As it happens, there is.
 
-```perl
-#!/usr/bin/env perl
+```go
+package main
 
-use strict;
-use warnings;
-use feature qw( say );
+import (
+	"encoding/json"
+	"fmt"
+	"log"
 
-use Data::Printer;
-use MaxMind::DB::Reader;
-use Net::Works::Address;
+	"github.com/oschwald/maxminddb-golang/v2"
+)
 
-my $reader = MaxMind::DB::Reader->new( file => 'users.mmdb' );
+func main() {
+	db, err := maxminddb.Open("users.mmdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
 
-$reader->iterate_search_tree(
-    sub {
-        my $ip_as_integer = shift;
-        my $mask_length   = shift;
-        my $data          = shift;
-
-        my $address = Net::Works::Address->new_from_integer(
-            integer => $ip_as_integer );
-        say join '/', $address->as_ipv4_string, $mask_length;
-        say np $data;
-    }
-);
+	for result := range db.Networks() {
+		var record map[string]any
+		if err := result.Decode(&record); err != nil {
+			log.Fatal(err)
+		}
+		if len(record) == 0 {
+			continue
+		}
+		out, err := json.MarshalIndent(record, "", "  ")
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("%s\n%s\n\n", result.Prefix(), string(out))
+	}
+}
 ```
 
 ## Iterating: Review
 
 ### Step 1
 
-As in the previous example, we create a new `MaxMind::DB::Reader` object.
+As in the previous example, we open the database with `maxminddb.Open()`.
 
 ### Step 2
 
-To dump our data, we pass an anonymous subroutine to the
-[iterate_search_tree() method](<https://metacpan.org/pod/MaxMind::DB::Reader#%24reader-%3Eiterate_search_tree(-%24data_callback%2C-%24node_callback-)>).
-(This method can actually take two callbacks, but the second callback is for
-debugging the actual nodes in the tree -- that's too low level for our purposes
-today.)
+To iterate over every network in the database, we use the
+[`Networks()`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Reader.Networks)
+method. This returns a Go [range function](https://go.dev/blog/range-functions)
+iterator. Each iteration yields a
+[`Result`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Result)
+containing the network prefix and its associated record.
 
-We've appropriately named the three arguments which are passed to the callback,
-so there's not much more to say about them. Let's look at the output.
+By default, `Networks()` skips aliased IPv4 networks in IPv6 databases and
+networks without data.
 
-```shell
-vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
-8.8.8.0/28
-\ {
-    environments   [
-        [0] "development",
-        [1] "staging"
-    ],
-    expires        3600,
-    name           "Klaus"
+Let's look at the output.
+
+```bash
+$ go run main.go
+6.248.221.64/28
+{
+  "environments": [
+    "development",
+    "staging"
+  ],
+  "expires": 3600,
+  "name": "Klaus"
 }
-123.125.71.29/32
-\ {
-    environments   [
-        [0] "development",
-        [1] "staging",
-        [2] "production"
-    ],
-    expires        86400,
-    name           "Jane"
+
+214.71.225.36/32
+{
+  "environments": [
+    "development",
+    "staging",
+    "production"
+  ],
+  "expires": 86400,
+  "name": "Jane"
 }
 ```
 
-The output shows the first IP in each range (note that Jane's IP is just a
-"range" of one) and then displays the user data with which we're now familiar.
+The output shows each network and its associated record. Note that even though
+we specified Klaus's range as `6.248.221.67/28`, the writer correctly stored it
+as `6.248.221.64/28`, the canonical form of the network.
 
 ## The Mashup
 
 To extend our example, let's take the data from an existing GeoIP database and
-combine it with our custom MMDB file.
+combine it with our custom employee data. We'll start with the GeoLite City
+database and enrich it with our access list information.
 
-If you're using the `Vagrant` VM, you have a copy of `GeoLite2-City.mmdb` in
-`/usr/share/GeoIP`. If not, you may need to
-[download this file](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
-or use [geoipupdate](https://dev.maxmind.com/geoip/updating-databases/). For
-more details on how to set this up, you can look at the `provision` section of
-the `Vagrantfile` in the GitHub repository.
+You may need to
+[download the GeoLite City database](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
+or use [geoipupdate](https://dev.maxmind.com/geoip/updating-databases/) to
+obtain it.
 
-You can take any number of fields from existing MaxMind databases to create your
-own custom database. In this case, let's extend our existing database by adding
-`city`, `country` and `time_zone` fields for each IP range. We can use this
-information to (possibly) customize the user's environment. We can use the time
-zone when displaying dates or times. We can limit access to certain features
-based on the country in which the user is currently located.
+Save this as `main.go` (replacing the previous one) and run `go mod tidy` to
+fetch the new dependencies.
 
-```perl
-#!/usr/bin/env perl
+We load the existing database using
+[`mmdbwriter.Load()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Load),
+then merge our employee data into the matching IP ranges using
+[`InsertFunc()`](https://pkg.go.dev/github.com/maxmind/mmdbwriter#Tree.InsertFunc)
+with the
+[`TopLevelMergeWith`](https://pkg.go.dev/github.com/maxmind/mmdbwriter/inserter#TopLevelMergeWith)
+inserter. This adds our new top-level keys to the existing GeoLite records
+without overwriting any of the original data.
 
-use strict;
-use warnings;
-use feature qw( say );
+```go
+package main
 
-use GeoIP2::Database::Reader;
-use MaxMind::DB::Writer::Tree;
-use Net::Works::Network;
+import (
+	"fmt"
+	"log"
+	"net"
+	"os"
 
-my $filename = 'users.mmdb';
-my $reader   = GeoIP2::Database::Reader->new(
-    file    => '/usr/share/GeoIP/GeoLite2-City.mmdb',
-    locales => ['en'],
-);
+	"github.com/maxmind/mmdbwriter"
+	"github.com/maxmind/mmdbwriter/inserter"
+	"github.com/maxmind/mmdbwriter/mmdbtype"
+)
 
-# Your top level data structure will always be a map (hash).  The MMDB format
-# is strongly typed.  Describe your data types here.
-# See https://metacpan.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES
+func main() {
+	// Load the existing database that we want to enrich.
+	writer, err := mmdbwriter.Load("GeoLite2-City.mmdb", mmdbwriter.Options{})
+	if err != nil {
+		log.Fatal(err)
+	}
 
-my %types = (
-    city         => 'utf8_string',
-    country      => 'utf8_string',
-    environments => [ 'array', 'utf8_string' ],
-    expires      => 'uint32',
-    name         => 'utf8_string',
-    time_zone    => 'utf8_string',
-);
+	// Define employee data to merge into the existing records.
+	employees := map[string]mmdbtype.Map{
+		"214.71.225.36/32": {
+			"environments": mmdbtype.Slice{
+				mmdbtype.String("development"),
+				mmdbtype.String("staging"),
+				mmdbtype.String("production"),
+			},
+			"expires": mmdbtype.Uint32(86400),
+			"name":    mmdbtype.String("Jane"),
+		},
+		"6.248.221.67/28": {
+			"environments": mmdbtype.Slice{
+				mmdbtype.String("development"),
+				mmdbtype.String("staging"),
+			},
+			"expires": mmdbtype.Uint32(3600),
+			"name":    mmdbtype.String("Klaus"),
+		},
+	}
 
-my $tree = MaxMind::DB::Writer::Tree->new(
+	for cidr, data := range employees {
+		_, network, err := net.ParseCIDR(cidr)
+		if err != nil {
+			log.Fatal(err)
+		}
+		// InsertFunc with TopLevelMergeWith merges our new top-level keys
+		// into the existing GeoLite record, rather than replacing it.
+		if err := writer.InsertFunc(network, inserter.TopLevelMergeWith(data)); err != nil {
+			log.Fatal(err)
+		}
+	}
 
-    # "database_type" is an arbitrary string describing the database.  At
-    # MaxMind we use strings like 'GeoIP2-City', 'GeoIP2-Country', etc.
-    database_type => 'My-IP-Data',
+	// Write the enriched database to disk.
+	fh, err := os.Create("users-enriched.mmdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer fh.Close()
 
-    # "description" is a hashref where the keys are language names and the
-    # values are descriptions of the database in that language.
-    description =>
-        { en => 'My database of IP data', fr => "Mon Data d'IP", },
+	_, err = writer.WriteTo(fh)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    # "ip_version" can be either 4 or 6
-    ip_version => 4,
+	if err := fh.Close(); err != nil {
+		log.Fatal(err)
+	}
 
-    # add a callback to validate data going in to the database
-    map_key_type_callback => sub { $types{ $_[0] } },
-
-    # let the writer handle merges of IP ranges. if we don't set this then the
-    # default behavior is for the last network to clobber any overlapping
-    # ranges.
-    merge_record_collisions => 1,
-
-    # "record_size" is the record size in bits.  Either 24, 28 or 32.
-    record_size => 24,
-);
-
-my %address_for_employee = (
-    '123.125.71.29/32' => {
-        environments => [ 'development', 'staging', 'production' ],
-        expires      => 86400,
-        name         => 'Jane',
-    },
-    '8.8.8.8/28' => {
-        environments => [ 'development', 'staging' ],
-        expires      => 3600,
-        name         => 'Klaus',
-    },
-);
-
-for my $range ( keys %address_for_employee ) {
-
-    my $user_metadata = $address_for_employee{$range};
-
-    # Iterate over network and insert IPs individually
-    my $network = Net::Works::Network->new_from_string( string => $range );
-    my $iterator = $network->iterator;
-
-    while ( my $address = $iterator->() ) {
-        my $ip = $address->as_ipv4_string;
-        my $model = $reader->city( ip => $ip );
-
-        if ( $model->city->name ) {
-            $user_metadata->{city} = $model->city->name;
-        }
-        if ( $model->country->name ) {
-            $user_metadata->{country} = $model->country->name;
-        }
-        if ( $model->location->time_zone ) {
-            $user_metadata->{time_zone} = $model->location->time_zone;
-        }
-        $tree->insert_network( $network, $user_metadata );
-    }
-}
-
-# Write the database to disk.
-open my $fh, '>:raw', $filename;
-$tree->write_tree( $fh );
-close $fh;
-
-say "$filename has now been created";
-```
-
-Now, when we iterate over the search tree, we'll see that the data has been
-augmented with the new fields.
-
-```shell
-vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
-8.8.8.0/28
-\ {
-    city           "Mountain View",
-    country        "United States",
-    environments   [
-        [0] "development",
-        [1] "staging"
-    ],
-    expires        3600,
-    name           "Klaus",
-    time_zone      "America/Los_Angeles"
-}
-123.125.71.29/32
-\ {
-    city           "Beijing",
-    country        "China",
-    environments   [
-        [0] "development",
-        [1] "staging",
-        [2] "production"
-    ],
-    expires        86400,
-    name           "Jane",
-    time_zone      "Asia/Shanghai"
+	fmt.Println("users-enriched.mmdb has now been created")
 }
 ```
 
-## Adding GeoLite City Data: Review
+Now, when we look up our employee IP addresses in the enriched database using
+`mmdbinspect -db users-enriched.mmdb 214.71.225.36`, we can see that the records
+contain both the geographic data and our custom fields. `mmdbinspect` outputs
+YAML by default:
 
-To extend our example we make two additions to our original file:
+```yaml
+database_path: users-enriched.mmdb
+requested_lookup: 214.71.225.36
+network: 214.71.225.36/32
+record:
+  continent:
+    code: NA
+    geoname_id: 6255149
+    names:
+      de: Nordamerika
+      en: North America
+      ...
+  country:
+    geoname_id: 6252001
+    iso_code: US
+    names:
+      en: United States
+      ...
+  environments:
+    - development
+    - staging
+    - production
+  expires: 86400
+  location:
+    accuracy_radius: 1000
+    latitude: 37.751
+    longitude: -97.822
+    time_zone: America/Chicago
+  name: Jane
+  registered_country:
+    ...
+```
+
+The record now contains both the original geographic fields (`continent`,
+`country`, `location`) and our custom access list fields (`environments`,
+`expires`, `name`).
+
+## The Mashup: Review
+
+To enrich the existing database, we make two key changes from our original
+"Getting Started" script:
 
 ### Step 1
 
-We create a new reader object:
+Instead of creating a new tree with `mmdbwriter.New()`, we load the existing
+database:
 
-```perl
-my $reader   = GeoIP2::Database::Reader->new(
-    file    => '/usr/share/GeoIP/GeoLite2-City.mmdb',
-    locales => ['en'],
-);
+```go
+writer, err := mmdbwriter.Load("GeoLite2-City.mmdb", mmdbwriter.Options{})
 ```
 
-Note that this file may be in a different location if you're not using
-`Vagrant`. Adjust accordingly.
+This loads the entire GeoLite database into a writable tree that we can modify.
 
 ### Step 2
 
-Now, we take our existing data so that we can augment it with GeoIP data.
+Instead of `Insert()`, we use `InsertFunc()` with
+`inserter.TopLevelMergeWith()`:
 
-```perl
-    my $user_metadata = $address_for_employee{$range};
-
-    # Iterate over network and insert IPs individually
-    my $network = Net::Works::Network->new_from_string( string => $range );
-    my $iterator = $network->iterator;
-
-    while ( my $address = $iterator->() ) {
-        my $ip = $address->as_ipv4_string;
-        my $model = $reader->city( ip => $ip );
-
-        if ( $model->city->name ) {
-            $user_metadata->{city} = $model->city->name;
-        }
-        if ( $model->country->name ) {
-            $user_metadata->{country} = $model->country->name;
-        }
-        if ( $model->location->time_zone ) {
-            $user_metadata->{time_zone} = $model->location->time_zone;
-        }
-        $tree->insert_network( $network, $user_metadata );
-    }
-```
-
-As in our first example, we're create a new `Net::Works::Network` object.
-However, in this case we are going to insert each individual IP in the range.
-The reason for this is that we don't know if our IP ranges match the ranges in
-the GeoLite database. If we just rely on using the reader data for some
-arbitrary IP in the range, we can't be 100% sure that this is representative of
-all other IPs in the range. If we insert each IP in the range, we don't need to
-rely on the assumption that the data for a random IP will be consistent across
-our ranges.
-
-In order for this to work, we set `merge_record_collisions => 1` when we created
-the `MaxMind::DB::Writer::Tree` object. This allows the writer to be smart about
-merging ranges rather than letting a new range clobber any overlapping
-addresses.
-
-Note that this approach is fine for a small database, but it likely will not
-scale well in terms of speed when writing a database with a large number of
-records. If you're looking to create a very large database and writing speed is
-an issue, you are encouraged to look into using the MaxMind CSVs to seed your
-database.
-
-Iterating over a network is trivial.
-
-```perl
-    my $network = Net::Works::Network->new_from_string( string => $range );
-    my $iterator = $network->iterator;
-
-    while ( my $address = $iterator->() ) {
-        my $ip = $address->as_ipv4_string;
-        ...
-    }
-```
-
-The next step is to look up an IP address using the reader.
-
-```perl
-my $model = $reader->city( ip => $ip );
-```
-
-We need to pass the model a `string` rather than an `object`, so we call the
-`as_ipv4_string()` method.
-
-Next we add new keys to `Hash`. The new keys are `country`, `city` and
-`time_zone`. Note that we only add them if they exist. If we try to add an
-`undefined` value to the `Hash`, it an exception will be thrown.
-
-Now, let's see what we get.
-
-```shell
-vagrant@precise64:/vagrant$ perl examples/03-iterate-search-tree.pl
-8.8.8.0/28
-\ {
-    city           "Mountain View",
-    country        "United States",
-    environments   [
-        [0] "development",
-        [1] "staging"
-    ],
-    expires        3600,
-    name           "Klaus",
-    time_zone      "America/Los_Angeles"
-}
-123.125.71.29/32
-\ {
-    city           "Beijing",
-    country        "China",
-    environments   [
-        [0] "development",
-        [1] "staging",
-        [2] "production"
-    ],
-    expires        86400,
-    name           "Jane",
-    time_zone      "Asia/Shanghai"
+```go
+if err := writer.InsertFunc(network, inserter.TopLevelMergeWith(data)); err != nil {
+	log.Fatal(err)
 }
 ```
 
-Even though we inserted Klaus's addresses individually, we can see that the
-writer did the right thing and merged the addresses into an appropriately sized
-network.
+The `TopLevelMergeWith` inserter merges our new map keys into the existing
+record's map. If we used `Insert()` instead, the default behavior would replace
+the existing GeoLite record entirely, losing all the geographic data.
+
+For a more detailed walkthrough of this pattern, see our article on [enriching
+MMDB files with your own data using
+Go]({{< relref "2020/09/enriching-mmdb-files-with-your-own-data-using-go.md" >}}).
 
 ## Deploying Our Application
 
 Now we're at the point where we can make use of our database. With just a few
 lines of code you can now use your MMDB file to assist in the authorization of
-your application or VPN users. For example, you might include the following
-lines in a class which implements your authentication.
+your application or VPN users. For example, you might include the following in
+your authentication handler:
 
-```perl
-use MaxMind::DB::Reader;
+```go
+import (
+	"log"
+	"net/netip"
 
-my $reader = MaxMind::DB::Reader->new( file => '/path/to/users.mmdb' );
+	"github.com/oschwald/maxminddb-golang/v2"
+)
 
-sub is_ip_valid {
-    my $self   = shift;
-    my $ip     = shift;
+type UserRecord struct {
+	// Use a pointer so we can distinguish "field absent" from "empty string".
+	Name         *string  `maxminddb:"name"`
+	Environments []string `maxminddb:"environments"`
+	Expires      uint32   `maxminddb:"expires"`
+	Location     struct {
+		TimeZone string `maxminddb:"time_zone"`
+	} `maxminddb:"location"`
+}
 
-    my $record = $reader->record_for_address( $ip );
-    return 0 unless $record;
+func main() {
+	// Open the reader once at startup and reuse it. It is safe for
+	// concurrent use.
+	db, err := maxminddb.Open("/path/to/users-enriched.mmdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
 
-    $self->set_session_expiration( $record->{expires} );
-    $self->set_time_zone( $record->{time_zone} ) if $record->{time_zone};
-    return 1;
+	// Pass db to your HTTP handlers, auth middleware, etc.
+	// ...
+}
+
+func isIPValid(db *maxminddb.Reader, ipStr string) (*UserRecord, bool) {
+	ip, err := netip.ParseAddr(ipStr)
+	if err != nil {
+		return nil, false
+	}
+
+	var record UserRecord
+	if err := db.Lookup(ip).Decode(&record); err != nil {
+		log.Printf("MMDB lookup error for %s: %v", ipStr, err)
+		return nil, false
+	}
+
+	// A nil Name means this IP has no employee data. It may exist in
+	// GeoLite but is not on our access list.
+	if record.Name == nil {
+		return nil, false
+	}
+
+	// Use record.Expires to set session expiration.
+	// Use record.Location.TimeZone for displaying dates and times.
+	return &record, true
 }
 ```
 
 Here's a quick summary of what's going on:
 
-- As part of your deployment you'll naturally need to include your `users.mmdb`
-  file, stored in the location of your choice.
-- You'll need to create a `MaxMind::DB::Reader` object to perform the lookup.
-- If the `$record` is undef, the IP could not be found.
+- As part of your deployment you'll naturally need to include your MMDB file,
+  stored in the location of your choice.
+- You'll need to create a `maxminddb.Reader` by calling `maxminddb.Open()`. Open
+  it once and reuse it. The reader is safe for concurrent use.
+- If `Name` is nil, the IP exists in GeoLite but has no employee data, so it is
+  not on our access list.
 - If the IP is found, you can set a session expiration.
-- If the IP is found, you can also set a time zone for the user. Keep in mind
-  that it's possible that the `time_zone` key does not exist, so it's important
-  that you don't assume it will always be available.
+- If the IP is found, you can also use `record.Location.TimeZone` from the
+  GeoLite data to customize the user's experience. Keep in mind that this field
+  comes from the GeoLite database and may not be available for all IP addresses.
 
 ## Pro Tips
 
-### Including the Contents of an Entire MaxMind DB
+### Merge Strategies
 
-To include the contents of an entire GeoIP database rather than selected data
-points, you have a couple of options for iterating over a database in Perl.
+The `mmdbwriter` module provides several
+[inserter functions](https://pkg.go.dev/github.com/maxmind/mmdbwriter/inserter)
+that control what happens when you insert data for a network that already has a
+record:
 
-#### MaxMind::DB::Reader
+- **`ReplaceWith`**: the default when using `Insert()`. The new data completely
+  replaces the existing record.
+- **`TopLevelMergeWith`**: merges top-level map keys. Existing keys that aren't
+  in the new data are preserved.
+- **`DeepMergeWith`**: recursively merges nested maps and slices.
 
-A very simple way to get started is to iterate over the search tree using
-`MaxMind::DB::Reader` as we did in `examples/03-iterate-search-tree.pl`.
-However, note that iterating over the entire tree using the Perl reader can be
-quite slow.
+Choose the strategy that fits your use case. For enriching existing databases,
+`TopLevelMergeWith` is usually what you want.
 
-#### Parsing a CSV
+### Thread Safety
 
-This requires slightly more logic, but reading a CSV file line by line will give
-you a significant speed boost over search tree iteration.
-
-Free downloads of CSV files for GeoLite City and GeoLite Country
-[are available from MaxMind.com](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
-If you're using the Vagrant VM, you'll find `GeoLite2-City-Blocks-IPv4.csv` and
-`GeoLite2-City-Locations-en.csv` already in your `/vagrant` directory.
-`examples/06-read-csv.pl` will give you a head start on parsing these CSVs.
-
-### Insert Order, Merging and Overwriting
-
-It's important to understand `MaxMind::DB::Writer`'s configurable behavior for
-inserting ranges. Please see our documentation on
-[Insert Order, Merging and Overwriting](https://metacpan.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting)
-so that you can choose the correct behavior for any overlapping IP ranges you
-may come across when writing your own database files.
+The `Insert` and `InsertFunc` methods are not safe for concurrent use. Perform
+all insertions from a single goroutine before calling `WriteTo`.
 
 ## Taking This Further
 
-Today we've shown how you can create your own MMDB database and augment it with
-data from a GeoLite City database. We've only included a few data points, but
-MaxMind databases contain much more data you can use to build a solution to meet
-your business requirements.
+Today we've shown how you can create your own MMDB database and enrich it with
+data from a GeoLite database. We've only included a few data points, but MaxMind
+databases contain much more data you can use to build a solution to meet your
+business requirements.
 
-**About our contributor:** _Olaf Alders is a Senior Software Engineer at
-MaxMind. After taking his first course in Fortran, Olaf earned an M.A. in
-Classical Philology from McMaster University and an M.A. in Medieval Studies
-from the University of Toronto. His open source projects include
-[MetaCPAN.org](https://metacpan.org/ "MetaCPAN"), as well as various
-[Perl modules](https://metacpan.org/author/OALDERS). Follow him on Twitter
-[@olafalders](https://twitter.com/olafalders)._
+For a more detailed walkthrough of enriching MMDB files, see our article on
+[enriching MMDB files with your own data using
+Go]({{< relref "2020/09/enriching-mmdb-files-with-your-own-data-using-go.md" >}}).
+For full API documentation, see the
+[`mmdbwriter` package documentation](https://pkg.go.dev/github.com/maxmind/mmdbwriter).
