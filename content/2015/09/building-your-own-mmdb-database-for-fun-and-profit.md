@@ -74,8 +74,7 @@ import (
 )
 
 func main() {
-	// Create a new MMDB tree. The MMDB format is strongly typed. The top level
-	// data structure is always a map.
+	// Create a new MMDB tree.
 	writer, err := mmdbwriter.New(mmdbwriter.Options{
 		// "DatabaseType" is some arbitrary string describing the database.
 		// At MaxMind we use strings like "GeoIP2-City", "GeoIP2-Country", etc.
@@ -321,10 +320,10 @@ to the metadata in the previous script.
 fmt.Printf("Description: %s\n", db.Metadata.Description["en"])
 ```
 
-Much more metadata is available in addition to the `Description`. `db.Metadata`
-is a
+`db.Metadata` is a
 [`Metadata`](https://pkg.go.dev/github.com/oschwald/maxminddb-golang/v2#Metadata)
-struct which provides much more information about the file you created.
+struct. Beyond the `Description`, it provides extensive details about the
+generated file.
 
 ### Step 4
 
@@ -377,7 +376,7 @@ Description: My database of IP data
 }
 ```
 
-We see that our `description` and our map of user data is returned exactly as we
+We see that our `Description` and our map of user data is returned exactly as we
 initially provided it. But what about Klaus, is he also in the database?
 
 ```bash
@@ -647,7 +646,7 @@ To enrich the existing database, we make two key changes from our original
 ### Step 1
 
 Instead of creating a new tree with `mmdbwriter.New()`, we load the existing
-existing database:
+database:
 
 ```go
 writer, err := mmdbwriter.Load("GeoLite2-City.mmdb", mmdbwriter.Options{})
