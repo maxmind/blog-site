@@ -1,8 +1,13 @@
 ---
 title: "Blog Post Template"
+description:
+  "A brief description of the blog post for SEO and social sharing metadata."
+summary:
+  "A brief summary of the blog post used in content listings. If omitted, Hugo
+  generates one automatically."
 date: "2023-10-19"
-images:
-  - /images/2023/10/image.png
+lastmod: "2023-11-01"
+headerImage: /images/2023/10/image.webp
 category:
   - "Templates"
   - "Examples"
@@ -10,7 +15,7 @@ tag:
   - "Getting Started"
   - "Tutorials"
 authors:
-  - "Christopher Luna"
+  - "Luna"
   - "Kevin Centeno"
 ---
 
@@ -49,9 +54,9 @@ The file should be named as follows:
 
 `<Desired URL Path>.md`
 
-For example, if this was a real blog post, it would have the following path:
+For example, if this was a real blog post, it would have the following URL:
 
-`https://blog.maxmind.com/2023/10/BLOG-POST-TEMPLATE`
+`https://blog.maxmind.com/BLOG-POST-TEMPLATE`
 
 Generally, you should choose a file name that contains only lowercase letters,
 numbers, and hyphens.
@@ -88,15 +93,19 @@ The head contains the following attributes:
 | Attribute     | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`       | The title of the blog post, contained in double quotes (`""`). This will be used both as the title displayed at the top of the post in a level 1 header, and as the `<title></title>` meta tag. [Learn more about metadata on the blog.](#metadata)                                                                                                                                                         |
-| `heading`     | The heading for the blog post, contained in double quotes (`""`). This will be used as only the title displayed at the top of the post in a level 1 header. If this is omitted, then the `title` will be used as the level 1 header. **Note**: The <title></title> meta tag will still be the `title`. This is optional and should only be added if you want the metadata and h1 tag on the page to differ. |
-| `description` | The description of the post, contained in double quotes (`""`). This is optional.                                                                                                                                                                                                                                                                                                                           |
-| `date`        | The date that the blog post is published in `YYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                                                                                |
-| `images`      | The unordered list of paths to the featured image(s) of the post. The first image is displayed on the blog home, and all images are used for social sharing. [Learn more about images below.](#images)                                                                                                                                                                                                      |
+| `heading`     | The heading for the blog post, contained in double quotes (`""`). This will be used as only the title displayed at the top of the post in a level 1 header. If this is omitted, then the `title` will be used as the level 1 header. **Note**: The `<title></title>` meta tag will still be the `title`. This is optional and should only be added if you want the metadata and h1 tag on the page to differ. |
+| `description` | The description of the post, contained in double quotes (`""`). Used for the meta description tag and `og:description`. If omitted, `og:description` falls back to the post summary. This is optional but recommended for SEO.                                                                                                                                                                              |
+| `summary`     | A brief summary of the post used in content listings, contained in double quotes (`""`). If omitted, Hugo generates one automatically. This is optional.                                                                                                                                                                                                                                                    |
+| `date`        | The date that the blog post is published in `YYYY-MM-DD` format. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                                                                               |
+| `lastmod`     | The date the blog post content was last updated in `YYYY-MM-DD` format. Should be contained in double quotes (`""`). If set and different from `date`, a "Last updated" date is displayed on the post page. Also used for the `article:modified_time` metadata. This is optional; if omitted, the published `date` is used for `article:modified_time`.                                                       |
+| `headerImage` | The path to the featured image for the post (e.g., `/images/2023/10/image.webp`). Displayed as the hero image on the post page, on the blog home listing, and used for `og:image` social sharing. If omitted, a placeholder image is used. [Learn more about images below.](#images)                                                                                                                        |
 | `category`    | The list of categories for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your categories are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                      |
 | `tag`         | The list of tags for the post, each contained in double quotes (`""`). You can use any strings you want, so you need to manually ensure that your tags are spelled the way you'd like and are consistent with other posts.                                                                                                                                                                                  |
-| `authors`     | The list of authors for the post, each contained in double quotes (`""`). Only the first author is displayed.                                                                                                                                                                                                                                                                                               |
-| `slug`        | This will override the automatically generated slug of the post `YYYY/MM/DD/name-of-the-file` will now become `YYYY/MM/DD/specified-slug-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                |
-| `url`         | This will override the automatically generated url of the post `YYYY/MM/DD/name-of-the-file` will now be `specified-url-name`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                                 |
+| `authors`     | The list of authors for the post, each contained in double quotes (`""`). If any listed author has a matching page in `content/authors/`, only authors with pages will be rendered (as links to their bio). Otherwise, all authors are displayed as plain text. To avoid silently dropping authors, ensure all listed authors have author pages, or none do.                                                    |
+| `images`      | Deprecated. Some older posts use this instead of `headerImage`. It is no longer referenced by any template, so new posts should use `headerImage` instead.                                                                                                                                                                                                                                                  |
+| `popular`     | Set to `true` to mark the post as a popular read. Popular posts are featured in the "Popular Reads" section. This is optional.                                                                                                                                                                                                                                                                              |
+| `slug`        | This will override the automatically generated slug of the post. For example, `/name-of-the-file/` will become `/specified-slug-name/`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                         |
+| `url`         | This will override the entire automatically generated URL of the post. For example, `/name-of-the-file/` will become `/specified-url-name/`. Should be contained in double quotes (`""`).                                                                                                                                                                                                                    |
 
 ## Markdown
 
@@ -189,17 +198,18 @@ your image to the correct location and use the proper path.
 
 Images should be added to the blog in the following directory:
 
-`content/static/images/YYYY/MM`
+`static/images/YYYY/MM`
 
 For example, if this was a real blog post I would add any images to the
 following directory:
 
-`/content/static/images/2023/10`
+`static/images/2023/10`
 
-Featured images, which are defined in the [blog post head](#blog-head), should
-be added to the same directory.
+The `headerImage` in the [blog post head](#blog-head) should reference the same
+directory using a path relative to `static/`, e.g.,
+`/images/2023/10/image.webp`.
 
-The blog can render jpg, png, and svg images. The images will be rendered
+The blog can render jpg, png, svg, and webp images. The images will be rendered
 horizontally-centered with the copy of the blog post.
 
 ### Code blocks
@@ -234,47 +244,52 @@ If you want an easier way to make tables in markdown, you can also try this
 
 ## Metadata
 
-We can use [OpenGraph meta tags](https://ogp.me/) for social sharing. Hugo has
-an embedded OpenGraph template:
-https://gohugo.io/templates/embedded/#open-graph.
-[Hugo OpenGraph embedded template source code](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_partials/opengraph.html).
+The blog uses a custom template (`layouts/partials/structured-data.html`) to
+generate metadata for SEO and social sharing. This template generates OpenGraph
+meta tags, Twitter Card meta tags, and JSON-LD structured data.
 
 At this time, the blog generates metadata in the following ways:
 
 - The `title` parameter in the blog post head generates the `<title></title>`
   tag
-- The meta description in the blog post head is generated by the `description`
-  in the [blog post head](#blog-head). If no `description` is set in the front
-  matter of the post, there will not be a meta description tag.
+- The meta description is generated from the `description` in the
+  [blog post head](#blog-head). If no `description` is set in the front matter
+  of the post, there will not be a meta description tag.
 - [OpenGraph meta tags](https://ogp.me/):
   - [`og:title`](https://ogp.me/#metadata) is populated with the `title`
     parameter in the [blog post head](#blog-head)
   - [`og:description`](https://ogp.me/#optional) is populated with the
     `description` parameter in the [blog post head](#blog-head). If no
-    `description` is specified, this will default with the first paragraph of
-    the post.
+    `description` is specified, this will fall back to the post summary.
   - [`og:site_name`](https://ogp.me/#metadata) is `MaxMind`, which is the title
     set in `config.toml`
-  - [`og:locale`](https://ogp.me/#metadata) is `en_us`, which is the
-    languageCode set in `config.toml`. (`-` is replaced with `_`.)
-  - [`og:audio`](https://ogp.me/#metadata) is populated with a list of audio
-    paths
-  - [`og:video`](https://ogp.me/#metadata) is populated with a list of video
-    paths
-  - [`og:type`](https://ogp.me/#metadata) is populated with the value
-    `"article"`
+  - [`og:type`](https://ogp.me/#metadata) is `article` for blog posts
   - [`og:url`](https://ogp.me/#metadata) is populated with the URL of the
     article, which is derived from its path and filename
-  - [`og:image`](https://ogp.me/#metadata) is populated with the `images`
+  - [`og:image`](https://ogp.me/#metadata) is populated with the `headerImage`
     parameter in the [blog post head](#blog-head)
-  - [`article:section`](https://ogp.me/#no_vertical) is populated with the year
-    of the post from the `date` parameter in the [blog post head](#blog-head)
   - [`article:published_time`](https://ogp.me/#no_vertical) is populated with
     the timestamp of midnight on the date specified in the `date` parameter in
     the [blog post head](#blog-head)
-  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with the
-    timestamp of midnight on the date specified in the `date` parameter in the
-    [blog post head](#blog-head)
+  - [`article:modified_time`](https://ogp.me/#no_vertical) is populated with
+    the `lastmod` date if set, otherwise falls back to the `date` parameter.
+    Including `lastmod` is a valuable signal to scrapers feeding LLM training
+    and to search engines that the content has been refreshed.
+  - [`article:author`](https://ogp.me/#no_vertical) is populated with each
+    author from the `authors` parameter
+  - [`article:section`](https://ogp.me/#no_vertical) is populated with each
+    category from the `category` parameter
+  - [`article:tag`](https://ogp.me/#no_vertical) is populated with each tag
+    from the `tag` parameter
+- [Twitter Card meta tags](https://developer.x.com/en/docs/x-for-websites/cards/overview/markup):
+  - `twitter:card` is set to `summary_large_image`
+  - `twitter:title` is populated with the `title` parameter
+  - `twitter:description` is populated with the `description` parameter, falling
+    back to the post summary
+  - `twitter:image` is populated with the `headerImage` parameter
+- [JSON-LD structured data](https://developers.google.com/search/docs/appearance/structured-data/article):
+  - A `BlogPosting` schema is generated with headline, description, URL, dates,
+    authors, image, article section, and keywords derived from the front matter
 
 ### Redirects and aliases
 
