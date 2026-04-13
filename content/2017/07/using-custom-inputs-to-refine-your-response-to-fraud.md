@@ -110,7 +110,7 @@ program example above, your custom rule would be:
 This is, of course, just one example of how you can use custom inputs. You can
 also [leverage your own blocklists by creating custom inputs of greylisted,
 blacklisted, or whitelisted data]
-(https://support.maxmind.com/knowledge-base/articles/use-stored-lists-in-custom-rules-maxmind).
+(https://support.maxmind.com/knowledge-base/articles/use-stored-lists-in-custom-rules-maxmind?utm_source=blog&utm_medium=article&utm_campaign=update).
 You then create a custom rule that confirms whether a scammer alias, email
 address, email domain, phone number, shipping address etc. is on a specific
 blocklist. MaxMind does not have direct access to your blocklist details, and no
