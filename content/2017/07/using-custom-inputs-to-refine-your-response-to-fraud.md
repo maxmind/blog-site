@@ -97,7 +97,7 @@ By creating a custom input “loyalty store price” using the `number` data typ
 you can create a custom rule to manually review a purchase if the purchase price
 of the gift card in your loyalty store is greater than the loyalty program’s
 maximum discounted price. Your custom rule would look like this:
-`If price (input) < loyalty store price (Custom Input), THEN manual review`. By
+`If price (input) < loyalty store price (custom input), THEN manual review`. By
 creating this custom rule, your fraud analyst can take a better look at the
 transaction, reviewing it with additional intelligence returned by the minFraud
 network, to determine if the customer is actually a scammer.
@@ -105,15 +105,16 @@ network, to determine if the customer is actually a scammer.
 You can also create a custom rule to help reduce your manual review efforts by
 automatically resolving known high-risk transactions. Borrowing from the loyalty
 program example above, your custom rule would be:
-`If price (input) < loyalty store price (Custom Input) AND riskScore > 20, THEN reject`.
+`If price (input) < loyalty store price (custom input) AND riskScore > 20, THEN reject`.
 
 This is, of course, just one example of how you can use custom inputs. You can
-also leverage your own blocklists by creating custom inputs of greylisted,
-blacklisted, or whitelisted data. You then create a custom rule that confirms
-whether a scammer alias, email address, email domain, phone number, shipping
-address etc. is on a specific blocklist. MaxMind does not have direct access to
-your blocklist details, and no one on our side can view the data contained
-within your blocklist.
+also [leverage your own blocklists by creating custom inputs of greylisted,
+blacklisted, or whitelisted data]
+(https://support.maxmind.com/knowledge-base/articles/use-stored-lists-in-custom-rules-maxmind).
+You then create a custom rule that confirms whether a scammer alias, email
+address, email domain, phone number, shipping address etc. is on a specific
+blocklist. MaxMind does not have direct access to your blocklist details, and no
+one on our side can view the data contained within your blocklist.
 
 To reduce money laundering attempts, you can also create a daily cap
 (transaction limit) as a custom input to help you limit the total amount of
