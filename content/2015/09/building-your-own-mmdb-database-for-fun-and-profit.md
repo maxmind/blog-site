@@ -1,12 +1,12 @@
 ---
-title: "How to build MMDB database using Go "
-heading: "Building Your own MMDB database for fun and profit"
+title: "How to build MMDB database using Golang"
+heading: "Building your own MMDB database for fun and profit"
 description:
   "This technical tutorial includes code samples to show you how you can build
   your own MaxMind database (MMDB) files, a fast and highly portable format."
 summary:
-  "Explore our technical tutorial on how to create custom MaxMind database
-  (MMDB) files using the Go programming language."
+  "Explore our technical tutorial on how to create custom MaxMind database files
+  using the Go programming language."
 headerImage: /images/2015/09/building-your-own-mmdb-database-for-fun-and-profit.webp
 date: "2015-09-29"
 lastmod: "2026-04-09"
@@ -159,7 +159,7 @@ func main() {
 }
 ```
 
-## The Code in review
+## The code in review
 
 ### Step 1
 
