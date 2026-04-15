@@ -647,7 +647,7 @@ The record now contains both the original geographic fields (`continent`,
 `country`, `location`) and our custom access list fields (`environments`,
 `expires`, `name`).
 
-## The Mashup: Review
+## The mashup: Review
 
 To enrich the existing database, we make two key changes from our original
 "Getting Started" script:
