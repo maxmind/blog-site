@@ -108,13 +108,10 @@ program example above, your custom rule would be:
 `If price (input) < loyalty store price (custom input) AND riskScore > 20, THEN reject`.
 
 This is, of course, just one example of how you can use custom inputs. You can
-also
-[leverage your own blocklists](https://support.maxmind.com/knowledge-base/articles/use-stored-lists-in-custom-rules-maxmind?utm_source=blog&utm_medium=article&utm_campaign=update)
-by creating custom inputs of greylisted, blacklisted, or whitelisted data. You
-then create a custom rule that confirms whether a scammer alias, email address,
-email domain, phone number, shipping address etc. is on a specific blocklist.
-MaxMind does not have direct access to your blocklist details, and no one on our
-side can view the data contained within your blocklist.
+also leverage your own blocklists by creating custom inputs of greylisted,
+blacklisted, or whitelisted data. You then create a custom rule that confirms
+whether a scammer alias, email address, email domain, phone number, shipping
+address etc. is on a specific blocklist.
 
 To reduce money laundering attempts, you can also create a daily cap
 (transaction limit) as a custom input to help you limit the total amount of
