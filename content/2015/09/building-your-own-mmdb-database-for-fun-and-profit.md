@@ -1,5 +1,13 @@
 ---
-title: "Building Your Own MMDB Database for Fun and Profit"
+title: "How to build MMDB database using Go "
+heading: "Building Your own MMDB database for fun and profit"
+description:
+  "This technical tutorial includes code samples to show you how you can build
+  your own MaxMind database (MMDB) files, a fast and highly portable format."
+summary:
+  "Explore our technical tutorial on how to create custom MaxMind database
+  (MMDB) files using the Go programming language."
+headerImage: /images/2015/09/building-your-own-mmdb-database-for-fun-and-profit.webp
 date: "2015-09-29"
 lastmod: "2026-04-09"
 category:
@@ -49,7 +57,7 @@ You will need:
   [IP addresses](https://en.wikipedia.org/wiki/IP_address) and
   [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)
 
-## Getting Started
+## Getting started
 
 In our example, we want to create an access list of some IP addresses to allow
 them access to a VPN or a hosted application. For each IP address or IP range,
@@ -151,7 +159,7 @@ func main() {
 }
 ```
 
-## The Code in Review
+## The Code in review
 
 ### Step 1
 
@@ -212,7 +220,7 @@ fh, err := os.Create("users.mmdb")
 _, err = writer.WriteTo(fh)
 ```
 
-## Let's Do This
+## Let's do this
 
 First, initialize a Go module and then run the script:
 
@@ -226,7 +234,7 @@ users.mmdb has now been created
 You should also see the `users.mmdb` file in the folder from which you ran the
 script.
 
-## Reading the File
+## Reading the file
 
 Now we have our brand new MMDB file. Let's read the information we stored in it.
 Save this as `main.go` (replacing the previous one) and run `go mod tidy` to
@@ -286,7 +294,7 @@ func main() {
 }
 ```
 
-## Reading the File: Review
+## Reading the file: Review
 
 <!--lint disable no-duplicate-headings -->
 
@@ -359,7 +367,7 @@ type UserRecord struct {
 }
 ```
 
-## Running the Script
+## Running the script
 
 Now let's run the script and perform a lookup on Jane's IP address:
 
@@ -412,7 +420,7 @@ We gave Klaus an IP range of `6.248.221.67/28`, which translates to
 `6.248.221.64 to 6.248.221.79`. You can see that when we get to `6.248.221.80`
 there is no record at this address.
 
-## Iterating Over the Search Tree
+## Iterating over the search tree
 
 It takes time to look up every address individually. Is there a way to speed
 things up? As it happens, there is.
@@ -500,7 +508,7 @@ The output shows each network and its associated record. Note that even though
 we specified Klaus's range as `6.248.221.67/28`, the writer correctly stored it
 as `6.248.221.64/28`, the canonical form of the network.
 
-## The Mashup
+## The mashup
 
 To extend our example, let's take the data from an existing GeoIP database and
 combine it with our custom employee data. We'll start with the GeoLite City
@@ -674,7 +682,7 @@ For a more detailed walkthrough of this pattern, see our article on [enriching
 MMDB files with your own data using
 Go]({{< relref "2020/09/enriching-mmdb-files-with-your-own-data-using-go.md" >}}).
 
-## Deploying Our Application
+## Deploying our application
 
 Now we're at the point where we can make use of our database. With just a few
 lines of code you can now use your MMDB file to assist in the authorization of
@@ -749,9 +757,9 @@ Here's a quick summary of what's going on:
   GeoLite data to customize the user's experience. Keep in mind that this field
   comes from the GeoLite database and may not be available for all IP addresses.
 
-## Pro Tips
+## Pro tips
 
-### Merge Strategies
+### Merge strategies
 
 The `mmdbwriter` module provides several
 [inserter functions](https://pkg.go.dev/github.com/maxmind/mmdbwriter/inserter)
@@ -767,12 +775,12 @@ record:
 Choose the strategy that fits your use case. For enriching existing databases,
 `TopLevelMergeWith` is usually what you want.
 
-### Thread Safety
+### Thread safety
 
 The `Insert` and `InsertFunc` methods are not safe for concurrent use. Perform
 all insertions from a single goroutine before calling `WriteTo`.
 
-## Taking This Further
+## Taking this further
 
 Today we've shown how you can create your own MMDB database and enrich it with
 data from a GeoLite database. We've only included a few data points, but MaxMind
