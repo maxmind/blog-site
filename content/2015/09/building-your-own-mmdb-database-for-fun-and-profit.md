@@ -1,5 +1,5 @@
 ---
-title: "How to build MMDB database using Golang"
+title: "How to build MMDB databases using Golang"
 heading: "Building your own MMDB database for fun and profit"
 description:
   "This technical tutorial includes code samples to show you how you can build
