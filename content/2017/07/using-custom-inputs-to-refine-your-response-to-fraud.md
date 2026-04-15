@@ -10,7 +10,7 @@ summary:
   scoring accuracy and fraud detection when used together with minFraud custom
   rules."
 date: "2017-07-13"
-lastmod: "2026-04-15"
+lastmod: "2026-04-16"
 headerImage: "/images/2017/07/using-custom-inputs-to-refine-your-response-to-fraud.webp"
 category:
   - "Fraud and risk"
@@ -97,7 +97,7 @@ By creating a custom input “loyalty store price” using the `number` data typ
 you can create a custom rule to manually review a purchase if the purchase price
 of the gift card in your loyalty store is greater than the loyalty program’s
 maximum discounted price. Your custom rule would look like this:
-`If price (input) < loyalty store price (custom input), THEN manual review`. By
+`If price (input) > loyalty store price (custom input), THEN manual review`. By
 creating this custom rule, your fraud analyst can take a better look at the
 transaction, reviewing it with additional intelligence returned by the minFraud
 network, to determine if the customer is actually a scammer.
@@ -105,7 +105,7 @@ network, to determine if the customer is actually a scammer.
 You can also create a custom rule to help reduce your manual review efforts by
 automatically resolving known high-risk transactions. Borrowing from the loyalty
 program example above, your custom rule would be:
-`If price (input) < loyalty store price (custom input) AND riskScore > 20, THEN reject`.
+`If price (input) > loyalty store price (custom input) AND riskScore > 20, THEN reject`.
 
 This is, of course, just one example of how you can use custom inputs. You can
 also leverage your own blocklists by creating custom inputs of greylisted,
