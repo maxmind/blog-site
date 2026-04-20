@@ -10,7 +10,7 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
     "baseline-browser-mapping": "^2.10.18",
-    "cspell": "^9.7.0",
+    "cspell": "^10.0.0",
     "eslint": "^10.2.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
