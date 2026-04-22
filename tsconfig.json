@@ -6,7 +6,8 @@
     "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2019"
+    "target": "ES2023",
+    "types": ["node"]
   },
   "exclude": [
     "node_modules",
