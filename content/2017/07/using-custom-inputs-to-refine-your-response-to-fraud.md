@@ -10,7 +10,7 @@ summary:
   scoring accuracy and fraud detection when used together with minFraud custom
   rules."
 date: "2017-07-13"
-lastmod: "2026-04-16"
+lastmod: "2026-04-22"
 headerImage: "/images/2017/07/using-custom-inputs-to-refine-your-response-to-fraud.webp"
 category:
   - "Fraud and risk"
