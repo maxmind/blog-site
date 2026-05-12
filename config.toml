@@ -32,7 +32,7 @@ titleCaseStyle = 'none'
     lineNos = false
     noClasses = true
     noHl = false
-    style = 'monokai'
+    style = 'doom-one2'
     tabWidth = 4
 
 [related]
