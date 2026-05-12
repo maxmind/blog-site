@@ -29,13 +29,10 @@ titleCaseStyle = 'none'
     codeFences = true
     guessSyntax = false
     hl_Lines = ''
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = false
+    lineNos = false
     noClasses = true
     noHl = false
-    style = 'monokai'
+    style = 'doom-one2'
     tabWidth = 4
 
 [related]

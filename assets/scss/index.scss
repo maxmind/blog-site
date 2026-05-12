@@ -23,7 +23,7 @@
 
 :root {
   --mm-color-background: #fff;
-  --mm-color-background-code: #274958;
+  --mm-color-background-code: #000;
   --mm-color-sidebar: #f5f6f7;
   --mm-color-border: #ddd;
   --mm-color-dark-blue: #130832;
@@ -34,7 +34,7 @@
   --mm-color-link: #007db8;
   --mm-border-radius: 6px;
   --mm-font-stack-default: 'Montserrat', sans-serif;
-  --mm-font-stack-monospace: 'Source Code Pro', monospace;
+  --mm-font-stack-monospace: monospace;
   --mm-max-width: 1200px;
   --mm-spacing: 40px;
   --page-header-height: 78px;
