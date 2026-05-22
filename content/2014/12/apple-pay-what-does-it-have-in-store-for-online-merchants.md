@@ -50,7 +50,7 @@ and provides a new opportunity for widespread use. But considering the amount of
 consumer data and financial information involved, consumers and merchants alike
 are sure to closely monitor what E-commerce fraud detection looks like as new
 payment options
-[spread online within Apple apps](https://www.toledoblade.com/Retail/2014/10/25/Apple-Pay-shows-flaws-in-real-world-but-shines-online.html).
+[spread online within Apple apps](https://web.archive.org/web/20141229160024/http://www.toledoblade.com/Retail/2014/10/25/Apple-Pay-shows-flaws-in-real-world-but-shines-online.html).
 
 [NFC payment systems](https://www.cnet.com/tech/mobile/how-nfc-works-and-mobile-payments/)
 are incorporating unique digital signatures and Apple Pay is
