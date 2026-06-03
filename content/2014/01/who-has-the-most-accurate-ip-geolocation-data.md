@@ -1,5 +1,8 @@
 ---
-title: "Who Has the Most Accurate IP Geolocation Data?"
+title: "Who has the most accurate IP geolocation data?"
+summary:
+  "Explore the factors that determine IP geolocation accuracy and learn why
+  MaxMind is a leader in data quality."
 date: "2014-01-31"
 category:
   - "IP intelligence"
@@ -49,12 +52,3 @@ geolocating 70% of addresses within 10km of the ground truth.
 While MaxMind is proud of this performance, the study is several years old now.
 The good news is that we’re always making improvements to our geolocation
 algorithms, and we have increased our postal code coverage and accuracy.
-
-## How to Access MaxMind’s Most Accurate IP Geolocation Data
-
-Check out our most accurate IP geolocation data in the
-[GeoIP Web Services](https://www.maxmind.com/en/geoip-api-web-services). The
-GeoIP web services contain our most accurate data, geolocating 7% more IPs to
-postal codes and 3% more IPs to cities in the United States than the GeoIP
-databases. In addition, both the City Plus and Insights services identify the
-organization associated with a business IP address in 10% more instances.
