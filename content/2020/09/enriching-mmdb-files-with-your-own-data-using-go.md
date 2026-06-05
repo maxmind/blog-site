@@ -36,7 +36,7 @@ consult this example code showing
 
 ## Prerequisites
 
-- you must have [`git`](https://git-scm.com/downloads/) installed in order to
+- you must have [`git`](https://git-scm.com/install/) installed in order to
   clone the code and install the dependencies, and it must be in your `$PATH`
 - [Go 1.14](https://go.dev/dl/) or later must be installed, and `go` must be in
   your `$PATH`
