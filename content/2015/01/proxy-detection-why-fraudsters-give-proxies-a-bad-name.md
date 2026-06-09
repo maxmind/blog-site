@@ -25,7 +25,7 @@ But although there are legitimate uses of proxies, fraudsters find it useful to
 take advantage of one of its characteristics; accessing the Internet through a
 proxy makes it more difficult to locate a user by means of an IP address. This
 enables
-[some to use anonymizing proxies to access content from which they would otherwise be blocked](https://cyber.harvard.edu/publications/2010/Circumvention_Tool_Usage).
+[some to use anonymizing proxies to access content from which they would otherwise be blocked](https://web.archive.org/web/20260510101022/https://cyber.harvard.edu/publications/2010/Circumvention_Tool_Usage).
 Others use open proxies to hide their whereabouts and thereby circumvent fraud
 detection rules associated with location.
 
