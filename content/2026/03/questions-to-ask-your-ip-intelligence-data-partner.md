@@ -208,4 +208,4 @@ Type II Privacy report includes the controls tested around MaxMind's impact
 assessment processes. To request a copy of MaxMind's SOC reports, please submit
 a written request to [privacy@maxmind.com](mailto:privacy@maxmind.com). A copy
 of our SOC 3 Report can be
-[found here](https://www.maxmind.com/soc3-report.pdf).
+[found here](https://www.maxmind.com/soc3-report-2026.pdf).
