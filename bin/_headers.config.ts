@@ -27,6 +27,10 @@ const config: HeadersConfig = {
             // HubSpot API (conversations embed)
             'https://api.hubspot.com',
 
+            // HubSpot collected forms endpoint, submitted to client-side
+            // by the Zaraz HubSpot managed component
+            'https://forms.hubspot.com',
+
             // HubSpot analytics pixel, sent client-side by the Zaraz
             // HubSpot managed component
             'https://track.hubspot.com',
