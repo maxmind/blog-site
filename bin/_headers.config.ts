@@ -24,11 +24,12 @@ const config: HeadersConfig = {
 
             // https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot#content-security-policy
 
-            // HubSpot API
+            // HubSpot API (conversations embed)
             'https://api.hubspot.com',
 
-            // HubSpot static assets (conversations embed)
-            'https://forms.hsforms.com',
+            // HubSpot analytics pixel, sent client-side by the Zaraz
+            // HubSpot managed component
+            'https://track.hubspot.com',
 
             'https://*.googleapis.com',
 
@@ -90,20 +91,9 @@ const config: HeadersConfig = {
 
             // https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot#content-security-policy
 
-            // HubSpot tracking code
-            'https://js.hs-scripts.com',
-
-            // HubSpot Analytics
-            'https://js.hs-analytics.net',
-
-            // HubSpot cookie banner
-            'https://js.hs-banner.com',
-
-            // HubSpot Conversations and Chatflows
+            // HubSpot Conversations and Chatflows, injected by the Zaraz
+            // HubSpot managed component's chat action
             'https://js.usemessages.com',
-
-            // HubSpot forms
-            'https://js.hsforms.net',
 
             // MaxMind marketing site
             'https://www.maxmind.com',

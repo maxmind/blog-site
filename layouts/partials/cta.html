@@ -2,4 +2,36 @@
   <img class="cta-square__image" src="/images/notification_symbol.webp" alt="Notification symbol">
   <h3 class="cta-square__heading">Never miss out</h3>
   <p class="cta-square__description">Get notified whenever a new article is posted.</p>
+
+  <form id="blog-subscribe-form">
+    <div class="hs-form-field">
+      <label for="blog-subscribe-firstname">First name<span class="hs-form-required">*</span></label>
+      <div class="input">
+        <input
+          id="blog-subscribe-firstname"
+          class="hs-input"
+          name="firstname"
+          type="text"
+          autocomplete="given-name"
+          required
+        >
+      </div>
+    </div>
+    <div class="hs-form-field">
+      <label for="blog-subscribe-email">Business email<span class="hs-form-required">*</span></label>
+      <div class="input">
+        <input
+          id="blog-subscribe-email"
+          class="hs-input"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+      </div>
+    </div>
+    <div class="hs-submit">
+      <input type="submit" class="hs-button" value="Subscribe now">
+    </div>
+  </form>
 </div>
