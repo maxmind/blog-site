@@ -13,6 +13,7 @@ CCPA
 Centeno
 Chelluri
 Choropleth
+CGNAT
 CNET
 CPAN
 CPRA
@@ -40,8 +41,11 @@ ipauth
 isset
 Jenn
 Kars
+Kentik
 Kulp
+Krebson
 Latif
+Madory
 malvertising
 maxminddb
 mgmt
@@ -54,6 +58,7 @@ mmdbtype
 mmdbwriter
 Mowat
 myhost
+NANOG
 Narsimham
 Neirnyck
 netip
