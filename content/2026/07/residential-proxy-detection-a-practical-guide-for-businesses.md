@@ -53,13 +53,11 @@ directly from ISPs.
 
 [The Wall Street Journal reported a story](https://www.wsj.com/tech/kimwolf-hack-residential-proxy-networks-a712ab59)
 that’s all too familiar to those of us in the industry. A regular consumer buys
-a device, for example “video-streaming systems, phones, cameras and [...]digital
-picture frames” that come with malware pre-installed. Or they download an app to
-a smart device, not realizing it quietly turns their home network into a proxy
-service that gets used by countless others to bypass regulations, avoid content
-protections, or commit fraud.
-
-![how IPv4 space can enter residential proxy pools](/images/2026/07/how-ipv4-space-can-enter-residential-proxy-pools.webp)
+a device, for example “video-streaming systems, phones, cameras and [...]
+digital picture frames” that come with malware pre-installed. Or they download
+an app to a smart device, not realizing it quietly turns their home network into
+a proxy service that gets used by countless others to bypass regulations, avoid
+content protections, or commit fraud.
 
 Proxy providers have known for a long time that proxied residential IP addresses
 are harder to detect and often have a clean reputation. This makes them
@@ -70,8 +68,10 @@ addresses to avoid detection. When the North American Network Operators Group
 proxy providers buy IP addresses from war-torn, cash-strapped nations, then
 bring those IPs into US residential networks through “bring your own IP
 programs”. An IP with a clean history, one recently used to provide internet
-service to Ukrainian citizens, for example, can be leased or sold and brought
+service to Ukrainian citizens for example, can be leased or sold and brought
 into an American residential network where it looks completely legitimate.
+
+![how IPv4 space can enter residential proxy pools](/images/2026/07/how-ipv4-space-can-enter-residential-proxy-pools.webp)
 
 While residential proxy providers work hard to hide what they’re doing, security
 researchers and organizations committed to digital safety are working just as
@@ -81,7 +81,7 @@ that the FBI, acknowledging the assistance of industry partners Google, Lumen,
 Shadowserver, and others, took down infrastructure behind NetNut, a “sprawling
 residential proxy network” linked to the Israeli firm Alarum Technologies. This
 is a constant back-and-forth between proxy providers and the people that keep
-the internet safe and usable, with businesses caught in between.
+the internet safe and usable, with businesses caught in-between.
 
 ## Risk profile in MaxMind’s global fraud detection network
 
@@ -103,7 +103,7 @@ even then, overly aggressive blocking can incorrectly flag legitimate businesses
 that share network space with VPN providers. For residential proxies, this
 approach doesn’t work at all.
 
-Shared infrastructure makes VPN detection hard, but it makes residential proxy
+Shared infrastructure makes VPN detection hard---and it makes residential proxy
 detection even harder. Due to IPv4 depletion, network operators increasingly
 rely on shared infrastructure such as
 [Carrier-Grade NAT (CGNAT)](https://en.wikipedia.org/wiki/Carrier-grade_NAT) to
@@ -120,7 +120,7 @@ of legitimate user activity.
 
 MaxMind’s residential proxy and VPN probing gives businesses industry-leading
 coverage for critical use cases where downloadable databases are essential. But
-the data alone is not enough, the application of that data is what matters.
+the data alone is not enough; the application of that data is what matters.
 
 Instead of a binary "block or allow" decision, businesses can use confidence
 scores to protect against fraud while maintaining a seamless experience for
