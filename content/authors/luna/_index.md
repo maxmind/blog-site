@@ -4,8 +4,8 @@ linkedin: "https://www.linkedin.com/in/christophermluna"
 image: "images/authors/luna.webp"
 ---
 
-Luna is the Senior Product Manager taking MaxMind's GeoIP product line to new
-and exciting places. They helped to develop GeoIP Exchange, a free platform
-between network operators and MaxMind to ensure closer collaboration and the
-most accurate geolocation of partner networks. Before MaxMind, they co-founded
-an experimental private high school in Durham.
+Luna is the Senior Product Manager taking MaxMind’s GeoIP product line to new
+and exciting places. They helped to create MaxMind's flagship proxy detection
+suite and GeoIP Exchange, a platform to foster collaboration with network
+operators. They have spoken at the Internet Architecture Board and the North
+American Network Operators Group on IP geolocation.
