@@ -11,8 +11,6 @@ on:
 
 jobs:
   code-formatting:
-    env:
-      BASE_REF: ${{ github.base_ref }}
     runs-on: ubuntu-latest
     name: Code Formatting
     steps:
@@ -28,20 +26,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Fetch base ref
-        if: ${{ github.event.pull_request }}
-        run: git fetch origin "${BASE_REF}"
-
-      - name: Select files
-        id: select-files
-        run: |
-          if [[ -n "${{ github.event.pull_request.number }}" ]]; then
-            echo "precious-args=--git-diff-from origin/${BASE_REF}" >> "$GITHUB_OUTPUT"
-          else
-            echo 'precious-args=--all' >> "$GITHUB_OUTPUT"
-          fi
-
+      # Always lint the whole repo, on both PRs and pushes to main. Linting
+      # only the files changed in a PR would miss reformats caused by the PR
+      # itself -- e.g. a dependency bump that changes a formatter's version can
+      # reformat files outside the diff, which would then slip past PR CI and
+      # only break on push to main. The repo is small, so linting everything is
+      # cheap.
       - name: Lint files
-        run: precious lint ${PRECIOUS_ARGS}
-        env:
-          PRECIOUS_ARGS: ${{ steps.select-files.outputs.precious-args }}
+        run: precious lint --all
