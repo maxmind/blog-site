@@ -47,6 +47,7 @@ exclude = [
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#DATA-TYPES',
     'https://metacpan\.org/pod/MaxMind::DB::Writer::Tree#Insert-Order-Merging-and-Overwriting',
     '^https://s1\.goeshow\.com',                          # Site refuses connections
+    '^https://www\.wsj\.com/',                            # Blocks bots with 401
 ]
 
 # Exclude file paths from getting checked (treated as regular expressions)
