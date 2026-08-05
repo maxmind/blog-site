@@ -3,8 +3,7 @@ type = "both"
 cmd = [
   "pnpm",
   "exec",
-  "prettier",
-  "--write"
+  "prettier"
 ]
 invoke = "once"
 lint-flags = ["--check"]
@@ -18,8 +17,7 @@ type = "both"
 cmd = [
   "pnpm",
   "exec",
-  "prettier",
-  "--write"
+  "prettier"
 ]
 invoke = "once"
 lint-flags = ["--check"]
