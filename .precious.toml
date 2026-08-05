@@ -6,6 +6,7 @@ cmd = [
   "prettier",
   "--write"
 ]
+invoke = "once"
 lint-flags = ["--check"]
 tidy-flags = ["--write"]
 path-args = "absolute-file"
@@ -20,6 +21,7 @@ cmd = [
   "prettier",
   "--write"
 ]
+invoke = "once"
 lint-flags = ["--check"]
 tidy-flags = ["--write"]
 path-args = "absolute-file"
@@ -34,9 +36,12 @@ cmd = [
   "eslint",
   "."
 ]
+invoke = "once"
 lint-flags = []
 tidy-flags = ["--fix"]
-path-args = "absolute-file"
+# The command already targets the whole project with `.`, so it needs no
+# path args.
+path-args = "none"
 include = ["assets/js/**"]
 ok-exit-codes = 0
 
@@ -61,6 +66,7 @@ cmd = [
   "exec",
   "stylelint"
 ]
+invoke = "once"
 lint-flags = []
 tidy-flags = ["--fix"]
 path-args = "absolute-file"
@@ -75,6 +81,9 @@ cmd = [
   "run",
   "lint:cspell",
 ]
+invoke = "once"
+# The lint:cspell script supplies its own glob, so it needs no path args.
+path-args = "none"
 ok-exit-codes = 0
 
 [commands.check-internal-links]
@@ -84,6 +93,7 @@ cmd = [
   "run",
   "lint:internal-links"
 ]
+invoke = "once"
 path-args = "absolute-file"
 include = ["content/**/*.md", "layouts/**/*.html"]
 ok-exit-codes = 0
