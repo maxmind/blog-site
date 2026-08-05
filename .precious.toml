@@ -37,10 +37,13 @@ cmd = [
   "."
 ]
 invoke = "once"
-lint-flags = []
+lint-flags = ["--max-warnings=0"]
 tidy-flags = ["--fix"]
-# The command already targets the whole project with `.`, so it needs no
-# path args.
+# The command already targets the whole project with `.`, so path args would
+# only make it relint named files. Keep it that way now that warnings are
+# fatal: ESLint reports an explicitly-named file that it is configured to
+# ignore as a warning, so passing paths would fail on anything added to
+# eslint.config.mjs's ignore list.
 path-args = "none"
 include = ["assets/js/**"]
 ok-exit-codes = 0
