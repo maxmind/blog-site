@@ -3,9 +3,9 @@ type = "both"
 cmd = [
   "pnpm",
   "exec",
-  "prettier",
-  "--write"
+  "prettier"
 ]
+invoke = "once"
 lint-flags = ["--check"]
 tidy-flags = ["--write"]
 path-args = "absolute-file"
@@ -17,9 +17,9 @@ type = "both"
 cmd = [
   "pnpm",
   "exec",
-  "prettier",
-  "--write"
+  "prettier"
 ]
+invoke = "once"
 lint-flags = ["--check"]
 tidy-flags = ["--write"]
 path-args = "absolute-file"
@@ -34,9 +34,15 @@ cmd = [
   "eslint",
   "."
 ]
-lint-flags = []
+invoke = "once"
+lint-flags = ["--max-warnings=0"]
 tidy-flags = ["--fix"]
-path-args = "absolute-file"
+# The command already targets the whole project with `.`, so path args would
+# only make it relint named files. Keep it that way now that warnings are
+# fatal: ESLint reports an explicitly-named file that it is configured to
+# ignore as a warning, so passing paths would fail on anything added to
+# eslint.config.mjs's ignore list.
+path-args = "none"
 include = ["assets/js/**"]
 ok-exit-codes = 0
 
@@ -61,6 +67,7 @@ cmd = [
   "exec",
   "stylelint"
 ]
+invoke = "once"
 lint-flags = []
 tidy-flags = ["--fix"]
 path-args = "absolute-file"
@@ -75,6 +82,9 @@ cmd = [
   "run",
   "lint:cspell",
 ]
+invoke = "once"
+# The lint:cspell script supplies its own glob, so it needs no path args.
+path-args = "none"
 ok-exit-codes = 0
 
 [commands.check-internal-links]
@@ -84,6 +94,7 @@ cmd = [
   "run",
   "lint:internal-links"
 ]
+invoke = "once"
 path-args = "absolute-file"
 include = ["content/**/*.md", "layouts/**/*.html"]
 ok-exit-codes = 0
