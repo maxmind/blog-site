@@ -125,33 +125,17 @@ const config: HeadersConfig = {
             'https://www.gstatic.com',
           ],
         },
-        'Feature-Policy': [
-          "accelerometer 'none'",
-          "autoplay 'none'",
-          "camera 'none'",
-          "encrypted-media 'none'",
-          "fullscreen 'none'",
-          "geolocation 'none'",
-          "gyroscope 'none'",
-          "magnetometer 'none'",
-          "microphone 'none'",
-          "midi 'none'",
-          "payment 'none'",
-          "picture-in-picture 'none'",
-          "usb 'none'",
-          "sync-xhr 'none'",
-        ],
+        // While many of these features do not seem to have any security
+        // implication, deny them out of an abundance of caution to limit what
+        // injected or embedded content can reach. See
+        // https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+        // for the features that exist.
         'Permissions-Policy': [
           'accelerometer=()',
-          'ambient-light-sensor=()',
           'autoplay=()',
-          'battery=()',
           'camera=()',
           'display-capture=()',
-          'document-domain=()',
           'encrypted-media=()',
-          'execution-while-not-rendered=()',
-          'execution-while-out-of-viewport=()',
           'fullscreen=()',
           'gamepad=()',
           'geolocation=()',
@@ -166,7 +150,7 @@ const config: HeadersConfig = {
           'publickey-credentials-get=()',
           'screen-wake-lock=()',
           'serial=()',
-          'speaker-selection=()',
+          'sync-xhr=()',
           'usb=()',
           'web-share=()',
           'xr-spatial-tracking=()',
@@ -184,10 +168,6 @@ const config: HeadersConfig = {
         ],
         'X-Frame-Options': [
           'DENY',
-        ],
-        'X-XSS-Protection': [
-          '1',
-          'mode=block',
         ],
       },
     },
