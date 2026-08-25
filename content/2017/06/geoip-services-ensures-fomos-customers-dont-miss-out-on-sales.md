@@ -42,7 +42,7 @@ uses GeoIP web services to determine the geographic location of website users.
 The intent is to localize user interactions and transactional behaviors such as
 purchases, sign-ups and comments. That intelligence is displayed in real-time
 notifications that appear on websites (click
-[here](https://fomo.com/product-tour) to see Fomo in action). It’s the online
+[here](https://usefomo.com/product-tour) to see Fomo in action). It’s the online
 equivalent of a busy restaurant, showing prospective customers social proof that
 other people also visit and interact with a website.
 
