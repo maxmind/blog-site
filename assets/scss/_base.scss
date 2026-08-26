@@ -68,8 +68,16 @@ p {
   line-height: 26px;
   margin: 0 0 calc(var(--mm-spacing) / 2);
 
+  figcaption & {
+    font-size: 13px;
+  }
+
   @include variables.breakpoint('sm') {
     font-size: 17px;
+
+    figcaption & {
+      font-size: 15px;
+    }
   }
 }
 

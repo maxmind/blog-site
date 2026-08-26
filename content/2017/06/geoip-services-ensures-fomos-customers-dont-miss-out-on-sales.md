@@ -14,11 +14,12 @@ authors:
 
 Every year, more than a billion
 [consumers](https://www.digitalcommerce360.com/2015/03/31/number-global-online-shoppers-will-grow-50-2018/)
-shop on e-commerce websites. And in 2016, a new startup called Fomo set out to
-help merchants reach that audience. To do that, Fomo first needed to find a
-service partner with expertise in geolocation. They chose MaxMind. “We’re a
-relatively new company, but our growth has been phenomenal since we added
-MaxMind's GeoIP web services," said Fomo's co-founder Ryan Kulp.
+shop on e-commerce websites. And in 2016, a new startup called
+[Fomo](https://usefomo.com/) set out to help merchants reach that audience. To
+do that, Fomo first needed to find a service partner with expertise in
+geolocation. They chose MaxMind. “We’re a relatively new company, but our growth
+has been phenomenal since we added MaxMind's GeoIP web services," said Fomo's
+co-founder Ryan Kulp.
 
 Within five months of using
 [GeoIP web services (Country and City Plus)](https://www.maxmind.com/en/geoip-api-web-services),
