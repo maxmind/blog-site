@@ -39,9 +39,11 @@ traced to residential proxies. Put on the scale of all chargeback-reported
 transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
-<figure>
-  <figcaption>Residential proxies found by active probing account for about 32% of chargebacks against 16% of ordinary transactions, and most of that volume sits in the low-confidence band.</figcaption>
-</figure>
+![residential proxies vs ordinary transactions](/images/2026/08/chargebacks-vs-ordinary-transactions.webp)
+
+_Residential proxies found by active probing account for about 32% of
+chargebacks against 16% of ordinary transactions, and most of that volume sits
+in the low-confidence band._
 
 What this means is that the method that looks most like legitimate traffic, and
 also defeats geographic checks and static IP lists at the same time, accounts
@@ -103,12 +105,9 @@ average.
 
 ![residential proxy signals](/images/2026/08/res-proxy-signals.webp)
 
-_Share of chargeback-reported transactions carrying each of our two residential
-proxy signals. Active probing identifies individual residential IPs operating as
-proxies. The inference-based signal identifies residential ranges routed through
-Bring Your Own IP programs, applied at the ASN level. Probing covers far more
-volume, though transactions associated with the inference-based signal flags are
-about three and a half times more likely to be charged back than average._
+_Probing covers far more volume, though transactions associated with the
+inference-based signal flags are about three and a half times more likely to be
+charged back than average."_
 
 ## What we did about it
 
