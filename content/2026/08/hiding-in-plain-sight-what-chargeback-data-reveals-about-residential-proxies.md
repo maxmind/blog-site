@@ -39,7 +39,7 @@ traced to residential proxies. Put on the scale of all chargeback-reported
 transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
-![Residential proxies vs ordinary transactions](/images/2026/08/chargebacks-vs-ordinary-transactions.webp)
+![residential proxies versus ordinary transactions](/images/2026/08/chargebacks-vs-ordinary-transactions.webp)
 
 _Each transaction is counted once, in its most specific matching category. The
 upper bar in each pair is the share of fraud-coded chargeback-reported
@@ -106,7 +106,7 @@ though the inference-based signal is still worth acting on as the transactions
 it flags are about three and a half times more likely to be charged back than
 average.
 
-![Residential proxy signals](/images/2026/08/res-proxy-signals.webp)
+![residential proxy signals](/images/2026/08/res-proxy-signals.webp)
 
 _Share of chargeback-reported transactions carrying each of our two residential
 proxy signals. Active probing identifies individual residential IPs operating as
