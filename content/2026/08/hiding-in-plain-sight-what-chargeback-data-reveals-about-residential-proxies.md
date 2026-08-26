@@ -107,7 +107,7 @@ average.
 
 _Probing covers far more volume, though transactions associated with the
 inference-based signal flags are about three and a half times more likely to be
-charged back than average."_
+charged back than average._
 
 ## What we did about it
 
