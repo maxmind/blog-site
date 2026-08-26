@@ -1,7 +1,7 @@
 ---
-title:
+title: "What MaxMind chargeback data shows about residential proxies"
+heading:
   "Hiding in plain sight: what chargeback data reveals about residential proxies"
-heading: "What MaxMind chargeback data shows about residential proxies"
 description:
   "Read our expert analysis of residential proxies and other anonymized fraud
   methods + learn how to effectively detect fraudulent traffic with confidence
@@ -39,14 +39,9 @@ traced to residential proxies. Put on the scale of all chargeback-reported
 transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
-![residential proxies versus ordinary transactions](/images/2026/08/chargebacks-vs-ordinary-transactions.webp)
-
-_Each transaction is counted once, in its most specific matching category. The
-upper bar in each pair is the share of fraud-coded chargeback-reported
-transactions, the lower is the share of a random sample of ordinary
-transactions. Residential proxies found by active probing account for about 32%
-of chargebacks against 16% of ordinary transactions, and most of that volume
-sits in the low-confidence band._
+<figure>
+  <figcaption>Residential proxies found by active probing account for about 32% of chargebacks against 16% of ordinary transactions, and most of that volume sits in the low-confidence band.</figcaption>
+</figure>
 
 What this means is that the method that looks most like legitimate traffic, and
 also defeats geographic checks and static IP lists at the same time, accounts
