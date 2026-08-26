@@ -39,12 +39,8 @@ traced to residential proxies. Put on the scale of all chargeback-reported
 transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
-![residential proxies vs ordinary transactions](/images/2026/08/chargebacks-vs-ordinary-transactions.webp)
-
-_Each transaction is counted once, in its most specific matching category. The
-upper bar in each pair is the share of fraud-coded chargeback-reported
-transactions, the lower is the share of a random sample of ordinary
-transactions._
+{{< figure src="/images/2026/08/chargebacks-vs-ordinary-transactions.webp" alt="residential proxies vs ordinary transactions"
+  caption="Each transaction is counted once, in its most specific matching category. The upper bar in each pair is the share of fraud-coded chargeback-reported transactions, the lower is the share of a random sample of ordinary transactions." >}}
 
 What this means is that the method that looks most like legitimate traffic, and
 also defeats geographic checks and static IP lists at the same time, accounts
@@ -104,12 +100,8 @@ though the inference-based signal is still worth acting on as the transactions
 it flags are about three and a half times more likely to be charged back than
 average.
 
-![residential proxy signals](/images/2026/08/res-proxy-signals.webp)
-
-_Share of chargeback-reported transactions carrying each of our two residential
-proxy signals. Active probing identifies individual residential IPs operating as
-proxies. The inference-based signal identifies residential ranges routed through
-Bring Your Own IP programs, applied at the ASN level._
+{{< figure src="/images/2026/08/res-proxy-signals.webp" alt="residential proxy signals"
+  caption="Share of chargeback-reported transactions carrying each of our two residential proxy signals. Active probing identifies individual residential IPs operating as proxies. The inference-based signal identifies residential ranges routed through Bring Your Own IP programs, applied at the ASN level." >}}
 
 ## What we did about it
 
