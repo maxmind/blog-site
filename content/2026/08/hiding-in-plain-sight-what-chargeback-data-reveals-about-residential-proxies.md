@@ -13,10 +13,10 @@ summary:
 date: "2026-08-26"
 headerImage: "/images/2026/08/residential-proxies-chargebacks.webp"
 category:
-  - "Anonymizer and proxy detection"
+  - "Fraud and risk"
 tag:
-  - "Data privacy"
-  - "Types of proxy"
+  - "Risk scoring"
+  - "Risk data"
   - "Residential proxy"
 authors:
   - "Miguel Atienza"
