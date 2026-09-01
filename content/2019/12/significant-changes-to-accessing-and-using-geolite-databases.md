@@ -54,7 +54,7 @@ countless users across the internet.
 
 Starting **December 30, 2019,** we will be requiring users of our GeoLite
 databases **to
-[register for a MaxMind account](https://www.maxmind.com/en/geolite2/signup) and
+[register for a MaxMind account](https://www.maxmind.com/en/create-account) and
 obtain a license key in order to download GeoLite databases**. We will continue
 to offer the GeoLite databases without charge, and with the ability to
 redistribute with proper attribution and in compliance with privacy regulations.
@@ -80,7 +80,7 @@ mechanism.
 
 <!--lint disable ordered-list-marker-value-->
 
-1. [Sign up for a MaxMind account](https://www.maxmind.com/en/geolite2/signup)
+1. [Sign up for a MaxMind account](https://www.maxmind.com/en/create-account)
    (no purchase required)
 1. Set your password and create a
    [license key](https://www.maxmind.com/en/accounts/current/license-key)
@@ -97,4 +97,4 @@ URL.
 To continue using GeoLite databases:
 
 1. Review our new [GeoLite EULA](https://www.maxmind.com/en/geolite/eula).
-1. Sign up for a [MaxMind account](https://www.maxmind.com/en/geolite2/signup).
+1. Sign up for a [MaxMind account](https://www.maxmind.com/en/create-account).

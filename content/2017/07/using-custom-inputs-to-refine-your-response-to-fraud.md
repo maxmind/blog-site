@@ -127,5 +127,5 @@ on the MaxMind Knowledge Base.
 
 If you’re not already using minFraud as part of your fraud detection strategy,
 learn more or
-[try minFraud for free](https://www.maxmind.com/en/request-service-trial?utm_source=blog&utm_medium=article&utm_campaign=update)
+[try minFraud for free](https://www.maxmind.com/en/create-account?utm_source=blog&utm_medium=article&utm_campaign=update)
 on the MaxMind website.
