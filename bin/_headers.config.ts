@@ -130,6 +130,23 @@ const config: HeadersConfig = {
         // injected or embedded content can reach. See
         // https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
         // for the features that exist.
+        //
+        // Nothing is allowed for our own origin. None of our code calls
+        // the APIs these features gate, so every entry below is a flat
+        // deny.
+        //
+        // Absent from the list, so not denied:
+        //   - attribution-reporting: Google Ads conversion measurement uses
+        //     it, and we are the advertiser. The publisher-side features of
+        //     the same family cost us nothing, which is why browsing-topics is
+        //     denied below.
+        //   - join-ad-interest-group, run-ad-auction: publisher-side too, so
+        //     denying them would also be free, but Chromium is removing the
+        //     names.
+        //
+        // shared-storage, shared-storage-select-url and private-aggregation
+        // are publisher-side and might be safe to deny. The ads and analytics
+        // tags come from Google Tag Manager, so what they use is a black box.
         'Permissions-Policy': [
           'accelerometer=()',
           'aria-notify=()',
@@ -177,7 +194,6 @@ const config: HeadersConfig = {
           'identity-credentials-get=()',
           'idle-detection=()',
           'interest-cohort=()',
-          'join-ad-interest-group=()',
           'keyboard-map=()',
           'language-detector=()',
           'language-model=()',
@@ -196,7 +212,6 @@ const config: HeadersConfig = {
           'private-state-token-redemption=()',
           'publickey-credentials-create=()',
           'publickey-credentials-get=()',
-          'run-ad-auction=()',
           'screen-wake-lock=()',
           'serial=()',
           'summarizer=()',
