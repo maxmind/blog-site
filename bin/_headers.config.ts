@@ -125,50 +125,102 @@ const config: HeadersConfig = {
             'https://www.gstatic.com',
           ],
         },
-        'Feature-Policy': [
-          "accelerometer 'none'",
-          "autoplay 'none'",
-          "camera 'none'",
-          "encrypted-media 'none'",
-          "fullscreen 'none'",
-          "geolocation 'none'",
-          "gyroscope 'none'",
-          "magnetometer 'none'",
-          "microphone 'none'",
-          "midi 'none'",
-          "payment 'none'",
-          "picture-in-picture 'none'",
-          "usb 'none'",
-          "sync-xhr 'none'",
-        ],
+        // While many of these features do not seem to have any security
+        // implication, deny them out of an abundance of caution to limit what
+        // injected or embedded content can reach. See
+        // https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+        // for the features that exist.
+        //
+        // Nothing is allowed for our own origin. None of our code calls
+        // the APIs these features gate, so every entry below is a flat
+        // deny.
+        //
+        // Absent from the list, so not denied:
+        //   - attribution-reporting: Google Ads conversion measurement uses
+        //     it, and we are the advertiser. The publisher-side features of
+        //     the same family cost us nothing, which is why browsing-topics is
+        //     denied below.
+        //   - join-ad-interest-group, run-ad-auction: publisher-side too, so
+        //     denying them would also be free, but Chromium is removing the
+        //     names.
+        //
+        // shared-storage, shared-storage-select-url and private-aggregation
+        // are publisher-side and might be safe to deny. The ads and analytics
+        // tags come from Google Tag Manager, so what they use is a black box.
         'Permissions-Policy': [
           'accelerometer=()',
-          'ambient-light-sensor=()',
+          'aria-notify=()',
           'autoplay=()',
-          'battery=()',
+          'bluetooth=()',
+          'browsing-topics=()',
           'camera=()',
+          'captured-surface-control=()',
+          'ch-device-memory=()',
+          'ch-downlink=()',
+          'ch-dpr=()',
+          'ch-ect=()',
+          'ch-prefers-color-scheme=()',
+          'ch-prefers-reduced-motion=()',
+          'ch-prefers-reduced-transparency=()',
+          'ch-rtt=()',
+          'ch-save-data=()',
+          'ch-ua=()',
+          'ch-ua-arch=()',
+          'ch-ua-bitness=()',
+          'ch-ua-form-factors=()',
+          'ch-ua-full-version=()',
+          'ch-ua-full-version-list=()',
+          'ch-ua-high-entropy-values=()',
+          'ch-ua-mobile=()',
+          'ch-ua-model=()',
+          'ch-ua-platform=()',
+          'ch-ua-platform-version=()',
+          'ch-ua-wow64=()',
+          'ch-viewport-height=()',
+          'ch-viewport-width=()',
+          'ch-width=()',
+          'clipboard-read=()',
+          'clipboard-write=()',
+          'compute-pressure=()',
+          'cross-origin-isolated=()',
+          'digital-credentials-get=()',
           'display-capture=()',
-          'document-domain=()',
           'encrypted-media=()',
-          'execution-while-not-rendered=()',
-          'execution-while-out-of-viewport=()',
           'fullscreen=()',
           'gamepad=()',
           'geolocation=()',
           'gyroscope=()',
           'hid=()',
+          'identity-credentials-get=()',
           'idle-detection=()',
+          'interest-cohort=()',
+          'keyboard-map=()',
+          'language-detector=()',
+          'language-model=()',
+          'local-fonts=()',
+          'local-network=()',
+          'local-network-access=()',
+          'loopback-network=()',
           'magnetometer=()',
           'microphone=()',
           'midi=()',
+          'on-device-speech-recognition=()',
+          'otp-credentials=()',
           'payment=()',
           'picture-in-picture=()',
+          'private-state-token-issuance=()',
+          'private-state-token-redemption=()',
+          'publickey-credentials-create=()',
           'publickey-credentials-get=()',
           'screen-wake-lock=()',
           'serial=()',
-          'speaker-selection=()',
+          'summarizer=()',
+          'sync-xhr=()',
+          'translator=()',
+          'unload=()',
           'usb=()',
           'web-share=()',
+          'window-management=()',
           'xr-spatial-tracking=()',
         ],
         'Referrer-Policy': [
@@ -184,10 +236,6 @@ const config: HeadersConfig = {
         ],
         'X-Frame-Options': [
           'DENY',
-        ],
-        'X-XSS-Protection': [
-          '1',
-          'mode=block',
         ],
       },
     },
