@@ -79,7 +79,7 @@ becoming a
 In fact, China is considered to be both
 [one of the fastest growing e-commerce markets](https://paymentsindustryintelligence.com/fastest-growing-e-commerce-markets/)
 in the world and
-[one of the primary drivers of mobile wallet](https://nielseniq.com/global/en/insights/report/2018/nielsen-over-90-percent-chinese-tourists-would-use-mobile-payment-overseas-given-the-option/)
+[one of the primary drivers of mobile wallet](https://web.archive.org/web/20260306175822/https://nielseniq.com/global/en/insights/report/2018/nielsen-over-90-percent-chinese-tourists-would-use-mobile-payment-overseas-given-the-option/)
 usage. But Chinese consumers also suffer from
 [increased rates of mobile payments fraud](https://thepaypers.com/digital-identity-security-online-fraud/mobile-payment-fraud-on-the-rise-in-china-unionpay-survey-reveals/771616-26).
 
