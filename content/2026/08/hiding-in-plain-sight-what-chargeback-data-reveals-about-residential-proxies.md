@@ -23,6 +23,10 @@ authors:
 popular: true
 ---
 
+_You may also be interested in our companion article: [Residential proxy
+detection: A practical guide for
+businesses]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}})._
+
 We examined transactions that
 [minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 clients reported back to us as chargebacks, and analyzed what share of the
@@ -40,7 +44,7 @@ transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
 {{< figure src="/images/2026/08/chargebacks-vs-ordinary-transactions.webp" alt="residential proxies vs ordinary transactions"
-  caption="Each transaction is counted once, in its most specific matching category. The upper bar in each pair is the share of fraud-coded chargeback-reported transactions, the lower is the share of a random sample of ordinary transactions." >}}
+ caption="Each transaction is counted once, in its most specific matching category. The upper bar in each pair is the share of fraud-coded chargeback-reported transactions, the lower is the share of a random sample of ordinary transactions." >}}
 
 What this means is that the method that looks most like legitimate traffic, and
 also defeats geographic checks and static IP lists at the same time, accounts
@@ -101,7 +105,7 @@ it flags are about three and a half times more likely to be charged back than
 average.
 
 {{< figure src="/images/2026/08/res-proxy-signals.webp" alt="residential proxy signals"
-  caption="Share of chargeback-reported transactions carrying each of our two residential proxy signals. Active probing identifies individual residential IPs operating as proxies. The inference-based signal identifies residential ranges routed through Bring Your Own IP programs, applied at the ASN level." >}}
+ caption="Share of chargeback-reported transactions carrying each of our two residential proxy signals. Active probing identifies individual residential IPs operating as proxies. The inference-based signal identifies residential ranges routed through Bring Your Own IP programs, applied at the ASN level." >}}
 
 ## What we did about it
 
