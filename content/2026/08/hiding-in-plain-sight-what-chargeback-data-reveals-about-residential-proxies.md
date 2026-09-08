@@ -25,7 +25,7 @@ popular: true
 
 _You may also be interested in our companion article: [Residential proxy
 detection: A practical guide for
-businesses]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}})_
+businesses]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}})._
 
 We examined transactions that
 [minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
@@ -85,14 +85,9 @@ through millions of addresses, so an address rarely stays associated with abuse
 long enough for a list to be useful. By the time a list reaches you, a good
 portion of it is stale.
 
-Learn how to combat proxy-based threats that operate out of clean-looking
-residential networks, without disrupting legitimate user traffic, in our
-[related blog article on residential proxy
-detection]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}}).
-
-The complexity of residential proxies leaves direct observation as the practical
-option: probing address space to confirm that a proxy is actually running, and
-tracking how recently we saw it operating.
+That leaves direct observation as the practical option: probing address space to
+confirm that a proxy is actually running, and tracking how recently we saw it
+operating.
 
 There are two ways an IP picks up a residential proxy label in our data. Active
 probing identifies individual residential IPs operating as proxies right now or
