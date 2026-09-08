@@ -23,6 +23,9 @@ authors:
 popular: true
 ---
 
+_You may also be interested in our companion article:
+[Residential proxy detection: A practical guide for businesses](/residential-proxy-detection-a-practical-guide-for-businesses/)_
+
 We examined transactions that
 [minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 clients reported back to us as chargebacks, and analyzed what share of the
@@ -40,7 +43,7 @@ transactions, roughly one in three came from a residential proxy detected by
 active probing versus roughly one in six ordinary transactions.
 
 {{< figure src="/images/2026/08/chargebacks-vs-ordinary-transactions.webp" alt="residential proxies vs ordinary transactions"
-  caption="Each transaction is counted once, in its most specific matching category. The upper bar in each pair is the share of fraud-coded chargeback-reported transactions, the lower is the share of a random sample of ordinary transactions." >}}
+ caption="Each transaction is counted once, in its most specific matching category. The upper bar in each pair is the share of fraud-coded chargeback-reported transactions, the lower is the share of a random sample of ordinary transactions." >}}
 
 What this means is that the method that looks most like legitimate traffic, and
 also defeats geographic checks and static IP lists at the same time, accounts
@@ -81,9 +84,13 @@ through millions of addresses, so an address rarely stays associated with abuse
 long enough for a list to be useful. By the time a list reaches you, a good
 portion of it is stale.
 
-That leaves direct observation as the practical option: probing address space to
-confirm that a proxy is actually running, and tracking how recently we saw it
-operating.
+Learn how to combat proxy-based threats that operate out of clean-looking
+residential networks, without disrupting legitimate user traffic, in our
+[related blog article on residential proxy detection](/residential-proxy-detection-a-practical-guide-for-businesses/).
+
+The complexity of residential proxies leaves direct observation as the practical
+option: probing address space to confirm that a proxy is actually running, and
+tracking how recently we saw it operating.
 
 There are two ways an IP picks up a residential proxy label in our data. Active
 probing identifies individual residential IPs operating as proxies right now or
@@ -101,7 +108,7 @@ it flags are about three and a half times more likely to be charged back than
 average.
 
 {{< figure src="/images/2026/08/res-proxy-signals.webp" alt="residential proxy signals"
-  caption="Share of chargeback-reported transactions carrying each of our two residential proxy signals. Active probing identifies individual residential IPs operating as proxies. The inference-based signal identifies residential ranges routed through Bring Your Own IP programs, applied at the ASN level." >}}
+ caption="Share of chargeback-reported transactions carrying each of our two residential proxy signals. Active probing identifies individual residential IPs operating as proxies. The inference-based signal identifies residential ranges routed through Bring Your Own IP programs, applied at the ASN level." >}}
 
 ## What we did about it
 
