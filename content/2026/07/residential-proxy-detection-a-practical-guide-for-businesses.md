@@ -20,8 +20,9 @@ authors:
 popular: true
 ---
 
-_You may also be interested in our companion article:
-[Hiding in plain sight: what chargeback data reveals about residential proxies](/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies/)_
+_You may also be interested in our companion article: [Hiding in plain sight:
+what chargeback data reveals about residential
+proxies]({{< relref "2026/08/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies.md" >}})_
 
 Interest in residential proxy detection has grown exponentially in the past
 year, with businesses paying more attention to proxy-based threats that operate
@@ -95,8 +96,8 @@ across
 [the minFraud network](https://support.maxmind.com/knowledge-base/articles/the-minfraud-network-maxmind),
 which powers our real-time fraud risk scoring. Unsurprisingly, residential
 proxies represent a significant proportion of problematic traffic, as we detail
-in a
-[related blog article](/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies/)
+in a [related blog
+article]({{< relref "2026/08/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies.md" >}})
 on what chargeback data reveals about the growing threat of residential proxy
 fraud.
 

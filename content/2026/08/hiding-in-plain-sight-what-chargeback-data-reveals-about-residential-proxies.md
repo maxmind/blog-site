@@ -23,8 +23,9 @@ authors:
 popular: true
 ---
 
-_You may also be interested in our companion article:
-[Residential proxy detection: A practical guide for businesses](/residential-proxy-detection-a-practical-guide-for-businesses/)_
+_You may also be interested in our companion article: [Residential proxy
+detection: A practical guide for
+businesses]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}})_
 
 We examined transactions that
 [minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
@@ -86,7 +87,8 @@ portion of it is stale.
 
 Learn how to combat proxy-based threats that operate out of clean-looking
 residential networks, without disrupting legitimate user traffic, in our
-[related blog article on residential proxy detection](/residential-proxy-detection-a-practical-guide-for-businesses/).
+[related blog article on residential proxy
+detection]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}}).
 
 The complexity of residential proxies leaves direct observation as the practical
 option: probing address space to confirm that a proxy is actually running, and
