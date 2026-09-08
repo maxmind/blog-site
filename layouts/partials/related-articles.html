@@ -4,7 +4,13 @@
   <ul class="related-articles__list">
     {{ range . }}
       <li class="related-articles__item">
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}">
+          {{ with .Params.Heading }}
+            {{ . }}
+          {{ else }}
+            {{ .LinkTitle }}
+          {{ end }}
+        </a>
       </li>
     {{ end }}
   </ul>
