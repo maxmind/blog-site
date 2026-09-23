@@ -10,7 +10,7 @@ summary:
   experience that includes support from our sales team and a 10% referral
   incentive."
 date: "2026-09-23"
-headerImage: /images/2026/03/questions-to-ask-your-ip-intelligence-data-partner.webp
+headerImage: /images/2026/09/announcing-the-new-maxmind-channel-partner-program.webp
 category:
   - "News"
 tag:
