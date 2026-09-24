@@ -65,7 +65,7 @@ opportunities directly through the portal. Once an opportunity is registered,
 our sales team takes over the heavy lifting to finalizing the deal while you
 stay updated on progress.
 
-### 3. Referral Incentives
+### 3. Referral incentives
 
 We believe in rewarding the value our partners bring which is why our program
 offers a 10% referral incentive for the accounts you onboard.
