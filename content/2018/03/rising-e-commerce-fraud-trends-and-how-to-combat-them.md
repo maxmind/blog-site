@@ -104,7 +104,7 @@ Insights, and minFraud Factors) includes, at minimum, an IP risk score and a
 proprietary riskScore to help fraud analysts make informed decisions. For more
 granular data, minFraud Insights and minFraud Factors provide a Confidence
 Score, phone checks, email checks, IP address checks,
-[anonymizer-type outputs](https://dev.maxmind.com/minfraud/release-notes/2025/),
+[anonymizer-type outputs](https://dev.maxmind.com/minfraud/release-notes/2025-11-19-new-anonymizer-data-added-to-web-services/),
 and
 [many other data points](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
 that support informed risk modeling applications.
