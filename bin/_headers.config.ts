@@ -113,6 +113,7 @@ const config: HeadersConfig = {
             'https://www.googleadservices.com',
             'https://www.google.com',
             'https://pagead2.googlesyndication.com',
+            'https://googleads.g.doubleclick.net',
 
             // Google Tag Manager
             'https://*.googletagmanager.com',
