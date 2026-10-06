@@ -63,13 +63,14 @@ proprietary signals about end-user location. GeoLite uses a lower volume of
 these, which makes each geolocation decision less accurate, and the effect grows
 as the location gets finer.
 
-**Why do we limit proprietary signals in GeoLite?**
-
-GeoLite is a free offering not meant to be as accurate as GeoIP for geolocation
-more fine-grained than country-level distinctions. MaxMind is the only industry
-leading geolocation provider that provides free access to an IP geolocation
-product that gives postal level granularity. It’s meant to help you develop and
-test use cases, and for IP geolocation decisions where accuracy isn’t critical.
+> **Why do we limit proprietary signals in GeoLite?**
+>
+> GeoLite is a free offering not meant to be as accurate as GeoIP for
+> geolocation more fine-grained than country-level distinctions. MaxMind is the
+> only industry leading geolocation provider that provides free access to an IP
+> geolocation product that gives postal level granularity. It’s meant to help
+> you develop and test use cases, and for IP geolocation decisions where
+> accuracy isn’t critical.
 
 ### Merged IP address ranges
 
@@ -79,34 +80,28 @@ Let’s look at a concrete example comparing GeoIP and GeoLite from
 September 2026. In this example, we’ll look at 2,048 IP addresses that are part
 of AT&T’s residential ISP services in the Los Angeles area.
 
-In GeoIP City, these IP addresses are broken down into pools of either 128 or
-256 IP addresses. These small IP address ranges are geolocated to 13 different
-cities/communities, from North Hollywood to San Bernardino. Some of these cities
-are 160 kilometers (or a 2 hour drive) away from one another.
+{{< figure src="/images/2026/10/geolite-vs-geoip-mapping-comparison.webp"
+alt="GeoLite vs GeoIP mapping" caption="In GeoIP City, these IP addresses are
+broken down into pools of either 128 or 256 IP addresses. These small IP address
+ranges are geolocated to 13 different cities/communities, from North Hollywood
+to San Bernardino. Some of these cities are 160 kilometers (or a 2 hour drive)
+away from one another.
 
 In GeoLite City, all 2,048 IP addresses are located to Los Angeles, the nearest
-major metropolitan area.
-
-### GeoIP
-
-![In GeoIP City, these IP addresses are broken down into pools of either 128 or 256 IP addresses](/images/2026/10/greater-la-geoip-city.webp)
-
-### GeoLite
-
-![In GeoLite City, all 2,048 IP addresses are located to Los Angeles](/images/2026/10/greater-la-geolite-city.webp)
+major metropolitan area." >}}
 
 The question is: does this matter for your use case? There may be use cases
 where you can draw a 100 km radius and just call the whole area Los Angeles, but
 for many use cases the difference between someone being near Disneyland and
 someone being near prime camping locations is critical.
 
-**Why do we merge IP ranges in GeoLite?**
-
-GeoLite is built to be lightweight, small, and easy to work with on smaller
-infrastructure. Merging ranges into larger blocks cuts the number of entries and
-keeps the file small. That's why the GeoLite database is less than half the size
-of the GeoIP database as of September 2026, and we keep refining how those
-ranges get merged to bring the size down further.
+> **Why do we merge IP ranges in GeoLite?**
+>
+> GeoLite is built to be lightweight, small, and easy to work with on smaller
+> infrastructure. Merging ranges into larger blocks cuts the number of entries
+> and keeps the file small. That's why the GeoLite database is less than half
+> the size of the GeoIP database as of September 2026, and we keep refining how
+> those ranges get merged to bring the size down further.
 
 ### Where that leaves accuracy
 
