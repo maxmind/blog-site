@@ -1,5 +1,5 @@
 ---
-title: "Apply for a partnership opportunity with MaxMind"
+title: "How to tell whether GeoLite is enough for your project"
 heading: "How to tell whether GeoLite is enough for your project"
 description:
   "Learn the difference between MaxMind's GeoLite and GeoIP to evaluate which
@@ -167,8 +167,8 @@ States.
 
 |   Granularity   | GeoIP accuracy over GeoLite |
 | :-------------: | :-------------------------: |
-|      State      |   2% points more accurate   |
-| City and postal |   6% points more accurate   |
+|      State      |      2% more accurate       |
+| City and postal |      6% more accurate       |
 
 Note that the true accuracy difference for your specific use case depends on the
 country, the network type, and the granularity you need. You can check the
