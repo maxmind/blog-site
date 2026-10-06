@@ -118,8 +118,9 @@ datasets share are usually good enough to tell you which country an IP is likely
 used in. Higher risk work can still need something finer. Whether a region
 counts as being in Russia or Ukraine can be lost if your dataset only has the
 ISO country, and that matters for sanctions compliance and international law. We
-covered this in our post on IP intelligence in your compliance data stack. For
-low risk country decisions where contested regions don't change the outcome,
+covered this in our article on [IP intelligence in your compliance data
+stack]({{< relref "2025/12/leveraging-ip-intelligence-in-your-compliance-data-stack.md">}}).
+For low risk country decisions where contested regions don't change the outcome,
 GeoLite Country may be all you need.
 
 GeoIP becomes a clear value-add once you need the subdivision, city, or postal
@@ -157,8 +158,10 @@ Here's what we've learned working with partners across industries.
 - **Digital security, fraud, and risk.** Protecting your network is high risk
   work, and identifying the source of an attack benefits from the most accurate
   information available. Country level is sometimes enough but proxy detection
-  is the real differentiator, which we wrote about in our
-  [article on the threat of residential proxies](/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies/).
+  is the real differentiator, which we wrote about in our [article on the threat
+  of residential
+  proxies]({{< relref "2026/08/hiding-in-plain-sight-what-chargeback-data-reveals-about-residential-proxies.md">}}).
+
 - **Digital rights management.** Streamers have to obey region-specific content
   contracts to keep their partners happy. It falls short when contracts run down
   to the subdivision or postal level, or when you need to leverage other signals
@@ -182,7 +185,7 @@ States.
 Note that the true accuracy difference for your specific use case depends on the
 country, the network type, and the granularity you need. You can check the
 current difference for the locations you care about with our
-[accuracy comparison tool](/en/geoip-accuracy-comparison).
+[accuracy comparison tool](https://www.maxmind.com/en/geoip-accuracy-comparison).
 
 You can combine accuracy estimates with volume of decisions to make quantifiable
 estimates of the business risk this represents, whether that’s due to something
