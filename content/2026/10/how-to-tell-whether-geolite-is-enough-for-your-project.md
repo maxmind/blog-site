@@ -80,13 +80,8 @@ Let’s look at a concrete example comparing GeoIP and GeoLite from
 September 2026. In this example, we’ll look at 2,048 IP addresses that are part
 of AT&T’s residential ISP services in the Los Angeles area.
 
-{{< figure src="/images/2026/10/geolite-vs-geoip-mapping-comparison.webp"
-alt="GeoLite vs GeoIP mapping" caption="In GeoIP City, these IP addresses are
-broken down into pools of either 128 or 256 IP addresses. These small IP address
-ranges are geolocated to 13 different cities/communities, from North Hollywood
-to San Bernardino. Some of these cities are 160 kilometers (or a 2 hour drive)
-away from one another. In GeoLite City, all 2,048 IP addresses are located to
-Los Angeles, the nearest major metropolitan area." >}}
+{{< figure src="/images/2026/10/geolite-vs-geoip-mapping-comparison.webp" alt="geolite vs geoip mapping"
+caption="In GeoIP City, these IP addresses are broken down into pools of either 128 or 256 IP addresses. These small IP address ranges are geolocated to 13 different cities/communities, from North Hollywood to San Bernardino. Some of these cities are 160 kilometers (or a 2 hour drive) away from one another. In GeoLite City, all 2,048 IP addresses are located to Los Angeles, the nearest major metropolitan area." >}}
 
 The question is: does this matter for your use case? There may be use cases
 where you can draw a 100 km radius and just call the whole area Los Angeles, but
