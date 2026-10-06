@@ -182,7 +182,7 @@ States.
 Note that the true accuracy difference for your specific use case depends on the
 country, the network type, and the granularity you need. You can check the
 current difference for the locations you care about with our
-[accuracy comparison tool](https://www.maxmind.com/en/geoip-accuracy-comparison).
+[accuracy comparison tool](/en/geoip-accuracy-comparison).
 
 You can combine accuracy estimates with volume of decisions to make quantifiable
 estimates of the business risk this represents, whether that’s due to something
