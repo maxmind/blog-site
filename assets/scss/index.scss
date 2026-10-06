@@ -61,3 +61,19 @@
 .highlighted--danger {
   background-color: #ffa0a0;
 }
+
+.callout {
+  background-color: var(--mm-color-light-blue);
+  border-left: 4px solid var(--mm-color-medium-blue);
+  border-radius: var(--mm-border-radius);
+  margin: 0 0 calc(var(--mm-spacing) / 2);
+  padding: calc(var(--mm-spacing) / 2);
+
+  > p:first-child {
+    margin-top: 0;
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
