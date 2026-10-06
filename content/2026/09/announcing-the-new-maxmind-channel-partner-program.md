@@ -3,12 +3,10 @@ title: "Apply for a partnership opportunity with MaxMind"
 heading: "Announcing the new MaxMind channel partner program"
 description:
   "Learn how the MaxMind channel partner program offers you a high-touch
-  experience that includes support from our sales team and a 10% referral
-  incentive."
+  experience that includes support from our sales team and a referral incentive."
 summary:
   "Learn how the MaxMind channel partner program offers you a high-touch
-  experience that includes support from our sales team and a 10% referral
-  incentive."
+  experience that includes support from our sales team and a referral incentive."
 date: "2026-09-23"
 headerImage: /images/2026/09/announcing-the-new-maxmind-channel-partner-program.webp
 category:
@@ -68,7 +66,7 @@ stay updated on progress.
 ### 3. Referral incentives
 
 We believe in rewarding the value our partners bring which is why our program
-offers a 10% referral incentive for the accounts you onboard.
+offers a referral incentive for the accounts you onboard.
 
 ## How many ways are there to partner with MaxMind?
 
