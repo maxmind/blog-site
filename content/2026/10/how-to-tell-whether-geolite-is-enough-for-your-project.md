@@ -193,6 +193,7 @@ money, a regulator's attention, or a partner's trust?
 
 ### Getting help with the decision
 
-If you want help weighing free against paid for your use case, talk to our IP
-data experts. We are happy to discuss the trade-offs relevant for your specific
-use case and application.
+If you want help weighing free against paid for your use case,
+[talk to our IP data experts](https://www.maxmind.com/en/sales-contact). We are
+happy to discuss the trade-offs relevant for your specific use case and
+application.
