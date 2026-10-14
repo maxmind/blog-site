@@ -47,7 +47,7 @@ Seeing as an account takeover scenario allows a fraudster to appear as a
 legitimate customer, you may believe chargebacks initiated by the true
 cardholder constitute friendly fraud. Friendly fraud refers to the filing of
 illegitimate chargebacks by customers. The
-[US Fair Credit Billing Act](https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges)
+[US Fair Credit Billing Act](https://web.archive.org/web/20261007072530/https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges)
 (FCBA) allows cardholders to dispute credit card charges and file chargebacks to
 get their money back only in disputes related to billing errors. This definition
 includes unauthorized charges, double-billing, incorrect charge amounts, etc. In
