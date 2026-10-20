@@ -38,28 +38,9 @@
     width: 95%;
   }
 
-  .hs-error-msg,
-  .hs-main-font-element {
+  .hs-error-msg {
     color: #dc3545;
     padding-top: 4px;
-  }
-
-  .hs-input.invalid {
-    border: 1px solid #dc3545;
-  }
-
-  .hs_error_rollup {
-    display: none;
-  }
-
-  .no-list {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-  }
-
-  li {
-    margin-bottom: 0;
   }
 
   label {
