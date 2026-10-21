@@ -28,13 +28,11 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const formData = new FormData($form);
-    const properties: Record<string, string> = {};
-    formData.forEach((value, key) => {
-      if (typeof value === 'string') {
-        properties[key] = value;
-      }
-    });
+    // The form has only text inputs, so every value is a string.
+    const properties = Object.fromEntries(new FormData($form)) as Record<
+      string,
+      string
+    >;
 
     zaraz
       .track('blog_subscription', properties)
