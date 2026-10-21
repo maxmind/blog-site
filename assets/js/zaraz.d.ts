@@ -2,6 +2,7 @@
 // when Zaraz does not load.
 declare const zaraz:
   | {
+      showConsentModal: () => void;
       track: (
         eventName: string,
         properties?: Record<string, string>
