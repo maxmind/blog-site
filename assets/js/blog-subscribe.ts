@@ -1,14 +1,6 @@
 // Submits the blog subscription form to HubSpot via the Zaraz HubSpot tool.
 // The property names passed to zaraz.track() must match the internal field
 // names of the HubSpot form.
-declare const zaraz:
-  | {
-      track: (
-        eventName: string,
-        properties?: Record<string, string>
-      ) => Promise<void>;
-    }
-  | undefined;
 
 window.addEventListener('DOMContentLoaded', () => {
   const $form = document.querySelector<HTMLFormElement>('#blog-subscribe-form');
