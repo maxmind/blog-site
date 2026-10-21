@@ -244,10 +244,16 @@
 }
 
 .footer__termsLink {
+  // Reset button styles so the cookie consent button matches the links.
+  background: none;
+  border: 0;
   color: var(--mm-color-background);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
   text-decoration: none;
 
-  &:first-child::after {
+  &:not(:last-child)::after {
     color: rgba(255, 255, 255, 0.2);
     content: '|';
     padding: 0 10px;
