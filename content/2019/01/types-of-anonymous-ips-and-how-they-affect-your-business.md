@@ -70,13 +70,13 @@ More and more people are using VPNs in the wake of several high-profile data
 privacy scandals that have come to light in the recent past. In some cases,
 [paid VPN subscriptions more than doubled](https://digiday.com/marketing/net-neutrality-privacy-scandals-increasing-vpn-use/)
 after the breaking of major news stories. According to a
-[GlobalWebIndex report](https://www.gwi.com/blog/vpn-usage-2018) from July 2018,
-26% of global internet users used a VPN or proxy server in the last month. Users
-might be using public proxies or personal-use VPNs to access blocked websites
-from work or school. Users in certain countries use VPNs to circumvent website
-access restrictions put in place by their governments. Security and privacy
-conscious individuals will also use VPNs to maintain anonymity and secure their
-data, especially
+[GlobalWebIndex report](https://web.archive.org/web/20250218185841/https://www.gwi.com/blog/vpn-usage-2018)
+from July 2018, 26% of global internet users used a VPN or proxy server in the
+last month. Users might be using public proxies or personal-use VPNs to access
+blocked websites from work or school. Users in certain countries use VPNs to
+circumvent website access restrictions put in place by their governments.
+Security and privacy conscious individuals will also use VPNs to maintain
+anonymity and secure their data, especially
 [when using public wifi](https://www.techradar.com/news/public-wi-fi-and-why-you-need-a-vpn).
 
 Given increased public attention on privacy and security, and mainstream
