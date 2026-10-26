@@ -1,4 +1,13 @@
+// The consent modal and the site search widget both need Zaraz. Content
+// blockers can stop Zaraz from loading, so their buttons stay hidden until
+// the Zaraz Consent API is ready.
+document.addEventListener('zarazConsentAPIReady', showZarazButtons);
+
 window.addEventListener('DOMContentLoaded', () => {
+  if (typeof zaraz !== 'undefined' && zaraz.consent?.APIReady) {
+    showZarazButtons();
+  }
+
   // Reopens the Zaraz consent modal so visitors can change their cookie
   // choices.
   document
@@ -17,9 +26,17 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function showZarazButtons() {
+  document
+    .querySelectorAll<HTMLElement>('.js-requires-zaraz-consent')
+    .forEach(($button) => {
+      $button.hidden = false;
+    });
+}
+
 function showConsentModal() {
-  if (typeof zaraz === 'undefined') {
-    console.error('zaraz is not available; cannot open consent modal');
+  if (typeof zaraz === 'undefined' || !zaraz.showConsentModal) {
+    console.error('Zaraz consent is not available; cannot open consent modal');
     return;
   }
 

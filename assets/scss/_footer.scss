@@ -253,7 +253,9 @@
   padding: 0;
   text-decoration: none;
 
-  &:not(:last-child)::after {
+  // Separate visible items only, because the cookie consent button can be
+  // hidden.
+  & + &:not([hidden])::before {
     color: rgba(255, 255, 255, 0.2);
     content: '|';
     padding: 0 10px;
