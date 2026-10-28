@@ -80,6 +80,7 @@ include = ["*.md"]
 cmd = [
   "pnpm",
   "run",
+  "--silent",
   "lint:cspell",
 ]
 invoke = "once"
@@ -92,6 +93,7 @@ type = "lint"
 cmd = [
   "pnpm",
   "run",
+  "--silent",
   "lint:internal-links"
 ]
 invoke = "once"
