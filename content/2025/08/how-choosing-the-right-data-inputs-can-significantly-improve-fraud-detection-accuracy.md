@@ -33,7 +33,7 @@ detection networks, minFraud helps assess online transaction data and improve
 fraud detection accuracy.
 
 The built-in flexibility of the
-[minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/for-platforms)
+[minFraud API](https://www.maxmind.com/en/solutions/fraud-and-risk/for-platforms)
 allows for a customizable approach to integrating robust risk scoring and data
 enrichment into a variety of business applications.
 
@@ -103,15 +103,13 @@ Before we reveal the results, here are the three risk indicators in detail:
   network, such as a proxy or VPN.
 
 - **IP risk score** Available in the
-  [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
-  the
+  [minFraud API](https://www.maxmind.com/en/solutions/fraud-and-risk), the
   [IP risk score](https://support.maxmind.com/knowledge-base/articles/minfraud-ip-risk-score)
   goes beyond the Anonymous IP flag to report the relative riskiness of IPs,
   which includes risky IPs that are not flagged as anonymous.
 
 - **minFraud risk score** Available in the
-  [minFraud API](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
-  the
+  [minFraud API](https://www.maxmind.com/en/solutions/fraud-and-risk), the
   [overall risk score](https://support.maxmind.com/knowledge-base/articles/overall-risk-score-minfraud-maxmind)
   factors in the IP risk score and also incorporates real-time dynamic checks
   from a wide range of input data (i.e. attributes such as email, phone number,

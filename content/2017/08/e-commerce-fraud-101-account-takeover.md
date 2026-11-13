@@ -73,18 +73,16 @@ Below are some tips on detecting account takeover with the help of the minFraud
 service.
 
 - Implement the
-  [Device Tracking Add On](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  [Device Tracking Add On](https://www.maxmind.com/en/solutions/fraud-and-risk)
   to
-  [evaluate the riskiness of an IP address](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+  [evaluate the riskiness of an IP address](https://www.maxmind.com/en/solutions/fraud-and-risk)
   making account changes or placing orders on your site
-- Use
-  [Custom Inputs](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
-  and
-  [Custom Rules](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
-  to flag potential account takeover scenarios. For example, you may define
-  Custom Inputs for the number of days since the last email, password, and
-  shipping address change, and manually review orders from accounts where those
-  pieces of information were recently changed
+- Use [Custom Inputs](https://www.maxmind.com/en/solutions/fraud-and-risk) and
+  [Custom Rules](https://www.maxmind.com/en/solutions/fraud-and-risk) to flag
+  potential account takeover scenarios. For example, you may define Custom
+  Inputs for the number of days since the last email, password, and shipping
+  address change, and manually review orders from accounts where those pieces of
+  information were recently changed
 - Check IP address distances, such as distance between IP location and
   billing/shipping/historical login locations
 - Check for sudden pattern changes in the IP address or ISP used. For example, a
@@ -97,5 +95,5 @@ service.
 ---
 
 To learn more about how our minFraud service can help you, please visit our
-[website](https://www.maxmind.com/en/solutions/fraud-prevention/overview) or
+[website](https://www.maxmind.com/en/solutions/fraud-and-risk) or
 [contact our sales team](https://www.maxmind.com/en/sales-contact).

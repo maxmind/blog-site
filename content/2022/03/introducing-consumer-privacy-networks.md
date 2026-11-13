@@ -67,7 +67,7 @@ You can find this data in the following products and services from MaxMind:
   ISP data
 - [GeoIP Enterprise database](https://www.maxmind.com/en/geoip-enterprise-database)
   contains our ISP and user type data
-- [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+- [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-and-risk)
   return our ISP and user type data
 
 At this time, consumer privacy networks are not flagged in our

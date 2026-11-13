@@ -60,7 +60,7 @@ itself raise the risk of fraud while many users being associated with a single
 “residential” IP address would.
 
 MaxMind's
-[Proxy Detection service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
+[Proxy Detection service](https://www.maxmind.com/en/solutions/fraud-and-risk)
 scores IP addresses for their riskiness (e.g., being proxies favored by
 fraudsters) and so can also be used to assess the likelihood that a given IP is
 being used for fraud.

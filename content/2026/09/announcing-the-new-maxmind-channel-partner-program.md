@@ -22,8 +22,8 @@ need to navigate the complexities of the digital world. Whether it’s helping a
 local company fine-tune their user experience with
 [GeoIP®](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services)
 or enabling a security team to block high-risk transactions with
-[minFraud®](https://www.maxmind.com/en/solutions/fraud-prevention/overview), our
-mission has always been about precision and trust.
+[minFraud®](https://www.maxmind.com/en/solutions/fraud-and-risk), our mission
+has always been about precision and trust.
 
 We’re excited to announce a major evolution in how we support the experts who
 build with and recommend our services.

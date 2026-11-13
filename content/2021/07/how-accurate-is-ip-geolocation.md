@@ -185,7 +185,7 @@ blog]({{< relref "2019/01/types-of-anonymous-ips-and-how-they-affect-your-busine
 We provide solutions for proxy detection through the
 [GeoIP Anonymous IP database](https://www.maxmind.com/en/geoip-anonymous-ip-database),
 [GeoIP web service](https://www.maxmind.com/en/geoip-api-web-services), and
-[the minFraud Insights and Factors services](https://www.maxmind.com/en/solutions/fraud-prevention/overview),
+[the minFraud Insights and Factors services](https://www.maxmind.com/en/solutions/fraud-and-risk),
 but geolocation of the end-user isn’t possible.
 
 ##### Static IPs and multiple users

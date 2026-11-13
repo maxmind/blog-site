@@ -96,7 +96,7 @@ This data is updated daily and is available in a downloadable database with our
 or in a web service with our
 [GeoIP Insights web service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
 or our
-[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview?utm_source=blog&utm_campaign=anon-types).
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-and-risk?utm_source=blog&utm_campaign=anon-types).
 
 The
 [GeoIP Insights web service](https://www.maxmind.com/en/geoip-api-web-services?utm_source=blog&utm_campaign=anon-types)
@@ -105,7 +105,7 @@ anonymous IP flags, ISP, confidence factors, user type (e.g. business, traveler,
 cellular, etc.), and more.
 
 The
-[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview?utm_source=blog&utm_campaign=anon-types)
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-and-risk?utm_source=blog&utm_campaign=anon-types)
 provides an IP risk score that represents the relative riskiness of IP addresses
 (including anonymous IPs) in an e-commerce context. The score is affected by
 whether we observe transactions from mostly legitimate customers or from

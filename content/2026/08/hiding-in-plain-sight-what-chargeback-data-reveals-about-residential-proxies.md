@@ -28,13 +28,13 @@ detection: A practical guide for
 businesses]({{< relref "2026/07/residential-proxy-detection-a-practical-guide-for-businesses.md" >}})._
 
 We examined transactions that
-[minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
-clients reported back to us as chargebacks, and analyzed what share of the
-fraud-coded ones showed signs of anonymization, and which kinds. Close to half
-of chargebacks in our analysis were associated with some form of anonymizer,
-versus roughly a fifth of ordinary transactions. The breakdown below tells you
-which anonymization methods dominate confirmed card fraud, by how wide a margin,
-and why the largest category is also the hardest to detect reliably.
+[minFraud](https://www.maxmind.com/en/solutions/fraud-and-risk) clients reported
+back to us as chargebacks, and analyzed what share of the fraud-coded ones
+showed signs of anonymization, and which kinds. Close to half of chargebacks in
+our analysis were associated with some form of anonymizer, versus roughly a
+fifth of ordinary transactions. The breakdown below tells you which
+anonymization methods dominate confirmed card fraud, by how wide a margin, and
+why the largest category is also the hardest to detect reliably.
 
 ## Residential proxies dominate the anonymized slice
 
