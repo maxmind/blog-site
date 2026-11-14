@@ -30,7 +30,7 @@ Private Relay works and delivers the best possible experience for your users.
   and our
   [GeoIP Insights web service](https://www.maxmind.com/en/geoip-api-web-services)
   and
-  [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-prevention/overview))
+  [minFraud Insights and Factors web services](https://www.maxmind.com/en/solutions/fraud-and-risk))
   by tagging ranges as `iCloud Private Relay`.
 
 Apple has shared the following assurances built into Private Relay:

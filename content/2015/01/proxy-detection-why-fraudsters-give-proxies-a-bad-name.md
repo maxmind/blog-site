@@ -62,8 +62,8 @@ detection systems need to incorporate monitoring for this type of activity in
 order to stop them. Since proxies can generate good traffic as well as bad,
 proxy detection requires analysis of transaction data to assess which IPs are
 higher risk. Merchants using MaxMind’s
-[minFraud service](https://www.maxmind.com/en/solutions/fraud-prevention/overview)
-benefit from a corresponding increased risk score to enable them to take action.
+[minFraud service](https://www.maxmind.com/en/solutions/fraud-and-risk) benefit
+from a corresponding increased risk score to enable them to take action.
 
 ![open proxy list](/images/2015/01/open-proxy-list-300x231.png)
 

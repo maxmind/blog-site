@@ -41,7 +41,7 @@ approach.
 ## Refine your custom rules with custom inputs
 
 As a
-[minFraud](https://www.maxmind.com/en/solutions/fraud-prevention/overview?utm_source=blog&utm_medium=article&utm_campaign=update)
+[minFraud](https://www.maxmind.com/en/solutions/fraud-and-risk?utm_source=blog&utm_medium=article&utm_campaign=update)
 customer, you can use custom inputs to create custom rules that are fine-tuned
 by you to identify fraudulent activity in your specific business environment.
 Custom inputs can be used during review of transactional details in support of

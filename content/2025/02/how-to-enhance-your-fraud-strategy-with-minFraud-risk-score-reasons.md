@@ -99,7 +99,7 @@ on the Transaction Details page in the Admin portal. This option is available to
 all tiers of the minFraud service.
 
 Not yet a minFraud customer?
-[Connect with one of our fraud experts](https://www.maxmind.com/en/solutions/fraud-prevention/connect-with-a-minfraud-expert)
+[Connect with one of our fraud experts](https://www.maxmind.com/en/solutions/fraud-and-risk/connect-with-a-minfraud-expert)
 to discuss how risk score reasons can support your use case(s).
 
 ## Recommended use cases for risk score reasons
@@ -156,4 +156,4 @@ not, and the greater context that customers feed back to us.
 Cybercriminals have been known to share information with each other to
 strengthen their attacks. Taking the same approach with your partners can help
 you fight fraud more effectively and efficiently.
-[Learn how to enhance your fraud strategy with minFraud risk score reasons](https://www.maxmind.com/en/solutions/fraud-prevention/connect-with-a-minfraud-expert).
+[Learn how to enhance your fraud strategy with minFraud risk score reasons](https://www.maxmind.com/en/solutions/fraud-and-risk/connect-with-a-minfraud-expert).
