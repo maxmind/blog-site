@@ -44,7 +44,7 @@ block allocations from the
 [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers) to
 [regional internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry)
 (RIRs),
-[local internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_Internet_registry)
+[local internet registries](https://en.wikipedia.org/wiki/Regional_Internet_registry#Local_internet_registry)
 (LIRs), internet service providers (ISPs), and end users. The IP blocks at the
 end user level tend to have natural groupings for location assignment.
 
